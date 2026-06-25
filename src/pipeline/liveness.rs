@@ -15,10 +15,20 @@ struct LivenessResult {
 }
 
 #[derive(Clone, Copy)]
-enum RemoveReason {
+pub enum RemoveReason {
     Unreachable,
     ProtocolRedirect,
     UnsupportedScheme,
+}
+
+impl RemoveReason {
+    pub fn message(self) -> &'static str {
+        match self {
+            RemoveReason::Unreachable => "Stream unreachable during liveness pruning.",
+            RemoveReason::ProtocolRedirect => "Stream redirects across protocol.",
+            RemoveReason::UnsupportedScheme => "Stream URL is not HTTP(S).",
+        }
+    }
 }
 
 pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Station> {
@@ -43,7 +53,7 @@ pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Stat
                 }
 
                 let _permit = sem.acquire().await.unwrap();
-                match live_stream_url(&client, &station.stream_url).await {
+                match validate_imported_stream_url(&client, &station.stream_url).await {
                     Ok(live_url) => {
                         let upgraded = live_url != station.stream_url;
                         if upgraded {
@@ -115,7 +125,10 @@ pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Stat
     live
 }
 
-async fn live_stream_url(client: &reqwest::Client, url: &str) -> Result<String, RemoveReason> {
+pub async fn validate_imported_stream_url(
+    client: &reqwest::Client,
+    url: &str,
+) -> Result<String, RemoveReason> {
     if let Some(candidate) = https_candidate(url) {
         if let Some(resolved) = probe_live_url(client, &candidate, false).await {
             if resolved.starts_with("https://") {

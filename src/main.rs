@@ -1,3 +1,4 @@
+mod curation;
 mod http;
 mod pipeline;
 mod providers;
@@ -15,6 +16,10 @@ async fn main() -> anyhow::Result<()> {
         .init();
 
     let client = http::build_client()?;
+
+    if std::env::args().nth(1).as_deref() == Some("prune-curated") {
+        return curation::prune_curated(&client).await;
+    }
 
     info!("Starting provider discovery");
 

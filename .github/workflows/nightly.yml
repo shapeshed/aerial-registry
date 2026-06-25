@@ -7,7 +7,8 @@ on:
 
 permissions:
   id-token: write
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
@@ -46,3 +47,20 @@ jobs:
           aws cloudfront create-invalidation \
             --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths '/registry.json.gz'
+
+      - name: Prune curated stations
+        run: cargo run --release -- prune-curated
+
+      - name: Open curated station cleanup PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: bot/prune-curated-stations
+          delete-branch: true
+          title: "chore(curated): prune failed stations"
+          commit-message: "chore(curated): prune failed stations"
+          body: |
+            Automated cleanup from the nightly registry build.
+
+            This removes curated stations that failed the registry liveness policy
+            and appends them to `stations_rejected.toml` so discovery does not
+            propose them again.
