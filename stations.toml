@@ -54,3 +54,2713 @@ country_code = "GB"
 stream_url = "https://radio.linn.co.uk:8004/autodj.m3u"
 logo_url = "https://www.linnrecords.com/images/linn-logo.png"
 tags = ["classical"]
+
+[[stations]]
+name = "TMM 1"
+country_code = "GB"
+stream_url = "https://listen-msmn.sharp-stream.com/nme1.mp3"
+logo_url = "https://cdn-profiles.tunein.com/s159857/images/logod.png"
+tags = ["alternative", "indie", "indie rock"]
+
+[[stations]]
+name = "Jazz London Radio"
+country_code = "GB"
+stream_url = "http://radio.canstream.co.uk:8075/live.mp3"
+logo_url = "https://www.jazzlondonradio.com/images/favicon.ico"
+tags = ["jazz"]
+
+[[stations]]
+name = "TMM 2"
+country_code = "GB"
+stream_url = "https://listen-msmn.sharp-stream.com/nme2.mp3"
+logo_url = "https://cdn-profiles.tunein.com/s155539/images/logod.png"
+tags = ["alternative", "hip-hop", "electronic"]
+
+[[stations]]
+name = "Techno.FM"
+country_code = "GB"
+stream_url = "http://stream.techno.fm/radio.mp3"
+logo_url = "https://techno.fm/favicon.ico"
+tags = ["electronic", "house"]
+
+[[stations]]
+name = "1Mix Radio Trance"
+country_code = "GB"
+stream_url = "http://1mix.co.uk/trance/listenh.m3u"
+logo_url = "http://www.1mix.co.uk/favicon.ico"
+tags = ["trance", "dance", "electronic"]
+
+[[stations]]
+name = "Different Drumz DnB Radio"
+country_code = "GB"
+stream_url = "http://andromeda.shoutca.st:8031/"
+logo_url = "http://www.differentdrumz.co.uk/wp-content/uploads/fbrfg/apple-touch-icon-114x114.png"
+tags = ["electronic", "dance"]
+
+[[stations]]
+name = "Chillout Ibiza FM"
+country_code = "GB"
+stream_url = "https://edge3.peta.live365.net/b05055_128mp3"
+logo_url = "http://www.chilloutibizafm.com/favicon.ico"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "GB News"
+country_code = "GB"
+stream_url = "http://listen-gbnews.sharp-stream.com/gbnews.mp3"
+logo_url = "http://cdn-profiles.tunein.com/s310252/images/logod.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Hard Rock Hell"
+country_code = "GB"
+stream_url = "http://andromeda.shoutca.st:9254/stream"
+tags = ["metal", "rock"]
+
+[[stations]]
+name = "Naim Jazz"
+country_code = "GB"
+stream_url = "http://mscp3.live-streams.nl:8340/jazz-high.aac"
+logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Radio Seva"
+country_code = "GB"
+stream_url = "https://seva.ru/radio/stream"
+logo_url = "https://seva.ru/radio/radio.png"
+tags = ["rock", "talk", "world"]
+
+[[stations]]
+name = "80s Soundtracks Radio"
+country_code = "GB"
+stream_url = "http://uk5.internet-radio.com:8256/;"
+logo_url = "https://cdn-radiotime-logos.tunein.com/s264062d.png"
+tags = ["oldies"]
+
+[[stations]]
+name = "TruckersFM"
+country_code = "GB"
+stream_url = "http://radio.truckers.fm/"
+logo_url = "https://truckers.fm/favicon.ico"
+tags = ["pop", "country"]
+
+[[stations]]
+name = "Radio Caroline"
+country_code = "GB"
+stream_url = "http://sc6.radiocaroline.net:8040/;stream.mp3"
+tags = ["oldies", "rock", "pop"]
+
+[[stations]]
+name = "1Mix EDM Radio"
+country_code = "GB"
+stream_url = "http://fr1.1mix.co.uk:8060/"
+logo_url = "http://www.1mix.co.uk/favicon.ico"
+tags = ["electronic", "dance", "trance"]
+
+[[stations]]
+name = "Radio Caroline Flashback"
+country_code = "GB"
+stream_url = "http://sc2.radiocaroline.net:10558/listen.pls"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "NonStopPlay Dance Radio"
+country_code = "GB"
+stream_url = "http://stream.nonstopplay.co.uk/nsp-192k-mp3"
+logo_url = "https://www.nonstopplay.com/wp-content/uploads/2022/12/favicon.png"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "TrancePulse FM"
+country_code = "GB"
+stream_url = "http://trancepulsefm.com/128/listen.pls"
+tags = ["trance", "electronic", "dance"]
+
+[[stations]]
+name = "Naim Classical"
+country_code = "GB"
+stream_url = "http://mscp3.live-streams.nl:8250/class-high.aac"
+logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
+tags = ["classical"]
+
+[[stations]]
+name = "BritCom 2 - Pumpkin FM"
+country_code = "GB"
+stream_url = "https://cast2.asurahosting.com/proxy/britcom2/stream"
+logo_url = "https://pumpkinfm.com/wp-content/uploads/2019/02/BritComTwo300x300.jpg"
+tags = ["comedy", "culture"]
+
+[[stations]]
+name = "London Soul Radio"
+country_code = "GB"
+stream_url = "http://londonsoulradio.out.airtime.pro:8000/londonsoulradio_a"
+logo_url = "https://cdn2.editmysite.com/images/site/footer/og-image-placeholder-blank.png"
+tags = ["soul", "funk", "jazz", "r&b", "oldies"]
+
+[[stations]]
+name = "Soul Radio"
+country_code = "GB"
+stream_url = "https://listen.soulradio.uk/uk"
+tags = ["soul", "oldies", "r&b"]
+
+[[stations]]
+name = "DnB Liquified"
+country_code = "GB"
+stream_url = "http://antares.dribbcast.com:5000/stream"
+tags = ["electronic", "dance", "ambient"]
+
+[[stations]]
+name = "Teenage Kicks Radio"
+country_code = "GB"
+stream_url = "https://onlineradiobox.com/json/fr/teenagekicks/play"
+tags = ["new wave", "punk", "pop", "alternative"]
+
+[[stations]]
+name = "House Nation UK"
+country_code = "GB"
+stream_url = "https://streaming.radio.co/s06bd9d805/listen"
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/aWa7xGKfBh.jpg"
+tags = ["house", "electronic", "dance"]
+
+[[stations]]
+name = "Strange Radio - Pumpkin FM"
+country_code = "GB"
+stream_url = "https://cast2.asurahosting.com/proxy/strangeradio/stream"
+tags = ["culture", "talk"]
+
+[[stations]]
+name = "The Groove"
+country_code = "GB"
+stream_url = "http://uk7.internet-radio.com:8352/"
+logo_url = "http://thegrooveradio.co.uk/upload/5d67aa7d3a8281.16670430.ico"
+tags = ["funk", "soul", "oldies", "disco"]
+
+[[stations]]
+name = "Techno.FM"
+country_code = "GB"
+stream_url = "http://stream.techno.fm/radio320.mp3"
+logo_url = "https://techno.fm/images/logos/logo_80px.png"
+tags = ["electronic", "dance", "trance"]
+
+[[stations]]
+name = "Boom Radio"
+country_code = "GB"
+stream_url = "https://listen-boomradio.sharp-stream.com/65_boom_radio_live_128"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Dance Attack FM"
+country_code = "GB"
+stream_url = "http://streaming04.liveboxstream.uk:8045/1"
+logo_url = "https://cdn.onlineradiobox.com/img/l/9/33659.v9.png"
+tags = ["dance", "electronic", "house", "trance"]
+
+[[stations]]
+name = "Paranormal UK Radio"
+country_code = "GB"
+stream_url = "http://s6.citrus3.com:8014/stream"
+tags = ["talk", "culture"]
+
+[[stations]]
+name = "BFBS Afghanistan"
+country_code = "GB"
+stream_url = "http://tx.sharp-stream.com/icecast.php?i=ssvcbfbs7.aac"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/7/70/BFBS_logo.png"
+tags = ["public radio", "talk"]
+
+[[stations]]
+name = "Happy Hardcore"
+country_code = "GB"
+stream_url = "https://audio-edge-3mayu.fra.h.radiomast.io/73055724-1141-41e2-a69b-24a6ca96c8e7"
+tags = ["electronic", "dance", "hardcore"]
+
+[[stations]]
+name = "Magic Radio UK"
+country_code = "GB"
+stream_url = "https://stream-mz.hellorayo.co.uk/magicnational.mp3?direct=true&aw_0_1st.playerid=BMUK_TuneIn&aw_0_1st.skey=7374499933&stationCode=mag"
+logo_url = "https://www.celsoazevedo.com/files/2025/magic.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Bailiwick Radio Classics"
+country_code = "GB"
+stream_url = "http://streaming.radio.co/s20224a067/listen"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Kniteforce Radio"
+country_code = "GB"
+stream_url = "https://kniteforce.out.airtime.pro/kniteforce_a"
+tags = ["electronic", "dance", "drum & bass"]
+
+[[stations]]
+name = "Sonatica Classical Radio"
+country_code = "GB"
+stream_url = "http://orion.shoutca.st:8742/160"
+logo_url = "http://sonatica.fm/favicon.png"
+tags = ["classical"]
+
+[[stations]]
+name = "The Sound Of Trance"
+country_code = "GB"
+stream_url = "http://s1.thesoundoftrance.co.uk:8000/"
+tags = ["trance", "electronic"]
+
+[[stations]]
+name = "BritCom 3 - British Comedy Radio"
+country_code = "GB"
+stream_url = "https://cast2.asurahosting.com/proxy/britcom3/stream"
+logo_url = "https://pumpkinfm.com/wp-content/uploads/2023/02/BritComThreeNew300x300-3.jpg"
+tags = ["comedy"]
+
+[[stations]]
+name = "Fun Kids"
+country_code = "GB"
+stream_url = "https://listen-funkids.sharp-stream.com/funkids.mp3"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "DubTerrain"
+country_code = "GB"
+stream_url = "http://ic2255.c471.fast-serv.com/listen"
+tags = ["electronic", "reggae", "dance"]
+
+[[stations]]
+name = "UK Bass Radio"
+country_code = "GB"
+stream_url = "https://www.ukbassradio.com/stream"
+logo_url = "https://www.ukbassradio.com/wp-content/uploads/2021/03/cropped-thumbnail_ukbass-radio5.png"
+tags = ["electronic", "dance", "drum & bass"]
+
+[[stations]]
+name = "1Mix Radio - House"
+country_code = "GB"
+stream_url = "http://fr2.1mix.co.uk:9000/320hb"
+logo_url = "https://www.1mix.co.uk/favicon.ico"
+tags = ["house", "electronic"]
+
+[[stations]]
+name = "Box UK"
+country_code = "GB"
+stream_url = "https://boxstream.danceradiouk.com/stream"
+logo_url = "https://boxuk.danceradiouk.com/favicon.ico"
+tags = ["electronic", "dance"]
+
+[[stations]]
+name = "Now 70s"
+country_code = "GB"
+stream_url = "https://lightning-now70s-samsungnz.amagi.tv/playlist.m3u8"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/c/cd/NOW_70s.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "House Music Radio"
+country_code = "GB"
+stream_url = "https://uk4-vn.mixstream.net/8128/listen.mp3"
+tags = ["house", "electronic"]
+
+[[stations]]
+name = "24-7 Psychedelic Rock"
+country_code = "GB"
+stream_url = "https://antares.dribbcast.com:2199/tunein/s8150.pls"
+logo_url = "https://24-7nicheradio.com/wp-content/uploads/2017/04/psychedelic.png"
+tags = ["rock", "alternative"]
+
+[[stations]]
+name = "Giants of Jazz Radio"
+country_code = "GB"
+stream_url = "http://streaming.radio.co/s297e618a7/listen"
+tags = ["jazz"]
+
+[[stations]]
+name = "Nation 60s"
+country_code = "GB"
+stream_url = "https://listen-nation.sharp-stream.com/nation60s.mp3"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "60 North Radio"
+country_code = "GB"
+stream_url = "http://r5.zetcast.net/flac"
+tags = ["rock", "alternative", "indie"]
+
+[[stations]]
+name = "24-7 The '60s"
+country_code = "GB"
+stream_url = "https://antares.dribbcast.com:2199/tunein/s8220.pls"
+logo_url = "https://24-7nicheradio.com/wp-content/uploads/2022/06/24-7-The-60s.png"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "Diva Radio"
+country_code = "GB"
+stream_url = "https://stream.deevaradio.net:10443/divaradiofunk"
+tags = ["funk", "disco", "soul", "r&b"]
+
+[[stations]]
+name = "Naim Jazz"
+country_code = "GB"
+stream_url = "http://mscp3.live-streams.nl:8340/jazz-flac.flac"
+logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Svetur"
+country_code = "GB"
+stream_url = "http://svetur.intellmedia.lt:8282/tiesiogiai.mp3"
+tags = ["world", "folk"]
+
+[[stations]]
+name = "Kool FM"
+country_code = "GB"
+stream_url = "https://admin.stream.rinse.fm/proxy/kool/stream"
+logo_url = "https://pbs.twimg.com/profile_images/1638236080674578434/Hbww_nFm_400x400.jpg"
+tags = ["drum and bass", "jungle", "electronic", "dance"]
+
+[[stations]]
+name = "BritCom 1"
+country_code = "GB"
+stream_url = "https://cast2.asurahosting.com/proxy/britcom1/stream"
+tags = ["comedy", "culture"]
+
+[[stations]]
+name = "CNN UK"
+country_code = "GB"
+stream_url = "https://tunein.cdnstream1.com/2868_96.mp3"
+logo_url = "https://edition.cnn.com/favicon.ico"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "GB News"
+country_code = "GB"
+stream_url = "http://listen-gbnews.sharp-stream.com/gbnews.aac?ref=RF"
+logo_url = "https://www.google.com/favicon.ico"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Boom Radio UK"
+country_code = "GB"
+stream_url = "https://listen-boomradio.sharp-stream.com/65_boom_radio_live_192"
+logo_url = "https://mmo.aiircdn.com/460/5fb3bb6151ee4.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Mango Radio"
+country_code = "DE"
+stream_url = "https://mangoradio.stream.laut.fm/mangoradio"
+logo_url = "https://mangoradio.de/wp-content/uploads/cropped-Logo-192x192.webp"
+tags = ["pop", "rock", "indie"]
+
+[[stations]]
+name = "Rock Antenne - Heavy Metal"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.rockantenne.de/heavy-metal"
+logo_url = "http://www.rockantenne.de/logos/station-rock-antenne/favicon.ico"
+tags = ["metal", "rock"]
+
+[[stations]]
+name = "TranceBase.FM"
+country_code = "DE"
+stream_url = "http://listen.trancebase.fm/tunein-aac-hd-pls"
+logo_url = "https://www.trancebase.fm/media/icons/trb/apple-touch-icon.png"
+tags = ["trance", "electronic", "dance"]
+
+[[stations]]
+name = "Antenne Bayern"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.antenne.de/antenne"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "TechnoBase.FM"
+country_code = "DE"
+stream_url = "http://lw2.mp3.tb-group.fm/tb.mp3"
+logo_url = "https://technobase.fm/media/icons/tb/apple-touch-icon.png"
+tags = ["dance", "electronic", "house"]
+
+[[stations]]
+name = "0N - Classic Rock on Radio"
+country_code = "DE"
+stream_url = "https://0n-classicrock.radionetz.de/0n-classicrock.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-classic-rock_600x600.jpg"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "Radio Eins"
+country_code = "DE"
+stream_url = "http://radioeins.de/stream"
+logo_url = "http://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
+tags = ["pop", "rock", "alternative", "public radio", "talk"]
+
+[[stations]]
+name = "Inforadio"
+country_code = "DE"
+stream_url = "http://www.inforadio.de/live.m3u"
+logo_url = "http://www.inforadio.de/content/dam/rbb/rbb/logos/touch/inf-128.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "Deutschlandfunk"
+country_code = "DE"
+stream_url = "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3?aggregator=web"
+logo_url = "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png"
+tags = ["news", "culture", "public radio", "talk"]
+
+[[stations]]
+name = "0N - 70s on Radio"
+country_code = "DE"
+stream_url = "https://0n-70s.radionetz.de/0n-70s.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-70s_600x600.jpg"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "RMNinstrumental"
+country_code = "DE"
+stream_url = "http://stream.instrumentalhits.de:8060/"
+tags = ["ambient", "jazz"]
+
+[[stations]]
+name = "Country 108"
+country_code = "DE"
+stream_url = "http://tuner.country108.com/;"
+logo_url = "http://www.country108.com/assets/images/logo.png"
+tags = ["country"]
+
+[[stations]]
+name = "Reggae Radio Rastamusic"
+country_code = "DE"
+stream_url = "http://ais.rastamusic.com/rastamusic.mp3.m3u"
+logo_url = "https://static.wixstatic.com/media/a09246_33fe4aef6e5f4f17b605a8d8645ff015%7emv2.png/v1/fill/w_32%2ch_32%2clg_1%2cusm_0.66_1.00_0.01/a09246_33fe4aef6e5f4f17b605a8d8645ff015%7emv2.png"
+tags = ["reggae"]
+
+[[stations]]
+name = "Deutschrap"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/deutschrap"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "Hit Radio FFH"
+country_code = "DE"
+stream_url = "http://mp3.ffh.de/radioffh/hqlivestream.mp3"
+logo_url = "https://www.ffh.de/android-icon.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Total Instrumental"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/total-instrumental"
+tags = ["ambient", "electronic", "instrumental"]
+
+[[stations]]
+name = "Hit Radio FFH - 80er"
+country_code = "DE"
+stream_url = "http://mp3.ffh.de/ffhchannels/hq80er.mp3"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "MDR Aktuell"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284340-0_mp3_high.m3u"
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Hit Radio FFH - Eurodance"
+country_code = "DE"
+stream_url = "http://streams.ffh.de/ffhchannels/mp3/hqeurodance.m3u"
+tags = ["dance", "electronic", "pop"]
+
+[[stations]]
+name = "1000 Oldies"
+country_code = "DE"
+stream_url = "http://1000oldies.stream.laut.fm/1000oldies?t302=2018-01-16_15-40-29&uuid=37780fea-d865-4439-9a4a-66f3ec1715a0"
+logo_url = "http://1000oldies.de/apple-icon-120x120.png"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "0N - 90s on Radio"
+country_code = "DE"
+stream_url = "https://0n-90s.radionetz.de/0n-90s.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-90s_600x600.jpg"
+tags = ["pop", "rock", "dance", "oldies"]
+
+[[stations]]
+name = "Radio Arabella M\u00fcnchen"
+country_code = "DE"
+stream_url = "http://rs26.stream24.net/stream?ref=radioarabella.de"
+logo_url = "https://www.radioarabella.de/storage/thumbs/192x192/r:1658501906/788381.png"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "I Love Radio - Hip Hop Turnup"
+country_code = "DE"
+stream_url = "http://stream02.iloveradio.de/iloveradio13.mp3?hadpreroll"
+logo_url = "https://www.iloveradio.de/favicon.ico"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "0N - Indie on Radio"
+country_code = "DE"
+stream_url = "https://0n-indie.radionetz.de/0n-indie.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-indie_600x600.jpg"
+tags = ["indie", "alternative", "rock"]
+
+[[stations]]
+name = "0nlineradio Soft Rock"
+country_code = "DE"
+stream_url = "https://stream.0nlineradio.com/soft-rock?ref=radiobrowser"
+logo_url = "https://i.ibb.co/SJFG3bt/soft-rock.jpg"
+tags = ["rock", "pop", "oldies"]
+
+[[stations]]
+name = "MDR Klassik"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284350-0_mp3_high.m3u"
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+tags = ["classical"]
+
+[[stations]]
+name = "Technolovers Deep House"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/deep-house?ref=radiobrowser"
+tags = ["house", "electronic", "dance"]
+
+[[stations]]
+name = "0N - Smooth Jazz on Radio"
+country_code = "DE"
+stream_url = "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.aac"
+logo_url = "https://www.0nradio.com/logos/0n-smooth-jazz_600x600.jpg"
+tags = ["jazz", "ambient"]
+
+[[stations]]
+name = "WDR4"
+country_code = "DE"
+stream_url = "http://wdr-wdr4-live.icecast.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
+logo_url = "https://www1.wdr.de/resources/img/favicon/apple-touch-icon.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "0N - Chillout on Radio"
+country_code = "DE"
+stream_url = "https://0n-chillout.radionetz.de/0n-chillout.aac"
+logo_url = "https://www.0nradio.com/logos/0n-chillout_600x600.jpg"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "NDR Info Hamburg"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo_hh.m3u"
+logo_url = "https://www.ndr.de/apple-touch-icon-120x120.png"
+tags = ["news", "talk", "culture"]
+
+[[stations]]
+name = "NDR Info Schleswig-Holstein"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo_sh.m3u"
+logo_url = "http://www.ndr.de/favicon.ico"
+tags = ["news", "talk", "culture"]
+
+[[stations]]
+name = "98.8 Kiss FM"
+country_code = "DE"
+stream_url = "http://stream.kissfm.de/kissfm/mp3-128/internetradio/"
+logo_url = "https://upload.kissfm.de/production/static/1699276434696/icons/icon_64.be8y2280000.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Antenne Bayern - Top 40"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.antenne.de/top-40"
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Paloma"
+country_code = "DE"
+stream_url = "http://icepool.silvacast.com/RADIOPALOMA.mp3"
+logo_url = "https://schlager.radio/wp-content/uploads/2020/11/cropped-radio-paloma-fav-180x180.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "NDR 2"
+country_code = "DE"
+stream_url = "https://www.ndr.de/resources/metadaten/audio_ssl/m3u/ndr2.m3u"
+logo_url = "https://www.ndr.de//apple-touch-icon-57x57.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Acid Jazz Radio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/acidjazz"
+tags = ["jazz", "electronic", "dance"]
+
+[[stations]]
+name = "Technolovers EDM"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/edm?ref=radiobrowser"
+logo_url = "https://i.ibb.co/TmRLJsp/EDM-TL.jpg"
+tags = ["electronic", "dance", "house", "trance"]
+
+[[stations]]
+name = "Antenne Bayern - Oldies but Goldies"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.antenne.de/oldies-but-goldies"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "GAYFM"
+country_code = "DE"
+stream_url = "http://stream.gayfm.de/"
+logo_url = "http://www.gayfm.de/favicon.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "1000 Discohits"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/1000discohits"
+tags = ["oldies", "dance", "soul"]
+
+[[stations]]
+name = "NDR Info (Niedersachsen)"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo.m3u"
+logo_url = "https://www.ndr.de/apple-touch-icon-120x120.png"
+tags = ["news", "talk", "culture"]
+
+[[stations]]
+name = "Electronic Music Club"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/emc"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "TechnoBase.FM"
+country_code = "DE"
+stream_url = "https://listener3.mp3.tb-group.fm/tb.mp3"
+logo_url = "https://cdn.onlineradiobox.com/img/l/0/32040.v12.png"
+tags = ["electronic", "trance", "dance"]
+
+[[stations]]
+name = "Berliner Rundfunk 91.4"
+country_code = "DE"
+stream_url = "http://stream.berliner-rundfunk.de/brf/mp3-128/internetradio/"
+logo_url = "https://upload.berliner-rundfunk.de/production/static/1693298496587/icons/icon_64.a80y02808w0.png"
+tags = ["pop", "culture"]
+
+[[stations]]
+name = "Deutschrap"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/deutschrap"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "SWR1 BW"
+country_code = "DE"
+stream_url = "https://liveradio.swr.de/sw282p3/swr1bw/play.mp3"
+logo_url = "https://www.radio.at/images/broadcasts/07/41/2273/2/c300.png"
+tags = ["pop", "culture"]
+
+[[stations]]
+name = "Fritz"
+country_code = "DE"
+stream_url = "http://www.fritz.de/live.m3u"
+logo_url = "http://www.fritz.de/content/dam/rbb/rbb/logos/touch/fritz-128.png"
+tags = ["pop", "rock", "alternative", "culture"]
+
+[[stations]]
+name = "0 N - 2000s on Radio"
+country_code = "DE"
+stream_url = "https://0n-2000s.radionetz.de/0n-2000s.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-2000s_600x600.jpg"
+tags = ["pop", "rock", "dance", "oldies"]
+
+[[stations]]
+name = "WDR Cosmo"
+country_code = "DE"
+stream_url = "http://wdr-cosmo-live.icecast.wdr.de/wdr/cosmo/live/mp3/128/stream.mp3"
+tags = ["world", "pop", "culture"]
+
+[[stations]]
+name = "Rock Antenne Heavy Metal"
+country_code = "DE"
+stream_url = "https://mp3channels.webradio.rockantenne.de/heavy-metal"
+logo_url = "https://cdn.onlineradiobox.com/img/l/1/34491.v5.png"
+tags = ["metal", "rock"]
+
+[[stations]]
+name = "1000 Goldschlager"
+country_code = "DE"
+stream_url = "https://1000goldschlager.stream.laut.fm/1000goldschlager"
+logo_url = "https://1000goldschlager.de/apple-icon-120x120.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Antenne Bayern - 80er Kulthits"
+country_code = "DE"
+stream_url = "http://www.antenne.de/webradio/channels/80er-kulthits.m3u"
+logo_url = "http://www.antenne.de/logos/antenne-bayern/apple-touch-icon.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "WDR 1Live Diggi"
+country_code = "DE"
+stream_url = "http://wdr-1live-diggi.icecast.wdr.de/wdr/1live/diggi/mp3/128/stream.mp3"
+logo_url = "https://www1.wdr.de/radio/1live-diggi/resources-v5.122.3/img/favicon/apple-touch-icon.png"
+tags = ["pop", "indie", "alternative"]
+
+[[stations]]
+name = "MDR Jump"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284320-0_mp3_high.m3u"
+logo_url = "https://cdn.mdrjump.de/resources/jump/img/favicons/apple-icon-120x120.png"
+tags = ["pop", "indie", "alternative"]
+
+[[stations]]
+name = "Klassik 1"
+country_code = "DE"
+stream_url = "http://icepool.silvacast.com/KLASSIK1.mp3"
+logo_url = "https://www.klassik1.de/favicon.png"
+tags = ["classical"]
+
+[[stations]]
+name = "Deutschlandfunk Kultur"
+country_code = "DE"
+stream_url = "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3?aggregator=web"
+logo_url = "https://www.deutschlandfunkkultur.de/static/img/deutschlandfunk_kultur/icons/apple-touch-icon-128x128.png"
+tags = ["culture", "news", "public radio"]
+
+[[stations]]
+name = "Rock Antenne Soft Rock"
+country_code = "DE"
+stream_url = "http://www.rockantenne.de/webradio/channels/soft-rock.m3u"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "0N - 60s on Radio"
+country_code = "DE"
+stream_url = "https://0n-60s.radionetz.de/0n-60s.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-60s_600x600.jpg"
+tags = ["oldies", "soul", "rock"]
+
+[[stations]]
+name = "0N - Chillout on Radio"
+country_code = "DE"
+stream_url = "https://0n-chillout.radionetz.de/0n-chillout.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-chillout_600x600.jpg"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Technolovers Electro House"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/electro-house?ref=radiobrowser"
+logo_url = "https://i.ibb.co/B4R6kNj/Electrohouse-tl.jpg"
+tags = ["electronic", "house", "dance"]
+
+[[stations]]
+name = "MDR Kultur"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284310-0_mp3_high.m3u"
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+tags = ["culture", "public radio"]
+
+[[stations]]
+name = "Italo Disco"
+country_code = "DE"
+stream_url = "https://italo-disco.stream.laut.fm/italo-disco"
+logo_url = "https://cdn.onlineradiobox.com/img/l/1/44061.v2.png"
+tags = ["electronic", "dance", "oldies"]
+
+[[stations]]
+name = "Hit Radio FFH - Top 40"
+country_code = "DE"
+stream_url = "http://mp3.ffh.de/ffhchannels/hqtop40.mp3"
+tags = ["pop"]
+
+[[stations]]
+name = "54 Funk Soul Dance"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/54-funk-soul-dance.pls"
+tags = ["funk", "soul", "dance"]
+
+[[stations]]
+name = "WDR4"
+country_code = "DE"
+stream_url = "https://wdr-wdr4-live.icecastssl.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
+logo_url = "https://www1.wdr.de/radio/wdr4/wdrvier_logo104~_v-ARDAustauschformat.jpg"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Electro Swing Revolution"
+country_code = "DE"
+stream_url = "https://streamer.radio.co/s2c3cc784b/listen"
+logo_url = "https://www.electroswing-radio.com/favicon.ico"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "HR1"
+country_code = "DE"
+stream_url = "http://metafiles.gl-systemhaus.de/hr/hr1_2.m3u"
+logo_url = "https://www.hr1.de/favicon.png?v=3.84.2"
+tags = ["pop"]
+
+[[stations]]
+name = "SWR1 BW"
+country_code = "DE"
+stream_url = "https://liveradio.swr.de/sw282p3/swr1bw/play.mp3"
+logo_url = "https://swr.de/favicon.ico"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "TechnoBase.FM"
+country_code = "DE"
+stream_url = "http://listen.technobase.fm/tunein-aac-hd-pls"
+logo_url = "https://n.image.weareone.fm/news/grafiken/_314354/Grafiken/WAO_-_Sendeplangrafik.png"
+tags = ["electronic", "dance", "trance", "house"]
+
+[[stations]]
+name = "Rock Antenne Alternative"
+country_code = "DE"
+stream_url = "http://www.rockantenne.de/webradio/channels/alternative.m3u"
+logo_url = "http://www.rockantenne.de/logos/rock-antenne/apple-touch-icon.png"
+tags = ["alternative", "rock", "indie"]
+
+[[stations]]
+name = "Oldie Antenne"
+country_code = "DE"
+stream_url = "https://s1-webradio.oldie-antenne.de/oldie-antenne?aw_0_1st.playerid=OldieAntenneWebPlayer"
+logo_url = "https://www.oldie-antenne.de/logos/oldie-antenne/apple-touch-icon.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "ByteFM"
+country_code = "DE"
+stream_url = "https://bytefm.cast.addradio.de/bytefm/main/high/stream"
+logo_url = "https://www.byte.fm/static/favicon/favicon-96x96.png?v=2023.10.27.3186-f0a9d83"
+tags = ["indie", "rock", "pop", "world"]
+
+[[stations]]
+name = "Schlagerparadies"
+country_code = "DE"
+stream_url = "http://www.surfmusik.de/m3u/schlagerparadies,9490.m3u"
+tags = ["pop", "folk"]
+
+[[stations]]
+name = "NDR2"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "Ultra Dark Radio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/ultradarkradio"
+tags = ["alternative", "metal", "gothic", "punk"]
+
+[[stations]]
+name = "Bayern 1 Oberbayern"
+country_code = "DE"
+stream_url = "https://dispatcher.rndfnk.com/br/br1/obb/mp3/mid"
+logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:b366004f6196d70c?w=512"
+tags = ["pop", "talk", "oldies"]
+
+[[stations]]
+name = "HR3"
+country_code = "DE"
+stream_url = "http://metafiles.gl-systemhaus.de/hr/hr3_2.m3u"
+logo_url = "https://www.hr3.de/favicon.png?v=3.85.2"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "HouseTime.FM"
+country_code = "DE"
+stream_url = "https://listen.housetime.fm/aac-hd.pls"
+logo_url = "https://housetime.fm/media/icons/ht/apple-touch-icon.png"
+tags = ["house", "electronic", "dance"]
+
+[[stations]]
+name = "Radioeins"
+country_code = "DE"
+stream_url = "http://www.radioeins.de/live.m3u"
+logo_url = "http://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
+tags = ["pop", "talk", "culture"]
+
+[[stations]]
+name = "Oldschool Hip-Hop"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/oldschool-hiphop"
+tags = ["hip-hop", "oldies"]
+
+[[stations]]
+name = "Harmony.FM"
+country_code = "DE"
+stream_url = "http://streams.harmonyfm.de/harmonyfm/mp3/hqlivestream.m3u"
+logo_url = "https://www.harmonyfm.de/android-icon.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "NDR Kultur"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrkultur.m3u"
+logo_url = "https://www.ndr.de//apple-touch-icon-57x57.png"
+tags = ["classical", "culture", "jazz"]
+
+[[stations]]
+name = "Antenne Bayern - Hitmix"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.antenne.de/hitmix"
+tags = ["pop"]
+
+[[stations]]
+name = "NDR 1 Welle Nord"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr1wellenord_ki.m3u"
+logo_url = "http://www.ndr.de/favicon.ico"
+tags = ["pop", "talk", "oldies"]
+
+[[stations]]
+name = "Energy Bremen"
+country_code = "DE"
+stream_url = "http://stream.ffn.de/energybremen/mp3-192/livestream.mp3"
+tags = ["pop", "dance", "electronic"]
+
+[[stations]]
+name = "Energy Top 40"
+country_code = "DE"
+stream_url = "http://nrj.de/germanytop40"
+tags = ["pop", "dance", "chart"]
+
+[[stations]]
+name = "RauteMusik Club"
+country_code = "DE"
+stream_url = "http://club-high.rautemusik.fm/"
+tags = ["dance", "electronic", "house"]
+
+[[stations]]
+name = "Top20Radio"
+country_code = "DE"
+stream_url = "http://server8.blitz-stream.de:9100/"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "JazzRadio 106.8 Berlin"
+country_code = "DE"
+stream_url = "https://streaming.radio.co/s774887f7b/listen"
+logo_url = "https://jazzradio.net/wp-content/uploads/2023/06/jr-disc-10k-black.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Epic Classical"
+country_code = "DE"
+stream_url = "https://stream.epic-classical.com/classical-music-for-sleep"
+tags = ["classical", "ambient", "relaxation"]
+
+[[stations]]
+name = "Blues Rock Cafe"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/bluesrockcafe.m3u"
+tags = ["blues", "rock"]
+
+[[stations]]
+name = "Bayern 1 Franken"
+country_code = "DE"
+stream_url = "https://dispatcher.rndfnk.com/br/br1/franken/mp3/mid"
+logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:b366004f6196d70c?w=512"
+tags = ["pop", "oldies", "public radio"]
+
+[[stations]]
+name = "RBB 88.8 Radio Berlin"
+country_code = "DE"
+stream_url = "http://dispatcher.rndfnk.com/rbb/rbb888/live/mp3/mid"
+logo_url = "https://www.rbb888.de/content/dam/rbb/rbb/logos/touch/ach-128.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Absolut Bella"
+country_code = "DE"
+stream_url = "https://absolut-bella.live-sm.absolutradio.de/absolut-bella/stream/mp3"
+logo_url = "https://absolutradio.de/apple-touch-icon.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Hip Hop Forever"
+country_code = "DE"
+stream_url = "https://stream.laut.fm/hiphop-forever"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "Laut.fm Housebomb"
+country_code = "DE"
+stream_url = "http://housebomb-fn.stream.laut.fm/housebomb-fn?t302=2018-02-10_16-10-52&uuid=bff87322-9a02-49f3-9ac6-a2c1457286dc"
+tags = ["house", "electronic", "dance"]
+
+[[stations]]
+name = "MDR Th\u00fcringen"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284300-0_mp3_high.m3u"
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+tags = ["pop", "public radio"]
+
+[[stations]]
+name = "Nightride FM - Spacesynth"
+country_code = "DE"
+stream_url = "https://stream.nightride.fm/spacesynth.mp3"
+logo_url = "https://nightride.fm/thumbnail.png"
+tags = ["electronic", "ambient"]
+
+[[stations]]
+name = "Deutschlandfunk Nova"
+country_code = "DE"
+stream_url = "https://st03.sslstream.dlf.de/dlf/03/128/mp3/stream.mp3?aggregator=web"
+logo_url = "https://www.deutschlandfunknova.de/apple-touch-icon.png"
+tags = ["news", "talk", "culture", "public radio"]
+
+[[stations]]
+name = "0 N - Electro on Radio"
+country_code = "DE"
+stream_url = "https://0n-electro.radionetz.de/0n-electro.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-electro_600x600.jpg"
+tags = ["electronic", "dance", "techno"]
+
+[[stations]]
+name = "MDR Sputnik"
+country_code = "DE"
+stream_url = "http://mdr-284330-0.cast.mdr.de/mdr/284330/0/mp3/high/stream.mp3"
+logo_url = "https://yt3.ggpht.com/-MKgxIKQIAOY/AAAAAAAAAAI/AAAAAAAAAAA/Qmoj6SQ1QIE/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg"
+tags = ["indie", "alternative", "public radio"]
+
+[[stations]]
+name = "Laut.fm Sound"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/sound"
+tags = ["folk", "country", "oldies"]
+
+[[stations]]
+name = "WDR 2 Ostwestfalen-Lippe"
+country_code = "DE"
+stream_url = "http://wdr-wdr2-ostwestfalenlippe.icecast.wdr.de/wdr/wdr2/ostwestfalenlippe/mp3/128/stream.mp3"
+logo_url = "https://www1.wdr.de/resources-v5.158.1/img/favicon/apple-touch-icon.png"
+tags = ["pop", "news", "talk"]
+
+[[stations]]
+name = "WDR 3"
+country_code = "DE"
+stream_url = "http://wdr-wdr3-live.icecast.wdr.de/wdr/wdr3/live/mp3/256/stream.mp3"
+logo_url = "https://www1.wdr.de/resources-v5.139.1/img/favicon/apple-touch-icon.png"
+tags = ["classical", "jazz", "world"]
+
+[[stations]]
+name = "HardBase.FM"
+country_code = "DE"
+stream_url = "http://mp3.stream.tb-group.fm/hb.mp3?"
+logo_url = "https://hardbase.fm/media/icons/hb/favicon-32x32.png"
+tags = ["dance", "electronic", "house"]
+
+[[stations]]
+name = "Deep House Sounds"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/deep-house-sounds"
+tags = ["house", "electronic", "ambient"]
+
+[[stations]]
+name = "Hitradio Germany"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/hitradio-germany"
+tags = ["pop", "dance", "electronic"]
+
+[[stations]]
+name = "Laut.FM Eurodance"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/eurodance"
+tags = ["dance", "electronic", "pop"]
+
+[[stations]]
+name = "Radio Paloma Kultschlager"
+country_code = "DE"
+stream_url = "http://pool.radiopaloma.de/RP-Kultschlager.mp3"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Ostseewelle Live Radio"
+country_code = "DE"
+stream_url = "http://mp3.ostseewelle.c.nmdn.net/ostseewellelive/livestream.mp3"
+logo_url = "https://www.ostseewelle.de/assets/icons/apple-touch-icon.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Technolovers Eurodance"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/eurodance?ref=radiobrowser"
+tags = ["dance", "electronic", "pop"]
+
+[[stations]]
+name = "hr4"
+country_code = "DE"
+stream_url = "https://dispatcher.rndfnk.com/hr/hr4/live/mp3/high"
+logo_url = "https://www.hr4.de/favicon.png?v=3.85.2"
+tags = ["pop", "talk", "news"]
+
+[[stations]]
+name = "Psyradio FM Chillout"
+country_code = "DE"
+stream_url = "http://streamer.psyradio.org:8020/;listen.mp3"
+logo_url = "https://lh6.ggpht.com/dU5W-XpgWgEgtIt3Ho990I9bre5IZTq7AK2ffSt_bXTDTNQ6eUkTG-WqERh6c_EHPb8=w300"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Hit Radio FFH Soundtrack"
+country_code = "DE"
+stream_url = "http://mp3.ffh.de/ffhchannels/hqsoundtrack.mp3"
+tags = ["pop"]
+
+[[stations]]
+name = "Dark Ambient Radio"
+country_code = "DE"
+stream_url = "http://s3.viastreaming.net:8835/"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Laut.FM BluesRockCafe"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/bluesrockcafe"
+tags = ["blues", "rock"]
+
+[[stations]]
+name = "Nightride FM Chillsynth"
+country_code = "DE"
+stream_url = "https://stream.nightride.fm/chillsynth.mp3"
+logo_url = "https://nightride.fm/thumbnail.png"
+tags = ["electronic", "ambient"]
+
+[[stations]]
+name = "Maretimo Lounge"
+country_code = "DE"
+stream_url = "https://s35.derstream.net/lounge.mp3"
+logo_url = "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/08/a3/107873/5/c175.png"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Laut.FM Jazz Rock Fusion"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/jazzrockfusion"
+tags = ["jazz", "rock", "funk", "fusion"]
+
+[[stations]]
+name = "DNB Radio Main Channel"
+country_code = "DE"
+stream_url = "http://ildnb1.dnbradio.com:8000/dnbradio_main.mp3"
+logo_url = "https://dnbradio.com/apple-touch-icon.png"
+tags = ["electronic", "dance", "drum and bass"]
+
+[[stations]]
+name = "Classic Rock Radio"
+country_code = "DE"
+stream_url = "http://internetradio.salue.de:8000/classicrock.mp3"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "Antenne Bayern - Coffee Music"
+country_code = "DE"
+stream_url = "https://mp3channels.webradio.de/coffee"
+tags = ["pop", "ambient"]
+
+[[stations]]
+name = "M1.FM - Schlagerparty"
+country_code = "DE"
+stream_url = "http://tuner.m1.fm/schlagerparty.mp3"
+tags = ["pop", "dance", "oldies"]
+
+[[stations]]
+name = "Epic Rock Radio"
+country_code = "DE"
+stream_url = "https://securestreams6.autopo.st:2222/stream"
+tags = ["rock", "metal"]
+
+[[stations]]
+name = "Deutschlandfunk"
+country_code = "DE"
+stream_url = "https://st01.sslstream.dlf.de/dlf/01/mid/aac/stream.aac?aggregator=web"
+logo_url = "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png"
+tags = ["news", "talk", "culture", "public radio"]
+
+[[stations]]
+name = "Technolovers Drum n Bass"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/drummnbass?ref=radiobrowser"
+tags = ["electronic", "dance", "drum and bass"]
+
+[[stations]]
+name = "Rock Antenne Alternative"
+country_code = "DE"
+stream_url = "https://stream.rockantenne.de/alternative/stream/mp3"
+logo_url = "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png"
+tags = ["rock", "alternative"]
+
+[[stations]]
+name = "Baden.fm"
+country_code = "DE"
+stream_url = "http://badenfm.ip-streaming.net:8006/badenfm"
+logo_url = "https://www.baden.fm/storage/thumbs/192x192/r:1708081712/1833471.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Antenne Bayern - Love Songs"
+country_code = "DE"
+stream_url = "http://www.antenne.de/webradio/channels/lovesongs.m3u"
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+tags = ["pop", "oldies", "soul"]
+
+[[stations]]
+name = "NDR Blue"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrblue.m3u"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/NDR_Blue_Logo.svg/1200px-NDR_Blue_Logo.svg.png"
+tags = ["jazz", "rock", "pop", "soul"]
+
+[[stations]]
+name = "Epic Piano - Chillout Piano"
+country_code = "DE"
+stream_url = "https://stream.epic-piano.com/chillout-piano?ref=radiobrowser"
+tags = ["classical", "ambient", "jazz"]
+
+[[stations]]
+name = "Epic Lounge - Ibiza Chillout Lounge"
+country_code = "DE"
+stream_url = "https://stream.epic-lounge.com/ibiza-chillout-lounge?ref=radiobrowser"
+tags = ["ambient", "house", "electronic"]
+
+[[stations]]
+name = "0 N - Disco on Radio"
+country_code = "DE"
+stream_url = "https://0n-disco.radionetz.de/0n-disco.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-disco_600x600.jpg"
+tags = ["disco", "funk", "soul", "oldies"]
+
+[[stations]]
+name = "101FM - 80s"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/0-24_80er_pop_rock"
+logo_url = "https://101fm.de/wp-content/uploads/2020/02/cropped-512er-180x180.png"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "Rock Antenne Blues Rock"
+country_code = "DE"
+stream_url = "https://stream.rockantenne.de/blues-rock/stream/mp3"
+logo_url = "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png"
+tags = ["rock", "blues"]
+
+[[stations]]
+name = "RBB Radio Eins"
+country_code = "DE"
+stream_url = "http://www.radioeins.de/livemp3"
+logo_url = "https://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "Schwany 5 Oberkrain"
+country_code = "DE"
+stream_url = "https://schwany5oberkrain.hoamatwelle.de/"
+logo_url = "http://schwany.de/favicon.ico"
+tags = ["folk", "world"]
+
+[[stations]]
+name = "Technolovers Psytrance"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/psytrance?ref=radiobrowser"
+tags = ["electronic", "trance", "ambient"]
+
+[[stations]]
+name = "0N Dance on Radio"
+country_code = "DE"
+stream_url = "https://0n-dance.radionetz.de/0n-dance.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-dance_600x600.jpg"
+tags = ["dance", "house", "electronic"]
+
+[[stations]]
+name = "Technolovers Techno"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/techno?ref=radiobrowser"
+logo_url = "https://i.ibb.co/ScwBQ49/TECHNO-TL.jpg"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "Technolovers Minimal"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/minimal?ref=radiobrowser"
+logo_url = "https://i.ibb.co/LncDTYz/MINIMAL-TL.jpg"
+tags = ["electronic", "house", "dance"]
+
+[[stations]]
+name = "0N Movies on Radio"
+country_code = "DE"
+stream_url = "https://0n-movies.radionetz.de/0n-movies.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-movies_600x600.jpg"
+tags = ["classical", "culture"]
+
+[[stations]]
+name = "0N Smooth Jazz on Radio"
+country_code = "DE"
+stream_url = "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-smooth-jazz_600x600.jpg"
+tags = ["jazz", "soul"]
+
+[[stations]]
+name = "LOHRO Lokalradio Rostock"
+country_code = "DE"
+stream_url = "http://stream.lohro.de:8000/lohro128.mp3.m3u"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "AnimeRadio.de"
+country_code = "DE"
+stream_url = "http://stream.animeradio.de/animeradio.mp3"
+logo_url = "https://www.animeradio.de/img/favicon.png"
+tags = ["pop", "culture"]
+
+[[stations]]
+name = "0N 70s on Radio"
+country_code = "DE"
+stream_url = "https://0n-70s.radionetz.de/0n-70s.aac"
+logo_url = "https://www.0nradio.com/logos/0n-70s_600x600.jpg"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "WDR 1Live DJ Session"
+country_code = "DE"
+stream_url = "http://wdr-1live-djsession.icecast.wdr.de/wdr/1live/djsession/mp3/128/stream.mp3"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/WDR_1LIVE_Logo_2016.svg/189px-WDR_1LIVE_Logo_2016.svg.png"
+tags = ["electronic", "dance", "indie"]
+
+[[stations]]
+name = "MDR Sachsen"
+country_code = "DE"
+stream_url = "http://mdr-284280-0.cast.mdr.de/mdr/284280/0/mp3/high/stream.mp3"
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "egoFM"
+country_code = "DE"
+stream_url = "http://streams.egofm.de/egoFM-hq"
+tags = ["indie", "alternative", "rock"]
+
+[[stations]]
+name = "Technolovers Funky House"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/funky-house?ref=radiobrowser"
+tags = ["house", "electronic", "dance"]
+
+[[stations]]
+name = "0N Country on Radio"
+country_code = "DE"
+stream_url = "https://0n-country.radionetz.de/0n-country.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-country_600x600.jpg"
+tags = ["country", "pop"]
+
+[[stations]]
+name = "Alles Oberkrain"
+country_code = "DE"
+stream_url = "http://bayerwaldradio.deg.net:8000/allesoberkrain"
+tags = ["folk", "world"]
+
+[[stations]]
+name = "HR2 Kultur"
+country_code = "DE"
+stream_url = "https://dispatcher.rndfnk.com/hr/hr2/live/mp3/high"
+logo_url = "https://www.hr2.de/favicon.png?v=3.84.2"
+tags = ["culture", "public radio"]
+
+[[stations]]
+name = "Antenne Bayern - 90er"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.antenne.de/90er-hits"
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Hit Radio FFH - Party"
+country_code = "DE"
+stream_url = "http://streams.ffh.de/ffhchannels/mp3/hqparty.m3u"
+logo_url = "https://webradio.ffh.de/android-icon.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Deutsche Welle Radio"
+country_code = "DE"
+stream_url = "https://dw.audiostream.io/dw/1027/mp3/64/dw08"
+tags = ["news", "public radio"]
+
+[[stations]]
+name = "Die Neue 107.7 Rock & Pop"
+country_code = "DE"
+stream_url = "http://dieneue1077.cast.addradio.de/dieneue1077/simulcast/high/stream.mp3"
+logo_url = "https://upload.dieneue1077.de/production/static/1693298631006/icons/icon_64.ax1w460g800.png"
+tags = ["rock", "pop"]
+
+[[stations]]
+name = "Radio Seefunk"
+country_code = "DE"
+stream_url = "https://webradio.radio-seefunk.de/"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Technolovers Vocal Trance"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/vocal-trance?ref=radiobrowser"
+tags = ["trance", "electronic", "dance"]
+
+[[stations]]
+name = "Rock Antenne - Melodic Rock"
+country_code = "DE"
+stream_url = "http://www.rockantenne.de/webradio/channels/melodic-rock.m3u"
+logo_url = "https://www.rockantenne.de/logos/rock-antenne/apple-touch-icon.png"
+tags = ["rock", "metal"]
+
+[[stations]]
+name = "0nlineradio Bach"
+country_code = "DE"
+stream_url = "https://stream.0nlineradio.com/bach?ref=radiobrowser"
+logo_url = "https://i.ibb.co/n1CQpDf/BACH-NEW.jpg"
+tags = ["classical"]
+
+[[stations]]
+name = "NDR 90.3"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr903.m3u"
+tags = ["public radio", "pop"]
+
+[[stations]]
+name = "SWR4 BW"
+country_code = "DE"
+stream_url = "https://liveradio.swr.de/sw890cl/swr4bw/"
+logo_url = "https://www.swr.de/assets/swr/swr4/apple-touch-icon-180x180.png"
+tags = ["classical", "folk", "oldies"]
+
+[[stations]]
+name = "Hirschmilch Radio - Chillout"
+country_code = "DE"
+stream_url = "http://hirschmilch.de:7000/chillout.mp3"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Inforadio vom rbb"
+country_code = "DE"
+stream_url = "http://opml.radiotime.com/Tune.ashx?id=s9176&partnerId=16"
+logo_url = "https://www.inforadio.de/content/dam/rbb/rbb/logos/touch/inf-128.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "Top20Club"
+country_code = "DE"
+stream_url = "http://server8.blitz-stream.de:9150/"
+tags = ["dance", "pop"]
+
+[[stations]]
+name = "SR3 Saarlandwelle"
+country_code = "DE"
+stream_url = "http://streaming01.sr-online.de/sr3_2.m3u"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "BR-Klassik"
+country_code = "DE"
+stream_url = "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high"
+logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:476e47d76c4bbf78?w=512"
+tags = ["classical", "public radio"]
+
+[[stations]]
+name = "Deutschlandfunk Dokumente und Debatten"
+country_code = "DE"
+stream_url = "https://st04.sslstream.dlf.de/dlf/04/mid/aac/stream.aac?aggregator=web"
+logo_url = "https://www.deutschlandradio.de/static/img/deutschlandradio/icons/apple-touch-icon-128x128.png"
+tags = ["talk", "news", "public radio"]
+
+[[stations]]
+name = "Kontrafunk"
+country_code = "DE"
+stream_url = "http://s5.radio.co/sca4082ebb/listen"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "1A NDW"
+country_code = "DE"
+stream_url = "https://1a-ndw.radionetz.de/1a-ndw.mp3"
+logo_url = "https://www.1aradio.com/logos/1a-ndw_600x600.jpg"
+tags = ["alternative", "pop", "oldies"]
+
+[[stations]]
+name = "Antenne Bayern Schlagersahne"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.antenne.de/das-schlager-karussell"
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Best Of Techno"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/best-of-techno"
+tags = ["electronic", "house", "dance"]
+
+[[stations]]
+name = "Rock Antenne Hair Metal"
+country_code = "DE"
+stream_url = "https://s9-webradio.rockantenne.de/hair-metal/stream"
+logo_url = "https://cdn.onlineradiobox.com/img/l/2/102912.v1.png"
+tags = ["rock", "metal"]
+
+[[stations]]
+name = "Dark Zero Radio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/darkzeroradio"
+logo_url = "https://dark-zero-radio.com/favicon.ico"
+tags = ["alternative", "electronic", "rock"]
+
+[[stations]]
+name = "M1.FM - Top of the Charts"
+country_code = "DE"
+stream_url = "http://tuner.m1.fm/charts.mp3"
+logo_url = "http://m1.fm/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Euro Smooth Jazz"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/eurosmoothjazz"
+tags = ["jazz", "ambient", "soul"]
+
+[[stations]]
+name = "1A Oldies"
+country_code = "DE"
+stream_url = "https://1a-oldies.radionetz.de/1a-oldies.mp3"
+logo_url = "https://www.1aradio.com/logos/1a-oldies_600x600.jpg"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Hit Radio FFH - 90er"
+country_code = "DE"
+stream_url = "http://mp3.ffh.de/ffhchannels/hqspezial.mp3"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Pure FM"
+country_code = "DE"
+stream_url = "http://purefm.radionetz.de/purefm-hh.mp3"
+tags = ["electronic", "house", "dance"]
+
+[[stations]]
+name = "ON Gothic Radio"
+country_code = "DE"
+stream_url = "https://0n-gothic.radionetz.de/0n-gothic.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-gothic_600x600.jpg"
+tags = ["alternative", "rock", "electronic"]
+
+[[stations]]
+name = "Technolovers - Bass House"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/bass-house?ref=radiobrowser"
+tags = ["electronic", "house", "dance"]
+
+[[stations]]
+name = "Laut.FM SynthPop"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/synthpop"
+tags = ["electronic", "alternative", "pop"]
+
+[[stations]]
+name = "MDR Sputnik Club"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284331-2_mp3_high.m3u"
+tags = ["electronic", "house", "dance"]
+
+[[stations]]
+name = "Kulturradio"
+country_code = "DE"
+stream_url = "http://kulturradio.de/live.m3u"
+logo_url = "http://www.kulturradio.de/content/dam/rbb/rbb/logos/touch/radio3-128.png"
+tags = ["classical", "culture", "public radio"]
+
+[[stations]]
+name = "0N - 2000s on Radio"
+country_code = "DE"
+stream_url = "https://0n-2000s.radionetz.de/0n-2000s.aac"
+logo_url = "https://www.0nradio.com/logos/0n-2000s_600x600.jpg"
+tags = ["pop", "rock", "dance", "oldies"]
+
+[[stations]]
+name = "I Love 2 Dance"
+country_code = "DE"
+stream_url = "http://stream02.iloveradio.de/iloveradio2.mp3"
+logo_url = "http://www.iloveradio.de/favicon.ico"
+tags = ["dance", "house", "electronic"]
+
+[[stations]]
+name = "SR1 Europawelle"
+country_code = "DE"
+stream_url = "http://streaming01.sr-online.de/sr1_2.m3u"
+logo_url = "https://www.sr.de/sr/static/images/favicon.ico"
+tags = ["pop", "rock", "public radio"]
+
+[[stations]]
+name = "SWR2"
+country_code = "DE"
+stream_url = "https://f111.rndfnk.com/ard/swr/swr2/live/mp3/256/stream.mp3?aggregator=web&sid=28ew6Usq6cch83eglcsXwLlNRS3&token=Ip5bwQ_T81Lq_mqKc3HUjnxrk94ek2bDcfNyNHuqRGk&tvf=XFsRgyq06xZmMTExLnJuZGZuay5jb20"
+logo_url = "https://www.swr.de/assets/swr/swrkultur/apple-touch-icon.png"
+tags = ["classical", "culture", "public radio"]
+
+[[stations]]
+name = "0N - Pop on Radio"
+country_code = "DE"
+stream_url = "https://0n-pop.radionetz.de/0n-pop.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-pop_600x600.jpg"
+tags = ["pop", "rock", "dance", "hip-hop"]
+
+[[stations]]
+name = "Laut.FM The Jazz of Wiesbaden"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/thejazzofwiesbaden"
+tags = ["jazz", "soul"]
+
+[[stations]]
+name = "0N - 80s on Radio"
+country_code = "DE"
+stream_url = "https://0n-80s.radionetz.de/0n-80s.aac"
+logo_url = "https://www.0nradio.com/logos/0n-80s_600x600.jpg"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Technolovers HANDSUP"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/handsup?ref=radiobrowser"
+tags = ["electronic", "trance", "house", "dance"]
+
+[[stations]]
+name = "0N - Oldies on Radio"
+country_code = "DE"
+stream_url = "https://0n-oldies.radionetz.de/0n-oldies.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-oldies_600x600.jpg"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "I Love Radio - Bass"
+country_code = "DE"
+stream_url = "http://stream02.iloveradio.de/iloveradio4.mp3?hadpreroll"
+logo_url = "https://cdn-radiotime-logos.tunein.com/s167726q.png"
+tags = ["electronic", "dance", "hip-hop"]
+
+[[stations]]
+name = "NDR 1 Radio MV"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr1radiomv.m3u"
+logo_url = "http://www.ndr.de/favicon.ico"
+tags = ["public radio", "pop", "oldies"]
+
+[[stations]]
+name = "Romantic Piano by Epic Piano"
+country_code = "DE"
+stream_url = "https://stream.epic-piano.com/romantic-piano?ref=radiobrowser"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "Technolovers - Ibiza House"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/ibiza-house?ref=radiobrowser"
+tags = ["house", "electronic", "ambient"]
+
+[[stations]]
+name = "Deutschlandfunk Nova"
+country_code = "DE"
+stream_url = "https://st03.sslstream.dlf.de/dlf/03/high/aac/stream.aac?aggregator=web"
+logo_url = "https://www.deutschlandfunknova.de/apple-touch-icon.png"
+tags = ["news", "talk", "culture", "public radio"]
+
+[[stations]]
+name = "Antenne Bayern - Rockantenne"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.antenne.de/rockantenne"
+tags = ["rock", "pop"]
+
+[[stations]]
+name = "Nightride FM - Darksynth"
+country_code = "DE"
+stream_url = "https://stream.nightride.fm/darksynth.mp3"
+logo_url = "https://nightride.fm/thumbnail.png"
+tags = ["electronic", "ambient", "alternative"]
+
+[[stations]]
+name = "I Love Radio - Dance 2"
+country_code = "DE"
+stream_url = "http://stream02.iloveradio.de/iloveradio2.mp3?hadpreroll"
+logo_url = "https://www.iloveradio.de/favicon.ico"
+tags = ["dance", "electronic", "house"]
+
+[[stations]]
+name = "Epic Lounge - Chillout"
+country_code = "DE"
+stream_url = "https://stream.epic-lounge.com/chillout-lounge?ref=radiobrowser"
+tags = ["ambient", "electronic", "pop"]
+
+[[stations]]
+name = "YOU FM"
+country_code = "DE"
+stream_url = "https://dispatcher.rndfnk.com/hr/youfm/live/mp3/high"
+logo_url = "https://www.you-fm.de/favicon.png?v=3.85.2"
+tags = ["pop", "electronic"]
+
+[[stations]]
+name = "Technolovers - Uplifting Trance"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/uplifting-trance?ref=radiobrowser"
+tags = ["trance", "electronic", "dance"]
+
+[[stations]]
+name = "Schwarzwaldradio"
+country_code = "DE"
+stream_url = "https://frontend.streamonkey.net/fho-schwarzwaldradiolive/mp3-stream.m3u"
+logo_url = "https://schwarzwaldradio.com/apple-touch-icon.png"
+tags = ["oldies", "rock", "pop"]
+
+[[stations]]
+name = "TranceBase FM"
+country_code = "DE"
+stream_url = "http://listen.trancebase.fm/tunein-aacplus-pls"
+logo_url = "https://www.trancebase.fm/media/icons/trb/apple-touch-icon.png"
+tags = ["trance", "electronic", "dance"]
+
+[[stations]]
+name = "WDR 1Live - Hip-Hop"
+country_code = "DE"
+stream_url = "http://wdr-1live-hiphop.icecast.wdr.de/wdr/1live/hiphop/mp3/128/stream.mp3"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/WDR_1LIVE_Logo_2016.svg/189px-WDR_1LIVE_Logo_2016.svg.png"
+tags = ["hip-hop", "pop", "alternative"]
+
+[[stations]]
+name = "Partyvibe - Drum and Bass"
+country_code = "DE"
+stream_url = "https://www.partyviberadio.com:8061/;listen.pls?sid=1"
+logo_url = "https://www.partyvibe.com/wp-content/uploads/2020/12/party-vibe-radio-logo.png"
+tags = ["electronic", "dance", "indie"]
+
+[[stations]]
+name = "Ostseewelle"
+country_code = "DE"
+stream_url = "https://addrad.io/4454pjf"
+logo_url = "https://www.ostseewelle.de/assets/icons/apple-touch-icon.png"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "Antenne Bayern - Relax"
+country_code = "DE"
+stream_url = "http://mp3channels.webradio.antenne.de/relax"
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+tags = ["pop", "ambient", "electronic"]
+
+[[stations]]
+name = "WDR 4"
+country_code = "DE"
+stream_url = "https://wdr-wdr4-live.icecastssl.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
+logo_url = "https://www1.wdr.de/resources/img/wdr/logo/epgmodule/wdr4_logo.svg"
+tags = ["pop", "oldies", "rock"]
+
+[[stations]]
+name = "1000 Hits 60s"
+country_code = "DE"
+stream_url = "http://c4.auracast.net:8020/stream"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "98.8 Kiss FM Clubsets"
+country_code = "DE"
+stream_url = "http://stream.kissfm.de/kissfm-electro/mp3-128/internetradio/"
+logo_url = "https://upload.kissfm.de/production/static/1675427733216/icons/icon_64.be8y2280000.png"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "Radio Alpenwelle"
+country_code = "DE"
+stream_url = "http://live.alpenwelle.de/alpenwelle128.mp3"
+logo_url = "http://www.alpenwelle.de/favicon.ico"
+tags = ["pop", "talk", "world"]
+
+[[stations]]
+name = "RauteMusik TechHouse"
+country_code = "DE"
+stream_url = "http://techhouse-high.rautemusik.fm/"
+tags = ["house", "electronic", "dance"]
+
+[[stations]]
+name = "Planet Radio"
+country_code = "DE"
+stream_url = "http://streams.planetradio.de/planetradio/mp3/livestream.m3u"
+logo_url = "https://www.planetradio.de/android-icon.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Dance Wave Radio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/dance-wave-radio"
+tags = ["dance", "electronic", "house", "trance"]
+
+[[stations]]
+name = "Thrashking Radio"
+country_code = "DE"
+stream_url = "http://thrashking.stream.laut.fm/thrashking"
+logo_url = "https://cdn-radiotime-logos.tunein.com/s238458q.png"
+tags = ["metal", "rock"]
+
+[[stations]]
+name = "Ska World"
+country_code = "DE"
+stream_url = "http://skaworld.stream.laut.fm/skaworld?ref=radiode"
+logo_url = "http://lautfm-skaworld.radio.de/assets/fav/apple-touch-icon.png"
+tags = ["ska", "rock", "indie"]
+
+[[stations]]
+name = "94.3 RS2"
+country_code = "DE"
+stream_url = "http://stream.rs2.de/rs2/mp3-128/internetradio/"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/943rs2_Claim_blau.png/320px-943rs2_Claim_blau.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Epic Classical - Classical Pan Flute"
+country_code = "DE"
+stream_url = "https://stream.epic-classical.com/classical-pan-flute?ref=liveradio"
+logo_url = "https://i.ibb.co/R2FqgKq/Pan-Flute.jpg"
+tags = ["classical", "ambient", "instrumental"]
+
+[[stations]]
+name = "Lounge Radio Ibiza"
+country_code = "DE"
+stream_url = "https://stream.laut.fm/lounge-radio-ibiza"
+logo_url = "https://lounge-radio-ibiza.com/favicon.ico"
+tags = ["house", "ambient", "electronic"]
+
+[[stations]]
+name = "1000 Melodien"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/1000melodien"
+logo_url = "http://1000melodien.de/apple-icon-120x120.png"
+tags = ["ambient", "instrumental", "classical"]
+
+[[stations]]
+name = "ESC Radio"
+country_code = "DE"
+stream_url = "http://stream.escradio.com:8030/"
+logo_url = "https://www.escradio.com/wp-content/uploads/2019/05/fav.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Dark Star FM"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/darkstarfm"
+tags = ["gothic", "rock", "electronic", "alternative"]
+
+[[stations]]
+name = "radioeins"
+country_code = "DE"
+stream_url = "https://www.radioeins.de/live_s.m3u"
+logo_url = "https://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
+tags = ["jazz", "rock", "pop", "electronic", "talk"]
+
+[[stations]]
+name = "N-Joy"
+country_code = "DE"
+stream_url = "http://icecast.ndr.de/ndr/njoy/live/mp3/128/stream.mp3?aggregator=airable"
+tags = ["pop"]
+
+[[stations]]
+name = "Absolute Relax"
+country_code = "DE"
+stream_url = "https://absolut-relax.live-sm.absolutradio.de/absolut-relax/stream/mp3"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "SWR 3"
+country_code = "DE"
+stream_url = "https://liveradio.swr.de/sw331ch/swr3/play.aac"
+logo_url = "https://www.swr3.de/assets/swr3/icons/favicon.ico"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Relaxing Piano"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/relaxing-piano"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "Bremen Zwei"
+country_code = "DE"
+stream_url = "https://icecast.radiobremen.de/rb/bremenzwei/live/mp3/128/stream.mp3"
+logo_url = "https://www.bremenzwei.de/static/img/favicons/apple-touch-icon-180.png?v=4"
+tags = ["public radio", "culture", "news"]
+
+[[stations]]
+name = "TranceBase.FM"
+country_code = "DE"
+stream_url = "http://listen.trancebase.fm/dsl.asx"
+logo_url = "http://trancebase.fm/media/icons/trb/apple-touch-icon.png"
+tags = ["trance", "electronic", "dance"]
+
+[[stations]]
+name = "WDR 4"
+country_code = "DE"
+stream_url = "http://wdr-wdr4-live.icecast.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "MDR Aktuell"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284340-0_mp3_low.m3u"
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "I Love Radio - Popstars"
+country_code = "DE"
+stream_url = "http://stream04.iloveradio.de/iloveradio11.mp3?hadpreroll"
+logo_url = "https://www.iloveradio.de/favicon.ico"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "RauteMusik Happy Hardcore"
+country_code = "DE"
+stream_url = "http://happyhardcore-high.rautemusik.fm/"
+tags = ["electronic", "dance", "trance"]
+
+[[stations]]
+name = "MDR Sachsen-Anhalt"
+country_code = "DE"
+stream_url = "http://mdr-284290-0.cast.mdr.de/mdr/284290/0/mp3/high/stream.mp3"
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+tags = ["public radio"]
+
+[[stations]]
+name = "RBB Kultur"
+country_code = "DE"
+stream_url = "http://rbbkultur.de/livemp3"
+logo_url = "http://www.rbb-online.de/content/dam/rbb/rbb/logos/touch/rbb-n-128.png"
+tags = ["culture", "public radio"]
+
+[[stations]]
+name = "Absolut Germany"
+country_code = "DE"
+stream_url = "https://absolut-germany.live-sm.absolutradio.de/absolut-germany/stream/mp3?aggregator"
+logo_url = "https://absolutradio.de/apple-touch-icon.png"
+tags = ["pop"]
+
+[[stations]]
+name = "EBM-Radio"
+country_code = "DE"
+stream_url = "http://www.ebm-radio.de/listen.pls"
+tags = ["electronic", "industrial", "alternative"]
+
+[[stations]]
+name = "Nostalgie - Discofever"
+country_code = "DE"
+stream_url = "http://nrj.de/nostalgiediscofever"
+tags = ["dance", "oldies", "soul"]
+
+[[stations]]
+name = "Double Bass FM"
+country_code = "DE"
+stream_url = "https://double-bass-fm.stream.laut.fm/double-bass-fm"
+tags = ["electronic", "dance"]
+
+[[stations]]
+name = "NDR 2 Hamburg"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr2_hh.m3u"
+logo_url = "http://www.ndr.de/favicon.ico"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Antenne Bayern - Fresh 4 You"
+country_code = "DE"
+stream_url = "http://www.antenne.de/webradio/channels/fresh.m3u"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio H\u00f6rspieltalk.de"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/hoerspieltalk"
+logo_url = "https://www.xn--hrspieltalk-rfb.de/images/style-2/apple-touch-icon.png"
+tags = ["talk", "culture"]
+
+[[stations]]
+name = "I Love Hardstyle"
+country_code = "DE"
+stream_url = "https://streams.ilovemusic.de/iloveradio21.mp3"
+logo_url = "https://www.ilovemusic.de/favicon.ico"
+tags = ["electronic", "dance", "trance"]
+
+[[stations]]
+name = "0 N - New Wave on Radio"
+country_code = "DE"
+stream_url = "https://0n-newwave.radionetz.de/0n-newwave.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-newwave_600x600.jpg"
+tags = ["alternative", "new wave", "oldies"]
+
+[[stations]]
+name = "WDR 4"
+country_code = "DE"
+stream_url = "http://wdr-wdr4-live.icecast.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
+logo_url = "https://www1.wdr.de/resources-v5.132.3/img/favicon/apple-touch-icon.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Chopin by Epic Piano"
+country_code = "DE"
+stream_url = "https://stream.epic-piano.com/chopin?ref=radiobrowser"
+tags = ["classical", "instrumental"]
+
+[[stations]]
+name = "N-JOY"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/n-joy.m3u"
+tags = ["pop"]
+
+[[stations]]
+name = "Hirschmilch Chillout"
+country_code = "DE"
+stream_url = "http://hirschmilch.de:7000/chillout.mp3"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "0N - Rock on Radio"
+country_code = "DE"
+stream_url = "https://0n-rock.radionetz.de/0n-rock.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-rock_600x600.jpg"
+tags = ["rock", "alternative", "metal"]
+
+[[stations]]
+name = "Radio B2 - Schlagermixx"
+country_code = "DE"
+stream_url = "http://mp3ad.radiob2schlagermixx.c.nmdn.net/radiob2schlagermixx/livestream.mp3"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Radio Gong 96.3 M\u00fcnchen"
+country_code = "DE"
+stream_url = "https://www.radiogong.de/app/live.m3u"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Eins"
+country_code = "DE"
+stream_url = "http://www.radioeins.de/livemp3_s"
+logo_url = "https://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "Radio K\u00f6ln"
+country_code = "DE"
+stream_url = "http://www.vtuner.com/vtunerweb/mms/m3u7508.m3u"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Logo_Radio_K%C3%B6ln.svg/800px-Logo_Radio_K%C3%B6ln.svg.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Ballermann Radio Club Style"
+country_code = "DE"
+stream_url = "https://stream.bmr-radio.de/bmr-clubstyle.mp3"
+logo_url = "https://www.ballermann-radio.de/wp-content/uploads/2024/02/stream-ballermann-radio-clubstyle-750x750.png"
+tags = ["dance", "pop"]
+
+[[stations]]
+name = "0N - 90s on Radio"
+country_code = "DE"
+stream_url = "https://0n-90s.radionetz.de/0n-90s.aac"
+logo_url = "https://www.0nradio.com/logos/0n-90s_600x600.jpg"
+tags = ["oldies", "pop", "rock", "dance"]
+
+[[stations]]
+name = "Radio Fritz"
+country_code = "DE"
+stream_url = "https://dispatcher.rndfnk.com/rbb/fritz/live/mp3/mid"
+logo_url = "https://www.fritz.de/content/dam/rbb/rbb/logos/touch/fritz-128.png"
+tags = ["pop", "hip-hop", "talk"]
+
+[[stations]]
+name = "0N - Jazz on Radio"
+country_code = "DE"
+stream_url = "https://0n-jazz.radionetz.de/0n-jazz.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-jazz_600x600.jpg"
+tags = ["jazz"]
+
+[[stations]]
+name = "MDR Jump In The Mix"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284321-2_mp3_high.m3u"
+logo_url = "https://cdn.mdrjump.de/resources/jump/img/favicons/apple-icon-120x120.png"
+tags = ["pop", "dance", "rock"]
+
+[[stations]]
+name = "Technolovers Future House"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/future-house?ref=radiobrowser"
+tags = ["electronic", "house", "dance"]
+
+[[stations]]
+name = "Deutschlandfunk Kultur"
+country_code = "DE"
+stream_url = "https://st02.sslstream.dlf.de/dlf/02/mid/aac/stream.aac?aggregator=web"
+logo_url = "https://www.deutschlandfunkkultur.de/static/img/deutschlandfunk_kultur/icons/apple-touch-icon-128x128.png"
+tags = ["culture", "news", "public radio"]
+
+[[stations]]
+name = "Juka Radio K-Pop"
+country_code = "DE"
+stream_url = "https://juka-kpop.stream.laut.fm/juka-kpop?t302=2021-04-01_09-03-35&uuid=6aa06ca0-9a01-407d-91af-155d24c5c405"
+tags = ["pop"]
+
+[[stations]]
+name = "Ballermann Radio Ab 18"
+country_code = "DE"
+stream_url = "https://stream.bmr-radio.de/bmr-ab18.mp3"
+logo_url = "https://www.ballermann-radio.de/wp-content/uploads/2024/02/stream-ballermann-radio-ab-18-750x750.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "0N 60s on Radio"
+country_code = "DE"
+stream_url = "https://0n-60s.radionetz.de/0n-60s.aac"
+logo_url = "https://www.0nradio.com/logos/0n-60s_600x600.jpg"
+tags = ["oldies", "soul", "rock"]
+
+[[stations]]
+name = "0nlineradio Vivaldi"
+country_code = "DE"
+stream_url = "https://stream.0nlineradio.com/vivaldi?ref=radiobrowser"
+logo_url = "https://i.ibb.co/HKNTfSQ/VIVALDI-NEW.jpg"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "0N Soft Rock on Radio"
+country_code = "DE"
+stream_url = "https://0n-softrock.radionetz.de/0n-softrock.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-soft-rock_600x600.jpg"
+tags = ["rock", "pop"]
+
+[[stations]]
+name = "H\u00f6rtalk H\u00f6rspiel Radio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/hoerspiel"
+logo_url = "https://www.hoerspielprojekt.de/favicon.ico"
+tags = ["culture", "talk"]
+
+[[stations]]
+name = "Hazzard of Darkness"
+country_code = "DE"
+stream_url = "http://hazzardstream.de:7777/listen1"
+tags = ["alternative", "metal", "electronic"]
+
+[[stations]]
+name = "Radio 80000"
+country_code = "DE"
+stream_url = "https://radio80k.out.airtime.pro:8000/radio80k_a"
+logo_url = "https://www.radio80k.de/app/uploads/2022/10/cropped-favicon-8000-192x192.gif"
+tags = ["public radio"]
+
+[[stations]]
+name = "RBB 88.8"
+country_code = "DE"
+stream_url = "http://www.rbb888.de/live.m3u"
+logo_url = "https://www.rbb888.de/content/dam/rbb/rbb/logos/touch/ach-128.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "1A 70er"
+country_code = "DE"
+stream_url = "https://1a-70er.radionetz.de/1a-70er.mp3"
+logo_url = "https://www.1aradio.com/logos/1a-70er_600x600.jpg"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Meer Radio 88.0 FM"
+country_code = "DE"
+stream_url = "http://meerradio.ip-streaming.net/meerradio"
+tags = ["pop"]
+
+[[stations]]
+name = "Day Dee Eurodance"
+country_code = "DE"
+stream_url = "https://daydeeeurodance.stream.laut.fm/daydeeeurodance"
+tags = ["dance", "electronic", "pop"]
+
+[[stations]]
+name = "0N Dance on Radio"
+country_code = "DE"
+stream_url = "https://0n-dance.radionetz.de/0n-dance.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-dance_600x600.jpg"
+tags = ["dance", "electronic", "house"]
+
+[[stations]]
+name = "Radio Mainwelle 104.3"
+country_code = "DE"
+stream_url = "http://webstream.mainwelle.de/radio-mainwelle.mp3"
+tags = ["news", "pop"]
+
+[[stations]]
+name = "Kontrafunk"
+country_code = "DE"
+stream_url = "https://s5.radio.co/sca4082ebb/listen"
+tags = ["talk", "culture"]
+
+[[stations]]
+name = "SWR dasding"
+country_code = "DE"
+stream_url = "https://liveradio.swr.de/d9zadj3/dasding/"
+logo_url = "https://dasding.de/assets/dasding/apple-touch-icon-120x120.png"
+tags = ["pop", "rock", "alternative"]
+
+[[stations]]
+name = "Technolovers Hardcore"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/hardcore?ref=radiobrowser"
+tags = ["electronic", "dance", "trance"]
+
+[[stations]]
+name = "Tangoparabailar"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/tangoparabailar"
+tags = ["world"]
+
+[[stations]]
+name = "0N K-Pop on Radio"
+country_code = "DE"
+stream_url = "https://0n-kpop.radionetz.de/0n-kpop.aac"
+logo_url = "https://www.0nradio.com/logos/0n-k-pop_600x600.jpg"
+tags = ["pop", "world"]
+
+[[stations]]
+name = "laut.fm DarkClubRadio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/darkclubradio"
+tags = ["alternative", "electronic", "metal"]
+
+[[stations]]
+name = "Epic Lounge - Piano & Jazz Bar"
+country_code = "DE"
+stream_url = "https://stream.epic-lounge.com/piano-jazz-bar?ref=radiobrowser"
+tags = ["jazz", "classical", "ambient"]
+
+[[stations]]
+name = "SWR 2"
+country_code = "DE"
+stream_url = "https://liveradio.swr.de/sw331ch/swr2/play.aac"
+tags = ["public radio", "classical", "culture"]
+
+[[stations]]
+name = "NDR Info Schleswig-Holstein"
+country_code = "DE"
+stream_url = "https://www.ndr.de/resources/metadaten/audio_ssl/m3u/ndrinfo_sh.m3u"
+logo_url = "https://static-media.streema.com/media/cache/9d/b3/9db365c0d939c0980e7eb7383156ec78.jpg"
+tags = ["news", "public radio", "talk"]
+
+[[stations]]
+name = "Absolut Oldie Classics"
+country_code = "DE"
+stream_url = "https://edge59.live-sm.absolutradio.de/absolut-oldieclassics/stream/mp3"
+tags = ["oldies"]
+
+[[stations]]
+name = "Radio Heimatmelodie"
+country_code = "DE"
+stream_url = "http://play.radio-heimatmelodie.de/;"
+logo_url = "http://www.radio-heimatmelodie.de/favicon.ico"
+tags = ["folk", "world"]
+
+[[stations]]
+name = "Saar Star Radio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/saar-star-radio"
+tags = ["pop"]
+
+[[stations]]
+name = "Rock Antenne Gothic"
+country_code = "DE"
+stream_url = "https://s6-webradio.rockantenne.de/gothic/stream/mp3"
+logo_url = "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png"
+tags = ["rock", "metal", "alternative"]
+
+[[stations]]
+name = "Kontrafunk"
+country_code = "DE"
+stream_url = "https://icecast.multhielemedia.de/listen/kontrafunk/radio.mp3"
+logo_url = "https://kontrafunk.radio/templates/yootheme/cache/af/logo_KF_vogel_mittig_subline-af5b9047.png"
+tags = ["talk", "news"]
+
+[[stations]]
+name = "Eurodance"
+country_code = "DE"
+stream_url = "https://eurodance.stream.laut.fm/eurodance"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Progressive Trance Mix"
+country_code = "DE"
+stream_url = "https://stream.laut.fm/progressive-trance-mix"
+tags = ["trance", "electronic"]
+
+[[stations]]
+name = "Radio HBR"
+country_code = "DE"
+stream_url = "http://stream1.radiohbr.de/stream.mp3"
+logo_url = "https://heukelbach.org/wp-content/uploads/sites/3/2016/07/favicon-mwh.gif"
+tags = ["talk", "culture"]
+
+[[stations]]
+name = "Deutschlandfunk"
+country_code = "DE"
+stream_url = "https://st01.sslstream.dlf.de/dlf/01/high/opus/stream.opus?aggregator=web"
+logo_url = "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png"
+tags = ["news", "public radio", "culture"]
+
+[[stations]]
+name = "HR 1"
+country_code = "DE"
+stream_url = "http://metafiles.gl-systemhaus.de/hr/hr1_2.m3u"
+logo_url = "https://www.hr1.de/favicon.png?v=3.85.2"
+tags = ["pop"]
+
+[[stations]]
+name = "0N Relax on Radio"
+country_code = "DE"
+stream_url = "https://0n-relax.radionetz.de/0n-relax.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-relax_600x600.jpg"
+tags = ["pop", "oldies", "ambient"]
+
+[[stations]]
+name = "1000 Hiphop"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/1000hiphop"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "Mother Earth Instrumental"
+country_code = "DE"
+stream_url = "https://motherearth.streamserver24.com/listen/motherearth_instrumental/motherearth.instrumental.aac"
+logo_url = "https://motherearthradio.de/images/mergoldcube512.png"
+tags = ["ambient", "classical"]
+
+[[stations]]
+name = "0N Heavy Metal on Radio"
+country_code = "DE"
+stream_url = "https://0n-heavymetal.radionetz.de/0n-heavymetal.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-heavymetal_600x600.jpg"
+tags = ["metal", "rock"]
+
+[[stations]]
+name = "ffn"
+country_code = "DE"
+stream_url = "https://ffn-de-hz-fal-stream04-cluster01.radiohost.de/ffn_mp3-192"
+tags = ["pop"]
+
+[[stations]]
+name = "Charivari M\u00fcnchen"
+country_code = "DE"
+stream_url = "https://rs5.stream24.net/charivari-hitmix.mp3?ref=charivari.de&aw_0_1st.playerid=radioplayer.de"
+logo_url = "https://www.charivari.de/apple-icon-120x120.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Radio1920"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/radio1920"
+tags = ["oldies", "jazz", "soul"]
+
+[[stations]]
+name = "Technolovers Electro"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/electro?ref=radiobrowser"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "MDR Aktuell"
+country_code = "DE"
+stream_url = "http://avw.mdr.de/streams/284340-0_aac_high.m3u"
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+tags = ["news", "public radio"]
+
+[[stations]]
+name = "Filmradio"
+country_code = "DE"
+stream_url = "https://filmradio.stream.laut.fm/filmradio?t302=2018-03-10_04-44-05&uuid=59ca68e0-84a4-492d-9b0b-36c45690cd59"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "HardBase.FM"
+country_code = "DE"
+stream_url = "http://listen.hardbase.fm/tunein-aac-hd-pls"
+logo_url = "https://www.hardbase.fm/media/icons/hb/apple-touch-icon.png"
+tags = ["electronic", "dance"]
+
+[[stations]]
+name = "Technolovers Hardstyle"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/hardstyle?ref=radiobrowser"
+tags = ["electronic", "dance"]
+
+[[stations]]
+name = "0N 50s on Radio"
+country_code = "DE"
+stream_url = "https://0n-50s.radionetz.de/0n-50s.mp3"
+logo_url = "https://www.0nradio.com/logos/0n-50s_600x600.jpg"
+tags = ["oldies", "rock"]
+
+[[stations]]
+name = "Epic Classical"
+country_code = "DE"
+stream_url = "https://stream.epic-classical.com/classical-meditation"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "laut.fm Psytrancelicious"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/psytrancelicious"
+tags = ["trance", "electronic"]
+
+[[stations]]
+name = "Radio Bollerwagen"
+country_code = "DE"
+stream_url = "http://player.ffn.de/radiobollerwagen.m3u"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "BR24live"
+country_code = "DE"
+stream_url = "https://dispatcher.rndfnk.com/br/br24live/live/mp3/mid"
+logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:c3ab9296f3b282bf?w=512"
+tags = ["news", "public radio"]
+
+[[stations]]
+name = "0N Top 40 on Radio"
+country_code = "DE"
+stream_url = "https://0n-top40.radionetz.de/0n-top40.aac"
+logo_url = "https://www.0nradio.com/logos/0n-top-40_600x600.jpg"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Technolovers Afro House"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/afro-house?ref=radiobrowser"
+tags = ["house", "world", "soul"]
+
+[[stations]]
+name = "Epic Classical - Classical Coffee Bar"
+country_code = "DE"
+stream_url = "https://stream.epic-classical.com/classical-coffee-bar"
+tags = ["classical", "ambient", "chillout"]
+
+[[stations]]
+name = "Laut.FM Synthesizer Greatest"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/synthesizergreatest.m3u"
+tags = ["electronic", "ambient"]
+
+[[stations]]
+name = "Deutschlandfunk Kultur"
+country_code = "DE"
+stream_url = "https://st02.sslstream.dlf.de/dlf/02/high/aac/stream.aac?aggregator=web"
+logo_url = "https://www.deutschlandfunkkultur.de/static/img/deutschlandfunk_kultur/icons/apple-touch-icon-128x128.png"
+tags = ["culture", "news", "public radio"]
+
+[[stations]]
+name = "Laut.FM Chillharmonie"
+country_code = "DE"
+stream_url = "https://chillharmonie.stream.laut.fm/chillharmonie"
+logo_url = "https://lh3.ggpht.com/a4M_Oyz2Jek1bkcRe8I7v3A8clEOoOI8Y-NiYuuICuw0wOHwaZgMUit4rRgC18mGZMo_=w300"
+tags = ["classical", "jazz", "ambient"]
+
+[[stations]]
+name = "Blackbeats.FM"
+country_code = "DE"
+stream_url = "http://stream3.blackbeats.fm/;"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "Nightride FM"
+country_code = "DE"
+stream_url = "https://stream.nightride.fm/ebsm.mp3"
+logo_url = "https://nightride.fm/thumbnail.png"
+tags = ["electronic", "ambient"]
+
+[[stations]]
+name = "Psyradio.fm"
+country_code = "DE"
+stream_url = "http://streamer.psyradio.org:8010/;listen.mp3"
+logo_url = "https://lh6.ggpht.com/dU5W-XpgWgEgtIt3Ho990I9bre5IZTq7AK2ffSt_bXTDTNQ6eUkTG-WqERh6c_EHPb8=w300"
+tags = ["trance", "electronic", "ambient"]
+
+[[stations]]
+name = "0nlineradio H\u00e4ndel"
+country_code = "DE"
+stream_url = "https://stream.0nlineradio.com/haendel?ref=radiobrowser"
+logo_url = "https://i.ibb.co/y8Pcv7T/HA-NDEL-NEW.jpg"
+tags = ["classical", "jazz"]
+
+[[stations]]
+name = "Epic Lounge - Nature Sounds"
+country_code = "DE"
+stream_url = "https://stream.epic-lounge.com/nature-sounds?ref=radiobrowser"
+tags = ["ambient", "chillout"]
+
+[[stations]]
+name = "I Love Radio - Hits History"
+country_code = "DE"
+stream_url = "http://stream04.iloveradio.de/iloveradio12.mp3"
+logo_url = "https://www.iloveradio.de/favicon.ico"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "101FM - Oldies"
+country_code = "DE"
+stream_url = "http://0-24oldiespoprock.stream.laut.fm/0-24_oldies_pop_rock?t302=2018-02-08_09-30-33&uuid=3ac88db9-1764-4e5a-a776-f42c2a4ffe7a"
+logo_url = "https://101fm.de/wp-content/uploads/2020/02/cropped-512er-180x180.png"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "1A - Schlager Gold"
+country_code = "DE"
+stream_url = "https://1a-schlagergold.radionetz.de/1a-schlagergold.mp3"
+logo_url = "https://www.1aradio.com/logos/1a-schlager-gold_600x600.jpg"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Antenne Bayern - Hits f\u00fcr Kids"
+country_code = "DE"
+stream_url = "http://www.antenne.de/webradio/channels/hits-fuer-kids.m3u"
+logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/vzvQkVkWCJ.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Nectarine Demoscene Radio"
+country_code = "DE"
+stream_url = "http://nectarine.from-de.com/necta192"
+tags = ["electronic", "alternative"]
+
+[[stations]]
+name = "Technolovers - Techhouse"
+country_code = "DE"
+stream_url = "https://stream.technolovers.fm/techhouse?ref=radiobrowser"
+tags = ["house", "electronic", "dance"]
+
+[[stations]]
+name = "N-JOY"
+country_code = "DE"
+stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/n-joy.m3u"
+tags = ["pop", "alternative"]
+
+[[stations]]
+name = "674FM"
+country_code = "DE"
+stream_url = "http://audio.674.fm/stream"
+logo_url = "http://674.fm/favicon.ico"
+tags = ["house", "electronic", "hip-hop", "soul", "funk"]
+
+[[stations]]
+name = "WDR 1LIVE"
+country_code = "DE"
+stream_url = "https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3"
+logo_url = "https://www1.wdr.de/radio/1live/resources-v5.122.3/img/favicon/apple-touch-icon.png"
+tags = ["alternative", "pop", "indie"]
+
+[[stations]]
+name = "Epic Classical - Classical Guitar"
+country_code = "DE"
+stream_url = "https://stream.epic-classical.com/classical-guitar"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "Metal Only"
+country_code = "DE"
+stream_url = "https://metal-only.sp.radio.fm/stream"
+logo_url = "https://www.metal-only.de/fileadmin/tpl//fav.ico"
+tags = ["metal"]
+
+[[stations]]
+name = "0nlineradio 80s Rock"
+country_code = "DE"
+stream_url = "https://stream.0nlineradio.com/80s-rock?ref=radiobrowser"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "Laut.FM Kinderradio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/kinderradio"
+logo_url = "https://lh3.ggpht.com/a4M_Oyz2Jek1bkcRe8I7v3A8clEOoOI8Y-NiYuuICuw0wOHwaZgMUit4rRgC18mGZMo_=w300"
+tags = ["culture"]
+
+[[stations]]
+name = "SR 2 KulturRadio"
+country_code = "DE"
+stream_url = "http://streaming01.sr-online.de/sr2_2.m3u"
+logo_url = "http://is3.mzstatic.com/image/thumb/Purple69/v4/e0/21/f5/e021f58d-21e7-877c-0ccc-1cb9bcdcc428/source/1200x630bb.jpg"
+tags = ["classical", "culture", "public radio"]
+
+[[stations]]
+name = "EBM"
+country_code = "DE"
+stream_url = "https://stream.laut.fm/ebm"
+logo_url = "https://i0.wp.com/flatlinesradio.de/storage/2021/11/244611397_1194785584320990_6265045071816304131_n-1.jpg?fit=180%2c180&#038;ssl=1"
+tags = ["electronic", "alternative"]
+
+[[stations]]
+name = "1A Chillout"
+country_code = "DE"
+stream_url = "https://1a-chillout.radionetz.de/1a-chillout.mp3"
+logo_url = "https://www.1aradio.com/logos/1a-chillout_600x600.jpg"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Antenne D\u00fcsseldorf"
+country_code = "DE"
+stream_url = "http://stream.antenneduesseldorf.de/444z5kv"
+logo_url = "https://www.antenneduesseldorf.de/assets/images/favicons/antenneduesseldorf/favicon_x96.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Bielefeld"
+country_code = "DE"
+stream_url = "http://mp3.radiobielefeld.c.nmdn.net/radiobielefeld/livestream.mp3"
+logo_url = "http://www.radiobielefeld.de/icons/apple-icon-120.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Bluesclub"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/bluesclub"
+tags = ["jazz", "soul", "rock"]
+
+[[stations]]
+name = "50s 60s Radio"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/50s60s-radio"
+tags = ["oldies"]
+
+[[stations]]
+name = "Nightride FM"
+country_code = "DE"
+stream_url = "https://stream.nightride.fm/nightride.mp3"
+logo_url = "https://nightride.fm/thumbnail.png"
+tags = ["electronic", "ambient"]
+
+[[stations]]
+name = "BPMcast"
+country_code = "DE"
+stream_url = "http://stream.laut.fm/bpmcast"
+tags = ["electronic", "hip-hop", "reggae"]
+
+[[stations]]
+name = "Radio Paloma"
+country_code = "DE"
+stream_url = "https://stream.silvacast.com/RPLive/mp3-128/RadioPaloma_Homepage"
+logo_url = "https://schlager.radio/wp-content/uploads/2020/11/cropped-radio-paloma-fav-180x180.png"
+tags = ["pop", "oldies", "world"]
+
+[[stations]]
+name = "M1.FM - Clubmix"
+country_code = "DE"
+stream_url = "http://tuner.m1.fm/clubmix.mp3"
+tags = ["electronic", "dance", "house"]
