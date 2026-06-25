@@ -2,9 +2,10 @@
 """
 Radio station discovery agent.
 
-Queries Radio Browser for each target country, applies mechanical quality
-filters, fetches og:image logos, then uses Claude to assess quality and clean
-station names. Approved entries are appended directly to stations.toml.
+Queries Radio Browser for each target country, keeps only stations with a
+resolved stream URL, applies mechanical quality filters, fetches og:image logos,
+then uses Claude to assess quality and clean station names. Approved entries are
+appended directly to stations.toml.
 
 Usage:
     pip install anthropic requests
@@ -81,6 +82,11 @@ def is_raw_ip(url: str) -> bool:
         return False
 
 
+def stream_url_for(station: dict) -> str:
+    """Return Radio Browser's resolved stream URL."""
+    return (station.get("url_resolved") or "").strip()
+
+
 def load_existing() -> tuple[set[str], set[str]]:
     """
     Return (normalised_stream_urls, lower_names) from three sources:
@@ -142,7 +148,7 @@ def fetch_candidates(country_code: str, min_votes: int) -> list[dict]:
 
     out = []
     for s in resp.json():
-        url = s.get("url", "")
+        url = stream_url_for(s)
         if not url:
             continue
         if s.get("votes", 0) < min_votes:
@@ -175,7 +181,7 @@ def assess_with_claude(client: anthropic.Anthropic, candidates: list[dict]) -> l
         return []
 
     station_list = "\n".join(
-        f"{i+1}. name={s['name']!r} url={s['url']!r} votes={s['votes']} bitrate={s['bitrate']}k tags={s.get('tags','')!r}"
+        f"{i+1}. name={s['name']!r} url={stream_url_for(s)!r} votes={s['votes']} bitrate={s['bitrate']}k tags={s.get('tags','')!r}"
         for i, s in enumerate(candidates)
     )
 
@@ -267,7 +273,7 @@ def main():
 
         fresh = [
             s for s in candidates
-            if normalise_url(s["url"]) not in existing_urls
+            if normalise_url(stream_url_for(s)) not in existing_urls
             and s["name"].lower() not in existing_names
         ]
         skipped = len(candidates) - len(fresh)
@@ -308,24 +314,26 @@ def main():
                 station = batch[idx]
                 if not assessment.get("include"):
                     print(f"    SKIP  {station['name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
+                    stream_url = stream_url_for(station)
                     rejected_entries.append({
-                        "stream_url": station["url"],
+                        "stream_url": stream_url,
                         "name": station["name"],
                         "reason": assessment.get("reason", ""),
                     })
-                    existing_urls.add(normalise_url(station["url"]))
+                    existing_urls.add(normalise_url(stream_url))
                     batch_skipped += 1
                     continue
 
+                stream_url = stream_url_for(station)
                 entry = format_toml_entry(
                     name=assessment["cleaned_name"],
                     country_code=country_code,
-                    stream_url=station["url"],
+                    stream_url=stream_url,
                     logo_url=station.get("_logo"),
                     tags=assessment.get("tags", []),
                 )
                 approved.append(entry)
-                existing_urls.add(normalise_url(station["url"]))
+                existing_urls.add(normalise_url(stream_url))
                 existing_names.add(assessment["cleaned_name"].lower())
                 print(f"    ADD   {assessment['cleaned_name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
                 batch_added += 1

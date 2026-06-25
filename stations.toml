@@ -6807,7 +6807,7 @@ tags = ["pop", "dance"]
 [[stations]]
 name = "88.6 Hard Rock"
 country_code = "AT"
-stream_url = "http://radio886.at/streams/88.6_Hard_Rock/mp3"
+stream_url = "https://radio886.at/streams/88.6_Hard_Rock/mp3"
 logo_url = "https://www.radio886.at/img/stream_logos_2024/886_STREAM_ICON_HARDROCK.png"
 tags = ["rock", "metal"]
 

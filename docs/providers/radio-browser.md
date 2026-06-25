@@ -56,7 +56,7 @@ Each station object contains:
 | -------------- | ---------------------------------------------------------------- |
 | `stationuuid`  | Stable UUID for the station                                      |
 | `name`         | Station name — may contain codec/bitrate noise, clean before use |
-| `url_resolved` | Resolved stream URL. Fall back to `url` if empty.                |
+| `url_resolved` | Resolved stream URL. Required for imported stations.             |
 | `favicon`      | Logo URL                                                         |
 | `country`      | Full country name                                                |
 | `countrycode`  | ISO 3166-1 alpha-2                                               |
@@ -98,7 +98,7 @@ the group that has one.
 | Field          | Source         | Notes                                    |
 | -------------- | -------------- | ---------------------------------------- |
 | `name`         | `name`         | Clean codec/bitrate noise before storing |
-| `stream_url`   | `url_resolved` | Fall back to `url` if empty              |
+| `stream_url`   | `url_resolved` | Required; skip records where this is empty |
 | `logo_url`     | `favicon`      |                                          |
 | `country`      | `country`      |                                          |
 | `country_code` | `countrycode`  |                                          |
