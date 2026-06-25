@@ -16,13 +16,13 @@ import argparse
 import json
 import re
 import sys
-import time
 import tomllib
 from pathlib import Path
 from urllib.parse import urlparse
 
 import gzip
 import io
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import anthropic
 import requests
@@ -273,9 +273,20 @@ def main():
         if not fresh:
             continue
 
+        # Fetch logos concurrently — 10 workers, 3s timeout each
+        def _fetch_logo(s: dict) -> tuple[str, str | None]:
+            logo = s.get("favicon") or fetch_og_image(s["url"], timeout=3)
+            return s["url"], logo
+
+        with ThreadPoolExecutor(max_workers=10) as pool:
+            futures = {pool.submit(_fetch_logo, s): s for s in fresh}
+            logo_map: dict[str, str | None] = {}
+            for future in as_completed(futures):
+                url, logo = future.result()
+                logo_map[url] = logo
+
         for s in fresh:
-            s["_logo"] = s.get("favicon") or fetch_og_image(s["url"])
-            time.sleep(0.1)
+            s["_logo"] = logo_map.get(s["url"])
 
         for i in range(0, len(fresh), args.batch_size):
             batch = fresh[i:i + args.batch_size]
