@@ -3807,3 +3807,955 @@ country_code = "FR"
 stream_url = "http://direct.francebleu.fr/live/fbisere-midfi.mp3"
 logo_url = "https://www.francebleu.fr/images/favicon-112.png"
 tags = ["public radio", "talk", "world"]
+
+[[stations]]
+name = "Radio Paradise Main Mix"
+country_code = "US"
+stream_url = "http://stream-uk1.radioparadise.com/aac-320"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["alternative", "rock", "pop", "electronic", "ambient"]
+
+[[stations]]
+name = "Classic Vinyl"
+country_code = "US"
+stream_url = "https://icecast.walmradio.com:8443/classic"
+logo_url = "https://icecast.walmradio.com:8443/classic.jpg"
+tags = ["oldies", "jazz", "swing", "classical", "folk"]
+
+[[stations]]
+name = "Adroit Jazz Underground"
+country_code = "US"
+stream_url = "https://icecast.walmradio.com:8443/jazz"
+logo_url = "https://icecast.walmradio.com:8443/jazz.jpg"
+tags = ["jazz", "alternative", "electronic", "indie", "ambient"]
+
+[[stations]]
+name = "WALM Old Time Radio"
+country_code = "US"
+stream_url = "https://icecast.walmradio.com:8443/otr"
+logo_url = "https://icecast.walmradio.com:8443/otr.jpg"
+tags = ["oldies", "talk", "comedy", "culture", "folk"]
+
+[[stations]]
+name = "Your Classical Relax"
+country_code = "US"
+stream_url = "http://relax.stream.publicradio.org/relax.mp3"
+logo_url = "http://www.yourclassical.org/apple-touch-icon.png"
+tags = ["classical", "ambient", "folk", "jazz", "world"]
+
+[[stations]]
+name = "181.FM Old School Hip Hop/R&B"
+country_code = "US"
+stream_url = "http://listen.181fm.com/181-oldschool_128k.mp3"
+logo_url = "http://www.181.fm/favicon.ico"
+tags = ["hip-hop", "r&b", "oldies", "soul", "dance"]
+
+[[stations]]
+name = "Frisky"
+country_code = "US"
+stream_url = "http://stream2.friskyradio.com/frisky_mp3_hi"
+logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
+tags = ["electronic", "dance", "house", "trance", "alternative"]
+
+[[stations]]
+name = "Big R Radio 80s Metal"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5186_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["metal", "rock", "punk", "alternative", "indie"]
+
+[[stations]]
+name = "Cryosleep"
+country_code = "US"
+stream_url = "http://streams.echoesofbluemars.org:8000/cryosleep"
+logo_url = "http://www.echoesofbluemars.org/images/favicon.ico"
+tags = ["ambient", "electronic", "classical", "world", "folk"]
+
+[[stations]]
+name = "NPR 24 Hour Program Stream"
+country_code = "US"
+stream_url = "http://npr-ice.streamguys1.com/live.mp3"
+logo_url = "https://static-assets.npr.org/static/images/favicon/favicon-96x96.png"
+tags = ["news", "talk", "public radio", "culture", "world"]
+
+[[stations]]
+name = "Radio Paradise Rock Mix"
+country_code = "US"
+stream_url = "http://stream.radioparadise.com/rock-320"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["rock", "alternative", "indie", "pop", "electronic"]
+
+[[stations]]
+name = "181.FM - 80's Country"
+country_code = "US"
+stream_url = "http://listen.181fm.com/181-80scountry_128k.mp3"
+logo_url = "http://www.181.fm/favicon.ico"
+tags = ["country", "oldies"]
+
+[[stations]]
+name = "Z 92 Miami"
+country_code = "US"
+stream_url = "https://liveaudio.lamusica.com/MIA_WCMQ_icy"
+logo_url = "https://cdn-profiles.tunein.com/s27943/images/logod.png"
+tags = ["pop", "tropical", "world", "spanish"]
+
+[[stations]]
+name = "98.1 KBEAR"
+country_code = "US"
+stream_url = "http://desertmountainbroadcasting.streamguys1.com/KYYA"
+logo_url = "https://pwa.tunegenie.com/kyyaam/icon-192.png"
+tags = ["rock"]
+
+[[stations]]
+name = "Fox News Radio"
+country_code = "US"
+stream_url = "https://live.amperwave.net/direct/foxnewsradio-foxnewsradioaac-imc?source=fnr.web"
+logo_url = "https://static.foxnews.com/radio.foxnews.com/content/uploads/2017/10/default_logo-150x150.png"
+tags = ["news"]
+
+[[stations]]
+name = "Radio Paradise Mellow Mix"
+country_code = "US"
+stream_url = "http://stream.radioparadise.com/mellow-320"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["alternative", "ambient", "electronic"]
+
+[[stations]]
+name = "Frisky Deep"
+country_code = "US"
+stream_url = "http://deep.friskyradio.com/friskydeep_aachi"
+logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "SmoothJazz.com"
+country_code = "US"
+stream_url = "https://smoothjazz.cdnstream1.com/2585_128.mp3"
+logo_url = "https://www.smoothjazz.com/sites/default/files/theme/sj-circle-logo.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Radio Paradise Main Mix"
+country_code = "US"
+stream_url = "http://stream.radioparadise.com/aac-128"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["alternative", "ambient"]
+
+[[stations]]
+name = "100hitz - Top 40"
+country_code = "US"
+stream_url = "http://pureplay.cdnstream1.com/6025_128.mp3?DIST=TuneIn&TGT=TuneIn&maxServers=2&gdpr=0&us_privacy=1YNY&partnertok=eyJhbGciOiJIUzI1NiIsImtpZCI6InR1bmVpbiIsInR5cCI6IkpXVCJ9.eyJ0cnVzdGVkX3BhcnRuZXIiOnRydWUsImlhdCI6MTYzMzk1NTI4MSwiaXNzIjoidGlzcnYifQ.cUMfsrk262BNjQXnfXkKBefQOqoRn2nweLrx5obNPhM"
+logo_url = "https://100hitz.com/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "MSNBC"
+country_code = "US"
+stream_url = "https://tunein.cdnstream1.com/3511_96.mp3"
+logo_url = "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/favicon-96x96.png"
+tags = ["news"]
+
+[[stations]]
+name = "Megarock Radio"
+country_code = "US"
+stream_url = "https://stream3.megarockradio.net:80/"
+logo_url = "https://megarockradio.net/favicon.ico"
+tags = ["rock", "metal"]
+
+[[stations]]
+name = "2000 FM - Country"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5103_128"
+logo_url = "http://2000fm.net/images/logo.png"
+tags = ["country"]
+
+[[stations]]
+name = "Today's Hot Country"
+country_code = "US"
+stream_url = "http://ice.stream101.com:9016/stream"
+logo_url = "https://www.todayshotcountry.com/wp-content/uploads/2016/10/cropped-siteicon-180x180.png"
+tags = ["country"]
+
+[[stations]]
+name = "100hitz The Mix"
+country_code = "US"
+stream_url = "http://pureplay.cdnstream1.com/6038_128.mp3?DIST=TuneIn&TGT=TuneIn&maxServers=2&gdpr=0&us_privacy=1YNY&partnertok=eyJhbGciOiJIUzI1NiIsImtpZCI6InR1bmVpbiIsInR5cCI6IkpXVCJ9.eyJ0cnVzdGVkX3BhcnRuZXIiOnRydWUsImlhdCI6MTYzMzk1Nzc4NCwiaXNzIjoidGlzcnYifQ.pcgS3hF5YBvvbD9rJO3OMBWPgEGE037nPVwPu4hamPY%22"
+logo_url = "https://100hitz.com/favicon.ico"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Bluegrass Country"
+country_code = "US"
+stream_url = "https://ice24.securenetsystems.net/WAMU"
+logo_url = "https://bluegrasscountry.org/favicon.ico"
+tags = ["country", "folk"]
+
+[[stations]]
+name = "Classical KDFC"
+country_code = "US"
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/KDFCFMAAC.aac"
+logo_url = "https://radiostationusa.fm/assets/image/radio/180/KDFCFM.png"
+tags = ["classical", "public radio"]
+
+[[stations]]
+name = "KPFA"
+country_code = "US"
+stream_url = "https://streams.kpfa.org:8443/kpfa"
+logo_url = "https://kpfa.org/favicon.ico"
+tags = ["talk", "public radio", "culture"]
+
+[[stations]]
+name = "Comedy 104 - Radiostorm"
+country_code = "US"
+stream_url = "https://ais-sa5.cdnstream1.com/b42761_64mp3"
+logo_url = "https://radiostorm.com/wp-content/uploads/2018/01/cropped-imgpsh_fullsize2-180x180.png"
+tags = ["comedy"]
+
+[[stations]]
+name = "Radio Paradise Rock Mix"
+country_code = "US"
+stream_url = "https://stream.radioparadise.com/rock-flac"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["rock", "alternative", "indie"]
+
+[[stations]]
+name = "America's Country"
+country_code = "US"
+stream_url = "https://ais-sa2.cdnstream1.com/1976_128.mp3"
+logo_url = "https://marinifamily.files.wordpress.com/2015/08/favicon.png"
+tags = ["country"]
+
+[[stations]]
+name = "Frisky Chill"
+country_code = "US"
+stream_url = "http://chill.friskyradio.com/friskychill_mp3_high"
+logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
+tags = ["electronic", "ambient", "house"]
+
+[[stations]]
+name = "GotRadio - 90s Alternative"
+country_code = "US"
+stream_url = "http://pureplay.cdnstream1.com/6039_128.mp3"
+logo_url = "http://www.gotradio.com/favicon.ico"
+tags = ["alternative", "rock"]
+
+[[stations]]
+name = "WDCB 90.9 Jazz & Blues"
+country_code = "US"
+stream_url = "http://wdcb-ice.streamguys.org/wdcb128"
+logo_url = "http://wdcb.org/img/favicons/apple-touch-icon-120x120.png"
+tags = ["jazz", "soul", "public radio"]
+
+[[stations]]
+name = "Christian Power Praise"
+country_code = "US"
+stream_url = "https://listen.christianrock.net/stream/13/"
+logo_url = "https://www.christianpowerpraise.net/apple-touch-icon.png"
+tags = ["rock", "culture"]
+
+[[stations]]
+name = "Big R Radio - 80s and 90s Pop Mix"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5183_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Salsa One Radio"
+country_code = "US"
+stream_url = "http://server7.servistreaming.com:10006/stream"
+logo_url = "http://www.salsaoneradio.com/favicon.ico"
+tags = ["world", "folk"]
+
+[[stations]]
+name = "KEXP 90.3 Seattle"
+country_code = "US"
+stream_url = "http://live-mp3-128.kexp.org/kexp128.mp3"
+logo_url = "http://www.kexp.org/static/assets/img/favicon-32x32.png"
+tags = ["alternative", "indie", "rock", "public radio"]
+
+[[stations]]
+name = "SciFi Old Time Radio"
+country_code = "US"
+stream_url = "http://s1.voscast.com:8652/stream"
+logo_url = "http://scifi-otr.weebly.com/uploads/1/4/2/0/14202201/3040862_orig.jpg"
+tags = ["culture", "comedy"]
+
+[[stations]]
+name = "Big R Radio - Golden Oldies"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5198_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "181.FM - Energy 98"
+country_code = "US"
+stream_url = "http://listen.181fm.com/181-energy98_128k.mp3"
+logo_url = "http://www.181.fm/favicon.ico"
+tags = ["dance", "house", "electronic"]
+
+[[stations]]
+name = "Smooth R&B 105.7"
+country_code = "US"
+stream_url = "https://ais-sa1.streamon.fm/7281_64k.aac"
+logo_url = "https://krnb.com/favicon.ico"
+tags = ["r&b", "soul", "urban"]
+
+[[stations]]
+name = "100hitz Hot Hitz"
+country_code = "US"
+stream_url = "http://pureplay.cdnstream1.com/6027_128.mp3?DIST=TuneIn&TGT=TuneIn&maxServers=2&gdpr=0&us_privacy=1YNY&partnertok=eyJhbGciOiJIUzI1NiIsImtpZCI6InR1bmVpbiIsInR5cCI6IkpXVCJ9.eyJ0cnVzdGVkX3BhcnRuZXIiOnRydWUsImlhdCI6MTYzMzk1NjY1OSwiaXNzIjoidGlzcnYifQ.qFjTFowI3sAHS4IFwRsz-zxLYbgTlfZFse1AtCH642s"
+logo_url = "https://100hitz.com/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Paradise Main Mix"
+country_code = "US"
+stream_url = "https://stream.radioparadise.com/flac"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["eclectic", "indie", "alternative"]
+
+[[stations]]
+name = "All Blues Radio"
+country_code = "US"
+stream_url = "http://equinox.shoutca.st:8788/;"
+logo_url = "https://cdn.website-editor.net/189da74ea8ed49719227b9e0808c29e5/site_favicon_16_1656198201979.ico"
+tags = ["blues", "soul"]
+
+[[stations]]
+name = "Abiding Radio - Instrumental"
+country_code = "US"
+stream_url = "https://streams.abidingradio.com:7800/1"
+logo_url = "https://www.abidingradio.org/wp-content/uploads/2022/05/cropped-new_icon.png"
+tags = ["classical", "ambient", "folk"]
+
+[[stations]]
+name = "CNN International Audio"
+country_code = "US"
+stream_url = "https://tunein.cdnstream1.com/3519_96.aac"
+logo_url = "https://raw.githubusercontent.com/AusIPTV/IPTVLogos/master/CNN_International_Logo.png"
+tags = ["news", "world"]
+
+[[stations]]
+name = "181.FM - Good Time Oldies Radio"
+country_code = "US"
+stream_url = "http://listen.181fm.com/181-goodtime_128k.mp3"
+logo_url = "http://www.181.fm/favicon.ico"
+tags = ["oldies"]
+
+[[stations]]
+name = "NPR 24 Hour Program Stream"
+country_code = "US"
+stream_url = "http://npr-ice.streamguys1.com/live.aac"
+logo_url = "https://static-assets.npr.org/static/images/favicon/favicon-96x96.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "Radio New York Live"
+country_code = "US"
+stream_url = "https://streaming.radiostreamlive.com/radionylive_devices"
+logo_url = "https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Gangstaville Radio"
+country_code = "US"
+stream_url = "http://stream.radio.co/s1cffd7347/listen"
+logo_url = "http://cdn-profiles.tunein.com/s135290/images/logoq.png"
+tags = ["hip-hop", "r&b", "soul"]
+
+[[stations]]
+name = "Big R Radio - Country Gold"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5195_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["country", "oldies"]
+
+[[stations]]
+name = "Big R Radio - 70s and 80s Pop Mix"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5181_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Frisky"
+country_code = "US"
+stream_url = "https://stream.frisky.friskyradio.com/frisky_mp3_high"
+logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
+tags = ["electronic", "house", "dance"]
+
+[[stations]]
+name = "The Jazz Groove (West)"
+country_code = "US"
+stream_url = "http://west-aac-64.streamthejazzgroove.com/stream"
+logo_url = "https://assets.jazzgroove.org/logo-circle-white1-no-org.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Christian Rock Dot Net"
+country_code = "US"
+stream_url = "https://listen.christianrock.net/stream/11/"
+logo_url = "https://www.christianrock.net/apple-touch-icon.png"
+tags = ["rock", "alternative"]
+
+[[stations]]
+name = "Scott Shannon's True Oldies Channel"
+country_code = "US"
+stream_url = "http://streaming.live365.com/b92108_128mp3"
+logo_url = "https://trueoldieschannel.com/wp-content/uploads/2019/02/apple-icon-120x120.png"
+tags = ["oldies"]
+
+[[stations]]
+name = "HD Radio - Classic Rock (USA)"
+country_code = "US"
+stream_url = "http://hdradioclassicrock-rfritschka.radioca.st/;"
+logo_url = "https://www.hd-radio.net/favicon.ico"
+tags = ["rock"]
+
+[[stations]]
+name = "PureRock.US - America's Pure Rock"
+country_code = "US"
+stream_url = "http://rosetta.shoutca.st:8524/"
+logo_url = "http://www.purerock.us/favicon.ico"
+tags = ["rock", "metal"]
+
+[[stations]]
+name = "Disco Studio 54"
+country_code = "US"
+stream_url = "https://maiban00.radioca.st/stream"
+logo_url = "https://discostudio54.com/favicon.ico"
+tags = ["oldies", "dance"]
+
+[[stations]]
+name = "WALM 2 HD"
+country_code = "US"
+stream_url = "https://icecast.walmradio.com:8443/walm2_opus"
+logo_url = "https://icecast.walmradio.com:8443/walm.jpg"
+tags = ["classical", "talk", "christian", "public radio"]
+
+[[stations]]
+name = "Soma FM Groove Salad"
+country_code = "US"
+stream_url = "https://hls.somafm.com/hls/groovesalad/320k/program.m3u8"
+logo_url = "https://somafm.com/img3/groovesalad-400.png"
+tags = ["electronic", "ambient", "house"]
+
+[[stations]]
+name = "Radio Paradise Main Mix"
+country_code = "US"
+stream_url = "http://stream-uk1.radioparadise.com/flacm"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["eclectic", "indie", "alternative"]
+
+[[stations]]
+name = "BeGood Radio 80s Metal"
+country_code = "US"
+stream_url = "https://bigrradio.cdnstream1.com/5212_128"
+logo_url = "http://begoodradio.com/images/logo.png"
+tags = ["metal", "rock"]
+
+[[stations]]
+name = "Organlive"
+country_code = "US"
+stream_url = "http://play.organlive.com:7000/192"
+logo_url = "http://www.organlive.com/eighthnotes.ico"
+tags = ["classical"]
+
+[[stations]]
+name = "181.FM Classical Jazz"
+country_code = "US"
+stream_url = "http://listen.181fm.com/181-classicaljazz_128k.mp3"
+logo_url = "http://www.181.fm/favicon.ico"
+tags = ["jazz", "classical"]
+
+[[stations]]
+name = "100hitz Indie Rock"
+country_code = "US"
+stream_url = "http://pureplay.cdnstream1.com/6056_64.aac?DIST=TuneIn&TGT=TuneIn&maxServers=2&gdpr=0&us_privacy=1YNY&partnertok=eyJhbGciOiJIUzI1NiIsImtpZCI6InR1bmVpbiIsInR5cCI6IkpXVCJ9.eyJ0cnVzdGVkX3BhcnRuZXIiOnRydWUsImlhdCI6MTYzMzk1ODAzMywiaXNzIjoidGlzcnYifQ.iRK4czQtolWgtNsj8Uy5lioP0EoZu1wCuvj2VwsCs3o"
+logo_url = "https://100hitz.com/favicon.ico"
+tags = ["indie", "rock", "alternative"]
+
+[[stations]]
+name = "Radio Paradise Mellow Mix"
+country_code = "US"
+stream_url = "https://stream.radioparadise.com/mellow-64"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["alternative", "ambient", "eclectic"]
+
+[[stations]]
+name = "Guerrilla Radio"
+country_code = "US"
+stream_url = "http://s2.stationplaylist.com:9460/guerrilla"
+logo_url = "http://www.guerrillaradio.com/favicon.ico"
+tags = ["alternative", "indie", "rock", "punk"]
+
+[[stations]]
+name = "2000 FM Top 40"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5106_128"
+logo_url = "http://2000fm.net/images/logo.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Bloomberg Radio Boston"
+country_code = "US"
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/WRCAAMAAC.aac"
+logo_url = "https://www.bloombergradio.com/content/plugins/bloomberg-favicon/dist/img/amber-120x120.png"
+tags = ["talk", "news"]
+
+[[stations]]
+name = "KNOW 91.1 Minnesota Public Radio"
+country_code = "US"
+stream_url = "http://nis.stream.publicradio.org/nis.mp3"
+logo_url = "http://www.mprnews.org/apple-touch-icon.png"
+tags = ["news", "public radio", "talk"]
+
+[[stations]]
+name = "Big R Radio Country Mix"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5196_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["country"]
+
+[[stations]]
+name = "Echoes of Bluemars"
+country_code = "US"
+stream_url = "http://streams.echoesofbluemars.org:8000/bluemars"
+logo_url = "http://www.echoesofbluemars.org/images/favicon.ico"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Non-Stop Oldies"
+country_code = "US"
+stream_url = "https://ais-sa2.cdnstream1.com/2383_128.mp3"
+logo_url = "https://static.wixstatic.com/media/00a61a_a29da417d9ce44d18dc83e35a30c2f43.png/v1/crop/x_24,y_30,w_555,h_544/fill/w_136,h_133,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/00a61a_a29da417d9ce44d18dc83e35a30c2f43.png"
+tags = ["oldies", "soul", "rock"]
+
+[[stations]]
+name = "WOSU 89.7 NPR News"
+country_code = "US"
+stream_url = "https://wosu.streamguys1.com/NPR_128"
+logo_url = "https://wosu.org/apple-touch-icon.png"
+tags = ["news", "public radio", "talk"]
+
+[[stations]]
+name = "Your Classical - Choral"
+country_code = "US"
+stream_url = "http://choral.stream.publicradio.org/choral.mp3"
+logo_url = "https://www.yourclassical.org/apple-touch-icon.png"
+tags = ["classical"]
+
+[[stations]]
+name = "Minnesota Public Radio Classical Music Stream"
+country_code = "US"
+stream_url = "http://ycradio.stream.publicradio.org/ycradio.mp3"
+logo_url = "http://www.yourclassical.org/apple-touch-icon.png"
+tags = ["classical", "public radio"]
+
+[[stations]]
+name = "Radio Paradise World/Etc Mix"
+country_code = "US"
+stream_url = "https://stream.radioparadise.com/world-etc-flac"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["world", "eclectic", "alternative"]
+
+[[stations]]
+name = "Big R Radio - 90s Alternative Rock"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5187_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["alternative", "rock", "indie"]
+
+[[stations]]
+name = "WFYI 90.1 Indianapolis"
+country_code = "US"
+stream_url = "http://wfyi-iad.streamguys1.com/live"
+logo_url = "http://www.wfyi.org/favicon.ico"
+tags = ["public radio", "news", "talk"]
+
+[[stations]]
+name = "Sunday Baroque"
+country_code = "US"
+stream_url = "http://wshu.streamguys.org/wshu-baroque"
+logo_url = "http://sundaybaroque.org/favicon.ico"
+tags = ["classical"]
+
+[[stations]]
+name = "Soma FM Groove Salad"
+country_code = "US"
+stream_url = "https://hls.somafm.com/hls//gs-surround/program.m3u8"
+logo_url = "https://www.somafm.com/apple-touch-icon.png"
+tags = ["electronic", "house", "ambient"]
+
+[[stations]]
+name = "Radio Paradise Rock Mix"
+country_code = "US"
+stream_url = "http://stream.radioparadise.com/rock-flacm"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["rock", "alternative", "eclectic"]
+
+[[stations]]
+name = "Outlaw Country Radio"
+country_code = "US"
+stream_url = "https://fastcast4u.com/player/kievradio/?pl=winamp&c=0"
+logo_url = "https://fastcast4u.com/player/kievradio/_user/cover/k/kievradio/ch0_permanent.png"
+tags = ["country"]
+
+[[stations]]
+name = "CBS Sports Radio 105.3"
+country_code = "US"
+stream_url = "https://crystalout.surfernetwork.com:8001/KINB-FM_MP3"
+logo_url = "https://www.cbssportsradio1053.com/favicon.ico"
+tags = ["sport", "talk"]
+
+[[stations]]
+name = "KUSC 91.5 Los Angeles"
+country_code = "US"
+stream_url = "http://96.aac.pls.kusc.live/"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/e/e2/KUSC_Logo.jpg"
+tags = ["classical", "public radio"]
+
+[[stations]]
+name = "Radio Visi\u00f3n Cristiana Internacional"
+country_code = "US"
+stream_url = "https://livestreamcdn.net:2000/stream/RadioVisionCristianaRadio/"
+logo_url = "https://static.wixstatic.com/media/6ddfc3_fba02465eaf5460d8452b49c8a599888%7emv2.png/v1/fill/w_180%2ch_180%2clg_1%2cusm_0.66_1.00_0.01/6ddfc3_fba02465eaf5460d8452b49c8a599888%7emv2.png"
+tags = ["world", "talk", "culture"]
+
+[[stations]]
+name = "WHYY 90.9 Philadelphia"
+country_code = "US"
+stream_url = "http://whyy.streamguys1.com/whyy-mp3"
+logo_url = "https://whyy.org/wp-content/themes/whyy/images/icons/favicon-rebrand.png"
+tags = ["public radio", "news", "talk"]
+
+[[stations]]
+name = "WPAT-FM Amor 93.1"
+country_code = "US"
+stream_url = "http://liveaudio.lamusica.com/NY_WPAT_icy"
+logo_url = "https://www.lamusica.com/icons/apple-icon-120x120.png"
+tags = ["world", "pop"]
+
+[[stations]]
+name = "WBEZ 91.5 Chicago Public Radio"
+country_code = "US"
+stream_url = "http://stream.wbez.org/wbez128.mp3"
+logo_url = "https://www.wbez.org/apple-touch-icon.png"
+tags = ["public radio", "news", "talk"]
+
+[[stations]]
+name = "KPBS"
+country_code = "US"
+stream_url = "https://kpbs.streamguys1.com/kpbs-mp3"
+logo_url = "https://www.kpbs.org/apple-touch-icon.png"
+tags = ["public radio", "news", "culture"]
+
+[[stations]]
+name = "Free FM 80s San Francisco"
+country_code = "US"
+stream_url = "https://freefm80.radioca.st/"
+logo_url = "https://lh5.googleusercontent.com/h_uHjSxZZ4iir8iw8zBcv84t38DX33BPd0x1cG0RKw1wbWAwGwImnUhtfFepUDc_T_SLbuAdiLOSaageDeGoOnKyAEQxzPY9cH2neNhvxjIFAvnbzjs3E_zrw0xasWgj=w1280"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Big R Radio - Grunge FM"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5200_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["alternative", "rock", "metal"]
+
+[[stations]]
+name = "Radio Paradise Rock Mix"
+country_code = "US"
+stream_url = "http://stream.radioparadise.com/rock-128"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["rock", "alternative", "indie"]
+
+[[stations]]
+name = "Indiana Public Radio WBST"
+country_code = "US"
+stream_url = "http://ipr.streamguys1.com/aac"
+logo_url = "https://cdn-profiles.tunein.com/s27613/images/logod.png?t=154765"
+tags = ["public radio", "news"]
+
+[[stations]]
+name = "Radio Paradise Mellow Mix"
+country_code = "US"
+stream_url = "http://stream.radioparadise.com/mellow-flacm"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["ambient", "rock", "alternative"]
+
+[[stations]]
+name = "CBN Classic Christian Radio"
+country_code = "US"
+stream_url = "https://streams.cbnradio.com/Classic-Christian-128K?app=cbnplayer"
+logo_url = "https://www1.cbn.com//sites/all/themes/cbn_default/images/favicons/mstile-144x144.png"
+tags = ["pop", "oldies", "culture"]
+
+[[stations]]
+name = "KLKK-FM 103.7"
+country_code = "US"
+stream_url = "http://ice6.securenetsystems.net/KLKK"
+logo_url = "https://1037thefoxrocks.com/wp-content/uploads/sites/15/2020/09/cropped-favicon-fox-1-180x180.png"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "WBGO Jazz 88.3 FM"
+country_code = "US"
+stream_url = "https://ais-sa8.cdnstream1.com/3629_128.mp3"
+logo_url = "https://npr.brightspotcdn.com/dims4/default/76ee71f/2147483647/strip/true/crop/200x100+0+0/resize/400x200!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fa7%2F2f%2Fbfa4b00449099118e45fefe81fe8%2Fwbgo-logo-200x100.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "a.m. ambient"
+country_code = "US"
+stream_url = "http://radio.stereoscenic.com/ama-h"
+logo_url = "https://d3rt1990lpmkn.cloudfront.net/640/0634887695e4eae902001f7a0043fabf315ca85137b2bc48b0f7bc471027db292203d32bf423475d5d684fa192549c8167a024502282748d7082779ba7e53d4d6ea32ef5b8b2ab1dccd5c8d6b75db291"
+tags = ["ambient"]
+
+[[stations]]
+name = "All Classical Portland"
+country_code = "US"
+stream_url = "https://allclassical.streamguys1.com/ac96k"
+logo_url = "https://www.allclassical.org/wp-content/themes/acp-theme/img/acp_logo_600x600.jpg"
+tags = ["classical"]
+
+[[stations]]
+name = "Folk Music Notebook"
+country_code = "US"
+stream_url = "https://s3.radio.co/s0b5d4adb5/listen"
+logo_url = "https://img1.wsimg.com/isteam/ip/33ac2230-3451-4ad7-8894-0d3a839af97f/favicon/ed9ab985-710c-4588-afef-f6388e1a738a.png/:/rs=w:64,h:64,m"
+tags = ["folk"]
+
+[[stations]]
+name = "WQXR 105.9 FM"
+country_code = "US"
+stream_url = "https://stream.wqxr.org/wqxr-web?nyprBrowserId=32c67956bf1d5600"
+logo_url = "https://media.wnyc.org/i/500/500/c/80/1/wqxr_1_1.png"
+tags = ["classical", "culture"]
+
+[[stations]]
+name = "Movie Soundtracks Hits Radio"
+country_code = "US"
+stream_url = "https://strm112.1.fm/moviesoundtracks_mobile_mp3"
+logo_url = "https://pbs.twimg.com/media/FmaeGQgXwAMl6jj?format=png"
+tags = ["culture"]
+
+[[stations]]
+name = "Classical KUSC"
+country_code = "US"
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/KUSCMP256.mp3"
+logo_url = "https://www.kusc.org/icons/kusc/apple-touch-icon-120x120.png"
+tags = ["classical"]
+
+[[stations]]
+name = "KXLU 88.9FM"
+country_code = "US"
+stream_url = "http://www.ednixon.com:8120/stream"
+logo_url = "https://kxlu.com/wp-content/uploads/2019/02/kxlusplatblack-125x125.png"
+tags = ["college radio", "indie", "alternative"]
+
+[[stations]]
+name = "Radio Paradise Mellow Mix"
+country_code = "US"
+stream_url = "http://stream.radioparadise.com/mellow-128"
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+tags = ["alternative", "ambient", "eclectic"]
+
+[[stations]]
+name = "Abiding Radio - Bluegrass Hymns"
+country_code = "US"
+stream_url = "https://streams.abidingradio.com:7840/1"
+logo_url = "https://www.abidingradio.org/wp-content/uploads/2022/05/cropped-new_icon.png"
+tags = ["folk", "country"]
+
+[[stations]]
+name = "GotRadio - Soft Rock Caf\u00e9"
+country_code = "US"
+stream_url = "https://pureplay.cdnstream1.com/6010_64.aac/playlist.m3u8"
+logo_url = "https://cdn.onlineradiobox.com/img/l/6/10096.v3.png"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "Urban Radio - Hip Hop / R&B"
+country_code = "US"
+stream_url = "http://hydra.cdnstream.com/1536_128"
+logo_url = "https://superradio.cc/favicon.ico"
+tags = ["hip-hop", "r&b"]
+
+[[stations]]
+name = "Your Classical - Favorites"
+country_code = "US"
+stream_url = "https://favorites.stream.publicradio.org/favorites.mp3"
+logo_url = "https://www.yourclassical.org/apple-touch-icon.png"
+tags = ["classical", "public radio"]
+
+[[stations]]
+name = "Classic Hits 109"
+country_code = "US"
+stream_url = "https://broadcast.classichits109.com/70s-90s"
+logo_url = "https://cdn-profiles.tunein.com/s297004/images/logog.png"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "Swing Street Radio"
+country_code = "US"
+stream_url = "http://s6.voscast.com:11312/"
+logo_url = "https://www.swingstreetradio.org/favicon.ico"
+tags = ["jazz", "soul"]
+
+[[stations]]
+name = "WTOP 103.5 FM"
+country_code = "US"
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/WTOPFM.mp3"
+logo_url = "https://wtop.com/wp-content/themes/wtop-new/assets/img/favicons/apple-touch-icon-120x120.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "95.7 That Station"
+country_code = "US"
+stream_url = "https://ais-sa8.cdnstream1.com/2749_64.aac"
+logo_url = "https://cdn.onlineradiobox.com/img/l/0/114200.v4.png"
+tags = ["alternative", "indie"]
+
+[[stations]]
+name = "The Jazz Groove"
+country_code = "US"
+stream_url = "http://east-mp3-128.streamthejazzgroove.com/stream"
+logo_url = "https://i.imgur.com/KoS7yEr.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Classical King FM - Evergreen Channel"
+country_code = "US"
+stream_url = "https://classicalking.streamguys1.com/evergreen-aac-128k"
+logo_url = "https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1108/2019/05/15152826/cropped-favico-192x192.png"
+tags = ["classical"]
+
+[[stations]]
+name = "WBUR 90.9 FM Boston"
+country_code = "US"
+stream_url = "http://wbur-sc.streamguys.com/wbur.aac"
+logo_url = "http://d3kwtionx0p7im.cloudfront.net/images/icons/favicon.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "A Strangely Isolated Place"
+country_code = "US"
+stream_url = "https://streams.radio.co/s0aa1e6f4a/listen"
+logo_url = "https://9128.live/favicon.ico"
+tags = ["electronic", "ambient", "alternative"]
+
+[[stations]]
+name = "Big R Radio - Alternative Rock"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5189_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["alternative", "rock"]
+
+[[stations]]
+name = "Radio Art Acoustic Blues"
+country_code = "US"
+stream_url = "https://live.radioart.com/fAcoustic_blues.mp3"
+logo_url = "https://radioart.com/templates/yootheme/vendor/yootheme/theme-joomla/assets/images/favicon.png"
+tags = ["blues", "folk"]
+
+[[stations]]
+name = "Music City Roadhouse"
+country_code = "US"
+stream_url = "http://streaming.live365.com/a73754"
+logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/ukyj9kjf3z3q.jpg"
+tags = ["country", "rock", "soul"]
+
+[[stations]]
+name = "KEXP 90.3 Seattle"
+country_code = "US"
+stream_url = "https://kexp.streamguys1.com/kexp160.aac"
+logo_url = "http://www.kexp.org/static/assets/img/favicon-32x32.png"
+tags = ["alternative", "indie", "eclectic"]
+
+[[stations]]
+name = "Music of China"
+country_code = "US"
+stream_url = "https://vip.wongsong.cn/proxy/wongsong/stream-mp3-WongSong"
+logo_url = "https://wongsong.cn/favicon.ico"
+tags = ["world"]
+
+[[stations]]
+name = "MPR The Current"
+country_code = "US"
+stream_url = "http://current.stream.publicradio.org/kcmp.mp3"
+logo_url = "http://www.thecurrent.org/apple-touch-icon.png"
+tags = ["indie", "alternative", "pop", "public radio"]
+
+[[stations]]
+name = "Big Blue Swing"
+country_code = "US"
+stream_url = "http://radio.bigblueswing.com:8002/;64bit.mp3"
+logo_url = "https://web.bigblueswing.com/misc/favicon.ico"
+tags = ["jazz", "soul", "oldies"]
+
+[[stations]]
+name = "Progrock.com"
+country_code = "US"
+stream_url = "http://pavo.prostreaming.net:8012/stream"
+logo_url = "https://progrock.com/favicon.ico"
+tags = ["rock", "alternative", "indie"]
+
+[[stations]]
+name = "Ocean Beach Radio"
+country_code = "US"
+stream_url = "http://ophanim.net:7130/;"
+logo_url = "http://oceanbeachradio.com/favicon.ico"
+tags = ["rock", "blues", "country", "oldies"]
+
+[[stations]]
+name = "Radio Art Vocal Lounge"
+country_code = "US"
+stream_url = "https://live.radioart.com/fVocal_lounge.mp3"
+logo_url = "https://radioart.com/favicon.ico"
+tags = ["jazz", "soul", "ambient", "pop"]
+
+[[stations]]
+name = "Folk Alley Irish"
+country_code = "US"
+stream_url = "https://freshgrass.streamguys1.com/irish-128mp3"
+logo_url = "https://www.folkalley.com/favicon.ico"
+tags = ["folk", "world", "indie"]
+
+[[stations]]
+name = "WCPE The Classical Station"
+country_code = "US"
+stream_url = "http://audio-ice1.ibiblio.org:8000/wcpe128.aac"
+logo_url = "https://theclassicalstation.org/wp-content/themes/nmc_classicalstation/favicon.png"
+tags = ["classical", "public radio"]
+
+[[stations]]
+name = "Big R Radio - Gospel Channel"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5199_128"
+logo_url = "http://www.bigrradio.com/image/favicon/favicon-32x32.png"
+tags = ["soul", "gospel", "oldies"]
+
+[[stations]]
+name = "Back To The 80s Radio"
+country_code = "US"
+stream_url = "http://s1.nexuscast.com:8135/;"
+logo_url = "http://www.heartbeatofflagler.com/images/logo_002.jpg"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "That 70's Channel"
+country_code = "US"
+stream_url = "http://los.cdnstream.com/1101_128"
+logo_url = "https://cdn-radiotime-logos.tunein.com/s123174q.png"
+tags = ["rock", "pop", "oldies"]
+
+[[stations]]
+name = "Big R Radio - Post Grunge Rock"
+country_code = "US"
+stream_url = "http://bigrradio.cdnstream1.com/5203_128"
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+tags = ["rock", "alternative", "metal"]
