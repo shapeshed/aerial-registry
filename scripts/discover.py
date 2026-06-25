@@ -20,8 +20,6 @@ import tomllib
 from pathlib import Path
 from urllib.parse import urlparse
 
-from concurrent.futures import ThreadPoolExecutor, as_completed
-
 import anthropic
 import requests
 
@@ -154,27 +152,10 @@ def fetch_candidates(country_code: str, min_votes: int) -> list[dict]:
     return out
 
 
-def fetch_og_image(url: str, timeout: int = 5) -> str | None:
-    try:
-        parsed = urlparse(url)
-        homepage = f"{parsed.scheme}://{parsed.netloc}"
-        resp = requests.get(homepage, timeout=timeout, allow_redirects=True)
-        html = resp.text
-        m = re.search(
-            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\'](https?://[^"\']+)["\']',
-            html,
-        )
-        if m:
-            return m.group(1)
-        m = re.search(
-            r'<meta[^>]+content=["\'](https?://[^"\']+)["\'][^>]+property=["\']og:image["\']',
-            html,
-        )
-        if m:
-            return m.group(1)
-    except Exception:
-        pass
-    return None
+def logo_for(s: dict) -> str | None:
+    """Return the best available logo URL from Radio Browser metadata."""
+    favicon = s.get("favicon", "").strip()
+    return favicon if favicon.startswith("http") else None
 
 
 def assess_with_claude(client: anthropic.Anthropic, candidates: list[dict]) -> list[dict]:
@@ -275,24 +256,11 @@ def main():
             print("  Nothing new — skipping.", file=sys.stderr)
             continue
 
-        print(f"  Fetching logos for {len(fresh)} stations (10 concurrent, 3s timeout)...", file=sys.stderr)
-
-        def _fetch_logo(s: dict) -> tuple[str, str | None]:
-            logo = s.get("favicon") or fetch_og_image(s["url"], timeout=3)
-            return s["url"], logo
-
-        with ThreadPoolExecutor(max_workers=10) as pool:
-            futures = {pool.submit(_fetch_logo, s): s for s in fresh}
-            logo_map: dict[str, str | None] = {}
-            for future in as_completed(futures):
-                url, logo = future.result()
-                logo_map[url] = logo
-
-        with_logo = sum(1 for v in logo_map.values() if v)
-        print(f"  Logos found: {with_logo}/{len(fresh)}", file=sys.stderr)
-
         for s in fresh:
-            s["_logo"] = logo_map.get(s["url"])
+            s["_logo"] = logo_for(s)
+
+        with_logo = sum(1 for s in fresh if s["_logo"])
+        print(f"  Logos from Radio Browser metadata: {with_logo}/{len(fresh)}", file=sys.stderr)
 
         n_batches = (len(fresh) + args.batch_size - 1) // args.batch_size
         print(f"  Sending {len(fresh)} stations to Claude in {n_batches} batch(es)...", file=sys.stderr)
