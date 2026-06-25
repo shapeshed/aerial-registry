@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
 """
-Radio station candidate generator.
+Radio station discovery agent.
 
 Queries Radio Browser for each target country, applies mechanical quality
-filters (votes, bitrate, HTTPS, logo, not a known-provider domain), fetches
-og:image logos from station websites, then writes candidates to a TOML file
-for agent review.
-
-The agent (not this script) decides which candidates to add to stations.toml.
+filters, fetches og:image logos, then uses Claude to assess quality and clean
+station names. Approved entries are appended directly to stations.toml.
 
 Usage:
-    pip install requests
+    pip install anthropic requests
     python scripts/discover.py --countries GB DE FR
-    python scripts/discover.py --countries GB --min-votes 1000 --output proposed.toml
+    python scripts/discover.py --countries GB --min-votes 1000
 """
 
 import argparse
@@ -24,25 +21,26 @@ import tomllib
 from pathlib import Path
 from urllib.parse import urlparse
 
+import anthropic
 import requests
 
 RADIO_BROWSER_API = "https://de1.api.radio-browser.info/json/stations/search"
-EXISTING_TOML = Path(__file__).parent.parent / "stations.toml"
+STATIONS_TOML = Path(__file__).parent.parent / "stations.toml"
 
 # Stream domains already covered by broadcaster providers — skip these.
 KNOWN_PROVIDER_DOMAINS = {
-    "musicradio.com",      # Global Radio
-    "thisisdax.com",       # Global Radio CDN
-    "bbcmedia.co.uk",      # BBC
-    "bbci.co.uk",          # BBC
-    "akamaized.net",       # BBC HLS CDN
-    "talksport.com",       # Wireless
-    "talkradio.co.uk",     # Wireless
-    "virginradio.co.uk",   # Wireless
-    "wireless.radio",      # Wireless
-    "ardaudiothek.de",     # ARD
-    "radiofrance.fr",      # Radio France
-    "rtve.es",             # RTVE
+    "musicradio.com",
+    "thisisdax.com",
+    "bbcmedia.co.uk",
+    "bbci.co.uk",
+    "akamaized.net",
+    "talksport.com",
+    "talkradio.co.uk",
+    "virginradio.co.uk",
+    "wireless.radio",
+    "ardaudiothek.de",
+    "radiofrance.fr",
+    "rtve.es",
 }
 
 COUNTRY_NAMES = {
@@ -82,11 +80,10 @@ def is_raw_ip(url: str) -> bool:
         return False
 
 
-def load_existing(path: Path) -> tuple[set[str], set[str]]:
-    """Return (normalised_stream_urls, lower_names) already in stations.toml."""
-    if not path.exists():
+def load_existing() -> tuple[set[str], set[str]]:
+    if not STATIONS_TOML.exists():
         return set(), set()
-    with open(path, "rb") as f:
+    with open(STATIONS_TOML, "rb") as f:
         data = tomllib.load(f)
     urls = {normalise_url(s["stream_url"]) for s in data.get("stations", [])}
     names = {s["name"].lower() for s in data.get("stations", [])}
@@ -127,7 +124,6 @@ def fetch_candidates(country_code: str, min_votes: int) -> list[dict]:
 
 
 def fetch_og_image(url: str, timeout: int = 5) -> str | None:
-    """Try to extract og:image from the station's homepage."""
     try:
         parsed = urlparse(url)
         homepage = f"{parsed.scheme}://{parsed.netloc}"
@@ -150,18 +146,57 @@ def fetch_og_image(url: str, timeout: int = 5) -> str | None:
     return None
 
 
+def assess_with_claude(client: anthropic.Anthropic, candidates: list[dict]) -> list[dict]:
+    if not candidates:
+        return []
+
+    station_list = "\n".join(
+        f"{i+1}. name={s['name']!r} url={s['url']!r} votes={s['votes']} bitrate={s['bitrate']}k tags={s.get('tags','')!r}"
+        for i, s in enumerate(candidates)
+    )
+
+    prompt = f"""You are reviewing candidate radio stations for a curated internet radio registry used in a polished consumer app.
+
+For each station, decide:
+1. Should it be included? (include: true/false)
+2. A clean, properly-capitalised display name — fix ALL-CAPS, strip codec/quality suffixes like [MP3] (128k), strip leading/trailing symbols
+3. Up to 5 tags from: pop, rock, classical, jazz, electronic, dance, trance, house, hip-hop, indie, alternative, folk, country, news, talk, sport, world, ambient, metal, punk, reggae, soul, r&b, oldies, comedy, culture, public radio
+4. One-line reason
+
+Exclude if:
+- Name is spammy/junk (e.g. "# TOP 100 DJ CHARTS", "__TRANCE__ by rautemusik", "BEST SMOOTH JAZZ - UK")
+- Pure internet aggregator with no real station identity
+- Geographically misleading for its listed country
+- Duplicate of a well-known branded station (BBC, Global Radio, etc.)
+
+Include if:
+- Real named station with an identity and genuine audience
+- Reasonable vote count relative to peers
+
+Stations:
+{station_list}
+
+Respond with a JSON array only (no markdown), one object per station in order:
+[{{"index": 1, "include": true, "cleaned_name": "...", "tags": ["tag1"], "reason": "..."}}, ...]"""
+
+    message = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=4096,
+        messages=[{"role": "user", "content": prompt}],
+    )
+
+    return json.loads(message.content[0].text.strip())
+
+
 def format_toml_entry(
     name: str,
     country_code: str,
     stream_url: str,
     logo_url: str | None,
     tags: list[str],
-    votes: int,
-    bitrate: int,
 ) -> str:
     lines = [
         "[[stations]]",
-        f"# votes={votes} bitrate={bitrate}k",
         f"name = {json.dumps(name)}",
         f"country_code = {json.dumps(country_code)}",
         f"stream_url = {json.dumps(stream_url)}",
@@ -169,26 +204,23 @@ def format_toml_entry(
     if logo_url:
         lines.append(f"logo_url = {json.dumps(logo_url)}")
     if tags:
-        tag_str = ", ".join(f'"{t}"' for t in tags[:5])
+        tag_str = ", ".join(f'"{t}"' for t in tags)
         lines.append(f"tags = [{tag_str}]")
     return "\n".join(lines)
 
 
-def parse_tags(raw: str) -> list[str]:
-    return [t.strip() for t in raw.split(",") if t.strip()][:5]
-
-
 def main():
-    parser = argparse.ArgumentParser(description="Generate radio station candidates from Radio Browser")
+    parser = argparse.ArgumentParser()
     parser.add_argument("--countries", nargs="+", default=["GB"], metavar="CC")
     parser.add_argument("--min-votes", type=int, default=500)
-    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--batch-size", type=int, default=20)
     args = parser.parse_args()
 
-    existing_urls, existing_names = load_existing(EXISTING_TOML)
-    print(f"Loaded {len(existing_urls)} existing stations from stations.toml", file=sys.stderr)
+    client = anthropic.Anthropic()
+    existing_urls, existing_names = load_existing()
+    print(f"Loaded {len(existing_urls)} existing stations", file=sys.stderr)
 
-    entries: list[str] = []
+    approved: list[str] = []
 
     for country_code in args.countries:
         country_name = COUNTRY_NAMES.get(country_code, country_code)
@@ -204,46 +236,55 @@ def main():
         ]
         print(f"  {len(fresh)} not already in stations.toml", file=sys.stderr)
 
+        if not fresh:
+            continue
+
         for s in fresh:
-            logo = s.get("favicon") or fetch_og_image(s["url"])
+            s["_logo"] = s.get("favicon") or fetch_og_image(s["url"])
             time.sleep(0.1)
 
-            entry = format_toml_entry(
-                name=s["name"],
-                country_code=country_code,
-                stream_url=s["url"],
-                logo_url=logo,
-                tags=parse_tags(s.get("tags", "")),
-                votes=s.get("votes", 0),
-                bitrate=s.get("bitrate", 0),
-            )
-            entries.append(entry)
+        for i in range(0, len(fresh), args.batch_size):
+            batch = fresh[i:i + args.batch_size]
+            print(f"  Assessing batch {i // args.batch_size + 1} ({len(batch)} stations)...", file=sys.stderr)
 
-    if not entries:
-        print("\nNo new candidates found.", file=sys.stderr)
+            try:
+                assessments = assess_with_claude(client, batch)
+            except Exception as e:
+                print(f"  Claude error: {e}", file=sys.stderr)
+                continue
+
+            for assessment in assessments:
+                idx = assessment["index"] - 1
+                if idx >= len(batch):
+                    continue
+                station = batch[idx]
+                if not assessment.get("include"):
+                    print(f"  SKIP  {station['name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
+                    continue
+
+                entry = format_toml_entry(
+                    name=assessment["cleaned_name"],
+                    country_code=country_code,
+                    stream_url=station["url"],
+                    logo_url=station.get("_logo"),
+                    tags=assessment.get("tags", []),
+                )
+                approved.append(entry)
+                # Track to avoid intra-run duplicates
+                existing_urls.add(normalise_url(station["url"]))
+                existing_names.add(assessment["cleaned_name"].lower())
+                print(f"  ADD   {assessment['cleaned_name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
+
+    if not approved:
+        print("\nNo new stations approved.", file=sys.stderr)
         return
 
-    header = (
-        "# Station candidates — agent review required\n"
-        "#\n"
-        "# Each [[stations]] block is a candidate from Radio Browser that passed\n"
-        "# mechanical quality filters (votes, bitrate, HTTPS, logo, not a known provider).\n"
-        "#\n"
-        "# Instructions for the reviewing agent:\n"
-        "# 1. Keep entries for real, named stations with a genuine audience.\n"
-        "# 2. Remove entries with junk/spammy names, aggregators, or misleading geography.\n"
-        "# 3. Clean up station names: proper capitalisation, remove codec suffixes like [MP3].\n"
-        "# 4. Append approved entries to stations.toml.\n"
-        "# 5. Delete this file.\n\n"
-    )
+    block = "\n\n".join(approved) + "\n"
 
-    output = header + "\n\n".join(entries) + "\n"
+    with open(STATIONS_TOML, "a") as f:
+        f.write("\n" + block)
 
-    if args.output:
-        args.output.write_text(output)
-        print(f"\nWrote {len(entries)} candidates to {args.output}", file=sys.stderr)
-    else:
-        print(output)
+    print(f"\nAppended {len(approved)} stations to stations.toml", file=sys.stderr)
 
 
 if __name__ == "__main__":

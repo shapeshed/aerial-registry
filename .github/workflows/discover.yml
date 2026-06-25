@@ -1,0 +1,56 @@
+name: Discover station candidates
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'  # Monday 04:00 UTC
+  workflow_dispatch:
+    inputs:
+      countries:
+        description: 'Space-separated country codes (e.g. GB DE FR ES)'
+        default: 'GB DE'
+      min_votes:
+        description: 'Minimum Radio Browser vote count'
+        default: '500'
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install anthropic requests
+
+      - name: Run discovery agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python scripts/discover.py \
+            --countries ${{ inputs.countries || 'GB DE' }} \
+            --min-votes ${{ inputs.min_votes || '500' }}
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: discover/station-candidates
+          delete-branch: true
+          title: "feat: add discovered station candidates"
+          body: |
+            Stations discovered by the weekly discovery agent.
+
+            Each addition was assessed by Claude: junk names removed, names cleaned,
+            tags assigned. Review the `stations.toml` diff and merge to include in
+            the next nightly registry build.
+
+            **Countries searched:** `${{ inputs.countries || 'GB DE' }}`
+            **Minimum votes:** `${{ inputs.min_votes || '500' }}`
+          commit-message: "feat: add discovered station candidates"
