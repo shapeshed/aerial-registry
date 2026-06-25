@@ -2764,3 +2764,1046 @@ name = "M1.FM - Clubmix"
 country_code = "DE"
 stream_url = "http://tuner.m1.fm/clubmix.mp3"
 tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "Radio Nova"
+country_code = "IE"
+stream_url = "https://stream.audioxi.com/NOVA?aw_0_1st.playerid=liveradio.ie"
+logo_url = "https://www.nova.ie/wp-content/uploads/2024/11/cropped-favicon-180x180.png"
+tags = ["pop", "indie", "alternative"]
+
+[[stations]]
+name = "RT\u00c9 1"
+country_code = "IE"
+stream_url = "http://icecast.rte.ie/radio1"
+logo_url = "http://i.imgur.com/KDHt1eb.jpg"
+tags = ["news", "talk", "pop"]
+
+[[stations]]
+name = "Classic Hits 4FM"
+country_code = "IE"
+stream_url = "http://stream.audioxi.com/CLASSIC"
+logo_url = "https://mmo.aiircdn.com/286/650a94ce36fd7.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Dublin's 98FM"
+country_code = "IE"
+stream_url = "https://stream.audioxi.com/98"
+logo_url = "https://www.98fm.com/favicon.ico?v=11"
+tags = ["pop", "news", "talk"]
+
+[[stations]]
+name = "RT\u00c9 lyric fm"
+country_code = "IE"
+stream_url = "http://icecast.rte.ie/lyric"
+logo_url = "https://www.liveradio.ie/files/images/101096/resized/140x134c/rte_lyric_fm.png"
+tags = ["classical", "culture"]
+
+[[stations]]
+name = "France Info"
+country_code = "FR"
+stream_url = "http://direct.franceinfo.fr/live/franceinfo-midfi.mp3"
+logo_url = "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-5487caf3.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "RFI Afrique"
+country_code = "FR"
+stream_url = "http://live02.rfi.fr/rfiafrique-64.mp3"
+logo_url = "http://www.rfi.fr/apple-touch-icon.png"
+tags = ["news", "world", "talk"]
+
+[[stations]]
+name = "RMC FR"
+country_code = "FR"
+stream_url = "https://audio.bfmtv.com/rmcradio_128.mp3"
+logo_url = "https://i1.wp.com/www.mediasportif.fr/wp-content/uploads/2014/05/Radio-RMC.jpg"
+tags = ["news", "talk", "sport"]
+
+[[stations]]
+name = "Jazz Radio Blues"
+country_code = "FR"
+stream_url = "http://jazzblues.ice.infomaniak.ch/jazzblues-high.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "soul", "blues"]
+
+[[stations]]
+name = "RFI Monde"
+country_code = "FR"
+stream_url = "http://live02.rfi.fr/rfimonde-64.mp3"
+logo_url = "http://www.rfi.fr/apple-touch-icon.png"
+tags = ["news", "world", "talk"]
+
+[[stations]]
+name = "Skyrock"
+country_code = "FR"
+stream_url = "http://icecast.skyrock.net/s/natio_mp3_128k"
+logo_url = "https://play-lh.googleusercontent.com/dPiQ01OUKZVfRZUbbb-EVK5g9miS_K-xrxHgmBbynGG-GQ53yt3GzFKr0zUTnb-xswQ=s200-rw"
+tags = ["hip-hop", "rap", "pop"]
+
+[[stations]]
+name = "Jazz Radio"
+country_code = "FR"
+stream_url = "http://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3"
+logo_url = "http://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "soul"]
+
+[[stations]]
+name = "EuroDance 90"
+country_code = "FR"
+stream_url = "https://stream-eurodance90.fr/radio/8000/128.mp3?1627933323"
+logo_url = "https://eurodance90.fr/favicon.ico"
+tags = ["dance", "electronic", "house"]
+
+[[stations]]
+name = "100% Radio 80"
+country_code = "FR"
+stream_url = "http://100radio-80.ice.infomaniak.ch/100radio-80-128.mp3"
+logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/centpourcent/images/favicon.ico"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "La Grosse Radio Reggae"
+country_code = "FR"
+stream_url = "http://hd.lagrosseradio.info/lagrosseradio-reggae-192.mp3"
+logo_url = "https://www.lagrosseradio.com/favicon.ico"
+tags = ["reggae", "world"]
+
+[[stations]]
+name = "Chante France"
+country_code = "FR"
+stream_url = "http://stream.chantefrance.com/Chante_France"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Sud Radio"
+country_code = "FR"
+stream_url = "https://ice.creacast.com/sudradio"
+logo_url = "https://www.sudradio.fr/wp-content/uploads/2019/06/cropped-favicon-180x180.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Latina Salsa"
+country_code = "FR"
+stream_url = "http://latinasalsa.ice.infomaniak.ch/latinasalsa.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/latina/images/favicon.ico"
+tags = ["world", "latin"]
+
+[[stations]]
+name = "BFM Radio"
+country_code = "FR"
+stream_url = "https://audio.bfmtv.com/bfmradio_128.mp3"
+logo_url = "https://www.radio.fr/images/broadcasts/76/27/105095/3/c300.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Europe 1"
+country_code = "FR"
+stream_url = "https://stream.europe1.fr/europe1.aac"
+logo_url = "https://www.europe1.fr/build/e1/images/favicon-120x120.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "100% Radio Hit"
+country_code = "FR"
+stream_url = "http://100radio-hit.ice.infomaniak.ch/100radio-hit-128.mp3"
+logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/centpourcent/images/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Generations R&B"
+country_code = "FR"
+stream_url = "http://generationfm-slowjam.ice.infomaniak.ch/generationfm-slowjam-high.mp3"
+logo_url = "http://generations.fr/media/radio/thumb/90x90_rnb.png"
+tags = ["r&b", "soul", "hip-hop"]
+
+[[stations]]
+name = "RTL France"
+country_code = "FR"
+stream_url = "http://streaming.radio.rtl.fr/rtl-1-44-128"
+logo_url = "https://www.radio.de/images/broadcasts/88/5b/5168/c300.png"
+tags = ["news", "pop"]
+
+[[stations]]
+name = "Latina Reggaeton"
+country_code = "FR"
+stream_url = "http://latinareggaeton.ice.infomaniak.ch/latinareggaeton.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/latina/images/favicon.ico"
+tags = ["reggae", "pop", "world"]
+
+[[stations]]
+name = "Jazz Radio Only Women"
+country_code = "FR"
+stream_url = "http://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "soul"]
+
+[[stations]]
+name = "RTL2"
+country_code = "FR"
+stream_url = "http://streamer-02.rtl.fr/rtl2-1-44-128"
+logo_url = "https://upload.wikimedia.org/wikipedia/fr/5/51/RTL2.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "RFM"
+country_code = "FR"
+stream_url = "http://stream.rfm.fr/rfm.mp3"
+logo_url = "http://cdn-rfm.lanmedia.fr/apple-touch-icon-120x120.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Generations Rap U.S"
+country_code = "FR"
+stream_url = "http://generationfm-underground.ice.infomaniak.ch/generationfm-underground-high.mp3"
+logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "Generations Rap FR Gold"
+country_code = "FR"
+stream_url = "http://gene-wr06.ice.infomaniak.ch/gene-wr06.mp3"
+logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "Jazz Radio Electro Swing"
+country_code = "FR"
+stream_url = "http://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3"
+logo_url = "http://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "electronic", "dance"]
+
+[[stations]]
+name = "RMC Info Talk Sport"
+country_code = "FR"
+stream_url = "https://audio.bfmtv.com/rmcradio_128.mp3?aw_0_1st.playerId=RMC_audio_web&aggregator=RMC_audio_web"
+logo_url = "https://rmc.bfmtv.com/android-icon-192x192.png"
+tags = ["news", "talk", "sport"]
+
+[[stations]]
+name = "Kiss FM"
+country_code = "FR"
+stream_url = "http://kissfm.ice.infomaniak.ch/kissfm-128.mp3"
+logo_url = "http://www.kissfm.fr/wp-content/uploads/2023/09/apple-touch-icon.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Jazz Radio Soul"
+country_code = "FR"
+stream_url = "http://jazz-wr10.ice.infomaniak.ch/jazz-wr10-128.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "soul"]
+
+[[stations]]
+name = "Beur FM"
+country_code = "FR"
+stream_url = "http://broadcast.infomaniak.ch/beurfm-high.mp3"
+logo_url = "http://www.beurfm.net/favicon.ico"
+tags = ["world", "pop"]
+
+[[stations]]
+name = "Latina"
+country_code = "FR"
+stream_url = "http://start-latina.ice.infomaniak.ch/start-latina-high.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/latina/images/favicon.ico"
+tags = ["world", "pop"]
+
+[[stations]]
+name = "OUI FM"
+country_code = "FR"
+stream_url = "https://ouifm.ice.infomaniak.ch/ouifm-high.mp3"
+logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/oui-fm/images/favicon.ico"
+tags = ["rock", "indie"]
+
+[[stations]]
+name = "Jazz Radio Piano Jazz"
+country_code = "FR"
+stream_url = "http://jzr-piano.ice.infomaniak.ch/jzr-piano.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "classical"]
+
+[[stations]]
+name = "Europe 2"
+country_code = "FR"
+stream_url = "http://europe2.lmn.fm/europe2.mp3"
+logo_url = "https://www.europe2.fr/wp-content/themes/melty/europeradio/assets/images/favicons/favicon128.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "BFM Radio"
+country_code = "FR"
+stream_url = "https://audio.bfmtv.com/bfmradio_128.mp3"
+logo_url = "https://www.bfmtv.com/android-icon-192x192.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Urban Hit Maroc"
+country_code = "FR"
+stream_url = "https://urbanhitrai.ice.infomaniak.ch/urbanhitrai.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/urbanhit/images/favicon.vnd.microsoft.icon"
+tags = ["hip-hop", "pop", "world"]
+
+[[stations]]
+name = "Morow Prog Rock Radio"
+country_code = "FR"
+stream_url = "http://stream.fr.morow.com:8080/morow_hi.aacp"
+logo_url = "https://www.morow.com/favicon.ico"
+tags = ["rock", "indie"]
+
+[[stations]]
+name = "Jazz Radio Latin Jazz"
+country_code = "FR"
+stream_url = "http://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3"
+logo_url = "http://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "world"]
+
+[[stations]]
+name = "Sud Radio"
+country_code = "FR"
+stream_url = "https://ice.creacast.com/sudradio_aac"
+logo_url = "https://www.sudradio.fr/wp-content/uploads/2019/06/cropped-favicon-180x180.png"
+tags = ["talk", "public radio"]
+
+[[stations]]
+name = "Chante France Emotion"
+country_code = "FR"
+stream_url = "http://stream.chantefrance.com/cf-emotion"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
+tags = ["pop", "soul"]
+
+[[stations]]
+name = "Chante France 60's"
+country_code = "FR"
+stream_url = "http://stream.chantefrance.com/cf-60"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "FIP Autour de l'\u00c9lectro"
+country_code = "FR"
+stream_url = "http://direct.fipradio.fr/live/fip-webradio8.mp3"
+logo_url = "http://www.fipradio.fr/dist/favicons/logo-120.png"
+tags = ["electronic", "pop"]
+
+[[stations]]
+name = "Skyrock Klassics"
+country_code = "FR"
+stream_url = "https://icecast.skyrock.net/s/klassiks_aac_64k?tvr_name=radiofr&tvr_section1=64aac"
+logo_url = "https://skyrock.fm/favicon.ico"
+tags = ["hip-hop", "oldies"]
+
+[[stations]]
+name = "Generations Reggae"
+country_code = "FR"
+stream_url = "http://generations-caraibes.ice.infomaniak.ch/generations-caraibes-high.mp3"
+logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
+tags = ["reggae", "world"]
+
+[[stations]]
+name = "Algorythme Drum & Bass"
+country_code = "FR"
+stream_url = "https://radio9.pro-fhi.net/flux-endvtlna/stream"
+logo_url = "https://www.algorythmeradio.com/assets/images/icon-algo.ico"
+tags = ["electronic", "dance"]
+
+[[stations]]
+name = "Chante France Nouveaut\u00e9s"
+country_code = "FR"
+stream_url = "http://stream.chantefrance.com/cf-nouveautes.aac"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
+tags = ["pop", "culture"]
+
+[[stations]]
+name = "King Dub Radio"
+country_code = "FR"
+stream_url = "http://london-dedicated.myautodj.com:8862/stream"
+logo_url = "http://kingdubfamily.com/wp-content/uploads/2021/03/download-150x150.png"
+tags = ["reggae", "electronic"]
+
+[[stations]]
+name = "RFI Anglais - English"
+country_code = "FR"
+stream_url = "http://live02.rfi.fr/rfienanglais-64.mp3"
+logo_url = "http://en.rfi.fr/android-chrome-192x192.png"
+tags = ["news", "talk", "public radio", "world"]
+
+[[stations]]
+name = "123 All Classic Rock"
+country_code = "FR"
+stream_url = "http://str4uice.streamakaci.com/4uclassicrock.mp3"
+logo_url = "https://www.facebook.com/favicon.ico"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "France Bleu Roussillon"
+country_code = "FR"
+stream_url = "http://direct.francebleu.fr/live/fbroussillon-midfi.mp3"
+logo_url = "https://www.francebleu.fr/favicons/apple-touch-icon-180x180.png"
+tags = ["public radio", "culture"]
+
+[[stations]]
+name = "Europe1"
+country_code = "FR"
+stream_url = "http://stream.europe1.fr/europe1.aac"
+logo_url = "https://www.europe1.fr/build/e1/images/favicon-120x120.png"
+tags = ["news", "talk", "pop"]
+
+[[stations]]
+name = "Generations Reggaeton"
+country_code = "FR"
+stream_url = "http://generations-rgton.ice.infomaniak.ch/generations-rgton.mp3"
+logo_url = "http://generations.fr/media/radio/thumb/90x90_reggaeton1.png"
+tags = ["reggae", "world", "pop"]
+
+[[stations]]
+name = "France Bleu Paris"
+country_code = "FR"
+stream_url = "http://direct.francebleu.fr/live/fb1071-midfi.mp3"
+logo_url = "https://www.francebleu.fr/favicons/apple-touch-icon-180x180.png"
+tags = ["public radio", "talk"]
+
+[[stations]]
+name = "RFM POP-ROCK"
+country_code = "FR"
+stream_url = "https://stream.rfm.fr/rfm-wr10.aac"
+logo_url = "http://cdn-rfm.lanmedia.fr/apple-touch-icon-120x120.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Radio Heavy Metal"
+country_code = "FR"
+stream_url = "https://manager7.streamradio.fr:1435/stream"
+logo_url = "https://static.wixstatic.com/media/bae3bf_0b6fc93bb1584f329723c0241a93c65c~mv2.png/v1/fill/w_111,h_111,al_c,usm_0.66_1.00_0.01,enc_auto/LOGO%20RHM%20SUR%20ROUGE.png"
+tags = ["metal", "rock"]
+
+[[stations]]
+name = "RFI Kiswahili"
+country_code = "FR"
+stream_url = "https://rfiswahili96k.ice.infomaniak.ch/rfiswahili-96k.mp3"
+logo_url = "https://www.rfi.fr/favicon-194x194.png"
+tags = ["news", "public radio", "world"]
+
+[[stations]]
+name = "Radio Choco"
+country_code = "FR"
+stream_url = "https://radiochoco.com/sound"
+logo_url = "https://image.radioking.io/radios/669715/logo/e0191854-a603-41f5-9729-121a1f215f57.jpeg"
+tags = ["pop", "world", "culture"]
+
+[[stations]]
+name = "Latina Reggaeton"
+country_code = "FR"
+stream_url = "https://latinareggaeton.ice.infomaniak.ch/latinareggaeton.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/latina/images/favicon.ico"
+tags = ["reggae", "latin", "dance"]
+
+[[stations]]
+name = "France Bleu Nord"
+country_code = "FR"
+stream_url = "http://direct.francebleu.fr/live/fbnord-midfi.mp3"
+logo_url = "https://www.francebleu.fr/favicons/apple-touch-icon-180x180.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "Radio Nova Vintage"
+country_code = "FR"
+stream_url = "http://nova-vnt.ice.infomaniak.ch/nova-vnt-128.mp3"
+logo_url = "https://www.nova.fr/wp-content/uploads/sites/2/2021/02/cropped-favicon.png?fit=180%2c180&#038;quality=75"
+tags = ["oldies", "soul", "funk"]
+
+[[stations]]
+name = "Generations"
+country_code = "FR"
+stream_url = "http://generationfm.ice.infomaniak.ch/generationfm-high.mp3"
+logo_url = "http://generations.fr/media/radio/thumb/90x90_generations.png"
+tags = ["hip-hop", "soul", "r&b"]
+
+[[stations]]
+name = "RFI Monde"
+country_code = "FR"
+stream_url = "https://rfiafrique64k.ice.infomaniak.ch/rfimonde-64.mp3"
+logo_url = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi076SvIq9FK1ila6iO0HpdpC6f6eMrCLPrNli3Y6WYe_7cVIM8GTSIKi5L2v3bmwD298Xc2jjmRlPX9nzJseyatmlnRhmrgL7QBGiUKBWhNDpmpSigoBKW-DQg-ytDeOF-iUaikzXDJef87-Or9eBq7fXL13kARxykDqVbhhIuT_e9niBlF0ZMztzw/s1600/Capture%20d%E2%80%99%C3%A9cran_2024-11-19_14-44-01.png"
+tags = ["news", "world", "public radio"]
+
+[[stations]]
+name = "Jazz Radio Manouche"
+country_code = "FR"
+stream_url = "http://jazz-wr02.ice.infomaniak.ch/jazz-wr02-128.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "world", "folk"]
+
+[[stations]]
+name = "Jazz Radio Ladies & Crooners"
+country_code = "FR"
+stream_url = "http://jazzladiescrooners.ice.infomaniak.ch/jazzladiescrooners-high.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "soul", "oldies"]
+
+[[stations]]
+name = "Radio Classique"
+country_code = "FR"
+stream_url = "https://str0.creacast.com/classique1"
+logo_url = "http://favicons.teamtailor-cdn.com/icon?size=80..120..200&url=https%3a%2f%2fwww.radioclassique.fr%2f"
+tags = ["classical", "public radio"]
+
+[[stations]]
+name = "BFM Business"
+country_code = "FR"
+stream_url = "http://audio.bfmtv.com/bfmbusiness_128.mp3?aw_0_1st.playerId=BFMBusiness_audio_web&aggregator=BFMBusiness_audio_web"
+logo_url = "https://www.bfmtv.com/android-icon-192x192.png"
+tags = ["news", "talk", "business"]
+
+[[stations]]
+name = "Generations Funk"
+country_code = "FR"
+stream_url = "http://gene-wr05.ice.infomaniak.ch/gene-wr05.mp3"
+logo_url = "http://generations.fr/media/radio/thumb/90x90_funk.png"
+tags = ["funk", "soul", "r&b"]
+
+[[stations]]
+name = "FIP Autour du Groove"
+country_code = "FR"
+stream_url = "http://direct.fipradio.fr/live/fip-webradio3.mp3"
+logo_url = "http://www.fipradio.fr/dist/favicons/logo-120.png"
+tags = ["jazz", "funk", "soul"]
+
+[[stations]]
+name = "FUN Radio"
+country_code = "FR"
+stream_url = "http://icecast.funradio.fr/fun-1-44-128"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Logo_Fun_Radio_%282021%29.svg/langfr-1280px-Logo_Fun_Radio_%282021%29.svg.png"
+tags = ["dance", "electronic", "pop"]
+
+[[stations]]
+name = "Generations Rap FR"
+country_code = "FR"
+stream_url = "http://generationfm-rap.ice.infomaniak.ch/generationfm-rap-high.mp3"
+logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
+tags = ["hip-hop", "rap"]
+
+[[stations]]
+name = "Jazz Radio Saxo Jazz"
+country_code = "FR"
+stream_url = "http://jzr-saxo.ice.infomaniak.ch/jzr-saxo.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "TSF Jazz"
+country_code = "FR"
+stream_url = "http://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/TSFJazz-2017.jpg/800px-TSFJazz-2017.jpg"
+tags = ["jazz"]
+
+[[stations]]
+name = "FIP Autour du Reggae"
+country_code = "FR"
+stream_url = "http://direct.fipradio.fr/live/fip-webradio6.mp3"
+logo_url = "http://www.fipradio.fr/dist/favicons/logo-120.png"
+tags = ["reggae", "world"]
+
+[[stations]]
+name = "Alouette"
+country_code = "FR"
+stream_url = "http://alouette.ice.infomaniak.ch/alouette-high.mp3"
+logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/alouette/images/favicon.x-icon"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Latina Bachata"
+country_code = "FR"
+stream_url = "https://latinabachata.ice.infomaniak.ch/latinabachata.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/latina/images/favicon.ico"
+tags = ["world", "reggae"]
+
+[[stations]]
+name = "RFM Collector"
+country_code = "FR"
+stream_url = "http://stream.rfm.fr/rfm-wr1.mp3"
+logo_url = "http://cdn-rfm.lanmedia.fr/apple-touch-icon-120x120.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "France Info"
+country_code = "FR"
+stream_url = "http://direct.franceinfo.fr/live/franceinfo-midfi.aac"
+logo_url = "https://m209.syncusercontent.com/mfs-60:e7d8bcadd5a2477fc9e51bcf050e882e=============================/p/FranceInfo.png?allowdd=0&datakey=oRfJWLO6jtwpRPP6jNCQN57oNuBOHsNUitHdz3RIW2vZImwxaSD/BMCrflKec/vHo3SxNLXFu1udMP1S8XHjPXw1q5kFoSg7egRcIOebiokWBPOr09HQdsFTOMnhM35aakAPiHis5fRC74CjVIh05epEX3IzZZSWFj/OfZQ7k+3d2U9vkgewVimqIaTJuVNyKAJ0k/5Ki65LjHOfI3kDK891oQKVSExxxD0cZm9SziqD/wNdZflXZZNwvVrl3ef3TfuK9GCprIHLC5Fpt3djEIs/jmoSapjQZl4l5sez++LaVNSaP4OZe+z4YK3Kiuef0mN5THxwh2JS2mpzYRGdoA&engine=ln-3.1.38&errurl=pl576c8tTkE53fesN6K59kLFTlfG9ukXOsWjYDyCBknLOMFJ7nSS6G45+Rqiajr6D+YVYQGYv6bQK/07r1fnLn0H8NQKBKKeYOKnZ2VVU6LxVkuqYFOENdT0QdS0UznLvBKHDQ3ljz4eOKolzdl3d4xl+5Z5sAi1GdSzv27mF7GuqFNtcKnt0q2ZogvLNx/bJSBNbFKwhvpXKr1jbqTVXVW1eRnN0wWW1a30NLuV+woXgYk057D1reVd4fGJcC6Wy0WXWvBfFEreFqNOVyBrxenbprKCzhzVTuSY8z/uj2x6cqFBbpfgTumCneiWx0ApNNPg6DiFxXZ0V8q3RRXG4Q==&header1=Q29udGVudC1UeXBlOiBpbWFnZS9wbmc&header2=Q29udGVudC1EaXNwb3NpdGlvbjogaW5saW5lOyBmaWxlbmFtZT0iRnJhbmNlSW5mby5wbmciO2ZpbGVuYW1lKj1VVEYtOCcnRnJhbmNlSW5mby5wbmc7&ipaddress=1414030563&linkcachekey=748911ee0&linkoid=1991610004&mode=101&sharelink_id=17949036050004&timestamp=1708187509312&uagent=3b50c75381f12107280e9099b5b7674cf455a2e5&signature=00134c6a20bb3132c47960c0e5b08e7df047a4aa&cachekey=60:e7d8bcadd5a2477fc9e51bcf050e882e============================="
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Allzic Radio Dance Floor"
+country_code = "FR"
+stream_url = "http://allzic07.ice.infomaniak.ch/allzic07.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["dance", "electronic", "pop"]
+
+[[stations]]
+name = "Generations Soul"
+country_code = "FR"
+stream_url = "http://gene-wr07.ice.infomaniak.ch/gene-wr07.mp3"
+logo_url = "http://generations.fr/media/radio/thumb/90x90_soul.png"
+tags = ["soul", "r&b"]
+
+[[stations]]
+name = "Espace Dance 90"
+country_code = "FR"
+stream_url = "http://espace-disco.ice.infomaniak.ch/espace-disco-high.mp3"
+logo_url = "https://www.radioespace.com/apple-touch-icon-120x120.png"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Beur FM"
+country_code = "FR"
+stream_url = "http://broadcast.infomaniak.ch/beurfm-high.aac"
+logo_url = "http://www.beurfm.net/favicon.ico"
+tags = ["world", "culture"]
+
+[[stations]]
+name = "RTL"
+country_code = "FR"
+stream_url = "https://live.m6radio.quortex.io/webM89Hc99XApzgfhXNX8ASN5/grouprtl/national/short/audio-64000/index.m3u8"
+logo_url = "https://duckduckgo.com/i/035a5e15d396c67a.png"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "France Bleu H\u00e9rault"
+country_code = "FR"
+stream_url = "http://direct.francebleu.fr/live/fbherault-midfi.mp3"
+logo_url = "https://www.francebleu.fr/favicons/apple-touch-icon-180x180.png"
+tags = ["talk", "culture", "world"]
+
+[[stations]]
+name = "Jazz Radio Contemporary Jazz"
+country_code = "FR"
+stream_url = "http://jazz-wr05.ice.infomaniak.ch/jazz-wr05-128.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Allzic Radio Chill Out"
+country_code = "FR"
+stream_url = "http://allzic53.ice.infomaniak.ch/allzic53.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["ambient", "electronic", "house"]
+
+[[stations]]
+name = "Latina Kizomba"
+country_code = "FR"
+stream_url = "http://latinakizomba.ice.infomaniak.ch/latinakizomba.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/latina/images/favicon.ico"
+tags = ["world", "dance"]
+
+[[stations]]
+name = "Vibration 80's"
+country_code = "FR"
+stream_url = "http://vibration80s.ice.infomaniak.ch/vibration80s.mp3"
+logo_url = "http://ecouter.lesindesradios.fr/logos/orange207.png"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "Allzic Radio Latino"
+country_code = "FR"
+stream_url = "http://allzic39.ice.infomaniak.ch/allzic39.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["world", "reggae"]
+
+[[stations]]
+name = "MRadio Disney"
+country_code = "FR"
+stream_url = "http://mfmwr-002.ice.infomaniak.ch/mfmwr-002.mp3"
+logo_url = "https://mradio.fr/apple-touch-icon-120x120.png"
+tags = ["pop", "culture"]
+
+[[stations]]
+name = "Kiss FM"
+country_code = "FR"
+stream_url = "http://kissfm2.ice.infomaniak.ch/kissfm2-128.mp3"
+logo_url = "http://www.kissfm.fr/wp-content/uploads/2023/09/apple-touch-icon.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Chillofi Radio"
+country_code = "FR"
+stream_url = "http://streams.dez.ovh:8000/radio.mp3"
+logo_url = "https://chillofi-radio.dez.ovh/img/clofi-logo.jpg"
+tags = ["ambient", "electronic", "indie"]
+
+[[stations]]
+name = "BFM avec RMC"
+country_code = "FR"
+stream_url = "https://audio.bfmtv.com/rmcradio_128.mp3"
+logo_url = "https://rmc.bfmtv.com/apple-icon-228x228.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "ODS Radio"
+country_code = "FR"
+stream_url = "http://ods.ice.infomaniak.ch/ods-high.mp3"
+logo_url = "https://www.odsradio.com/apple-touch-icon-120x120.png"
+tags = ["pop"]
+
+[[stations]]
+name = "France Bleu Pays de Savoie"
+country_code = "FR"
+stream_url = "http://direct.francebleu.fr/live/fbpaysdesavoie-midfi.mp3"
+logo_url = "https://www.francebleu.fr/favicons/apple-touch-icon-180x180.png"
+tags = ["public radio", "talk", "culture"]
+
+[[stations]]
+name = "Voltage"
+country_code = "FR"
+stream_url = "http://start-voltage.ice.infomaniak.ch/start-voltage-high.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/voltage/images/favicon.ico"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "RFI Tieng Viet"
+country_code = "FR"
+stream_url = "http://live02.rfi.fr/rfivietnamien-96k.mp3"
+logo_url = "https://www.rfi.fr/apple-touch-icon.png"
+tags = ["news", "world", "talk"]
+
+[[stations]]
+name = "M Radio"
+country_code = "FR"
+stream_url = "http://mfm.ice.infomaniak.ch/mfm-128.mp3"
+logo_url = "https://mradio.fr/apple-touch-icon-120x120.png"
+tags = ["pop", "electronic", "dance"]
+
+[[stations]]
+name = "Allzic Radio Blues"
+country_code = "FR"
+stream_url = "http://allzic09.ice.infomaniak.ch/allzic09.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["blues", "soul"]
+
+[[stations]]
+name = "RFM - La Radio Couleur"
+country_code = "FR"
+stream_url = "https://stream.rfm.fr/rfm-wr3.aac"
+logo_url = "http://cdn-rfm.lanmedia.fr/apple-touch-icon-120x120.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Galaxie New Wave"
+country_code = "FR"
+stream_url = "https://www.radioking.com/play/galaxienewwave"
+logo_url = "http://galaxie-radio1.radio-website.com/upload/578f3bce151616.43092430.ico"
+tags = ["indie", "alternative", "rock"]
+
+[[stations]]
+name = "Jazz Radio Jazzy French"
+country_code = "FR"
+stream_url = "http://jazz-wr18.ice.infomaniak.ch/jazz-wr18-128.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Wit FM 90's"
+country_code = "FR"
+stream_url = "http://wit90s.ice.infomaniak.ch/wit90s.mp3"
+logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/witfm/images/favicon.vnd.microsoft.icon"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Allzic Radio 2000s"
+country_code = "FR"
+stream_url = "http://allzic49.ice.infomaniak.ch/allzic49.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["pop", "rock", "r&b"]
+
+[[stations]]
+name = "Allzic Radio 80s"
+country_code = "FR"
+stream_url = "http://allzic08.ice.infomaniak.ch/allzic08.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "Jazz Radio Stax and Motown"
+country_code = "FR"
+stream_url = "http://jazz-wr15.ice.infomaniak.ch/jazz-wr15-128.mp3"
+logo_url = "http://www.jazzradio.fr/media/radio/thumb/90x90_stax-and-motown.png"
+tags = ["jazz", "soul", "r&b"]
+
+[[stations]]
+name = "Radio Maria France"
+country_code = "FR"
+stream_url = "http://dreamsiteradiocp4.com:8056/"
+logo_url = "https://radiomaria.fr/wp-content/themes/radiomaria/apple-touch-icon.png"
+tags = ["talk", "culture"]
+
+[[stations]]
+name = "RFI Musique"
+country_code = "FR"
+stream_url = "http://live02.rfi.fr/rfimusiquemonde-64k.mp3"
+logo_url = "http://www.rfimusique.com/favicon.ico"
+tags = ["world", "pop", "culture"]
+
+[[stations]]
+name = "Magnum La Radio"
+country_code = "FR"
+stream_url = "http://str0.creacast.com/magnum"
+logo_url = "https://www.magnumlaradio.com/wp-content/themes/magnumlaradio/assets/images/favicon.ico"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Generations R&B Gold"
+country_code = "FR"
+stream_url = "http://generations-rnb-gold.ice.infomaniak.ch/generations-rnb-gold.mp3"
+logo_url = "http://generations.fr/media/radio/thumb/90x90_rnb-gold.png"
+tags = ["r&b", "soul"]
+
+[[stations]]
+name = "RTL France"
+country_code = "FR"
+stream_url = "https://live.m6radio.quortex.io/webpHJPXnXrN7B6J7Q8mcqmxP/grouprtl/national/long/audio-64000/index.m3u8"
+logo_url = "https://www.radio.fr/images/broadcasts/da/51/10220/c300.png"
+tags = ["news", "talk", "pop"]
+
+[[stations]]
+name = "Jazz Radio Gospel"
+country_code = "FR"
+stream_url = "http://jazz-wr07.ice.infomaniak.ch/jazz-wr07-128.mp3"
+logo_url = "http://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "soul"]
+
+[[stations]]
+name = "Generations Reggaeton"
+country_code = "FR"
+stream_url = "http://generations-rgton.ice.infomaniak.ch/generations-rgton.aac"
+logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
+tags = ["reggae", "latin"]
+
+[[stations]]
+name = "Tekno1"
+country_code = "FR"
+stream_url = "http://cressida.shoutca.st:8591/stream/1/"
+logo_url = "https://tekno1.fr/wp-content/uploads/2019/12/cropped-favi2020-192x192.png"
+tags = ["electronic", "dance"]
+
+[[stations]]
+name = "Radio Esp\u00e9rance Gr\u00e9gorien"
+country_code = "FR"
+stream_url = "https://esperance.streamakaci.com/gregorien.mp3"
+logo_url = "http://radio-esperance.fr/wp-content/themes/radio-esperance/fichiers/ico/apple-touch-icon-120x120.png"
+tags = ["classical", "culture"]
+
+[[stations]]
+name = "Latina Fiesta"
+country_code = "FR"
+stream_url = "https://latinafiesta.ice.infomaniak.ch/latinafiesta.mp3"
+logo_url = "https://ecouter.lesindesradios.net/logos/orange329.png"
+tags = ["world", "latin"]
+
+[[stations]]
+name = "Allzic Radio Deep Disco"
+country_code = "FR"
+stream_url = "http://allzic31.ice.infomaniak.ch/allzic31.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "RFI"
+country_code = "FR"
+stream_url = "http://live02.rfi.fr/rfirusse-96k.mp3"
+logo_url = "http://ru.rfi.fr/android-chrome-192x192.png"
+tags = ["news", "talk", "world"]
+
+[[stations]]
+name = "Voltage 80's"
+country_code = "FR"
+stream_url = "http://voltage80s.ice.infomaniak.ch/voltage80s-128.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/voltage/images/favicon.ico"
+tags = ["oldies"]
+
+[[stations]]
+name = "FIP"
+country_code = "FR"
+stream_url = "http://direct.fipradio.fr/live/fip-webradio5.mp3"
+logo_url = "http://www.fipradio.fr/dist/favicons/logo-120.png"
+tags = ["indie", "alternative", "pop"]
+
+[[stations]]
+name = "Voltage 2000"
+country_code = "FR"
+stream_url = "http://voltage2000.ice.infomaniak.ch/voltage2000-128.mp3"
+logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/voltage/images/favicon.vnd.microsoft.icon"
+tags = ["pop"]
+
+[[stations]]
+name = "Jazz Radio Jazz & Cinema"
+country_code = "FR"
+stream_url = "http://jzr-wr20.ice.infomaniak.ch/jzr-wr20.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "culture"]
+
+[[stations]]
+name = "Radio Courtoisie"
+country_code = "FR"
+stream_url = "https://ice.creacast.com/radio-courtoisie"
+logo_url = "https://upload.wikimedia.org/wikipedia/fr/3/32/Logo_radio_courtoisie.jpg"
+tags = ["culture", "talk", "classical"]
+
+[[stations]]
+name = "Free Dom 2"
+country_code = "FR"
+stream_url = "http://freedomice.streamakaci.com/freedom2.mp3"
+logo_url = "https://freedom.fr/wp-content/uploads/2021/03/cropped-cropped-colombe-180x180-1-180x180.png"
+tags = ["world"]
+
+[[stations]]
+name = "OUI FM Rock 80's"
+country_code = "FR"
+stream_url = "https://ouifmrock80s.ice.infomaniak.ch/ouifmeighties.mp3"
+logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/oui-fm/radiostream/6fo6l1uD2X/vignette.png"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "Radio 17bis"
+country_code = "FR"
+stream_url = "http://listen.radioking.com/radio/444/stream/1754"
+logo_url = "http://www.dixseptbis.com/__ovh/common/img/favicon.ico"
+tags = ["jazz"]
+
+[[stations]]
+name = "Allzic Radio Funk"
+country_code = "FR"
+stream_url = "http://allzic08.ice.infomaniak.ch/allzic11.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["soul", "funk", "oldies"]
+
+[[stations]]
+name = "Bad Radio"
+country_code = "FR"
+stream_url = "https://s2.radio.co/s2b2b68744/listen"
+logo_url = "https://yt3.ggpht.com/ytc/AMLnZu8eXtkd-wn5s-Ww_RXId5AsUc0kqfM-1hikJJtzjw=s88-c-k-c0x00ffffff-no-rj"
+tags = ["hip-hop", "electronic"]
+
+[[stations]]
+name = "OUI FM Blues'n'Rock"
+country_code = "FR"
+stream_url = "https://ouifmbluesnrock.ice.infomaniak.ch/ouifmbluesnrock-128.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/oui-fm/images/favicon.ico"
+tags = ["rock", "soul"]
+
+[[stations]]
+name = "RFM 100% Fran\u00e7ais"
+country_code = "FR"
+stream_url = "https://wr.lmn.fm/rfm-wr11.aac"
+logo_url = "http://cdn-rfm.lanmedia.fr/favicon-32x32.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Europe 1"
+country_code = "FR"
+stream_url = "https://europe1.lmn.fm/europe1.mp3"
+logo_url = "https://db.radioline.fr/pictures/radio_fa64fea9b6ccd92e058ced3fa41f58f5/logo200.jpg"
+tags = ["news", "talk", "pop"]
+
+[[stations]]
+name = "RFI Espa\u00f1ol"
+country_code = "FR"
+stream_url = "https://rfienespagnol64k.ice.infomaniak.ch/rfienespagnol-64.mp3"
+logo_url = "https://www.rfi.fr/apple-touch-icon.png"
+tags = ["news", "world"]
+
+[[stations]]
+name = "Chillofi Radio"
+country_code = "FR"
+stream_url = "http://rdstream-0625.dez.ovh:8000/radio.mp3"
+logo_url = "https://chillofi-radio.dez.ovh/img/clofi-logo.jpg"
+tags = ["ambient", "electronic", "indie"]
+
+[[stations]]
+name = "Jazz Radio"
+country_code = "FR"
+stream_url = "http://jazz-wr17.ice.infomaniak.ch/jazz-wr17-128.mp3"
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+tags = ["jazz", "classical"]
+
+[[stations]]
+name = "A Certain Radio"
+country_code = "FR"
+stream_url = "https://listen.radioking.com/radio/429209/stream/482870"
+logo_url = "http://www.acertainradio.fr/upload/60c85b3e09f517.55250163.ico"
+tags = ["rock", "indie", "alternative"]
+
+[[stations]]
+name = "France Bleu Gironde"
+country_code = "FR"
+stream_url = "http://direct.francebleu.fr/live/fbgironde-midfi.mp3"
+logo_url = "https://www.francebleu.fr/favicons/apple-touch-icon-180x180.png"
+tags = ["talk", "public radio"]
+
+[[stations]]
+name = "BFM Radio"
+country_code = "FR"
+stream_url = "https://audio.bfmtv.com/bfmradio_128.mp3"
+logo_url = "https://www.bfmtv.com/android-icon-192x192.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Littoral FM Perpignan"
+country_code = "FR"
+stream_url = "https://littoralfmperpignan.ice.infomaniak.ch/littoralfmperpignan.mp3"
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/littoral/images/favicon.ico"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "OUI FM"
+country_code = "FR"
+stream_url = "https://ouifm2.ice.infomaniak.ch/ouifm2.mp3"
+logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/oui-fm/radiostream/S2UWS5S3lJ/vignette.png"
+tags = ["rock", "alternative"]
+
+[[stations]]
+name = "RFI Musique"
+country_code = "FR"
+stream_url = "http://live02.rfi.fr/rfimusiquemonde-96k.mp3"
+logo_url = "https://musique.rfi.fr//mstile-144x144.png"
+tags = ["world", "public radio"]
+
+[[stations]]
+name = "G\u00e9n\u00e9rations Rap FR Gold"
+country_code = "FR"
+stream_url = "http://gene-wr06.ice.infomaniak.ch/gene-wr06.aac"
+logo_url = "http://generations.fr/media/radio/thumb/90x90_rap_fr1.png"
+tags = ["hip-hop", "rap"]
+
+[[stations]]
+name = "Le Son Parisien"
+country_code = "FR"
+stream_url = "http://stream.lesonparisien.com/hi.mp3"
+logo_url = "http://www.lesonparisien.com/images/lsp/favicons/android-icon-144x144.png"
+tags = ["electronic", "indie", "pop"]
+
+[[stations]]
+name = "Allzic Radio Fitness"
+country_code = "FR"
+stream_url = "http://allzic13.ice.infomaniak.ch/allzic13.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["dance", "electronic", "pop"]
+
+[[stations]]
+name = "Allzic Radio 90s"
+country_code = "FR"
+stream_url = "http://allzic24.ice.infomaniak.ch/allzic24.mp3"
+logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
+tags = ["pop", "rock", "alternative"]
+
+[[stations]]
+name = "Rire et Chansons"
+country_code = "FR"
+stream_url = "https://streaming.nrjaudio.fm/ou8o8xgk7oiu?origine=fluxradios"
+logo_url = "https://img.nrj.fr/OImjPWH1tkT1NaUMPlxsY49g9BI=/medias%2F2024%2F03%2Fvvscnx9i3yteabtkx8nlpdusmqj6uo8hshh9iphoit8_65fbfe026c3a5.png"
+tags = ["comedy", "culture", "pop"]
+
+[[stations]]
+name = "France Bleu Is\u00e8re"
+country_code = "FR"
+stream_url = "http://direct.francebleu.fr/live/fbisere-midfi.mp3"
+logo_url = "https://www.francebleu.fr/images/favicon-112.png"
+tags = ["public radio", "talk", "world"]
