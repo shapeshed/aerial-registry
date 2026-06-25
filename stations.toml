@@ -23,7 +23,7 @@ tags = ["indie", "experimental", "electronic"]
 [[stations]]
 name = "Rinse FM"
 country_code = "GB"
-stream_url = "https://admin.stream.rinse.fm/stream"
+stream_url = "https://admin.stream.rinse.fm/proxy/rinse_uk/stream"
 logo_url = "https://rinse.fm/wp-content/uploads/2021/01/rinse_logo_black.png"
 tags = ["electronic", "grime", "bass", "dance"]
 

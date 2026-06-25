@@ -1186,3 +1186,7 @@ stream_url = "https://s4.myradiostream.com:7344/listen.mp3?"
 name = "80s 90s Super Pop Hits"
 reason = "Generic aggregator with no real station identity or branding."
 
+[[rejected]]
+stream_url = "https://admin.stream.rinse.fm/stream"
+name = "Rinse FM"
+reason = "Stale Rinse stream endpoint; current channel stream is https://admin.stream.rinse.fm/proxy/rinse_uk/stream."
