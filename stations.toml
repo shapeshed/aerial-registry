@@ -4759,3 +4759,2201 @@ country_code = "US"
 stream_url = "http://bigrradio.cdnstream1.com/5203_128"
 logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
 tags = ["rock", "alternative", "metal"]
+
+[[stations]]
+name = "Pirate Rock"
+country_code = "SE"
+stream_url = "http://stream.piraterock.se:8101/webradio"
+logo_url = "https://piraterock.se/favicon.ico"
+tags = ["rock", "alternative", "metal"]
+
+[[stations]]
+name = "Svensk Pop"
+country_code = "SE"
+stream_url = "http://tx.sharp-stream.com/http_live.php?i=svenskpop_se_mp3"
+logo_url = "https://www.radioplay.se/tesla/static/favicons/radioplay-se/apple-touch-icon.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Bandit Rock"
+country_code = "SE"
+stream_url = "http://fm02-ice.stream.khz.se/fm02_mp3"
+logo_url = "https://cdn.khz.se/images/161x80/63808dd23f61e6193a9007a927189e13.png"
+tags = ["rock", "alternative", "metal", "indie"]
+
+[[stations]]
+name = "Guldkanalen Helsingborg"
+country_code = "SE"
+stream_url = "http://stream.dbmedia.se/gkhbg96"
+logo_url = "https://guldkanalen.se/wp-content/uploads/2015/10/cropped-favoicon-180x180.gif"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Antena 1"
+country_code = "PT"
+stream_url = "https://streaming-live.rtp.pt/liveradio/antena180a/playlist.m3u8"
+logo_url = "https://cdn-images.rtp.pt/play/images/apple-touch-icon.png-120x120.png"
+tags = ["pop", "talk", "sport"]
+
+[[stations]]
+name = "RDP Africa"
+country_code = "PT"
+stream_url = "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
+logo_url = "https://www.celsoazevedo.com/files/2022/11/rdp-africa.jpg"
+tags = ["world", "talk", "culture"]
+
+[[stations]]
+name = "Top 80"
+country_code = "PT"
+stream_url = "http://live.top80.fm:8086/"
+logo_url = "https://www.top80.fm/wp-content/uploads/2023/03/cropped-ic_launcher_top80-180x180.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "R\u00e1dio Am\u00e1lia"
+country_code = "PT"
+stream_url = "http://centova.radio.com.pt:9496/;"
+logo_url = "http://cdn-radiotime-logos.tunein.com/s113888q.png"
+tags = ["folk", "world", "culture"]
+
+[[stations]]
+name = "R\u00e1dio Nova Era"
+country_code = "PT"
+stream_url = "http://centova.radio.com.pt:9478/"
+logo_url = "http://www.radionovaera.pt/resources/img/favicon/apple-icon-120x120.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "4Drive Jazz"
+country_code = "PT"
+stream_url = "http://radio.streemlion.com:1150/stream"
+logo_url = "https://www.wix.com/favicon.ico"
+tags = ["jazz"]
+
+[[stations]]
+name = "R\u00e1dio Comercial"
+country_code = "PT"
+stream_url = "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
+logo_url = "https://static2.mytuner.mobi/media/tvos_radios/drkZNBUn6W.png"
+tags = ["pop", "rock", "dance"]
+
+[[stations]]
+name = "R\u00e1dio MEO Music"
+country_code = "PT"
+stream_url = "http://centova.radio.com.pt:8495/;"
+logo_url = "http://cdn-radiotime-logos.tunein.com/s81786q.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "R\u00e1dio Nova 98.9 FM"
+country_code = "PT"
+stream_url = "http://centova.radio.com.pt:9528/"
+logo_url = "https://www.radionova.fm/wp-content/uploads/2023/05/cropped-favicon-180x180.png"
+tags = ["pop"]
+
+[[stations]]
+name = "R\u00e1dio Marginal"
+country_code = "PT"
+stream_url = "http://centova.radio.com.pt:8499/;"
+logo_url = "http://cdn-radiotime-logos.tunein.com/s25146q.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "M80 R\u00e1dio \u2013 80s"
+country_code = "PT"
+stream_url = "https://stream-icy.bauermedia.pt/m8080.aac"
+logo_url = "http://webradiodirectory.com/wp-content/uploads/2021/01/cc9443f16e2af31ba205ac82214760c9.jpg"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "RDP Internacional"
+country_code = "PT"
+stream_url = "https://streaming-live.rtp.pt/liveradio/rdpint80a/playlist.m3u8"
+logo_url = "https://www.celsoazevedo.com/files/2022/11/rdp-internacional.png"
+tags = ["talk", "world", "culture"]
+
+[[stations]]
+name = "GoloFM"
+country_code = "PT"
+stream_url = "https://sp0.redeaudio.com/8154/stream"
+logo_url = "https://golo.fm/favicon.ico"
+tags = ["sport", "talk"]
+
+[[stations]]
+name = "TSF R\u00e1dio Not\u00edcias"
+country_code = "PT"
+stream_url = "https://directo.tsf.pt/tsfdirecto.mp3"
+logo_url = "https://www.celsoazevedo.com/files/2024/tsf.png"
+tags = ["news", "sport", "talk"]
+
+[[stations]]
+name = "M80 R\u00e1dio \u2013 60s"
+country_code = "PT"
+stream_url = "https://stream-icy.bauermedia.pt/m8060.aac"
+logo_url = "http://webradiodirectory.com/wp-content/uploads/2021/01/fe90a6d0b5158acae63737fe4b9b204f.jpg"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "R\u00e1dio Universit\u00e1ria do Minho"
+country_code = "PT"
+stream_url = "http://centova.radio.com.pt:9558/;"
+logo_url = "http://www.rum.pt/_nuxt/icons/icon_64.08fe96.png"
+tags = ["indie", "world", "culture"]
+
+[[stations]]
+name = "Antena 1"
+country_code = "PT"
+stream_url = "http://streaming-live.rtp.pt/liveradio/antena180a/playlist.m3u8"
+logo_url = "https://cdn-images.rtp.pt/play/images/apple-touch-icon.png-120x120.png"
+tags = ["pop", "talk", "news"]
+
+[[stations]]
+name = "Radio Zet"
+country_code = "PL"
+stream_url = "http://zet-net-01.cdn.eurozet.pl:8400/"
+logo_url = "https://gfx.radiozet.pl/extension/radiozet/design/standard/images/favicon/apple-touch-icon.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Antyradio"
+country_code = "PL"
+stream_url = "https://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5"
+logo_url = "https://gfx.antyradio.pl/design/antyradio/src/images/favicon/favicon_180x180.png"
+tags = ["metal", "rock"]
+
+[[stations]]
+name = "Trojka"
+country_code = "PL"
+stream_url = "http://stream3.polskieradio.pl:8904/"
+logo_url = "http://moje.polskieradio.pl/favicon.ico"
+tags = ["pop", "public radio"]
+
+[[stations]]
+name = "TOK FM"
+country_code = "PL"
+stream_url = "https://radiostream.pl/tuba10-1.mp3#TOK_FM"
+logo_url = "https://static.im-g.pl/im/6/7455/m7455556.gif"
+tags = ["talk", "news"]
+
+[[stations]]
+name = "Radio 357"
+country_code = "PL"
+stream_url = "https://n-11-21.dcs.redcdn.pl/sc/o2/radio357/live/radio357_pr.livx?preroll=0"
+logo_url = "https://radio357.pl/wp-content/uploads/2022/04/c5399c0d-1b8e-43d5-b23b-e5cef1857856.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Eska Rock"
+country_code = "PL"
+stream_url = "https://ic2.smcdn.pl/5380-1.mp3#ESKA_ROCK"
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/2LqeyZhdFq.png"
+tags = ["rock"]
+
+[[stations]]
+name = "Radio Wnet"
+country_code = "PL"
+stream_url = "http://audio.radiownet.pl:8000/stream"
+logo_url = "https://wnet.fm/wp-content/uploads/2019/03/cropped-favikon-145x145.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Szczecin"
+country_code = "PL"
+stream_url = "http://stream4.nadaje.com:11986/prs"
+logo_url = "http://radioszczecin.pl/assets/favicon/apple-touch-icon.png"
+tags = ["pop", "public radio"]
+
+[[stations]]
+name = "Radio Gdansk"
+country_code = "PL"
+stream_url = "http://stream.task.gda.pl:8000/rg1"
+logo_url = "https://radiogdansk.pl/wp-content/uploads/2020/12/cropped-favicon-180x180.png"
+tags = ["pop", "public radio"]
+
+[[stations]]
+name = "RMF24"
+country_code = "PL"
+stream_url = "http://rmfstream1.interia.pl/rmf_24"
+logo_url = "https://www.rmf24.pl/i/2022/favicon/apple-icon-120x120.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Radio Plus"
+country_code = "PL"
+stream_url = "https://pl02.cdn.eurozet.pl/plu-waw.mp3?redirected=02"
+logo_url = "https://www.radioplus.pl/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Wnet.fm"
+country_code = "PL"
+stream_url = "https://media.wnet.fm/wnet.fm"
+logo_url = "https://wnet.fm/favicon.ico"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Chilli Zet"
+country_code = "PL"
+stream_url = "https://ch.cdn.eurozet.pl/chi-net.mp3"
+logo_url = "https://gfx.chillizet.pl/extension/chillizet/design/standard/images/favicon/apple-touch-icon.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Radio Party"
+country_code = "PL"
+stream_url = "http://s7.radioparty.pl:8000/"
+logo_url = "http://radioparty.pl/favicon.ico"
+tags = ["electronic", "dance", "pop"]
+
+[[stations]]
+name = "Vox FM"
+country_code = "PL"
+stream_url = "https://ic2.smcdn.pl/3990-1.mp3"
+logo_url = "http://voxfm.pl/apple-touch-icon.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Polskie Radio Katowice"
+country_code = "PL"
+stream_url = "http://stream4.nadaje.com:9212/radiokatowice"
+logo_url = "http://www.radio.katowice.pl/apple-touch-icon.png"
+tags = ["public radio", "talk", "news"]
+
+[[stations]]
+name = "Radio Eska Krak\u00f3w"
+country_code = "PL"
+stream_url = "http://ic1.smcdn.pl/2070-1.mp3"
+logo_url = "https://cdn-profiles.tunein.com/s87779/images/logod.png?t=637867737470000000"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Eska Gor\u0105ca 100"
+country_code = "PL"
+stream_url = "http://ic1.smcdn.pl/6120-1.mp3"
+logo_url = "http://eska.pl/favicon.ico"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "SmoothJazz.com.pl"
+country_code = "PL"
+stream_url = "https://bcast.vigormultimedia.com:48888/sjcompl320mp3"
+logo_url = "http://bcast.vigormultimedia.com:7000/sjcompl_192_192_nie_kasowac.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Polskie Radio 24"
+country_code = "PL"
+stream_url = "http://stream3.polskieradio.pl:8080/;.mp3"
+logo_url = "https://yt3.ggpht.com/a/AATXAJyFlzKJAEMeWhP6xmsC3EHQ9MkIldwATEmAQA=s900-c-k-c0xffffffff-no-rj-mo"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "RMF Classic"
+country_code = "PL"
+stream_url = "http://rmfstream1.interia.pl:8000/rmf_classic"
+logo_url = "https://radiointernetowe.online/wp-content/uploads/2021/06/rmf-classic.png"
+tags = ["classical"]
+
+[[stations]]
+name = "Radio Wroclaw"
+country_code = "PL"
+stream_url = "http://stream4.nadaje.com:9240/prw"
+logo_url = "http://www.prw.pl/favicon.ico"
+tags = ["rock"]
+
+[[stations]]
+name = "Anty Radio"
+country_code = "PL"
+stream_url = "https://an.cdn.eurozet.pl/ant-web.mp3?t=1713710188361"
+logo_url = "https://gfx-player.radiozet.pl/var/player/storage/images/player-antyradio/programy/antyradio-ekstra/936460-5-pol-PL/Antyradio-Ekstra_size-70x70.png"
+tags = ["rock", "alternative"]
+
+[[stations]]
+name = "Radio Z\u0142ote Przeboje Bia\u0142ystok"
+country_code = "PL"
+stream_url = "https://radiostream.pl/tuba8900-1.mp3?cache=1647512038"
+logo_url = "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/be/dd/13784/1/c300.png"
+tags = ["oldies"]
+
+[[stations]]
+name = "Radio Republika"
+country_code = "PL"
+stream_url = "https://ssl-1.radiotvrepublika.pl:12698/stream"
+logo_url = "https://radiotvrepublika.pl/favicon-96x96.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Polskie Radio Tr\u00f3jka"
+country_code = "PL"
+stream_url = "http://mp3.polskieradio.pl:8904/;.mp3"
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240110_205543842.jpg?alt=media&token=426bbc79-f02a-44a6-818b-f1a4fa75031b"
+tags = ["public radio", "rock", "culture"]
+
+[[stations]]
+name = "Z\u0142ote Przeboje Pozna\u0144"
+country_code = "PL"
+stream_url = "http://radiostream.pl/tuba8926-1.mp3"
+logo_url = "http://static.fm.tuba.pl/stations/_img/zlote-przeboje_512.png"
+tags = ["oldies"]
+
+[[stations]]
+name = "Radio Parada 96.00"
+country_code = "PL"
+stream_url = "http://stream4.nadaje.com:15274/live"
+logo_url = "https://static.wixstatic.com/media/351d06_e154aaf707444cd3b87c0d39494db49e~mv2_d_3486_2480_s_4_2.jpg/v1/fill/w_112,h_80,al_c,q_80,usm_0.66_1.00_0.01/351d06_e154aaf707444cd3b87c0d39494db49e~mv2_d_3486_2480_s_4_2.webp"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Eska Pozna\u0144"
+country_code = "PL"
+stream_url = "https://ic2.smcdn.pl/2140-1.aac"
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240110_150439740.jpg?alt=media&token=879bb2b7-8416-4957-b2dd-4bcdc67e6898"
+tags = ["pop"]
+
+[[stations]]
+name = "Jedynka"
+country_code = "PL"
+stream_url = "http://stream3.polskieradio.pl:8900/;"
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240209_103039189.jpg?alt=media&token=6aa71f56-8a3e-42d2-a0d8-5e5293766afd"
+tags = ["public radio", "news", "talk"]
+
+[[stations]]
+name = "RMF Dance"
+country_code = "PL"
+stream_url = "http://rmfstream1.interia.pl:8000/rmf_dance"
+logo_url = "https://www.rmfon.pl/assets/images/favicon/apple-touch-icon.png"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Polskie Radio RDC"
+country_code = "PL"
+stream_url = "http://stream2.nadaje.com:11140/rdc"
+logo_url = "http://www.rdc.pl/favicon.ico"
+tags = ["public radio", "pop"]
+
+[[stations]]
+name = "Radio Disco Party"
+country_code = "PL"
+stream_url = "https://s1.slotex.pl/shoutcast/7432/stream"
+logo_url = "https://discoparty.pl/wp-content/uploads/2023/01/logotyp.png"
+tags = ["dance", "pop"]
+
+[[stations]]
+name = "Eska Warszawa"
+country_code = "PL"
+stream_url = "https://waw.ic.smcdn.pl/2380-1.mp3"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/2/2c/Eska_1049_2.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Radioparty.pl"
+country_code = "PL"
+stream_url = "http://s2.radioparty.pl:7000/stream64aac"
+logo_url = "https://radioparty.pl/favicon.ico"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Chillout Radio"
+country_code = "PL"
+stream_url = "http://panel.nadaje.com:9004/"
+logo_url = "http://www.rmfon.pl/assets/images/favicon/apple-touch-icon.png"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Polskie Radio Pozna\u0144"
+country_code = "PL"
+stream_url = "http://stream4.nadaje.com:8578/poznan"
+logo_url = "https://radiopoznan.fm/v3/img/logo.png"
+tags = ["public radio", "news"]
+
+[[stations]]
+name = "Radioparty.pl Trance Party"
+country_code = "PL"
+stream_url = "http://trance.radioparty.pl:8015/"
+logo_url = "http://radioparty.pl//favicon.ico"
+tags = ["trance", "electronic", "dance"]
+
+[[stations]]
+name = "Radio Warszawa 106.2"
+country_code = "PL"
+stream_url = "http://streaming01.technologicznie.net:8765/radio_warszawa.mp3"
+logo_url = "http://www.radiowarszawa.com.pl/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Zet Dance"
+country_code = "PL"
+stream_url = "http://pl01.cdn.eurozet.pl/ZETDAN.mp3"
+logo_url = "https://gfx.radiozet.pl/extension/radiozet/design/standard/images/favicon/apple-touch-icon.png"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Radio Chopin"
+country_code = "PL"
+stream_url = "http://stream3.polskieradio.pl:8910/"
+logo_url = "http://moje.polskieradio.pl/favicon.ico"
+tags = ["classical"]
+
+[[stations]]
+name = "Radio Plus 106.1 Krak\u00f3w"
+country_code = "PL"
+stream_url = "https://waw.ic.smcdn.pl/4070-1.mp3"
+logo_url = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmyradioonline.pl%2Fpublic%2Fuploads%2Fradio_img%2Fradio-plus%2Ffb_cover.jpg&imgrefurl=https%3A%2F%2Fmyradioonline.pl%2Fradio-plus&tbnid=t01lPa3fSdA3fM&vet=12ahUKEwjmuPu018zxAhUS_CoKHfw8Dj4QMygBegUIARCdAQ..i&docid=ewI89N863ZxEUM&w=720&h=374&q=radio%20plus%20krak%C3%B3w&client=opera&ved=2ahUKEwjmuPu018zxAhUS_CoKHfw8Dj4QMygBegUIARCdAQ"
+tags = ["pop"]
+
+[[stations]]
+name = "Polskie Radio 24"
+country_code = "PL"
+stream_url = "https://stream15.polskieradio.pl/pr24/pr24.sdp/playlist.m3u8"
+logo_url = "https://yt3.ggpht.com/a/AATXAJyFlzKJAEMeWhP6xmsC3EHQ9MkIldwATEmAQA=s900-c-k-c0xffffffff-no-rj-mo"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "Antyradio Classic Rock"
+country_code = "PL"
+stream_url = "https://an01.cdn.eurozet.pl/ANTCLA.mp3?redirected=01"
+logo_url = "https://gfx-player.antyradio.pl/design/player_antyradio/images/favicon/apple-touch-icon.png"
+tags = ["rock", "alternative"]
+
+[[stations]]
+name = "Radio TOP80"
+country_code = "PL"
+stream_url = "https://top80.pl:8000/listen.mp3"
+logo_url = "https://cdn.onlineradiobox.com/img/l/3/1893.v4.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Radio Rekord FM"
+country_code = "PL"
+stream_url = "http://stream2.nadaje.com:8108/"
+logo_url = "http://www.radiorekord.pl/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Rzesz\u00f3w"
+country_code = "PL"
+stream_url = "https://streaming.g-news.pl:8040/rzeszow"
+logo_url = "https://radio.rzeszow.pl/wp-content/uploads/2022/12/cropped-favicon-1-180x180.png"
+tags = ["public radio", "talk", "news"]
+
+[[stations]]
+name = "Discoparty.pl Club"
+country_code = "PL"
+stream_url = "https://s3.slotex.pl/shoutcast/7354/stream"
+logo_url = "https://discoparty.pl/wp-content/uploads/2023/01/cropped-logotyp-180x180.png"
+tags = ["dance", "electronic", "house"]
+
+[[stations]]
+name = "Chilli ZET Deep"
+country_code = "PL"
+stream_url = "http://ch02.cdn.eurozet.pl/CHIDEP.mp3"
+logo_url = "https://gfx.chillizet.pl/extension/chillizet/design/standard/images/favicon/apple-touch-icon.png"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "PR Tr\u00f3jka"
+country_code = "PL"
+stream_url = "https://stream13.polskieradio.pl/pr3/pr3.sdp/playlist.m3u8"
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250314_080616667.jpg?alt=media&token=4738543a-4391-4727-9d9d-89741871db70"
+tags = ["public radio", "alternative", "culture"]
+
+[[stations]]
+name = "Antyradio"
+country_code = "PL"
+stream_url = "https://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5"
+logo_url = "https://gfx.antyradio.pl/design/antyradio/src/images/favicon/favicon_180x180.png"
+tags = ["rock", "alternative", "indie"]
+
+[[stations]]
+name = "Radio SAR"
+country_code = "PL"
+stream_url = "https://stream.radiosar.pl/hdmain.mp3"
+logo_url = "https://stream.radiosar.pl/logo.png"
+tags = ["student radio", "rock", "jazz", "pop"]
+
+[[stations]]
+name = "Radio Szczecin"
+country_code = "PL"
+stream_url = "http://stream4.nadaje.com:11986/prs.aac"
+logo_url = "http://radioszczecin.pl/css/logo.svg"
+tags = ["public radio", "variety"]
+
+[[stations]]
+name = "Meloradio Hot Dance"
+country_code = "PL"
+stream_url = "http://ml02.cdn.eurozet.pl/MELHDN.mp3"
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20241223_184842765.jpg?alt=media&token=a62dd69a-bc4c-4e96-bbb8-d551e4bdfef7"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Radio Kampus 97.1 FM"
+country_code = "PL"
+stream_url = "https://stream.radiokampus.fm/kampus"
+logo_url = "http://radiokampus.fm/logo192.png"
+tags = ["student radio", "alternative", "indie"]
+
+[[stations]]
+name = "VOX FM"
+country_code = "PL"
+stream_url = "https://pldm.one.pl/radio?url=https://www.eskago.pl/radio/vox-fm"
+logo_url = "https://www.voxfm.pl/apple-touch-icon.png"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Trendy Radio"
+country_code = "PL"
+stream_url = "http://stream.trendyradio.pl:8000/h"
+logo_url = "http://www.trendyradio.pl/favicon.ico"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Radio Opole"
+country_code = "PL"
+stream_url = "http://dab.radio.opole.pl:8070/1"
+logo_url = "http://www.radio.opole.pl/assets/favicon/apple-touch-icon.png"
+tags = ["public radio", "variety"]
+
+[[stations]]
+name = "TOK FM"
+country_code = "PL"
+stream_url = "https://radiostream.pl/tuba10-1.mp3"
+logo_url = "https://media.user.com/uploads/lv0msl-tokfm/logo-tok-fm-192x192_12xTZoh.png"
+tags = ["talk", "news", "culture"]
+
+[[stations]]
+name = "Radio Mbox Disco Polo"
+country_code = "PL"
+stream_url = "http://s3.slotex.pl:7222/stream"
+logo_url = "https://radiombox.pl/MboxKwadr120x120.png"
+tags = ["dance", "disco", "pop"]
+
+[[stations]]
+name = "RNZ National"
+country_code = "NZ"
+stream_url = "http://radionz-ice.streamguys.com/national.mp3"
+logo_url = "https://www.rnz.co.nz/x/favicons/production/apple-touch-icon-14e8cc0d5e9a21845ce6a582e39617baeebe39d41412666ecebcdba7f3c1770a.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "Easy 80s"
+country_code = "NZ"
+stream_url = "http://procyon.shoutca.st:8032/;"
+logo_url = "https://cdn-profiles.tunein.com/s302357/images/logoq.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "RNZ Pacific"
+country_code = "NZ"
+stream_url = "http://radionz-ice.streamguys.com/international.mp3"
+logo_url = "https://www.rnz.co.nz/x/favicons/production/apple-touch-icon-14e8cc0d5e9a21845ce6a582e39617baeebe39d41412666ecebcdba7f3c1770a.png"
+tags = ["news", "talk", "world", "public radio"]
+
+[[stations]]
+name = "P5 Nonstop Hits"
+country_code = "NO"
+stream_url = "https://p5n.p4groupaudio.com/P05AAH"
+logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/488dff43-6567-45ec-bd55-1813ccf861a4.png?w=600&ar=1x1"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "P12 Hitmix"
+country_code = "NO"
+stream_url = "https://nrj.p4groupaudio.com/NRJ_MM"
+logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/95c6448b-5cb4-4403-baca-686c22ba0c60.jpg?w=600&ar=1x1"
+tags = ["pop"]
+
+[[stations]]
+name = "P4 Norge"
+country_code = "NO"
+stream_url = "https://p4.p4groupaudio.com/P04_AH"
+logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/6e2f9c96-a018-424a-b3bf-7be5252d806c.png?w=600&ar=1x1"
+tags = ["pop", "news"]
+
+[[stations]]
+name = "Radio 24 il Sole 24 Ore"
+country_code = "IT"
+stream_url = "http://shoutcast2.radio24.it:8000/;"
+logo_url = "https://www.radio24.ilsole24ore.com/whitelabel/group-2420101401040528/img/apple-touch-icon.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Radio 105 Network"
+country_code = "IT"
+stream_url = "http://icecast.unitedradio.it/Radio105.mp3"
+logo_url = "https://upload.wikimedia.org/wikipedia/it/0/01/105.png"
+tags = ["pop", "rock", "dance"]
+
+[[stations]]
+name = "Radio Armisa"
+country_code = "IT"
+stream_url = "https://onair.armisa.it/listen/armisa/radio.mp3"
+logo_url = "https://armisa.it/assets/favicon/android-chrome-512x512.png"
+tags = ["pop", "dance", "folk", "oldies"]
+
+[[stations]]
+name = "Virgin Radio Italia"
+country_code = "IT"
+stream_url = "http://icecast.unitedradio.it/Virgin.mp3"
+logo_url = "http://www.virginradio.it/favicon_2.ico?v=1722509813651"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Radio 80"
+country_code = "IT"
+stream_url = "http://str01.fluidstream.net:7020/;stream.mp3"
+logo_url = "https://upload.wikimedia.org/wikipedia/it/1/1b/Radio80.jpg"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "R101 FM"
+country_code = "IT"
+stream_url = "http://icecast.unitedradio.it/r101"
+logo_url = "http://www.r101.it/favicon_7.ico?v=1722509814243"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Ibiza"
+country_code = "IT"
+stream_url = "http://wma08.fluidstream.net:5010/;stream.aac"
+logo_url = "https://radioibiza.it/wp-content/uploads/2021/07/cropped-favicon-ibiza-180x180.png"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Radio Viva FM"
+country_code = "IT"
+stream_url = "http://stream2.vivafm.it:8002/stream"
+logo_url = "http://cdn-radiotime-logos.tunein.com/s63968q.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Kiss Kiss Hits"
+country_code = "IT"
+stream_url = "http://ice08.fluidstream.net/kk_hits.aac"
+logo_url = "https://kisskiss.it/wp-content/uploads/2021/03/cropped-favicon-kisskiss-180x180.png"
+tags = ["pop"]
+
+[[stations]]
+name = "RDS Relax"
+country_code = "IT"
+stream_url = "http://icstream.rds.radio/rdsrelax"
+logo_url = "https://rdsrelax.it/images/logo.png"
+tags = ["ambient", "pop"]
+
+[[stations]]
+name = "RTL 102.5"
+country_code = "IT"
+stream_url = "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_audio.m3u8"
+logo_url = "https://cloud.rtl.it/assets/www.rtl.it/3.0.64/img/logo/favicon-96x96.png"
+tags = ["pop", "news", "talk"]
+
+[[stations]]
+name = "Radio 105 Rap Italia"
+country_code = "IT"
+stream_url = "http://icy.unitedradio.it/105RapItalia.mp3"
+logo_url = "http://www.105.net/favicon_3.ico?v=1722509813759"
+tags = ["hip-hop"]
+
+[[stations]]
+name = "Radio Deejay"
+country_code = "IT"
+stream_url = "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8"
+logo_url = "https://www.deejay.it/favicon.ico"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "Radio Capital"
+country_code = "IT"
+stream_url = "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiocapital/radiocapital/master_ma.m3u8"
+logo_url = "https://www.capital.it/wp-content/themes/network-capital/favicon.ico"
+tags = ["rock", "alternative"]
+
+[[stations]]
+name = "Lolli Radio Italia"
+country_code = "IT"
+stream_url = "http://www.lolliradio.net/streaming/italia.asx"
+logo_url = "http://www.lolliradio.net/wp-content/uploads/2016/02/logo_italia-150x150.jpg"
+tags = ["pop"]
+
+[[stations]]
+name = "Rai Radio 1"
+country_code = "IT"
+stream_url = "http://icestreaming.rai.it/1.mp3"
+logo_url = "https://radio-streaming.it/assets/image/radio/180/rairadio1logo.png"
+tags = ["news", "talk", "public radio"]
+
+[[stations]]
+name = "Musica Jazz Radio"
+country_code = "IT"
+stream_url = "http://ice03.fluidstream.net/mjr.aac"
+logo_url = "https://musicajazz.it/wp-content/uploads/logo-120.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Lattemiele"
+country_code = "IT"
+stream_url = "https://sr15.inmystream.it:8000/stream"
+logo_url = "https://www.lattemiele.com/wp-content/uploads/2020/07/cropped-logo-autore-lm-32x32.png"
+tags = ["pop", "soul", "oldies"]
+
+[[stations]]
+name = "Radio Piterpan"
+country_code = "IT"
+stream_url = "http://wma01.fluidstream.net/piterpan"
+logo_url = "http://www.piterpan.it/favicon.ico"
+tags = ["electronic", "pop"]
+
+[[stations]]
+name = "Radio Rai 1"
+country_code = "IT"
+stream_url = "http://icestreaming.rai.it/1.mp3"
+logo_url = "https://www.rai.it/cropgd/560x292/dl/img/2019/01/07/1280x720_1546854278675_conferenza%20radio1.jpg"
+tags = ["news", "pop", "talk"]
+
+[[stations]]
+name = "RMC Marine"
+country_code = "IT"
+stream_url = "http://edge.radiomontecarlo.net/rmcweb010"
+logo_url = "http://www.radiomontecarlo.net/favicon_1.ico?v=1722509813463"
+tags = ["jazz", "soul", "lounge"]
+
+[[stations]]
+name = "Radio Nostalgia Piemonte"
+country_code = "IT"
+stream_url = "http://rn1.fluidstream.eu/nostalgia_pv.mp3?FLID=1&aw_0_req.gdpr=true&type=.mp3"
+logo_url = "http://players1.fluidstream.it/RadioNostalgiaPV/images/logo320.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "RMC Kay Kay"
+country_code = "IT"
+stream_url = "http://edge.radiomontecarlo.net/rmcweb004"
+logo_url = "http://www.radiomontecarlo.net/favicon_1.ico?v=1722509813463"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Birikina"
+country_code = "IT"
+stream_url = "http://wma01.fluidstream.net/birikina"
+logo_url = "https://www.birikina.it/wp-content/uploads/2020/02/ico-fb-1.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "RTR 99 Canale Pooh"
+country_code = "IT"
+stream_url = "https://rtr99.fluidstream.eu/rtr99_pooh.mp3"
+logo_url = "https://www.rtr99.it/onair/CanalePooh/OnAir.jpg?x=9f2sj07zxxhpl2i1aocli"
+tags = ["pop", "rock"]
+
+[[stations]]
+name = "Romantica Radio"
+country_code = "IT"
+stream_url = "https://vetrina.multi-radio.com/romanticaradio"
+logo_url = "https://romanticaradio.it/wp-content/uploads/2022/05/cropped-favicon_romantica-180x180.png"
+tags = ["pop", "soul"]
+
+[[stations]]
+name = "Italia Dance Music"
+country_code = "IT"
+stream_url = "http://sr2.inmystream.info:8032/;"
+logo_url = "https://www.italiadancemusic.com/it/themes/corporate_lite/favicon.ico"
+tags = ["dance"]
+
+[[stations]]
+name = "70 80 Hits HQ"
+country_code = "IT"
+stream_url = "https://nr8.newradio.it:19574/stream"
+logo_url = "https://cdn-profiles.tunein.com/s267625/images/logog.jpg?t=159500"
+tags = ["pop", "oldies", "rock"]
+
+[[stations]]
+name = "Radio Norba"
+country_code = "IT"
+stream_url = "http://onair20.xdevel.com:8348/;"
+logo_url = "https://radionorba.it/wp-content/uploads/2021/05/cropped-logo-radionorba-180x180.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Energy Classic Italy"
+country_code = "IT"
+stream_url = "https://gmusto3.radioca.st/stream"
+logo_url = "https://www.radioenergy.to/favicon.ico"
+tags = ["rock", "oldies", "soul", "funk", "disco"]
+
+[[stations]]
+name = "Love FM"
+country_code = "IT"
+stream_url = "http://wma07.fluidstream.net:7600/;stream.mp3"
+logo_url = "https://www.lovefm.it/themes/default/assets/img_c/favicon.ico"
+tags = ["pop", "soul"]
+
+[[stations]]
+name = "Radio Bianconera"
+country_code = "IT"
+stream_url = "https://stream.tmwradio.com/bianconera.aac"
+logo_url = "http://players.fluidstream.it/RadioBiancoNera/icon.png"
+tags = ["sport", "talk"]
+
+[[stations]]
+name = "Radio 80 Afro"
+country_code = "IT"
+stream_url = "https://sphera.fluidstream.eu/r80_afro.mp3"
+logo_url = "https://www.radio80.it/wp-content/uploads/2015/02/logo-radio80-1.ico"
+tags = ["disco", "funk", "soul", "r&b"]
+
+[[stations]]
+name = "Radio Freccia"
+country_code = "IT"
+stream_url = "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S3160845/0tuSetc8UFkF/playlist_audio.m3u8"
+logo_url = "https://cloud.radiofreccia.it/assets/www.radiofreccia.it/1.0.43/img/logo/android-icon-192x192.png"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "Dancefloor 90s"
+country_code = "IT"
+stream_url = "http://streaming.radiodancefloor.it/live.mp3"
+logo_url = "http://radiodancefloor.it/favicon.ico"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Radio Subasio"
+country_code = "IT"
+stream_url = "https://icy.unitedradio.it/Subasio.mp3"
+logo_url = "https://www.radiosubasio.it/wp-content/themes/radiosubasiov2/assets/images/logo-radio-subasio.png"
+tags = ["pop", "italian"]
+
+[[stations]]
+name = "Italo Sound Radio"
+country_code = "IT"
+stream_url = "http://stream.italosound.com:8000/italosound"
+logo_url = "https://italosound.com/logo-cover.png"
+tags = ["dance", "electronic", "house"]
+
+[[stations]]
+name = "Radio Play Capital"
+country_code = "IT"
+stream_url = "http://onair11.xdevel.com:8166/;stream.nsv"
+logo_url = "http://www.playcapital.it/favicon.ico"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Radio Sabbia"
+country_code = "IT"
+stream_url = "http://sr2.inmystream.info:8104/stream"
+logo_url = "https://www.radiosabbia.it/wp-content/uploads/2021/02/favicon.png"
+tags = ["pop", "culture"]
+
+[[stations]]
+name = "Radio Capital Funky Town"
+country_code = "IT"
+stream_url = "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiocapitalfunkytown/radiocapitalfunkytown/master_ma.m3u8"
+logo_url = "https://cdn.gelestatic.it/capital/sites/2/2016/11/webradio-funkytown2-320x320.jpg"
+tags = ["funk", "soul", "dance"]
+
+[[stations]]
+name = "Radio Maril\u00f9"
+country_code = "IT"
+stream_url = "http://wma01.fluidstream.net/marilu"
+logo_url = "https://www.marilu.it/wp-content/uploads/2023/03/cropped-radio-marilu-plettro-180x180.png"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Rai Radio 3"
+country_code = "IT"
+stream_url = "http://icestreaming.rai.it/3.mp3"
+logo_url = "https://www.raicom.rai.it/wp-content/uploads/2021/12/RADIO3-1024x1024.jpg"
+tags = ["classical", "culture", "public radio"]
+
+[[stations]]
+name = "Giornale Radio"
+country_code = "IT"
+stream_url = "https://gr.fluidstream.eu/gr1.mp3"
+logo_url = "https://giornaleradio.fm/apple-touch-icon.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Radio Holiday"
+country_code = "IT"
+stream_url = "http://stream.radioholiday.it:8000/"
+logo_url = "https://www.radioholiday.it/wp-content/uploads/cropped-favicon-180x180.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Italy Classical Radio"
+country_code = "IT"
+stream_url = "http://philae.shoutca.st:8204/;"
+logo_url = "https://www.italyclassicalradio.it/player/template/img/logo.jpg"
+tags = ["classical"]
+
+[[stations]]
+name = "Radio Kiss Kiss History Hits"
+country_code = "IT"
+stream_url = "http://ice08.fluidstream.net/kk_history.aac"
+logo_url = "https://kisskiss.it/wp-content/uploads/2022/07/cropped-favicon-new-kisskiss-180x180.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "United Music Italia 2000"
+country_code = "IT"
+stream_url = "https://icy.unitedradio.it/um013.mp3"
+logo_url = "https://www.unitedmusic.com/favicon_6.ico?v=1722509814047"
+tags = ["pop"]
+
+[[stations]]
+name = "DumDUM"
+country_code = "IT"
+stream_url = "https://sr11.inmystream.it/proxy/dumdumradio"
+logo_url = "https://www.dumdumrepublic.com/images/favicon-96x96.png"
+tags = ["indie", "rock", "electronic"]
+
+[[stations]]
+name = "Radio Maria Italy"
+country_code = "IT"
+stream_url = "http://dreamsiteradiocp2.com:8016/stream"
+logo_url = "http://www.radiomaria.org/favicon.ico"
+tags = ["talk", "culture"]
+
+[[stations]]
+name = "Radio Ciao"
+country_code = "IT"
+stream_url = "http://onair11.xdevel.com:9988/;stream.mp3"
+logo_url = "https://www.radiociao.com/wp-content/uploads/2021/09/cropped-favicon-180x180.png"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "Radio RaiSport"
+country_code = "IT"
+stream_url = "https://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S74167340/mmNY37FME5Zl/icecast"
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/ramgajabuhqm.jpg"
+tags = ["sport", "public radio"]
+
+[[stations]]
+name = "m2o"
+country_code = "IT"
+stream_url = "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/master_ma.m3u8"
+logo_url = "https://www.radioindiretta.fm/img-radio/m2o-radio.jp"
+tags = ["dance", "electronic", "pop"]
+
+[[stations]]
+name = "RMC Sport Network"
+country_code = "IT"
+stream_url = "http://stream17.tmwradio.com/tmw.mp3"
+logo_url = "https://www.tmwradio.com/template/tmwradio.com/default/favicon/favicon144.png"
+tags = ["sport", "talk"]
+
+[[stations]]
+name = "Radio Cavolo"
+country_code = "IT"
+stream_url = "https://radiocavolo.org/stream"
+logo_url = "https://www.radiocavolo.org/wp-content/uploads/2020/10/cropped-radio-cavolo-logo-white-background-300x300-1-180x180.png"
+tags = ["electronic", "pop", "rock", "talk", "indie"]
+
+[[stations]]
+name = "Dance Wave!"
+country_code = "HU"
+stream_url = "https://dancewave.online/dance.mp3"
+logo_url = "https://dancewave.online/dw_logo.png"
+tags = ["dance", "electronic", "house", "trance"]
+
+[[stations]]
+name = "Dance Wave Retro!"
+country_code = "HU"
+stream_url = "https://retro.dancewave.online/retrodance.mp3"
+logo_url = "https://dancewave.online/dwr_logo.png"
+tags = ["dance", "oldies"]
+
+[[stations]]
+name = "Mercy R\u00e1di\u00f3 - Kabar\u00e9"
+country_code = "HU"
+stream_url = "http://stream.mercyradio.eu/kabare.mp3"
+logo_url = "http://mercyradio.eu/favicon.ico"
+tags = ["comedy", "talk"]
+
+[[stations]]
+name = "Oxygen The 80s Hits"
+country_code = "HU"
+stream_url = "https://oxygenmusic.hu:8443/oxygenthe80shits"
+logo_url = "https://oxygenmusic.hu/logo192.png"
+tags = ["oldies", "pop", "rock"]
+
+[[stations]]
+name = "Retro R\u00e1di\u00f3"
+country_code = "HU"
+stream_url = "https://icast.connectmedia.hu/5001/live.mp3"
+logo_url = "https://retroradio.hu/wp-content/themes/retroradio/assets/dist/img/favicon/android-icon-192x192.png"
+tags = ["pop", "rock", "oldies"]
+
+[[stations]]
+name = "Infor\u00e1di\u00f3"
+country_code = "HU"
+stream_url = "http://stream.infostart.hu/lejatszo/index.html?sid=1"
+logo_url = "https://infostart.hu/images/apple-icon-120x120.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Klubr\u00e1di\u00f3 95.3"
+country_code = "HU"
+stream_url = "https://a7.asurahosting.com:8160/radio.mp3"
+logo_url = "https://www.klubradio.hu/static/frontend/imgs/KR-clean-logo.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Tilos R\u00e1di\u00f3"
+country_code = "HU"
+stream_url = "http://stream.tilos.hu/tilos"
+logo_url = "http://tilos.hu/favicon.ico"
+tags = ["alternative", "indie", "culture"]
+
+[[stations]]
+name = "Danubius R\u00e1di\u00f3"
+country_code = "HU"
+stream_url = "http://stream.danubiusradio.hu/danubius_128k"
+logo_url = "https://www.danubiusradio.hu/logo192.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Oxygen Classic Rock"
+country_code = "HU"
+stream_url = "https://oxygenmusic.hu:8443/oxygenclassicrock"
+logo_url = "https://oxygenmusic.hu/logo192.png"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "Mercy R\u00e1di\u00f3 - Mulat\u00f3s"
+country_code = "HU"
+stream_url = "http://stream.mercyradio.eu/mulatos.mp3"
+logo_url = "http://mercyradio.eu/wp-content/uploads/2014/02/fredy-mediapartner.png"
+tags = ["world", "folk"]
+
+[[stations]]
+name = "Zebr\u00e1di\u00f3"
+country_code = "HU"
+stream_url = "https://stream.zebradio.hu:8443/zebradio"
+logo_url = "https://zebradio.klubradio.hu/static/frontend/icon/logo.png"
+tags = ["alternative", "indie"]
+
+[[stations]]
+name = "R\u00e1di\u00f3 88 Retro"
+country_code = "HU"
+stream_url = "http://stream1.radio88.hu:8300/;stream"
+logo_url = "https://www.radio88.hu/wp-content/uploads/2020/04/cropped-r88logo-180x180.png"
+tags = ["oldies", "pop"]
+
+[[stations]]
+name = "Base FM"
+country_code = "HU"
+stream_url = "https://icast.connectmedia.hu/5401/live.mp3"
+logo_url = "https://basefm.hu/wp-content/themes/basefm/assets/dist/img/favicon/apple-icon-120x120.png"
+tags = ["hip-hop", "r&b"]
+
+[[stations]]
+name = "Best FM - Budapest"
+country_code = "HU"
+stream_url = "https://icast.connectmedia.hu/5101/live.mp3/;"
+logo_url = "https://bestfmbudapest.hu/wp-content/themes/bestfm/assets/dist/img/favicon/apple-icon-120x120.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Jazzy"
+country_code = "HU"
+stream_url = "https://radio.musorok.org/listen/jazzy/jazzy.mp3"
+logo_url = "https://jazzy.hu/apple-icon-180x180.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Danubius"
+country_code = "HU"
+stream_url = "https://stream.danubiusradio.hu/danubius_320k"
+logo_url = "https://danubiusradio.hu/logo192.png"
+tags = ["pop"]
+
+[[stations]]
+name = "R\u00e1di\u00f3 1"
+country_code = "HU"
+stream_url = "https://icast.connectmedia.hu/5201/live.mp3"
+logo_url = "https://radio1.hu/template/radio1/assets/img/favicon/apple-touch-icon.png"
+tags = ["dance", "pop"]
+
+[[stations]]
+name = "Oxygen Music"
+country_code = "HU"
+stream_url = "https://oxygenmusic.hu:8443/oxygenmusic_192"
+logo_url = "https://oxygenmusic.hu/logo192.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "FM 103.9 A Rock"
+country_code = "HU"
+stream_url = "https://stream.rockradio.hu/"
+logo_url = "https://rockradio.hu/wp-content/themes/rockradio/assets/dist/img/favicon/apple-icon-120x120.png"
+tags = ["rock"]
+
+[[stations]]
+name = "Oxygen Italo Hits"
+country_code = "HU"
+stream_url = "https://oxygenmusic.hu:8443/oxygenitalohits"
+logo_url = "https://oxygenmusic.hu/logo192.png"
+tags = ["dance", "pop"]
+
+[[stations]]
+name = "Enying FM Hungary"
+country_code = "HU"
+stream_url = "http://radioe.net:8080/efm_hd"
+logo_url = "http://img.sedoparking.com/templates/logos/sedo_logo.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Tilos R\u00e1di\u00f3 FM 90.3"
+country_code = "HU"
+stream_url = "http://stream.tilos.hu:8000/tilos"
+logo_url = "http://tilos.hu/favicon.ico"
+tags = ["indie", "alternative"]
+
+[[stations]]
+name = "BDPST Rock"
+country_code = "HU"
+stream_url = "https://bdpstrock.hu/live_320.mp3"
+logo_url = "https://bdpstrock.hu/favicon.ico"
+tags = ["rock"]
+
+[[stations]]
+name = "Pet\u0151fi R\u00e1di\u00f3"
+country_code = "HU"
+stream_url = "https://icast.connectmedia.hu/4738/mr2.mp3"
+logo_url = "https://i1.sndcdn.com/artworks-000103658408-5g7ohr-t500x500.jpg"
+tags = ["alternative", "pop", "public radio"]
+
+[[stations]]
+name = "Cool FM Filmzen\u00e9k"
+country_code = "HU"
+stream_url = "https://mediagw.e-tiger.net/stream/zc01?ver=753658"
+logo_url = "https://coolfm.hu/radio/wp-content/uploads/2022/01/K%C3%89SZ_Filmzen%C3%A9k_2-%C3%9AJ-R%C3%81DI%C3%93.png"
+tags = ["culture"]
+
+[[stations]]
+name = "Best FM - Debrecen"
+country_code = "HU"
+stream_url = "http://stream.webthings.hu:8000/fm95-x-128.mp3"
+logo_url = "https://myonlineradio.hu/public/uploads/radio_img/best-fm/play_250_250.jpg"
+tags = ["pop", "news"]
+
+[[stations]]
+name = "R\u00e1di\u00f3 88"
+country_code = "HU"
+stream_url = "http://stream.radio88.hu:8000/;"
+logo_url = "http://www.radio88.hu/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Park FM"
+country_code = "HU"
+stream_url = "https://s03.diazol.hu:7142/stream.mp3"
+logo_url = "https://parkfm.hu/wp-content/themes/park-fm/apple-touch-icon.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Balatonica Radio"
+country_code = "HU"
+stream_url = "http://balatonica.hu:8000/stream_high"
+logo_url = "http://www.balatonica.hu/favicon.ico"
+tags = ["ambient", "pop"]
+
+[[stations]]
+name = "Mercy R\u00e1di\u00f3"
+country_code = "HU"
+stream_url = "http://stream.mercyradio.eu/mercyradio.mp3"
+logo_url = "http://mercyradio.eu/wp-content/uploads/2014/02/fredy-mediapartner.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Dance Wave!"
+country_code = "HU"
+stream_url = "https://dancewave.online/dance.opus"
+logo_url = "https://dancewave.online/dw_logo.png"
+tags = ["dance", "house", "electronic"]
+
+[[stations]]
+name = "Dance 90s"
+country_code = "HU"
+stream_url = "https://mediagw.e-tiger.net/stream/zc06?ver=887687"
+logo_url = "https://coolfm.hu/radio/wp-content/uploads/2022/01/cropped-egyszer%C5%B1-k%C3%A9p-192x192.png"
+tags = ["dance", "oldies"]
+
+[[stations]]
+name = "Laza R\u00e1di\u00f3 - Mulat\u00f3s"
+country_code = "HU"
+stream_url = "https://stream.lazaradio.com/mulatos.mp3"
+logo_url = "https://lazaradio.com/wp-content/uploads/2024/09/laza_logo-2048x818.png"
+tags = ["folk"]
+
+[[stations]]
+name = "Jazzy Groove"
+country_code = "HU"
+stream_url = "https://radio.musorok.org/listen/jazzygroove/jazzygroove.mp3"
+logo_url = "https://jazzy-backend-prod.melkweg.hu/jazzy-borito-fallback-groove.jpg"
+tags = ["jazz", "soul"]
+
+[[stations]]
+name = "Extra FM"
+country_code = "HR"
+stream_url = "http://streams.extrafm.hr:8110/;"
+logo_url = "https://extrafm.hr/apple-touch-icon.png"
+tags = ["folk", "pop"]
+
+[[stations]]
+name = "Radio Banovina"
+country_code = "HR"
+stream_url = "http://stream1.radio-banovina.hr:8008/;"
+logo_url = "https://www.radio-banovina.hr/wp-content/uploads/2015/01/logo-120_00000.png"
+tags = ["folk", "pop"]
+
+[[stations]]
+name = "Yammat FM"
+country_code = "HR"
+stream_url = "https://stream.yammat.fm/radio/8000/yammat.mp3"
+logo_url = "https://www.yammat.fm/wp-content/themes/yammat/src/img/favicon/1024x1024.png"
+tags = ["pop", "indie"]
+
+[[stations]]
+name = "Radio Stubica"
+country_code = "HR"
+stream_url = "http://radiostubica.hc.hr:7006/stream"
+logo_url = "https://radio-stubica.hr/favicon.ico"
+tags = ["folk", "pop"]
+
+[[stations]]
+name = "Radio101"
+country_code = "HR"
+stream_url = "http://live.radio101.hr:9531/"
+logo_url = "http://radio101.hr/favicon.ico"
+tags = ["pop", "rock", "news"]
+
+[[stations]]
+name = "Radio Sunce"
+country_code = "HR"
+stream_url = "http://shoutcast.pondi.hr:8002/;*.mp3"
+logo_url = "http://www.uzivoradio.com/thumbnails/fb-thumb.gif"
+tags = ["world", "pop"]
+
+[[stations]]
+name = "Radio Dalmacija - Oliver"
+country_code = "HR"
+stream_url = "http://c5.hostingcentar.com:8275/stream"
+logo_url = "https://www.radiodalmacija.hr/favicon.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Novi Radio Zadar"
+country_code = "HR"
+stream_url = "http://s8.iqstreaming.com:8022/stream"
+logo_url = "https://www.noviradio.hr/wp-content/uploads/2020/03/portal-mala.png"
+tags = ["pop", "rock", "news", "oldies"]
+
+[[stations]]
+name = "Blues Radio"
+country_code = "GR"
+stream_url = "http://cast3.radiohost.ovh:8352/"
+logo_url = "https://i0.wp.com/bluesradio.gr/wp-content/uploads/2021/06/cropped-24-7bug.png?fit=180%2c180&#038;ssl=1"
+tags = ["blues", "soul"]
+
+[[stations]]
+name = "Real FM 97.8"
+country_code = "GR"
+stream_url = "http://netradio.live24.gr/realfm"
+logo_url = "https://www.real.gr/wp-content/uploads/2025/02/realgr-icon-150x150.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Kiss 92.9"
+country_code = "GR"
+stream_url = "http://netradio.live24.gr/kissfmathens"
+logo_url = "https://www.kiss929.gr/sites/default/files/kiss.ico"
+tags = ["pop"]
+
+[[stations]]
+name = "Sport FM 94.6"
+country_code = "GR"
+stream_url = "http://netradio.live24.gr/sportfm7712"
+logo_url = "http://www.sport-fm.gr/favicon.ico"
+tags = ["sport", "talk"]
+
+[[stations]]
+name = "Zeppelin 106.7"
+country_code = "GR"
+stream_url = "https://radiostreaming.ert.gr/ert-zeppelin"
+logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
+tags = ["rock", "alternative", "indie"]
+
+[[stations]]
+name = "Parapol\u00edtika FM 90.1"
+country_code = "GR"
+stream_url = "http://netradio.live24.gr/athinaradio"
+logo_url = "http://www.parapolitikaradio.gr/favicon.ico"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Ellinikos 93.2"
+country_code = "GR"
+stream_url = "http://netradio.live24.gr/orange9320"
+logo_url = "http://www.ellinikos932.fm/favicon.ico"
+tags = ["pop", "world"]
+
+[[stations]]
+name = "Psyndora Psytrance"
+country_code = "GR"
+stream_url = "http://cast.magicstreams.gr:9111/stream"
+logo_url = "https://www.psyndora.com/images/favicon-144x144.png"
+tags = ["trance", "electronic", "dance"]
+
+[[stations]]
+name = "Laikos FM"
+country_code = "GR"
+stream_url = "http://netradio.live24.gr/laikos876"
+logo_url = "https://www.laikos.gr/templates/bt_medical/favicon.ico"
+tags = ["pop", "world"]
+
+[[stations]]
+name = "Mad Radio 106.2"
+country_code = "GR"
+stream_url = "http://mediaserver.mad.tv/stream"
+logo_url = "https://mad.gr/wp-content/uploads/2020/06/cropped-mad-browser-icon-180x180.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "ERA Deftero Programma"
+country_code = "GR"
+stream_url = "http://radiostreaming.ert.gr/ert-deftero"
+logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
+tags = ["public radio", "talk"]
+
+[[stations]]
+name = "Stone Radio"
+country_code = "GR"
+stream_url = "http://eu4.fastcast4u.com:5248/;stream.mp3"
+logo_url = "http://cdn-radiotime-logos.tunein.com/s236876q.png"
+tags = ["rock", "metal", "alternative"]
+
+[[stations]]
+name = "ERA Proto Programma"
+country_code = "GR"
+stream_url = "http://radiostreaming.ert.gr/ert-proto"
+logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
+tags = ["public radio", "talk", "culture"]
+
+[[stations]]
+name = "Radio Art Chillout"
+country_code = "GR"
+stream_url = "http://air.radioart.com/fChillout.mp3"
+logo_url = "https://d1iyh67kzf6t3o.cloudfront.net/images/channels/25_Chillout.jpg"
+tags = ["ambient", "electronic"]
+
+[[stations]]
+name = "Radio Art Meditation"
+country_code = "GR"
+stream_url = "http://air-tunein.radioart.com/fMeditation.mp3"
+logo_url = "https://cdn-profiles.tunein.com/s187596/images/logoq.jpg"
+tags = ["ambient"]
+
+[[stations]]
+name = "Radio Art Solo Piano"
+country_code = "GR"
+stream_url = "http://live.radioart.com/fSolo_piano.mp3"
+logo_url = "https://www.radioart.com/favicon.ico"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "Radio Art Relaxing"
+country_code = "GR"
+stream_url = "http://air.radioart.com/fRelaxing.mp3"
+logo_url = "https://www.radioart.com/favicon.ico"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "Disco Net"
+country_code = "GR"
+stream_url = "https://stream1.468.gr/8004/stream"
+logo_url = "http://resources.live24.gr/resources/images/stations/cde82ef1-c5e0-4b19-919a-cc2c3c2fc491.jpg"
+tags = ["pop", "oldies", "disco"]
+
+[[stations]]
+name = "Radio Art - Piano for Sleep"
+country_code = "GR"
+stream_url = "http://air.radioart.com/fPiano_for_sleep.mp3"
+logo_url = "https://d1iyh67kzf6t3o.cloudfront.net/images/channels/137_piano_for_s-600x400.jpg"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "Parapolitika 90.1"
+country_code = "GR"
+stream_url = "https://netradio.live24.gr/athinaradio"
+logo_url = "https://www.parapolitika.gr/favicon.ico"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "ERA Trito Programma"
+country_code = "GR"
+stream_url = "http://radiostreaming.ert.gr/ert-trito"
+logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
+tags = ["public radio", "culture"]
+
+[[stations]]
+name = "Athina 984"
+country_code = "GR"
+stream_url = "http://athina984.live24.gr/athina984"
+logo_url = "http://athina984.gr/favicon.ico"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Radio Art - Cuban"
+country_code = "GR"
+stream_url = "https://live.radioart.com/fCuban_lounge.mp3"
+logo_url = "https://www.radioart.com/images/channels/Cuban_lounge.jpg"
+tags = ["world", "jazz"]
+
+[[stations]]
+name = "\u03a1\u03c5\u03b8\u03bc\u03cc\u03c2 89.2"
+country_code = "GR"
+stream_url = "http://s4.onweb.gr:8892/stream?type=http&nocache=136101"
+logo_url = "http://resources.live24.gr/resources/images/stations/c6d7573c-7187-4b33-8d98-cd336145612b.jpg"
+tags = ["pop", "mainstream"]
+
+[[stations]]
+name = "Velvet 96.8"
+country_code = "GR"
+stream_url = "http://s10.voscast.com:9942/;"
+logo_url = "https://velvet968.gr/wp-content/uploads/2021/09/ms-icon-310x310-1-100x100.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Art - Piano & Guitar"
+country_code = "GR"
+stream_url = "http://air-tunein.radioart.com/fPiano_and_guitar.mp3"
+logo_url = "https://cdn-profiles.tunein.com/s154174/images/logoq.jpg"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "SKAI 100.3"
+country_code = "GR"
+stream_url = "https://skai.live24.gr/skai1003"
+logo_url = "https://www.skairadio.gr/themes/s1003/assets/images/logo-1904-border.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Blues Radio Greece"
+country_code = "GR"
+stream_url = "http://cast3.radiohost.ovh:8352/"
+logo_url = "https://i0.wp.com/bluesradio.gr/wp-content/uploads/2021/06/cropped-24-7bug.png?fit=180%2c180&#038;ssl=1"
+tags = ["blues", "soul"]
+
+[[stations]]
+name = "Athens Voice 102.5"
+country_code = "GR"
+stream_url = "http://netradio.live24.gr/nitro4555"
+logo_url = "http://www.athensvoice.gr/content/media/favicon/favicon-128.png?k=web-5859bc9555"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "ERA Sport"
+country_code = "GR"
+stream_url = "https://radiostreaming.ert.gr/ert-erasport"
+logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
+tags = ["sport", "public radio"]
+
+[[stations]]
+name = "Derti 107.7"
+country_code = "GR"
+stream_url = "http://i5.streams.ovh:14008/stream?type=http&nocache=100540"
+logo_url = "https://2.bp.blogspot.com/-GZD49Iqiy2w/YGOkt5ixQvI/AAAAAAAABCs/mP-S_n-CUOwvlyw7Uzu9oAfpsrxgCDaQwCK4BGAYYCw/s1600/Skandalo%2BWeb%2BRadio2.jpg"
+tags = ["pop", "mainstream"]
+
+[[stations]]
+name = "Vanilla Radio - Fresh Flavours Stream"
+country_code = "GR"
+stream_url = "https://fresh.vanillaradio.com:8028/live"
+logo_url = "https://www.vanillaradio.com/wp-content/uploads/2016/04/vanilla-logo-300x100.png"
+tags = ["pop"]
+
+[[stations]]
+name = "ERT Kosmos"
+country_code = "GR"
+stream_url = "https://radiostreaming.ert.gr/ert-kosmos"
+logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
+tags = ["world", "public radio"]
+
+[[stations]]
+name = "ERT Deftero"
+country_code = "GR"
+stream_url = "https://radiostreaming.ert.gr/ert-deftero"
+logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
+tags = ["public radio", "talk", "culture"]
+
+[[stations]]
+name = "7000FM"
+country_code = "GR"
+stream_url = "https://stream.7000fm.gr/radio/8000/radio.mp3"
+logo_url = "https://7000fm.gr/images/favicon.ico"
+tags = ["electronic", "dance", "house"]
+
+[[stations]]
+name = "Plus Radio"
+country_code = "GR"
+stream_url = "http://eco.onestreaming.com:8039/"
+logo_url = "http://plusradio.gr/images/folder/favicon.ico"
+tags = ["pop", "dance", "r&b"]
+
+[[stations]]
+name = "Archangelos 94.1"
+country_code = "GR"
+stream_url = "http://eco.onestreaming.com:8536/;"
+logo_url = "http://resources.live24.gr/resources/images/stations/d8b5ba1e-c19d-4ab0-b5a5-7bc8c1c7d64f.jpg"
+tags = ["pop", "alternative"]
+
+[[stations]]
+name = "Athens Rock 96.9"
+country_code = "GR"
+stream_url = "https://az10.yesstreaming.net/radio/8060/radio.mp3"
+logo_url = "http://resources.live24.gr/resources/images/stations/fee95347-f0eb-4299-9edd-9d9b42ee23f6.png"
+tags = ["rock", "alternative"]
+
+[[stations]]
+name = "Imagine 897"
+country_code = "GR"
+stream_url = "https://www.imagine897.gr/webplayer/?pl=winamp&c=IMAGINE897"
+logo_url = "https://www.imagine897.gr/images/IMAGINE897.jpg"
+tags = ["pop", "rock", "alternative"]
+
+[[stations]]
+name = "Metropolis"
+country_code = "GR"
+stream_url = "https://metromedia.live24.gr/metropolis955thess"
+logo_url = "https://www.metrosport.gr/metrosport/img/favicon/apple-touch-icon.png"
+tags = ["pop", "dance", "alternative"]
+
+[[stations]]
+name = "Zucca Radio"
+country_code = "GR"
+stream_url = "https://stream.zuccaradio.com/stream"
+logo_url = "https://zuccaradio.com/wp-content/uploads/2019/11/ZUCCA_RADIO_LOGO-02a.jpg"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Ipiros 94.5"
+country_code = "GR"
+stream_url = "https://rdst.win:59450/stream"
+logo_url = "http://resources.live24.gr/resources/images/stations/c689f912-ad9e-4513-9d2a-db9418d70018.png"
+tags = ["folk", "world", "traditional"]
+
+[[stations]]
+name = "ERT Kosmos Jazz"
+country_code = "GR"
+stream_url = "https://radiostreaming.ert.gr/ert-webjazz"
+logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
+tags = ["jazz", "public radio"]
+
+[[stations]]
+name = "Sfera 94.4"
+country_code = "GR"
+stream_url = "http://netradio.live24.gr/sfera941nauplio"
+logo_url = "http://resources.live24.gr/resources/images/stations/29aecd11-c6bd-4c2e-bf0e-054390151602.png"
+tags = ["pop", "alternative"]
+
+[[stations]]
+name = "Corfu Dee Jay 97.5"
+country_code = "GR"
+stream_url = "https://sh.onweb.gr:7083/stream?type=http&nocache=35812"
+logo_url = "http://resources.live24.gr/resources/images/stations/bec6ab25-e799-4958-aae6-6c1fc0dfa0cb.png"
+tags = ["dance", "electronic", "hip-hop", "pop"]
+
+[[stations]]
+name = "RSO 91.7 Thessaloniki"
+country_code = "GR"
+stream_url = "http://tachyon.shoutca.st:8594/stream"
+logo_url = "http://www.rso.gr/templates/gk_hotel/images/touch-device.png"
+tags = ["pop", "alternative"]
+
+[[stations]]
+name = "Radio Art - Guitar Jazz"
+country_code = "GR"
+stream_url = "https://live.radioart.com/fGuitar_jazz.mp3"
+logo_url = "https://www.radioart.com/favicon.ico"
+tags = ["jazz", "guitar"]
+
+[[stations]]
+name = "Radio Art - For Study"
+country_code = "GR"
+stream_url = "http://air-tunein.radioart.com/fFor_study.mp3"
+logo_url = "https://www.radioart.com/favicon.ico"
+tags = ["ambient", "instrumental"]
+
+[[stations]]
+name = "Radio Art - Saxophone Jazz"
+country_code = "GR"
+stream_url = "http://air.radioart.com/fSaxophone_jazz.mp3"
+logo_url = "https://www.radioart.com/favicon.ico"
+tags = ["jazz"]
+
+[[stations]]
+name = "Radio Art - Bossa Nova"
+country_code = "GR"
+stream_url = "http://air-tunein.radioart.com/fBosa_nova.mp3"
+logo_url = "https://cdn-profiles.tunein.com/s290986/images/logoq.jpg"
+tags = ["jazz", "world", "soul"]
+
+[[stations]]
+name = "Red 96.3"
+country_code = "GR"
+stream_url = "https://netradio.live24.gr/red9630"
+logo_url = "https://cdn.onlineradiobox.com/img/l/5/15525.v6.png"
+tags = ["rock"]
+
+[[stations]]
+name = "Rock FM 96.9"
+country_code = "GR"
+stream_url = "https://az10.yesstreaming.net:8060/radio.mp3"
+logo_url = "https://resources.live24.gr/resources/images/stations/fee95347-f0eb-4299-9edd-9d9b42ee23f6.png"
+tags = ["rock", "alternative", "indie"]
+
+[[stations]]
+name = "Melody 88.8"
+country_code = "GR"
+stream_url = "http://stream.melody888.gr:48500/melody.mp3"
+logo_url = "https://melody888.gr/images/fav1.png"
+tags = ["pop", "dance", "electronic"]
+
+[[stations]]
+name = "YleX"
+country_code = "FI"
+stream_url = "https://icecast.live.yle.fi/radio/YleX/icecast.audio"
+logo_url = "https://images.cdn.yle.fi/f_auto,w_48,h_48,dpr_4.0/v1496664710/yle-areena-app.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Doubleclap Radio"
+country_code = "FI"
+stream_url = "https://s3.radio.co/scfd7273b2/listen"
+logo_url = "https://doubleclap.dance/wp-content/uploads/2020/05/logo.png"
+tags = ["dance", "electronic", "house", "trance"]
+
+[[stations]]
+name = "DR P1"
+country_code = "DK"
+stream_url = "http://live-icy.gss.dr.dk/A/A03H.mp3"
+logo_url = "http://www.dr.dk/favicon.ico"
+tags = ["talk", "classical", "public radio"]
+
+[[stations]]
+name = "Limfjord Plus Slager"
+country_code = "DK"
+stream_url = "http://media.limfjordnetradio.dk/plusslager128"
+logo_url = "https://websitebuilder.one.com/favicon/favicon.ico"
+tags = ["pop", "oldies"]
+
+[[stations]]
+name = "Radio Soft"
+country_code = "DK"
+stream_url = "http://tx-bauerdk.sharp-stream.com/http_live.php?i=radiosoft_dk_mp3"
+logo_url = "https://listenapi.s3.amazonaws.com/img/ConfigWebListenBarLogoImageUrl/212.jpg?ver=1490197142"
+tags = ["pop"]
+
+[[stations]]
+name = "Skala FM"
+country_code = "DK"
+stream_url = "http://webradio.skala.fm/kolding"
+logo_url = "https://skala.fm/wp-content/uploads/sites/2/2024/08/cropped-favicon_skala-180x180.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Nova 100% Dansk"
+country_code = "DK"
+stream_url = "https://live-bauerdk.sharp-stream.com/DK_HQ_RP11.aac"
+logo_url = "https://listenapi.s3.amazonaws.com/img/ConfigWebListenBarLogoImageUrl/202.jpg?ver=1490698010"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Swiss Pop"
+country_code = "CH"
+stream_url = "http://stream.srg-ssr.ch/m/rsp/mp3_128"
+logo_url = "http://www.radioswisspop.ch/favicon.ico"
+tags = ["pop", "public radio"]
+
+[[stations]]
+name = "SRF 3"
+country_code = "CH"
+stream_url = "http://stream.srg-ssr.ch/m/drs3/mp3_128"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Radio_SRF_3.svg/200px-Radio_SRF_3.svg.png"
+tags = ["pop", "public radio"]
+
+[[stations]]
+name = "RTS La Premi\u00e8re"
+country_code = "CH"
+stream_url = "http://stream.srg-ssr.ch/m/la-1ere/mp3_128"
+logo_url = "https://www.rts.ch/hbv7/static/images/favicon/rts/152x152.png"
+tags = ["public radio"]
+
+[[stations]]
+name = "SRF 4 News"
+country_code = "CH"
+stream_url = "http://stream.srg-ssr.ch/m/drs4news/mp3_128"
+logo_url = "http://www.srf.ch/var/storage/assets/webpack/favicons/srf-apple-touch-icon.png"
+tags = ["news", "public radio"]
+
+[[stations]]
+name = "Energy Z\u00fcrich"
+country_code = "CH"
+stream_url = "http://broadcast.infomaniak.ch/energyzuerich-high.mp3"
+logo_url = "https://energy.ch/ech-new/images/ech/apple-touch-icon.png"
+tags = ["pop", "mainstream"]
+
+[[stations]]
+name = "GDS.FM"
+country_code = "CH"
+stream_url = "http://gdsfm.out.airtime.pro:8000/gdsfm_a"
+logo_url = "http://www.gds.fm/_nuxt/icons/icon_64x64.96821f.png"
+tags = ["indie", "electronic", "hip-hop", "jazz"]
+
+[[stations]]
+name = "80s Forever"
+country_code = "CH"
+stream_url = "https://premium.shoutcastsolutions.com/radio/8050/256.mp3"
+logo_url = "https://www.80sforever.radio/favicon.ico"
+tags = ["rock", "alternative", "pop", "indie"]
+
+[[stations]]
+name = "Radio Swiss Jazz"
+country_code = "CH"
+stream_url = "http://stream.srg-ssr.ch/m/rsj/aacp_96"
+logo_url = "http://www.radioswissjazz.ch/favicon.ico"
+tags = ["jazz", "public radio"]
+
+[[stations]]
+name = "Radio Swiss Classic"
+country_code = "CH"
+stream_url = "http://stream.srg-ssr.ch/m/rsc_it/mp3_128"
+logo_url = "https://www.radioswissclassic.ch/favicon.ico"
+tags = ["classical", "public radio"]
+
+[[stations]]
+name = "Couleur3"
+country_code = "CH"
+stream_url = "http://stream.srg-ssr.ch/m/couleur3/aacp_96"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Couleur_3_logo.svg/1200px-Couleur_3_logo.svg.png"
+tags = ["indie", "pop", "rock"]
+
+[[stations]]
+name = "Ambi Nature Radio"
+country_code = "CH"
+stream_url = "https://nature-rex.radioca.st/stream"
+logo_url = "https://cdn-radiotime-logos.tunein.com/s266086d.png"
+tags = ["ambient", "world"]
+
+[[stations]]
+name = "Lausanne FM"
+country_code = "CH"
+stream_url = "http://lausannefm.ice.infomaniak.ch/lausannefm-high.mp3"
+logo_url = "https://www.lfm.ch/wp-content/uploads/2021/07/cropped-radio-lausanne-fm-sa-icone-du-site-180x180.png"
+tags = ["pop", "public radio"]
+
+[[stations]]
+name = "Rh\u00f4ne FM"
+country_code = "CH"
+stream_url = "http://rhonefm.ice.infomaniak.ch/rhonefm-high.mp3"
+logo_url = "http://www.rhonefm.ch/favicon/4/120x120.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Radio Basilisk"
+country_code = "CH"
+stream_url = "http://radiobasilisk-64.ice.infomaniak.ch/radiobasilisk-64-128-2.mp3"
+logo_url = "http://www.basilisk.ch/assets/favicons/apple-icon-120x120.png"
+tags = ["pop", "public radio"]
+
+[[stations]]
+name = "1.FM All Times & Urban Gospel Radio"
+country_code = "CH"
+stream_url = "http://strm112.1.fm/gospel_mobile_mp3"
+logo_url = "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg"
+tags = ["gospel", "soul", "r&b"]
+
+[[stations]]
+name = "Radio Tell"
+country_code = "CH"
+stream_url = "http://stream.radiotell.ch/radiotell.mp3"
+logo_url = "https://radiotell.ch/wp-content/uploads/2021/01/cropped-apfel-180x180.png"
+tags = ["folk", "world", "culture"]
+
+[[stations]]
+name = "New Clear Radio"
+country_code = "CH"
+stream_url = "http://live.ncradio.fm/320"
+logo_url = "http://ncradio.fm/favicons/apple-touch-icon.png"
+tags = ["rock", "indie", "alternative"]
+
+[[stations]]
+name = "Jazz Radio Swiss"
+country_code = "CH"
+stream_url = "https://stream.srg-ssr.ch/m/rsj/mp3_128"
+logo_url = "https://www.radioswissjazz.ch/social-media/rsj-web.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Calm Radio - Solo Piano"
+country_code = "CA"
+stream_url = "http://streams.calmradio.com:1228/"
+logo_url = "https://calmradio.com/templates/calmradio/favicons/apple-touch-icon.png"
+tags = ["classical", "ambient", "easy listening"]
+
+[[stations]]
+name = "Radio Blues Flac"
+country_code = "CA"
+stream_url = "http://streams.radiomast.io/radioblues-flac"
+logo_url = "https://bluesflac.com/wp-content/uploads/2019/11/cropped-skull-1-180x180.png"
+tags = ["blues", "jazz"]
+
+[[stations]]
+name = "Airport Lounge Radio"
+country_code = "CA"
+stream_url = "https://az1.mediacp.eu/listen/airport-lounge-radio/radio.mp3"
+logo_url = "https://favicon-generator.org/favicon-generator/htdocs/favicons/2023-12-16/9274e8a4803971186ff5c45359ab77a4.ico.png"
+tags = ["ambient", "lounge", "easy listening"]
+
+[[stations]]
+name = "Calm Radio - Bach"
+country_code = "CA"
+stream_url = "http://streams.calmradio.com:6828/stream"
+logo_url = "https://calmradio.com/templates/calmradio/favicons/apple-touch-icon.png"
+tags = ["classical"]
+
+[[stations]]
+name = "Gritty Rock Radio"
+country_code = "CA"
+stream_url = "https://listen.radioking.com/radio/10713/stream/224413"
+logo_url = "https://www.grittyrockradio.com/apple-touch-icon.png"
+tags = ["rock", "blues"]
+
+[[stations]]
+name = "Calm Radio - Mozart"
+country_code = "CA"
+stream_url = "http://streams.calmradio.com:7328/stream"
+logo_url = "https://calmradio.com/templates/calmradio/favicons/apple-touch-icon.png"
+tags = ["classical"]
+
+[[stations]]
+name = "Calm Radio - Gregorian"
+country_code = "CA"
+stream_url = "http://streams.calmradio.com/api/103/128/stream"
+logo_url = "https://calmradio.com/templates/calmradio/favicons/apple-touch-icon.png"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "Forest Green Radio"
+country_code = "CA"
+stream_url = "http://s1.streamaudio.de:8000/forest-green"
+logo_url = "https://liveonlineradio.net/wp-content/uploads/2017/02/Forest-Green-Radio-100x47.jpg"
+tags = ["classical", "folk", "ambient"]
+
+[[stations]]
+name = "Calm Radio - Solo Piano & Guitar"
+country_code = "CA"
+stream_url = "http://streams.calmradio.com:30228/"
+logo_url = "https://calmradio.com/templates/calmradio/favicons/apple-touch-icon.png"
+tags = ["classical", "ambient"]
+
+[[stations]]
+name = "DKFM Shoegaze Radio"
+country_code = "CA"
+stream_url = "https://kathy.torontocast.com:2005/stream"
+logo_url = "https://i0.wp.com/decayfm.com/wp-content/uploads/2018/12/cropped-512-1.jpg?fit=180%2c180&#038;ssl=1"
+tags = ["rock", "indie", "alternative"]
+
+[[stations]]
+name = "Calm Radio - Violin"
+country_code = "CA"
+stream_url = "http://streams.calmradio.com:4528/stream"
+logo_url = "https://calmradio.com/templates/calmradio/favicons/apple-touch-icon.png"
+tags = ["classical"]
+
+[[stations]]
+name = "A1\u4e2d\u6587\u7535\u53f0"
+country_code = "CA"
+stream_url = "http://s2.voscast.com:9530/"
+logo_url = "https://www.a1chineseradio.ca/images/a1_logo_114x114.png"
+tags = ["news", "talk", "world"]
+
+[[stations]]
+name = "The Lynx Super 70s"
+country_code = "CA"
+stream_url = "http://70s-lynxradio.radioca.st/stream"
+logo_url = "http://cdn-profiles.tunein.com/s49608/images/logoq.jpg"
+tags = ["oldies", "rock", "pop"]
+
+[[stations]]
+name = "CHOI 98.1 \"Radio X\" Quebec City, QC"
+country_code = "CA"
+stream_url = "http://icecast-choi.rncm.ca/choi.mp3"
+logo_url = "https://radiox.com/apple-touch-icon.png"
+tags = ["indie", "alternative"]
+
+[[stations]]
+name = "Slowly Radio"
+country_code = "CA"
+stream_url = "http://stream.slowlyradio.com/"
+logo_url = "https://slowlyradio.com/wp-content/uploads/2023/09/cropped-favicon-slowlyradio-180x180.png"
+tags = ["ambient", "easy listening", "soul"]
+
+[[stations]]
+name = "Radio Classique Quebec"
+country_code = "CA"
+stream_url = "https://www.radioking.com/play/radio-classique-quebec-92-7/301510"
+logo_url = "https://www.radioclassique.ca/upload/5d7f91e07dcae6.18591349.ico"
+tags = ["classical", "world"]
+
+[[stations]]
+name = "DJFM Toronto"
+country_code = "CA"
+stream_url = "http://mux.mtl.djfmradio.com/djfm"
+logo_url = "https://djfm.ca/wp-content/uploads/2016/07/logo.png"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "Dylan Radio Kentville"
+country_code = "CA"
+stream_url = "http://900.cloudrad.io:8138/"
+logo_url = "http://www.dylanradio.com/ico/dylanradio128.png"
+tags = ["folk", "indie"]
+
+[[stations]]
+name = "Eurodance Classic Pure"
+country_code = "CA"
+stream_url = "http://quincy.torontocast.com:2380/stream"
+logo_url = "https://www.radio-eurodance-classic.eu/images/logo_rec_kdj_300.jpg"
+tags = ["dance", "electronic"]
+
+[[stations]]
+name = "BPM Sports 91.9"
+country_code = "CA"
+stream_url = "http://icecast-cklx.rncm.ca/cklx.mp3"
+logo_url = "https://media.bpmsports.ca/2023/08/cropped-android-chrome-512x512-1-180x180.png"
+tags = ["sport"]
+
+[[stations]]
+name = "The Lynx Classic Rock"
+country_code = "CA"
+stream_url = "http://rock-lynxradio.radioca.st/stream"
+logo_url = "https://cdn-profiles.tunein.com/s281642/images/logoq.jpg"
+tags = ["rock"]
+
+[[stations]]
+name = "80s New Wave Radio"
+country_code = "CA"
+stream_url = "https://puma.streemlion.com:2910/stream"
+logo_url = "https://dams.cdn.unippm.com/AlbumImages/370x370/4a0a42ec365e45eab376d200883e7094.jpg"
+tags = ["rock", "indie", "oldies"]
+
+[[stations]]
+name = "CFIQ 640 Global News Radio Toronto"
+country_code = "CA"
+stream_url = "https://corus.leanstream.co/CFIQAM-MP3"
+logo_url = "https://globalnews.ca/wp-content/themes/shaw-globalnews/assets/dist/images/logo-morty.svg"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "Choice Classic Rock"
+country_code = "CA"
+stream_url = "https://streamer.radio.co/s66f2626b4/listen"
+logo_url = "https://www.choiceclassicrock.com/images/favicon.ico"
+tags = ["rock", "oldies"]
+
+[[stations]]
+name = "Addictive 50s Golden Oldies"
+country_code = "CA"
+stream_url = "http://quincy.torontocast.com:2920/stream"
+logo_url = "https://www.radio-addictive-50s.eu/images/logo175.jpg"
+tags = ["oldies"]
+
+[[stations]]
+name = "Austrian Rock Radio"
+country_code = "AT"
+stream_url = "http://live.antenne.at/arr"
+logo_url = "https://austrianrockradio.at/wp-content/uploads/2023/02/liferadio-150x150.png"
+tags = ["rock"]
+
+[[stations]]
+name = "ORF Radio Wien"
+country_code = "AT"
+stream_url = "http://orf-live.ors-shoutcast.at/wie-q1a"
+logo_url = "https://orfodon.org/system/accounts/avatars/111/374/411/749/352/990/original/16c84635847ddad3.png"
+tags = ["public radio", "talk"]
+
+[[stations]]
+name = "KroneHit Digital"
+country_code = "AT"
+stream_url = "http://onair-ha1.krone.at/kronehit1058.mp3"
+logo_url = "http://www.kronehit.at/static/base/img/apple-touch-icon.f5c3420c154b.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "FM4"
+country_code = "AT"
+stream_url = "https://orf-live.ors-shoutcast.at/fm4-q1a"
+logo_url = "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/fm4/images/touch-icon-iphone-retina.png"
+tags = ["alternative", "electronic", "pop", "rock"]
+
+[[stations]]
+name = "KroneHit Radio"
+country_code = "AT"
+stream_url = "http://onair-ha1.krone.at/kronehit64.aac"
+logo_url = "http://www.kronehit.at/static/base/img/apple-touch-icon.f5c3420c154b.png"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "88.6 Hard Rock"
+country_code = "AT"
+stream_url = "http://radio886.at/streams/88.6_Hard_Rock/mp3"
+logo_url = "https://www.radio886.at/img/stream_logos_2024/886_STREAM_ICON_HARDROCK.png"
+tags = ["rock", "metal"]
+
+[[stations]]
+name = "Lounge.FM"
+country_code = "AT"
+stream_url = "https://s35.derstream.net/100austria.mp3"
+logo_url = "https://www.lounge.fm/wp-content/uploads/2014/06/loungefm_logo_colour2-300x300.jpg"
+tags = ["ambient", "jazz", "electronic"]
+
+[[stations]]
+name = "ORF Hitradio \u00d63"
+country_code = "AT"
+stream_url = "https://orf-live.ors-shoutcast.at/oe3-q2a"
+logo_url = "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/common/images/apple-icons/oe3.png"
+tags = ["pop"]
+
+[[stations]]
+name = "Antenne Steiermark"
+country_code = "AT"
+stream_url = "http://live.antenne.at/as"
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/6/63/Antenne_Logo.svg"
+tags = ["pop"]
+
+[[stations]]
+name = "Radino - Mein Kinderradio Wien"
+country_code = "AT"
+stream_url = "http://stream01.zogl.net:8906/stream"
+logo_url = "https://www.meinkinderradio.at/wp-content/uploads/2021/07/favicon.png"
+tags = ["comedy", "culture"]
+
+[[stations]]
+name = "CITY23"
+country_code = "AT"
+stream_url = "http://live.radiomax.technology/city23"
+logo_url = "https://www.city23.at/wp-content/themes/city23/medias/app-icons/apple-icon-120x120.png"
+tags = ["pop", "talk"]
+
+[[stations]]
+name = "Radio U1 Tirol"
+country_code = "AT"
+stream_url = "https://live.u1-radio.at/"
+logo_url = "https://u1-radio.at/wp-content/uploads/2022/03/u1_favicon512x512-150x150.png"
+tags = ["pop"]
+
+[[stations]]
+name = "ORF Radio Nieder\u00f6sterreich"
+country_code = "AT"
+stream_url = "http://orf-live.ors-shoutcast.at/noe-q2a"
+logo_url = "https://orfodon.org/system/accounts/avatars/111/374/434/334/698/982/original/aad9486c4d8e92f2.png"
+tags = ["public radio"]
+
+[[stations]]
+name = "\u00d61"
+country_code = "AT"
+stream_url = "http://orf-live.ors-shoutcast.at/oe1-q2a"
+logo_url = "https://oe1.orf.at/static/img/logo_oe1.png"
+tags = ["classical", "culture", "public radio"]
+
+[[stations]]
+name = "Radio Vorarlberg"
+country_code = "AT"
+stream_url = "https://orf-live.ors-shoutcast.at/vbg-q1a"
+logo_url = "https://orfodon.org/system/accounts/avatars/111/374/623/444/743/699/original/3022673107e835ba.png"
+tags = ["public radio"]
+
+[[stations]]
+name = "JazzW3"
+country_code = "AT"
+stream_url = "http://jazz.w3.at:8000/w3jazz.mp3"
+logo_url = "http://jazz.w3.at/logo.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Eurodance X-Press"
+country_code = "AT"
+stream_url = "https://secureonair.krone.at/eurodance.aac"
+logo_url = "https://www.eurodance.at/images/logo.png"
+tags = ["dance", "electronic", "pop", "trance"]
+
+[[stations]]
+name = "ORF Tirol"
+country_code = "AT"
+stream_url = "http://orf-live.ors-shoutcast.at/tir-q2a"
+logo_url = "https://orfodon.org/system/accounts/avatars/111/374/561/229/082/482/original/57acca969ede8452.png"
+tags = ["pop", "folk", "public radio"]
+
+[[stations]]
+name = "Antenne K\u00e4rnten Partyhitmix"
+country_code = "AT"
+stream_url = "http://live.antenne.at/ost"
+logo_url = "https://www.antenne.at/favicon.ico"
+tags = ["pop", "dance"]
+
+[[stations]]
+name = "Energy NRJ Innsbruck"
+country_code = "AT"
+stream_url = "http://stream1.energy.at:8000/ibk"
+logo_url = "https://media.metacast.eu/pictures/10_2015/OdriLYWpbHJqKDAcGCMv-7384.png"
+tags = ["pop", "dance", "electronic"]
+
+[[stations]]
+name = "The Prog Rock Machine"
+country_code = "AU"
+stream_url = "https://theproganrockmachine.out.airtime.pro/theproganrockmachine_b"
+logo_url = "https://progrockmachine.com/favicon.ico"
+tags = ["rock", "progressive"]
+
+[[stations]]
+name = "Fresh 92.7"
+country_code = "AU"
+stream_url = "https://live.fresh927.com.au/freshaac"
+logo_url = "https://fresh927.com.au/graphics/favicon.png"
+tags = ["pop", "community radio"]
+
+[[stations]]
+name = "SBS Chill"
+country_code = "AU"
+stream_url = "http://sbs-ice.streamguys1.com/sbschill"
+logo_url = "https://www.sbs.com.au/_next/static/img/language/app-icon_128x128-18ef105.png"
+tags = ["ambient", "chillout"]
+
+[[stations]]
+name = "Radio Italian Music"
+country_code = "AU"
+stream_url = "https://streaming.radiostreamlive.com/radioitalianmusic_devices"
+logo_url = "https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico"
+tags = ["pop", "world"]
+
+[[stations]]
+name = "Sky News Australia Radio"
+country_code = "AU"
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVA_SKYNEWSAAC.aac"
+logo_url = "https://raw.githubusercontent.com/AusIPTV/IPTVLogos/master/SKY_News_Australia_logo.png"
+tags = ["news", "talk"]
+
+[[stations]]
+name = "LiSTNR - 80s New Wave"
+country_code = "AU"
+stream_url = "https://wz7liw.scahw.com.au/live/780snewwave_128.stream/playlist.m3u8"
+logo_url = "https://play.listnr.com/favicon/apple-touch-icon.png"
+tags = ["pop", "alternative", "oldies"]
+
+[[stations]]
+name = "Free FM Rock Austral"
+country_code = "AU"
+stream_url = "https://freefmrock.radioca.st/"
+logo_url = "https://1.bp.blogspot.com/-zqFqeHIezoQ/XWwTN0Jl0OI/AAAAAAAAAck/JiBc3HIncUIIrenqBm_BaIfLAGLxCQF4ACLcBGAs/s1600/free%2Bfm%2Brock.jpg"
+tags = ["rock", "alternative"]

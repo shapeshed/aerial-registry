@@ -716,3 +716,473 @@ stream_url = "http://smoothjazz.cdnstream1.com/2586_320.mp3"
 name = "SmoothLounge.com (320k MP3)"
 reason = "Generic aggregator with marketing-focused naming; no distinct station identity."
 
+[[rejected]]
+stream_url = "http://streaming-live-app.rtp.pt/liveradio/antena180a/playlist.m3u8"
+name = "Antena 1 (Portugal)"
+reason = "Duplicate of entry 2 with lower vote count; keeping higher-voted version"
+
+[[rejected]]
+stream_url = "http://centova.radio.com.pt:8485/;"
+name = "R\u00e1dio Regional de Arouca"
+reason = "Hyper-local station with minimal audience; too narrow for curated registry"
+
+[[rejected]]
+stream_url = "http://centova.radio.com.pt:9460/;"
+name = "Diana FM"
+reason = "Minimal vote count and generic local station without distinct identity"
+
+[[rejected]]
+stream_url = "http://centova.radio.com.pt:8563/;"
+name = "R\u00e1dio Barcelos"
+reason = "Hyper-local station with minimal audience unfit for national registry"
+
+[[rejected]]
+stream_url = "https://stream-hls.bauermedia.pt/smojazz.aac/playlist.m3u8"
+name = "Smooth Jazz Portugal"
+reason = "Generic themed variant with low vote count; overshadowed by 4Drive Jazz"
+
+[[rejected]]
+stream_url = "https://stream-icy.bauermedia.pt/m80nacional.aac"
+name = "M80 R\u00e1dio \u2013 Portugal"
+reason = "Duplicate variant of M80 brand (entry 12) with significantly lower engagement"
+
+[[rejected]]
+stream_url = "http://djmixes.radioparty.pl:8035/"
+name = "Radioparty.pl Dj Mixes Party"
+reason = "Internet aggregator/mixes platform without distinct station identity"
+
+[[rejected]]
+stream_url = "https://radiostream.pl/tuba10-1.mp3"
+name = "TokFM"
+reason = "Duplicate of #5 TOK FM with lower votes (same stream URL)"
+
+[[rejected]]
+stream_url = "https://n-4-4.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx"
+name = "Antyradio"
+reason = "Duplicate of #2 Antyradio (same station, alternative stream)"
+
+[[rejected]]
+stream_url = "http://house.radioparty.pl:8010/"
+name = "Radioparty.pl House Party"
+reason = "Internet aggregator/mixes platform without distinct station identity"
+
+[[rejected]]
+stream_url = "http://www.emsoft.ct8.pl/inne/time.m3u?id=3990"
+name = "VOX FM"
+reason = "Low vote count (5,015) and unclear identity as distinct station"
+
+[[rejected]]
+stream_url = "http://energy2000.radioparty.pl:8005/"
+name = "Radioparty.pl Energy2000"
+reason = "Internet aggregator/mixes platform without distinct station identity"
+
+[[rejected]]
+stream_url = "http://s0.radiohost.pl:8018/Italo4you"
+name = "Radio Italo4you 64kbps"
+reason = "Low vote count (3,895) with niche specialty focus"
+
+[[rejected]]
+stream_url = "http://s2.radioparty.pl:8025/vocaltrance"
+name = "Radioparty.pl Vocal Trance"
+reason = "Internet aggregator/mixes platform without distinct station identity"
+
+[[rejected]]
+stream_url = "http://s2.radioparty.pl:8040/energy2000"
+name = "Radioparty.pl Energy 2000 AAC+"
+reason = "Internet aggregator/mixes platform without distinct station identity"
+
+[[rejected]]
+stream_url = "https://s2.radioparty.pl:8015/stream?nocache=4171"
+name = "Radio Party - Kana\u0142 G\u0142\u00f3wny"
+reason = "Duplicate/variant of station #3 (Radioparty.pl)"
+
+[[rejected]]
+stream_url = "https://media.wnet.fm/wnet.fm"
+name = "Radio WNET"
+reason = "Duplicate of station #1 (Wnet.fm) with identical stream URL"
+
+[[rejected]]
+stream_url = "https://waw.ic.smcdn.pl/6130-1.mp3"
+name = "ESKA - Gor\u0105ca 20"
+reason = "Likely variant/duplicate of station #7 (Eska Gor\u0105ca 100) from same network"
+
+[[rejected]]
+stream_url = "http://stream3.polskieradio.pl:8960/;"
+name = "Polskie Radio - Chopin (Radio Chopin) (AAC+)"
+reason = "Duplicate of entry 14; keeping higher-voted original instead."
+
+[[rejected]]
+stream_url = "http://waw.ic.smcdn.pl/2380-1.mp3"
+name = "Radio Eska Warszawa"
+reason = "Duplicate of entry 7; keeping higher-voted version instead."
+
+[[rejected]]
+stream_url = "https://radiostream.pl/tuba8904-1.mp3"
+name = "Zloteprzeboje"
+reason = "Unclear station identity; appears to be a generic stream without established branding or context"
+
+[[rejected]]
+stream_url = "https://radiostream.pl/tuba140-1.mp3"
+name = "Radio Pogoda"
+reason = "Insufficient information about station identity; generic name without clear positioning"
+
+[[rejected]]
+stream_url = "https://bcast.vigormultimedia.com:48888/sjcompl192aac"
+name = "SmoothJazz.com.pl 192k aac+"
+reason = "Spammy naming convention ('BEST SMOOTH JAZZ' style); appears to be branded content rather than independent station"
+
+[[rejected]]
+stream_url = "https://s1.slotex.pl/shoutcast/7432/stream"
+name = "DISCOPARTY.PL - Kana\u0142 disco"
+reason = "Duplicate/variant of index 3; same parent brand with lower engagement"
+
+[[rejected]]
+stream_url = "http://mp3.polskieradio.pl:8904/;.mp3"
+name = "PR TR\u00d3JKA "
+reason = "Duplicate of index 5; same station on alternate stream URL with lower votes"
+
+[[rejected]]
+stream_url = "http://stream3.polskieradio.pl:8080/"
+name = "MojePolskieRadio - PolskieRadio24"
+reason = "Aggregator/rebranding of public radio content; lacks independent station identity"
+
+[[rejected]]
+stream_url = "http://ice10.fluidstream.net/anni60tn.aac"
+name = "Radio Italia Anni 60 - Trentino Alto Adige"
+reason = "Regional variant of national station with low vote count; narrow geographic/temporal niche"
+
+[[rejected]]
+stream_url = "http://ice10.fluidstream.net/rn1_2.mp3"
+name = "One Dance"
+reason = "Generic name with no station identity, appears to be aggregator playlist rather than real station"
+
+[[rejected]]
+stream_url = "http://wma01.fluidstream.net/sorriso"
+name = "Radio Sorrriso"
+reason = "Low vote count with generic folk/pop positioning; limited audience relative to peers"
+
+[[rejected]]
+stream_url = "http://icy.unitedradio.it/VirginRogerWaters.mp3"
+name = "VirginRadio - Pink Floyd"
+reason = "Appears to be themed stream (Pink Floyd/Roger Waters) rather than standalone station."
+
+[[rejected]]
+stream_url = "https://sr15.inmystream.it/stream/lattemiele"
+name = "LatteMiele"
+reason = "Duplicate of station #1 (Lattemiele) with lower votes."
+
+[[rejected]]
+stream_url = "https://radiorossini.stream.laut.fm/radiorossini"
+name = "RADIO ITALIANA"
+reason = "Generic name lacks distinctive identity; appears to be aggregator without clear format."
+
+[[rejected]]
+stream_url = "https://sphera.fluidstream.eu/company.aac"
+name = "Radio Company"
+reason = "Generic name and unclear format; insufficient identity or differentiation."
+
+[[rejected]]
+stream_url = "http://ice10.fluidstream.net/fluid_wow.aac"
+name = "Radio Wow!"
+reason = "Generic name with no clear format identity or meaningful differentiation."
+
+[[rejected]]
+stream_url = "http://icy.unitedradio.it/Zucchero.mp3"
+name = "MUSIC STAR Zucchero"
+reason = "Spammy marketing-style name format; appears to be generic music channel rather than established station"
+
+[[rejected]]
+stream_url = "https://dancewave.online/dance.ogg"
+name = "Dance Wave!"
+reason = "Duplicate of station 1 (same station, alternative codec)"
+
+[[rejected]]
+stream_url = "https://oxygenmusic.hu:8443/oxygenoldies"
+name = "Oxygen Oldies"
+reason = "Duplicate of Oxygen brand already represented; marginal vote count relative to other Oxygen entries"
+
+[[rejected]]
+stream_url = "https://oxygenmusic.hu:8443/oxygenthe90shits"
+name = "Oxygen The 90s Hits"
+reason = "Duplicate Oxygen themed station; multiple Oxygen entries dilute the registry"
+
+[[rejected]]
+stream_url = "https://retro.dancewave.online/retrodance.aac"
+name = "Dance Wave Retro!"
+reason = "Duplicate of station 2 (same station, alternative codec)"
+
+[[rejected]]
+stream_url = "https://mediagw.e-tiger.net/stream/zc11"
+name = "COOLFM Best Hits EVER"
+reason = "Spammy name format ('BEST HITS EVER') with generic branding; likely aggregator."
+
+[[rejected]]
+stream_url = "https://icast.connectmedia.hu/5202/live.mp3"
+name = "Radio1"
+reason = "Duplicate of station #2 'R\u00e1di\u00f3 1' from same aggregator; no differentiation."
+
+[[rejected]]
+stream_url = "https://c5.hostingcentar.com/streams/topradio/"
+name = "Top Radio"
+reason = "Generic name lacking distinct station identity; potential aggregator."
+
+[[rejected]]
+stream_url = "https://audio.social3.hr/listen/bravo_kids/stream?3367"
+name = "bravo! kids"
+reason = "Niche children's programming lacking sufficient voting support and metadata."
+
+[[rejected]]
+stream_url = "https://c8.hostingcentar.com/streams/radiotvornica?type=http&nocache=50001"
+name = "Radio Tvornica"
+reason = "Generic name with minimal information and insufficient vote count."
+
+[[rejected]]
+stream_url = "http://c5.hostingcentar.com:8390/stream?4606"
+name = "Happy FM Party"
+reason = "Generic descriptive name lacking real station identity; low vote count."
+
+[[rejected]]
+stream_url = "http://c5.hostingcentar.com:8059/stream?4960"
+name = "bravo!"
+reason = "Overly generic name; likely duplicate or sub-brand of Bravo network with minimal votes."
+
+[[rejected]]
+stream_url = "http://radio-stream.cmc.com.hr:8050/autodj"
+name = "CMC Tambure"
+reason = "Insufficient metadata and very low vote count with unclear station identity."
+
+[[rejected]]
+stream_url = "http://cast.magicstreams.gr:9125/stream"
+name = "Psyndora Chillout"
+reason = "Duplicate of station 8 (Psyndora) under different name with conflicting tags"
+
+[[rejected]]
+stream_url = "http://sportfm.live24.gr/sportfm7712?344b685e2518b0370f0d731432f51438"
+name = "Sport FM 94.6"
+reason = "Duplicate of station 4 (Sport FM 94.6) with identical content"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fFlamenco.mp3"
+name = "Radio Art - Flamenco"
+reason = "Radio Art curated channel overlaps significantly with existing genre streams; redundant."
+
+[[rejected]]
+stream_url = "http://air-tunein.radioart.com/fSleep.mp3"
+name = "Radio Art - Sleep"
+reason = "Redundant Radio Art ambient/sleep stream; overlaps with index 1 and 19."
+
+[[rejected]]
+stream_url = "http://air-tunein.radioart.com/fFolk_and_soft_rock.mp3"
+name = "Radio Art - Folk and Soft Rock"
+reason = "Radio Art curated channel with marginal vote count and limited genre appeal."
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fJazz_for_sleep.mp3"
+name = "Radio Art - Jazz for Sleep"
+reason = "Redundant Radio Art sleep/jazz stream; overlaps with index 1 and 18."
+
+[[rejected]]
+stream_url = "http://air-tunein.radioart.com/fYoga.mp3"
+name = "Radio Art - Yoga"
+reason = "Radio Art curated ambient channel with marginal vote count."
+
+[[rejected]]
+stream_url = "http://live.radioart.com/fClassical_for_sleep.mp3"
+name = "Radio Art - Classical for sleep"
+reason = "Part of generic 'Radio Art' stream collection with no distinct station identity"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fMeditation.mp3"
+name = "Radio Art - Meditation(2)"
+reason = "Generic Radio Art programming stream without distinct station identity"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fAmbient_piano.mp3"
+name = "Radio Art - Ambient Piano"
+reason = "Generic Radio Art programming stream without station identity"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fVocal_chillout.mp3"
+name = "Radio Art - Vocal Chillout"
+reason = "Generic Radio Art programming stream without distinct station identity"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fMantras.mp3"
+name = "Radio Art - Mantras"
+reason = "Generic Radio Art programming stream without distinct station identity"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fNature.mp3"
+name = "Radio Art - Nature"
+reason = "Generic Radio Art programming stream without distinct station identity"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fVivaldi.mp3"
+name = "Radio Art - Antonio Vivaldi"
+reason = "Generic Radio Art programming stream without distinct station identity"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fNew_age.mp3"
+name = "Radio Art - New Age"
+reason = "Excessive duplication of Radio Art themed streams reduces overall value"
+
+[[rejected]]
+stream_url = "http://air.radioart.com/fVocal_new_age.mp3"
+name = "Radio Art - Vocal New Age"
+reason = "Too much overlap with existing Radio Art portfolio; dilutes registry quality"
+
+[[rejected]]
+stream_url = "https://netradio.live24.gr/menta88ath?1699021717"
+name = "MENTA 88"
+reason = "No genre tags provided; lacks clear station identity"
+
+[[rejected]]
+stream_url = "http://air-tunein.radioart.com/fBig_bands.mp3"
+name = "Radio Art - Big Bands"
+reason = "Part of over-represented Radio Art network; too many similar themed stations already included"
+
+[[rejected]]
+stream_url = "http://stream.anr.dk/anr"
+name = "ANR"
+reason = "Insufficient identifying information; unclear station identity and purpose."
+
+[[rejected]]
+stream_url = "http://vibration.stream2net.eu:8220/;stream/1"
+name = "Vibration Zen Relax"
+reason = "Generic ambient aggregator with no real station identity or branding."
+
+[[rejected]]
+stream_url = "http://strm112.1.fm/latino_mobile_mp3"
+name = "1.FM - Absolute Pop Latino Radio"
+reason = "Generic 1.FM aggregator station with minimal identity."
+
+[[rejected]]
+stream_url = "http://strm112.1.fm/baroque_mobile_aac"
+name = "1.fm Otto's Baroque music"
+reason = "Generic 1.FM aggregator station without independent identity."
+
+[[rejected]]
+stream_url = "http://vibration.stream2net.eu:8350/;stream/1"
+name = "Vibration Soft Hits"
+reason = "Generic aggregator with no real station identity."
+
+[[rejected]]
+stream_url = "http://strm112.1.fm/crock_mobile_mp3"
+name = "1.FM - Classic Rock Replay Radio"
+reason = "Generic 1.FM aggregator station without independent identity."
+
+[[rejected]]
+stream_url = "http://de1.streamhosting.ch/"
+name = "Lounge Radio"
+reason = "Generic station with no identity, branding, or genre definition."
+
+[[rejected]]
+stream_url = "https://cast1.torontocast.com:4610/stream"
+name = " # RdMix Classic Rock 70s 80s 90s"
+reason = "Spammy name with excessive hashtag and messy tag list; lacks real station identity."
+
+[[rejected]]
+stream_url = "https://cast1.torontocast.com:4660/stream"
+name = "# 100 GREATEST HEAVY METAL"
+reason = "Spammy chart-style name; appears to be a curated playlist aggregator rather than a real station."
+
+[[rejected]]
+stream_url = "https://cast1.torontocast.com:4560/stream"
+name = " # RdMix DJSET 70s 80s 90s"
+reason = "Spammy name with excessive hashtag and bloated tag list; lacks station identity."
+
+[[rejected]]
+stream_url = "https://cast1.torontocast.com:2130/stream"
+name = " # RdMix Italo Disco 80s"
+reason = "Spammy name with hashtag; appears to be a playlist aggregator rather than a real station."
+
+[[rejected]]
+stream_url = "https://cast1.torontocast.com:4640/stream"
+name = "# 100 GREATEST JAZZ LOUNGE BAR"
+reason = "Spammy chart-style name; appears to be a curated playlist aggregator."
+
+[[rejected]]
+stream_url = "http://streams.calmradio.com:8328/stream"
+name = "Calm Radio - Johann Strauss II"
+reason = "Channel within Calm Radio aggregator platform with no independent station identity"
+
+[[rejected]]
+stream_url = "http://streams.calmradio.com:2728/"
+name = "Guitar Calm Radio"
+reason = "Channel within Calm Radio aggregator platform with no independent station identity"
+
+[[rejected]]
+stream_url = "https://az1.mediacp.eu/listen/100greatestclassicalmusic/radio.mp3"
+name = "# 100 GREATEST CLASSICAL MUSIC"
+reason = "Spammy aggregator playlist name with no real station identity"
+
+[[rejected]]
+stream_url = "http://streams.calmradio.com:8928/stream"
+name = "Calm Radio - Vivaldi"
+reason = "Channel within Calm Radio aggregator platform with no independent station identity"
+
+[[rejected]]
+stream_url = "http://streams.calmradio.com:4828/;"
+name = "Calm Radio - Flute"
+reason = "Channel within Calm Radio aggregator platform with no independent station identity"
+
+[[rejected]]
+stream_url = "https://mpc1.mediacp.eu:8356/stream"
+name = "100% ACID JAZZ"
+reason = "All-caps spammy playlist format with no real station branding or identity"
+
+[[rejected]]
+stream_url = "https://cast1.torontocast.com:4490/;?type=http&nocache=1745925758"
+name = "SMOOTH JAZZ DELUXE"
+reason = "All-caps spammy playlist format with no real station branding or identity"
+
+[[rejected]]
+stream_url = "http://streams.calmradio.com:7528/stream"
+name = "Calm Radio - Chamber Music"
+reason = "Channel within Calm Radio aggregator platform with no independent station identity"
+
+[[rejected]]
+stream_url = "http://streams.calmradio.com:16128/stream/1/"
+name = "Early 60's - Calm Radio"
+reason = "Channel within Calm Radio aggregator platform with no independent station identity"
+
+[[rejected]]
+stream_url = "http://streams.calmradio.com:4628/stream"
+name = "Calm Radio - Cello"
+reason = "Channel within Calm Radio aggregator platform with no independent station identity"
+
+[[rejected]]
+stream_url = "https://cast1.torontocast.com:4450/;?type=http&nocache=1745625391"
+name = "A MISSISSIPPI BLUES"
+reason = "Spammy naming convention (all-caps with 'A' prefix) and geographically misleading\u2014claims Mississippi/delta blues identity but hosted on Canadian server with no clear station identity or branding."
+
+[[rejected]]
+stream_url = "http://orf-live.ors-shoutcast.at/wie-q1a"
+name = "ORF Slovenski spored"
+reason = "Slovenian-language programming, geographically misleading for Austria listing."
+
+[[rejected]]
+stream_url = "https://orf-live.ors-shoutcast.at/fm4-q2a"
+name = "FM4 | ORF | HQ"
+reason = "Duplicate of station #4 (same station, higher bitrate stream)."
+
+[[rejected]]
+stream_url = "http://radio886.at/streams/radio_88.6/mp3"
+name = "radio 88.6"
+reason = "Duplicate of station #7 (same 88.6 station, main stream)."
+
+[[rejected]]
+stream_url = "http://radio886.at/streams/88.6_Classic_Rock/mp3"
+name = "88.6 Classic Rock"
+reason = "Duplicate of 88.6 station (variant stream from same operator)."
+
+[[rejected]]
+stream_url = "http://live.antenne.at/ak"
+name = "Antenne K\u00e4rnten"
+reason = "Duplicate of station 4 with identical URL and vote count; variant stream without clear differentiation"
+
+[[rejected]]
+stream_url = "https://s4.myradiostream.com:7344/listen.mp3?"
+name = "80s 90s Super Pop Hits"
+reason = "Generic aggregator with no real station identity or branding."
+
