@@ -21,10 +21,14 @@ import tomllib
 from pathlib import Path
 from urllib.parse import urlparse
 
+import gzip
+import io
+
 import anthropic
 import requests
 
 RADIO_BROWSER_API = "https://de1.api.radio-browser.info/json/stations/search"
+REGISTRY_URL = "https://aerial.shapeshed.com/registry.json.gz"
 STATIONS_TOML = Path(__file__).parent.parent / "stations.toml"
 
 # Stream domains already covered by broadcaster providers — skip these.
@@ -81,12 +85,42 @@ def is_raw_ip(url: str) -> bool:
 
 
 def load_existing() -> tuple[set[str], set[str]]:
-    if not STATIONS_TOML.exists():
-        return set(), set()
-    with open(STATIONS_TOML, "rb") as f:
-        data = tomllib.load(f)
-    urls = {normalise_url(s["stream_url"]) for s in data.get("stations", [])}
-    names = {s["name"].lower() for s in data.get("stations", [])}
+    """
+    Return (normalised_stream_urls, lower_names) from two sources:
+    1. stations.toml — hand-curated entries in this repo
+    2. Live registry at REGISTRY_URL — the compiled output of all providers
+
+    The registry is canonical. If a station is already in it under any name
+    or URL, we skip it — we don't want to add Radio Browser's alternative
+    stream URL for a station the broadcaster providers already cover.
+    """
+    urls: set[str] = set()
+    names: set[str] = set()
+
+    # Load stations.toml
+    if STATIONS_TOML.exists():
+        with open(STATIONS_TOML, "rb") as f:
+            data = tomllib.load(f)
+        for s in data.get("stations", []):
+            urls.add(normalise_url(s["stream_url"]))
+            names.add(s["name"].lower())
+
+    # Load live registry
+    try:
+        resp = requests.get(REGISTRY_URL, timeout=15)
+        resp.raise_for_status()
+        raw = gzip.decompress(resp.content)
+        registry = json.loads(raw)
+        stations = registry if isinstance(registry, list) else registry.get("stations", [])
+        for s in stations:
+            if s.get("stream_url"):
+                urls.add(normalise_url(s["stream_url"]))
+            if s.get("name"):
+                names.add(s["name"].lower())
+        print(f"  Loaded {len(stations)} stations from live registry", file=sys.stderr)
+    except Exception as e:
+        print(f"  Warning: could not load live registry ({e}) — deduping against stations.toml only", file=sys.stderr)
+
     return urls, names
 
 
