@@ -1,0 +1,433 @@
+# Stations rejected by Claude — skipped on future discovery runs
+# To reconsider a station, remove its entry here
+
+[[rejected]]
+stream_url = "https://loveradio.streamingmedia.it/england"
+name = "LOVE.radio Only Love Songs 70s80s90s"
+reason = "Spammy name format with repetitive marketing language (Only Love Songs repeated themes)."
+
+[[rejected]]
+stream_url = "http://listen-gbnews.sharp-stream.com/gbnews.mp3"
+name = "GBNews"
+reason = "Duplicate entry with index 10; keeping higher vote count variant only."
+
+[[rejected]]
+stream_url = "https://listen-msmn.sharp-stream.com/nme2high.mp3"
+name = "TMM 2 (HQ)"
+reason = "Duplicate of index 3 (TMM 2) - same station at higher bitrate variant."
+
+[[rejected]]
+stream_url = "http://mscp3.live-streams.nl:8360/flac.flac"
+name = "Naim Radio [lossless flac]"
+reason = "Generic aggregator with no format identity; unclear programming."
+
+[[rejected]]
+stream_url = "https://bsj.lucasmultimedia.com:8002/stream.ogg"
+name = "BSJ.FM Best Smooth Jazz"
+reason = "Spammy name format ('BEST SMOOTH JAZZ') without distinct station identity."
+
+[[rejected]]
+stream_url = "https://tunein.cdnstream1.com/3688_96.mp3?aw_0_1st.skey=1718490659&aw_0_1st.abtest=&aw_0_1st.stationId=s2583&aw_0_1st.premium=false&source=TuneIn&aw_0_1st.platform=tunein&aw_0_1st.genre_id=g255&aw_0_1st.class=talk&aw_0_1st.ads_partner_alias=ce.Other&aw_0_azn.planguage=en"
+name = "sky news UK"
+reason = "Duplicate of well-known branded global news station (Sky News)."
+
+[[rejected]]
+stream_url = "http://fr2.1mix.co.uk:9000/320b"
+name = "1Mix Radio - Trance (UK) 320kb mp3"
+reason = "Duplicate of 1Mix Radio trance stream; essentially same station with different bitrate variant."
+
+[[rejected]]
+stream_url = "http://mscp3.live-streams.nl:8360/high.aac"
+name = "Naim Radio [320k aac]"
+reason = "Generic aggregator duplicate; no distinct station identity or format."
+
+[[rejected]]
+stream_url = "http://fr2.1mix.co.uk:9000/320"
+name = "1Mix Radio - Trance #1 (UK) 320kb mp3"
+reason = "Duplicate of 1Mix Radio trance; separate stream variant of same station."
+
+[[rejected]]
+stream_url = "https://cast2.asurahosting.com/proxy/britcom1/stream"
+name = "BritCom 1 - British Comedy Radio  (Pumpkin FM OTRN)"
+reason = "Duplicate of BritCom comedy station; same network, redundant addition."
+
+[[rejected]]
+stream_url = "https://cast2.asurahosting.com/proxy/britcom3/stream"
+name = "BritCom 3 - Pumpkin FM"
+reason = "Duplicate of station 9 (same URL and content, different naming)"
+
+[[rejected]]
+stream_url = "https://mscp3.live-streams.nl:8342/jazz-flac.flac"
+name = "Naim Jazz [flac]"
+reason = "Duplicate of station 5 with identical URL; keeping higher-voted version."
+
+[[rejected]]
+stream_url = "https://dancestream.danceradiouk.com/stream/1/"
+name = "DanceRadioUK - Dance UK"
+reason = "Generic branding with minimal tags; lacks distinctive identity or content focus."
+
+[[rejected]]
+stream_url = "http://mp3channels.webradio.rockantenne.de/rockantenne"
+name = "Rock Antenne"
+reason = "Duplicate of Rock Antenne branded station; main feed already included as channel variant."
+
+[[rejected]]
+stream_url = "http://mp3channels.webradio.antenne.de/chillout"
+name = "Antenne Bayern - Chillout"
+reason = "Channel variant of Antenne Bayern; main station already included."
+
+[[rejected]]
+stream_url = "http://mp3channels.webradio.rockantenne.de/classic-perlen"
+name = "ROCK ANTENNE Classic Perlen"
+reason = "Channel variant of Rock Antenne; main station already included."
+
+[[rejected]]
+stream_url = "https://0n-80s.radionetz.de/0n-80s.mp3"
+name = "- 0 N - 80s on Radio"
+reason = "Lower vote count and similar era-based format already covered by 0N stations."
+
+[[rejected]]
+stream_url = "http://mp3channels.webradio.antenne.de/classic-rock-live"
+name = "Antenne Bayern - Classic Rock Live (MP3)"
+reason = "Channel variant of Antenne Bayern; main station already included."
+
+[[rejected]]
+stream_url = "https://trance-high.rautemusik.fm/?ref=radiobrowser"
+name = "__TRANCE__ by rautemusik (rm.fm)"
+reason = "Spammy naming format with excessive genre tags; rebranded aggregator content."
+
+[[rejected]]
+stream_url = "https://breakz-2012-high.rautemusik.fm/?ref=radiobrowser-top100-clubcharts"
+name = "# TOP 100 CLUB CHARTS - DANCE & DJ MIX RADIO - 24 HOURS NON-STOP MUSIC @ TikTok Hits, Ibiza House, Sunset Lounge, Melodic Music, EDM, Deep House, Dance Music, Techno & Hypertechno, Rave Charts, Top 40 Charts, Latin, Reggaeton Music, Moombahton, Urban Hits, HipHop, Party & Clubbing Radio, Trending Chartmusic, R&B, Urban, Mixtape - & LIVE DJ SET "
+reason = "Spammy aggregator name with excessive hashtags, multiple genres, and no real station identity."
+
+[[rejected]]
+stream_url = "https://breakz-high.rautemusik.fm/?ref=radiobrowser-top100-djcharts"
+name = "# TOP 100 DJ CHARTS - DJ REMIX & CHARTS RADIO @ TikTok Charts, Electronic Music, EDM, House, Deep House, Dance Music, Techno & Hypertechno, Top40, Latin Charts, Reggaeton, Urban, HipHop, Club & Party Radio - & LIVE DJ SETS "
+reason = "Spammy aggregator name with excessive keyword stuffing and no real station identity."
+
+[[rejected]]
+stream_url = "https://ffn-stream19.radiohost.de/radiobollerwagen_mp3-192?ref=radioplayer&listenerid=31363233323633323031-323030333a64653a343731363a3730313a623731343a346664383a313761363a39386165-3537373636-4d6f7a696c6c612f352e3020285831313b205562"
+name = "Radio Bollerwagen"
+reason = "No identifiable genre tags or programming information; appears to be generic aggregator."
+
+[[rejected]]
+stream_url = "http://streamhq.top100station.com/top100station-high.mp3"
+name = "Top 100 Station"
+reason = "Generic aggregator name with no real station identity; 'Top 100 Station' is junk naming."
+
+[[rejected]]
+stream_url = "https://stream.0nlineradio.com/remix?ref=radiobrowser"
+name = "0nlineradio REMIX"
+reason = "Generic remix aggregator with no real station identity; 'REMIX' is junk branding."
+
+[[rejected]]
+stream_url = "http://www.ilovemusic.de/iloveusonlyrapradio.m3u"
+name = "i love radio - US Only Rap&HipHop Radio"
+reason = "Geographically misleading: 'US Only' station listed for Germany; poor branding identity."
+
+[[rejected]]
+stream_url = "https://breakz-high.rautemusik.fm/?ref=radiobrowser-deejay-remixes-radio"
+name = "_DEEJAY REMIXE_ Your Radio for finest House, EDM, Electro, Dance, Mashup, Hypertechno, Techno, Bootleg, Charts, Top40, Chillout, Lounge, HipHop, Urban & Latin Party DJ Remixes!"
+reason = "Spammy name with excessive generic descriptor; appears to be aggregator station"
+
+[[rejected]]
+stream_url = "http://mp3channels.webradio.antenne.de/workout-hits"
+name = "Antenne Bayern - Workout hits"
+reason = "Niche variant channel; duplicates broader Antenne Bayern identity"
+
+[[rejected]]
+stream_url = "http://streams.ffh.de/ffhchannels/mp3/hqworkout.mp3"
+name = "FFH Workout"
+reason = "Too niche, single-purpose workout channel with limited identity"
+
+[[rejected]]
+stream_url = "https://breakz-2012-high.rautemusik.fm/?ref=radiobrowser-akthits"
+name = "# Aktuelle HITS - 24H NON-STOP MUSIC - DANCE & DJ MIX RADIO @ TikTok Hits, Ibiza House, Sunset Lounge, Melodic Music, EDM, Deep House, Dance Music, Techno & Hypertechno, Rave Charts, Top 40 Charts, Latin, Reggaeton Music, Moombahton, Urban Hits, HipHop, Party & Clubbing Radio, Trending Chartmusic, R&B, Urban, Mixtape - & LIVE DJ SET"
+reason = "Spammy aggregator playlist masquerading as station with keyword-stuffed metadata"
+
+[[rejected]]
+stream_url = "https://stream.epic-lounge.com/sleep-meditation?ref=radiobrowser"
+name = "Epic Lounge - SLEEP & MEDITATION"
+reason = "Duplicate of Epic Classical with overlapping content and aggregator characteristics"
+
+[[rejected]]
+stream_url = "http://1000christmashits.stream.laut.fm/1000christmashits"
+name = "1000 Christmashits"
+reason = "Seasonal/novelty station with limited year-round relevance."
+
+[[rejected]]
+stream_url = "https://0n-greatesthits.radionetz.de/0n-greatesthits.mp3"
+name = "- 0 N - Greatest Hits on Radio"
+reason = "Spammy station name format ('- 0 N -') suggests aggregator with no clear identity."
+
+[[rejected]]
+stream_url = "https://club-high.rautemusik.fm/?ref=radiobrowser"
+name = "__CLUB__ by rautemusik (rm.fm)"
+reason = "Spammy station name format ('__CLUB__ by rautemusik') indicates generic aggregator rather than branded station."
+
+[[rejected]]
+stream_url = "https://0n-classicrock.radionetz.de/0n-classicrock.aac"
+name = "- 0 N - Classic Rock on Radio"
+reason = "Spammy station name format ('- 0 N -') suggests aggregator with no clear identity."
+
+[[rejected]]
+stream_url = "http://wdr-wdr2-ruhrgebiet.icecast.wdr.de/wdr/wdr2/ruhrgebiet/mp3/128/stream.mp3"
+name = "WDR2 - Ruhrgebiet"
+reason = "Tags appear corrupted/nonsensical ('black' as sole tag); likely data error."
+
+[[rejected]]
+stream_url = "https://sex-high.rautemusik.fm/?ref=radiobrowser"
+name = "__SEX__ by rautemusik (rm.fm)"
+reason = "Spammy station name with adult content branding (__SEX__); inappropriate for curated registry."
+
+[[rejected]]
+stream_url = "https://stream.breakz.fm/?ref=radiobrowser-remix-partybreaks-radio"
+name = "# REMIX & PARTYBREAKS - Your House - EDM - HipHop - RnB - Techno - TechHouse - Top 40 Charts - Latin - DJ Mixtape RADIO"
+reason = "Pure spammy aggregator name with excessive hashtags and no genuine station identity."
+
+[[rejected]]
+stream_url = "https://st01.sslstream.dlf.de/dlf/01/high/aac/stream.aac?aggregator=web"
+name = "Deutschlandfunk | DLF | AAC 192k"
+reason = "Duplicate of station #7 (Deutschlandfunk); retain higher-voted version only."
+
+[[rejected]]
+stream_url = "http://www.radioberlin.de/live.m3u"
+name = "Radio Berlin 88,8"
+reason = "Duplicate/variant of RBB Radio Eins (station #2)."
+
+[[rejected]]
+stream_url = "http://www.radioeins.de/livemp3"
+name = "RadioEins [High Quality]"
+reason = "Duplicate of station #2 (RBB Radio Eins, same URL)."
+
+[[rejected]]
+stream_url = "https://90s-high.rautemusik.fm/?ref=radiobrowser"
+name = "__90S__ by rautemusik (rm.fm)"
+reason = "Spammy naming format with rautemusik branding; generic aggregator stream."
+
+[[rejected]]
+stream_url = "http://server23644.streamplus.de/;"
+name = "DWG Radio German"
+reason = "Insufficient identity; unclear station with minimal branding and religious niche focus"
+
+[[rejected]]
+stream_url = "https://deutschrap-charts-high.rautemusik.fm/?ref=radiobrowser"
+name = "__DEUTSCHRAP CHARTS__ by rautemusik (rm.fm)"
+reason = "Spammy chart aggregator naming convention with '__' prefix, not a real station identity"
+
+[[rejected]]
+stream_url = "https://lounge-high.rautemusik.fm/?ref=radiobrowser"
+name = "__LOUNGE__ by rautemusik (rm.fm)"
+reason = "Spammy name format with double underscores; generic rautemusik aggregator stream"
+
+[[rejected]]
+stream_url = "https://schlager-oldies-high.rautemusik.fm/?ref=radiobrowser"
+name = "__SCHLAGER OLDIES__ by rautemusik (rm.fm)"
+reason = "Spammy name format; generic rautemusik aggregator channel"
+
+[[rejected]]
+stream_url = "https://best-of-schlager-high.rautemusik.fm/?ref=radiobrowser"
+name = "__BEST OF SCHLAGER__ by rautemusik (rm.fm)"
+reason = "Spammy name format; generic rautemusik aggregator stream"
+
+[[rejected]]
+stream_url = "https://trap-high.rautemusik.fm/?ref=radiobrowser"
+name = "__TRAP__ by rautemusik (rm.fm)"
+reason = "Spammy name format; generic rautemusik aggregator channel"
+
+[[rejected]]
+stream_url = "http://c2.auracast.net:8097/stream"
+name = "1000 HITS Love"
+reason = "Generic aggregator name with no distinct identity or tags"
+
+[[rejected]]
+stream_url = "http://stream.kissfm.de/kissfm-sextime/mp3-128/internetradio/"
+name = "98.8 Kiss FM Sextime"
+reason = "Duplicate of well-known global Kiss FM branded station"
+
+[[rejected]]
+stream_url = "https://house-high.rautemusik.fm/?ref=radiobrowser"
+name = "__HOUSE__ by rautemusik (rm.fm)"
+reason = "Spammy branded aggregator format with __ markers"
+
+[[rejected]]
+stream_url = "https://bass-high.rautemusik.fm/?ref=radiobrowser"
+name = "__BASS__ by rautemusik (rm.fm)"
+reason = "Spammy branded aggregator format with __ markers"
+
+[[rejected]]
+stream_url = "https://goldies-high.rautemusik.fm/?ref=radiobrowser"
+name = "__GOLDIES__ by rautemusik (rm.fm)"
+reason = "Spammy branded aggregator format with __ markers"
+
+[[rejected]]
+stream_url = "https://stream.technolovers.fm/melodic-house-techno?ref=radiobrowser-2"
+name = "Melodic House & Techno @ Technolovers.FM (Chillout, Beach, Festival, Sundowner, Relax, Ibiza, Sea, Ocean Music, Beachclub, Cocktailbar, 2024, 2025, 2026 Future Rave 126, 128, 124 Beats per Minute , BPM)"
+reason = "Spammy name with excessive keyword stuffing and promotional content; not a real station identity."
+
+[[rejected]]
+stream_url = "https://stream.breakz.fm/?ref=top100radio-browser"
+name = "#TOP 100 - DJ CHARTS & REMIX RADIO @ TikTok PROMO Charts, Electronic Music, EDM, House, Deep House, Dance Music, Techno & Hypertechno, Top40, Latin Charts, Reggaeton, Urban, Moombahton, Reggaeton, HipHop, Funk, Club & Party Radio - & SUMMER TUNES - 2024 / 2025"
+reason = "Spammy aggregator name with excessive hashtags, promotional language, and year padding; no real station identity."
+
+[[rejected]]
+stream_url = "https://breakz-2012-high.rautemusik.fm/?ref=rb-djclubcharts"
+name = " - DJ & CLUB CHARTS ---> Club Classics, Festival-Hits, Remixes, Single Charts, Mashups, DJ Sets, Club Edits, Dancefloor, Underground, Nightlife, Party Anthems, Ibiza, Miami, Clubbing, Festival, Remix, Mashup, DJ, EDM,  RAVE, Dance, Urban, Latin, Beachclub, Lounge"
+reason = "Spammy aggregator with excessive keyword padding and no distinct station identity."
+
+[[rejected]]
+stream_url = "http://mp3channels.webradio.antenne.de/weihnachts-hits"
+name = "Antenne Bayern - Weihnachtshits"
+reason = "Seasonal/temporary station content; not a permanent station identity warranting inclusion."
+
+[[rejected]]
+stream_url = "https://country-high.rautemusik.fm/?ref=radiobrowser"
+name = "__COUNTRYHITS.FM__ by rautemusik (rm.fm)"
+reason = "Spammy rautemusik.fm aggregator name with excessive styling and keyword padding."
+
+[[rejected]]
+stream_url = "http://stream.laut.fm/kinderlieder-123"
+name = "Kinderlieder-123"
+reason = "Children's music niche station; outside scope of mainstream curated radio registry."
+
+[[rejected]]
+stream_url = "https://liveradio.swr.de/sw282p3/swr3/play.mp3"
+name = "SWR 3 (128 kbits mp3)"
+reason = "Duplicate of well-known branded station (SWR 3 already listed as index 20)"
+
+[[rejected]]
+stream_url = "https://partyhits-high.rautemusik.fm/?ref=radio-browser-ph2"
+name = "# PartyHits - Dein Musikmix aus Ballermann, Apres Ski, Wiesn, Karneval, Silvesterparty, TOP 100 Party, Malle, Nonstop, DJ LIVE, Abriss, Feier, Bass, Feiermusik, Partymusik, Apres ski Party, Fussball Hits"
+reason = "Spammy name with excessive keyword stuffing and unclear station identity"
+
+[[rejected]]
+stream_url = "https://breakz-high.rautemusik.fm/stream.mp3?ref=DJCHARTSRB"
+name = "#TOP 200 DJ CHARTS - JUST MUSIC - DJ REMIX & CHARTS RADIO @ TikTok Charts, Electronic Music, EDM, House, Deep House, Dance Music, Techno & Hypertechno, Top40, Latin Charts, Reggaeton, Urban, HipHop, Club & Party Radio - & LIVE DJ SETS @ Festival Melodic House, Melodic Techno. Best 100 Lounge, Mixed Radio Station @ PartyHits / Schlager Remix Top 50"
+reason = "Spammy aggregator name with excessive keyword stuffing, no real station identity"
+
+[[rejected]]
+stream_url = "https://0n-top40.radionetz.de/0n-top40.mp3"
+name = "- 0 N - Top 40 on Radio"
+reason = "Spammy name format with leading symbol and generic aggregator identity"
+
+[[rejected]]
+stream_url = "http://mp3.ffh.de/ffhchannels/hqspezial1.mp3"
+name = "Hit Radio FFH - Weihnachtsradio"
+reason = "Seasonal/temporary channel (Weihnachtsradio) rather than permanent station."
+
+[[rejected]]
+stream_url = "https://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u"
+name = "NDR 2 - Niedersachsen"
+reason = "Duplicate of NDR 2 (same station, different regional URL)."
+
+[[rejected]]
+stream_url = "https://streams.ilovemusic.de/iloveradio3.mp3"
+name = "I love Radio Hip Hop"
+reason = "Spammy name ('I love Radio') with generic branding; part of aggregator network"
+
+[[rejected]]
+stream_url = "https://charthits-high.rautemusik.fm/?ref=radiobrowser"
+name = "__CHARTHITS.FM__ by rautemusik (rm.fm)"
+reason = "Spammy formatting and branding ('__CHARTHITS.FM__ by rautemusik'); generic chart aggregator"
+
+[[rejected]]
+stream_url = "http://radio.nius.de/live?ref=radiobrowser"
+name = "NIUS"
+reason = "Misleading tags mixing news with pop music; unclear station identity"
+
+[[rejected]]
+stream_url = "http://stream04.iloveradio.de/iloveradio9.mp3?hadpreroll"
+name = "i love radio - top 100 charts"
+reason = "Generic chart aggregator with spammy branding; duplicate concept"
+
+[[rejected]]
+stream_url = "http://stream01.iloveradio.de/iloveradio16.mp3"
+name = "i love radio - greatest hits"
+reason = "Generic aggregator with spammy branding; duplicate concept from same network"
+
+[[rejected]]
+stream_url = "https://christmas-high.rautemusik.fm/?ref=radiobrowser"
+name = "__THE CHRISTMAS CHANNEL__ by rautemusik (rm.fm)"
+reason = "Spammy name format with double underscores; seasonal/promotional channel lacks year-round identity."
+
+[[rejected]]
+stream_url = "https://breakz-office.rautemusik.fm/?ref=rb-festival"
+name = "House vs. Hip-Hop, Rap, Deutschrap, R&B, Trap, Techno, House, EDM, Deep House, Hardstyle, Trance, Drum & Bass, Lo-Fi, Chillout, Festival, Club, Party, Afterhour, Beats, Underground, Hype, Techno, TechHouse - Top 40 Charts - DJ Mixtape RADIO"
+reason = "Excessively spammy name with chart/aggregator keywords; lacks genuine station identity."
+
+[[rejected]]
+stream_url = "https://stream.0nlineradio.com/country?ref=radiobrowser"
+name = "0nlineradio COUNTRY"
+reason = "Generic aggregator with spammy naming pattern; lacks station identity."
+
+[[rejected]]
+stream_url = "https://stream.bmr-radio.de/bmr-top30.mp3"
+name = "Ballermann Radio Top 40"
+reason = "Generic Top 40 aggregator without distinctive station identity."
+
+[[rejected]]
+stream_url = "https://oriental-high.rautemusik.fm/?ref=radiobrowser"
+name = "__ORIENTAL__ by rautemusik (rm.fm)"
+reason = "Spammy naming format with decorator symbols; lacks branded identity."
+
+[[rejected]]
+stream_url = "https://stream.epic-classical.com/classical-piano"
+name = "EPIC CLASSICAL - Classical Piano"
+reason = "Generic aggregator branding; too similar to station #5 from same provider."
+
+[[rejected]]
+stream_url = "http://internetradio.salue.de:8000/salue.mp3"
+name = "Radio Sal\u00fc"
+reason = "Insufficient metadata and no tag information to assess station identity"
+
+[[rejected]]
+stream_url = "https://breakz-high.rautemusik.fm/?ref=radiobrowserinfo"
+name = "__BREAKZ.FM__ by rm.fm (rautemusik)"
+reason = "Spammy name format ('__BREAKZ.FM__ by rm.fm') typical of rautemusik aggregator entries; lacks independent station identity."
+
+[[rejected]]
+stream_url = "https://wackenradio-high.rautemusik.fm/?ref=radiobrowser"
+name = "__WACKENRADIO__ by rautemusik (rm.fm)"
+reason = "Spammy rautemusik format ('__WACKENRADIO__ by rautemusik'); aggregator with no independent station identity."
+
+[[rejected]]
+stream_url = "https://happyhardcore-high.rautemusik.fm/?ref=radiobrowser"
+name = "__HAPPY HARDCORE__ by rautemusik (rm.fm)"
+reason = "Spammy rautemusik format ('__HAPPY HARDCORE__ by rautemusik'); aggregator with manufactured identity."
+
+[[rejected]]
+stream_url = "http://www.surfmusik.de/m3u/radio-91-2,9528.m3u"
+name = "Radio 91.2 Dortmund"
+reason = "No tags provided; insufficient information to verify station identity; appears to be local German station without clear curation value."
+
+[[rejected]]
+stream_url = "https://breakz-high.rautemusik.fm/?ref=radiobrowser-mainstage"
+name = "# Mainstage Charts - Your FESTIVAL Radio @ EDM - TECHNO - DJ MIXTAPES - RAVE -  LATIN - REGGAETON - MOOMBAHTON - RnB - DJ Charts - HIPHOP - ELECTRO - DEEP HOUSE -  DANCE - LOUNGE - CHILLOUT - SUMMER - IBIZA HOUSE - WEDDING - BACH - SOULFUL - BEACH - CLUB -  GERMANY DJ RADIO - PARTY - BREAKZ - POOL - POP - URBAN - HOT NEW MUSIC"
+reason = "Extremely spammy name with excessive tags and keywords; pure aggregator lacking real station identity."
+
+[[rejected]]
+stream_url = "https://deutschrap-classic-high.rautemusik.fm/?ref=radiobrowser"
+name = "__DEUTSCHRAP CLASSIC__ by rautemusik (rm.fm)"
+reason = "Spammy name format with excessive styling and branding markers"
+
+[[rejected]]
+stream_url = "http://streamplus52.leonex.de:11216/listen.pls"
+name = "Das Radio der von Neil Young Get\u00f6teten"
+reason = "Spammy/junk name with no clear station identity or branding"
+
+[[rejected]]
+stream_url = "https://stream.epic-classical.com/classical-violin"
+name = "EPIC CLASSICAL - Classical Violin"
+reason = "Duplicate of well-known curated classical station (index 5 already covers Epic Classical)"
+
+[[rejected]]
+stream_url = "https://wdr-diemaus-live.icecastssl.wdr.de/wdr/diemaus/live/mp3/128/stream.mp3"
+name = "Die Maus"
+reason = "Duplicate of public broadcaster's children's content (WDR owned, overlaps with index 9)"
+
+[[rejected]]
+stream_url = "https://stream.technolovers.fm/melodic-house-techno?ref=radiobrowser"
+name = "Melodic House & Techno @ Technolovers.FM (Chillout, Beach, Festival, Sundowner, Relax, Ibiza, Sea, Ocean Music,  126, 128, 124 Beats per Minute , BPM)"
+reason = "Spammy naming with excessive keyword stuffing (multiple descriptors, BPM values, location tags) typical of aggregator junk."
+
