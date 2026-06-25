@@ -26,6 +26,7 @@ import requests
 RADIO_BROWSER_API = "https://de1.api.radio-browser.info/json/stations/search"
 REGISTRY_URL = "https://aerial.shapeshed.com/registry.json.gz"
 STATIONS_TOML = Path(__file__).parent.parent / "stations.toml"
+REJECTED_TOML = Path(__file__).parent.parent / "stations_rejected.toml"
 
 # Stream domains already covered by broadcaster providers — skip these.
 KNOWN_PROVIDER_DOMAINS = {
@@ -82,13 +83,10 @@ def is_raw_ip(url: str) -> bool:
 
 def load_existing() -> tuple[set[str], set[str]]:
     """
-    Return (normalised_stream_urls, lower_names) from two sources:
-    1. stations.toml — hand-curated entries in this repo
-    2. Live registry at REGISTRY_URL — the compiled output of all providers
-
-    The registry is canonical. If a station is already in it under any name
-    or URL, we skip it — we don't want to add Radio Browser's alternative
-    stream URL for a station the broadcaster providers already cover.
+    Return (normalised_stream_urls, lower_names) from three sources:
+    1. stations.toml — approved curated entries
+    2. stations_rejected.toml — previously rejected by Claude (skip forever)
+    3. Live registry — compiled output of all broadcaster providers
     """
     urls: set[str] = set()
     names: set[str] = set()
@@ -100,6 +98,15 @@ def load_existing() -> tuple[set[str], set[str]]:
         for s in data.get("stations", []):
             urls.add(normalise_url(s["stream_url"]))
             names.add(s["name"].lower())
+
+    # Load previously rejected stations
+    if REJECTED_TOML.exists():
+        with open(REJECTED_TOML, "rb") as f:
+            data = tomllib.load(f)
+        rejected = data.get("rejected", [])
+        for s in rejected:
+            urls.add(normalise_url(s["stream_url"]))
+        print(f"  {len(rejected)} previously rejected stations (will skip)", file=sys.stderr)
 
     # Load live registry — requests auto-decompresses Content-Encoding: gzip
     try:
@@ -243,6 +250,7 @@ def main():
     print(f"  {len(existing_urls)} known stream URLs (stations.toml + live registry)", file=sys.stderr)
 
     approved: list[str] = []
+    rejected_entries: list[dict] = []
 
     for country_code in args.countries:
         country_name = COUNTRY_NAMES.get(country_code, country_code)
@@ -295,6 +303,12 @@ def main():
                 station = batch[idx]
                 if not assessment.get("include"):
                     print(f"    SKIP  {station['name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
+                    rejected_entries.append({
+                        "stream_url": station["url"],
+                        "name": station["name"],
+                        "reason": assessment.get("reason", ""),
+                    })
+                    existing_urls.add(normalise_url(station["url"]))
                     batch_skipped += 1
                     continue
 
@@ -314,16 +328,32 @@ def main():
             print(f"  Batch {batch_num} done: {batch_added} added, {batch_skipped} skipped", file=sys.stderr)
 
     print(f"\n{'='*40}", file=sys.stderr)
+
+    # Persist rejections so they are skipped on future runs
+    if rejected_entries:
+        existing_rejected: list[dict] = []
+        if REJECTED_TOML.exists():
+            with open(REJECTED_TOML, "rb") as f:
+                existing_rejected = tomllib.load(f).get("rejected", [])
+        all_rejected = existing_rejected + rejected_entries
+        with open(REJECTED_TOML, "w") as f:
+            f.write("# Stations rejected by Claude — skipped on future discovery runs\n")
+            f.write("# To reconsider a station, remove its entry here\n\n")
+            for r in all_rejected:
+                f.write("[[rejected]]\n")
+                f.write(f"stream_url = {json.dumps(r['stream_url'])}\n")
+                f.write(f"name = {json.dumps(r['name'])}\n")
+                f.write(f"reason = {json.dumps(r['reason'])}\n\n")
+        print(f"Wrote {len(rejected_entries)} new rejections to stations_rejected.toml", file=sys.stderr)
+
     if not approved:
         print("No new stations approved.", file=sys.stderr)
         return
 
     print(f"Total approved: {len(approved)} stations", file=sys.stderr)
-
     block = "\n\n".join(approved) + "\n"
     with open(STATIONS_TOML, "a") as f:
         f.write("\n" + block)
-
     print(f"Appended to stations.toml.", file=sys.stderr)
 
 
