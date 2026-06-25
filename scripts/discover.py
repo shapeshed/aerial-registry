@@ -20,8 +20,6 @@ import tomllib
 from pathlib import Path
 from urllib.parse import urlparse
 
-import gzip
-import io
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import anthropic
@@ -105,12 +103,11 @@ def load_existing() -> tuple[set[str], set[str]]:
             urls.add(normalise_url(s["stream_url"]))
             names.add(s["name"].lower())
 
-    # Load live registry
+    # Load live registry — requests auto-decompresses Content-Encoding: gzip
     try:
         resp = requests.get(REGISTRY_URL, timeout=15)
         resp.raise_for_status()
-        raw = gzip.decompress(resp.content)
-        registry = json.loads(raw)
+        registry = resp.json()
         stations = registry if isinstance(registry, list) else registry.get("stations", [])
         for s in stations:
             if s.get("stream_url"):
