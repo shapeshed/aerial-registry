@@ -197,7 +197,15 @@ Respond with a JSON array only (no markdown), one object per station in order:
         messages=[{"role": "user", "content": prompt}],
     )
 
-    return json.loads(message.content[0].text.strip())
+    text = message.content[0].text.strip()
+    # Strip markdown code fences if present
+    if text.startswith("```"):
+        text = re.sub(r"^```[a-z]*\n?", "", text)
+        text = re.sub(r"\n?```$", "", text)
+        text = text.strip()
+    if not text:
+        raise ValueError("Claude returned empty response")
+    return json.loads(text)
 
 
 def format_toml_entry(
@@ -274,6 +282,8 @@ def main():
                 assessments = assess_with_claude(client, batch)
             except Exception as e:
                 print(f"  Claude error on batch {batch_num}: {e}", file=sys.stderr)
+                if hasattr(e, '__context__') and e.__context__:
+                    print(f"  Caused by: {e.__context__}", file=sys.stderr)
                 continue
 
             batch_added = 0
