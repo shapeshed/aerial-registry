@@ -248,8 +248,10 @@ def main():
     args = parser.parse_args()
 
     client = anthropic.Anthropic()
+
+    print("Loading existing stations...", file=sys.stderr)
     existing_urls, existing_names = load_existing()
-    print(f"Loaded {len(existing_urls)} existing stations", file=sys.stderr)
+    print(f"  {len(existing_urls)} known stream URLs (stations.toml + live registry)", file=sys.stderr)
 
     approved: list[str] = []
 
@@ -257,20 +259,24 @@ def main():
         country_name = COUNTRY_NAMES.get(country_code, country_code)
         print(f"\n=== {country_name} ({country_code}) ===", file=sys.stderr)
 
+        print("  Fetching Radio Browser...", file=sys.stderr)
         candidates = fetch_candidates(country_code, args.min_votes)
-        print(f"  {len(candidates)} candidates after quality filter", file=sys.stderr)
+        print(f"  {len(candidates)} candidates after quality filter (votes >={args.min_votes}, >=64k, not raw IP, not known provider)", file=sys.stderr)
 
         fresh = [
             s for s in candidates
             if normalise_url(s["url"]) not in existing_urls
             and s["name"].lower() not in existing_names
         ]
-        print(f"  {len(fresh)} not already in stations.toml", file=sys.stderr)
+        skipped = len(candidates) - len(fresh)
+        print(f"  {skipped} skipped (already in registry), {len(fresh)} new to assess", file=sys.stderr)
 
         if not fresh:
+            print("  Nothing new — skipping.", file=sys.stderr)
             continue
 
-        # Fetch logos concurrently — 10 workers, 3s timeout each
+        print(f"  Fetching logos for {len(fresh)} stations (10 concurrent, 3s timeout)...", file=sys.stderr)
+
         def _fetch_logo(s: dict) -> tuple[str, str | None]:
             logo = s.get("favicon") or fetch_og_image(s["url"], timeout=3)
             return s["url"], logo
@@ -282,26 +288,36 @@ def main():
                 url, logo = future.result()
                 logo_map[url] = logo
 
+        with_logo = sum(1 for v in logo_map.values() if v)
+        print(f"  Logos found: {with_logo}/{len(fresh)}", file=sys.stderr)
+
         for s in fresh:
             s["_logo"] = logo_map.get(s["url"])
 
+        n_batches = (len(fresh) + args.batch_size - 1) // args.batch_size
+        print(f"  Sending {len(fresh)} stations to Claude in {n_batches} batch(es)...", file=sys.stderr)
+
         for i in range(0, len(fresh), args.batch_size):
             batch = fresh[i:i + args.batch_size]
-            print(f"  Assessing batch {i // args.batch_size + 1} ({len(batch)} stations)...", file=sys.stderr)
+            batch_num = i // args.batch_size + 1
+            print(f"  Batch {batch_num}/{n_batches} ({len(batch)} stations)...", file=sys.stderr)
 
             try:
                 assessments = assess_with_claude(client, batch)
             except Exception as e:
-                print(f"  Claude error: {e}", file=sys.stderr)
+                print(f"  Claude error on batch {batch_num}: {e}", file=sys.stderr)
                 continue
 
+            batch_added = 0
+            batch_skipped = 0
             for assessment in assessments:
                 idx = assessment["index"] - 1
                 if idx >= len(batch):
                     continue
                 station = batch[idx]
                 if not assessment.get("include"):
-                    print(f"  SKIP  {station['name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
+                    print(f"    SKIP  {station['name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
+                    batch_skipped += 1
                     continue
 
                 entry = format_toml_entry(
@@ -312,21 +328,25 @@ def main():
                     tags=assessment.get("tags", []),
                 )
                 approved.append(entry)
-                # Track to avoid intra-run duplicates
                 existing_urls.add(normalise_url(station["url"]))
                 existing_names.add(assessment["cleaned_name"].lower())
-                print(f"  ADD   {assessment['cleaned_name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
+                print(f"    ADD   {assessment['cleaned_name']!r}: {assessment.get('reason', '')}", file=sys.stderr)
+                batch_added += 1
 
+            print(f"  Batch {batch_num} done: {batch_added} added, {batch_skipped} skipped", file=sys.stderr)
+
+    print(f"\n{'='*40}", file=sys.stderr)
     if not approved:
-        print("\nNo new stations approved.", file=sys.stderr)
+        print("No new stations approved.", file=sys.stderr)
         return
 
-    block = "\n\n".join(approved) + "\n"
+    print(f"Total approved: {len(approved)} stations", file=sys.stderr)
 
+    block = "\n\n".join(approved) + "\n"
     with open(STATIONS_TOML, "a") as f:
         f.write("\n" + block)
 
-    print(f"\nAppended {len(approved)} stations to stations.toml", file=sys.stderr)
+    print(f"Appended to stations.toml.", file=sys.stderr)
 
 
 if __name__ == "__main__":
