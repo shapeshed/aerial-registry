@@ -531,3 +531,188 @@ stream_url = "http://generationfm-underground.ice.infomaniak.ch/generationfm-und
 name = "Generations Rap U.S"
 reason = "Geographically misleading\u2014French station branded as US/underground rap service; false regional identity."
 
+[[rejected]]
+stream_url = "https://icecast.walmradio.com:8443/christmas"
+name = "Christmas Vinyl HD"
+reason = "Seasonal specialty station with limited year-round relevance; falls outside core programming."
+
+[[rejected]]
+stream_url = "https://icecast.walmradio.com:8443/walm"
+name = "WALM HD"
+reason = "Duplicate/variant of WALM main stream; keep only the most-voted variant."
+
+[[rejected]]
+stream_url = "https://icecast.walmradio.com:8443/walm2"
+name = "WALM 2 HD"
+reason = "Niche religious/classical variant with lower engagement; overlaps with main station identity."
+
+[[rejected]]
+stream_url = "https://icecast.walmradio.com:8443/jazz_opus"
+name = "Adroit Jazz Underground HD Opus"
+reason = "Duplicate of index 3 with lower votes; keep original higher-engagement version."
+
+[[rejected]]
+stream_url = "https://icecast.walmradio.com:8443/walm2_opus"
+name = "WALM 2 HD Opus"
+reason = "Codec variant duplicate of index 7; exclude."
+
+[[rejected]]
+stream_url = "https://icecast.walmradio.com:8443/christmas_opus"
+name = "Christmas Vinyl HD Opus"
+reason = "Codec variant of seasonal station; exclude."
+
+[[rejected]]
+stream_url = "https://icecast.walmradio.com:8443/classic_opus"
+name = "Classic Vinyl HD Opus"
+reason = "Codec variant duplicate of index 2; keep original."
+
+[[rejected]]
+stream_url = "https://icecast.walmradio.com:8443/classic"
+name = "Classic Vinyl HD"
+reason = "Duplicate of index 2 with lower votes; keep higher-engagement version."
+
+[[rejected]]
+stream_url = "https://streaming.radiostreamlive.com/miamibeachradio_devices"
+name = "Miami Beach Radio"
+reason = "Vague generic branding with minimal station identity and low engagement; lacks clear programming focus."
+
+[[rejected]]
+stream_url = "http://c32.radioboss.fm:8139/stream"
+name = "Nostalgie New York"
+reason = "Spammy name format with excessive generic tags; lacks clear station identity."
+
+[[rejected]]
+stream_url = "http://nap.casthost.net:8626/stream"
+name = "Music Lake - Relaxation Music, Meditation, Focus, Chill, Nature Sounds"
+reason = "Generic ambient/meditation content aggregator without station identity."
+
+[[rejected]]
+stream_url = "https://streaming.radiostreamlive.com/radiocountrylive_devices"
+name = "Radio Country Live New York"
+reason = "Generic branded station name lacking authentic local identity; suspicious RSL branding."
+
+[[rejected]]
+stream_url = "http://nap.casthost.net:8793/stream"
+name = "intra Nature Radio - Meditation, Nature Sounds, Relaxation, Spa and Sleep Music"
+reason = "Generic meditation/ambient content aggregator without real station identity."
+
+[[rejected]]
+stream_url = "https://streaming.radiostreamlive.com/radiolovelive_devices"
+name = "Radio Love Live New York"
+reason = "Generic branded station name lacking authentic local identity; suspicious RSL branding."
+
+[[rejected]]
+stream_url = "http://streaming.live365.com/a99375"
+name = "Narmak"
+reason = "No clear station identity or genre information provided."
+
+[[rejected]]
+stream_url = "https://stream.radioparadise.com/mellow-flac"
+name = "Radio Paradise Mellow Mix FLAC"
+reason = "Duplicate of Radio Paradise main registry entry (index 5); already included in primary mix."
+
+[[rejected]]
+stream_url = "http://stream-mp3.infowars.com/"
+name = "Infowars"
+reason = "Controversial fringe media outlet; not appropriate for curated consumer registry."
+
+[[rejected]]
+stream_url = "https://s2.radio.co/s572ad25f7/listen"
+name = "Red State Talk Radio"
+reason = "Partisan political talk with limited editorial distinction; marginal vote count."
+
+[[rejected]]
+stream_url = "http://stream-uk1.radioparadise.com/aac-64"
+name = "Radio Paradise Main Mix (EU) 64k AAC"
+reason = "Duplicate of Radio Paradise; index 5 already covers main offering."
+
+[[rejected]]
+stream_url = "https://stream.radioparadise.com/world-etc-320"
+name = "Radio Paradise World/Etc Mix 320k AAC"
+reason = "Duplicate of well-known Radio Paradise station (station #3); avoid redundancy."
+
+[[rejected]]
+stream_url = "https://streaming.radiostreamlive.com/radiorockon_devices"
+name = "Radio Rock On"
+reason = "Generic aggregator name with minimal station identity; unclear if real branded station."
+
+[[rejected]]
+stream_url = "https://gmusto.radioca.st/mp3"
+name = "_Radio Energy(USA)"
+reason = "Spammy name format with leading underscore and overstuffed tag list; appears to be aggregator content."
+
+[[rejected]]
+stream_url = "https://stream.frisky.friskyradio.com/mp3_low"
+name = "Frisky Radio"
+reason = "No genre tags provided; insufficient information to assess station identity or content."
+
+[[rejected]]
+stream_url = "http://ais-sa2.cdnstream1.com/2365_128.mp3"
+name = "Boss Country Radio | The Greatest Country Music Legends Of All Time"
+reason = "Spammy descriptive name format ('The Greatest Country Music Legends...'); appears to be marketing copy rather than real station name."
+
+[[rejected]]
+stream_url = "http://lin1.san.fast-serv.com:6048/stream.mp3"
+name = "Liberty News Radio"
+reason = "Minimal station identity, appears to be generic talk aggregator"
+
+[[rejected]]
+stream_url = "http://cbnradio.streamguys1.com/country-christmas-128K?app=cbnplayer"
+name = "CBN Cross Country Christmas"
+reason = "Seasonal/themed variant with lower relevance as permanent registry entry"
+
+[[rejected]]
+stream_url = "http://chillstep.info:1984/listen.mp3"
+name = "Chillstep.info"
+reason = "Generic domain-based aggregator with no established station identity"
+
+[[rejected]]
+stream_url = "https://rocafmadrid.radioca.st/"
+name = "Free FM New York"
+reason = "Geographically misleading\u2014URL points to Madrid, not New York"
+
+[[rejected]]
+stream_url = "http://hestia.cdnstream.com/1543_128?cb=618512.mp3"
+name = "Super Throwback Party Radio"
+reason = "Generic aggregator name with no established station identity"
+
+[[rejected]]
+stream_url = "https://listen.christianrock.net/stream/15/"
+name = "Christian Hard Rock Dot Net"
+reason = "Pure internet niche aggregator with minimal station identity"
+
+[[rejected]]
+stream_url = "https://streaming.live365.com/a57422"
+name = "Smooth Jazz Florida"
+reason = "Geographically misleading name; generic aggregator stream"
+
+[[rejected]]
+stream_url = "https://usa18.fastcast4u.com/proxy/loudcrymedia1?mp=/1"
+name = "Country Gospel Radio"
+reason = "Generic aggregator with no established station identity"
+
+[[rejected]]
+stream_url = "http://stream.radioparadise.com/aac-320"
+name = "Radio Paradise Main Mix 320k AAC"
+reason = "Duplicate of Radio Paradise station already included at higher quality"
+
+[[rejected]]
+stream_url = "http://lullabies.stream.publicradio.org/lullabies.mp3"
+name = "Your Classical - Lullabies"
+reason = "Duplicate of Your Classical service (index 5); same network and overlapping audience"
+
+[[rejected]]
+stream_url = "https://livestreamcdn.net:2000/stream/RadioVisionCristianaRadio/"
+name = "Radio Visi\u00f3n Cristiana Internacional"
+reason = "No programming tags or clear station identity provided"
+
+[[rejected]]
+stream_url = "https://liveaudio.lamusica.com/NY_WSKQ_icy?source=TuneIn&bundle=tunein.com&lat=36.3933&long=-97.9158"
+name = "La Mega 97.9"
+reason = "Spammy URL with tracking parameters and geolocation spoofing; duplicate of Global/Entercom branded station."
+
+[[rejected]]
+stream_url = "http://smoothjazz.cdnstream1.com/2586_320.mp3"
+name = "SmoothLounge.com (320k MP3)"
+reason = "Generic aggregator with marketing-focused naming; no distinct station identity."
+
