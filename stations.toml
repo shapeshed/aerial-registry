@@ -1,0 +1,56 @@
+# Curated independent radio stations
+#
+# Entries here are reviewed before merge — either hand-added or proposed
+# by the discovery agent (scripts/discover.py) via pull request.
+#
+# Required fields: name, country_code, stream_url
+# Optional:        logo_url, tags, description
+
+[[stations]]
+name = "NTS Radio 1"
+country_code = "GB"
+stream_url = "https://stream-relay-geo.ntslive.net/stream"
+logo_url = "https://media.nts.live/misc/nts_logo_1000x1000.png"
+tags = ["indie", "experimental", "electronic"]
+
+[[stations]]
+name = "NTS Radio 2"
+country_code = "GB"
+stream_url = "https://stream-relay-geo.ntslive.net/stream2"
+logo_url = "https://media.nts.live/misc/nts_logo_1000x1000.png"
+tags = ["indie", "experimental", "electronic"]
+
+[[stations]]
+name = "Rinse FM"
+country_code = "GB"
+stream_url = "https://admin.stream.rinse.fm/stream"
+logo_url = "https://rinse.fm/wp-content/uploads/2021/01/rinse_logo_black.png"
+tags = ["electronic", "grime", "bass", "dance"]
+
+[[stations]]
+name = "Worldwide FM"
+country_code = "GB"
+stream_url = "https://worldwidefm.out.airtime.pro/worldwidefm_a"
+logo_url = "https://worldwidefm.net/wp-content/uploads/2023/03/WWFM-Logo-2023.png"
+tags = ["jazz", "soul", "world", "electronic"]
+
+[[stations]]
+name = "Resonance FM"
+country_code = "GB"
+stream_url = "https://stream.resonance.fm:8000/resonance"
+logo_url = "https://www.resonancefm.com/wp-content/uploads/2020/01/resonance-logo.png"
+tags = ["arts", "experimental", "spoken word"]
+
+[[stations]]
+name = "Linn Jazz"
+country_code = "GB"
+stream_url = "https://radio.linn.co.uk:8000/autodj.m3u"
+logo_url = "https://www.linnrecords.com/images/linn-logo.png"
+tags = ["jazz"]
+
+[[stations]]
+name = "Linn Classical"
+country_code = "GB"
+stream_url = "https://radio.linn.co.uk:8004/autodj.m3u"
+logo_url = "https://www.linnrecords.com/images/linn-logo.png"
+tags = ["classical"]

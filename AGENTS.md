@@ -38,18 +38,45 @@ What a provider agent may do:
 
 ## Known Providers
 
-| Slug            | Documentation                     |
-| --------------- | --------------------------------- |
-| `ard`           | `docs/providers/ard.md`           |
-| `bbc`           | `docs/providers/bbc.md`           |
-| `bauer`         | `docs/providers/bauer.md`         |
-| `global`        | `docs/providers/global.md`        |
-| `radio-france`  | `docs/providers/radio-france.md`  |
-| `wireless`      | `docs/providers/wireless.md`      |
-| `radio-browser` | `docs/providers/radio-browser.md` |
+| Slug           | Documentation                    |
+| -------------- | -------------------------------- |
+| `ard`          | `docs/providers/ard.md`          |
+| `bbc`          | `docs/providers/bbc.md`          |
+| `bauer`        | `docs/providers/bauer.md`        |
+| `curated`      | reads `stations.toml` at root    |
+| `global`       | `docs/providers/global.md`       |
+| `radio-france` | `docs/providers/radio-france.md` |
+| `rtve`         | `docs/providers/rtve.md`         |
+| `wireless`     | `docs/providers/wireless.md`     |
 
-Adding a new provider means: writing a `docs/providers/{slug}.md`, implementing
-the provider agent, and registering it in the pipeline.
+Adding a new broadcaster provider means: writing a `docs/providers/{slug}.md`,
+implementing the provider in `src/providers/`, and registering it in the pipeline.
+
+The `curated` provider is different — it reads `stations.toml` at the repo root.
+Independent stations that are not covered by a broadcaster provider go there.
+
+## Station Discovery Workflow
+
+To discover new station candidates and propose additions to `stations.toml`:
+
+```
+pip install requests
+python scripts/discover.py --countries GB DE FR ES --output proposed.toml
+```
+
+This queries Radio Browser, applies mechanical quality filters, and fetches
+logos. It writes every candidate that passed those filters to `proposed.toml`
+with a `# votes=N bitrate=Nk` comment for context.
+
+The reviewing agent then:
+1. Opens `proposed.toml`.
+2. Removes entries with junk/spammy names, pure aggregator stations, or
+   stations geographically misleading for the listed country code.
+3. Cleans station names: proper capitalisation, remove codec suffixes like
+   `[MP3]`, `(128k)`, strip leading/trailing punctuation or symbols.
+4. Appends approved entries to `stations.toml`.
+5. Deletes `proposed.toml`.
+6. Opens a pull request titled `feat: add curated station candidates`.
 
 ## Pipeline Agents
 
