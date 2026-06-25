@@ -431,3 +431,103 @@ stream_url = "https://stream.technolovers.fm/melodic-house-techno?ref=radiobrows
 name = "Melodic House & Techno @ Technolovers.FM (Chillout, Beach, Festival, Sundowner, Relax, Ibiza, Sea, Ocean Music,  126, 128, 124 Beats per Minute , BPM)"
 reason = "Spammy naming with excessive keyword stuffing (multiple descriptors, BPM values, location tags) typical of aggregator junk."
 
+[[rejected]]
+stream_url = "https://christmasfm.cdnstream1.com/2549_64.aac"
+name = "Christmas FM Classical & Carols"
+reason = "Seasonal/limited-appeal station without year-round identity; niche format unsuitable for general registry"
+
+[[rejected]]
+stream_url = "https://gemradionw.radioca.st/;stream.nsv"
+name = "Gem Radio New Wave"
+reason = "Geographically misleading\u2014Gem Radio is UK-based, not appropriate for Irish station registry"
+
+[[rejected]]
+stream_url = "http://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3"
+name = "Jazz Radio Classic Jazz"
+reason = "Duplicate channel variant of Jazz Radio (same parent, overlapping content)"
+
+[[rejected]]
+stream_url = "http://jazz-wr06.ice.infomaniak.ch/jazz-wr06-128.mp3"
+name = "Jazz Radio Funk"
+reason = "Duplicate channel variant of Jazz Radio (same parent station)"
+
+[[rejected]]
+stream_url = "http://stream1.chantefrance.com/cf-80"
+name = "Chante France 80's"
+reason = "Duplicate variant of Chante France (same station, different stream)"
+
+[[rejected]]
+stream_url = "https://eu1.fastcast4u.com/proxy/kpmxz/stream"
+name = "ABC Lounge Jazz"
+reason = "Generic aggregator-style name with no clear station identity or branding."
+
+[[rejected]]
+stream_url = "http://jazzlounge.ice.infomaniak.ch/jazzlounge-high.mp3"
+name = "Jazz Radio Lounge"
+reason = "Generic branded name lacking distinctive station identity; appears to be aggregator content."
+
+[[rejected]]
+stream_url = "http://gene-wr08.ice.infomaniak.ch/gene-wr08.mp3"
+name = "Generations Rap U.S Gold"
+reason = "Spammy name with \"U.S Gold\" branding; appears to be a themed stream rather than a real station."
+
+[[rejected]]
+stream_url = "http://jazzblackmusic.ice.infomaniak.ch/jazzblackmusic-high.mp3"
+name = "Jazz Radio Black Music"
+reason = "Misleading name mixing jazz with 'Black Music' categorization; unclear station identity."
+
+[[rejected]]
+stream_url = "https://vibration.ice.infomaniak.ch/vibration-high.mp3"
+name = "Radio Vibration"
+reason = "Spam-laden name with embedded app IDs and metadata; no clear station identity."
+
+[[rejected]]
+stream_url = "http://start-witfm.ice.infomaniak.ch/start-witfm-high.mp3"
+name = "Wit FM"
+reason = "Duplicate of Wit FM 90's with lower vote count; generic branding lacks distinction."
+
+[[rejected]]
+stream_url = "https://ouifmlesslowsdurock.ice.infomaniak.ch/ouifmslowrock.mp3"
+name = "OUI FM LES SLOWS DU ROCK"
+reason = "Excessive capitalization and descriptive suffix suggest metadata error rather than real station identity."
+
+[[rejected]]
+stream_url = "http://2stream.dyndns.org:8000/cheriefmmq"
+name = "Ch\u00e9rie FM Martinique"
+reason = "Likely duplicate of Ch\u00e9rie FM (major branded station); unclear stream source"
+
+[[rejected]]
+stream_url = "https://allzic52.ice.infomaniak.ch/allzic52.mp3"
+name = "Allzik Disney "
+reason = "Allzic Disney appears to be a curated playlist channel rather than a station with identity"
+
+[[rejected]]
+stream_url = "http://urbanhitreggeaton.ice.infomaniak.ch/urbanhitreggeaton-128.mp3?"
+name = "Urban Hit - Latino"
+reason = "Duplicate concept to Generations Reggaeton; generic branded playlist"
+
+[[rejected]]
+stream_url = "http://jazz-wr03.ice.infomaniak.ch/jazz-wr03-128.mp3"
+name = "Jazz Radio New Orleans"
+reason = "Geographically misleading\u2014this is a French station (ice.infomaniak.ch) not actually in New Orleans; creates false identity."
+
+[[rejected]]
+stream_url = "http://mfmwr-016.ice.infomaniak.ch/mfmwr-016.mp3"
+name = "M Radio 100% Goldman"
+reason = "Spammy format (artist-exclusive playlist station without broader station identity)."
+
+[[rejected]]
+stream_url = "https://blackbox-classic-us.ice.infomaniak.ch/blackbox-classic-us.mp3"
+name = "BlackBox classic US"
+reason = "Vague name without clear station identity; appears to be generic content aggregator."
+
+[[rejected]]
+stream_url = "http://jazz-wr12.ice.infomaniak.ch/jazz-wr12-128.mp3"
+name = "Jazz Radio Soul Food by DJ Philgood"
+reason = "Duplicate variant of Jazz Radio brand with DJ-specific playlist framing; redundant entry."
+
+[[rejected]]
+stream_url = "http://generationfm-underground.ice.infomaniak.ch/generationfm-underground-high.aac"
+name = "Generations Rap U.S"
+reason = "Geographically misleading\u2014French station branded as US/underground rap service; false regional identity."
+
