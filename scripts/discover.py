@@ -151,6 +151,11 @@ def fetch_candidates(country_code: str, min_votes: int) -> list[dict]:
             continue
         if s.get("bitrate", 0) < 64:
             continue
+        if url.endswith(".pls") or url.endswith(".m3u"):
+            continue
+        favicon = s.get("favicon", "").strip()
+        if not favicon.startswith("http"):
+            continue
         domain = urlparse(url).netloc
         if any(kd in domain for kd in KNOWN_PROVIDER_DOMAINS):
             continue
