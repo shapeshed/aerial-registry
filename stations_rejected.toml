@@ -1186,3 +1186,1198 @@ stream_url = "https://s4.myradiostream.com:7344/listen.mp3?"
 name = "80s 90s Super Pop Hits"
 reason = "Generic aggregator with no real station identity or branding."
 
+[[rejected]]
+stream_url = "http://dorognoe.hostingradio.ru:8000/dorognoe"
+name = "\u0434\u043e\u0440\u043e\u0436\u043d\u043e\u0435 \u0440\u0430\u0434\u0438\u043e (Dorognoe Radio)"
+reason = "Duplicate of station 3 with lower votes; same stream URL."
+
+[[rejected]]
+stream_url = "http://ep128server.streamr.ru:8030/ep128"
+name = "\u0415\u0432\u0440\u043e\u043f\u0430 \u043f\u043b\u044e\u0441"
+reason = "Duplicate of station 1 (Europa Plus) with different bitrate; confusing variant."
+
+[[rejected]]
+stream_url = "http://ep256.hostingradio.ru:8052/europaplus256.mp3"
+name = "\t\u0415\u0432\u0440\u043e\u043f\u0430 \u041f\u043b\u044e\u0441"
+reason = "Duplicate of station 1 (Europa Plus); leading whitespace, lower votes, empty tags."
+
+[[rejected]]
+stream_url = "http://stream1.hostingradio.ru:8010/19_mp3_128"
+name = "\u041d\u043e\u0441\u0442\u0430\u043b\u044c\u0433\u0438\u044f - \u0414\u043e\u0440\u043e\u0436\u043d\u043e\u0435 \u0440\u0430\u0434\u0438\u043e"
+reason = "Spammy naming pattern combining two station identities; unclear primary station identity."
+
+[[rejected]]
+stream_url = "https://noasrv.caster.fm:10034/stream"
+name = "\u042d\u0445\u043e"
+reason = "Sparse metadata and low votes; unclear station identity with minimal information."
+
+[[rejected]]
+stream_url = "https://icecast-rian.cdnvideo.ru/voicerus"
+name = "\u0420\u0430\u0434\u0438\u043e Sputnik (\u043d\u043e\u0432\u043e\u0441\u0442\u0438) / Radio Sputnik (news)"
+reason = "State propaganda outlet (Radio Sputnik); excluded per editorial standards for curated quality registry."
+
+[[rejected]]
+stream_url = "https://noasrv.caster.fm:10034/stream"
+name = "\u042d\u0445\u043e online"
+reason = "Duplicate of station 17 (same URL); minimal metadata and very low vote count."
+
+[[rejected]]
+stream_url = "http://jfm1.hostingradio.ru:14536/jvstream.mp3"
+name = "Radio Jazz 89.1 - JAZZ Vocals"
+reason = "Spammy name format with excessive genre descriptors (duplicate of entry 18)."
+
+[[rejected]]
+stream_url = "http://radio.promodj.com/nu-192"
+name = "Promodj Nu"
+reason = "Generic aggregator stream with no distinct identity or genre clarity."
+
+[[rejected]]
+stream_url = "http://fantasyradioru.no-ip.biz:8002/live"
+name = "Radio Fantastika"
+reason = "Unclear station concept ('fantasy' + generic talk) with low credibility indicators."
+
+[[rejected]]
+stream_url = "https://myradio24.org/5129"
+name = "BEST DEEP FM"
+reason = "Spammy generic name with no real station identity"
+
+[[rejected]]
+stream_url = "https://nfw.ria.ru/flv/audio.aspx?ID=68862011&amp;type=mp3"
+name = "Sputnik News Belarussian"
+reason = "Duplicate of Sputnik News (index 3), different language variant of same branded network"
+
+[[rejected]]
+stream_url = "https://maximum-rammstein.hostingradio.ru/rammstein96.aacp"
+name = "Radio Maximum - Rammstein"
+reason = "Single-artist themed stream, lacks independent station identity"
+
+[[rejected]]
+stream_url = "https://bigtunesradio.com:8003/house.mp3?1712236225331"
+name = "BigTunesRadio - House"
+reason = "Generic internet aggregator station without distinct identity"
+
+[[rejected]]
+stream_url = "https://bfm.hostingradio.ru:9075/fm"
+name = "Business FM"
+reason = "Duplicate of BFM.ru (index 4) with identical URL"
+
+[[rejected]]
+stream_url = "https://depechemode.hostingradio.ru/depechemode96.aacp"
+name = "Radio Maximum - Depeche Mode"
+reason = "Single-artist themed stream, lacks independent station identity"
+
+[[rejected]]
+stream_url = "http://radio.promodj.com/fullmoon-192"
+name = "PromoDJ - Trance"
+reason = "Pure internet aggregator with no genuine station identity; 'PromoDJ' is a DJ pool/platform, not a real station"
+
+[[rejected]]
+stream_url = "https://bigtunesradio.com:8003/trance.mp3?1712236520795"
+name = "BigTunesRadio - Trance"
+reason = "Generic aggregator platform with no distinct station identity; spammy naming pattern"
+
+[[rejected]]
+stream_url = "http://radio.promodj.com/dubstep-192"
+name = "PromoDJ - Dubstep"
+reason = "Pure internet aggregator platform with no genuine station identity"
+
+[[rejected]]
+stream_url = "https://relay4.radiotoolkit.com/delishdeephd"
+name = "Delish Deep Radio "
+reason = "Generic aggregator platform lacking distinctive station identity or clear positioning"
+
+[[rejected]]
+stream_url = "https://live.convoynetwork.com/stream"
+name = "Convoy en vivo"
+reason = "Insufficient information about station identity; appears to be internet-only with unclear origin."
+
+[[rejected]]
+stream_url = "https://mdstrm.com/audio/6102ce7ef33d0b0830ec3adc/live.m3u8"
+name = "Radio F\u00f3rmula - 103.3 FM - XERFR-FM - Grupo F\u00f3rmula - Ciudad de M\u00e9xico"
+reason = "Duplicate of station #5 (same Grupo F\u00f3rmula network, same XERFR-FM call sign, different frequency listed)."
+
+[[rejected]]
+stream_url = "https://s3.radio.co/s2c1cebae5/listen"
+name = "Rock 101"
+reason = "Generic name with no station identity, location, or call letters; insufficient information."
+
+[[rejected]]
+stream_url = "https://s5.radio.co/seec9ed903/listen"
+name = "Next FM (Ciudad de M\u00e9xico) - Online - Next FM Radio - Ciudad de M\u00e9xico"
+reason = "Pure internet aggregator with no music format specified; generic online-only station."
+
+[[rejected]]
+stream_url = "https://panel.retrolandigital.com:8160/listen"
+name = "\u00a1Que Viva M\u00e9xico!"
+reason = "Vague station name with minimal identifying information; insufficient brand identity."
+
+[[rejected]]
+stream_url = "https://80.streeemer.com/listen/80s/radio.aac"
+name = "Wonder 80's Flashback"
+reason = "Generic internet aggregator name; lacks real station identity, location, or call letters."
+
+[[rejected]]
+stream_url = "https://mdstrm.com/audio/61e1e0125e404b0836c1e402/live.m3u8"
+name = "Radio F\u00f3rmula - 970 AM - XERFR-AM - Grupo F\u00f3rmula - Ciudad de M\u00e9xico"
+reason = "Duplicate of well-known branded station (Radio F\u00f3rmula group already listed at 103.3 FM); same network and content."
+
+[[rejected]]
+stream_url = "https://rfienchinois64k.ice.infomaniak.ch//rfienchinois-64.mp3"
+name = "\u65b0\u95fb\u8054\u64ad"
+reason = "RFI French international feed redirected as Chinese news; geographically misleading for station identity."
+
+[[rejected]]
+stream_url = "https://radio4.vip-radios.fm:18060/stream-128kmp3-SmoothJazzLounge"
+name = "Smooth Jazz Lounge"
+reason = "Generic internet aggregator name lacking real station identity; low vote count"
+
+[[rejected]]
+stream_url = "http://42747t.lp.azioncdn.net/2747t/a/mp4:access_options/rtmp-live/atl_poa.sdp/playlist.m3u8"
+name = "Atl\u00e2ntida - ATL"
+reason = "Duplicate or regional variant; insufficient differentiation in registry context"
+
+[[rejected]]
+stream_url = "https://centova.svdns.com.br:19373/stream1"
+name = "GOLD INSTRUMENTAL "
+reason = "Duplicate of entry 13; first instance to be excluded"
+
+[[rejected]]
+stream_url = "https://centova.svdns.com.br:19373/stream1"
+name = "GOLD INSTRUMENTAL 32"
+reason = "Duplicate stream URL with identical counterpart; junk numbering suggests aggregator"
+
+[[rejected]]
+stream_url = "https://streaming.radiostreamlive.com/radioamericalatina_devices"
+name = "Radio Am\u00e9rica Latina"
+reason = "Generic aggregator name with misleading 'Paulista avenue' tag; no real station identity"
+
+[[rejected]]
+stream_url = "http://cast4.audiostream.com.br:8006/live"
+name = "Music FM 88.7"
+reason = "Generic name lacking distinct identity; insufficient vote count and information"
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC_SC"
+name = "BandNews FM"
+reason = "Duplicate of entry 6 (BandNews FM SP); same parent network and service"
+
+[[rejected]]
+stream_url = "https://antenaone.crossradio.com.br/stream/1"
+name = "Antena 1  - Porto Alegre"
+reason = "Duplicate of entry 1 brand (Antena 1); likely regional variant of same network"
+
+[[rejected]]
+stream_url = "https://servidor32-3.brlogic.com:8230/live"
+name = "Tropical Smooth Jazz"
+reason = "Generic aggregator-style name with no real station branding"
+
+[[rejected]]
+stream_url = "https://1132747t.ha.azioncdn.net/primary/gaucha_rbs.sdp/playlist.m3u8"
+name = "R\u00e1dio Ga\u00facha"
+reason = "Duplicate of station 4 (same content, different URL)"
+
+[[rejected]]
+stream_url = "http://server01.ouvir.radio.br:8006/stream"
+name = "Jazz Medley Webradio"
+reason = "Generic aggregator-style name lacking real station identity"
+
+[[rejected]]
+stream_url = "https://stm1.srvif.com:7576/;"
+name = "Groove Wave Lounge"
+reason = "Generic webradio name with no established station branding"
+
+[[rejected]]
+stream_url = "http://secure.live-streams.nl/flac.ogg"
+name = "Intense Radio - We love Dance #HQ# FLAC"
+reason = "Duplicate of station 2 with same branding; exclude higher-bitrate variant"
+
+[[rejected]]
+stream_url = "https://stream.player.arrow.nl/arrowcr"
+name = "Arrow Classic Rock"
+reason = "Duplicate of station 5; exclude lower-quality variant"
+
+[[rejected]]
+stream_url = "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR04.mp3"
+name = "Sky Radio 80's Hits"
+reason = "Thematic variant of broader Sky Radio; exclude in favour of main station"
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR01.mp3?dist=skyradio_web&ttag=talpa_consent:0&gdpr=1&gdpr_consent=BO2svb6O2svb6ADABANLDTAAAAAxKAAA"
+name = "Sky Radio Hits"
+reason = "Generic thematic variant; main Sky Radio already represented elsewhere"
+
+[[rejected]]
+stream_url = "http://22333.live.streamtheworld.com:3690/TLPSTR18_SC"
+name = "Radio 10 60's & 70's Hits"
+reason = "Thematic variant of station 6; exclude in favour of main brand"
+
+[[rejected]]
+stream_url = "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR08.mp3"
+name = "Sky Radio Christmas"
+reason = "Seasonal/thematic variant with no year-round utility"
+
+[[rejected]]
+stream_url = "http://stream.radiocorp.nl/web10_mp3"
+name = "SLAM! Non Stop"
+reason = "Duplicate of station 10 with same branding; exclude variant"
+
+[[rejected]]
+stream_url = "http://server-10.stream-server.nl:8300/"
+name = "Nashville FM"
+reason = "Geographically misleading: Nashville FM is a US brand but streaming from Netherlands (.nl server)."
+
+[[rejected]]
+stream_url = "https://onair22.xdevel.com/proxy/xautocloud_td3e_421?mp=/stream"
+name = "Jazz de Ville - Chill"
+reason = "Generic aggregator stream with no clear station identity or branding."
+
+[[rejected]]
+stream_url = "http://22343.live.streamtheworld.com:80/SRGSTR05.mp3"
+name = "Sky Radio 90's Hits"
+reason = "Spammy genre variant of main Sky Radio stream, appears to be automated/rebranded."
+
+[[rejected]]
+stream_url = "http://streams.pinguinradio.com/PinguinRadio192.mp3"
+name = "Pinguin Indie"
+reason = "Duplicate of station 17 (same Pinguin Radio with different bitrate/naming)."
+
+[[rejected]]
+stream_url = "https://www.mp3streams.nl/zender/skyradio/stream/8-mp3-128"
+name = "Sky Radio"
+reason = "Duplicate of well-known branded station Sky Radio (already listed as station 9)."
+
+[[rejected]]
+stream_url = "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR01.mp3"
+name = "538 Dance Departmetn"
+reason = "Spammy genre variant of Radio 538 with misspelled name; appears automated."
+
+[[rejected]]
+stream_url = "https://stream.joe.nl/joe/aachigh"
+name = "JOE"
+reason = "Duplicate of station #3."
+
+[[rejected]]
+stream_url = "https://icecast.omroep.nl/3fm-bb-mp3"
+name = "NPO 3FM"
+reason = "Duplicate of station #9."
+
+[[rejected]]
+stream_url = "https://onair22.xdevel.com/proxy/xautocloud_6cqz_422?mp=/stream"
+name = "Jazz de Ville - Dance"
+reason = "Unclear identity mixing jazz/dance with opaque streaming infrastructure and lower votes."
+
+[[rejected]]
+stream_url = "http://mscp4.live-streams.nl:8140/flac.ogg"
+name = "PureClassix #Flac"
+reason = "Generic aggregator name with codec suffix and no meaningful tags or identity."
+
+[[rejected]]
+stream_url = "https://carol.epichosts.co.uk:8570/;"
+name = "Diverse FM"
+reason = "Generic name with no station identity or genre clarity; appears to be aggregator"
+
+[[rejected]]
+stream_url = "https://server.mixify.in/listen/listen/radio.mp3"
+name = "Mixify Bollywood"
+reason = "Generic aggregator-style name lacking distinct station identity"
+
+[[rejected]]
+stream_url = "https://streams.radio.co/s8d06d0298/listen"
+name = "Radio Mirchi USA"
+reason = "Duplicate/extension of well-known branded station Radio Mirchi"
+
+[[rejected]]
+stream_url = "https://s6.yesstreaming.net/proxy/john1237?mp=/live"
+name = "bollywoodandbeyond"
+reason = "Spammy URL structure with generic name suggesting content aggregator"
+
+[[rejected]]
+stream_url = "https://streams.radio.co/s8d06d0298/listen"
+name = "Mirchi One 89.6 Qatar"
+reason = "Geographically misleading\u2014station is in Qatar, not the listed country context"
+
+[[rejected]]
+stream_url = "https://streaming.webhostnepal.com/8018/stream"
+name = "Gazal Radio London"
+reason = "Low vote count and minimal identity differentiation; appears to be generic internet stream"
+
+[[rejected]]
+stream_url = "https://psrlive2.listenon.in/irlite?ah=0e81749e37789e5fb8c290926ce87e3f"
+name = "Ilayaraja Lite Radio"
+reason = "Duplicate of Ilayaraja themed stations already included; excessive fragmentation of same content"
+
+[[rejected]]
+stream_url = "https://psrlive2.listenon.in/ir?ah=0e81749e37789e5fb8c290926ce87e3f"
+name = "Ilayaraja Radio"
+reason = "Duplicate of Ilayaraja themed stations; unnecessary redundancy in curation"
+
+[[rejected]]
+stream_url = "http://live.radiolautaru.ro:9000/;stream.nsv"
+name = "Lautaru Populara"
+reason = "No genre tags provided; insufficient metadata to verify station identity."
+
+[[rejected]]
+stream_url = "http://stream2.srr.ro:8078/eteatru.mp3"
+name = "eteatru"
+reason = "Theatre/cultural content station; outside music radio scope for consumer app."
+
+[[rejected]]
+stream_url = "http://dance.radiotequila.ro:7000/;stream.nsv"
+name = "Radio Tequila Dance Romania"
+reason = "Low engagement; generic branded name without established identity."
+
+[[rejected]]
+stream_url = "https://astreaming.edi.ro:8443/EuropaFM_aac"
+name = "Europa FM Romania"
+reason = "Duplicate of well-known branded station Europa FM (index 2)."
+
+[[rejected]]
+stream_url = "http://radio1manele.no-ip.org:8000/;"
+name = "Radio 1 Manele"
+reason = "Duplicate manele station; lower engagement than Radio Manele FM; redundant in curated registry."
+
+[[rejected]]
+stream_url = "http://radiopromanele.zapto.org:8000/;"
+name = "Radio Pro Manele"
+reason = "Duplicate manele station; low engagement; excessive tag repetition suggests low-quality aggregator entry."
+
+[[rejected]]
+stream_url = "https://live.onefm.ro/onefm.aacp"
+name = "One FM Dance"
+reason = "No descriptive tags; generic branded name without established identity."
+
+[[rejected]]
+stream_url = "http://a.fmradiomanele.ro:8054/stream"
+name = "FM Radio Manele"
+reason = "Duplicate manele station (same stream as Radio Manele FM); redundant entry with lower votes."
+
+[[rejected]]
+stream_url = "http://astreaming.edi.ro:8000/EuropaFM_aac"
+name = "EuropaFM"
+reason = "Duplicate of major branded station Europa FM; different stream URL but same station."
+
+[[rejected]]
+stream_url = "https://ssl.servereradio.ro/8123/stream"
+name = "RADIO Petrecere"
+reason = "Generic manele/party station; low engagement; fourth manele duplicate."
+
+[[rejected]]
+stream_url = "http://live.radiocafe.ro:8048/live.aac"
+name = "Radio Cafe Romania"
+reason = "Very low engagement; vague 'story music' tag suggests low-quality aggregator entry."
+
+[[rejected]]
+stream_url = "http://radiocdn.nxthost.com/radio-deea"
+name = "DeeaRadio"
+reason = "Duplicate of station #7 (Radio DEEA) with identical URL and higher vote count"
+
+[[rejected]]
+stream_url = "https://ssl.servereradio.ro/8123/stream"
+name = "RADIO MANELE PETRECERE"
+reason = "Duplicate manele station format; #11 has higher vote count"
+
+[[rejected]]
+stream_url = "http://petrecere.fmradiomanele.ro:8123/;stream.nsv"
+name = "Radio Manele Romania"
+reason = "Duplicate manele station format with lowest vote count of three similar stations"
+
+[[rejected]]
+stream_url = "https://us1.amfmph.com/ssl/christmasradio?mp=/stream&1641738050672"
+name = "Christmas Radio Philippines - Powered By www.amfmph.net"
+reason = "Seasonal/thematic internet aggregator without year-round station identity"
+
+[[rejected]]
+stream_url = "http://22273.live.streamtheworld.com:3690/MORFM_S01_SC"
+name = "MOR"
+reason = "Duplicate of MOR 101.9 FM (index 8) with lower vote count; keep higher-voted version"
+
+[[rejected]]
+stream_url = "http://cast3.my-control-panel.com:9364/autodj"
+name = "90s Pinoy Alternative"
+reason = "Duplicate of index 5 with lower vote count; keeping higher-voted version"
+
+[[rejected]]
+stream_url = "https://live.radyositesihazir.com:10997/stream?type=http&nocache=99881"
+name = "DamarTurk FM"
+reason = "Duplicate of entry 2 with lower votes and different URL variant."
+
+[[rejected]]
+stream_url = "https://turkmedya.radyotvonline.net/alemfmaac"
+name = "Alem Fm"
+reason = "Duplicate of entry 5 with lower votes; classical tag appears misattributed."
+
+[[rejected]]
+stream_url = "https://icecast-rian.cdnvideo.ru/voicestm"
+name = "Radyo Sputnik"
+reason = "Russian state broadcaster geographically misleading for Turkish registry context"
+
+[[rejected]]
+stream_url = "https://amed.ozelip.com/8040/;"
+name = "Azadi Fm"
+reason = "No identifying information or tags; appears to be aggregator with minimal station identity"
+
+[[rejected]]
+stream_url = "http://playerservices.streamtheworld.com/api/livestream-redirect/AM790_56AAC_SC"
+name = " Radio Mitre"
+reason = "Duplicate of station #2 (Mitre AM 790) with lower votes; redundant entry."
+
+[[rejected]]
+stream_url = "http://server.laradio.online:25224/live.mp3"
+name = "Radio Argentina - AM 570"
+reason = "Generic naming without differentiation; insufficient vote count (788) and unclear station identity."
+
+[[rejected]]
+stream_url = "http://mp3.ffh.de/radioffh/hqlivestream.aac"
+name = "HIT RADIO FFH. 128K AAC. Argentina"
+reason = "German station (ffh.de) misplaced in Argentina registry; geographically misleading."
+
+[[rejected]]
+stream_url = "http://stream.skynewsarabia.com/hls/sna_720.m3u8"
+name = "Sky Arabia News TV"
+reason = "Duplicate of well-known branded station (Sky News Arabia); TV stream not appropriate for radio registry"
+
+[[rejected]]
+stream_url = "https://stream.skynewsarabia.com/hls/sna.m3u8"
+name = "sky news arabia radio"
+reason = "Duplicate of well-known branded station (Sky News Arabia)"
+
+[[rejected]]
+stream_url = "https://radioislamindonesia.com/rodja.mp3?_=2"
+name = "Radio Rodja 756 AM"
+reason = "Mistagged as classical; Islamic talk radio with misleading metadata"
+
+[[rejected]]
+stream_url = "https://stream.denger.in/"
+name = "DENGERIN MUSIK INDONESIA"
+reason = "Generic aggregator name with no real station identity"
+
+[[rejected]]
+stream_url = "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro2.mp3"
+name = "RRI Pro 2 92.1 FM Tanjungpinang"
+reason = "RRI regional stream duplicate of network already represented; over-tagged with generic local descriptors"
+
+[[rejected]]
+stream_url = "https://streaming.radiosenlinea.com.ar:10865/stream"
+name = "Mi%Vallenat\u00edsima"
+reason = "Geographically misleading\u2014Argentine streaming URL for Colombian vallenato content; lacks authentic station identity."
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOACKTIVA_MEDAAC.aac"
+name = "Radioacktiva (Medell\u00edn) - 102.3 FM - PRISA Radio - Medell\u00edn, Colombia"
+reason = "Duplicate of well-established Radioacktiva brand already represented; lower vote count than Bogot\u00e1 entry."
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_MEDELLINAAC.aac?1707017722"
+name = "Medellin 104.9 - Olimpica Stereo"
+reason = "Duplicate of Ol\u00edmpica Stereo Medell\u00edn (index 5) with identical stream and lower vote count."
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_BARRANQUILLAAAC.aac?dist=oro_web"
+name = "Ol\u00edmpica Stereo - Barranquilla"
+reason = "Duplicate of well-known branded station (Ol\u00edmpica Stereo chain); same operator as index 3"
+
+[[rejected]]
+stream_url = "http://quincy.torontocast.com:1920/stream"
+name = "Instrumentals forever (64kbp)"
+reason = "Duplicate of index 4 with lower bitrate variant; consolidate to primary entry"
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_DAYBREAK_ADP.aac"
+name = "Tommorowland One World Radio - Daybreak Sessions"
+reason = "Variant channel of index 3; keep primary Tomorrowland station only to avoid duplication"
+
+[[rejected]]
+stream_url = "https://mdstrm.com/audio/5c915497c6fd7c085b29169d/live.m3u8"
+name = "Oasis FM Chile"
+reason = "Insufficient listener engagement relative to peers; vote count too low for inclusion threshold."
+
+[[rejected]]
+stream_url = "https://streaming.viphosting.cl/8028/stream"
+name = "Radio Contexto \u00d1uble"
+reason = "Minimal audience engagement and unclear station identity without genre information."
+
+[[rejected]]
+stream_url = "http://server4p.com:8002/stream"
+name = "Radio 4P Narodna Muzika"
+reason = "Generic/spammy name lacking distinctive identity or branding"
+
+[[rejected]]
+stream_url = "http://live.okplus.rs:8050/;*.mp3"
+name = "OK Radio Prelo"
+reason = "Duplicate variant of OK Radio (index 1) with lower vote count"
+
+[[rejected]]
+stream_url = "https://myradio24.org/tisradio"
+name = "TRANCE IS STAR RADIO"
+reason = "Spammy name format with generic branding; lacks station identity."
+
+[[rejected]]
+stream_url = "http://lux.radio.tvstitch.com/kyiv/lux_adv_sd"
+name = "Lux FM"
+reason = "Duplicate of station #1 (\u041b\u044e\u043a\u0441 FM 103.1) with identical URL and lower votes."
+
+[[rejected]]
+stream_url = "http://lux.radio.tvstitch.com/kyiv/max_adv_sd"
+name = "Radio 24"
+reason = "Duplicate URL (matches station #2); generic name without distinct identity."
+
+[[rejected]]
+stream_url = "https://online.hitfm.ua/HitFM_HD"
+name = "\u0425\u0456\u0442 FM"
+reason = "Duplicate of station #7 (\u0425\u0456\u0442 FM \u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0456 \u0445\u0456\u0442\u0438) with same domain and lower votes."
+
+[[rejected]]
+stream_url = "https://radio.perec.fm/radio-stilnoe"
+name = "\u041f\u0435\u0440\u0435\u0446\u044c FM"
+reason = "Generic tags; insufficient information on station identity or format."
+
+[[rejected]]
+stream_url = "https://online.radioroks.ua/RadioROKS_NewRock_HD"
+name = "Radio ROCKS \u041d\u043e\u0432\u0438\u0439 \u0420\u043e\u043a 103.6FM HD"
+reason = "Duplicate of station #13 (same domain/broadcaster); variant stream with lower votes."
+
+[[rejected]]
+stream_url = "http://online.hitfm.ua/HitFM_Best"
+name = "\u0425\u0456\u0442 \u0424\u041c \u041d\u0430\u0439\u0431\u0456\u043b\u044c\u0448\u0456 \u0445\u0456\u0442\u0438 "
+reason = "Duplicate variant of station #7 with same domain and significantly lower votes."
+
+[[rejected]]
+stream_url = "https://online.kissfm.ua/KissFM_Deep"
+name = "Kiss FM Deep"
+reason = "Variant stream with vague 'deep' tag; insufficient station identity information."
+
+[[rejected]]
+stream_url = "http://mpc1.mediacp.eu:8024/;"
+name = "\u0420\u0430\u0434\u0438\u043e \u041f\u0438\u044f\u043d\u0438\u043a\u0430"
+reason = "Geographically misleading\u2014tagged as Greek music but listed for Bulgaria"
+
+[[rejected]]
+stream_url = "http://play.global.audio/energy-90s"
+name = "Energy NRJ Bulgaria 90s Only"
+reason = "Duplicate variant of Energy NRJ Bulgaria with marginal vote differentiation"
+
+[[rejected]]
+stream_url = "https://whsh4u-panel.com/proxy/yfryujzw/stream"
+name = "Extreme Deep House Radio"
+reason = "Internet aggregator/restream with suspicious proxy URL lacking independent station identity"
+
+[[rejected]]
+stream_url = "http://mpc1.mediacp.eu:8024/"
+name = "Radio Pianica"
+reason = "Duplicate of \u0420\u0430\u0434\u0438\u043e \u041f\u0438\u044f\u043d\u0438\u043a\u0430 (index 5) with inconsistent naming and no independent identity"
+
+[[rejected]]
+stream_url = "http://whsh4u-panel.com:14113/stream"
+name = "Extreme Deep House"
+reason = "Duplicate of Extreme Deep House Radio (index 13) with different URL\u2014internet aggregator"
+
+[[rejected]]
+stream_url = "http://icecast6.play.cz/cesky-impuls.mp3"
+name = "\u010cesk\u00fd Impuls"
+reason = "Duplicate of station #4 (Impuls R\u00e1\u00e1\u00e1\u00e1dio) with lower vote count; removes redundancy."
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/ROCK_RADIO_128.mp3"
+name = "Rock Radio"
+reason = "Generic name with no station identity; pure aggregator with no authentic branding"
+
+[[rejected]]
+stream_url = "http://mp3stream4.abradio.cz/depeche128.mp3"
+name = "Radia CZ - Depeche Mode"
+reason = "Single-artist focused station; lacks sufficient station identity beyond one band"
+
+[[rejected]]
+stream_url = "http://icecast8.play.cz/classic128.mp3"
+name = "Classic Praha"
+reason = "Generic name without genre clarity; insufficient station identity"
+
+[[rejected]]
+stream_url = "http://ice.abradio.cz/cityzl128.mp3"
+name = "hitradio City zona Lasky"
+reason = "Spammy name format ('hitradio City zona Lasky'); appears to be themed subchannel rather than primary station"
+
+[[rejected]]
+stream_url = "https://ice.actve.net/fm-evropa2-128"
+name = "Evropa 2 - Radio"
+reason = "Spammy tag ('88.2' frequency); insufficient genre information for polished registry"
+
+[[rejected]]
+stream_url = "https://mdstrm.com/audio/5fada54116646e098d97e6a5/icecast.audio"
+name = "Radio Onda Cero"
+reason = "Generic 'urban contemporary' branding lacks sufficient identity differentiation."
+
+[[rejected]]
+stream_url = "https://mdstrm.com/audio/5fad731fcf097a068af3c8f7/icecast.audio"
+name = "Radio Felicidad 88.9"
+reason = "No metadata provided; insufficient information to assess station identity."
+
+[[rejected]]
+stream_url = "https://sonicpanel.globalstream.pro/8042/stream"
+name = "Radio Clasica Rock&Pop"
+reason = "Generic descriptive name without genuine station branding or identity."
+
+[[rejected]]
+stream_url = "https://us-b4-p-e-cg11-audio.cdn.mdstrm.com/live-audio-aw/5faee885eb830d06cf22ed4a"
+name = "Radio RPP Mundial"
+reason = "Duplicate of RPP network already represented; primarily sports-focused variant."
+
+[[rejected]]
+stream_url = "https://radio.pjcks.com/9944/stream"
+name = "Radio Latidos 94.7 FM (Huaral)"
+reason = "Hyper-local low-vote station lacking sufficient audience engagement for curation."
+
+[[rejected]]
+stream_url = "https://stream.ginnet.cloud/live0130lo-yfyo/_definst_/am/playlist.m3u8"
+name = "\u81fa\u5317\u96fb\u53f0AM"
+reason = "Duplicate of station 1 (same broadcaster, same URL structure, lower votes); consolidate under main entry."
+
+[[rejected]]
+stream_url = "https://stream.ginnet.cloud/live0130lo-yfyo/_definst_/fm/playlist.m3u8"
+name = "\u53f0\u5317\u5ee3\u64ad\u96fb\u53f0"
+reason = "Duplicate stream with identical URL to station 1; appears to be alternative naming for same service."
+
+[[rejected]]
+stream_url = "https://servidor17.brlogic.com:7012/live"
+name = "JOY GOSPEL RADIO"
+reason = "Duplicate entry (see index 6); lower vote count of the pair."
+
+[[rejected]]
+stream_url = "https://servidor17.brlogic.com:7012/live"
+name = "JOY GOSPEL RADIO"
+reason = "Duplicate of index 3; lower vote count and incorrectly tagged as classical."
+
+[[rejected]]
+stream_url = "https://streamer.radio.co/s83eb8ff39/listen"
+name = "S\u00faper Tokio Radio"
+reason = "Vague 'international' tag and minimal votes suggest low engagement or unclear station identity."
+
+[[rejected]]
+stream_url = "http://stream.radiovlna.sk/vlna-hi.mp3"
+name = "R\u00e1dio Vlna"
+reason = "Duplicate of station #1 with identical URL and lower vote count."
+
+[[rejected]]
+stream_url = "https://stream.radiovlna.sk/gold-hi.mp3"
+name = "R\u00e1dio Vlna Golden hits"
+reason = "Duplicate variant of station #1 (same parent station, lower votes)."
+
+[[rejected]]
+stream_url = "https://stream.bauermedia.sk/128.mp3"
+name = "R\u00c1DIO EXPRES"
+reason = "Duplicate of station #8 with identical source and lower vote count."
+
+[[rejected]]
+stream_url = "http://stream.funradio.sk:8000/dance128.mp3"
+name = "FUN R\u00c1DIO DANCE"
+reason = "Duplicate of station #2 with identical URL and lower vote count."
+
+[[rejected]]
+stream_url = "http://stream.funradio.sk:8000/cs128.mp3"
+name = "Fun Radio CZ"
+reason = "Geographically misleading\u2014Fun Radio CZ domain suggests Czech station but streams from .sk server; likely mislabeled variant."
+
+[[rejected]]
+stream_url = "http://stream.funradio.sk:8000/80-90-128.mp3"
+name = "FUN R\u00c1DIO 80-90"
+reason = "Duplicate variant of Fun Radio network with low vote count and unclear primary identity."
+
+[[rejected]]
+stream_url = "http://gb25.streamgates.net/radios-audio/100Workout/icecast.audio"
+name = "Radios 100FM"
+reason = "Generic aggregator branding with 'Workout' playlist lacks distinctive station identity"
+
+[[rejected]]
+stream_url = "http://glzwizzlv.bynetcdn.com/glglz_mp3"
+name = "\u05d2\u05dc\u05d2\u05dc\u05e6 - Glglz"
+reason = "Duplicate of station #2 with lower vote count"
+
+[[rejected]]
+stream_url = "http://live.cdnwz.net/thebest"
+name = "\u041b\u0443\u0447\u0448\u0435\u0435 \u0420\u0430\u0434\u0438\u043e"
+reason = "Duplicate of station #1 with significantly lower vote count"
+
+[[rejected]]
+stream_url = "http://www.team-data.ba:8030/stream/"
+name = "Radio M"
+reason = "Insufficient listener votes and no identifying metadata or genre information."
+
+[[rejected]]
+stream_url = "http://stream3.radiocenter.si:8064/;stream/1"
+name = "Hitradio center 80's"
+reason = "Likely duplicate/variant of Hitradio Center; unclear unique identity"
+
+[[rejected]]
+stream_url = "http://stream02.exit.si:8000/MEGAMIX?"
+name = "Radio Capris 90 DANCE"
+reason = "Duplicate variant of Radio Capris with generic dance format suffix"
+
+[[rejected]]
+stream_url = "http://stream02.exit.si:8000/DALMACIJA?"
+name = "Radio Capris Dalmacija"
+reason = "Regional variant with minimal identity and low votes"
+
+[[rejected]]
+stream_url = "http://stream3.radiocenter.si:9020/;stream/1"
+name = "Hitradio center top 100"
+reason = "Spammy chart-focused stream variant with weak identity"
+
+[[rejected]]
+stream_url = "http://stream3.radiocenter.si:9032/;"
+name = "Rock Radio"
+reason = "Duplicate of Rock Radio Si; insufficient differentiation"
+
+[[rejected]]
+stream_url = "http://stream3.radiocenter.si:8060/;stream/1"
+name = "Hitradio center love"
+reason = "Spammy format-focused stream variant with minimal listener engagement"
+
+[[rejected]]
+stream_url = "http://live.radio2.si/Radio2?1448457274706.mp3"
+name = "Radio 2"
+reason = "Generic name with no distinctive identity; likely a regional station but insufficient branding for curation"
+
+[[rejected]]
+stream_url = "http://stream02.exit.si:8000/90?"
+name = "Radio Capris 90 POP"
+reason = "Duplicate of station 2 (same operator/stream base); creates redundancy in registry"
+
+[[rejected]]
+stream_url = "https://qurango.net/radio/tarateel"
+name = "Mp3Quran Tarateel"
+reason = "Generic aggregator branding (Mp3Quran) with no distinct station identity."
+
+[[rejected]]
+stream_url = "https://qurango.net/radio/mix"
+name = "Mp3Quran Main"
+reason = "Generic aggregator branding (Mp3Quran) with no distinct station identity."
+
+[[rejected]]
+stream_url = "https://l3.itworkscdn.net/asharqradioalive/asharqradioa/icecast.audio"
+name = "\u0631\u0627\u062f\u064a\u0648 \u0627\u0644\u0634\u0631\u0642 \u0645\u0639 \u0628\u0644\u0648\u0645\u0628\u0631\u063a"
+reason = "Duplicate of station 6 (same URL and stream); non-Latin character noise in name."
+
+[[rejected]]
+stream_url = "https://l3.itworkscdn.net/asharqradioalive/asharqradioa/icecast.audio"
+name = "Radio Asharq with Bloomberg /\u00a0\u0631\u0627\u062f\u064a\u0648 \u0627\u0644\u0634\u0631\u0642 \u0645\u0639 \u0628\u0644\u0648\u0645\u0628\u0631\u063a"
+reason = "Duplicate of station 6 (same URL and stream); redundant entry with formatting issues."
+
+[[rejected]]
+stream_url = "http://dirtybass.fm:8000/dirtybass.mp3"
+name = "DirtyBass.FM"
+reason = "Spammy name format and mistagged as classical when clearly electronic/bass-oriented; insufficient votes relative to peers"
+
+[[rejected]]
+stream_url = "http://lr4mp1.latvijasradio.lv:8020/;"
+name = "Latvijas Radio 4"
+reason = "Lower vote count and unclear format; likely a niche/specialized channel of public radio family."
+
+[[rejected]]
+stream_url = "http://radio.kuums.lv:5555/;"
+name = "Talsi Lounge"
+reason = "Very low vote count and limited audience reach; insufficient evidence of sustainable listenership."
+
+[[rejected]]
+stream_url = "http://stream.europeanhitradio.com:8000/Stream_23.aac"
+name = "European Hit Radio - Darbam"
+reason = "Duplicate/variant stream of European Hit Radio; low vote count indicates minimal independent audience."
+
+[[rejected]]
+stream_url = "http://stream.grupotelemicro.com:9303/;stream.mp3"
+name = "Independencia FM"
+reason = "Tags reflect only geography (Santo Domingo) rather than music format; insufficient audience signal."
+
+[[rejected]]
+stream_url = "http://radio.domiplay.net:8002/;"
+name = "Bachata Radio"
+reason = "Duplicate concept of station #1 with significantly lower votes and bitrate; low differentiation."
+
+[[rejected]]
+stream_url = "http://netradio.ziniur.lt:8000/ziniur.mp3"
+name = "\u017dini\u0173 Radijas"
+reason = "Duplicate of station 1 (\u017dini\u0173 Radijas) with lower votes"
+
+[[rejected]]
+stream_url = "http://radio.m-1.fm/laluna/high"
+name = "Laluna [AAC]"
+reason = "Duplicate codec variant of station 2 (Laluna) with significantly lower votes"
+
+[[rejected]]
+stream_url = "https://stream1.zipfm.lt/zipfm128.mp3"
+name = "ZIP FM"
+reason = "Duplicate of station 4 (ZipFM) with lower votes"
+
+[[rejected]]
+stream_url = "https://radio.mil.by/live"
+name = "\u041a\u043e\u043c\u043f\u0430\u0441 FM"
+reason = "Too generic with minimal votes (2,967) and no clear station identity or meaningful tags."
+
+[[rejected]]
+stream_url = "https://stream2.datacenter.by/tvrmogilev"
+name = "\u0420\u0430\u0434\u0438\u043e \u041c\u043e\u0433\u0438\u043b\u0451\u0432"
+reason = "Generic regional station with no identifying tags and minimal votes (1,057); lacks clear station identity."
+
+[[rejected]]
+stream_url = "https://server.radiorm.by:8443/live"
+name = "\u0420\u0430\u0434\u044b\u0435 \u041c\u0430\u0440\u044b\u044f "
+reason = "Minimal audience (962 votes), generic name, and insufficient differentiation from other stations."
+
+[[rejected]]
+stream_url = "https://stream.unistar.by/unistar_main_internal/unistar_main/playlist.m3u8"
+name = "Unistar - \u042d\u0444\u0438\u0440"
+reason = "Too similar to flagship Unistar entries; duplicate network stream with lower engagement (838 votes)."
+
+[[rejected]]
+stream_url = "https://stream2.datacenter.by/dushevnoe"
+name = "\u0414\u0443\u0448\u0435\u0432\u043d\u043e\u0435 \u0440\u0430\u0434\u0438\u043e \u041c\u0438\u043d\u0441\u043a 105.7 FM"
+reason = "Generic format with minimal votes (781) and vague positioning; insufficient station identity."
+
+[[rejected]]
+stream_url = "https://stream.unistar.by/unistar_covers_internal/unistar_covers/playlist.m3u8"
+name = "Unistar - \u041a\u0430\u0432\u0435\u0440\u044b"
+reason = "Minor Unistar variant with low engagement (635 votes); too niche and redundant within network."
+
+[[rejected]]
+stream_url = "http://procyon.shoutca.st:8492/listen.mp3"
+name = "\u591c\u7a7a\u50b3\u60c5"
+reason = "Insufficient identity information; generic 'music' tag with no genre specificity suggests aggregator or unclear station purpose."
+
+[[rejected]]
+stream_url = "https://bluesfan.stream.laut.fm/bluesfan?t302=2020-11-06_13-46-59&uuid=28a2f040-51e1-44fe-899f-3519cbd5d4e9"
+name = "Fing Radio"
+reason = "Conflicting tags (news, pop, talk) with low vote count and unclear identity; appears to be aggregator content."
+
+[[rejected]]
+stream_url = "https://coolism-web3rd.cdn.byteark.com/stream/1/"
+name = "Cool fahrenheit"
+reason = "Duplicate of station #2 (same branding, different CDN mirror); exclude to avoid redundancy."
+
+[[rejected]]
+stream_url = "https://coolism-web.cdn.byteark.com/;stream/1"
+name = "COOLISM"
+reason = "Duplicate of station #2 (same URL/branding as Cool Fahrenheit); exclude redundancy."
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/AI_FMAAC_SC"
+name = "ai fm"
+reason = "Duplicate of station 6; lower vote count (2029 vs 537 suggests aggregator rather than primary station)"
+
+[[rejected]]
+stream_url = "https://28153.live.streamtheworld.com/AI_FMAAC.aac"
+name = "Ai FM"
+reason = "Duplicate of station 2; lowest vote count suggests mirror/fallback stream rather than primary station"
+
+[[rejected]]
+stream_url = "https://azuracast.conceptradio.fr:8000/radio.mp3"
+name = "Radio Tunisia Med"
+reason = "Hosted on French infrastructure (conceptradio.fr) with unclear editorial identity"
+
+[[rejected]]
+stream_url = "https://streaming2.toutech.net/jawharafm"
+name = "Jawhara FM"
+reason = "Duplicate of station #1; lower vote count indicates secondary stream"
+
+[[rejected]]
+stream_url = "https://expressfm.ice.infomaniak.ch/expressfm-64.mp3"
+name = "Radio Express FM"
+reason = "Swiss-hosted business news station, geographically misleading for Tunisia listing"
+
+[[rejected]]
+stream_url = "https://streaming.live365.com/a82574"
+name = "Radio fouedb Music"
+reason = "Minimal engagement and unclear station identity; Live365 aggregator stream"
+
+[[rejected]]
+stream_url = "https://qurango.net/radio/sakeenah"
+name = "\u0622\u064a\u0627\u062a \u0627\u0644\u0633\u0643\u064a\u0646\u0629"
+reason = "Quranic recitation stream; unsuitable classification as 'classical' and minimal differentiation"
+
+[[rejected]]
+stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_BOL_SCAAC.aac?dist=web-radiodisney"
+name = "Radio Disney - La Paz FM 102.7"
+reason = "Duplicate of major branded station (Disney); exclude as per guidelines for well-known branded duplicates."
+
+[[rejected]]
+stream_url = "https://spanel.gcomstreaming.com:7003/;"
+name = "Radio San Gabriel AM 620 KHz"
+reason = "Duplicate of index 4 (same station, different broadcast frequency); exclude to avoid duplication."
+
+[[rejected]]
+stream_url = "https://usa19.fastcast4u.com/adeem"
+name = "Adeem"
+reason = "Insufficient metadata and unclear station identity; lacks clarity on programming."
+
+[[rejected]]
+stream_url = "https://radio.avazfarsi.com:8010/radio.mp3"
+name = "Anghamy"
+reason = "Platform/aggregator service rather than a distinct radio station with independent identity."
+
+[[rejected]]
+stream_url = "https://streamer.radio.co/sf2fa6ce9d/listen"
+name = "Naim Halawe"
+reason = "Insufficient metadata and unclear programming identity; minimal engagement."
+
+[[rejected]]
+stream_url = "https://broadcast.ice.infomaniak.ch/aswat-high.mp3"
+name = "Aswat FM"
+reason = "Duplicate of Radio Aswat (index 1) with same URL and lower vote count."
+
+[[rejected]]
+stream_url = "https://cast5.my-control-panel.com/proxy/marrakec/stream"
+name = "Marrakechplus"
+reason = "Insufficient vote count and no clear station identity or branding."
+
+[[rejected]]
+stream_url = "https://radio.yabiladi.com:8002/;stream.mp3"
+name = "Yabiladi Radio"
+reason = "Very low vote count and generic name with minimal differentiation from Yabiladi Chaabi Maroc."
+
+[[rejected]]
+stream_url = "https://radio.yabiladi.com:9002/;stream.mp3"
+name = "Yabiladi Azawan Amazigh"
+reason = "Very low vote count and niche offering already represented by other Yabiladi streams."
+
+[[rejected]]
+stream_url = "https://sp4.colombiatelecom.com.co/8028/stream"
+name = "Femenina"
+reason = "Generic name 'Femenina' lacks station identity and appears to be a content category rather than a named station"
+
+[[rejected]]
+stream_url = "http://ice42.securenetsystems.net/XY905"
+name = " XY 90.5 FM - Tegucigalpa, Honduras"
+reason = "Duplicate of station #1 (identical URL, same station); lower vote count makes it the redundant entry."
+
+[[rejected]]
+stream_url = "https://9090streaming.mobtada.com/9090FMEGYPT"
+name = "Radio 9090"
+reason = "Duplicate of station #1 with identical URL and significantly lower vote count."
+
+[[rejected]]
+stream_url = "http://eu1.fastcast4u.com/proxy/prontofm"
+name = "90s FM"
+reason = "Generic name with no clear station identity; appears to be aggregator proxy."
+
+[[rejected]]
+stream_url = "https://eu1.fastcast4u.com/proxy/prontofm?mp=/1"
+name = "90s FM"
+reason = "Duplicate of station #8 with lower votes; generic proxy stream with no identity."
+
+[[rejected]]
+stream_url = "http://stream.clicdomain.com.br:5828/;"
+name = "Coptic Voice Radio"
+reason = "Geographically misleading\u2014Brazilian domain for what appears to be Coptic station; low engagement."
+
+[[rejected]]
+stream_url = "http://s7.voscast.com:7000/"
+name = "PONdENDS.COM"
+reason = "Spammy domain name lacks genuine station identity or branding."
+
+[[rejected]]
+stream_url = "https://streamer.radio.co/s830ce6f36/listen"
+name = "Rebel Radio"
+reason = "Generic name with no tags, no discernible identity, and low vote count suggesting minimal audience."
+
+[[rejected]]
+stream_url = "https://server7.servistreaming.com/proxy/fidelity?mp=%2Fstream%3Ftype%3D.mp3&_=1"
+name = "Fidelity 95.7 fm PR"
+reason = "Insufficient information and vote count to establish genuine station identity; proxy stream suggests low-confidence listing"
+
+[[rejected]]
+stream_url = "https://reunion.ice.infomaniak.ch/reunion-128.mp3"
+name = "R\u00e9union la 1\u00e8re (La1er)"
+reason = "Duplicate of station 1 with identical stream URL and significantly fewer votes"
+
+[[rejected]]
+stream_url = "https://stream.antiradio.net/radio/8000/mp3"
+name = "Anti Radio"
+reason = "Duplicate of index 1 (same URL and station); lower vote count makes it redundant."
+
+[[rejected]]
+stream_url = "https://stream.antiradio.net/radio/8000/mp3"
+name = "Anti Radio"
+reason = "Duplicate of index 1 (same URL and station); lowest vote count variant."
+
+[[rejected]]
+stream_url = "https://radio.autoliferadio.com:8005/radio"
+name = "AutoLife Azerbaijan"
+reason = "Niche automotive narrowcast with minimal votes; lacks sufficient audience and music/content identity for curated registry."
+
+[[rejected]]
+stream_url = "http://mediaserv38.live-streams.nl:8006/live"
+name = "music"
+reason = "Generic name with no station identity; appears to be a pure aggregator stream."
+
+[[rejected]]
+stream_url = "http://mediaserv38.live-streams.nl:8006/live"
+name = "jazz"
+reason = "Duplicate URL and generic name; no distinct station identity from index 4."
+
+[[rejected]]
+stream_url = "http://mediaserv38.live-streams.nl:8006/live"
+name = "jazz"
+reason = "Generic name with no station identity; duplicate URL suggests aggregator rather than real station."
+
+[[rejected]]
+stream_url = "http://generationdance.lu/radio/8030/mobile"
+name = "Generation Dance Radio"
+reason = "Duplicate stream of index 1 (same station, lower bitrate variant)"
+
+[[rejected]]
+stream_url = "http://generationdance.lu/radio/8030/hd"
+name = "Generation Dance Radio"
+reason = "Duplicate of index 1 with significantly lower vote count; keep highest-voted variant only"
+
+[[rejected]]
+stream_url = "https://ic2326.c1261.fastserv.com/rm128"
+name = "Radio Mojdeh - Iranian Farsi/Persian Christian music and talk"
+reason = "Duplicate of station #3 with different URL but same station, lower vote count indicates less active stream."
+
+[[rejected]]
+stream_url = "https://s2.radio.co/s830691c74/listen"
+name = "Radio Mojahed - \u0631\u0627\u062f\u06cc\u0648 \u0645\u062c\u0627\u0647\u062f"
+reason = "Station primarily known as political/organizational outlet (MEK/PMOI) rather than general audience radio; tag metadata is spammy."
+
+[[rejected]]
+stream_url = "https://listen.radioking.com/radio/526993/stream/585379"
+name = "Radio ZZA (Zan Zendegi Azadi)"
+reason = "Minimal vote count (1,376) with no genre information suggests inactive or test station; insufficient audience evidence."
+
+[[rejected]]
+stream_url = "http://asima.out.airtime.pro:8000/asima_a"
+name = "Asima Online Radio"
+reason = "Duplicate of index 3; lower vote count variant"
+
+[[rejected]]
+stream_url = "https://radio-broadcast.ekantipur.com/stream"
+name = "Radio Kantipur"
+reason = "Duplicate of station #2 from same broadcaster/URL with lower vote count; consolidate to higher-voted variant."
+
+[[rejected]]
+stream_url = "http://s3.voscast.com:9966/;stream1686938227998"
+name = "Melody Jordan Radio"
+reason = "Insufficient votes and unclear station identity; appears to be a low-traffic aggregator stream"
+
+[[rejected]]
+stream_url = "https://mazajfm.ice.infomaniak.ch/mazajfm-192.mp3"
+name = "Mazaj FM"
+reason = "Duplicate of station 1 with lower vote count"
+
+[[rejected]]
+stream_url = "https://mazajfm.ice.infomaniak.ch/mazajfm-192.mp3"
+name = "Mazaj FM"
+reason = "Duplicate of station 1 with lower vote count"
+
+[[rejected]]
+stream_url = "http://streaming.radionomy.com/JamendoLounge"
+name = "Waar Radio"
+reason = "Pure internet aggregator (Radionomy host) with no independent station identity; lacks genuine broadcast presence."
+
+[[rejected]]
+stream_url = "https://c2.radioboss.fm:18564/stream"
+name = "Waar Radio Official Stream"
+reason = "Duplicate of station #2 under different URL; same station identity already reviewed."
+
+[[rejected]]
+stream_url = "http://eu6.fastcast4u.com:5306/;"
+name = "Clouds FM"
+reason = "Duplicate of index 1 with significantly lower votes; appears to be a mirror stream"
+
+[[rejected]]
+stream_url = "https://live-hls-web-aja.getaj.net/AJA/index.m3u8"
+name = "Aljazeera Arabic"
+reason = "Duplicate of station 2 with same content; station 2 has better vote count and clearer metadata"
+
+[[rejected]]
+stream_url = "http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/index.m3u8"
+name = "Al Jazeera - Arabic"
+reason = "Duplicate of station 2; lower votes indicate less relevance to audience"
+
+[[rejected]]
+stream_url = "http://nap.casthost.net:9194/"
+name = "CubanFlow Radio"
+reason = "Duplicate of station 1 with nearly identical name, URL, and purpose but significantly fewer votes (4134)."
+
+[[rejected]]
+stream_url = "https://streamingv2.shoutcast.com/cubania?type=.mp3"
+name = "Cubania Radio"
+reason = "Minimal audience (583 votes) and generic branding; appears to be a low-engagement variant of Cuban Flow Radio."
+
+[[rejected]]
+stream_url = "https://as1.digitalsynapsebd.com/proxy/zkpnarpg/stream"
+name = "S-Radio"
+reason = "Insufficient audience validation (1724 votes) and unclear station identity with generic name and no category information."
+
+[[rejected]]
+stream_url = "https://topcongofm2.ice.infomaniak.ch/topcongofm2-64.mp3"
+name = "Top Congo FM"
+reason = "Duplicate of station 4 with identical URL; lower vote count makes it the inferior entry."
+
+[[rejected]]
+stream_url = "http://rs1.radiostreamer.com:8000/;"
+name = "Radio Okapi"
+reason = "Duplicate of station 1 with identical URL; significantly lower vote count."
+
+[[rejected]]
+stream_url = "http://rdj966.net:8000/rdj966.mp3"
+name = "RDJ"
+reason = "Duplicate of station #1 (same URL) with significantly lower votes; exclude as redundant."
+
+[[rejected]]
+stream_url = "https://direct.radiomadagasikara.com/listen/rnm/radio.mp3"
+name = "RNM"
+reason = "Likely duplicate or alternative stream of RNA Madagascar (#2) with lower engagement; exclude as redundant."
+
+[[rejected]]
+stream_url = "https://s1.radioforge.com:4433/topfmlive/stream?hash=1663883843609.mp3"
+name = "Top FM"
+reason = "Generic name with no clear station identity, insufficient votes, and unclear geographic origin."
+
+[[rejected]]
+stream_url = "https://radio.mp3islam.com/listen/mishary/radio.mp3"
+name = "Quran Radio \u0631\u0627\u062f\u064a\u0648 \u0627\u0644\u0642\u0631\u0622\u0646 - Mishary Alafasy - \u0645\u0634\u0627\u0631\u064a \u0627\u0644\u0639\u0641\u0627\u0633\u064a"
+reason = "Duplicate of station #2 (identical URL and reciter); exclude redundant entry."
+
+[[rejected]]
+stream_url = "https://radio.mp3islam.com/listen/quran_radio/radio.mp3"
+name = "Quran Radio \u0631\u0627\u062f\u064a\u0648 \u0627\u0644\u0642\u0631\u0622\u0646 - Kuwait \u0627\u0644\u0643\u0648\u064a\u062a"
+reason = "Generic aggregator with no named reciter identity; pure regional playlist rather than distinct station."
+
+[[rejected]]
+stream_url = "https://listen.181fm.com/181-xtraditional_128k.mp3"
+name = "Fm Christmas classics"
+reason = "Seasonal/temporary themed stream rather than a core station with permanent identity; appears to be rotating format content."
+
+[[rejected]]
+stream_url = "https://listen7.myradio24.com/69366"
+name = "Pyongyang Radio FM"
+reason = "Geographically misleading - stream hosted on Western server (myradio24.com) with suspiciously high vote count for a North Korean state broadcaster with limited global accessibility"
+
+[[rejected]]
+stream_url = "http://s10.voscast.com:8202/stream"
+name = "One Radio"
+reason = "Generic name with no meaningful identity, missing tags, and no distinguishing characteristics."
+
+[[rejected]]
+stream_url = "http://s10.voscast.com:9410/"
+name = "alghad FM"
+reason = "Low vote count and generic 'various' tag suggest weak listener base and minimal station identity."
+
+[[rejected]]
+stream_url = "http://mediamarkaz.com:8000/radiomarkaz"
+name = "Radio Markaz"
+reason = "Minimal votes and no meaningful metadata indicate insufficient audience or station definition."
+
+[[rejected]]
+stream_url = "http://airtime.salafway.ly/"
+name = "The Salaf Way 100.3 FM Tripoli LY"
+reason = "Religious/ideological station with niche focus; limited audience (3536 votes) suggests marginal reach for general curated registry."
+
+[[rejected]]
+stream_url = "http://uk5.internet-radio.com:8115/stream"
+name = "Virgin Radio Oman"
+reason = "Virgin Radio is a Global Radio branded station; duplicate of well-known commercial chain with misleading 'Oman' geographic claim"
+
+[[rejected]]
+stream_url = "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream"
+name = "Radio Maria Ivory Coast"
+reason = "Suspicious proxy URL structure suggests aggregator/restreaming rather than official station broadcast"
+
