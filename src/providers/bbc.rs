@@ -102,7 +102,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         }
     }
 
-    tracing::info!(provider = "bbc", count = stations.len(), "Discovery complete");
+    tracing::info!(
+        provider = "bbc",
+        count = stations.len(),
+        "Discovery complete"
+    );
     stations
 }
 
@@ -152,5 +156,9 @@ fn service_id_to_name(id: &str) -> String {
         })
         .collect();
     let name = words.join(" ");
-    if name.starts_with("BBC") { name } else { format!("BBC {name}") }
+    if name.starts_with("BBC") {
+        name
+    } else {
+        format!("BBC {name}")
+    }
 }

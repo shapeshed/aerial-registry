@@ -11,9 +11,7 @@ const COUNTRY_CODE: &str = "PT";
 /// RTP has no public endpoint that enumerates all radio channel IDs — this list
 /// was assembled by probing `livechannelonair.php` across RTP's channel ID space
 /// (it's shared with TV channels, filtered here to the `radio` type).
-const CHANNEL_IDS: &[u32] = &[
-    91, 92, 1, 94, 95, 97, 98, 99, 100, 101, 102, 103, 104,
-];
+const CHANNEL_IDS: &[u32] = &[91, 92, 1, 94, 95, 97, 98, 99, 100, 101, 102, 103, 104];
 
 #[derive(Deserialize)]
 struct OnAirResponse {
@@ -56,8 +54,17 @@ async fn fetch_channel(client: &Client, id: u32) -> Option<Station> {
     let body: OnAirResponse = resp.json().await.ok()?;
     let channel = body.raw.result.into_iter().next()?;
 
-    if !channel.channel_type.as_deref().unwrap_or_default().starts_with("radio") {
-        warn!(provider = "rtp", channel_id = id, "Channel ID is no longer a radio channel — skipping");
+    if !channel
+        .channel_type
+        .as_deref()
+        .unwrap_or_default()
+        .starts_with("radio")
+    {
+        warn!(
+            provider = "rtp",
+            channel_id = id,
+            "Channel ID is no longer a radio channel — skipping"
+        );
         return None;
     }
 
@@ -96,6 +103,10 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         );
     }
 
-    tracing::info!(provider = "rtp", count = stations.len(), "Discovery complete");
+    tracing::info!(
+        provider = "rtp",
+        count = stations.len(),
+        "Discovery complete"
+    );
     stations
 }

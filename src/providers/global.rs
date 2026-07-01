@@ -51,7 +51,14 @@ struct NextDataStation {
 }
 
 async fn fetch_build_id(client: &Client) -> Option<String> {
-    let html = client.get(HOMEPAGE_URL).send().await.ok()?.text().await.ok()?;
+    let html = client
+        .get(HOMEPAGE_URL)
+        .send()
+        .await
+        .ok()?
+        .text()
+        .await
+        .ok()?;
     let key = "\"buildId\":\"";
     let start = html.find(key)? + key.len();
     let end = html[start..].find('"')? + start;
@@ -69,14 +76,20 @@ async fn fetch_brand_logo(
          ?brand={brand_slug}&station={station_slug}"
     );
     let page: NextDataPage = client.get(&url).send().await.ok()?.json().await.ok()?;
-    page.page_props?.station?.brand_logo.filter(|u| !u.is_empty())
+    page.page_props?
+        .station?
+        .brand_logo
+        .filter(|u| !u.is_empty())
 }
 
 pub async fn discover(client: &Client) -> Vec<Station> {
     let build_id = match fetch_build_id(client).await {
         Some(id) => id,
         None => {
-            warn!(provider = "global", "Could not fetch build ID — logos will be absent");
+            warn!(
+                provider = "global",
+                "Could not fetch build ID — logos will be absent"
+            );
             String::new()
         }
     };
@@ -101,7 +114,9 @@ pub async fn discover(client: &Client) -> Vec<Station> {
     let mut brand_rep: HashMap<String, String> = HashMap::new();
     for s in &raw {
         if let (Some(brand), Some(slug)) = (s.brand.as_ref(), s.slug.as_deref()) {
-            brand_rep.entry(brand.slug.clone()).or_insert_with(|| slug.to_owned());
+            brand_rep
+                .entry(brand.slug.clone())
+                .or_insert_with(|| slug.to_owned());
         }
     }
 
@@ -130,7 +145,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             .collect()
     };
 
-    debug!(provider = "global", brands = logo_map.len(), "Fetched brand logos");
+    debug!(
+        provider = "global",
+        brands = logo_map.len(),
+        "Fetched brand logos"
+    );
 
     let mut stations = Vec::new();
 
@@ -139,11 +158,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             Some(n) => n,
             None => continue,
         };
-        let stream_url = match s
-            .stream_url
-            .filter(|u| !u.is_empty())
-            .or_else(|| s.stream.and_then(|st| st.icecast_sd).filter(|u| !u.is_empty()))
-        {
+        let stream_url = match s.stream_url.filter(|u| !u.is_empty()).or_else(|| {
+            s.stream
+                .and_then(|st| st.icecast_sd)
+                .filter(|u| !u.is_empty())
+        }) {
             Some(u) => u,
             None => continue,
         };
@@ -164,11 +183,18 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             tags: vec![],
             description: s.tagline.filter(|t| !t.is_empty()),
             provider: "global".into(),
-            provider_id: s.gduid.filter(|v| !v.is_empty()).or_else(|| s.id.filter(|v| !v.is_empty())),
+            provider_id: s
+                .gduid
+                .filter(|v| !v.is_empty())
+                .or_else(|| s.id.filter(|v| !v.is_empty())),
             trusted: true,
         });
     }
 
-    tracing::info!(provider = "global", count = stations.len(), "Discovery complete");
+    tracing::info!(
+        provider = "global",
+        count = stations.len(),
+        "Discovery complete"
+    );
     stations
 }

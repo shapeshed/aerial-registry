@@ -89,15 +89,15 @@ pub async fn enrich(client: &Client, mut stations: Vec<Station>) -> Vec<Station>
 
     let mut enriched = 0usize;
     for (station, new_tags) in stations.iter_mut().zip(tag_results) {
-        if let Some(tags) = new_tags {
-            if !tags.is_empty() {
-                for tag in tags {
-                    if !station.tags.contains(&tag) {
-                        station.tags.push(tag);
-                    }
+        if let Some(tags) = new_tags
+            && !tags.is_empty()
+        {
+            for tag in tags {
+                if !station.tags.contains(&tag) {
+                    station.tags.push(tag);
                 }
-                enriched += 1;
             }
+            enriched += 1;
         }
     }
 

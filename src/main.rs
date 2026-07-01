@@ -36,10 +36,21 @@ async fn main() -> anyhow::Result<()> {
         providers::wireless::discover(&client),
     );
 
-    let all: Vec<_> = [ard, bbc, bauer, curated, global, radio_france, rai, rtp, rtve, wireless]
-        .into_iter()
-        .flatten()
-        .collect();
+    let all: Vec<_> = [
+        ard,
+        bbc,
+        bauer,
+        curated,
+        global,
+        radio_france,
+        rai,
+        rtp,
+        rtve,
+        wireless,
+    ]
+    .into_iter()
+    .flatten()
+    .collect();
     info!(total = all.len(), "All providers complete");
 
     let deduped = pipeline::dedup::dedup(all);

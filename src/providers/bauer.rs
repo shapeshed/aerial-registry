@@ -5,8 +5,16 @@ use tracing::{debug, error};
 use crate::station::Station;
 
 const COUNTRIES: &[(&str, &str, &str)] = &[
-    ("GB", "United Kingdom", "https://listenapi.planetradio.co.uk/api9.2/stations/GB"),
-    ("IE", "Ireland", "https://listenapi.planetradio.co.uk/api9.2/stations/IE"),
+    (
+        "GB",
+        "United Kingdom",
+        "https://listenapi.planetradio.co.uk/api9.2/stations/GB",
+    ),
+    (
+        "IE",
+        "Ireland",
+        "https://listenapi.planetradio.co.uk/api9.2/stations/IE",
+    ),
 ];
 
 #[derive(Deserialize)]
@@ -31,7 +39,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let resp = match client.get(*url).send().await {
             Ok(r) => r,
             Err(e) => {
-                error!(provider = "bauer", country = country_code, "Failed to fetch stations: {e}");
+                error!(
+                    provider = "bauer",
+                    country = country_code,
+                    "Failed to fetch stations: {e}"
+                );
                 continue;
             }
         };
@@ -39,7 +51,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let raw: Vec<BauerStation> = match resp.json().await {
             Ok(b) => b,
             Err(e) => {
-                error!(provider = "bauer", country = country_code, "Failed to parse response: {e}");
+                error!(
+                    provider = "bauer",
+                    country = country_code,
+                    "Failed to parse response: {e}"
+                );
                 continue;
             }
         };
@@ -75,6 +91,10 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         }
     }
 
-    tracing::info!(provider = "bauer", count = stations.len(), "Discovery complete");
+    tracing::info!(
+        provider = "bauer",
+        count = stations.len(),
+        "Discovery complete"
+    );
     stations
 }
