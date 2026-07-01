@@ -11,6 +11,7 @@ pub mod nrk;
 pub mod orf;
 pub mod radio_france;
 pub mod rai;
+pub mod rinse;
 pub mod rtbf;
 pub mod rte;
 pub mod rtp;

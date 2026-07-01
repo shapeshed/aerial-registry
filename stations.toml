@@ -21,13 +21,6 @@ logo_url = "https://media.nts.live/misc/nts_logo_1000x1000.png"
 tags = ["indie", "experimental", "electronic"]
 
 [[stations]]
-name = "Rinse FM"
-country_code = "GB"
-stream_url = "https://admin.stream.rinse.fm/stream"
-logo_url = "https://rinse.fm/wp-content/uploads/2021/01/rinse_logo_black.png"
-tags = ["electronic", "grime", "bass", "dance"]
-
-[[stations]]
 name = "Worldwide FM"
 country_code = "GB"
 stream_url = "https://worldwidefm.out.airtime.pro/worldwidefm_a"
