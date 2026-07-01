@@ -65,7 +65,10 @@ pub async fn discover(client: &Client) -> Vec<Station> {
     let api_key = match env::var(API_KEY_ENV) {
         Ok(k) if !k.is_empty() => k,
         _ => {
-            error!(provider = "radio-france", "{API_KEY_ENV} not set — skipping");
+            error!(
+                provider = "radio-france",
+                "{API_KEY_ENV} not set — skipping"
+            );
             return vec![];
         }
     };
@@ -124,7 +127,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         .filter_map(|(id, logo)| logo.map(|l| (id, l)))
         .collect();
 
-    debug!(provider = "radio-france", logos = logo_map.len(), "Fetched brand logos");
+    debug!(
+        provider = "radio-france",
+        logos = logo_map.len(),
+        "Fetched brand logos"
+    );
 
     let mut stations = Vec::new();
 
@@ -197,7 +204,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         }
     }
 
-    info!(provider = "radio-france", count = stations.len(), "Discovery complete");
+    info!(
+        provider = "radio-france",
+        count = stations.len(),
+        "Discovery complete"
+    );
     stations
 }
 

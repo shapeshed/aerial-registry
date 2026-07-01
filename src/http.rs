@@ -1,6 +1,10 @@
 use reqwest::Client;
 
-const USER_AGENT: &str = concat!("aerial-registry/", env!("CARGO_PKG_VERSION"), " (aerial-registry)");
+const USER_AGENT: &str = concat!(
+    "aerial-registry/",
+    env!("CARGO_PKG_VERSION"),
+    " (aerial-registry)"
+);
 
 pub fn build_client() -> reqwest::Result<Client> {
     Client::builder()

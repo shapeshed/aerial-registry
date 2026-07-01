@@ -93,9 +93,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             None => continue,
         };
 
-        let logo_url = node
-            .image
-            .map(|img| img.url.replace("{width}", "500"));
+        let logo_url = node.image.map(|img| img.url.replace("{width}", "500"));
 
         let tags = node
             .publication_service
@@ -120,6 +118,10 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         });
     }
 
-    tracing::info!(provider = "ard", count = stations.len(), "Discovery complete");
+    tracing::info!(
+        provider = "ard",
+        count = stations.len(),
+        "Discovery complete"
+    );
     stations
 }

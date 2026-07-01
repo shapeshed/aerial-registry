@@ -44,7 +44,11 @@ pub fn dedup(stations: Vec<Station>) -> Vec<Station> {
         }
     }
 
-    tracing::info!(before = input_count, after = out.len(), "Deduplication complete");
+    tracing::info!(
+        before = input_count,
+        after = out.len(),
+        "Deduplication complete"
+    );
     out
 }
 
