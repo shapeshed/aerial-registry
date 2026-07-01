@@ -4,6 +4,7 @@ pub mod bbc;
 pub mod curated;
 pub mod dr;
 pub mod global;
+pub mod npo;
 pub mod nrk;
 pub mod orf;
 pub mod radio_france;
