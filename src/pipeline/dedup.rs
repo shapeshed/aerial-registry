@@ -6,8 +6,8 @@ pub fn dedup(stations: Vec<Station>) -> Vec<Station> {
     let input_count = stations.len();
     // Broadcaster-direct providers ranked highest; aggregators lowest.
     let provider_rank = |p: &str| match p {
-        "bbc" | "bauer" | "dr" | "global" | "npo" | "nrk" | "orf" | "rai" | "rtbf" | "rte"
-        | "rtp" | "sr" | "wireless" => 0u8,
+        "abc" | "bbc" | "bauer" | "dr" | "global" | "npo" | "nrk" | "orf" | "rai" | "rtbf"
+        | "rte" | "rtp" | "sr" | "wireless" => 0u8,
         _ => 1u8,
     };
 
