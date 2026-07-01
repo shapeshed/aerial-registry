@@ -129,7 +129,6 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             description: None,
             provider: "rai".into(),
             provider_id: Some(uniquename),
-            livemeta_id: None,
             trusted: true,
         });
     }
