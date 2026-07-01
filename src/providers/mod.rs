@@ -2,6 +2,7 @@ pub mod ard;
 pub mod bauer;
 pub mod bbc;
 pub mod curated;
+pub mod dr;
 pub mod global;
 pub mod nrk;
 pub mod radio_france;
