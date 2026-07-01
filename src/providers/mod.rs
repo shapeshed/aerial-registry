@@ -3,6 +3,7 @@ pub mod bauer;
 pub mod bbc;
 pub mod curated;
 pub mod global;
+pub mod nrk;
 pub mod radio_france;
 pub mod rai;
 pub mod rtp;
