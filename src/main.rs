@@ -23,7 +23,7 @@ async fn main() -> anyhow::Result<()> {
 
     info!("Starting provider discovery");
 
-    let (ard, bbc, bauer, curated, global, radio_france, rai, rtp, rtve, wireless) = tokio::join!(
+    let (ard, bbc, bauer, curated, global, radio_france, rai, rtp, rtve, sr, wireless) = tokio::join!(
         providers::ard::discover(&client),
         providers::bbc::discover(&client),
         providers::bauer::discover(&client),
@@ -33,6 +33,7 @@ async fn main() -> anyhow::Result<()> {
         providers::rai::discover(&client),
         providers::rtp::discover(&client),
         providers::rtve::discover(&client),
+        providers::sr::discover(&client),
         providers::wireless::discover(&client),
     );
 
@@ -46,6 +47,7 @@ async fn main() -> anyhow::Result<()> {
         rai,
         rtp,
         rtve,
+        sr,
         wireless,
     ]
     .into_iter()

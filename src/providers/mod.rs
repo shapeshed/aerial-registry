@@ -7,4 +7,5 @@ pub mod radio_france;
 pub mod rai;
 pub mod rtp;
 pub mod rtve;
+pub mod sr;
 pub mod wireless;
