@@ -41,6 +41,7 @@ async fn main() -> anyhow::Result<()> {
         rte,
         rtp,
         rtve,
+        sbs,
         sr,
         wireless,
     ) = tokio::join!(
@@ -61,6 +62,7 @@ async fn main() -> anyhow::Result<()> {
         providers::rte::discover(&client),
         providers::rtp::discover(&client),
         providers::rtve::discover(&client),
+        providers::sbs::discover(&client),
         providers::sr::discover(&client),
         providers::wireless::discover(&client),
     );
@@ -83,6 +85,7 @@ async fn main() -> anyhow::Result<()> {
         rte,
         rtp,
         rtve,
+        sbs,
         sr,
         wireless,
     ]
