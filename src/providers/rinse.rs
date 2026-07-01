@@ -7,6 +7,9 @@ const COUNTRY_CODE: &str = "GB";
 
 struct RinseStation {
     name: &'static str,
+    /// Matches Rinse's own channel slug (the schedule API's `channel[].slug`
+    /// field) so a client can query now-playing info for this station.
+    slug: &'static str,
     stream_url: &'static str,
     tags: &'static [&'static str],
 }
@@ -23,21 +26,25 @@ struct RinseStation {
 const STATIONS: &[RinseStation] = &[
     RinseStation {
         name: "Rinse FM",
+        slug: "uk",
         stream_url: "https://admin.stream.rinse.fm/proxy/rinse_uk/stream",
         tags: &["electronic", "grime", "bass", "dance"],
     },
     RinseStation {
         name: "Rinse France",
+        slug: "france",
         stream_url: "https://radio10.pro-fhi.net/flux-trmqtiat/stream",
         tags: &["electronic", "techno", "bass"],
     },
     RinseStation {
         name: "Kool FM",
+        slug: "kool",
         stream_url: "https://admin.stream.rinse.fm/proxy/kool/stream",
         tags: &["drum and bass", "jungle"],
     },
     RinseStation {
         name: "SWU FM",
+        slug: "swu",
         stream_url: "https://admin.stream.rinse.fm/proxy/swu/stream",
         tags: &["reggae", "dub", "hip-hop"],
     },
@@ -55,7 +62,7 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
             tags: s.tags.iter().map(|t| t.to_string()).collect(),
             description: None,
             provider: "rinse".into(),
-            provider_id: None,
+            provider_id: Some(s.slug.to_string()),
             trusted: true,
         })
         .collect();
