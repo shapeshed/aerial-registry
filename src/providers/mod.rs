@@ -8,6 +8,7 @@ pub mod nrk;
 pub mod orf;
 pub mod radio_france;
 pub mod rai;
+pub mod rte;
 pub mod rtp;
 pub mod rtve;
 pub mod sr;
