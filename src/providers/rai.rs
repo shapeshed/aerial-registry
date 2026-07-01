@@ -90,9 +90,13 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         .into_iter()
         .filter_map(|item| {
             let cont_id = relinker_cont_id(&item.audio?.url)?.to_string();
+            // The "-transparent" logo is a white-only wordmark meant to sit on the
+            // channel's own brand-colour background; the plain variant at the same
+            // path carries the actual brand colour and renders correctly anywhere.
             let logo_url = item
                 .channel
                 .and_then(|c| c.logo)
+                .map(|logo| logo.replace("-transparent.png", ".png"))
                 .map(|logo| format!("{RAIPLAYSOUND_BASE}{logo}"));
             Some((item.uniquename, item.title, logo_url, cont_id))
         })
