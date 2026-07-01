@@ -6,8 +6,9 @@ pub fn dedup(stations: Vec<Station>) -> Vec<Station> {
     let input_count = stations.len();
     // Broadcaster-direct providers ranked highest; aggregators lowest.
     let provider_rank = |p: &str| match p {
-        "bbc" | "bauer" | "global" | "wireless" => 0u8,
-        _ => 1u8,
+        "ard" | "bbc" | "bauer" | "global" | "radio-france" | "rai" | "rtve" | "wireless" => 0u8,
+        "curated" => 1u8,
+        _ => 2u8,
     };
 
     let mut stations = stations;
@@ -44,7 +45,11 @@ pub fn dedup(stations: Vec<Station>) -> Vec<Station> {
         }
     }
 
-    tracing::info!(before = input_count, after = out.len(), "Deduplication complete");
+    tracing::info!(
+        before = input_count,
+        after = out.len(),
+        "Deduplication complete"
+    );
     out
 }
 
