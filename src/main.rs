@@ -24,6 +24,7 @@ async fn main() -> anyhow::Result<()> {
     info!("Starting provider discovery");
 
     let (
+        abc,
         ard,
         bbc,
         bauer,
@@ -42,6 +43,7 @@ async fn main() -> anyhow::Result<()> {
         sr,
         wireless,
     ) = tokio::join!(
+        providers::abc::discover(&client),
         providers::ard::discover(&client),
         providers::bbc::discover(&client),
         providers::bauer::discover(&client),
@@ -62,6 +64,7 @@ async fn main() -> anyhow::Result<()> {
     );
 
     let all: Vec<_> = [
+        abc,
         ard,
         bbc,
         bauer,
