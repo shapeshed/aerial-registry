@@ -140,9 +140,12 @@ pub async fn build(client: &reqwest::Client) -> anyhow::Result<()> {
         "Enrichment overlay delta"
     );
 
+    // Model calls get their own client: the pipeline client's 15s timeout
+    // would cancel local LLM generations mid-token.
+    let ai_client = crate::http::build_ai_client()?;
     let semaphore = std::sync::Arc::new(tokio::sync::Semaphore::new(config.concurrency));
     let tasks = pending[..capped].iter().map(|station| {
-        let client = client.clone();
+        let client = ai_client.clone();
         let config = config.clone();
         let semaphore = semaphore.clone();
         async move {
