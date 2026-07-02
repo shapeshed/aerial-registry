@@ -4,7 +4,7 @@ use serde::Deserialize;
 use tokio::{sync::Semaphore, task::JoinSet};
 use tracing::info;
 
-use crate::pipeline::liveness;
+use crate::pipeline::{dedup::normalise_url, liveness};
 
 const STATIONS_PATH: &str = "stations.toml";
 const REJECTED_PATH: &str = "stations_rejected.toml";
@@ -63,6 +63,14 @@ pub async fn prune_curated(client: &reqwest::Client) -> anyhow::Result<()> {
                     station,
                     keep: true,
                     stream_url,
+                    reason: None,
+                },
+                // Geo-suspect refusals from the build machine must not prune
+                // a curated station the listener may well be able to play.
+                Err(failure) if failure.is_geo_suspect() => PruneResult {
+                    stream_url: station.stream_url.clone(),
+                    station,
+                    keep: true,
                     reason: None,
                 },
                 Err(reason) => {
@@ -212,17 +220,6 @@ fn load_rejected_urls() -> HashSet<String> {
         .into_iter()
         .map(|station| normalise_url(&station.stream_url))
         .collect()
-}
-
-fn normalise_url(url: &str) -> String {
-    url.to_lowercase()
-        .trim_start_matches("https://")
-        .trim_start_matches("http://")
-        .trim_end_matches('/')
-        .split('?')
-        .next()
-        .unwrap_or_default()
-        .to_string()
 }
 
 fn toml_string(value: &str) -> String {

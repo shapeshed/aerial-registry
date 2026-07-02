@@ -9,6 +9,7 @@ permissions:
   id-token: write
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   build:
@@ -24,16 +25,35 @@ jobs:
       - name: Build
         run: cargo build --release
 
-      - name: Run pipeline
-        env:
-          RADIO_FRANCE_API_KEY: ${{ secrets.RADIO_FRANCE_API_KEY }}
-        run: cargo run --release
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ vars.AWS_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Download station state
+        run: aws s3 cp s3://${{ vars.S3_BUCKET }}/state/state.db state.db || echo "No previous state; starting fresh"
+
+      - name: Run pipeline
+        env:
+          RADIO_FRANCE_API_KEY: ${{ secrets.RADIO_FRANCE_API_KEY }}
+        run: cargo run --release
+
+      - name: Upload station state
+        run: aws s3 cp state.db s3://${{ vars.S3_BUCKET }}/state/state.db
+
+      - name: Report anomalies
+        if: ${{ hashFiles('anomalies.md') != '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Nightly registry anomalies"
+          existing=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file anomalies.md
+          else
+            gh issue create --title "$title" --body-file anomalies.md
+          fi
 
       - name: Upload to S3
         run: |
