@@ -82,14 +82,18 @@ Rules (enforced in `src/pipeline/liveness.rs`):
   changed name or stream URL keeps its row and its `first_seen`; surfacing
   the change lands with the diff report in step 3.
 
-## Step 3 — nightly diff report and anomaly issues
+## Step 3 — nightly diff report and anomaly issues (implemented)
 
-After the guard runs, diff the new registry against the previous one and write
-a summary to `$GITHUB_STEP_SUMMARY`: per-provider added/removed/renamed
-counts, guard interventions, liveness prune list. On anomalies only — guard
-triggered, trusted station failing, provider missing entirely — open (or
-update) a single GitHub issue rather than emailing every run. Quiet when
-healthy.
+`src/pipeline/report.rs` diffs the new registry against the previous one
+(keyed on `(provider, provider_id)`, so a rename shows as a rename and not as
+remove-plus-add) and appends a report to `$GITHUB_STEP_SUMMARY`: totals,
+per-provider previous/current/added/removed table, renames, and any guard
+interventions.
+
+When the guard intervened, the intervention table is also written to
+`anomalies.md` and the nightly workflow opens a `Nightly registry anomalies`
+issue (or comments on the open one). Anomalies are the only thing that pages
+a human; a healthy run is quiet.
 
 ## Step 4 — AI enrichment as a committed overlay
 
@@ -114,7 +118,7 @@ already tolerates messy model output; remaining work is prompt tuning.
 
 ## Order of work
 
-1. ~~Previous-registry guard~~ (this PR)
-2. State store + three-strike hysteresis + geo-aware liveness policy
-3. Nightly diff summary + anomaly-only issues
+1. ~~Previous-registry guard~~ (done)
+2. ~~State store + three-strike hysteresis + geo-aware liveness policy~~ (done)
+3. ~~Nightly diff summary + anomaly-only issues~~ (done)
 4. Un-stash the AI work onto a branch, refit as overlay + weekly delta job
