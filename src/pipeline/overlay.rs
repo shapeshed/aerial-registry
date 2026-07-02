@@ -349,6 +349,30 @@ fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
         };
     }
 
+    // Trusted providers are authoritative for their own names and
+    // descriptions; the model only contributes tags. A missing description
+    // may still be filled — the search index wants one — but never replaced.
+    if station.trusted {
+        return Entry {
+            provider,
+            provider_id,
+            source_hash: hash,
+            name: None,
+            tags: (!assessment.tags.is_empty() && assessment.tags != station.tags)
+                .then(|| assessment.tags.clone()),
+            description: if station.description.is_none() {
+                assessment
+                    .description
+                    .as_deref()
+                    .map(|d| d.trim().to_string())
+                    .filter(|d| !d.is_empty())
+            } else {
+                None
+            },
+            reject: false,
+        };
+    }
+
     let mut name = ai::canonicalize_name(&assessment.canonical_name);
     // Feed-distinguishing suffixes must survive the rename or the two feeds
     // of one station end up with identical display names.
@@ -623,6 +647,24 @@ mod tests {
         let mut b = assessment(0.9, true);
         b.canonical_name = "Sunrise 106".to_string();
         assert!(entry_from(&s2, &b).name.is_none());
+    }
+
+    #[test]
+    fn trusted_stations_only_get_tags_and_missing_descriptions() {
+        let mut s = station("bbc", "bbc_radio_one", "BBC Radio One");
+        s.trusted = true;
+        let mut a = assessment(0.95, true);
+        a.canonical_name = "BBC Radio 1".to_string();
+        let entry = entry_from(&s, &a);
+        assert!(entry.name.is_none());
+        assert!(entry.tags.is_some());
+        // Provider supplied no description: the model's fills the gap.
+        assert!(entry.description.is_some());
+
+        // Provider-supplied description is never replaced.
+        s.description = Some("The BBC's own words.".to_string());
+        let entry = entry_from(&s, &a);
+        assert!(entry.description.is_none());
     }
 
     #[test]
