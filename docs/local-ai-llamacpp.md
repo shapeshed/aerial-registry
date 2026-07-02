@@ -94,6 +94,14 @@ run against a scratch copy of the repo per model and diff the outputs.
   for the next run.
 - `AERIAL_AI_CONCURRENCY` — parallel requests; match `llama-server
   --parallel`.
+- `AERIAL_AI_AUDIT` — path to a JSONL file appended with one record per
+  assessment (old vs new name/tags/description, confidence, risks, reason)
+  for scripted comparison between models, e.g.
+  `jq '{old_name,new_name,reason}' review.jsonl`.
+
+Every assessment is also logged at info level as an `AI assessment` line
+with the full before/after; `RUST_LOG=info,aerial_registry::pipeline::ai=debug`
+additionally prints each raw model response before parsing.
 
 The client sends `temperature: 0`, so runs over the same sample are
 comparable between models. To re-assess everything from scratch, delete

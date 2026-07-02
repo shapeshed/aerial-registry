@@ -108,7 +108,7 @@ Model inference is decoupled from the nightly build:
   network dependency, reproducible output. Hand edits to the file are legal
   and survive until that station's source data changes.
 - `cargo run -- enrich-overlay` re-runs the model only for stations that are
-  new or whose `source_hash` (name, country, tags, description as supplied by
+  new or whose `source_hash` (name, country and description as supplied by
   the provider) changed, then rewrites the file sorted. The weekly
   `enrich.yml` workflow runs it with Claude Haiku via the Anthropic
   OpenAI-compatible endpoint and opens a PR with the delta; review is a quick
