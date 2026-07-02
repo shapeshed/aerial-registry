@@ -16,13 +16,10 @@ struct NetworksResponse {
 #[derive(Deserialize)]
 struct Network {
     default_service_id: Option<String>,
-    title: Option<String>,
-    titles: Option<Titles>,
-}
-
-#[derive(Deserialize)]
-struct Titles {
-    primary: Option<String>,
+    // The networks API exposes titles as long_title ("BBC Radio 4") and
+    // short_title ("Radio 4") — there is no plain `title` field.
+    long_title: Option<String>,
+    short_title: Option<String>,
 }
 
 pub async fn discover(client: &Client) -> Vec<Station> {
@@ -49,9 +46,14 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         .filter_map(|network| {
             let service_id = network.default_service_id.filter(|s| !s.is_empty())?;
             let name = network
-                .title
+                .long_title
                 .filter(|s| !s.is_empty())
-                .or_else(|| network.titles.and_then(|t| t.primary).filter(|s| !s.is_empty()))
+                .or_else(|| {
+                    network
+                        .short_title
+                        .filter(|s| !s.is_empty())
+                        .map(|t| brand_name(&t))
+                })
                 .unwrap_or_else(|| service_id_to_name(&service_id));
             let logo_url = format!(
                 "https://sounds.files.bbci.co.uk/3.9.4/networks/{service_id}/colour_default.svg"
@@ -133,6 +135,14 @@ pub async fn resolve_stream_url(client: &Client, url: &str) -> Option<String> {
         .map(str::to_owned)
 }
 
+fn brand_name(title: &str) -> String {
+    if title.starts_with("BBC") {
+        title.to_string()
+    } else {
+        format!("BBC {title}")
+    }
+}
+
 fn service_id_to_name(id: &str) -> String {
     let stripped = id.strip_prefix("bbc_").unwrap_or(id);
     let words: Vec<String> = stripped
@@ -160,5 +170,34 @@ fn service_id_to_name(id: &str) -> String {
         name
     } else {
         format!("BBC {name}")
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn network_titles_deserialize_and_resolve() {
+        let json = r#"{"data":[{"type":"network","id":"bbc_radio_four","short_title":"Radio 4","long_title":"BBC Radio 4","default_service_id":"bbc_radio_fourfm"}]}"#;
+        let parsed: NetworksResponse = serde_json::from_str(json).unwrap();
+        let network = parsed.data.into_iter().next().unwrap();
+        assert_eq!(network.long_title.as_deref(), Some("BBC Radio 4"));
+        assert_eq!(
+            network.default_service_id.as_deref(),
+            Some("bbc_radio_fourfm")
+        );
+    }
+
+    #[test]
+    fn brand_name_prefixes_bbc_once() {
+        assert_eq!(brand_name("Radio 4"), "BBC Radio 4");
+        assert_eq!(brand_name("BBC Radio 4 Extra"), "BBC Radio 4 Extra");
+    }
+
+    #[test]
+    fn service_id_fallback_still_works() {
+        assert_eq!(service_id_to_name("bbc_radio_fourfm"), "BBC Radio Fourfm");
+        assert_eq!(service_id_to_name("bbc_1xtra"), "BBC 1Xtra");
     }
 }
