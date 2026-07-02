@@ -314,7 +314,21 @@ fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
         };
     }
 
-    let name = ai::canonicalize_name(&assessment.canonical_name);
+    let mut name = ai::canonicalize_name(&assessment.canonical_name);
+    // Feed-distinguishing suffixes must survive the rename or the two feeds
+    // of one station end up with identical display names.
+    if station.name.ends_with(" (International)") && !name.ends_with("(International)") {
+        name.push_str(" (International)");
+    }
+    if collapses_brand(&station.name, &name) {
+        warn!(
+            provider = provider.as_str(),
+            old = %station.name,
+            new = %name,
+            "AI collapsed a variant stream to its parent brand; name override dropped"
+        );
+        name.clear();
+    }
     Entry {
         provider,
         provider_id,
@@ -329,6 +343,22 @@ fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
             .filter(|d| !d.is_empty() && Some(d.as_str()) != station.description.as_deref()),
         reject: false,
     }
+}
+
+/// True when the new name is the old name minus a short trailing variant
+/// word (98FM Dance → 98FM, BBC Radio One (International) → BBC Radio One).
+/// Slogan removals introduced by a separator (colon, dash) are not collapses.
+fn collapses_brand(old: &str, new: &str) -> bool {
+    let old = old.trim();
+    let Some(rest) = old.strip_prefix(new) else {
+        return false;
+    };
+    let rest = rest.trim();
+    !rest.is_empty()
+        && !rest.contains(':')
+        && !rest.contains('-')
+        && !rest.contains('–')
+        && rest.split_whitespace().count() <= 2
 }
 
 fn key(station: &Station) -> (String, String) {
@@ -483,5 +513,46 @@ mod tests {
         let back: OverlayFile = toml::from_str(&toml_str).unwrap();
         assert_eq!(back.stations.len(), 1);
         assert_eq!(back.stations[0].name.as_deref(), Some("Radio Centro"));
+    }
+
+    #[test]
+    fn collapses_brand_detects_variant_stripping() {
+        assert!(collapses_brand("98FM Dance", "98FM"));
+        assert!(collapses_brand("Absolute Radio 90s", "Absolute Radio"));
+        assert!(collapses_brand(
+            "BBC Radio One (International)",
+            "BBC Radio One"
+        ));
+        // Slogan removal after a separator is legitimate cleanup.
+        assert!(!collapses_brand(
+            "Radio Centro: Calidad En Tu Vida",
+            "Radio Centro"
+        ));
+        assert!(!collapses_brand(
+            "SWR4 Webradio – Der Sound einer Ära",
+            "SWR4 Webradio"
+        ));
+        // Different casing / real renames are not collapses.
+        assert!(!collapses_brand("BBC Radio One", "BBC Radio 1"));
+        assert!(!collapses_brand("1LIVE Top Hits ", "1LIVE Top Hits"));
+    }
+
+    #[test]
+    fn collapsed_name_override_is_dropped() {
+        let s = station("bauer", "98D", "98FM Dance");
+        let mut a = assessment(0.9, true);
+        a.canonical_name = "98FM".to_string();
+        let entry = entry_from(&s, &a);
+        assert!(entry.name.is_none());
+        assert!(entry.tags.is_some());
+    }
+
+    #[test]
+    fn international_suffix_is_preserved() {
+        let s = station("bbc", "bbc_radio_one_int", "BBC Radio One (International)");
+        let mut a = assessment(0.9, true);
+        a.canonical_name = "BBC Radio 1".to_string();
+        let entry = entry_from(&s, &a);
+        assert_eq!(entry.name.as_deref(), Some("BBC Radio 1 (International)"));
     }
 }

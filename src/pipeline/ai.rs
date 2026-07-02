@@ -174,6 +174,42 @@ pub async fn assess(
                     "risks": [],
                     "reason": "Commercial station; slogan stripped; not public radio."
                 }
+            },
+            {
+                "input": {
+                    "name": "98FM OldSkool",
+                    "country_code": "IE",
+                    "tags": []
+                },
+                "output": {
+                    "accept": true,
+                    "confidence": 0.9,
+                    "canonical_name": "98FM OldSkool",
+                    "country_code": "IE",
+                    "tags": ["oldies", "dance"],
+                    "description": "Dublin station streaming old school dance and club classics.",
+                    "logo_url": null,
+                    "risks": [],
+                    "reason": "Variant stream of 98FM; the variant word is part of the brand."
+                }
+            },
+            {
+                "input": {
+                    "name": "ABC Radio Adelaide",
+                    "country_code": "AU",
+                    "tags": ["news", "talkback"]
+                },
+                "output": {
+                    "accept": true,
+                    "confidence": 0.9,
+                    "canonical_name": "ABC Radio Adelaide",
+                    "country_code": "AU",
+                    "tags": ["public radio", "news", "talk"],
+                    "description": "Local news and talk station for Adelaide from the Australian Broadcasting Corporation.",
+                    "logo_url": null,
+                    "risks": [],
+                    "reason": "Local public broadcaster station; news/talk from source tags; no music genre invented."
+                }
             }
         ],
         "rules": [
@@ -183,6 +219,7 @@ pub async fn assess(
             "Preserve the source tags unless a tag is clearly contradicted by the station identity.",
             "Add only one or two new tags when the station identity clearly supports them.",
             "Do not invent secondary mood or genre tags.",
+            "Never infer a music genre from the broadcaster alone. Local and regional stations of public broadcasters (ABC Radio <city>, BBC Radio <county>) are news/talk stations unless the name, source tags, or description show otherwise. In particular, do not add classical without explicit evidence.",
             "If no tag clearly fits, return the source tags unchanged or [].",
             "Tags are for search discovery only.",
             "Apply public radio only when there is clear evidence of public funding: the station is a known national broadcaster (BBC, NPR, RFI, ABC, etc.), a university or educational station, or is explicitly named Radio Nacional, Radio Pública, or similar. Do not apply public radio based on quality slogans or simply because the name contains the word 'radio'.",
@@ -193,6 +230,8 @@ pub async fn assess(
             "Remove slogans, show titles, marketing copy, bitrates, codec labels, and other technical suffixes from canonical_name.",
             "Do not collapse a branded subchannel or show into its parent station. TRÍOS Y BOLEROS de Radio Felicidad is its own brand, not Radio Felicidad.",
             "Do not shorten titles like AMOR SOLO POP, MIX EN VIVO, AMOR 103.1 (Leon) down to the bare parent brand.",
+            "Variant streams keep their variant word: 98FM Dance, Absolute Radio 90s, and 1LIVE Diggi are complete canonical names. Never return only the parent brand for a variant stream.",
+            "Suffixes that distinguish feeds of the same station — (International), FM, AM, LW, HD2 — are part of the canonical name. Keep them.",
             "Preserve all-caps acronyms that are institution names: UNAM, IPN, UAM, BBC, CNN. Do not lowercase letters within acronyms.",
             "description must be short, factual, and in English.",
             "Do not repeat the title in the description.",
@@ -411,6 +450,14 @@ fn normalize_assessment_tags(assessment: &mut AiAssessment, station: &Station) {
         if tag == "rock" && mentions_news(&support_text) {
             continue;
         }
+        // Run 1 showed the model tagging public-broadcaster local stations
+        // "classical" by association; require textual evidence or a source tag.
+        if tag == "classical"
+            && !station.tags.iter().any(|t| t == "classical")
+            && !mentions_classical(&support_text)
+        {
+            continue;
+        }
         if !normalized.contains(&tag) {
             normalized.push(tag);
         }
@@ -456,6 +503,22 @@ fn mentions_news(support_text: &str) -> bool {
         || support_text.contains("noticias")
         || support_text.contains("información")
         || support_text.contains("informacion")
+}
+
+fn mentions_classical(support_text: &str) -> bool {
+    [
+        "classic",
+        "klassik",
+        "classique",
+        "clásica",
+        "clasica",
+        "sinfoni",
+        "philharmon",
+        "orchestra",
+        "opera",
+    ]
+    .iter()
+    .any(|t| support_text.contains(t))
 }
 
 /// Public-service broadcasters currently in the registry.

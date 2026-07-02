@@ -61,19 +61,25 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             Some((service_id, name, logo_url))
         })
         .flat_map(|(service_id, name, logo_url)| {
-            [("uk", ""), ("nonuk", " (International)")].map(|(variant, suffix)| {
-                let client = client.clone();
-                let service_id = service_id.clone();
-                let name = name.clone();
-                let logo_url = logo_url.clone();
-                async move {
-                    let manifest_url = format!(
-                        "https://a.files.bbci.co.uk/ms6/live/{MANIFEST_UUID}/audio/simulcast/hls/{variant}/pc_hd_abr_v2/ak/{service_id}.m3u8"
-                    );
-                    let resolved = resolve_stream_url(&client, &manifest_url).await;
-                    (service_id, name, logo_url, suffix, resolved)
-                }
-            })
+            // The UK and International feeds are distinct stations and must
+            // carry distinct provider_ids: everything downstream (state
+            // store, diff report, enrichment overlay, app favourites) keys
+            // on (provider, provider_id).
+            [("uk", "", ""), ("nonuk", " (International)", "_int")].map(
+                |(variant, suffix, id_suffix)| {
+                    let client = client.clone();
+                    let service_id = service_id.clone();
+                    let name = name.clone();
+                    let logo_url = logo_url.clone();
+                    async move {
+                        let manifest_url = format!(
+                            "https://a.files.bbci.co.uk/ms6/live/{MANIFEST_UUID}/audio/simulcast/hls/{variant}/pc_hd_abr_v2/ak/{service_id}.m3u8"
+                        );
+                        let resolved = resolve_stream_url(&client, &manifest_url).await;
+                        (format!("{service_id}{id_suffix}"), name, logo_url, suffix, resolved)
+                    }
+                },
+            )
         })
         .collect();
 
