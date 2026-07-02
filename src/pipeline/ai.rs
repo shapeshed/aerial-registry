@@ -481,6 +481,7 @@ fn normalize_assessment_tags(assessment: &mut AiAssessment, station: &Station) {
         if tag == "classical"
             && !station.tags.iter().any(|t| t == "classical")
             && !mentions_classical(&genre_evidence)
+            && !station.name.to_lowercase().trim_end().ends_with("classic")
         {
             continue;
         }
@@ -532,8 +533,11 @@ fn mentions_news(support_text: &str) -> bool {
 }
 
 fn mentions_classical(support_text: &str) -> bool {
+    // Deliberately "classical", not "classic": "classic comedy" and
+    // "classic hits" are not evidence of classical music (run 4 gave
+    // BBC Radio 4 Extra a classical tag off "classic comedy and drama").
     [
-        "classic",
+        "classical",
         "klassik",
         "classique",
         "clásica",
@@ -993,6 +997,16 @@ mod tests {
         let mut a = assessment("Classical music station from the BBC.");
         normalize_assessment_tags(&mut a, &station("BBC Radio Three"));
         assert!(a.tags.contains(&"classical".to_string()));
+
+        // "classic comedy" is not classical music.
+        let mut c = assessment("Classic comedy and drama from the BBC archive.");
+        normalize_assessment_tags(&mut c, &station("BBC Radio 4 Extra"));
+        assert!(!c.tags.contains(&"classical".to_string()));
+
+        // A brand ending in "Classic" is evidence in itself.
+        let mut d = assessment("Australian public radio station.");
+        normalize_assessment_tags(&mut d, &station("ABC Classic"));
+        assert!(d.tags.contains(&"classical".to_string()));
 
         // Local news/talk station with no evidence anywhere — tag stripped.
         let mut b = assessment("Local news and talk for Adelaide.");

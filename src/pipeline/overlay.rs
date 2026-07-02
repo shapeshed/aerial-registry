@@ -355,7 +355,11 @@ fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
     if station.name.ends_with(" (International)") && !name.ends_with("(International)") {
         name.push_str(" (International)");
     }
-    if name != station.name && ai::EXAMPLE_NAMES.contains(&name.as_str()) {
+    // Exact match for real-station example names; containment for the
+    // fictional marker — run 4 leaked a truncated "Sunrise 106".
+    let echoes_example = ai::EXAMPLE_NAMES.contains(&name.as_str())
+        || (name.contains("Sunrise 106") && !station.name.contains("Sunrise 106"));
+    if name != station.name && echoes_example {
         warn!(
             provider = provider.as_str(),
             old = %station.name,
@@ -612,6 +616,13 @@ mod tests {
         a.canonical_name = "Sunrise 106 OldSkool".to_string();
         let entry = entry_from(&s, &a);
         assert!(entry.name.is_none());
+
+        // Truncated echo of the fictional example (run 4: "Cool Old Skool"
+        // renamed to "Sunrise 106") is caught by containment.
+        let s2 = station("bauer", "cwf", "Cool Old Skool");
+        let mut b = assessment(0.9, true);
+        b.canonical_name = "Sunrise 106".to_string();
+        assert!(entry_from(&s2, &b).name.is_none());
     }
 
     #[test]
