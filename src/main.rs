@@ -100,7 +100,8 @@ async fn main() -> anyhow::Result<()> {
     let deduped = pipeline::dedup::dedup(all);
     let enriched = pipeline::enrich::enrich(&client, deduped).await;
     let live = pipeline::liveness::check(&client, enriched).await;
-    pipeline::output::write(live)?;
+    let guarded = pipeline::guard::apply(&client, live).await;
+    pipeline::output::write(guarded)?;
 
     Ok(())
 }
