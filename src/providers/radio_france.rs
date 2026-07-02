@@ -11,9 +11,9 @@ use crate::station::Station;
 const GRAPHQL_URL: &str = "https://openapi.radiofrance.fr/v1/graphql";
 const BRAND_PAGE_BASE: &str = "https://www.radiofrance.fr";
 const API_KEY_ENV: &str = "RADIO_FRANCE_API_KEY";
-const QUERY: &str = "{ brands { id title baseline description liveStream \
-    webRadios { id title description liveStream } \
-    localRadios { id title description liveStream } } }";
+const QUERY: &str = "{ brands { id title baseline description liveStream playerUrl \
+    webRadios { id title description liveStream playerUrl } \
+    localRadios { id title description liveStream playerUrl } } }";
 
 #[derive(Deserialize)]
 struct GqlResponse {
@@ -33,6 +33,7 @@ struct Brand {
     baseline: Option<String>,
     description: Option<String>,
     live_stream: Option<String>,
+    player_url: Option<String>,
     web_radios: Option<Vec<SubRadio>>,
     local_radios: Option<Vec<SubRadio>>,
 }
@@ -44,6 +45,20 @@ struct SubRadio {
     title: String,
     description: Option<String>,
     live_stream: Option<String>,
+    player_url: Option<String>,
+}
+
+/// Radio France's public GraphQL `id` (e.g. "FIP", "FRANCEINFO") isn't the ID the
+/// client-side now-playing enricher needs — that's a separate legacy numeric
+/// "webradio" ID used by api.radiofrance.fr/livemeta, which has no public
+/// unauthenticated lookup. It's embedded in `playerUrl` as `?id_station=<N>`, so
+/// this pulls it out to use as `provider_id` instead of the string code, letting
+/// the Android app read it straight off `provider_id` (matching the pattern
+/// Rinse/RTE already use) without needing this API key client-side.
+fn extract_id_station(player_url: &str) -> Option<String> {
+    let (_, after) = player_url.split_once("id_station=")?;
+    let id: String = after.chars().take_while(|c| c.is_ascii_digit()).collect();
+    (!id.is_empty()).then_some(id)
 }
 
 /// Extracts the SVG brand logo from the SvelteKit asset URL embedded in the brand's page HTML.
@@ -139,11 +154,20 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let logo_url = logo_map.get(&brand.id).cloned();
 
         // Main brand stream
-        if let Some(stream_url) = brand.live_stream.filter(|u| !u.is_empty()) {
+        if let Some(stream_url) = brand
+            .live_stream
+            .filter(|u| !u.is_empty())
+            .map(upgrade_lofi)
+        {
             let description = brand
                 .baseline
                 .filter(|s| !s.is_empty())
                 .or_else(|| brand.description.clone().filter(|s| !s.is_empty()));
+            let provider_id = brand
+                .player_url
+                .as_deref()
+                .and_then(extract_id_station)
+                .or_else(|| Some(brand.id.clone()));
             debug!(provider = "radio-france", name = %brand.title, %stream_url, "Discovered station");
             stations.push(Station {
                 name: brand.title.clone(),
@@ -154,18 +178,27 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 tags: vec![],
                 description,
                 provider: "radio-france".into(),
-                provider_id: Some(brand.id.clone()),
+                provider_id,
                 trusted: true,
             });
         }
 
         // Thematic web radio sub-channels (e.g. FIP Rock, FIP Jazz, France Musique Classique Easy)
         for radio in brand.web_radios.unwrap_or_default() {
-            let Some(stream_url) = radio.live_stream.filter(|u| !u.is_empty()) else {
+            let Some(stream_url) = radio
+                .live_stream
+                .filter(|u| !u.is_empty())
+                .map(upgrade_lofi)
+            else {
                 continue;
             };
             let name = qualify_name(&brand.title, &radio.title);
             let description = radio.description.filter(|s| !s.is_empty());
+            let provider_id = radio
+                .player_url
+                .as_deref()
+                .and_then(extract_id_station)
+                .or(Some(radio.id));
             debug!(provider = "radio-france", %name, %stream_url, "Discovered web radio");
             stations.push(Station {
                 name,
@@ -176,18 +209,27 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 tags: vec![],
                 description,
                 provider: "radio-france".into(),
-                provider_id: Some(radio.id),
+                provider_id,
                 trusted: true,
             });
         }
 
         // Regional stations (ICI / France Bleu network)
         for radio in brand.local_radios.unwrap_or_default() {
-            let Some(stream_url) = radio.live_stream.filter(|u| !u.is_empty()) else {
+            let Some(stream_url) = radio
+                .live_stream
+                .filter(|u| !u.is_empty())
+                .map(upgrade_lofi)
+            else {
                 continue;
             };
             let name = qualify_name(&brand.title, &radio.title);
             let description = radio.description.filter(|s| !s.is_empty());
+            let provider_id = radio
+                .player_url
+                .as_deref()
+                .and_then(extract_id_station)
+                .or(Some(radio.id));
             debug!(provider = "radio-france", %name, %stream_url, "Discovered local radio");
             stations.push(Station {
                 name,
@@ -198,7 +240,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 tags: vec![],
                 description,
                 provider: "radio-france".into(),
-                provider_id: Some(radio.id),
+                provider_id,
                 trusted: true,
             });
         }
@@ -210,6 +252,14 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         "Discovery complete"
     );
     stations
+}
+
+/// Every radio-france icecast stream is served at "-midfi" (128kbps) except France
+/// Culture, which the API serves at "-lofi" (32kbps) — that bitrate/samplerate
+/// combination causes chronic AudioTrack underruns and playback failures on-device.
+/// A "-midfi" variant exists for it too, so upgrade any "-lofi" stream found.
+fn upgrade_lofi(url: String) -> String {
+    url.replace("-lofi.mp3", "-midfi.mp3")
 }
 
 /// Prefix sub-radio title with the brand title if it doesn't already begin with it.
