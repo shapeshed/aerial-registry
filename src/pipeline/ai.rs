@@ -619,7 +619,10 @@ fn title_case_word(word: &str) -> String {
         "DW", // Institution acronyms
         "IPN", "UNAM", "UAM", "ITAM", "BUAP", "UANL", "UABC",
     ];
-    if ABBREVIATIONS.contains(&word) || word.chars().any(|c| c.is_ascii_digit()) {
+    // Short all-caps words are almost always acronyms the list can't
+    // enumerate (CWR, GLR, LBC); leave them alone rather than produce "Cwr".
+    let short_acronym = word.len() <= 3 && word.chars().all(|c| c.is_ascii_uppercase());
+    if ABBREVIATIONS.contains(&word) || short_acronym || word.chars().any(|c| c.is_ascii_digit()) {
         return word.to_string();
     }
     let mut chars = word.chars();
@@ -908,6 +911,7 @@ mod tests {
         );
         assert_eq!(canonicalize_name("Azul (89.5 FM) Livestream"), "Azul");
         assert_eq!(canonicalize_name("BBC RADIO LONDON"), "BBC Radio London");
+        assert_eq!(canonicalize_name("BBC CWR"), "BBC CWR");
         assert_eq!(canonicalize_name("Radio UNAM (FM)"), "Radio UNAM (FM)");
     }
 
