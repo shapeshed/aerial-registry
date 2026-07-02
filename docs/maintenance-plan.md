@@ -40,10 +40,11 @@ to avoid re-introducing duplicates.
 
 This is deliberately stateless: the published registry itself is the state.
 
-## Step 2 — station state store and prune hysteresis
+## Step 2 — station state store and prune hysteresis (implemented)
 
-Add a small SQLite database, committed nowhere, persisted between nightly runs
-via `actions/cache` (or S3 alongside the registry):
+`src/pipeline/state.rs` holds a small SQLite database (`state.db`, override
+with `AERIAL_STATE_DB`; empty string disables it and hysteresis with it),
+persisted between nightly runs at `s3://<bucket>/state/state.db`:
 
 ```sql
 CREATE TABLE station_state (
@@ -52,29 +53,34 @@ CREATE TABLE station_state (
   first_seen   TEXT NOT NULL,   -- ISO date
   last_seen    TEXT NOT NULL,
   consecutive_failures INTEGER NOT NULL DEFAULT 0,
-  source_hash  TEXT,            -- hash of provider-supplied fields
+  last_status  TEXT,            -- live | geo_blocked | unreachable | ...
+  source_hash  TEXT,            -- hash of provider-supplied fields (step 4)
   PRIMARY KEY (provider, provider_id)
 );
 ```
 
 Keyed on `(provider, provider_id)` — the composite identity the app already
-uses. The stashed AI experiment (`stash@{1}` on the main checkout) contains a
-working `cache.rs` with this shape, including `source_hash` change detection.
+uses — falling back to the stream URL for providers with no id. Rows unseen
+for 90 days are dropped.
 
-Rules:
+Rules (enforced in `src/pipeline/liveness.rs`):
 
 - **Three strikes before prune.** An untrusted station failing liveness is
   only dropped after three consecutive nightly failures. One bad night keeps
-  the station with `consecutive_failures` incremented.
+  the station with `consecutive_failures` incremented. `UnsupportedScheme` is
+  a property of the URL, not the network, and still prunes immediately.
+  Without a state store there is no memory, so behaviour falls back to
+  immediate pruning.
 - **Geo-suspect statuses never prune.** HTTP 403/451 responses from the runner
-  are recorded but never remove a station; the build machine's location is not
-  the listener's.
-- **Trusted providers never auto-prune.** A trusted station failing repeatedly
-  opens a GitHub issue instead — it signals a provider integration bug, not a
-  dead station.
+  are recorded (`last_status = geo_blocked`) but never remove a station and
+  never count as failures; the build machine's location is not the
+  listener's. The same rule applies to `prune-curated`.
+- **Trusted providers never auto-prune.** Liveness skips them entirely.
+  Opening a GitHub issue when a trusted station fails repeatedly lands with
+  the diff report in step 3.
 - **Renames are updates, not churn.** Same `(provider, provider_id)` with a
-  changed name or stream URL updates the row and flags the change in the diff
-  report; `first_seen` is preserved.
+  changed name or stream URL keeps its row and its `first_seen`; surfacing
+  the change lands with the diff report in step 3.
 
 ## Step 3 — nightly diff report and anomaly issues
 
