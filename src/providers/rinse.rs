@@ -2,9 +2,6 @@ use reqwest::Client;
 
 use crate::station::Station;
 
-const COUNTRY: &str = "United Kingdom";
-const COUNTRY_CODE: &str = "GB";
-
 struct RinseStation {
     name: &'static str,
     /// Matches Rinse's own channel slug (the schedule API's `channel[].slug`
@@ -12,7 +9,12 @@ struct RinseStation {
     slug: &'static str,
     stream_url: &'static str,
     tags: &'static [&'static str],
+    country: &'static str,
+    country_code: &'static str,
+    logo_url: Option<&'static str>,
 }
+
+const RINSE_LOGO_URL: &str = "https://www.rinse.fm/favicon/android-chrome-512x512.png";
 
 /// Rinse's live channel lineup is embedded as Craft CMS entry data inside a
 /// React Server Components payload on rinse.fm's homepage — there is no
@@ -29,24 +31,38 @@ const STATIONS: &[RinseStation] = &[
         slug: "uk",
         stream_url: "https://admin.stream.rinse.fm/proxy/rinse_uk/stream",
         tags: &["electronic", "grime", "bass", "dance"],
+        country: "United Kingdom",
+        country_code: "GB",
+        logo_url: Some(RINSE_LOGO_URL),
     },
     RinseStation {
         name: "Rinse France",
         slug: "france",
         stream_url: "https://radio10.pro-fhi.net/flux-trmqtiat/stream",
         tags: &["electronic", "techno", "bass"],
+        country: "France",
+        country_code: "FR",
+        logo_url: Some(RINSE_LOGO_URL),
     },
     RinseStation {
         name: "Kool FM",
         slug: "kool",
         stream_url: "https://admin.stream.rinse.fm/proxy/kool/stream",
         tags: &["drum and bass", "jungle"],
+        country: "United Kingdom",
+        country_code: "GB",
+        logo_url: Some("https://upload.wikimedia.org/wikipedia/en/f/f5/Kool_FM_London_logo.png"),
     },
     RinseStation {
         name: "SWU FM",
         slug: "swu",
         stream_url: "https://admin.stream.rinse.fm/proxy/swu/stream",
         tags: &["reggae", "dub", "hip-hop"],
+        country: "United Kingdom",
+        country_code: "GB",
+        logo_url: Some(
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS87W6uf8q3sdxHxOQJWCLPGiM2fpEoCCoecRWXYsAyoQ&s=10",
+        ),
     },
 ];
 
@@ -56,9 +72,9 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
         .map(|s| Station {
             name: s.name.to_string(),
             stream_url: s.stream_url.to_string(),
-            logo_url: None,
-            country: Some(COUNTRY.into()),
-            country_code: Some(COUNTRY_CODE.into()),
+            logo_url: s.logo_url.map(|l| l.to_string()),
+            country: Some(s.country.into()),
+            country_code: Some(s.country_code.into()),
             tags: s.tags.iter().map(|t| t.to_string()).collect(),
             description: None,
             provider: "rinse".into(),
