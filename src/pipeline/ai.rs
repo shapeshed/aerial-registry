@@ -439,6 +439,17 @@ async fn repair_assessment(
 fn normalize_assessment_tags(assessment: &mut AiAssessment, station: &Station) {
     let original = std::mem::take(&mut assessment.tags);
     let support_text = tag_support_text(station);
+    // The model's own description counts as evidence for genre gating: a
+    // hallucinated tag is a word in a list, but "classical music station
+    // from the BBC" is a commitment (it saved BBC Radio 3's classical tag).
+    let genre_evidence = format!(
+        "{support_text} {}",
+        assessment
+            .description
+            .as_deref()
+            .unwrap_or("")
+            .to_lowercase()
+    );
     let mut normalized = Vec::new();
     for tag in &original {
         let Some(tag) = tags::normalize_tag(tag) else {
@@ -451,10 +462,11 @@ fn normalize_assessment_tags(assessment: &mut AiAssessment, station: &Station) {
             continue;
         }
         // Run 1 showed the model tagging public-broadcaster local stations
-        // "classical" by association; require textual evidence or a source tag.
+        // "classical" by association; require a source tag or textual
+        // evidence (station text or the model's description).
         if tag == "classical"
             && !station.tags.iter().any(|t| t == "classical")
-            && !mentions_classical(&support_text)
+            && !mentions_classical(&genre_evidence)
         {
             continue;
         }
@@ -934,6 +946,44 @@ mod tests {
         assert_eq!(parsed.canonical_name, "Radio X");
         assert_eq!(parsed.country_code, "GB");
         assert!(parsed.accept);
+    }
+
+    #[test]
+    fn classical_gate_accepts_description_evidence() {
+        let station = |name: &str| Station {
+            name: name.to_string(),
+            stream_url: "https://example.com/s".to_string(),
+            logo_url: None,
+            country: Some("United Kingdom".to_string()),
+            country_code: Some("GB".to_string()),
+            tags: vec![],
+            description: None,
+            provider: "bbc".to_string(),
+            provider_id: None,
+            trusted: true,
+        };
+        let assessment = |description: &str| AiAssessment {
+            accept: true,
+            confidence: 0.9,
+            canonical_name: "X".to_string(),
+            country_code: "GB".to_string(),
+            tags: vec!["classical".to_string(), "public radio".to_string()],
+            description: Some(description.to_string()),
+            logo_url: None,
+            risks: vec![],
+            reason: "r".to_string(),
+        };
+
+        // BBC Radio 3: no "classical" in the name, but the model's own
+        // description asserts the format — tag survives.
+        let mut a = assessment("Classical music station from the BBC.");
+        normalize_assessment_tags(&mut a, &station("BBC Radio Three"));
+        assert!(a.tags.contains(&"classical".to_string()));
+
+        // Local news/talk station with no evidence anywhere — tag stripped.
+        let mut b = assessment("Local news and talk for Adelaide.");
+        normalize_assessment_tags(&mut b, &station("ABC Radio Adelaide"));
+        assert!(!b.tags.contains(&"classical".to_string()));
     }
 
     #[test]
