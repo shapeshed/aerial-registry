@@ -8,6 +8,38 @@ use crate::station::Station;
 
 const DEFAULT_PREVIOUS_URL: &str = "https://aerial.shapeshed.com/registry.json.gz";
 
+/// One provider the guard stepped in for.
+pub struct Intervention {
+    pub provider: String,
+    pub previous: usize,
+    pub discovered: usize,
+    pub carried: usize,
+}
+
+/// Fetch the previously published registry for guard comparison and the
+/// nightly diff report.
+///
+/// Set `AERIAL_PREVIOUS_REGISTRY_URL` to override the source, or set it to an
+/// empty string to disable the guard (and the diff report with it).
+pub async fn fetch(client: &reqwest::Client) -> Option<Vec<Station>> {
+    let url = match std::env::var("AERIAL_PREVIOUS_REGISTRY_URL") {
+        Ok(v) if v.is_empty() => {
+            info!("Previous-registry guard disabled");
+            return None;
+        }
+        Ok(v) => v,
+        Err(_) => DEFAULT_PREVIOUS_URL.to_string(),
+    };
+
+    match fetch_registry(client, &url).await {
+        Ok(p) => Some(p),
+        Err(e) => {
+            warn!(url, error = %e, "Could not fetch previous registry; guard skipped");
+            None
+        }
+    }
+}
+
 /// Guards the published registry against transient provider failures.
 ///
 /// A provider API that times out or returns a malformed response during one
@@ -16,31 +48,17 @@ const DEFAULT_PREVIOUS_URL: &str = "https://aerial.shapeshed.com/registry.json.g
 /// previously published registry and, where a provider lost more than half of
 /// its stations, carry yesterday's entries forward instead of publishing the
 /// hole.
-///
-/// Set `AERIAL_PREVIOUS_REGISTRY_URL` to override the comparison source, or
-/// set it to an empty string to disable the guard.
-pub async fn apply(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Station> {
-    let url = match std::env::var("AERIAL_PREVIOUS_REGISTRY_URL") {
-        Ok(v) if v.is_empty() => {
-            info!("Previous-registry guard disabled");
-            return stations;
-        }
-        Ok(v) => v,
-        Err(_) => DEFAULT_PREVIOUS_URL.to_string(),
-    };
-
-    let previous = match fetch_previous(client, &url).await {
-        Ok(p) => p,
-        Err(e) => {
-            warn!(url, error = %e, "Could not fetch previous registry; guard skipped");
-            return stations;
-        }
-    };
-
-    merge(stations, previous)
+pub fn apply(
+    stations: Vec<Station>,
+    previous: Option<&[Station]>,
+) -> (Vec<Station>, Vec<Intervention>) {
+    match previous {
+        Some(previous) => merge(stations, previous),
+        None => (stations, Vec::new()),
+    }
 }
 
-async fn fetch_previous(client: &reqwest::Client, url: &str) -> anyhow::Result<Vec<Station>> {
+async fn fetch_registry(client: &reqwest::Client, url: &str) -> anyhow::Result<Vec<Station>> {
     let resp = client.get(url).send().await?.error_for_status()?;
     let bytes = resp.bytes().await?;
 
@@ -57,9 +75,9 @@ async fn fetch_previous(client: &reqwest::Client, url: &str) -> anyhow::Result<V
     Ok(serde_json::from_slice(&json)?)
 }
 
-fn merge(current: Vec<Station>, previous: Vec<Station>) -> Vec<Station> {
+fn merge(current: Vec<Station>, previous: &[Station]) -> (Vec<Station>, Vec<Intervention>) {
     let current_counts = count_by_provider(&current);
-    let previous_counts = count_by_provider(&previous);
+    let previous_counts = count_by_provider(previous);
 
     let failed: Vec<&String> = previous_counts
         .keys()
@@ -72,7 +90,7 @@ fn merge(current: Vec<Station>, previous: Vec<Station>) -> Vec<Station> {
 
     if failed.is_empty() {
         info!("Previous-registry guard passed; no provider anomalies");
-        return current;
+        return (current, Vec::new());
     }
 
     // Drop the failed providers' partial output and carry forward yesterday's
@@ -86,6 +104,7 @@ fn merge(current: Vec<Station>, previous: Vec<Station>) -> Vec<Station> {
         .map(|s| super::dedup::normalise_url(&s.stream_url))
         .collect();
 
+    let mut interventions = Vec::new();
     for provider in &failed {
         let carried: Vec<Station> = previous
             .iter()
@@ -95,17 +114,24 @@ fn merge(current: Vec<Station>, previous: Vec<Station>) -> Vec<Station> {
             })
             .cloned()
             .collect();
+        let intervention = Intervention {
+            provider: (*provider).clone(),
+            previous: previous_counts[*provider],
+            discovered: current_counts.get(*provider).copied().unwrap_or(0),
+            carried: carried.len(),
+        };
         warn!(
-            provider = provider.as_str(),
-            previous = previous_counts[*provider],
-            discovered = current_counts.get(*provider).copied().unwrap_or(0),
-            carried = carried.len(),
+            provider = intervention.provider.as_str(),
+            previous = intervention.previous,
+            discovered = intervention.discovered,
+            carried = intervention.carried,
             "Provider lost more than half its stations; carrying forward previous entries"
         );
+        interventions.push(intervention);
         out.extend(carried);
     }
 
-    out
+    (out, interventions)
 }
 
 fn count_by_provider(stations: &[Station]) -> HashMap<String, usize> {
@@ -153,8 +179,9 @@ mod tests {
     fn healthy_providers_pass_through_unchanged() {
         let current = vec![station("bbc", "a"), station("bbc", "b")];
         let previous = vec![station("bbc", "a"), station("bbc", "b")];
-        let out = merge(current, previous);
+        let (out, interventions) = merge(current, &previous);
         assert_eq!(out.len(), 2);
+        assert!(interventions.is_empty());
     }
 
     #[test]
@@ -165,9 +192,12 @@ mod tests {
             station("wireless", "w1"),
             station("wireless", "w2"),
         ];
-        let out = merge(current, previous);
+        let (out, interventions) = merge(current, &previous);
         assert_eq!(out.len(), 3);
         assert_eq!(out.iter().filter(|s| s.provider == "wireless").count(), 2);
+        assert_eq!(interventions.len(), 1);
+        assert_eq!(interventions[0].provider, "wireless");
+        assert_eq!(interventions[0].carried, 2);
     }
 
     #[test]
@@ -181,7 +211,7 @@ mod tests {
             station("rinse", "r3"),
             station("rinse", "r4"),
         ];
-        let out = merge(current, previous);
+        let (out, _) = merge(current, &previous);
         assert_eq!(out.len(), 4);
     }
 
@@ -189,9 +219,10 @@ mod tests {
     fn carried_entries_skip_urls_owned_elsewhere() {
         let current = vec![station("curated", "shared")];
         let previous = vec![station("wireless", "shared"), station("wireless", "w2")];
-        let out = merge(current, previous);
+        let (out, interventions) = merge(current, &previous);
         assert_eq!(out.len(), 2);
         assert_eq!(out.iter().filter(|s| s.provider == "wireless").count(), 1);
+        assert_eq!(interventions[0].carried, 1);
     }
 
     #[test]
@@ -199,7 +230,16 @@ mod tests {
         // A provider present today but absent yesterday must not be touched.
         let current = vec![station("sbs", "s1")];
         let previous = vec![];
-        let out = merge(current, previous);
+        let (out, interventions) = merge(current, &previous);
         assert_eq!(out.len(), 1);
+        assert!(interventions.is_empty());
+    }
+
+    #[test]
+    fn apply_without_previous_is_a_passthrough() {
+        let current = vec![station("bbc", "a")];
+        let (out, interventions) = apply(current, None);
+        assert_eq!(out.len(), 1);
+        assert!(interventions.is_empty());
     }
 }
