@@ -350,7 +350,9 @@ pub fn source_hash(station: &Station) -> String {
     };
     eat(station.name.as_bytes());
     eat(station.country_code.as_deref().unwrap_or("").as_bytes());
-    eat(station.tags.join(",").as_bytes());
+    // Tags are deliberately excluded: by the time stations reach this code
+    // they carry Radio Browser enrichment, which drifts with votes and server
+    // rotation. Hashing tags would re-assess stations weekly for that noise.
     eat(station.description.as_deref().unwrap_or("").as_bytes());
     format!("{hash:016x}")
 }
@@ -420,6 +422,14 @@ mod tests {
         let mut c = station("curated", "1", "Radio Centro");
         c.name = "RADIO CENTRO: Calidad".to_string();
         assert_ne!(source_hash(&a), source_hash(&c));
+    }
+
+    #[test]
+    fn tag_drift_does_not_change_source_hash() {
+        let a = station("curated", "1", "Radio Centro");
+        let mut b = station("curated", "1", "Radio Centro");
+        b.tags = vec!["jazz".to_string(), "funk".to_string()];
+        assert_eq!(source_hash(&a), source_hash(&b));
     }
 
     #[test]

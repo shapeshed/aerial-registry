@@ -13,38 +13,6 @@ const MAX_CONCURRENT: usize = 20;
 const MAX_RETRIES: u32 = 3;
 const RETRY_BASE_MS: u64 = 500;
 
-// Tags that describe logistics, geography, or brand rather than genre/format.
-const NOISE: &[&str] = &[
-    "radio",
-    "bbc",
-    "uk",
-    "england",
-    "scotland",
-    "wales",
-    "ireland",
-    "london",
-    "fm",
-    "am",
-    "dab",
-    "dab+",
-    "hd",
-    "internet",
-    "web",
-    "online",
-    "stream",
-    "streaming",
-    "live",
-    "public",
-    "europe",
-    "national",
-    "local",
-    "regional",
-    "digital",
-    "broadcast",
-    "english",
-    "station",
-];
-
 #[derive(Deserialize)]
 struct RbServer {
     name: String,
@@ -217,13 +185,38 @@ fn search_name(name: &str) -> String {
     name.trim_end_matches(" (International)").trim().to_owned()
 }
 
+// Radio Browser tags are free-form; only tags that map into the registry
+// taxonomy survive, so every published station's tags conform whether or not
+// the AI overlay has assessed it yet.
 fn clean_tags(raw: &str) -> Vec<String> {
-    raw.split(',')
-        .map(|t| t.trim().to_lowercase())
-        .filter(|t| !t.is_empty())
-        .filter(|t| t.is_ascii())
-        .filter(|t| !NOISE.contains(&t.as_str()))
-        .filter(|t| t.len() >= 3)
-        .filter(|t| !(t.contains('.') && t.chars().any(|c| c.is_ascii_digit())))
-        .collect()
+    let mut out = Vec::new();
+    for tag in raw.split(',') {
+        if !tag.is_ascii() {
+            continue;
+        }
+        if let Some(tag) = super::tags::normalize_tag(tag)
+            && !out.contains(&tag)
+        {
+            out.push(tag);
+        }
+    }
+    out
+}
+
+#[cfg(test)]
+mod tests {
+    use super::clean_tags;
+
+    #[test]
+    fn maps_free_form_tags_into_taxonomy() {
+        assert_eq!(
+            clean_tags("Rap, classic hits, jazz, RAP"),
+            vec!["hip-hop".to_string(), "jazz".to_string()]
+        );
+    }
+
+    #[test]
+    fn drops_noise_and_unknown_genres() {
+        assert!(clean_tags("radio, fm, online, webradio, schlager, 128kbps").is_empty());
+    }
 }
