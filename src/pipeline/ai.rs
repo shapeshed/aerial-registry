@@ -242,6 +242,12 @@ pub async fn assess(
     let Some(choice) = response.choices.into_iter().next() else {
         return Ok(None);
     };
+    debug!(
+        provider = %station.provider,
+        name = %station.name,
+        raw = %choice.message.content,
+        "AI raw response"
+    );
     let mut assessment: AiAssessment = match parse_assessment(&choice.message.content) {
         Ok(assessment) => assessment,
         Err(e) => {

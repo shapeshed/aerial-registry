@@ -157,7 +157,12 @@ pub async fn build(client: &reqwest::Client) -> anyhow::Result<()> {
     for (station, assessment) in results {
         match assessment {
             Ok(Some(assessment)) => {
-                entries.insert(key(station), entry_from(station, assessment));
+                let entry = entry_from(station, &assessment);
+                log_assessment(station, &assessment, &entry);
+                if let Err(e) = write_audit(station, &assessment, &entry) {
+                    warn!(error = %e, "Failed to write AI audit record");
+                }
+                entries.insert(key(station), entry);
                 assessed += 1;
             }
             Ok(None) => {}
@@ -184,7 +189,90 @@ pub async fn build(client: &reqwest::Client) -> anyhow::Result<()> {
     Ok(())
 }
 
-fn entry_from(station: &Station, assessment: ai::AiAssessment) -> Entry {
+/// Log old → new for every assessment so a local run reads as a review
+/// stream, whatever the log level of the surrounding pipeline noise.
+fn log_assessment(station: &Station, assessment: &ai::AiAssessment, entry: &Entry) {
+    info!(
+        provider = %station.provider,
+        provider_id = %entry.provider_id,
+        old_name = %station.name,
+        new_name = entry.name.as_deref().unwrap_or(&station.name),
+        old_tags = ?station.tags,
+        new_tags = ?entry.tags.as_deref().unwrap_or(&station.tags),
+        old_description = station.description.as_deref().unwrap_or(""),
+        new_description = entry
+            .description
+            .as_deref()
+            .or(station.description.as_deref())
+            .unwrap_or(""),
+        reject = entry.reject,
+        confidence = assessment.confidence,
+        reason = %assessment.reason,
+        "AI assessment"
+    );
+}
+
+#[derive(Serialize)]
+struct AuditRecord<'a> {
+    provider: &'a str,
+    provider_id: &'a str,
+    old_name: &'a str,
+    new_name: &'a str,
+    old_tags: &'a [String],
+    new_tags: &'a [String],
+    old_description: Option<&'a str>,
+    new_description: Option<&'a str>,
+    accepted: bool,
+    reject: bool,
+    confidence: f32,
+    risks: &'a [String],
+    reason: &'a str,
+}
+
+/// Append a JSONL audit record when `AERIAL_AI_AUDIT` names a file — the
+/// review artifact for comparing models over the same sample.
+fn write_audit(
+    station: &Station,
+    assessment: &ai::AiAssessment,
+    entry: &Entry,
+) -> anyhow::Result<()> {
+    let Ok(path) = std::env::var("AERIAL_AI_AUDIT") else {
+        return Ok(());
+    };
+    if path.is_empty() {
+        return Ok(());
+    }
+    let record = AuditRecord {
+        provider: &station.provider,
+        provider_id: &entry.provider_id,
+        old_name: &station.name,
+        new_name: entry.name.as_deref().unwrap_or(&station.name),
+        old_tags: &station.tags,
+        new_tags: entry.tags.as_deref().unwrap_or(&station.tags),
+        old_description: station.description.as_deref(),
+        new_description: entry
+            .description
+            .as_deref()
+            .or(station.description.as_deref()),
+        accepted: assessment.accept,
+        reject: entry.reject,
+        confidence: assessment.confidence,
+        risks: &assessment.risks,
+        reason: &assessment.reason,
+    };
+    if let Some(parent) = std::path::Path::new(&path).parent() {
+        std::fs::create_dir_all(parent)?;
+    }
+    use std::io::Write;
+    let mut file = std::fs::OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open(path)?;
+    writeln!(file, "{}", serde_json::to_string(&record)?)?;
+    Ok(())
+}
+
+fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
     let (provider, provider_id) = key(station);
     let hash = source_hash(station);
 
@@ -230,9 +318,10 @@ fn entry_from(station: &Station, assessment: ai::AiAssessment) -> Entry {
         source_hash: hash,
         name: (!name.is_empty() && name != station.name).then_some(name),
         tags: (!assessment.tags.is_empty() && assessment.tags != station.tags)
-            .then_some(assessment.tags),
+            .then(|| assessment.tags.clone()),
         description: assessment
             .description
+            .as_deref()
             .map(|d| d.trim().to_string())
             .filter(|d| !d.is_empty() && Some(d.as_str()) != station.description.as_deref()),
         reject: false,
@@ -336,7 +425,7 @@ mod tests {
     #[test]
     fn confident_assessment_produces_overrides() {
         let s = station("curated", "1", "RADIO CENTRO: Calidad En Tu Vida");
-        let entry = entry_from(&s, assessment(0.9, true));
+        let entry = entry_from(&s, &assessment(0.9, true));
         assert_eq!(entry.name.as_deref(), Some("Radio Centro"));
         assert_eq!(entry.tags.as_deref(), Some(&["latin".to_string()][..]));
         assert!(!entry.reject);
@@ -345,7 +434,7 @@ mod tests {
     #[test]
     fn low_confidence_records_hash_only() {
         let s = station("curated", "1", "Radio Centro");
-        let entry = entry_from(&s, assessment(0.4, true));
+        let entry = entry_from(&s, &assessment(0.4, true));
         assert!(entry.name.is_none());
         assert!(entry.tags.is_none());
         assert!(entry.description.is_none());
@@ -355,11 +444,11 @@ mod tests {
     #[test]
     fn rejection_only_applies_to_untrusted() {
         let s = station("curated", "1", "JUNK 123");
-        assert!(entry_from(&s, assessment(0.9, false)).reject);
+        assert!(entry_from(&s, &assessment(0.9, false)).reject);
 
         let mut trusted = station("bbc", "one", "BBC Radio 1");
         trusted.trusted = true;
-        assert!(!entry_from(&trusted, assessment(0.9, false)).reject);
+        assert!(!entry_from(&trusted, &assessment(0.9, false)).reject);
     }
 
     #[test]
