@@ -12,6 +12,19 @@ const DEFAULT_RETRY_SECS: u64 = 10;
 /// Minimum model confidence before an assessment is applied to the overlay.
 pub const APPLY_CONFIDENCE: f32 = 0.6;
 
+/// Canonical names used in the few-shot examples. Small models sometimes echo
+/// an example verbatim (run 3 renamed four Bauer stations, including one
+/// called "All Irish", to the example's "98FM OldSkool"); a rename to any of
+/// these is leakage, never a real assessment.
+pub const EXAMPLE_NAMES: &[&str] = &[
+    "Radio Disney 94.3",
+    "88.9 Noticias",
+    "Radio Centro",
+    "Sunrise 106 OldSkool",
+    "ABC Radio Adelaide",
+    "Match",
+];
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AiAssessment {
     pub accept: bool,
@@ -177,20 +190,20 @@ pub async fn assess(
             },
             {
                 "input": {
-                    "name": "98FM OldSkool",
+                    "name": "Sunrise 106 OldSkool",
                     "country_code": "IE",
                     "tags": []
                 },
                 "output": {
                     "accept": true,
                     "confidence": 0.9,
-                    "canonical_name": "98FM OldSkool",
+                    "canonical_name": "Sunrise 106 OldSkool",
                     "country_code": "IE",
                     "tags": ["oldies", "dance"],
-                    "description": "Dublin station streaming old school dance and club classics.",
+                    "description": "Station streaming old school dance and club classics.",
                     "logo_url": null,
                     "risks": [],
-                    "reason": "Variant stream of 98FM; the variant word is part of the brand."
+                    "reason": "Variant stream of Sunrise 106; the variant word is part of the brand."
                 }
             },
             {
@@ -219,11 +232,12 @@ pub async fn assess(
             "Preserve the source tags unless a tag is clearly contradicted by the station identity.",
             "Add only one or two new tags when the station identity clearly supports them.",
             "Do not invent secondary mood or genre tags.",
-            "Never infer a music genre from the broadcaster alone. Local and regional stations of public broadcasters (ABC Radio <city>, BBC Radio <county>) are news/talk stations unless the name, source tags, or description show otherwise. In particular, do not add classical without explicit evidence.",
+            "Never infer a music genre from the broadcaster alone. Local and regional stations of public broadcasters (ABC Radio <city>, BBC Radio <county>) are news/talk stations unless the name, source tags, or description show otherwise. In particular, do not add classical to local or regional stations without explicit evidence.",
             "If no tag clearly fits, return the source tags unchanged or [].",
             "Tags are for search discovery only.",
             "Apply public radio only when there is clear evidence of public funding: the station is a known national broadcaster (BBC, NPR, RFI, ABC, etc.), a university or educational station, or is explicitly named Radio Nacional, Radio Pública, or similar. Do not apply public radio based on quality slogans or simply because the name contains the word 'radio'.",
             "canonical_name is the public brand/name only.",
+            "canonical_name must be recognisably derived from the source name. Never substitute a different station's name, and never copy a name from these examples.",
             "If a station is already known by a canonical public brand name, use that exact brand name.",
             "Normalize all-caps station names to title case: AZUL 89 → Azul 89, BEAT → Beat, RADIO ANAHUAC → Radio Anahuac, LOS 40 PRINCIPALES → Los 40 Principales. Keep known abbreviations in caps: BBC, CNN, NPR, FM, AM, HD.",
             "The canonical_name is always the brand that appears BEFORE the colon, never the slogan after it. MATCH: ¡Más Pop, Conéctate! → Match.",

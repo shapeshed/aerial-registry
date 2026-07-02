@@ -180,6 +180,8 @@ pub async fn build(client: &reqwest::Client) -> anyhow::Result<()> {
         }
     }
 
+    drop_colliding_names(&stations, &mut entries);
+
     let mut sorted: Vec<Entry> = entries.into_values().collect();
     sorted.sort_by(|a, b| {
         a.provider
@@ -190,6 +192,39 @@ pub async fn build(client: &reqwest::Client) -> anyhow::Result<()> {
     save(sorted)?;
     info!(assessed, entries = count, "Enrichment overlay written");
     Ok(())
+}
+
+/// Drop name overrides that would leave two stations of one provider with
+/// the same display name (run 3: two France Musique variants both renamed
+/// to plain "France Musique", colliding with the real one).
+fn drop_colliding_names(stations: &[Station], entries: &mut HashMap<(String, String), Entry>) {
+    let mut counts: HashMap<(String, String), usize> = HashMap::new();
+    for station in stations {
+        let display = entries
+            .get(&key(station))
+            .and_then(|e| e.name.clone())
+            .unwrap_or_else(|| station.name.clone());
+        *counts
+            .entry((station.provider.clone(), display))
+            .or_insert(0) += 1;
+    }
+    for station in stations {
+        let Some(entry) = entries.get_mut(&key(station)) else {
+            continue;
+        };
+        let Some(name) = entry.name.clone() else {
+            continue;
+        };
+        if counts[&(station.provider.clone(), name.clone())] > 1 {
+            warn!(
+                provider = %station.provider,
+                old = %station.name,
+                new = %name,
+                "Name override collides with another station; dropped"
+            );
+            entry.name = None;
+        }
+    }
 }
 
 /// Log old → new for every assessment so a local run reads as a review
@@ -320,6 +355,15 @@ fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
     if station.name.ends_with(" (International)") && !name.ends_with("(International)") {
         name.push_str(" (International)");
     }
+    if name != station.name && ai::EXAMPLE_NAMES.contains(&name.as_str()) {
+        warn!(
+            provider = provider.as_str(),
+            old = %station.name,
+            new = %name,
+            "AI echoed a few-shot example name; name override dropped"
+        );
+        name.clear();
+    }
     if collapses_brand(&station.name, &name) {
         warn!(
             provider = provider.as_str(),
@@ -346,19 +390,24 @@ fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
 }
 
 /// True when the new name is the old name minus a short trailing variant
-/// word (98FM Dance → 98FM, BBC Radio One (International) → BBC Radio One).
-/// Slogan removals introduced by a separator (colon, dash) are not collapses.
+/// (98FM Dance → 98FM, CBC Radio One: Grand Falls → CBC Radio One). Removing
+/// a slogan is legitimate cleanup, but a slogan is a separator followed by a
+/// phrase — a separator followed by one or two words is a variant or city
+/// marker (France Musique - Classique Plus), which is identity, not slogan.
 fn collapses_brand(old: &str, new: &str) -> bool {
+    if new.is_empty() {
+        return false;
+    }
     let old = old.trim();
     let Some(rest) = old.strip_prefix(new) else {
         return false;
     };
+    let words = rest
+        .split_whitespace()
+        .filter(|w| !w.chars().all(|c| matches!(c, ':' | '-' | '–' | '|' | '•')))
+        .count();
     let rest = rest.trim();
-    !rest.is_empty()
-        && !rest.contains(':')
-        && !rest.contains('-')
-        && !rest.contains('–')
-        && rest.split_whitespace().count() <= 2
+    !rest.is_empty() && words <= 2
 }
 
 fn key(station: &Station) -> (String, String) {
@@ -436,7 +485,7 @@ mod tests {
         ai::AiAssessment {
             accept,
             confidence,
-            canonical_name: "Radio Centro".to_string(),
+            canonical_name: "Radio Cardinal".to_string(),
             country_code: "MX".to_string(),
             tags: vec!["latin".to_string()],
             description: Some("Mexican commercial radio station.".to_string()),
@@ -469,7 +518,7 @@ mod tests {
     fn confident_assessment_produces_overrides() {
         let s = station("curated", "1", "RADIO CENTRO: Calidad En Tu Vida");
         let entry = entry_from(&s, &assessment(0.9, true));
-        assert_eq!(entry.name.as_deref(), Some("Radio Centro"));
+        assert_eq!(entry.name.as_deref(), Some("Radio Cardinal"));
         assert_eq!(entry.tags.as_deref(), Some(&["latin".to_string()][..]));
         assert!(!entry.reject);
     }
@@ -535,6 +584,81 @@ mod tests {
         // Different casing / real renames are not collapses.
         assert!(!collapses_brand("BBC Radio One", "BBC Radio 1"));
         assert!(!collapses_brand("1LIVE Top Hits ", "1LIVE Top Hits"));
+    }
+
+    #[test]
+    fn collapses_brand_catches_city_and_variant_separators() {
+        // Separator + one/two words is a city or variant marker, not a slogan.
+        assert!(collapses_brand(
+            "CBC Radio One: Grand Falls",
+            "CBC Radio One"
+        ));
+        assert!(collapses_brand(
+            "France Musique - Classique Plus",
+            "France Musique"
+        ));
+        // A real slogan (3+ words) may still be stripped.
+        assert!(!collapses_brand(
+            "Radio Centro: Calidad En Tu Vida",
+            "Radio Centro"
+        ));
+        assert!(!collapses_brand("Anything", ""));
+    }
+
+    #[test]
+    fn example_name_echo_is_dropped() {
+        let s = station("bauer", "tfa", "All Irish");
+        let mut a = assessment(0.9, true);
+        a.canonical_name = "Sunrise 106 OldSkool".to_string();
+        let entry = entry_from(&s, &a);
+        assert!(entry.name.is_none());
+    }
+
+    #[test]
+    fn colliding_name_overrides_are_dropped() {
+        let stations = vec![
+            station("radio-france", "4", "France Musique"),
+            station("radio-france", "402", "France Musique - Classique Plus"),
+            station("radio-france", "401", "France Musique - Classique Easy"),
+        ];
+        let mut entries: HashMap<(String, String), Entry> = HashMap::new();
+        entries.insert(
+            ("radio-france".to_string(), "402".to_string()),
+            Entry {
+                provider: "radio-france".to_string(),
+                provider_id: "402".to_string(),
+                source_hash: "h".to_string(),
+                name: Some("France Musique".to_string()),
+                tags: None,
+                description: None,
+                reject: false,
+            },
+        );
+        entries.insert(
+            ("radio-france".to_string(), "401".to_string()),
+            Entry {
+                provider: "radio-france".to_string(),
+                provider_id: "401".to_string(),
+                source_hash: "h".to_string(),
+                name: Some("France Musique Easy".to_string()),
+                tags: None,
+                description: None,
+                reject: false,
+            },
+        );
+        drop_colliding_names(&stations, &mut entries);
+        // 402's rename collides with the real France Musique: dropped.
+        assert!(
+            entries[&("radio-france".to_string(), "402".to_string())]
+                .name
+                .is_none()
+        );
+        // 401's rename is unique: kept.
+        assert!(
+            entries[&("radio-france".to_string(), "401".to_string())]
+                .name
+                .is_some()
+        );
     }
 
     #[test]
