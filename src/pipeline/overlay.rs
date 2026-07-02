@@ -1,0 +1,385 @@
+use std::collections::HashMap;
+
+use serde::{Deserialize, Serialize};
+use tracing::{info, warn};
+
+use super::ai;
+use crate::station::Station;
+
+const OVERLAY_PATH: &str = "enrichment.toml";
+
+/// One reviewed enrichment result, keyed by the station's cross-run identity.
+///
+/// `enrichment.toml` is committed: the nightly build applies it with no model
+/// or network dependency, and the weekly `enrich-overlay` job PRs updates for
+/// stations that are new or whose provider-supplied fields changed
+/// (`source_hash`).
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Entry {
+    pub provider: String,
+    pub provider_id: String,
+    pub source_hash: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub name: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub tags: Option<Vec<String>>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub description: Option<String>,
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub reject: bool,
+}
+
+#[derive(Debug, Default, Serialize, Deserialize)]
+struct OverlayFile {
+    #[serde(default, rename = "station")]
+    stations: Vec<Entry>,
+}
+
+/// Apply the committed overlay to the discovered stations. Runs in the
+/// nightly build after enrich and before liveness; deterministic and offline.
+pub fn apply(stations: Vec<Station>) -> Vec<Station> {
+    let entries = load();
+    if entries.is_empty() {
+        info!("No enrichment overlay; skipping");
+        return stations;
+    }
+    let by_key: HashMap<(String, String), &Entry> = entries
+        .iter()
+        .map(|e| ((e.provider.clone(), e.provider_id.clone()), e))
+        .collect();
+
+    let total = stations.len();
+    let mut applied = 0usize;
+    let mut rejected = 0usize;
+    let mut stale = 0usize;
+
+    let out: Vec<Station> = stations
+        .into_iter()
+        .filter_map(|mut station| {
+            let Some(entry) = by_key.get(&key(&station)) else {
+                return Some(station);
+            };
+            if entry.source_hash != source_hash(&station) {
+                // Provider data moved on since this entry was reviewed; still
+                // apply it (better than raw), the weekly job will refresh it.
+                stale += 1;
+            }
+            if entry.reject {
+                rejected += 1;
+                return None;
+            }
+            if let Some(name) = &entry.name {
+                station.name = name.clone();
+            }
+            if let Some(tags) = &entry.tags {
+                station.tags = tags.clone();
+            }
+            if let Some(description) = &entry.description {
+                station.description = Some(description.clone());
+            }
+            applied += 1;
+            Some(station)
+        })
+        .collect();
+
+    info!(
+        total,
+        entries = entries.len(),
+        applied,
+        rejected,
+        stale,
+        "Enrichment overlay applied"
+    );
+    out
+}
+
+/// Weekly job: assess stations that are new or whose source fields changed,
+/// then rewrite `enrichment.toml`. The workflow turns the diff into a PR.
+pub async fn build(client: &reqwest::Client) -> anyhow::Result<()> {
+    let Some(config) = ai::config_from_env() else {
+        anyhow::bail!("AERIAL_AI_URL and AERIAL_AI_MODEL must be set for enrich-overlay");
+    };
+
+    let all = crate::providers::discover_all(client).await;
+    let deduped = super::dedup::dedup(all);
+    let stations = super::enrich::enrich(client, deduped).await;
+
+    let mut entries: HashMap<(String, String), Entry> = load()
+        .into_iter()
+        .map(|e| ((e.provider.clone(), e.provider_id.clone()), e))
+        .collect();
+
+    // Drop entries for stations that no longer exist upstream.
+    let live_keys: std::collections::HashSet<(String, String)> = stations.iter().map(key).collect();
+    let before = entries.len();
+    entries.retain(|k, _| live_keys.contains(k));
+    let removed = before - entries.len();
+
+    let pending: Vec<&Station> = stations
+        .iter()
+        .filter(|s| {
+            entries
+                .get(&key(s))
+                .map(|e| e.source_hash != source_hash(s))
+                .unwrap_or(true)
+        })
+        .collect();
+    let limit = config.limit.unwrap_or(pending.len());
+    let capped = pending.len().min(limit);
+    if pending.len() > capped {
+        info!(
+            pending = pending.len(),
+            capped, "AERIAL_AI_LIMIT reached; remaining stations left for the next run"
+        );
+    }
+    info!(
+        stations = stations.len(),
+        unchanged = stations.len() - pending.len(),
+        assessing = capped,
+        removed_entries = removed,
+        "Enrichment overlay delta"
+    );
+
+    let semaphore = std::sync::Arc::new(tokio::sync::Semaphore::new(config.concurrency));
+    let tasks = pending[..capped].iter().map(|station| {
+        let client = client.clone();
+        let config = config.clone();
+        let semaphore = semaphore.clone();
+        async move {
+            let _permit = semaphore.acquire().await.expect("semaphore is open");
+            let assessment = ai::assess(&client, &config, station).await;
+            (*station, assessment)
+        }
+    });
+    let results = futures::future::join_all(tasks).await;
+
+    let mut assessed = 0usize;
+    for (station, assessment) in results {
+        match assessment {
+            Ok(Some(assessment)) => {
+                entries.insert(key(station), entry_from(station, assessment));
+                assessed += 1;
+            }
+            Ok(None) => {}
+            Err(e) => {
+                warn!(
+                    provider = %station.provider,
+                    name = %station.name,
+                    error = %e,
+                    "AI assessment failed"
+                );
+            }
+        }
+    }
+
+    let mut sorted: Vec<Entry> = entries.into_values().collect();
+    sorted.sort_by(|a, b| {
+        a.provider
+            .cmp(&b.provider)
+            .then(a.provider_id.cmp(&b.provider_id))
+    });
+    let count = sorted.len();
+    save(sorted)?;
+    info!(assessed, entries = count, "Enrichment overlay written");
+    Ok(())
+}
+
+fn entry_from(station: &Station, assessment: ai::AiAssessment) -> Entry {
+    let (provider, provider_id) = key(station);
+    let hash = source_hash(station);
+
+    // Rejection only ever drops aggregator/curated records; a trusted
+    // broadcaster feed the model dislikes is a model problem, not a station
+    // problem.
+    if !assessment.accept && !station.trusted {
+        info!(
+            provider,
+            name = %station.name,
+            reason = %assessment.reason,
+            "AI rejected station; overlay will drop it"
+        );
+        return Entry {
+            provider,
+            provider_id,
+            source_hash: hash,
+            name: None,
+            tags: None,
+            description: None,
+            reject: true,
+        };
+    }
+
+    if assessment.confidence < ai::APPLY_CONFIDENCE {
+        // Not confident enough to override anything: record the hash so the
+        // station is not re-assessed every week, but change nothing.
+        return Entry {
+            provider,
+            provider_id,
+            source_hash: hash,
+            name: None,
+            tags: None,
+            description: None,
+            reject: false,
+        };
+    }
+
+    let name = ai::canonicalize_name(&assessment.canonical_name);
+    Entry {
+        provider,
+        provider_id,
+        source_hash: hash,
+        name: (!name.is_empty() && name != station.name).then_some(name),
+        tags: (!assessment.tags.is_empty() && assessment.tags != station.tags)
+            .then_some(assessment.tags),
+        description: assessment
+            .description
+            .map(|d| d.trim().to_string())
+            .filter(|d| !d.is_empty() && Some(d.as_str()) != station.description.as_deref()),
+        reject: false,
+    }
+}
+
+fn key(station: &Station) -> (String, String) {
+    let id = match station.provider_id.as_deref() {
+        Some(id) if !id.is_empty() => id.to_string(),
+        _ => station.stream_url.clone(),
+    };
+    (station.provider.clone(), id)
+}
+
+/// Stable FNV-1a hash of the provider-supplied fields that feed the model.
+/// A change means the station needs re-assessment.
+pub fn source_hash(station: &Station) -> String {
+    let mut hash: u64 = 0xcbf2_9ce4_8422_2325;
+    let mut eat = |bytes: &[u8]| {
+        for b in bytes {
+            hash ^= u64::from(*b);
+            hash = hash.wrapping_mul(0x0000_0100_0000_01b3);
+        }
+        hash ^= 0x1f; // field separator
+        hash = hash.wrapping_mul(0x0000_0100_0000_01b3);
+    };
+    eat(station.name.as_bytes());
+    eat(station.country_code.as_deref().unwrap_or("").as_bytes());
+    eat(station.tags.join(",").as_bytes());
+    eat(station.description.as_deref().unwrap_or("").as_bytes());
+    format!("{hash:016x}")
+}
+
+fn load() -> Vec<Entry> {
+    let Ok(source) = std::fs::read_to_string(OVERLAY_PATH) else {
+        return Vec::new();
+    };
+    match toml::from_str::<OverlayFile>(&source) {
+        Ok(file) => file.stations,
+        Err(e) => {
+            warn!(error = %e, "Could not parse enrichment overlay; ignoring it");
+            Vec::new()
+        }
+    }
+}
+
+fn save(stations: Vec<Entry>) -> anyhow::Result<()> {
+    let file = OverlayFile { stations };
+    let body = toml::to_string_pretty(&file)?;
+    let header = "# AI enrichment overlay. Generated by `cargo run -- enrich-overlay`;\n\
+                  # applied deterministically by the nightly build. Edit by hand freely —\n\
+                  # entries survive until the station's source_hash changes.\n\n";
+    std::fs::write(OVERLAY_PATH, format!("{header}{body}"))?;
+    Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn station(provider: &str, id: &str, name: &str) -> Station {
+        Station {
+            name: name.to_string(),
+            stream_url: format!("https://example.com/{id}"),
+            logo_url: None,
+            country: None,
+            country_code: Some("MX".to_string()),
+            tags: vec!["pop".to_string()],
+            description: None,
+            provider: provider.to_string(),
+            provider_id: Some(id.to_string()),
+            trusted: false,
+        }
+    }
+
+    fn assessment(confidence: f32, accept: bool) -> ai::AiAssessment {
+        ai::AiAssessment {
+            accept,
+            confidence,
+            canonical_name: "Radio Centro".to_string(),
+            country_code: "MX".to_string(),
+            tags: vec!["latin".to_string()],
+            description: Some("Mexican commercial radio station.".to_string()),
+            logo_url: None,
+            risks: vec![],
+            reason: "test".to_string(),
+        }
+    }
+
+    #[test]
+    fn source_hash_is_stable_and_sensitive() {
+        let a = station("curated", "1", "Radio Centro");
+        let b = station("curated", "1", "Radio Centro");
+        assert_eq!(source_hash(&a), source_hash(&b));
+
+        let mut c = station("curated", "1", "Radio Centro");
+        c.name = "RADIO CENTRO: Calidad".to_string();
+        assert_ne!(source_hash(&a), source_hash(&c));
+    }
+
+    #[test]
+    fn confident_assessment_produces_overrides() {
+        let s = station("curated", "1", "RADIO CENTRO: Calidad En Tu Vida");
+        let entry = entry_from(&s, assessment(0.9, true));
+        assert_eq!(entry.name.as_deref(), Some("Radio Centro"));
+        assert_eq!(entry.tags.as_deref(), Some(&["latin".to_string()][..]));
+        assert!(!entry.reject);
+    }
+
+    #[test]
+    fn low_confidence_records_hash_only() {
+        let s = station("curated", "1", "Radio Centro");
+        let entry = entry_from(&s, assessment(0.4, true));
+        assert!(entry.name.is_none());
+        assert!(entry.tags.is_none());
+        assert!(entry.description.is_none());
+        assert!(!entry.reject);
+    }
+
+    #[test]
+    fn rejection_only_applies_to_untrusted() {
+        let s = station("curated", "1", "JUNK 123");
+        assert!(entry_from(&s, assessment(0.9, false)).reject);
+
+        let mut trusted = station("bbc", "one", "BBC Radio 1");
+        trusted.trusted = true;
+        assert!(!entry_from(&trusted, assessment(0.9, false)).reject);
+    }
+
+    #[test]
+    fn overlay_roundtrips_through_toml() {
+        let entry = Entry {
+            provider: "curated".to_string(),
+            provider_id: "https://example.com/1".to_string(),
+            source_hash: "abc123".to_string(),
+            name: Some("Radio Centro".to_string()),
+            tags: Some(vec!["latin".to_string()]),
+            description: None,
+            reject: false,
+        };
+        let file = OverlayFile {
+            stations: vec![entry],
+        };
+        let toml_str = toml::to_string_pretty(&file).unwrap();
+        assert!(!toml_str.contains("reject"));
+        let back: OverlayFile = toml::from_str(&toml_str).unwrap();
+        assert_eq!(back.stations.len(), 1);
+        assert_eq!(back.stations[0].name.as_deref(), Some("Radio Centro"));
+    }
+}

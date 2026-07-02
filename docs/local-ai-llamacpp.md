@@ -60,38 +60,44 @@ curl -s http://127.0.0.1:9000/v1/chat/completions \
 
 `llama-server` serves whichever model it loaded regardless of the `model`
 field in the request, so `AERIAL_AI_MODEL` is effectively a label — keep it
-meaningful (`gemma`, `llama`) because it names the audit output.
+meaningful (`gemma`, `llama`).
 
 There is also a status page at <http://127.0.0.1:9000/> for watching slot
 usage and token throughput.
 
 ## Point the pipeline at it
 
+The enrichment run is a separate subcommand — the nightly registry build
+never calls a model, it only applies the committed `enrichment.toml`:
+
 ```sh
-AERIAL_PROVIDERS=radio-browser \
-RADIO_BROWSER_COUNTRIES=MX \
 AERIAL_AI_URL=http://127.0.0.1:9000 \
 AERIAL_AI_MODEL=gemma \
 AERIAL_AI_LIMIT=100 \
 AERIAL_AI_CONCURRENCY=4 \
-AERIAL_AI_AUDIT=data/review/gemma.jsonl \
-AERIAL_SKIP_LIVENESS=1 \
 RUST_LOG=info,aerial_registry::pipeline::ai=debug \
-cargo run
+cargo run -- enrich-overlay
 ```
+
+This discovers all providers, skips stations whose `enrichment.toml` entry is
+current (same `source_hash`), assesses the rest, and rewrites the file. The
+result to review is the `git diff enrichment.toml` — for model comparison,
+run against a scratch copy of the repo per model and diff the outputs.
 
 - `AERIAL_AI_URL` — server base URL; `/v1/chat/completions` is appended
   automatically (a URL already ending in `/chat/completions` is used as-is).
 - `AERIAL_AI_API_KEY` — optional; unnecessary for a local server, required
-  when pointing at a hosted endpoint.
-- `AERIAL_AI_LIMIT` — cap the number of stations sent to the model; keep it
-  around 100 for prompt-tuning iterations.
-- `AERIAL_AI_AUDIT` — JSONL audit of every assessment (old vs new
-  name/tags/description plus the model's reason), for scoring with
-  `scripts/score_ai_audit.py` and manual review with `jq`.
+  when pointing at a hosted endpoint (the weekly CI job uses Anthropic's
+  OpenAI-compatible endpoint at `https://api.anthropic.com/v1`).
+- `AERIAL_AI_LIMIT` — cap the number of stations assessed per run; keep it
+  around 100 for prompt-tuning iterations. Stations over the cap are left
+  for the next run.
+- `AERIAL_AI_CONCURRENCY` — parallel requests; match `llama-server
+  --parallel`.
 
 The client sends `temperature: 0`, so runs over the same sample are
-comparable between models.
+comparable between models. To re-assess everything from scratch, delete
+`enrichment.toml` first.
 
 ## Sizing expectations
 

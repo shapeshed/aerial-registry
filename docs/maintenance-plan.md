@@ -95,30 +95,37 @@ When the guard intervened, the intervention table is also written to
 issue (or comments on the open one). Anomalies are the only thing that pages
 a human; a healthy run is quiet.
 
-## Step 4 — AI enrichment as a committed overlay
+## Step 4 — AI enrichment as a committed overlay (implemented)
 
-Revive the stashed AI experiment, but decouple model inference from the
-nightly build:
+Model inference is decoupled from the nightly build:
 
-- Enrichment results live in a committed file (`enrichment.toml`), keyed by
-  `provider:provider_id`, holding cleaned name, tags, and description.
-- The nightly build applies the overlay deterministically — no model, no
-  network dependency, reproducible output.
-- A weekly job re-runs the model only for stations whose `source_hash`
-  changed or which are new, and opens a PR with the delta. Review is a quick
-  scan of a small diff, not a re-audit of the whole registry.
+- Enrichment results live in a committed file (`enrichment.toml`, array of
+  `[[station]]` tables keyed on `(provider, provider_id)`), holding overrides
+  for name, tags, and description, plus `reject = true` for records the model
+  identified as junk (never applied to trusted stations).
+- The nightly build applies the overlay deterministically
+  (`src/pipeline/overlay.rs`, between enrich and liveness) — no model, no
+  network dependency, reproducible output. Hand edits to the file are legal
+  and survive until that station's source data changes.
+- `cargo run -- enrich-overlay` re-runs the model only for stations that are
+  new or whose `source_hash` (name, country, tags, description as supplied by
+  the provider) changed, then rewrites the file sorted. The weekly
+  `enrich.yml` workflow runs it with Claude Haiku via the Anthropic
+  OpenAI-compatible endpoint and opens a PR with the delta; review is a quick
+  scan of a small diff. Low-confidence assessments record the hash but change
+  nothing, so they are not retried every week.
 - The model backend is any OpenAI-compatible endpoint via `AERIAL_AI_URL` /
-  `AERIAL_AI_MODEL`: a local `llama-server` (see `docs/local-ai-llamacpp.md`)
-  for development, or Claude Haiku in CI using the existing
-  `ANTHROPIC_API_KEY` secret from `discover.yml`.
+  `AERIAL_AI_MODEL` / `AERIAL_AI_API_KEY`: a local `llama-server` (see
+  `docs/local-ai-llamacpp.md`) for development and prompt tuning, or Claude
+  Haiku in CI.
 
-Current model findings (from the stashed evaluation): Gemma is strongest on
-tags and descriptions, Llama best preserves public station titles. The parser
-already tolerates messy model output; remaining work is prompt tuning.
+Model findings from the evaluation phase: Gemma is strongest on tags and
+descriptions, Llama best preserves public station titles. The response parser
+tolerates fenced/wrapped/prose-embedded JSON; remaining work is prompt tuning.
 
 ## Order of work
 
 1. ~~Previous-registry guard~~ (done)
 2. ~~State store + three-strike hysteresis + geo-aware liveness policy~~ (done)
 3. ~~Nightly diff summary + anomaly-only issues~~ (done)
-4. Un-stash the AI work onto a branch, refit as overlay + weekly delta job
+4. ~~AI enrichment overlay + weekly delta job~~ (done)
