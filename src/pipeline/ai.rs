@@ -563,6 +563,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "cesky-rozhlas",
     "dr",
     "err",
+    "ert",
     "hrt",
     "npo",
     "nrk",

@@ -10,6 +10,7 @@ pub mod cesky_rozhlas;
 pub mod curated;
 pub mod dr;
 pub mod err;
+pub mod ert;
 pub mod global;
 pub mod hrt;
 pub mod npo;
@@ -53,6 +54,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         curated,
         dr,
         err,
+        ert,
         global,
         hrt,
         npo,
@@ -88,6 +90,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         curated::discover(client),
         dr::discover(client),
         err::discover(client),
+        ert::discover(client),
         global::discover(client),
         hrt::discover(client),
         npo::discover(client),
@@ -125,6 +128,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         curated,
         dr,
         err,
+        ert,
         global,
         hrt,
         npo,
