@@ -115,6 +115,7 @@ NOTES = {
     "LI": "no public broadcaster — Radio Liechtenstein closed in 2025 after a defunding referendum; radio.li is an archive",
     "MC": "no national public radio — Radio Monaco is private; RMC is a French station",
     "MT": "PBS radio streams (TVMi) are session-signed per-IP JWTs with ~24h expiry — no static stream URL exists",
+    "ME": "RTCG radio is only on the login-gated MNE Play OTT platform (Spectar) — stream URLs are account-bound and signed; the old ipradio.rs relays were decommissioned ~Jan 2026",
 }
 
 
