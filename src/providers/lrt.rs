@@ -6,15 +6,16 @@ use tracing::{debug, error, warn};
 use crate::station::Station;
 
 /// LRT's live REST API lists every live channel (TV and radio) with a
-/// per-channel stream resolver URL; the resolver's `audio` field marks the
-/// radio channels and carries the current HLS URL, so TV entries filter
-/// themselves out. Logos are LRT's own brand assets.
+/// per-channel stream resolver URL carrying the current HLS URL. TV
+/// resolvers also return an `audio` field (the TV sound track), so radio
+/// channels are selected by the explicit table below — which doubles as the
+/// logo map, all LRT's own brand assets.
 const LIVE_API: &str = "https://www.lrt.lt/rest-api/live/lrt-radijas";
 const COUNTRY: &str = "Lithuania";
 const COUNTRY_CODE: &str = "LT";
 
-/// channelName → LRT logo asset.
-const LOGOS: &[(&str, &str)] = &[
+/// channelName → LRT logo asset; also the radio whitelist.
+const RADIO_CHANNELS: &[(&str, &str)] = &[
     ("LR", "https://www.lrt.lt/images/logo/logo-radijas.svg"),
     ("Klasika", "https://www.lrt.lt/images/logo/logo-klasika.svg"),
     ("Opus", "https://www.lrt.lt/images/logo/logo-opus.svg"),
@@ -68,7 +69,16 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         }
     };
 
-    let resolutions = join_all(live.live_channels.into_iter().map(|channel| {
+    let radio_channels: Vec<Channel> = live
+        .live_channels
+        .into_iter()
+        .filter(|c| {
+            RADIO_CHANNELS
+                .iter()
+                .any(|(name, _)| *name == c.channel_name)
+        })
+        .collect();
+    let resolutions = join_all(radio_channels.into_iter().map(|channel| {
         let client = client.clone();
         async move {
             let audio = resolve_audio(&client, &channel.stream_url).await;
@@ -79,18 +89,14 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
     let mut stations = Vec::new();
     for (channel, audio) in resolutions {
-        // TV channels resolve without an audio stream and drop out here.
         let Some(stream_url) = audio else {
-            debug!(provider = "lrt", channel = %channel.channel_name, "No audio stream — not a radio channel");
+            warn!(provider = "lrt", channel = %channel.channel_name, "No audio stream — skipping");
             continue;
         };
-        let logo_url = LOGOS
+        let logo_url = RADIO_CHANNELS
             .iter()
             .find(|(name, _)| *name == channel.channel_name)
             .map(|(_, url)| (*url).to_string());
-        if logo_url.is_none() {
-            warn!(provider = "lrt", channel = %channel.channel_name, "No logo mapped");
-        }
         debug!(provider = "lrt", name = %channel.channel_title, %stream_url, "Discovered station");
         stations.push(Station {
             name: channel.channel_title,

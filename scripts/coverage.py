@@ -106,6 +106,14 @@ COUNTRIES = {
 
 REGIONS = ["Europe", "Africa", "Asia", "North America", "South America", "Oceania"]
 
+# Countries where no national/public broadcaster exists to integrate — the
+# checkbox stays open but the reason is recorded so it doesn't read as
+# undone work.
+NOTES = {
+    "LI": "no public broadcaster — Radio Liechtenstein closed in 2025 after a defunding referendum; radio.li is an archive",
+    "MC": "no national public radio — Radio Monaco is private; RMC is a French station",
+}
+
 
 def load_coverage():
     with gzip.open(REGISTRY) as f:
@@ -117,16 +125,17 @@ def load_coverage():
     return by_cc
 
 
-def line(name, providers):
+def line(name, providers, note=None):
     direct = {p: n for p, n in providers.items() if p != "curated"}
     curated = providers.get("curated", 0)
     if direct:
         provs = ", ".join(f"{p} ({n})" for p, n in sorted(direct.items()))
         extra = f" · {curated} curated" if curated else ""
         return f"- [x] **{name}** — {provs}{extra}"
+    suffix = f" — *{note}*" if note else ""
     if curated:
-        return f"- [ ] {name} *({curated} curated)*"
-    return f"- [ ] {name}"
+        return f"- [ ] {name} *({curated} curated)*{suffix}"
+    return f"- [ ] {name}{suffix}"
 
 
 def main():
@@ -153,7 +162,7 @@ def main():
         out.append(f"## {region} ({done}/{len(rows)})")
         out.append("")
         for name, cc in rows:
-            out.append(line(name, by_cc.get(cc, {})))
+            out.append(line(name, by_cc.get(cc, {}), NOTES.get(cc)))
         out.append("")
 
     territories = sorted(cc for cc in by_cc if cc not in COUNTRIES and cc != "??")

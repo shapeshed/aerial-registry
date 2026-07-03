@@ -5,9 +5,9 @@ edit by hand. A checked country has at least one direct (trusted) provider;
 *(n curated)* marks countries served only by curated/aggregator stations —
 existing listener interest with no direct integration yet.
 
-**32** of 197 countries have a direct provider; **137** have at least one station.
+**34** of 197 countries have a direct provider; **137** have at least one station.
 
-## Europe (30/46)
+## Europe (32/46)
 
 - [x] **Albania** — rtsh (7) · 4 curated
 - [x] **Andorra** — rtva (2)
@@ -15,7 +15,7 @@ existing listener interest with no direct integration yet.
 - [x] **Belarus** — btrc (4) · 9 curated
 - [x] **Belgium** — rtbf (31) · 16 curated
 - [x] **Bosnia and Herzegovina** — bhrt (1) · 2 curated
-- [x] **Bulgaria** — bnr (12) · 13 curated
+- [ ] Bulgaria *(13 curated)*
 - [x] **Croatia** — hrt (17) · 8 curated
 - [x] **Cyprus** — rik (4) · 3 curated
 - [x] **Czechia** — cesky-rozhlas (26) · 28 curated
@@ -29,14 +29,14 @@ existing listener interest with no direct integration yet.
 - [x] **Iceland** — ruv (3)
 - [x] **Ireland** — bauer (31), rte (5) · 5 curated
 - [x] **Italy** — rai (14) · 53 curated
-- [ ] Kosovo *(1 curated)*
-- [ ] Latvia *(6 curated)*
-- [ ] Liechtenstein
-- [ ] Lithuania *(6 curated)*
+- [x] **Kosovo** — rtk (2) · 1 curated
+- [x] **Latvia** — latvijas-radio (5) · 6 curated
+- [ ] Liechtenstein — *no public broadcaster — Radio Liechtenstein closed in 2025 after a defunding referendum; radio.li is an archive*
+- [x] **Lithuania** — lrt (4) · 6 curated
 - [ ] Luxembourg *(2 curated)*
 - [ ] Malta *(1 curated)*
 - [ ] Moldova *(2 curated)*
-- [ ] Monaco
+- [ ] Monaco — *no national public radio — Radio Monaco is private; RMC is a French station*
 - [ ] Montenegro *(1 curated)*
 - [x] **Netherlands** — npo (15) · 48 curated
 - [ ] North Macedonia *(1 curated)*
