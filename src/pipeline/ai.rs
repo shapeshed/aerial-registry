@@ -575,6 +575,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "ruv",
     "sbs",
     "sr",
+    "yle",
 ];
 const KNOWN_PUBLIC_KEYWORDS: &[&str] = &[
     "public radio",

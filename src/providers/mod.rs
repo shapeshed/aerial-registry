@@ -25,6 +25,7 @@ pub mod ruv;
 pub mod sbs;
 pub mod sr;
 pub mod wireless;
+pub mod yle;
 
 use crate::station::Station;
 use tracing::info;
@@ -61,6 +62,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         sbs,
         sr,
         wireless,
+        yle,
     ) = tokio::join!(
         abc::discover(client),
         ard::discover(client),
@@ -89,6 +91,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         sbs::discover(client),
         sr::discover(client),
         wireless::discover(client),
+        yle::discover(client),
     );
 
     let all: Vec<_> = [
@@ -119,6 +122,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         sbs,
         sr,
         wireless,
+        yle,
     ]
     .into_iter()
     .flatten()
