@@ -19,6 +19,7 @@ pub mod rinse;
 pub mod rtbf;
 pub mod rte;
 pub mod rtp;
+pub mod rtsh;
 pub mod rtve;
 pub mod rtvslo;
 pub mod ruv;
@@ -56,6 +57,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rtbf,
         rte,
         rtp,
+        rtsh,
         rtve,
         rtvslo,
         ruv,
@@ -85,6 +87,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rtbf::discover(client),
         rte::discover(client),
         rtp::discover(client),
+        rtsh::discover(client),
         rtve::discover(client),
         rtvslo::discover(client),
         ruv::discover(client),
@@ -116,6 +119,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rtbf,
         rte,
         rtp,
+        rtsh,
         rtve,
         rtvslo,
         ruv,
