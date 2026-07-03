@@ -561,6 +561,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "npo",
     "nrk",
     "orf",
+    "polskie-radio",
     "radio-france",
     "rai",
     "rtbf",
