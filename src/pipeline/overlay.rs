@@ -180,6 +180,8 @@ pub async fn build(client: &reqwest::Client) -> anyhow::Result<()> {
         }
     }
 
+    drop_colliding_names(&stations, &mut entries);
+
     let mut sorted: Vec<Entry> = entries.into_values().collect();
     sorted.sort_by(|a, b| {
         a.provider
@@ -190,6 +192,39 @@ pub async fn build(client: &reqwest::Client) -> anyhow::Result<()> {
     save(sorted)?;
     info!(assessed, entries = count, "Enrichment overlay written");
     Ok(())
+}
+
+/// Drop name overrides that would leave two stations of one provider with
+/// the same display name (run 3: two France Musique variants both renamed
+/// to plain "France Musique", colliding with the real one).
+fn drop_colliding_names(stations: &[Station], entries: &mut HashMap<(String, String), Entry>) {
+    let mut counts: HashMap<(String, String), usize> = HashMap::new();
+    for station in stations {
+        let display = entries
+            .get(&key(station))
+            .and_then(|e| e.name.clone())
+            .unwrap_or_else(|| station.name.clone());
+        *counts
+            .entry((station.provider.clone(), display))
+            .or_insert(0) += 1;
+    }
+    for station in stations {
+        let Some(entry) = entries.get_mut(&key(station)) else {
+            continue;
+        };
+        let Some(name) = entry.name.clone() else {
+            continue;
+        };
+        if counts[&(station.provider.clone(), name.clone())] > 1 {
+            warn!(
+                provider = %station.provider,
+                old = %station.name,
+                new = %name,
+                "Name override collides with another station; dropped"
+            );
+            entry.name = None;
+        }
+    }
 }
 
 /// Log old → new for every assessment so a local run reads as a review
@@ -314,7 +349,58 @@ fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
         };
     }
 
-    let name = ai::canonicalize_name(&assessment.canonical_name);
+    // Trusted providers are authoritative for their own names and
+    // descriptions; the model only contributes tags. A missing description
+    // may still be filled — the search index wants one — but never replaced.
+    if station.trusted {
+        return Entry {
+            provider,
+            provider_id,
+            source_hash: hash,
+            name: None,
+            tags: (!assessment.tags.is_empty() && assessment.tags != station.tags)
+                .then(|| assessment.tags.clone()),
+            description: if station.description.is_none() {
+                assessment
+                    .description
+                    .as_deref()
+                    .map(|d| d.trim().to_string())
+                    .filter(|d| !d.is_empty())
+            } else {
+                None
+            },
+            reject: false,
+        };
+    }
+
+    let mut name = ai::canonicalize_name(&assessment.canonical_name);
+    // Feed-distinguishing suffixes must survive the rename or the two feeds
+    // of one station end up with identical display names.
+    if station.name.ends_with(" (International)") && !name.ends_with("(International)") {
+        name.push_str(" (International)");
+    }
+    // Exact match for real-station example names; containment for the
+    // fictional marker — run 4 leaked a truncated "Sunrise 106".
+    let echoes_example = ai::EXAMPLE_NAMES.contains(&name.as_str())
+        || (name.contains("Sunrise 106") && !station.name.contains("Sunrise 106"));
+    if name != station.name && echoes_example {
+        warn!(
+            provider = provider.as_str(),
+            old = %station.name,
+            new = %name,
+            "AI echoed a few-shot example name; name override dropped"
+        );
+        name.clear();
+    }
+    if collapses_brand(&station.name, &name) {
+        warn!(
+            provider = provider.as_str(),
+            old = %station.name,
+            new = %name,
+            "AI collapsed a variant stream to its parent brand; name override dropped"
+        );
+        name.clear();
+    }
     Entry {
         provider,
         provider_id,
@@ -329,6 +415,27 @@ fn entry_from(station: &Station, assessment: &ai::AiAssessment) -> Entry {
             .filter(|d| !d.is_empty() && Some(d.as_str()) != station.description.as_deref()),
         reject: false,
     }
+}
+
+/// True when the new name is the old name minus a short trailing variant
+/// (98FM Dance → 98FM, CBC Radio One: Grand Falls → CBC Radio One). Removing
+/// a slogan is legitimate cleanup, but a slogan is a separator followed by a
+/// phrase — a separator followed by one or two words is a variant or city
+/// marker (France Musique - Classique Plus), which is identity, not slogan.
+fn collapses_brand(old: &str, new: &str) -> bool {
+    if new.is_empty() {
+        return false;
+    }
+    let old = old.trim();
+    let Some(rest) = old.strip_prefix(new) else {
+        return false;
+    };
+    let words = rest
+        .split_whitespace()
+        .filter(|w| !w.chars().all(|c| matches!(c, ':' | '-' | '–' | '|' | '•')))
+        .count();
+    let rest = rest.trim();
+    !rest.is_empty() && words <= 2
 }
 
 fn key(station: &Station) -> (String, String) {
@@ -406,7 +513,7 @@ mod tests {
         ai::AiAssessment {
             accept,
             confidence,
-            canonical_name: "Radio Centro".to_string(),
+            canonical_name: "Radio Cardinal".to_string(),
             country_code: "MX".to_string(),
             tags: vec!["latin".to_string()],
             description: Some("Mexican commercial radio station.".to_string()),
@@ -439,7 +546,7 @@ mod tests {
     fn confident_assessment_produces_overrides() {
         let s = station("curated", "1", "RADIO CENTRO: Calidad En Tu Vida");
         let entry = entry_from(&s, &assessment(0.9, true));
-        assert_eq!(entry.name.as_deref(), Some("Radio Centro"));
+        assert_eq!(entry.name.as_deref(), Some("Radio Cardinal"));
         assert_eq!(entry.tags.as_deref(), Some(&["latin".to_string()][..]));
         assert!(!entry.reject);
     }
@@ -483,5 +590,146 @@ mod tests {
         let back: OverlayFile = toml::from_str(&toml_str).unwrap();
         assert_eq!(back.stations.len(), 1);
         assert_eq!(back.stations[0].name.as_deref(), Some("Radio Centro"));
+    }
+
+    #[test]
+    fn collapses_brand_detects_variant_stripping() {
+        assert!(collapses_brand("98FM Dance", "98FM"));
+        assert!(collapses_brand("Absolute Radio 90s", "Absolute Radio"));
+        assert!(collapses_brand(
+            "BBC Radio One (International)",
+            "BBC Radio One"
+        ));
+        // Slogan removal after a separator is legitimate cleanup.
+        assert!(!collapses_brand(
+            "Radio Centro: Calidad En Tu Vida",
+            "Radio Centro"
+        ));
+        assert!(!collapses_brand(
+            "SWR4 Webradio – Der Sound einer Ära",
+            "SWR4 Webradio"
+        ));
+        // Different casing / real renames are not collapses.
+        assert!(!collapses_brand("BBC Radio One", "BBC Radio 1"));
+        assert!(!collapses_brand("1LIVE Top Hits ", "1LIVE Top Hits"));
+    }
+
+    #[test]
+    fn collapses_brand_catches_city_and_variant_separators() {
+        // Separator + one/two words is a city or variant marker, not a slogan.
+        assert!(collapses_brand(
+            "CBC Radio One: Grand Falls",
+            "CBC Radio One"
+        ));
+        assert!(collapses_brand(
+            "France Musique - Classique Plus",
+            "France Musique"
+        ));
+        // A real slogan (3+ words) may still be stripped.
+        assert!(!collapses_brand(
+            "Radio Centro: Calidad En Tu Vida",
+            "Radio Centro"
+        ));
+        assert!(!collapses_brand("Anything", ""));
+    }
+
+    #[test]
+    fn example_name_echo_is_dropped() {
+        let s = station("bauer", "tfa", "All Irish");
+        let mut a = assessment(0.9, true);
+        a.canonical_name = "Sunrise 106 OldSkool".to_string();
+        let entry = entry_from(&s, &a);
+        assert!(entry.name.is_none());
+
+        // Truncated echo of the fictional example (run 4: "Cool Old Skool"
+        // renamed to "Sunrise 106") is caught by containment.
+        let s2 = station("bauer", "cwf", "Cool Old Skool");
+        let mut b = assessment(0.9, true);
+        b.canonical_name = "Sunrise 106".to_string();
+        assert!(entry_from(&s2, &b).name.is_none());
+    }
+
+    #[test]
+    fn trusted_stations_only_get_tags_and_missing_descriptions() {
+        let mut s = station("bbc", "bbc_radio_one", "BBC Radio One");
+        s.trusted = true;
+        let mut a = assessment(0.95, true);
+        a.canonical_name = "BBC Radio 1".to_string();
+        let entry = entry_from(&s, &a);
+        assert!(entry.name.is_none());
+        assert!(entry.tags.is_some());
+        // Provider supplied no description: the model's fills the gap.
+        assert!(entry.description.is_some());
+
+        // Provider-supplied description is never replaced.
+        s.description = Some("The BBC's own words.".to_string());
+        let entry = entry_from(&s, &a);
+        assert!(entry.description.is_none());
+    }
+
+    #[test]
+    fn colliding_name_overrides_are_dropped() {
+        let stations = vec![
+            station("radio-france", "4", "France Musique"),
+            station("radio-france", "402", "France Musique - Classique Plus"),
+            station("radio-france", "401", "France Musique - Classique Easy"),
+        ];
+        let mut entries: HashMap<(String, String), Entry> = HashMap::new();
+        entries.insert(
+            ("radio-france".to_string(), "402".to_string()),
+            Entry {
+                provider: "radio-france".to_string(),
+                provider_id: "402".to_string(),
+                source_hash: "h".to_string(),
+                name: Some("France Musique".to_string()),
+                tags: None,
+                description: None,
+                reject: false,
+            },
+        );
+        entries.insert(
+            ("radio-france".to_string(), "401".to_string()),
+            Entry {
+                provider: "radio-france".to_string(),
+                provider_id: "401".to_string(),
+                source_hash: "h".to_string(),
+                name: Some("France Musique Easy".to_string()),
+                tags: None,
+                description: None,
+                reject: false,
+            },
+        );
+        drop_colliding_names(&stations, &mut entries);
+        // 402's rename collides with the real France Musique: dropped.
+        assert!(
+            entries[&("radio-france".to_string(), "402".to_string())]
+                .name
+                .is_none()
+        );
+        // 401's rename is unique: kept.
+        assert!(
+            entries[&("radio-france".to_string(), "401".to_string())]
+                .name
+                .is_some()
+        );
+    }
+
+    #[test]
+    fn collapsed_name_override_is_dropped() {
+        let s = station("bauer", "98D", "98FM Dance");
+        let mut a = assessment(0.9, true);
+        a.canonical_name = "98FM".to_string();
+        let entry = entry_from(&s, &a);
+        assert!(entry.name.is_none());
+        assert!(entry.tags.is_some());
+    }
+
+    #[test]
+    fn international_suffix_is_preserved() {
+        let s = station("bbc", "bbc_radio_one_int", "BBC Radio One (International)");
+        let mut a = assessment(0.9, true);
+        a.canonical_name = "BBC Radio 1".to_string();
+        let entry = entry_from(&s, &a);
+        assert_eq!(entry.name.as_deref(), Some("BBC Radio 1 (International)"));
     }
 }

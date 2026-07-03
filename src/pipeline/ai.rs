@@ -12,6 +12,19 @@ const DEFAULT_RETRY_SECS: u64 = 10;
 /// Minimum model confidence before an assessment is applied to the overlay.
 pub const APPLY_CONFIDENCE: f32 = 0.6;
 
+/// Canonical names used in the few-shot examples. Small models sometimes echo
+/// an example verbatim (run 3 renamed four Bauer stations, including one
+/// called "All Irish", to the example's "98FM OldSkool"); a rename to any of
+/// these is leakage, never a real assessment.
+pub const EXAMPLE_NAMES: &[&str] = &[
+    "Radio Disney 94.3",
+    "88.9 Noticias",
+    "Radio Centro",
+    "Sunrise 106 OldSkool",
+    "ABC Radio Adelaide",
+    "Match",
+];
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AiAssessment {
     pub accept: bool,
@@ -174,6 +187,42 @@ pub async fn assess(
                     "risks": [],
                     "reason": "Commercial station; slogan stripped; not public radio."
                 }
+            },
+            {
+                "input": {
+                    "name": "Sunrise 106 OldSkool",
+                    "country_code": "IE",
+                    "tags": []
+                },
+                "output": {
+                    "accept": true,
+                    "confidence": 0.9,
+                    "canonical_name": "Sunrise 106 OldSkool",
+                    "country_code": "IE",
+                    "tags": ["oldies", "dance"],
+                    "description": "Station streaming old school dance and club classics.",
+                    "logo_url": null,
+                    "risks": [],
+                    "reason": "Variant stream of Sunrise 106; the variant word is part of the brand."
+                }
+            },
+            {
+                "input": {
+                    "name": "ABC Radio Adelaide",
+                    "country_code": "AU",
+                    "tags": ["news", "talkback"]
+                },
+                "output": {
+                    "accept": true,
+                    "confidence": 0.9,
+                    "canonical_name": "ABC Radio Adelaide",
+                    "country_code": "AU",
+                    "tags": ["public radio", "news", "talk"],
+                    "description": "Local news and talk station for Adelaide from the Australian Broadcasting Corporation.",
+                    "logo_url": null,
+                    "risks": [],
+                    "reason": "Local public broadcaster station; news/talk from source tags; no music genre invented."
+                }
             }
         ],
         "rules": [
@@ -183,16 +232,20 @@ pub async fn assess(
             "Preserve the source tags unless a tag is clearly contradicted by the station identity.",
             "Add only one or two new tags when the station identity clearly supports them.",
             "Do not invent secondary mood or genre tags.",
+            "Never infer a music genre from the broadcaster alone. Local and regional stations of public broadcasters (ABC Radio <city>, BBC Radio <county>) are news/talk stations unless the name, source tags, or description show otherwise. In particular, do not add classical to local or regional stations without explicit evidence.",
             "If no tag clearly fits, return the source tags unchanged or [].",
             "Tags are for search discovery only.",
             "Apply public radio only when there is clear evidence of public funding: the station is a known national broadcaster (BBC, NPR, RFI, ABC, etc.), a university or educational station, or is explicitly named Radio Nacional, Radio Pública, or similar. Do not apply public radio based on quality slogans or simply because the name contains the word 'radio'.",
             "canonical_name is the public brand/name only.",
+            "canonical_name must be recognisably derived from the source name. Never substitute a different station's name, and never copy a name from these examples.",
             "If a station is already known by a canonical public brand name, use that exact brand name.",
             "Normalize all-caps station names to title case: AZUL 89 → Azul 89, BEAT → Beat, RADIO ANAHUAC → Radio Anahuac, LOS 40 PRINCIPALES → Los 40 Principales. Keep known abbreviations in caps: BBC, CNN, NPR, FM, AM, HD.",
             "The canonical_name is always the brand that appears BEFORE the colon, never the slogan after it. MATCH: ¡Más Pop, Conéctate! → Match.",
             "Remove slogans, show titles, marketing copy, bitrates, codec labels, and other technical suffixes from canonical_name.",
             "Do not collapse a branded subchannel or show into its parent station. TRÍOS Y BOLEROS de Radio Felicidad is its own brand, not Radio Felicidad.",
             "Do not shorten titles like AMOR SOLO POP, MIX EN VIVO, AMOR 103.1 (Leon) down to the bare parent brand.",
+            "Variant streams keep their variant word: 98FM Dance, Absolute Radio 90s, and 1LIVE Diggi are complete canonical names. Never return only the parent brand for a variant stream.",
+            "Suffixes that distinguish feeds of the same station — (International), FM, AM, LW, HD2 — are part of the canonical name. Keep them.",
             "Preserve all-caps acronyms that are institution names: UNAM, IPN, UAM, BBC, CNN. Do not lowercase letters within acronyms.",
             "description must be short, factual, and in English.",
             "Do not repeat the title in the description.",
@@ -400,6 +453,17 @@ async fn repair_assessment(
 fn normalize_assessment_tags(assessment: &mut AiAssessment, station: &Station) {
     let original = std::mem::take(&mut assessment.tags);
     let support_text = tag_support_text(station);
+    // The model's own description counts as evidence for genre gating: a
+    // hallucinated tag is a word in a list, but "classical music station
+    // from the BBC" is a commitment (it saved BBC Radio 3's classical tag).
+    let genre_evidence = format!(
+        "{support_text} {}",
+        assessment
+            .description
+            .as_deref()
+            .unwrap_or("")
+            .to_lowercase()
+    );
     let mut normalized = Vec::new();
     for tag in &original {
         let Some(tag) = tags::normalize_tag(tag) else {
@@ -409,6 +473,16 @@ fn normalize_assessment_tags(assessment: &mut AiAssessment, station: &Station) {
             continue;
         }
         if tag == "rock" && mentions_news(&support_text) {
+            continue;
+        }
+        // Run 1 showed the model tagging public-broadcaster local stations
+        // "classical" by association; require a source tag or textual
+        // evidence (station text or the model's description).
+        if tag == "classical"
+            && !station.tags.iter().any(|t| t == "classical")
+            && !mentions_classical(&genre_evidence)
+            && !station.name.to_lowercase().trim_end().ends_with("classic")
+        {
             continue;
         }
         if !normalized.contains(&tag) {
@@ -456,6 +530,25 @@ fn mentions_news(support_text: &str) -> bool {
         || support_text.contains("noticias")
         || support_text.contains("información")
         || support_text.contains("informacion")
+}
+
+fn mentions_classical(support_text: &str) -> bool {
+    // Deliberately "classical", not "classic": "classic comedy" and
+    // "classic hits" are not evidence of classical music (run 4 gave
+    // BBC Radio 4 Extra a classical tag off "classic comedy and drama").
+    [
+        "classical",
+        "klassik",
+        "classique",
+        "clásica",
+        "clasica",
+        "sinfoni",
+        "philharmon",
+        "orchestra",
+        "opera",
+    ]
+    .iter()
+    .any(|t| support_text.contains(t))
 }
 
 /// Public-service broadcasters currently in the registry.
@@ -556,7 +649,10 @@ fn title_case_word(word: &str) -> String {
         "DW", // Institution acronyms
         "IPN", "UNAM", "UAM", "ITAM", "BUAP", "UANL", "UABC",
     ];
-    if ABBREVIATIONS.contains(&word) || word.chars().any(|c| c.is_ascii_digit()) {
+    // Short all-caps words are almost always acronyms the list can't
+    // enumerate (CWR, GLR, LBC); leave them alone rather than produce "Cwr".
+    let short_acronym = word.len() <= 3 && word.chars().all(|c| c.is_ascii_uppercase());
+    if ABBREVIATIONS.contains(&word) || short_acronym || word.chars().any(|c| c.is_ascii_digit()) {
         return word.to_string();
     }
     let mut chars = word.chars();
@@ -845,6 +941,7 @@ mod tests {
         );
         assert_eq!(canonicalize_name("Azul (89.5 FM) Livestream"), "Azul");
         assert_eq!(canonicalize_name("BBC RADIO LONDON"), "BBC Radio London");
+        assert_eq!(canonicalize_name("BBC CWR"), "BBC CWR");
         assert_eq!(canonicalize_name("Radio UNAM (FM)"), "Radio UNAM (FM)");
     }
 
@@ -867,6 +964,54 @@ mod tests {
         assert_eq!(parsed.canonical_name, "Radio X");
         assert_eq!(parsed.country_code, "GB");
         assert!(parsed.accept);
+    }
+
+    #[test]
+    fn classical_gate_accepts_description_evidence() {
+        let station = |name: &str| Station {
+            name: name.to_string(),
+            stream_url: "https://example.com/s".to_string(),
+            logo_url: None,
+            country: Some("United Kingdom".to_string()),
+            country_code: Some("GB".to_string()),
+            tags: vec![],
+            description: None,
+            provider: "bbc".to_string(),
+            provider_id: None,
+            trusted: true,
+        };
+        let assessment = |description: &str| AiAssessment {
+            accept: true,
+            confidence: 0.9,
+            canonical_name: "X".to_string(),
+            country_code: "GB".to_string(),
+            tags: vec!["classical".to_string(), "public radio".to_string()],
+            description: Some(description.to_string()),
+            logo_url: None,
+            risks: vec![],
+            reason: "r".to_string(),
+        };
+
+        // BBC Radio 3: no "classical" in the name, but the model's own
+        // description asserts the format — tag survives.
+        let mut a = assessment("Classical music station from the BBC.");
+        normalize_assessment_tags(&mut a, &station("BBC Radio Three"));
+        assert!(a.tags.contains(&"classical".to_string()));
+
+        // "classic comedy" is not classical music.
+        let mut c = assessment("Classic comedy and drama from the BBC archive.");
+        normalize_assessment_tags(&mut c, &station("BBC Radio 4 Extra"));
+        assert!(!c.tags.contains(&"classical".to_string()));
+
+        // A brand ending in "Classic" is evidence in itself.
+        let mut d = assessment("Australian public radio station.");
+        normalize_assessment_tags(&mut d, &station("ABC Classic"));
+        assert!(d.tags.contains(&"classical".to_string()));
+
+        // Local news/talk station with no evidence anywhere — tag stripped.
+        let mut b = assessment("Local news and talk for Adelaide.");
+        normalize_assessment_tags(&mut b, &station("ABC Radio Adelaide"));
+        assert!(!b.tags.contains(&"classical".to_string()));
     }
 
     #[test]
