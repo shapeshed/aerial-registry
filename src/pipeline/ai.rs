@@ -570,6 +570,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "rtbf",
     "rte",
     "rtp",
+    "rtsh",
     "rtve",
     "rtvslo",
     "ruv",
