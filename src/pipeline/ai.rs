@@ -589,6 +589,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "sr",
     "srgssr",
     "trm",
+    "vatican-radio",
     "yle",
 ];
 const KNOWN_PUBLIC_KEYWORDS: &[&str] = &[
