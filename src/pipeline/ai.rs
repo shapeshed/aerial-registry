@@ -588,6 +588,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "sbs",
     "sr",
     "srgssr",
+    "trm",
     "yle",
 ];
 const KNOWN_PUBLIC_KEYWORDS: &[&str] = &[

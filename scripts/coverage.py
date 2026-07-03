@@ -108,12 +108,13 @@ COUNTRIES = {
 
 REGIONS = ["Europe", "Africa", "Asia", "North America", "South America", "Oceania"]
 
-# Countries where no national/public broadcaster exists to integrate — the
+# Countries where no national/public broadcaster can be integrated — the
 # checkbox stays open but the reason is recorded so it doesn't read as
 # undone work.
 NOTES = {
     "LI": "no public broadcaster — Radio Liechtenstein closed in 2025 after a defunding referendum; radio.li is an archive",
     "MC": "no national public radio — Radio Monaco is private; RMC is a French station",
+    "MT": "PBS radio streams (TVMi) are session-signed per-IP JWTs with ~24h expiry — no static stream URL exists",
 }
 
 
