@@ -63,7 +63,11 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
         })
         .collect();
 
-    tracing::info!(provider = "trm", count = stations.len(), "Discovery complete");
+    tracing::info!(
+        provider = "trm",
+        count = stations.len(),
+        "Discovery complete"
+    );
     stations
 }
 
