@@ -5,27 +5,27 @@ edit by hand. A checked country has at least one direct (trusted) provider;
 *(n curated)* marks countries served only by curated/aggregator stations —
 existing listener interest with no direct integration yet.
 
-**23** of 197 countries have a direct provider; **136** have at least one station.
+**32** of 197 countries have a direct provider; **137** have at least one station.
 
-## Europe (21/46)
+## Europe (30/46)
 
-- [ ] Albania *(4 curated)*
-- [ ] Andorra
+- [x] **Albania** — rtsh (7) · 4 curated
+- [x] **Andorra** — rtva (2)
 - [x] **Austria** — orf (14) · 20 curated
-- [ ] Belarus *(12 curated)*
+- [x] **Belarus** — btrc (4) · 9 curated
 - [x] **Belgium** — rtbf (31) · 16 curated
 - [x] **Bosnia and Herzegovina** — bhrt (1) · 2 curated
-- [ ] Bulgaria *(13 curated)*
+- [x] **Bulgaria** — bnr (12) · 13 curated
 - [x] **Croatia** — hrt (17) · 8 curated
-- [ ] Cyprus *(3 curated)*
+- [x] **Cyprus** — rik (4) · 3 curated
 - [x] **Czechia** — cesky-rozhlas (26) · 28 curated
 - [x] **Denmark** — dr (27) · 5 curated
-- [ ] Estonia *(4 curated)*
+- [x] **Estonia** — err (5) · 4 curated
 - [x] **Finland** — yle (7) · 1 curated
-- [x] **France** — radio-france (77), rinse (1) · 138 curated
+- [x] **France** — rinse (1) · 138 curated
 - [x] **Germany** — ard (192) · 338 curated
-- [ ] Greece *(50 curated)*
-- [ ] Hungary *(35 curated)*
+- [x] **Greece** — ert (34) · 44 curated
+- [x] **Hungary** — mtva (9) · 35 curated
 - [x] **Iceland** — ruv (3)
 - [x] **Ireland** — bauer (31), rte (5) · 5 curated
 - [x] **Italy** — rai (14) · 53 curated
@@ -51,7 +51,7 @@ existing listener interest with no direct integration yet.
 - [x] **Slovenia** — rtvslo (9) · 11 curated
 - [x] **Spain** — rtve (43)
 - [x] **Sweden** — sr (52) · 4 curated
-- [ ] Switzerland *(18 curated)*
+- [x] **Switzerland** — srgssr (14) · 18 curated
 - [ ] Ukraine *(12 curated)*
 - [x] **United Kingdom** — bauer (44), bbc (128), global (146), rinse (3), wireless (9) · 64 curated
 - [ ] Vatican City *(1 curated)*
