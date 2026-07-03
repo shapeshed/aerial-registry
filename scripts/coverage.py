@@ -12,11 +12,13 @@ interest stand out.
 
 import gzip
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "registry.json.gz"
+PROVIDERS = ROOT / "src" / "providers"
 OUT = ROOT / "docs" / "coverage.md"
 
 # ISO 3166-1 alpha-2 → (name, region). UN members plus Kosovo, Palestine,
@@ -115,6 +117,20 @@ NOTES = {
 }
 
 
+def source_covered():
+    """Country codes with an implemented direct provider, derived from the
+    source tree — immune to transient discovery failures in the local build
+    the registry came from."""
+    codes = set()
+    for path in PROVIDERS.glob("*.rs"):
+        if path.name in ("mod.rs", "curated.rs"):
+            continue
+        src = path.read_text()
+        codes.update(re.findall(r'COUNTRY_CODE: &str = "([A-Z]{2})"', src))
+        codes.update(re.findall(r'country_code: Some\("([A-Z]{2})"', src))
+    return codes
+
+
 def load_coverage():
     with gzip.open(REGISTRY) as f:
         stations = json.load(f)
@@ -125,9 +141,12 @@ def load_coverage():
     return by_cc
 
 
-def line(name, providers, note=None):
+def line(name, providers, note=None, source=False):
     direct = {p: n for p, n in providers.items() if p != "curated"}
     curated = providers.get("curated", 0)
+    if not direct and source:
+        extra = f" · {curated} curated" if curated else ""
+        return f"- [x] **{name}** — provider implemented (absent from this build){extra}"
     if direct:
         provs = ", ".join(f"{p} ({n})" for p, n in sorted(direct.items()))
         extra = f" · {curated} curated" if curated else ""
@@ -140,7 +159,12 @@ def line(name, providers, note=None):
 
 def main():
     by_cc = load_coverage()
-    checked = sum(1 for cc in COUNTRIES if any(p != "curated" for p in by_cc.get(cc, {})))
+    source = source_covered()
+    checked = sum(
+        1
+        for cc in COUNTRIES
+        if cc in source or any(p != "curated" for p in by_cc.get(cc, {}))
+    )
     any_station = sum(1 for cc in COUNTRIES if cc in by_cc)
 
     out = [
@@ -158,11 +182,15 @@ def main():
     for region in REGIONS:
         rows = [(name, cc) for cc, (name, r) in COUNTRIES.items() if r == region]
         rows.sort()
-        done = sum(1 for _, cc in rows if any(p != "curated" for p in by_cc.get(cc, {})))
+        done = sum(
+            1
+            for _, cc in rows
+            if cc in source or any(p != "curated" for p in by_cc.get(cc, {}))
+        )
         out.append(f"## {region} ({done}/{len(rows)})")
         out.append("")
         for name, cc in rows:
-            out.append(line(name, by_cc.get(cc, {}), NOTES.get(cc)))
+            out.append(line(name, by_cc.get(cc, {}), NOTES.get(cc), cc in source))
         out.append("")
 
     territories = sorted(cc for cc in by_cc if cc not in COUNTRIES and cc != "??")
