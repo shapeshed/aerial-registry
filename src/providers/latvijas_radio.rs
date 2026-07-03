@@ -5,56 +5,57 @@ use crate::station::Station;
 
 const COUNTRY: &str = "Latvia";
 const COUNTRY_CODE: &str = "LV";
-const LOGO_BASE: &str = "https://latvijasradio.lsm.lv/public/assets/design/channels";
 
-/// The player's "other formats" links unwrap to direct Icecast streams on
-/// per-channel hosts (`lrNmp0.latvijasradio.lv`), stable for years. LR5
-/// (pieci.lv) is absent: it streams only through a web player with no
-/// direct endpoint anywhere. Logos are the player's own channel assets
-/// (LR2's mark is the generic file the site itself uses for it).
+/// The lrNmp0 hostnames all resolve to one Icecast whose root path serves a
+/// single default mount — stations 1–4 played the same stream. The real
+/// per-channel streams are the new player's Wowza HLS mounts (lr1a/lr2a/
+/// lr3a/naba, each verified distinct); LR4 is absent from that player and
+/// uses its long-standing direct Icecast endpoint (1,700+ Radio Browser
+/// votes). Square channel logos come from the broadcaster's CDN; LR4 keeps
+/// the lsm.lv player asset (no square exists for it).
 const STATIONS: &[(&str, &str, &str, &str)] = &[
-    // (provider_id, display name, stream, logo path)
+    // (provider_id, display name, stream, logo)
     (
         "lr1",
         "Latvijas Radio 1",
-        "http://lr1mp0.latvijasradio.lv:8004/",
-        "1/lr1_logo.png",
+        "https://muste.latvijasradio.lv/shoutcast/mp4:lr1a.stream/playlist.m3u8",
+        "https://cdn.latvijasradio.lv/media/station/lr1-square-AKLVNE.png",
     ),
     (
         "lr2",
         "Latvijas Radio 2",
-        "http://lr2mp0.latvijasradio.lv:8004/",
-        "2/lr_logo.png",
+        "https://muste.latvijasradio.lv/shoutcast/mp4:lr2a.stream/playlist.m3u8",
+        "https://cdn.latvijasradio.lv/media/station/lr2-square-tVPtiL.png",
     ),
     (
         "lr3",
         "Latvijas Radio 3 Klasika",
-        "http://lr3mp0.latvijasradio.lv:8004/",
-        "3/lr3_logo.png",
+        "https://muste.latvijasradio.lv/shoutcast/mp4:lr3a.stream/playlist.m3u8",
+        "https://cdn.latvijasradio.lv/media/station/lr3-square-uAudnk.png",
     ),
     (
         "lr4",
         "Latvijas Radio 4",
-        "http://lr4mp0.latvijasradio.lv:8004/",
-        "4/lr4_logo.png",
+        "http://lr4mp1.latvijasradio.lv:8020/;",
+        "https://latvijasradio.lsm.lv/public/assets/design/channels/4/lr4_logo.png",
     ),
     (
         "naba",
         "Radio Naba",
-        "http://nabamp0.latvijasradio.lv:8008/",
-        "6/lr6_logo.png",
+        "https://muste.latvijasradio.lv/shoutcast/mp4:naba.stream/playlist.m3u8",
+        "https://cdn.latvijasradio.lv/media/station/lr6-square-DtKFht.png",
     ),
 ];
 
 pub async fn discover(_client: &Client) -> Vec<Station> {
     let stations: Vec<Station> = STATIONS
         .iter()
-        .map(|(id, display_name, stream_url, logo_path)| {
+        .map(|(id, display_name, stream_url, logo_url)| {
             debug!(provider = "latvijas-radio", name = display_name, %stream_url, "Discovered station");
             Station {
                 name: (*display_name).to_string(),
                 stream_url: (*stream_url).to_string(),
-                logo_url: Some(format!("{LOGO_BASE}/{logo_path}")),
+                logo_url: Some((*logo_url).to_string()),
                 country: Some(COUNTRY.into()),
                 country_code: Some(COUNTRY_CODE.into()),
                 tags: vec![],
