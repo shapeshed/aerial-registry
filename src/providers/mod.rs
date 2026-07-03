@@ -3,6 +3,7 @@ pub mod ard;
 pub mod bauer;
 pub mod bbc;
 pub mod bhrt;
+pub mod bnr;
 pub mod btrc;
 pub mod cbc;
 pub mod cesky_rozhlas;
@@ -43,6 +44,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         bbc,
         bauer,
         bhrt,
+        bnr,
         btrc,
         cbc,
         cesky_rozhlas,
@@ -75,6 +77,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         bbc::discover(client),
         bauer::discover(client),
         bhrt::discover(client),
+        bnr::discover(client),
         btrc::discover(client),
         cbc::discover(client),
         cesky_rozhlas::discover(client),
@@ -109,6 +112,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         bbc,
         bauer,
         bhrt,
+        bnr,
         btrc,
         cbc,
         cesky_rozhlas,
