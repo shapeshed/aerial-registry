@@ -565,6 +565,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "err",
     "ert",
     "hrt",
+    "latvijas-radio",
     "mtva",
     "npo",
     "nrk",
