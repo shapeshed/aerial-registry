@@ -569,6 +569,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "polskie-radio",
     "radio-france",
     "rai",
+    "rik",
     "rtbf",
     "rte",
     "rtp",
