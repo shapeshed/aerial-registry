@@ -18,23 +18,27 @@ const BTRC_LOGO: &str = "https://upload.wikimedia.org/wikipedia/commons/d/de/BTR
 /// 13,000+ votes), shipped statically: the geo-aware liveness policy exists
 /// for exactly this, and trusted stations are never probed. Radio Stalitsa
 /// has no discoverable stream anywhere and is the one missing channel.
+// Titles use the broadcaster's own Cyrillic brands, like every provider
+// carries its native names; Radio Belarus stays Latin because the
+// international service brands itself that way for foreign audiences. The
+// AI enrichment's English descriptions keep them searchable in Latin.
 const STATIONS: &[(&str, &str, &str, &str)] = &[
     // (provider_id, display name, stream, logo)
     (
         "1kanal",
-        "Pershy Kanal",
+        "Первый канал Белорусского радио",
         "https://stream2.datacenter.by/1kanal",
         BTRC_LOGO,
     ),
     (
         "kultura",
-        "Kanal Kultura",
+        "Канал Культура",
         "https://stream2.datacenter.by/kultura",
         BTRC_LOGO,
     ),
     (
         "radiusfm",
-        "Radius FM",
+        "Радиус FM",
         "https://stream2.datacenter.by/radiusfm_main",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Radiusfm_black.svg/960px-Radiusfm_black.svg.png",
     ),
