@@ -5,9 +5,9 @@ edit by hand. A checked country has at least one direct (trusted) provider;
 *(n curated)* marks countries served only by curated/aggregator stations —
 existing listener interest with no direct integration yet.
 
-**37** of 197 countries have a direct provider; **137** have at least one station.
+**38** of 197 countries have a direct provider; **137** have at least one station.
 
-## Europe (35/46)
+## Europe (36/46)
 
 - [x] **Albania** — rtsh (7) · 4 curated
 - [x] **Andorra** — rtva (2)
@@ -15,14 +15,14 @@ existing listener interest with no direct integration yet.
 - [x] **Belarus** — btrc (4) · 9 curated
 - [x] **Belgium** — rtbf (31) · 16 curated
 - [x] **Bosnia and Herzegovina** — bhrt (1) · 2 curated
-- [x] **Bulgaria** — provider implemented (absent from this build) · 13 curated
+- [x] **Bulgaria** — bnr (12) · 13 curated
 - [x] **Croatia** — hrt (17) · 8 curated
 - [x] **Cyprus** — rik (4) · 3 curated
 - [x] **Czechia** — cesky-rozhlas (26) · 28 curated
 - [x] **Denmark** — dr (27) · 5 curated
 - [x] **Estonia** — err (5) · 4 curated
 - [x] **Finland** — yle (7) · 1 curated
-- [x] **France** — radio-france (77), rinse (1) · 138 curated
+- [x] **France** — rinse (1) · 138 curated
 - [x] **Germany** — ard (192) · 338 curated
 - [x] **Greece** — ert (34) · 44 curated
 - [x] **Hungary** — mtva (9) · 35 curated
@@ -54,7 +54,7 @@ existing listener interest with no direct integration yet.
 - [x] **Switzerland** — srgssr (14) · 18 curated
 - [ ] Ukraine *(12 curated)*
 - [x] **United Kingdom** — bauer (44), bbc (128), global (146), rinse (3), wireless (9) · 64 curated
-- [ ] Vatican City *(1 curated)*
+- [x] **Vatican City** — vatican-radio (30)
 
 ## Africa (0/54)
 
