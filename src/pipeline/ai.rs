@@ -559,6 +559,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "cbc",
     "cesky-rozhlas",
     "dr",
+    "hrt",
     "npo",
     "nrk",
     "orf",
