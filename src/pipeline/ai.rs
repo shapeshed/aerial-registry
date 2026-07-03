@@ -577,6 +577,7 @@ const KNOWN_PUBLIC_PROVIDERS: &[&str] = &[
     "rik",
     "rtbf",
     "rtk",
+    "rtl-lu",
     "rte",
     "rtp",
     "rtsh",

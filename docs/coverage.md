@@ -5,9 +5,9 @@ edit by hand. A checked country has at least one direct (trusted) provider;
 *(n curated)* marks countries served only by curated/aggregator stations —
 existing listener interest with no direct integration yet.
 
-**35** of 197 countries have a direct provider; **137** have at least one station.
+**36** of 197 countries have a direct provider; **137** have at least one station.
 
-## Europe (33/46)
+## Europe (34/46)
 
 - [x] **Albania** — rtsh (7) · 4 curated
 - [x] **Andorra** — rtva (2)
@@ -33,7 +33,7 @@ existing listener interest with no direct integration yet.
 - [x] **Latvia** — latvijas-radio (5) · 6 curated
 - [ ] Liechtenstein — *no public broadcaster — Radio Liechtenstein closed in 2025 after a defunding referendum; radio.li is an archive*
 - [x] **Lithuania** — lrt (4) · 6 curated
-- [ ] Luxembourg *(2 curated)*
+- [x] **Luxembourg** — provider implemented (absent from this build) · 2 curated
 - [ ] Malta *(1 curated)*
 - [ ] Moldova *(2 curated)*
 - [ ] Monaco — *no national public radio — Radio Monaco is private; RMC is a French station*
