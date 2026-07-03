@@ -32,6 +32,7 @@ pub mod rtvslo;
 pub mod ruv;
 pub mod sbs;
 pub mod sr;
+pub mod srgssr;
 pub mod wireless;
 pub mod yle;
 
@@ -77,6 +78,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         ruv,
         sbs,
         sr,
+        srgssr,
         wireless,
         yle,
     ) = tokio::join!(
@@ -114,6 +116,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         ruv::discover(client),
         sbs::discover(client),
         sr::discover(client),
+        srgssr::discover(client),
         wireless::discover(client),
         yle::discover(client),
     );
@@ -153,6 +156,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         ruv,
         sbs,
         sr,
+        srgssr,
         wireless,
         yle,
     ]
