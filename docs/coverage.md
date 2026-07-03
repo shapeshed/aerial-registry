@@ -15,14 +15,14 @@ existing listener interest with no direct integration yet.
 - [x] **Belarus** — btrc (4) · 9 curated
 - [x] **Belgium** — rtbf (31) · 16 curated
 - [x] **Bosnia and Herzegovina** — bhrt (1) · 2 curated
-- [x] **Bulgaria** — bnr (12) · 13 curated
+- [x] **Bulgaria** — provider implemented (absent from this build) · 13 curated
 - [x] **Croatia** — hrt (17) · 8 curated
 - [x] **Cyprus** — rik (4) · 3 curated
 - [x] **Czechia** — cesky-rozhlas (26) · 28 curated
 - [x] **Denmark** — dr (27) · 5 curated
 - [x] **Estonia** — err (5) · 4 curated
 - [x] **Finland** — yle (7) · 1 curated
-- [x] **France** — rinse (1) · 138 curated
+- [x] **France** — radio-france (77), rinse (1) · 138 curated
 - [x] **Germany** — ard (192) · 338 curated
 - [x] **Greece** — ert (34) · 44 curated
 - [x] **Hungary** — mtva (9) · 35 curated
@@ -37,7 +37,7 @@ existing listener interest with no direct integration yet.
 - [ ] Malta *(1 curated)* — *PBS radio streams (TVMi) are session-signed per-IP JWTs with ~24h expiry — no static stream URL exists*
 - [x] **Moldova** — trm (4) · 2 curated
 - [ ] Monaco — *no national public radio — Radio Monaco is private; RMC is a French station*
-- [ ] Montenegro *(1 curated)*
+- [ ] Montenegro *(1 curated)* — *RTCG radio is only on the login-gated MNE Play OTT platform (Spectar) — stream URLs are account-bound and signed; the old ipradio.rs relays were decommissioned ~Jan 2026*
 - [x] **Netherlands** — npo (15) · 48 curated
 - [ ] North Macedonia *(1 curated)*
 - [x] **Norway** — nrk (26) · 3 curated
