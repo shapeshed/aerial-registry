@@ -10,14 +10,14 @@
 name = "NTS Radio 1"
 country_code = "GB"
 stream_url = "https://stream-relay-geo.ntslive.net/stream"
-logo_url = "https://media.nts.live/misc/nts_logo_1000x1000.png"
+logo_url = "https://www.nts.live/apple-touch-icon.png?v=47re43rrzb"
 tags = ["indie", "experimental", "electronic"]
 
 [[stations]]
 name = "NTS Radio 2"
 country_code = "GB"
 stream_url = "https://stream-relay-geo.ntslive.net/stream2"
-logo_url = "https://media.nts.live/misc/nts_logo_1000x1000.png"
+logo_url = "https://www.nts.live/apple-touch-icon.png?v=47re43rrzb"
 tags = ["indie", "experimental", "electronic"]
 
 [[stations]]
@@ -73,7 +73,7 @@ tags = ["alternative", "hip-hop", "electronic"]
 name = "Techno.FM"
 country_code = "GB"
 stream_url = "http://stream.techno.fm/radio.mp3"
-logo_url = "https://techno.fm/favicon.ico"
+logo_url = "https://www2.techno.fm/images/technofm-logo.png"
 tags = ["electronic", "house"]
 
 [[stations]]
@@ -233,7 +233,7 @@ tags = ["funk", "soul", "oldies", "disco"]
 name = "Techno.FM"
 country_code = "GB"
 stream_url = "http://stream.techno.fm/radio320.mp3"
-logo_url = "https://techno.fm/images/logos/logo_80px.png"
+logo_url = "https://www2.techno.fm/images/technofm-logo.png"
 tags = ["electronic", "dance", "trance"]
 
 [[stations]]
@@ -3616,7 +3616,8 @@ tags = ["oldies"]
 name = "FIP"
 country_code = "FR"
 stream_url = "http://direct.fipradio.fr/live/fip-webradio5.mp3"
-logo_url = "http://www.fipradio.fr/dist/favicons/logo-120.png"
+# The old fipradio.fr favicon URL 301-redirects to the FIP homepage (not an image) — dead.
+logo_url = "https://upload.wikimedia.org/wikipedia/fr/d/d5/FIP_logo_2005.svg"
 tags = ["indie", "alternative", "pop"]
 
 [[stations]]
@@ -11696,3 +11697,218 @@ country_code = "TD"
 stream_url = "https://strhls.streamakaci.tv/str_tchad_radio/str_tchad_radio/icecast.audio?fbclid=IwAR32Ir_eHaV-HSrh46OVT_VeTZt5KoNggoq8qzeSiAeZTJNBKKUtsSNUtcY"
 logo_url = "https://play-lh.googleusercontent.com/KTV7O5tAOis_nt9Mxy8wgxZeZJlLzy88yaNWMAub2XnSFUAU2bWgJaLm5w0N61PmVg=w480-h960"
 tags = ["world", "pop", "culture"]
+
+[[stations]]
+name = "Bassdrive"
+country_code = "US"
+stream_url = "https://ice.bassdrive.net/stream"
+logo_url = "https://play-lh.googleusercontent.com/o2PMYKKExWLkdxlQPE6tB43QPRK1Fd5fO-l-P7MaeG2AQq9p_MVYawjwXESMBF36Wg42DNrvr0Zg6vwf5398PQ"
+tags = ["drum and bass", "electronic"]
+
+[[stations]]
+name = "54house.fm"
+country_code = "DE"
+stream_url = "https://54house.fm:9013/stream"
+logo_url = "https://www.54house.fm/typo3temp/assets/_processed_/3/8/csm_logo_54house_main-quad-white_04_3cca5ba26c.jpg"
+tags = ["house", "club", "electronic"]
+
+[[stations]]
+name = "Hard Techno Radio"
+country_code = "GB"
+stream_url = "http://eilo.org:8000/hard"
+logo_url = "https://eilo.org/press/eilo_default.jpg"
+tags = ["techno", "hard techno", "electronic"]
+
+[[stations]]
+name = "Pure Ibiza Radio"
+country_code = "ES"
+stream_url = "https://pureibizaradio.clubbingradios.com:9518/PureIbizaRadio"
+logo_url = "https://www.pureibizaradio.com/wp-content/uploads/2026/04/cropped-WhatsApp-Image-2026-04-16-at-18.17.42-180x180.webp"
+tags = ["house", "dance", "electronic"]
+
+[[stations]]
+name = "ShoutDRIVE"
+country_code = "US"
+stream_url = "https://geostream.cdn.shoutdrive.com/sd-aac-hi"
+logo_url = "https://shoutdrive-com.cdn.shoutdrive.com/img/favicon/apple-touch-icon.png"
+tags = ["house", "dance", "electronic"]
+
+[[stations]]
+name = "Liquid DnB"
+country_code = "GB"
+stream_url = "https://antares.dribbcast.com/proxy/dave1/stream/"
+logo_url = "https://liquid-dnb.com/assets/images/whatsapp-image-2025-08-17-at-09.27.37-4eed50eb-1536x1024.jpg"
+tags = ["drum and bass", "liquid", "electronic"]
+
+[[stations]]
+# Registry (Radio Browser) lists this as "ABC-Loungr", a typo upstream — curated here under
+# the correct name with the station's own logo instead.
+name = "ABC Lounge"
+country_code = "FR"
+stream_url = "https://streaming.radionomy.com/ABC-Lounge"
+logo_url = "https://www.abc-lounge.com/radio/wp-content/uploads/2019/12/Logo-DEF-2019.png"
+tags = ["lounge", "jazz", "folk", "acoustic"]
+
+[[stations]]
+name = "Radio Samui Online"
+country_code = "TH"
+stream_url = "https://stream.mixadance.fm/radiosamui"
+logo_url = "https://radiosamui.online/assets/default_logo.png"
+tags = ["chillout", "lounge"]
+
+[[stations]]
+# Registry (Radio Browser) lists this all-lowercase ("nordic lodge copenhagen") — curated
+# here under the corrected capitalisation with a real logo.
+name = "Nordic Lodge Copenhagen"
+country_code = "DK"
+stream_url = "https://radio.streemlion.com:1160/stream"
+logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/NwrxAhUnyj.jpeg"
+tags = ["lounge", "chillout"]
+
+[[stations]]
+name = "Jazz Sakura (asia dream radio)"
+country_code = "JP"
+stream_url = "https://kathy.torontocast.com:3330/stream/1/?esPlayer&cb=82181.mp3"
+logo_url = "https://asiadreamradio.torontocast.stream/stations/en/images/en/421173E9B37A442498AC9F215CA25971/JazzSakuraLogo2019.jpeg"
+tags = ["jazz"]
+
+[[stations]]
+name = "OneLuvFM"
+country_code = "FR"
+stream_url = "https://streamer.radio.co/s34d8d1549/listen"
+logo_url = "https://static.wixstatic.com/media/475b52_5489e07af6a04975971f2f95bd91b7b0.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/475b52_5489e07af6a04975971f2f95bd91b7b0.jpg"
+tags = ["lounge", "jazz", "soul", "funk"]
+
+[[stations]]
+name = "Nature Radio Rain"
+country_code = "CA"
+stream_url = "https://maggie.torontocast.com:2020/stream/natureradiorain"
+logo_url = "https://radiosuitenetwork.torontocast.stream/wp-content/uploads/2021/09/RAIN.jpg"
+tags = ["ambient", "nature sounds", "sleep"]
+
+[[stations]]
+# Registry's "White Noise Radio" (radio-browser) points at
+# uk1.internet-radio.com:8280/stream, which now actually serves Brown Noise Radio's audio
+# (confirmed via icy-name) — curated here with the correct mount instead. No official station
+# logo exists, so this is a generated solid-white placeholder (fitting, given the name).
+name = "White Noise Radio"
+country_code = "GB"
+stream_url = "https://uk1.internet-radio.com/proxy/whitenoise?mp=/stream"
+logo_url = "https://placehold.co/512/ffffff/ffffff.png"
+tags = ["white noise", "ambient", "chillout"]
+
+[[stations]]
+# Solid-colour placeholder logo, matching White Noise Radio, in place of the station's own
+# (non-square) logo — consistent set for the white/brown/pink noise trio.
+name = "Brown Noise Radio"
+country_code = "GB"
+stream_url = "https://uk1.internet-radio.com/proxy/brownnoise?mp=/stream;"
+logo_url = "https://placehold.co/512/964B00/964B00.png"
+tags = ["brown noise", "ambient", "chillout"]
+
+[[stations]]
+# Solid-colour placeholder logo, matching White Noise Radio — Pink Noise Radio's only
+# available logo was the generic internet-radio.com site favicon.
+name = "Pink Noise Radio"
+country_code = "GB"
+stream_url = "http://uk1.internet-radio.com:8004/"
+logo_url = "https://placehold.co/512/FFC0CB/FFC0CB.png"
+tags = ["pink noise", "ambient", "chillout"]
+
+[[stations]]
+# Registry's logo_url 301-redirects (sohoradiolondon.com -> sohoradio.com) — curated here with
+# the resolved URL.
+name = "Soho Radio"
+country_code = "GB"
+stream_url = "http://sohoradiomusic.doughunt.co.uk:8000/320mp3"
+logo_url = "https://sohoradio.com/wp-content/themes/sohoradio-jan-2023/build/images/favicons/sohoradio-192x192.jpg"
+tags = ["jazz", "soul", "house", "eclectic"]
+
+[[stations]]
+# Registry's logo_url is a Facebook CDN link (unstable/expiring) — curated here with a
+# proper hosted logo instead.
+name = "Worldwide FM"
+country_code = "GB"
+stream_url = "https://worldwide-fm.radiocult.fm/stream"
+logo_url = "https://cdn.cosmicjs.com/4687bec0-79dd-11f0-a283-b3e51e2ec7be-image.png"
+tags = ["eclectic", "world", "jazz", "electronic"]
+
+[[stations]]
+# Independent community radio station broadcasting from Bethlehem, Palestine. Registry's
+# logo_url points at a third-party site's favicon — curated here with the station's own logo
+# instead.
+name = "Radio alHara"
+country_code = "PS"
+stream_url = "http://n02.radiojar.com/78cxy6wkxtzuv?1634328730=&rj-tok=AAABfIWfHK4AlWz8Q03vJJQdWw&rj-ttl=5"
+logo_url = "https://radioalhara.net/img/radio-alhara-logo.svg"
+tags = ["independent", "community", "eclectic"]
+
+[[stations]]
+# Registry's "Solar Radio 256" has no logo — curated here with the station's own icon.
+name = "Solar Radio 256"
+country_code = "GB"
+stream_url = "https://listen-msmn.sharp-stream.com/solarhigh.mp3"
+logo_url = "https://solarradio.com/wp-content/uploads/2020/04/proposed-solar-logo-small.jpg"
+tags = ["soul", "jazz-funk", "disco", "soulful house", "rnb"]
+
+[[stations]]
+# Registry's "Rádio Batuta MPB" has no logo — curated here with the station's own image.
+name = "Rádio Batuta MPB - A webradio do Instituto Moreira Salles"
+country_code = "BR"
+stream_url = "https://radioims.out.airtime.pro:8000/radioims_a"
+logo_url = "https://radiobatuta.ims.com.br/images/image-seo.jpg"
+tags = ["mpb", "brazilian"]
+
+[[stations]]
+# Independent cultural station from São Paulo, Brazil. Not in the bundled registry snapshot
+# (only found via the live Radio Browser API), so added here directly.
+name = "Veneno"
+country_code = "BR"
+stream_url = "https://radio.veneno.live/stream/main"
+logo_url = "https://veneno.live/wp-content/uploads/2018/08/cropped-favicon-192x192.png"
+tags = ["eclectic", "house", "electronic"]
+
+[[stations]]
+# Registry's logo_url for Dogglounge was empty — curated here with the station's own square
+# og:image (higher-res than the site's other logo asset).
+name = "Dogglounge"
+country_code = "US"
+stream_url = "http://dogglounge.com:8000/"
+logo_url = "https://dogglounge.com/wp-content/uploads/2017/03/cropped-best_deep_house_radio.jpg"
+tags = ["deep house", "electronic"]
+
+[[stations]]
+# Registry's logo_url for Cafe Mambo Ibiza Radio was empty — curated here with the station's
+# own favicon.
+name = "Cafe Mambo Ibiza Radio"
+country_code = "ES"
+stream_url = "https://streamer.radio.co/sd7b28e5f3/listen"
+logo_url = "https://cafemamboibiza.com/images/FAVICON-M.png"
+tags = ["house", "ibiza", "electronic"]
+
+[[stations]]
+# Registry's logo_url was a small topbar image — curated here with the station's higher-res
+# (1200x1200) og:image instead.
+name = "D3EP Radio"
+country_code = "GB"
+stream_url = "https://cast.d3ep.com:8008/192?v=1726246823"
+logo_url = "https://d3ep.com/assets/images/og.png"
+tags = ["house", "deep house", "electronic"]
+
+[[stations]]
+# Registry's logo_url was a small favicon.ico — curated here with the station's SVG favicon
+# (scalable, always crisp).
+name = "Radio Raheem"
+country_code = "IT"
+stream_url = "https://radioraheem.out.airtime.pro/radioraheem_a"
+logo_url = "https://www.radioraheem.it/wp-content/themes/gds-vue/meta/favicon.svg"
+tags = ["independent", "eclectic"]
+
+[[stations]]
+# Registry's logo_url was a 48x48 favicon — curated here with the 1024x1024 station image
+# from Oroko's RadioCult hosting platform API.
+name = "Oroko Radio"
+country_code = "GH"
+stream_url = "https://oroko-radio.radiocult.fm/stream"
+logo_url = "https://d4mt18vwj73wk.cloudfront.net/stationImage/2024-05-06T09:43:04Z-1024x1024.jpeg"
+tags = ["independent", "eclectic", "african"]
