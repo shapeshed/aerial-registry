@@ -21,6 +21,7 @@ network. The fields relevant to the registry are:
 
 | Field                | Type   | Notes                                                                                  |
 | -------------------- | ------ | -------------------------------------------------------------------------------------- |
+| `id`                 | string | The network's own id. Use this for the logo URL (see below) — it usually equals `default_service_id`, but not always. |
 | `default_service_id` | string | Stable BBC service identifier, e.g. `bbc_radio_one`. Used in all subsequent API calls. |
 | `title`              | string | Human-readable station name. Fall back to `titles.primary` if absent.                  |
 
@@ -73,19 +74,24 @@ primary entry. Skip a variant if its manifest returns no resolvable stream URL.
 BBC logos are available as SVGs using a predictable URL pattern:
 
 ```
-https://sounds.files.bbci.co.uk/3.9.4/networks/{serviceId}/colour_default.svg
+https://sounds.files.bbci.co.uk/3.9.4/networks/{id}/colour_default.svg
 ```
 
-No additional request is needed — construct this URL directly from the service
-ID.
+No additional request is needed — construct this URL directly from the
+network's `id` field, **not** `default_service_id`. They're equal for most
+networks, but diverge for a few: Radio 4 (`bbc_radio_four` vs
+`bbc_radio_fourfm`), Radio Scotland (`bbc_radio_scotland` vs
+`bbc_radio_scotland_fm`), and Radio Wales (`bbc_radio_wales` vs
+`bbc_radio_wales_fm`). Using `default_service_id` for the logo 404s for those
+three.
 
 ## Data Points
 
-| Field        | Source                     | Notes                                      |
-| ------------ | -------------------------- | ------------------------------------------ |
-| `name`       | Networks `title`           | Fall back to derived name if absent        |
-| `stream_url` | HLS manifest               | First HTTP line from the M3U8 variant list |
-| `logo_url`   | Constructed from serviceId | SVG format                                 |
+| Field        | Source                | Notes                                      |
+| ------------ | ---------------------- | ------------------------------------------ |
+| `name`       | Networks `title`       | Fall back to derived name if absent        |
+| `stream_url` | HLS manifest           | First HTTP line from the M3U8 variant list |
+| `logo_url`   | Constructed from `id`  | SVG format                                 |
 | `country`    | Hardcoded                  | Always `United Kingdom` / `GB`             |
 
 Tags and description are not available from this provider.
