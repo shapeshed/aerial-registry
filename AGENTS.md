@@ -86,11 +86,25 @@ Pipeline agents run sequentially after all provider agents have completed.
 
 ### Deduplicator
 
-Merges records that refer to the same station. Two records are duplicates if
-their stream URLs normalise to the same value (lowercase, strip scheme, strip
-trailing slash, drop query string).
+Merges records that refer to the same station, in two passes:
 
-Merge strategy:
+1. **By stream URL.** Two records are duplicates if their stream URLs
+   normalise to the same value (lowercase, strip scheme, strip trailing
+   slash, drop query string).
+2. **By (name, country_code), trusted-provider tie-break.** A broadcaster
+   often publishes several CDN/bitrate mirrors, and radio-browser may index a
+   different mirror under its own URL — same station, but the URL never
+   normalises to a match in pass 1. Once a record with `trusted = true`
+   (the same flag broadcaster-direct providers set to skip liveness checks)
+   exists for an exact (name, country_code) pair, any non-trusted record
+   sharing that same pair is dropped as redundant
+   aggregator noise, regardless of its stream URL. A (name, country_code)
+   group with no trusted record is left untouched, since radio-browser is
+   sometimes the only source for a station — and a group with more than one
+   trusted record is also left untouched, since this pass only ever drops
+   non-trusted entries.
+
+Merge strategy (both passes):
 
 - Keep the record with the richer data (most non-empty fields wins).
 - When a station appears in both a broadcaster-direct provider and an
