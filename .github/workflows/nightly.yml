@@ -1,4 +1,4 @@
-name: Build and publish registry
+name: Build registry
 
 on:
   schedule:
@@ -17,6 +17,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      # Read-only: gives the guard (src/pipeline/guard.rs) a local copy of
+      # the last human-approved registry to compare against, so a provider
+      # outage this run carries forward its previous entries instead of
+      # silently publishing a hole. Nothing is fetched from this over the
+      # network at pipeline runtime — it's a plain file on disk.
+      - uses: actions/checkout@v4
+        with:
+          repository: shapeshed/aerial
+          path: aerial-app
+          sparse-checkout: app/src/main/registry/registry.json
+          sparse-checkout-cone-mode: false
 
       - uses: dtolnay/rust-toolchain@stable
 
@@ -37,6 +49,7 @@ jobs:
       - name: Run pipeline
         env:
           RADIO_FRANCE_API_KEY: ${{ secrets.RADIO_FRANCE_API_KEY }}
+          AERIAL_PREVIOUS_REGISTRY_PATH: aerial-app/app/src/main/registry/registry.json
         run: cargo run --release
 
       - name: Upload station state
@@ -55,18 +68,16 @@ jobs:
             gh issue create --title "$title" --body-file anomalies.md
           fi
 
-      - name: Upload to S3
-        run: |
-          aws s3 cp registry.json.gz s3://${{ vars.S3_BUCKET }}/registry.json.gz \
-            --content-type application/json \
-            --content-encoding gzip \
-            --cache-control "public, max-age=86400"
-
-      - name: Invalidate CloudFront cache
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths '/registry.json.gz'
+      # Not published anywhere — the app bundles a snapshot instead of
+      # fetching one. This is only a downloadable candidate for you to pull
+      # down, decompress, test on a device, and copy into the app repo
+      # yourself before a release.
+      - name: Upload registry artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: registry
+          path: registry.json.gz
+          retention-days: 14
 
       - name: Prune curated stations
         run: cargo run --release -- prune-curated

@@ -27,18 +27,28 @@ questions while keeping the nightly build automated and low-touch.
 
 ## Step 1 — previous-registry guard (implemented)
 
-`src/pipeline/guard.rs` runs after liveness and before output. It fetches the
-previously published registry from CloudFront, compares per-provider station
-counts, and where a provider lost more than half of its stations it discards
-the partial output and carries yesterday's entries forward, logging a warning.
-Carried entries whose stream URL is now owned by another provider are skipped
-to avoid re-introducing duplicates.
+`src/pipeline/guard.rs` runs after liveness and before output. It compares
+per-provider station counts against a previous registry snapshot, and where
+a provider lost more than half of its stations it discards the partial
+output and carries yesterday's entries forward, logging a warning. Carried
+entries whose stream URL is now owned by another provider are skipped to
+avoid re-introducing duplicates.
 
-- `AERIAL_PREVIOUS_REGISTRY_URL` overrides the comparison source.
-- `AERIAL_PREVIOUS_REGISTRY_URL=""` disables the guard (useful for local
-  experiment builds that intentionally run a subset of providers).
+The app no longer fetches a hosted registry over the network — it bundles a
+snapshot built from a local pipeline run and tested on a device before it
+ships — so there is nothing published for the guard to pull from either.
+Instead it reads a local file:
 
-This is deliberately stateless: the published registry itself is the state.
+- `AERIAL_PREVIOUS_REGISTRY_PATH` points at a `registry.json` or
+  `registry.json.gz` to compare against — typically a local copy of the
+  app's currently-shipped `app/src/main/registry/registry.json`, i.e. the
+  last human-approved state. The nightly workflow checks out `shapeshed/aerial`
+  read-only to get this file; a local run points it at your own checkout.
+- Unset (the common case for an ad hoc local run) disables the guard.
+
+This is deliberately stateless on its own — the last-shipped registry is the
+state — but "last-shipped" now means "the file you point it at", not a
+network fetch.
 
 ## Step 2 — station state store and prune hysteresis (implemented)
 
@@ -123,9 +133,46 @@ Model findings from the evaluation phase: Gemma is strongest on tags and
 descriptions, Llama best preserves public station titles. The response parser
 tolerates fenced/wrapped/prose-embedded JSON; remaining work is prompt tuning.
 
+## Step 5 — Radio Browser bulk coverage + country overlays (implemented)
+
+The ~40 broadcaster-direct providers plus `curated` only cover a fraction of
+what a global radio directory needs. `src/providers/radio_browser.rs` fills
+the rest: a paginated bulk fetch of the public Radio Browser catalog,
+mechanically filtered (a resolved stream URL, not a `.pls`/`.m3u` playlist
+link — nothing else), marked `trusted: false`.
+
+This interacts with the other steps rather than duplicating them:
+
+- **Dedup prefers trusted providers.** `src/pipeline/dedup.rs` drops any
+  Radio Browser entry that duplicates a trusted provider's station by exact
+  `(name, country_code)`, even when the stream URLs don't match (a
+  broadcaster often publishes a different CDN/bitrate mirror than the one
+  Radio Browser happened to index).
+- **The guard (Step 1) protects the bulk fetch too.** Radio Browser's public
+  API returns occasional 502s under load; if a run's fetch fails outright,
+  the provider returns no stations for that run rather than erroring, and
+  the guard carries the previous run's Radio Browser entries forward instead
+  of publishing a near-empty catalog.
+- **Corrections are human-edited, split by country.** Radio Browser data is
+  community-submitted and uneven — wrong names, dead/superseded stream URLs,
+  bad logos. `overlays/radio-browser/<COUNTRY>.toml` (see the directory's own
+  README) holds corrections in the same `Entry` shape as `enrichment.toml`,
+  merged into the same `overlay::apply()` pass, so a fix survives indefinitely
+  and a PR only ever touches one country's file. Unlike `enrichment.toml`,
+  these are never written by the AI `enrich-overlay` job (Step 4) — running
+  AI assessment over Radio Browser's long tail would be an large, ongoing
+  cost for a problem (wrong tags) that provider mostly doesn't have; the
+  problems it does have (bad URLs, names, logos) are exactly what a human,
+  country-scoped PR is good at catching.
+- **Tag enrichment (Step 4's neighbour, `pipeline::enrich.rs`) skips it.**
+  Radio Browser stations already carry their own tags from the bulk fetch,
+  so re-querying the same API by name per station would be redundant load on
+  an upstream that's already prone to 502s.
+
 ## Order of work
 
 1. ~~Previous-registry guard~~ (done)
 2. ~~State store + three-strike hysteresis + geo-aware liveness policy~~ (done)
 3. ~~Nightly diff summary + anomaly-only issues~~ (done)
 4. ~~AI enrichment overlay + weekly delta job~~ (done)
+5. ~~Radio Browser bulk provider + country-partitioned overlays~~ (done)

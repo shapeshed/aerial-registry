@@ -2,6 +2,7 @@ mod curation;
 mod http;
 mod pipeline;
 mod providers;
+mod radio_browser_client;
 mod station;
 
 #[tokio::main]
@@ -26,7 +27,7 @@ async fn main() -> anyhow::Result<()> {
     let enriched = pipeline::enrich::enrich(&client, deduped).await;
     let overlaid = pipeline::overlay::apply(enriched);
     let live = pipeline::liveness::check(&client, overlaid).await;
-    let previous = pipeline::guard::fetch(&client).await;
+    let previous = pipeline::guard::load_from_env();
     let (guarded, interventions) = pipeline::guard::apply(live, previous.as_deref());
     pipeline::report::write(previous.as_deref(), &guarded, &interventions);
     pipeline::output::write(guarded)?;

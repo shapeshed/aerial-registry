@@ -6,8 +6,6 @@ use tracing::{info, warn};
 
 use crate::station::Station;
 
-const DEFAULT_PREVIOUS_URL: &str = "https://aerial.shapeshed.com/registry.json.gz";
-
 /// One provider the guard stepped in for.
 pub struct Intervention {
     pub provider: String,
@@ -16,25 +14,33 @@ pub struct Intervention {
     pub carried: usize,
 }
 
-/// Fetch the previously published registry for guard comparison and the
-/// nightly diff report.
+/// Load the previously shipped registry for guard comparison and the diff
+/// report, from a local file — nothing is hosted publicly for this to pull
+/// from over the network anymore.
 ///
-/// Set `AERIAL_PREVIOUS_REGISTRY_URL` to override the source, or set it to an
-/// empty string to disable the guard (and the diff report with it).
-pub async fn fetch(client: &reqwest::Client) -> Option<Vec<Station>> {
-    let url = match std::env::var("AERIAL_PREVIOUS_REGISTRY_URL") {
-        Ok(v) if v.is_empty() => {
-            info!("Previous-registry guard disabled");
+/// Set `AERIAL_PREVIOUS_REGISTRY_PATH` to the path of a `registry.json` or
+/// `registry.json.gz` to compare against — typically a local copy of the
+/// app's currently-shipped `app/src/main/registry/registry.json`, i.e. the
+/// last human-approved state. Unset (the common case for an ad hoc local
+/// run) means no previous state is available, so the guard and diff report
+/// are both skipped.
+pub fn load_from_env() -> Option<Vec<Station>> {
+    load_from_path(std::env::var("AERIAL_PREVIOUS_REGISTRY_PATH").ok())
+}
+
+fn load_from_path(path: Option<String>) -> Option<Vec<Station>> {
+    let path = match path {
+        Some(v) if !v.is_empty() => v,
+        _ => {
+            info!("No AERIAL_PREVIOUS_REGISTRY_PATH set; previous-registry guard disabled");
             return None;
         }
-        Ok(v) => v,
-        Err(_) => DEFAULT_PREVIOUS_URL.to_string(),
     };
 
-    match fetch_registry(client, &url).await {
+    match load_registry(&path) {
         Ok(p) => Some(p),
         Err(e) => {
-            warn!(url, error = %e, "Could not fetch previous registry; guard skipped");
+            warn!(path, error = %e, "Could not load previous registry; guard skipped");
             None
         }
     }
@@ -58,18 +64,17 @@ pub fn apply(
     }
 }
 
-async fn fetch_registry(client: &reqwest::Client, url: &str) -> anyhow::Result<Vec<Station>> {
-    let resp = client.get(url).send().await?.error_for_status()?;
-    let bytes = resp.bytes().await?;
+fn load_registry(path: &str) -> anyhow::Result<Vec<Station>> {
+    let bytes = std::fs::read(path)?;
 
-    // S3 stores the registry gzipped with `content-encoding: gzip`, but the
-    // client has no automatic decompression, so sniff the magic bytes.
+    // Accept either a plain registry.json or a gzipped registry.json.gz —
+    // sniff the magic bytes rather than trusting the file extension.
     let json = if bytes.starts_with(&[0x1f, 0x8b]) {
         let mut out = Vec::new();
-        GzDecoder::new(bytes.as_ref()).read_to_end(&mut out)?;
+        GzDecoder::new(bytes.as_slice()).read_to_end(&mut out)?;
         out
     } else {
-        bytes.to_vec()
+        bytes
     };
 
     Ok(serde_json::from_slice(&json)?)
@@ -241,5 +246,70 @@ mod tests {
         let (out, interventions) = apply(current, None);
         assert_eq!(out.len(), 1);
         assert!(interventions.is_empty());
+    }
+
+    fn temp_path(name: &str) -> std::path::PathBuf {
+        std::env::temp_dir().join(format!(
+            "aerial-registry-guard-test-{name}-{}",
+            std::process::id()
+        ))
+    }
+
+    #[test]
+    fn load_registry_reads_plain_json() {
+        let path = temp_path("plain");
+        let stations = vec![station("bbc", "a")];
+        std::fs::write(&path, serde_json::to_vec(&stations).unwrap()).unwrap();
+
+        let loaded = load_registry(path.to_str().unwrap()).unwrap();
+        std::fs::remove_file(&path).unwrap();
+
+        assert_eq!(loaded.len(), 1);
+        assert_eq!(loaded[0].provider, "bbc");
+    }
+
+    #[test]
+    fn load_registry_sniffs_and_decompresses_gzip() {
+        use std::io::Write as _;
+
+        let path = temp_path("gz");
+        let stations = vec![station("wireless", "w1")];
+        let json = serde_json::to_vec(&stations).unwrap();
+        let mut encoder = flate2::write::GzEncoder::new(Vec::new(), flate2::Compression::fast());
+        encoder.write_all(&json).unwrap();
+        let gz_bytes = encoder.finish().unwrap();
+        std::fs::write(&path, gz_bytes).unwrap();
+
+        let loaded = load_registry(path.to_str().unwrap()).unwrap();
+        std::fs::remove_file(&path).unwrap();
+
+        assert_eq!(loaded.len(), 1);
+        assert_eq!(loaded[0].provider, "wireless");
+    }
+
+    #[test]
+    fn load_registry_errors_on_missing_file() {
+        assert!(load_registry("/nonexistent/path/registry.json").is_err());
+    }
+
+    // `load_from_path` (not `load_from_env`) so these don't mutate real
+    // process env vars — tests run concurrently within one process, and
+    // that would race against each other.
+    #[test]
+    fn load_from_path_skips_when_none() {
+        assert!(load_from_path(None).is_none());
+        assert!(load_from_path(Some(String::new())).is_none());
+    }
+
+    #[test]
+    fn load_from_path_reads_the_given_path() {
+        let path = temp_path("env-set");
+        let stations = vec![station("bbc", "a")];
+        std::fs::write(&path, serde_json::to_vec(&stations).unwrap()).unwrap();
+
+        let loaded = load_from_path(Some(path.to_str().unwrap().to_string()));
+        std::fs::remove_file(&path).unwrap();
+
+        assert_eq!(loaded.map(|s| s.len()), Some(1));
     }
 }
