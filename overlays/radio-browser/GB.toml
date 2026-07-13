@@ -1,0 +1,10 @@
+# GB Radio Browser corrections. See ../README.md for the entry format.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a6d18be5-282c-42ea-90f5-40320466399a"
+source_hash = "manual"
+reject = true
+# Duplicate of the trusted "BBC Radio London (International)" entry
+# (bbc/bbc_london_int) under a different name format ("96k nonuk" instead
+# of "International"), so exact-name dedup doesn't catch it.
