@@ -1,4 +1,4 @@
-name: Build and publish registry
+name: Build registry
 
 on:
   schedule:
@@ -9,7 +9,6 @@ permissions:
   id-token: write
   contents: write
   pull-requests: write
-  issues: write
 
 jobs:
   build:
@@ -41,32 +40,6 @@ jobs:
 
       - name: Upload station state
         run: aws s3 cp state.db s3://${{ vars.S3_BUCKET }}/state/state.db
-
-      - name: Report anomalies
-        if: ${{ hashFiles('anomalies.md') != '' }}
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          title="Nightly registry anomalies"
-          existing=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number // empty')
-          if [ -n "$existing" ]; then
-            gh issue comment "$existing" --body-file anomalies.md
-          else
-            gh issue create --title "$title" --body-file anomalies.md
-          fi
-
-      - name: Upload to S3
-        run: |
-          aws s3 cp registry.json.gz s3://${{ vars.S3_BUCKET }}/registry.json.gz \
-            --content-type application/json \
-            --content-encoding gzip \
-            --cache-control "public, max-age=86400"
-
-      - name: Invalidate CloudFront cache
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths '/registry.json.gz'
 
       - name: Prune curated stations
         run: cargo run --release -- prune-curated

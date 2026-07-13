@@ -9,10 +9,8 @@ questions while keeping the nightly build automated and low-touch.
 
 ## Problems this addresses
 
-1. **Silent provider loss.** A transient provider failure (e.g. Wireless
-   returning a malformed response) removes every station for that provider from
-   the published registry until the next successful run. Users lose stations
-   overnight for no real-world reason.
+1. ~~**Silent provider loss.**~~ No longer applicable — see the note on Step 1
+   below.
 2. **No station identity over time.** Nothing records when a station first
    appeared, when it was last seen, or whether it changed name or stream URL.
    A rename looks identical to a removal plus an unrelated addition.
@@ -22,23 +20,23 @@ questions while keeping the nightly build automated and low-touch.
 4. **Categorisation quality is uneven.** Provider tags are inconsistent;
    Radio Browser tags are noisy. Local-model enrichment works (see
    `docs/ai-evaluation-plan.md`) but is not wired into the pipeline.
-5. **No visibility.** The nightly run publishes with no diff report, so
-   regressions are only noticed in the app.
+5. ~~**No visibility.**~~ No longer applicable — see the note on Step 3 below.
 
-## Step 1 — previous-registry guard (implemented)
+## Step 1 — previous-registry guard (removed)
 
-`src/pipeline/guard.rs` runs after liveness and before output. It fetches the
-previously published registry from CloudFront, compares per-provider station
-counts, and where a provider lost more than half of its stations it discards
-the partial output and carries yesterday's entries forward, logging a warning.
-Carried entries whose stream URL is now owned by another provider are skipped
-to avoid re-introducing duplicates.
+The app no longer fetches a hosted registry over the network — it bundles a
+snapshot built from a local pipeline run — so there is no continuously-served
+"previous registry" left to protect or compare against. `src/pipeline/guard.rs`
+(which fetched the last published `registry.json.gz` from CloudFront and
+carried a provider's previous entries forward if it lost more than half its
+stations in one run) has been removed, along with the nightly workflow's
+upload of `registry.json.gz` to S3 and its CloudFront invalidation step.
 
-- `AERIAL_PREVIOUS_REGISTRY_URL` overrides the comparison source.
-- `AERIAL_PREVIOUS_REGISTRY_URL=""` disables the guard (useful for local
-  experiment builds that intentionally run a subset of providers).
-
-This is deliberately stateless: the published registry itself is the state.
+Silent provider loss (problem 1) is consequently unmitigated at the pipeline
+level again: a provider API failing for one run does drop its stations from
+that run's output with no automatic recovery. This is an accepted tradeoff —
+each run's `registry.json.gz` is reviewed by a human before it's copied into
+the app, rather than published automatically for something else to consume.
 
 ## Step 2 — station state store and prune hysteresis (implemented)
 
@@ -75,25 +73,19 @@ Rules (enforced in `src/pipeline/liveness.rs`):
   are recorded (`last_status = geo_blocked`) but never remove a station and
   never count as failures; the build machine's location is not the
   listener's. The same rule applies to `prune-curated`.
-- **Trusted providers never auto-prune.** Liveness skips them entirely.
-  Opening a GitHub issue when a trusted station fails repeatedly lands with
-  the diff report in step 3.
+- **Trusted providers never auto-prune.** Liveness skips them entirely. A
+  trusted station failing repeatedly has no automatic surfacing now that
+  Step 3 is removed (see below) — check `state.db` or the run's own logs.
 - **Renames are updates, not churn.** Same `(provider, provider_id)` with a
-  changed name or stream URL keeps its row and its `first_seen`; surfacing
-  the change lands with the diff report in step 3.
+  changed name or stream URL keeps its row and its `first_seen`.
 
-## Step 3 — nightly diff report and anomaly issues (implemented)
+## Step 3 — nightly diff report and anomaly issues (removed)
 
-`src/pipeline/report.rs` diffs the new registry against the previous one
-(keyed on `(provider, provider_id)`, so a rename shows as a rename and not as
-remove-plus-add) and appends a report to `$GITHUB_STEP_SUMMARY`: totals,
-per-provider previous/current/added/removed table, renames, and any guard
-interventions.
-
-When the guard intervened, the intervention table is also written to
-`anomalies.md` and the nightly workflow opens a `Nightly registry anomalies`
-issue (or comments on the open one). Anomalies are the only thing that pages
-a human; a healthy run is quiet.
+`src/pipeline/report.rs` diffed the new registry against the previously
+published one and appended a summary to `$GITHUB_STEP_SUMMARY`, opening a
+`Nightly registry anomalies` issue when the guard (Step 1) had intervened.
+Removed alongside Step 1, since it had no data source once nothing published
+a "previous registry" to diff against.
 
 ## Step 4 — AI enrichment as a committed overlay (implemented)
 
@@ -125,7 +117,7 @@ tolerates fenced/wrapped/prose-embedded JSON; remaining work is prompt tuning.
 
 ## Order of work
 
-1. ~~Previous-registry guard~~ (done)
+1. ~~Previous-registry guard~~ (removed — no hosted registry left to guard)
 2. ~~State store + three-strike hysteresis + geo-aware liveness policy~~ (done)
-3. ~~Nightly diff summary + anomaly-only issues~~ (done)
+3. ~~Nightly diff summary + anomaly-only issues~~ (removed alongside Step 1)
 4. ~~AI enrichment overlay + weekly delta job~~ (done)
