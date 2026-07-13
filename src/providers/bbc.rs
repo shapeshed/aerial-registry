@@ -15,6 +15,12 @@ struct NetworksResponse {
 
 #[derive(Deserialize)]
 struct Network {
+    // The network's own id, used for logo assets. This usually matches
+    // default_service_id, but not always — e.g. Radio 4's network id is
+    // "bbc_radio_four" while its default_service_id (used for streaming) is
+    // "bbc_radio_fourfm". Same split for Radio Scotland and Radio Wales.
+    // Using default_service_id for the logo 404s for those three networks.
+    id: Option<String>,
     default_service_id: Option<String>,
     // The networks API exposes titles as long_title ("BBC Radio 4") and
     // short_title ("Radio 4") — there is no plain `title` field.
@@ -45,6 +51,10 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         .into_iter()
         .filter_map(|network| {
             let service_id = network.default_service_id.filter(|s| !s.is_empty())?;
+            let logo_id = network
+                .id
+                .filter(|s| !s.is_empty())
+                .unwrap_or_else(|| service_id.clone());
             let name = network
                 .long_title
                 .filter(|s| !s.is_empty())
@@ -56,7 +66,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 })
                 .unwrap_or_else(|| service_id_to_name(&service_id));
             let logo_url = format!(
-                "https://sounds.files.bbci.co.uk/3.9.4/networks/{service_id}/colour_default.svg"
+                "https://sounds.files.bbci.co.uk/3.9.4/networks/{logo_id}/colour_default.svg"
             );
             Some((service_id, name, logo_url))
         })
@@ -193,6 +203,10 @@ mod tests {
             network.default_service_id.as_deref(),
             Some("bbc_radio_fourfm")
         );
+        // Radio 4's logo asset folder is "bbc_radio_four", distinct from the
+        // "bbc_radio_fourfm" service id used for streaming — the `id` field
+        // must deserialize separately so the logo URL can use it instead.
+        assert_eq!(network.id.as_deref(), Some("bbc_radio_four"));
     }
 
     #[test]
