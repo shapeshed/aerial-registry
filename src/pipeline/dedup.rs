@@ -2,12 +2,19 @@ use tracing::debug;
 
 use crate::station::Station;
 
-// Broadcaster-direct providers ranked highest; curated entries and
-// aggregators lowest. Listed by exception so a newly added direct provider
-// ranks correctly without touching this table.
+// Broadcaster-direct providers ranked highest, curated next, radio-browser
+// lowest. `curated` and `radio-browser` used to share one rank — harmless
+// until the radio-browser bulk provider existed, since with no large
+// aggregator corpus a stream-URL collision between the two was rare. Now
+// that it does, a URL collision between a hand-picked curated entry and a
+// radio-browser one was won by whichever sorted first alphabetically,
+// silently discarding curated stations at random. `curated` is a real
+// content-quality tier above `radio-browser`, not a fallback, so give it
+// its own rank.
 fn provider_rank(p: &str) -> u8 {
     match p {
-        "curated" | "radio-browser" => 1,
+        "radio-browser" => 2,
+        "curated" => 1,
         _ => 0,
     }
 }
@@ -181,6 +188,27 @@ mod tests {
         ]);
         assert_eq!(out.len(), 1);
         assert_eq!(out[0].provider, "radio-france");
+    }
+
+    #[test]
+    fn curated_wins_over_radio_browser_on_url_collision() {
+        // Regression: a hand-picked curated entry sharing a stream URL with
+        // a radio-browser entry must win regardless of name. Deliberately
+        // named so the radio-browser entry would sort first alphabetically
+        // ("AAA..." < "ZZZ...") — previously the two shared one rank and the
+        // tie broke on name, so this exact case silently kept the
+        // radio-browser copy and discarded the curated one.
+        let out = dedup(vec![
+            station(
+                "radio-browser",
+                "AAA Community Name",
+                "https://example.com/stream",
+            ),
+            station("curated", "ZZZ Curated Name", "https://example.com/stream"),
+        ]);
+        assert_eq!(out.len(), 1);
+        assert_eq!(out[0].provider, "curated");
+        assert_eq!(out[0].name, "ZZZ Curated Name");
     }
 
     #[test]
