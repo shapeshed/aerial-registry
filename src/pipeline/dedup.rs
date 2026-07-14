@@ -74,13 +74,18 @@ fn merge_into(existing: &mut Station, duplicate: Station) {
 // publishes multiple CDN/bitrate mirrors and radio-browser has indexed a
 // different one under its own URL: same station, non-matching URL. Once a
 // `trusted` (first-party broadcaster) entry exists for a (name, country_code)
-// pair, any non-trusted entries sharing that exact pair are redundant
-// aggregator noise, so drop them regardless of stream URL. Groups with no
+// pair, any `radio-browser` entry sharing that exact pair is redundant
+// aggregator noise, so drop it regardless of stream URL. Groups with no
 // trusted entry are left untouched — radio-browser is often the only source
 // for a station, and its entries must not be merged away just for sharing a
 // generic name. A second trusted entry in the same group (two distinct
 // first-party providers, e.g. by coincidence) is also left alone: this pass
-// only ever drops non-trusted entries, never trusted-vs-trusted.
+// only ever drops radio-browser entries, never trusted-vs-trusted.
+//
+// Scoped to `radio-browser` specifically, not "anything untrusted": `curated`
+// is also `trusted: false` (that flag only means "skip liveness checks", not
+// "not editorially chosen") — these are deliberately hand-picked and must
+// never be dropped just for sharing a name with a broadcaster's own feed.
 fn drop_aggregator_duplicates(mut stations: Vec<Station>) -> Vec<Station> {
     let mut groups: std::collections::HashMap<(String, String), Vec<usize>> =
         std::collections::HashMap::new();
@@ -103,7 +108,7 @@ fn drop_aggregator_duplicates(mut stations: Vec<Station>) -> Vec<Station> {
             continue; // No trusted direct entry in this group — leave as-is.
         };
         for &i in indices {
-            if i != keep_idx && !stations[i].trusted {
+            if i != keep_idx && stations[i].provider == "radio-browser" {
                 drop.insert(i);
                 merges.push((keep_idx, i));
             }
@@ -162,8 +167,8 @@ mod tests {
     fn station_with_country(provider: &str, name: &str, url: &str, country_code: &str) -> Station {
         let mut s = station(provider, name, url);
         s.country_code = Some(country_code.to_string());
-        // Real providers set this explicitly; mirror that for pass 2, which
-        // keys on `trusted` rather than the provider name.
+        // Real providers set this explicitly; mirror that here too, since
+        // pass 2's `keep_idx` selection keys on `trusted`.
         s.trusted = provider != "radio-browser" && provider != "curated";
         s
     }
@@ -263,6 +268,19 @@ mod tests {
                 "https://b.example/y",
                 "FR",
             ),
+        ]);
+        assert_eq!(out.len(), 2);
+    }
+
+    #[test]
+    fn curated_station_survives_alongside_trusted_duplicate() {
+        // Regression: `curated` is `trusted: false` too (that flag only means
+        // "skip liveness checks"), but it's deliberately hand-picked and must
+        // never be dropped just for sharing a name/country with a trusted
+        // broadcaster's own feed — unlike radio-browser, which should be.
+        let out = dedup(vec![
+            station_with_country("bbc", "BBC Radio 1", "https://bbc.example/r1", "GB"),
+            station_with_country("curated", "BBC Radio 1", "https://curated.example/r1", "GB"),
         ]);
         assert_eq!(out.len(), 2);
     }
