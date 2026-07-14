@@ -1,0 +1,112 @@
+# NL Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d58a82c3-b7f1-4c1c-83b1-9e45d42e1e19"
+source_hash = "manual"
+tags = ["rock", "oldies"]
+logo_url = "https://www.arrow.nl/wp-content/themes/bones-master/library/images/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c0357737-c4b3-4237-b8e9-1b14db02c157"
+source_hash = "manual"
+tags = ["pop", "top 40"]
+logo_url = "https://qmusic.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6c1493a5-cc7a-485f-a24e-7d66b4062e3b"
+source_hash = "manual"
+tags = ["news", "business", "talk"]
+logo_url = "https://www.bnr.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f2c1d30b-8a7d-416c-950a-1afff194337f"
+source_hash = "manual"
+tags = ["alternative", "indie"]
+logo_url = "https://kink.nl/static/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "27256fc5-7f3c-4268-afb5-5ba4485e95cd"
+source_hash = "manual"
+tags = ["talk", "culture"]
+logo_url = "https://s.regiogroei.cloud/img/favicons/rijnmond/apple-touch-icon.png?v=1689602147266"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "eefccb6d-3ef0-4f5c-989d-1f2de5e3259e"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://alloldieschannel.com/wp-content/uploads/2020/01/cropped-backgroundalloldieschannel-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "caa2acc4-222d-4574-8912-59bdf76ac32d"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://www.slam.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b075db07-a741-4756-86d4-4035292a02f2"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/pkhqkus8dmde.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1baf43c4-7fba-4077-8644-af24a9f0cfd1"
+source_hash = "manual"
+tags = ["jazz", "soul", "funk", "ambient"]
+logo_url = "https://www.pureloungeradio.com/images/Pureloungeradio-achtergrond.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8ad7fda3-52c3-4942-af8c-b8fa57f6b13d"
+source_hash = "manual"
+tags = ["soul", "r&b"]
+logo_url = "http://www.allradio.nl/uploaded/logo/soul-radio-groot.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "82afe796-5b38-443b-bef4-7fcd0cfd7a9c"
+source_hash = "manual"
+tags = ["rock", "metal"]
+logo_url = "http://www.baarsclassicrock.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ba89d58f-7555-42cd-8775-91a6cb3945ee"
+source_hash = "manual"
+tags = ["dance", "house", "electronic", "soul", "funk"]
+logo_url = "https://danceradio.nl/wp-content/uploads/2023/10/cropped-faviconpng-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5e45745b-7337-4299-bb93-6b99fafbc2b2"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://qmusic.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e5bb47e0-13b3-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "soul", "r&b"]
+logo_url = "https://www.nporadio2.nl/soulenjazz/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fa805567-16de-4276-aec5-4171ed7a01ed"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+logo_url = "https://joe.nl/favicon.ico"
+

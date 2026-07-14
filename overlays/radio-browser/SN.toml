@@ -1,0 +1,14 @@
+# SN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "95b1f36c-6a28-4c0e-bbfb-9b3e9ebe9cf4"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+logo_url = "https://dakarmusique.com/wp-content/uploads/2022/11/cropped-486-486-max-180x180.png"
+

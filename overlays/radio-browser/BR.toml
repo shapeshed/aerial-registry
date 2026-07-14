@@ -1,0 +1,14 @@
+# BR Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5fcea0b1-dd78-49d3-a8f1-41ff3b00124f"
+source_hash = "manual"
+tags = ["eclectic", "house", "electronic"]
+logo_url = "https://veneno.live/wp-content/uploads/2018/08/cropped-favicon-192x192.png"
+

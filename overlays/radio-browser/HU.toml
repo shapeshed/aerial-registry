@@ -1,0 +1,35 @@
+# HU Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "648b2abd-92a0-11e9-a605-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "house", "trance"]
+logo_url = "https://dancewave.online/dw_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a6692d00-d0ae-4573-88d6-7fbcf11bd860"
+source_hash = "manual"
+tags = ["dance", "oldies"]
+logo_url = "https://dancewave.online/dwr_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "245c676c-f219-41fa-90fb-76944a3bb241"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://oxygenmusic.hu/logo192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "70e0cdbe-955c-4695-893a-5b9a94bb16f4"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://bdpstrock.hu/favicon.ico"
+

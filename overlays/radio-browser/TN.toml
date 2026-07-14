@@ -1,0 +1,14 @@
+# TN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8d92ff8d-7149-4431-9306-a960e67c09e7"
+source_hash = "manual"
+tags = ["world", "pop"]
+logo_url = "https://www.jawharafm.net/ar/static/fr/image/gif/favicon.gif"
+

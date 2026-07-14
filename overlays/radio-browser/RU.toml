@@ -1,0 +1,35 @@
+# RU Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96602485-0e66-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "house", "pop"]
+logo_url = "http://liveam.tv/img/2494.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ca818265-e55d-4539-99ed-b995104201ca"
+source_hash = "manual"
+tags = ["dance", "electronic", "house"]
+logo_url = "http://www.mixadance.fm/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a6baab1b-acbe-4ee7-a647-df2b1821833f"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://im.kommersant.ru/contentflex/images/favicons2020/apple-touch-icon-120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9c490538-c74f-4fc3-a987-a1920621467e"
+source_hash = "manual"
+tags = ["electronic", "house"]
+logo_url = "https://radiopotok.mobi/apple-touch-icon.png"
+

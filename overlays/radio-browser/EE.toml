@@ -1,0 +1,14 @@
+# EE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dd6671b8-263a-43d8-95be-a6cb08de6b20"
+source_hash = "manual"
+tags = ["oldies"]
+logo_url = "https://sky.ee/favicon.ico"
+

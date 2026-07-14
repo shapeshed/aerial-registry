@@ -1,0 +1,14 @@
+# UY Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96443c16-bb54-4437-964d-eef2d6f65239"
+source_hash = "manual"
+tags = ["pop", "rock", "alternative"]
+logo_url = "https://cdn-profiles.tunein.com/s13953/images/bannerx.jpg?t=636203379790000000"
+

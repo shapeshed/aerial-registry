@@ -1,0 +1,14 @@
+# CD Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e66ef171-ea45-4a59-a042-35caaba47321"
+source_hash = "manual"
+tags = ["news", "talk", "world"]
+logo_url = "https://www.radiookapi.net/sites/default/files/avatar-ro_normal.gif_0.png"
+

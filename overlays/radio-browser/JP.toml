@@ -1,0 +1,14 @@
+# JP Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e0763775-fdb9-4f6d-b88e-057165cb283c"
+source_hash = "manual"
+tags = ["electronic", "ambient"]
+logo_url = "https://gensokyoradio.net/favicon.ico"
+

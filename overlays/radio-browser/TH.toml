@@ -1,0 +1,21 @@
+# TH Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0c1aae6c-8412-464b-91bd-bc06cd396ef9"
+source_hash = "manual"
+tags = ["pop", "electronic"]
+logo_url = "http://www.coolism.net/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4994cbbc-78e1-4009-84d3-563e4d3f6854"
+source_hash = "manual"
+tags = ["alternative", "rock", "electronic"]
+logo_url = "https://bkk.fm/images/favicons/favicon-32x32.png"
+

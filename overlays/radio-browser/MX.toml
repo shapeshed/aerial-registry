@@ -1,0 +1,21 @@
+# MX Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "66c65fce-94da-47d6-a4ad-6c0259c0f9bf"
+source_hash = "manual"
+tags = ["pop", "electronic", "top 40"]
+logo_url = "http://cdn-radiotime-logos.tunein.com/s87554q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "09669200-2711-4c54-87e7-205ec84f929c"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/dwdxek9by6tq.jpg"
+

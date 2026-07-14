@@ -8,3 +8,117 @@ reject = true
 # Duplicate of the trusted "BBC Radio London (International)" entry
 # (bbc/bbc_london_int) under a different name format ("96k nonuk" instead
 # of "International"), so exact-name dedup doesn't catch it.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "464d1d2c-870b-4a0c-82f9-38eec5e28295"
+source_hash = "manual"
+tags = ["jazz", "soul", "world", "electronic", "eclectic"]
+logo_url = "https://worldwidefm.net/wp-content/uploads/2023/03/WWFM-Logo-2023.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "73490696-3343-4fa2-8045-b8d11e3bb0fb"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.linnrecords.com/images/linn-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "686a0847-a519-460d-b351-831e1a80d516"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.linnrecords.com/images/linn-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6d55f9ad-5a50-4ac3-be1c-4abcbb68fd09"
+source_hash = "manual"
+tags = ["alternative", "indie", "indie rock"]
+logo_url = "https://cdn-profiles.tunein.com/s159857/images/logod.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a7d816c2-722f-4060-907d-b4c796482d87"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.jazzlondonradio.com/images/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2c788192-ca75-42c9-ace6-866087380796"
+source_hash = "manual"
+tags = ["alternative", "hip-hop", "electronic"]
+logo_url = "https://cdn-profiles.tunein.com/s155539/images/logod.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "62bfcbb9-0503-11e9-a1be-52543be04c81"
+source_hash = "manual"
+tags = ["trance", "dance", "electronic"]
+logo_url = "http://www.1mix.co.uk/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "22eb42bb-ced7-4556-b902-e789d4411ff3"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "http://cdn-profiles.tunein.com/s310252/images/logod.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fe6cd053-2fef-43e3-88af-8fac82591868"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b672eb95-f96e-4fcd-809e-0bb7d690c286"
+source_hash = "manual"
+tags = ["oldies", "rock", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "30153bd1-4c23-4439-a24c-da2820bce863"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a5be3d91-3546-11ea-8dd7-52543be04c81"
+source_hash = "manual"
+tags = ["trance", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ddde79f4-389a-4055-b2e4-90c1dbb73084"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4b137d96-506f-4b0e-ad9f-744fd29a865d"
+source_hash = "manual"
+tags = ["soul", "funk", "jazz", "r&b", "oldies"]
+logo_url = "https://cdn2.editmysite.com/images/site/footer/og-image-placeholder-blank.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0e0f2961-5c53-4c52-af70-eebe1b2af496"
+source_hash = "manual"
+tags = ["rock", "alternative"]
+logo_url = "https://24-7nicheradio.com/wp-content/uploads/2017/04/psychedelic.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fe4c2870-703c-4802-b2f6-a95664be32ff"
+source_hash = "manual"
+tags = ["rock", "alternative", "indie"]
+

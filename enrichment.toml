@@ -1040,7 +1040,8 @@ description = "German pop and music station from WDR."
 provider = "ard"
 provider_id = "42748798"
 source_hash = "19c5e67ffe3040cf"
-tags = ["alternative", "culture"]
+tags = ["alternative", "culture", "classical", "jazz", "world"]
+logo_url = "https://www1.wdr.de/resources-v5.139.1/img/favicon/apple-touch-icon.png"
 description = "German cultural radio station operated by WDR."
 
 [[station]]
@@ -1233,7 +1234,8 @@ description = "German cultural radio station livestream from NDR."
 provider = "ard"
 provider_id = "460318"
 source_hash = "e5901c48e1b551bb"
-tags = ["culture"]
+tags = ["culture", "public radio", "news"]
+logo_url = "https://www.bremenzwei.de/static/img/favicons/apple-touch-icon-180.png?v=4"
 description = "German cultural radio station from Bremen."
 
 [[station]]
@@ -14407,6 +14409,9 @@ tags = ["pop"]
 provider = "npo"
 provider_id = "npo-3fm"
 source_hash = "0f74517a04d8a171"
+name = "NPO 3FM Serious Radio"
+tags = ["pop", "rock", "indie", "alternative"]
+logo_url = "https://www.3fm.nl/apple-touch-icon.png"
 description = "Dutch pop and rock station operated by NPO."
 
 [[station]]
@@ -14420,7 +14425,9 @@ description = "Dutch public radio station offering a blend of music and talk."
 provider = "npo"
 provider_id = "npo-funx"
 source_hash = "b386a79dc4740dd8"
-tags = ["hip-hop", "r&b"]
+name = "NPO FunX NL"
+tags = ["hip-hop", "r&b", "urban"]
+logo_url = "https://www.funx.nl/apple-touch-icon.png"
 description = "Dutch hip-hop and urban music station from NPO."
 
 [[station]]
@@ -14483,6 +14490,8 @@ description = "Dutch radio station broadcasting from Utrecht, Netherlands."
 provider = "npo"
 provider_id = "npo-radio-1"
 source_hash = "975d66e8cffb2529"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/NPO_Radio_1_logo_2014.svg/640px-NPO_Radio_1_logo_2014.svg.png"
 description = "Dutch public radio station broadcasting news and talk."
 
 [[station]]
@@ -14490,18 +14499,23 @@ provider = "npo"
 provider_id = "npo-radio-2"
 source_hash = "4d04d59937eab60a"
 tags = ["public radio", "talk", "oldies"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/NPO_Radio_2_logo.svg/640px-NPO_Radio_2_logo.svg.png"
 description = "Dutch public radio station playing oldies and talk shows."
 
 [[station]]
 provider = "npo"
 provider_id = "npo-radio-4"
 source_hash = "4cf769e57fe76928"
+tags = ["classical"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/NPO_Klassiek_logo.svg/1200px-NPO_Klassiek_logo.svg.png"
 description = "Dutch classical music station"
 
 [[station]]
 provider = "npo"
 provider_id = "npo-radio-5"
 source_hash = "102cd1d5fea13b2d"
+tags = ["oldies", "public radio", "talk"]
+logo_url = "https://www.nporadio5.nl/apple-touch-icon.png"
 description = "Dutch public radio station playing oldies and talk shows."
 
 [[station]]
@@ -14775,6 +14789,7 @@ provider = "orf"
 provider_id = "vbg"
 source_hash = "86d7d17a89260408"
 tags = ["public radio", "news", "talk"]
+logo_url = "https://orfodon.org/system/accounts/avatars/111/374/623/444/743/699/original/3022673107e835ba.png"
 description = "Local Austrian radio station broadcasting from Vorarlberg."
 
 [[station]]
@@ -15230,7 +15245,8 @@ description = "From D’Ibrahim Maalouf to Tony Allen, from Vaudou Game to Bebel
 provider = "radio-france"
 provider_id = "7"
 source_hash = "0c8990650b2f4695"
-tags = ["alternative", "world"]
+tags = ["alternative", "world", "indie", "pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/fr/d/d5/FIP_logo_2005.svg"
 description = "The most eclectic radio station in the world."
 
 [[station]]
@@ -15341,7 +15357,8 @@ description = "Italian radio station broadcasting from Naples."
 provider = "rai"
 provider_id = "ContentItem-441ece2d-25a7-4611-9a35-5e12eaf94166"
 source_hash = "24d95f78be710051"
-tags = ["classical", "jazz"]
+tags = ["classical", "jazz", "culture", "public radio"]
+logo_url = "https://www.raicom.rai.it/wp-content/uploads/2021/12/RADIO3-1024x1024.jpg"
 description = "Italian radio station broadcasting classical music, jazz, and opera."
 
 [[station]]
@@ -15363,6 +15380,7 @@ provider = "rai"
 provider_id = "ContentItem-9e417375-854c-4a2c-a63f-514f5c8ff685"
 source_hash = "1cd90ef6f8cdd02b"
 tags = ["public radio", "news", "pop", "talk"]
+logo_url = "https://radio-streaming.it/assets/image/radio/180/rairadio1logo.png"
 description = "Italian public radio station."
 
 [[station]]
@@ -15432,6 +15450,8 @@ description = "French electronic music station specializing in techno and bass m
 provider = "rinse"
 provider_id = "kool"
 source_hash = "c49844d158c89e05"
+tags = ["drum and bass", "jungle", "electronic", "dance"]
+logo_url = "https://pbs.twimg.com/profile_images/1638236080674578434/Hbww_nFm_400x400.jpg"
 description = "UK dance station playing drum and bass and jungle."
 
 [[station]]
@@ -15704,6 +15724,9 @@ description = "Irish-language radio station from Ireland."
 provider = "rtp"
 provider_id = "antena1"
 source_hash = "9973cd55cbf231c6"
+name = "Antena 1"
+tags = ["pop", "talk", "sport", "news"]
+logo_url = "https://cdn-images.rtp.pt/play/images/apple-touch-icon.png-120x120.png"
 description = "Live broadcast of RTP Antena 1. All information, sports, debate, interviews, culture and Portuguese music that connects Portugal. Available on multiple platforms."
 
 [[station]]
@@ -15780,12 +15803,18 @@ description = "Live broadcast from Radio RTP Lusitânia. Portuguese music classi
 provider = "rtp"
 provider_id = "rdpafrica"
 source_hash = "72eeb6e8d39dbff9"
+name = "RDP Africa"
+tags = ["world", "talk", "culture"]
+logo_url = "https://www.celsoazevedo.com/files/2022/11/rdp-africa.jpg"
 description = "Live broadcast of rádio RTP África. Music from African, Portuguese, Brazilian, Antillian and Latin American expression. With information, culture, debate and sports from Portugal, Angola, Mozambique, São Tomé and Principe, Guinea-Bissau and Cape Verde. Available on multiple platforms."
 
 [[station]]
 provider = "rtp"
 provider_id = "rdpinternacional"
 source_hash = "98178f711c8ad6bc"
+name = "RDP Internacional"
+tags = ["talk", "world", "culture"]
+logo_url = "https://www.celsoazevedo.com/files/2022/11/rdp-internacional.png"
 description = "Live broadcast of RTP Mundo. The best of Portuguese music, news and sports information for Portuguese communities around the world. The Radio of Lusophone. Available on multiple platforms."
 
 [[station]]
@@ -16056,7 +16085,8 @@ tags = ["news", "public radio"]
 provider = "sbs"
 provider_id = "sbs-chill"
 source_hash = "74b69f01b6044e4a"
-tags = ["ambient", "electronic", "world"]
+tags = ["ambient", "electronic", "world", "chillout"]
+logo_url = "https://www.sbs.com.au/_next/static/img/language/app-icon_128x128-18ef105.png"
 
 [[station]]
 provider = "sbs"
@@ -16519,3 +16549,181 @@ provider_id = "https://virgin.live.stream.broadcasting.news/stream?aw_0_1st.plat
 source_hash = "8c92494e33908b01"
 tags = ["pop", "rock", "dance"]
 description = "UK radio station playing pop, rock, and dance music."
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "polskie-radio"
+provider_id = "pr24"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://yt3.ggpht.com/a/AATXAJyFlzKJAEMeWhP6xmsC3EHQ9MkIldwATEmAQA=s900-c-k-c0xffffffff-no-rj-mo"
+
+[[station]]
+provider = "polskie-radio"
+provider_id = "trojka"
+source_hash = "manual"
+name = "PR Tr\\u00f3jka"
+tags = ["public radio", "alternative", "culture"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250314_080616667.jpg?alt=media&token=4738543a-4391-4727-9d9d-89741871db70"
+
+[[station]]
+provider = "ert"
+provider_id = "zeppelin"
+source_hash = "manual"
+name = "Zeppelin 106.7"
+tags = ["rock", "alternative", "indie"]
+logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
+
+[[station]]
+provider = "ert"
+provider_id = "deftero"
+source_hash = "manual"
+name = "ERA Deftero Programma"
+tags = ["public radio", "talk", "culture"]
+logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
+
+[[station]]
+provider = "ert"
+provider_id = "ertnewsradio"
+source_hash = "manual"
+name = "ERA Proto Programma"
+tags = ["public radio", "talk", "culture"]
+logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
+
+[[station]]
+provider = "ert"
+provider_id = "trito"
+source_hash = "manual"
+name = "ERA Trito Programma"
+tags = ["public radio", "culture"]
+logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
+
+[[station]]
+provider = "ert"
+provider_id = "kosmos"
+source_hash = "manual"
+name = "ERT Kosmos"
+tags = ["world", "public radio"]
+logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
+
+[[station]]
+provider = "ert"
+provider_id = "kosmos-jazz"
+source_hash = "manual"
+name = "ERT Kosmos Jazz"
+tags = ["jazz", "public radio"]
+logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
+
+[[station]]
+provider = "yle"
+provider_id = "ylex"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://images.cdn.yle.fi/f_auto,w_48,h_48,dpr_4.0/v1496664710/yle-areena-app.png"
+
+[[station]]
+provider = "bhrt"
+provider_id = "bhradio1"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://bhrt.ba/favicon.ico"
+
+[[station]]
+provider = "rtvslo"
+provider_id = "val202"
+source_hash = "manual"
+tags = ["pop", "public radio", "talk"]
+logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/raval202/icons/apple-touch-icon.png"
+
+[[station]]
+provider = "rtvslo"
+provider_id = "ra1"
+source_hash = "manual"
+tags = ["news", "public radio"]
+logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/raprvi/icons/apple-touch-icon.png"
+
+[[station]]
+provider = "rtvslo"
+provider_id = "rsi"
+source_hash = "manual"
+tags = ["pop", "world", "public radio"]
+logo_url = "http://img.rtvslo.si/_static/novi/bootstrap/public/themes/rasi/icons/apple-touch-icon.png"
+
+[[station]]
+provider = "rtvslo"
+provider_id = "capo"
+source_hash = "manual"
+tags = ["pop", "public radio", "world"]
+logo_url = "http://cdn-radiotime-logos.tunein.com/s16010q.png"
+
+[[station]]
+provider = "rtvslo"
+provider_id = "rakp"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "http://img.rtvslo.si/_static/r180/rakp/icons/favicon-194x194.png"
+
+[[station]]
+provider = "rtvslo"
+provider_id = "ramb"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/ramb/icons/favicon-32x32.png"
+
+[[station]]
+provider = "rtvslo"
+provider_id = "ars"
+source_hash = "manual"
+name = "Ars"
+tags = ["classical", "culture", "public radio"]
+logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/raars/icons/apple-touch-icon.png"
+
+[[station]]
+provider = "latvijas-radio"
+provider_id = "lr2"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "http://lr2.lsm.lv/favicon/lr2-favicon-180x180.png"
+
+[[station]]
+provider = "latvijas-radio"
+provider_id = "lr1"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "http://lr1.lsm.lv/favicon/lr1-favicon-180x180.png"
+
+[[station]]
+provider = "btrc"
+provider_id = "radiusfm"
+source_hash = "manual"
+name = "\\u0420\\u0430\\u0434\\u0438\\u0443\\u0441FM"
+tags = ["pop"]
+logo_url = "https://radiusfm.by/favicon.ico"
+
+[[station]]
+provider = "btrc"
+provider_id = "1kanal"
+source_hash = "manual"
+name = "\\u041f\\u0435\\u0440\\u0448\\u044b \\u041d\\u0430\\u0446\\u044b\\u044f\\u043d\\u0430\\u043b\\u044c\\u043d\\u044b \\u043a\\u0430\\u043d\\u0430\\u043b \\u0411\\u0435\\u043b\\u0430\\u0440\\u0443\\u0441\\u043a\\u0430\\u0433\\u0430 \\u0440\\u0430\\u0434\\u044b\\u0451"
+tags = ["news", "public radio"]
+logo_url = "https://static.tildacdn.com/tild3461-6633-4430-a264-373430336431/belorusskoe-radio-kv.jpg"
+
+[[station]]
+provider = "btrc"
+provider_id = "kultura"
+source_hash = "manual"
+name = "\\u0420\\u0430\\u0434\\u0438\\u043e \\u041a\\u0430\\u043d\\u0430\\u043b \\u041a\\u0443\\u043b\\u044c\\u0442\\u0443\\u0440\\u0430 \\u041c\\u0438\\u043d\\u0441\\u043a 102.9 FM"
+tags = ["culture", "news", "talk"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250120_144809784.jpg?alt=media&token=ff0e59d6-9c27-4e09-a0aa-d8fe39ffde65"
+
+[[station]]
+provider = "vatican-radio"
+provider_id = "en"
+source_hash = "manual"
+tags = ["news", "talk", "culture", "public radio"]
+logo_url = "https://media.vaticannews.va/media/content/dam-archive/vaticannews/multimedia/2021/02/09/2021.02.09-Logo-Radio-Vaticana.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1000.563.jpeg"
+

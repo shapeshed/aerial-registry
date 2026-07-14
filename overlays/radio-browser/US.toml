@@ -1,0 +1,161 @@
+# US Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "82b3d31f-0b79-445b-ad19-36395e8ed052"
+source_hash = "manual"
+tags = ["alternative", "rock", "pop", "electronic", "ambient", "eclectic", "indie"]
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6ce8da92-859f-4f96-a5e4-503c1ddfbfbf"
+source_hash = "manual"
+tags = ["oldies", "jazz", "swing", "classical", "folk"]
+logo_url = "https://icecast.walmradio.com:8443/classic.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2ce23ee2-95c5-407d-9df8-54c3cdde2825"
+source_hash = "manual"
+tags = ["jazz", "alternative", "electronic", "indie", "ambient"]
+logo_url = "https://icecast.walmradio.com:8443/jazz.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9e54d6fc-16a6-4308-9c15-c60aeb1e2de8"
+source_hash = "manual"
+tags = ["rock", "alternative", "indie", "pop", "electronic", "eclectic"]
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "02f3876d-ee77-449b-bae4-6cbb335d414b"
+source_hash = "manual"
+tags = ["alternative", "ambient", "electronic", "eclectic", "rock"]
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cedbc15b-ed67-4924-b408-a3c8321a351e"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.smoothjazz.com/sites/default/files/theme/sj-circle-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b913fc56-6e77-4fb3-b3ef-72342317a5bf"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://100hitz.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6dd81d97-87ff-4dd3-8307-96d61dd0395c"
+source_hash = "manual"
+tags = ["rock", "metal"]
+logo_url = "https://megarockradio.net/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d152dc4b-1a4d-412b-8ae3-dc1da174bfde"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "https://radiostationusa.fm/assets/image/radio/180/KDFCFM.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "887ed8ec-aab7-4c7b-9f39-5a280b2899a9"
+source_hash = "manual"
+tags = ["world", "folk"]
+logo_url = "http://www.salsaoneradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "720ec5da-4629-4688-8797-ab7fe86611cd"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "http://www.organlive.com/eighthnotes.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "25af5e12-a3b4-483d-bec8-2acab78aa683"
+source_hash = "manual"
+tags = ["world", "eclectic", "alternative"]
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0af543e7-f8a6-4f0e-afde-bd5fe4420520"
+source_hash = "manual"
+tags = ["country"]
+logo_url = "https://fastcast4u.com/player/kievradio/_user/cover/k/kievradio/ch0_permanent.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "13cb5d8f-87d0-41f0-9797-53f2dd5a9107"
+source_hash = "manual"
+tags = ["classical", "culture"]
+logo_url = "https://media.wnyc.org/i/500/500/c/80/1/wqxr_1_1.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "21290f3a-26db-4bc6-a5e2-6266893ebb11"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.kusc.org/icons/kusc/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962ac1f6-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://i.imgur.com/KoS7yEr.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96147d8c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "http://d3kwtionx0p7im.cloudfront.net/images/icons/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "390d0a80-9838-40a0-b385-4458728d175c"
+source_hash = "manual"
+tags = ["country", "rock", "soul"]
+logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/ukyj9kjf3z3q.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b7a7ddb5-bfef-11e9-8502-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "soul", "oldies"]
+logo_url = "https://web.bigblueswing.com/misc/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1e78709e-7e60-468e-8b14-4a49d8dc3e81"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "https://theclassicalstation.org/wp-content/themes/nmc_classicalstation/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e1ad0462-4f25-421a-9d18-73519fec3da5"
+source_hash = "manual"
+tags = ["rock", "pop", "oldies"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s123174q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "af55bae9-259a-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["drum and bass", "electronic"]
+logo_url = "https://play-lh.googleusercontent.com/o2PMYKKExWLkdxlQPE6tB43QPRK1Fd5fO-l-P7MaeG2AQq9p_MVYawjwXESMBF36Wg42DNrvr0Zg6vwf5398PQ"
+

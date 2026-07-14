@@ -1,0 +1,84 @@
+# PL Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4a9151f9-835c-4c58-bda3-9084ed6addbc"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://gfx.radiozet.pl/extension/radiozet/design/standard/images/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0e5fd15c-6bfd-407c-b6e9-b54262dba6fb"
+source_hash = "manual"
+tags = ["metal", "rock", "alternative", "indie"]
+logo_url = "https://gfx.antyradio.pl/design/antyradio/src/images/favicon/favicon_180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "280df919-57cf-47de-951a-d0754631d454"
+source_hash = "manual"
+tags = ["talk", "news", "culture"]
+logo_url = "https://static.im-g.pl/im/6/7455/m7455556.gif"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4ef724fd-3151-49d5-93ef-9be908f059bd"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://radio357.pl/wp-content/uploads/2022/04/c5399c0d-1b8e-43d5-b23b-e5cef1857856.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6ea3930c-5bbd-4231-9e6a-ab225d753a74"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/2LqeyZhdFq.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "99dde3a3-de23-4705-8b34-d98689f17ccf"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.radioplus.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "40114c00-90ca-4c7d-a5b2-2f91616cacae"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://gfx.chillizet.pl/extension/chillizet/design/standard/images/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c101cf0d-9385-452f-96f8-ad46425f89d3"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "http://voxfm.pl/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "83fd5b7d-5aa6-47a2-b4f3-f5bdff158a6d"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "http://bcast.vigormultimedia.com:7000/sjcompl_192_192_nie_kasowac.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960dc513-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://radiointernetowe.online/wp-content/uploads/2021/06/rmf-classic.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c3ef941d-14b8-441b-ac83-269cc869e0d9"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://www.rmfon.pl/assets/images/favicon/apple-touch-icon.png"
+

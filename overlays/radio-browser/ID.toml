@@ -1,0 +1,14 @@
+# ID Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dfc789d5-45cf-4e34-93a4-5cd573baa08f"
+source_hash = "manual"
+tags = ["news", "culture", "world"]
+logo_url = "https://www.rri.co.id/assets/v2/img/pro3.png"
+

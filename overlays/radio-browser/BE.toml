@@ -1,0 +1,35 @@
+# BE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a220c9ad-aeec-4840-8f85-25d846bf8f6e"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.rtl.be/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b29a1971-9369-4b82-a0b7-a5115d55712f"
+source_hash = "manual"
+tags = ["jazz", "ambient", "oldies"]
+logo_url = "https://instrumentalsforever.eu/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c13cf7ce-b7c6-4714-9a5c-a7cf079fa314"
+source_hash = "manual"
+tags = ["funk", "soul", "r&b", "disco"]
+logo_url = "https://thefunkychannel.com/wp-content/uploads/2022/06/TFC-favicon-1.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1b4d2260-d251-45fa-966f-df9ff2f8ed0a"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/x7fzbddfxjqy.jpg"
+

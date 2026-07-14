@@ -1,0 +1,21 @@
+# SI Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "989a4888-4e80-4abb-bdcd-d5087cb2c830"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "http://radiocenter.si/images/icons/icon_192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fafeac6a-8cf1-4f9d-8d04-c102560d6e6e"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://media.radiobob.si/ico/32.png"
+

@@ -1,0 +1,28 @@
+# PH Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e97c36e7-6510-46ac-b1ad-10069efad77d"
+source_hash = "manual"
+tags = ["alternative", "indie"]
+logo_url = "https://img1.wsimg.com/isteam/ip/2bffade2-3155-4bd7-8193-8155e093f550/9PA%20Small%20Logo.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:95"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f0524e9f-b987-47e7-9e60-d54ff4c64b32"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.loveradio.com.ph/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "aa5970ce-ab70-4e5e-bd5c-d1e8420fdc50"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://www.easyrock.com.ph/apple-touch-icon.png"
+

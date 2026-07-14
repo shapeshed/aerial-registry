@@ -21,13 +21,6 @@ logo_url = "https://www.nts.live/apple-touch-icon.png?v=47re43rrzb"
 tags = ["indie", "experimental", "electronic"]
 
 [[stations]]
-name = "Worldwide FM"
-country_code = "GB"
-stream_url = "https://worldwidefm.out.airtime.pro/worldwidefm_a"
-logo_url = "https://worldwidefm.net/wp-content/uploads/2023/03/WWFM-Logo-2023.png"
-tags = ["jazz", "soul", "world", "electronic"]
-
-[[stations]]
 name = "Resonance FM"
 country_code = "GB"
 stream_url = "https://stream.resonance.fm:8000/resonance"
@@ -35,53 +28,11 @@ logo_url = "https://www.resonancefm.com/wp-content/uploads/2020/01/resonance-log
 tags = ["arts", "experimental", "spoken word"]
 
 [[stations]]
-name = "Linn Jazz"
-country_code = "GB"
-stream_url = "https://radio.linn.co.uk:8000/autodj.m3u"
-logo_url = "https://www.linnrecords.com/images/linn-logo.png"
-tags = ["jazz"]
-
-[[stations]]
-name = "Linn Classical"
-country_code = "GB"
-stream_url = "https://radio.linn.co.uk:8004/autodj.m3u"
-logo_url = "https://www.linnrecords.com/images/linn-logo.png"
-tags = ["classical"]
-
-[[stations]]
-name = "TMM 1"
-country_code = "GB"
-stream_url = "https://listen-msmn.sharp-stream.com/nme1.mp3"
-logo_url = "https://cdn-profiles.tunein.com/s159857/images/logod.png"
-tags = ["alternative", "indie", "indie rock"]
-
-[[stations]]
-name = "Jazz London Radio"
-country_code = "GB"
-stream_url = "http://radio.canstream.co.uk:8075/live.mp3"
-logo_url = "https://www.jazzlondonradio.com/images/favicon.ico"
-tags = ["jazz"]
-
-[[stations]]
-name = "TMM 2"
-country_code = "GB"
-stream_url = "https://listen-msmn.sharp-stream.com/nme2.mp3"
-logo_url = "https://cdn-profiles.tunein.com/s155539/images/logod.png"
-tags = ["alternative", "hip-hop", "electronic"]
-
-[[stations]]
 name = "Techno.FM"
 country_code = "GB"
 stream_url = "http://stream.techno.fm/radio.mp3"
 logo_url = "https://www2.techno.fm/images/technofm-logo.png"
 tags = ["electronic", "house"]
-
-[[stations]]
-name = "1Mix Radio Trance"
-country_code = "GB"
-stream_url = "http://1mix.co.uk/trance/listenh.m3u"
-logo_url = "http://www.1mix.co.uk/favicon.ico"
-tags = ["trance", "dance", "electronic"]
 
 [[stations]]
 name = "Different Drumz DnB Radio"
@@ -98,24 +49,10 @@ logo_url = "http://www.chilloutibizafm.com/favicon.ico"
 tags = ["ambient", "electronic"]
 
 [[stations]]
-name = "GB News"
-country_code = "GB"
-stream_url = "http://listen-gbnews.sharp-stream.com/gbnews.mp3"
-logo_url = "http://cdn-profiles.tunein.com/s310252/images/logod.png"
-tags = ["news", "talk"]
-
-[[stations]]
 name = "Hard Rock Hell"
 country_code = "GB"
 stream_url = "http://andromeda.shoutca.st:9254/stream"
 tags = ["metal", "rock"]
-
-[[stations]]
-name = "Naim Jazz"
-country_code = "GB"
-stream_url = "http://mscp3.live-streams.nl:8340/jazz-high.aac"
-logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
-tags = ["jazz"]
 
 [[stations]]
 name = "Radio Seva"
@@ -139,23 +76,11 @@ logo_url = "https://truckers.fm/favicon.ico"
 tags = ["pop", "country"]
 
 [[stations]]
-name = "Radio Caroline"
-country_code = "GB"
-stream_url = "http://sc6.radiocaroline.net:8040/;stream.mp3"
-tags = ["oldies", "rock", "pop"]
-
-[[stations]]
 name = "1Mix EDM Radio"
 country_code = "GB"
 stream_url = "http://fr1.1mix.co.uk:8060/"
 logo_url = "http://www.1mix.co.uk/favicon.ico"
 tags = ["electronic", "dance", "trance"]
-
-[[stations]]
-name = "Radio Caroline Flashback"
-country_code = "GB"
-stream_url = "http://sc2.radiocaroline.net:10558/listen.pls"
-tags = ["oldies", "pop", "rock"]
 
 [[stations]]
 name = "NonStopPlay Dance Radio"
@@ -165,31 +90,11 @@ logo_url = "https://www.nonstopplay.com/wp-content/uploads/2022/12/favicon.png"
 tags = ["dance", "electronic"]
 
 [[stations]]
-name = "TrancePulse FM"
-country_code = "GB"
-stream_url = "http://trancepulsefm.com/128/listen.pls"
-tags = ["trance", "electronic", "dance"]
-
-[[stations]]
-name = "Naim Classical"
-country_code = "GB"
-stream_url = "http://mscp3.live-streams.nl:8250/class-high.aac"
-logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
-tags = ["classical"]
-
-[[stations]]
 name = "BritCom 2 - Pumpkin FM"
 country_code = "GB"
 stream_url = "https://cast2.asurahosting.com/proxy/britcom2/stream"
 logo_url = "https://pumpkinfm.com/wp-content/uploads/2019/02/BritComTwo300x300.jpg"
 tags = ["comedy", "culture"]
-
-[[stations]]
-name = "London Soul Radio"
-country_code = "GB"
-stream_url = "http://londonsoulradio.out.airtime.pro:8000/londonsoulradio_a"
-logo_url = "https://cdn2.editmysite.com/images/site/footer/og-image-placeholder-blank.png"
-tags = ["soul", "funk", "jazz", "r&b", "oldies"]
 
 [[stations]]
 name = "Soul Radio"
@@ -354,13 +259,6 @@ stream_url = "https://uk4-vn.mixstream.net/8128/listen.mp3"
 tags = ["house", "electronic"]
 
 [[stations]]
-name = "24-7 Psychedelic Rock"
-country_code = "GB"
-stream_url = "https://antares.dribbcast.com:2199/tunein/s8150.pls"
-logo_url = "https://24-7nicheradio.com/wp-content/uploads/2017/04/psychedelic.png"
-tags = ["rock", "alternative"]
-
-[[stations]]
 name = "Giants of Jazz Radio"
 country_code = "GB"
 stream_url = "http://streaming.radio.co/s297e618a7/listen"
@@ -371,12 +269,6 @@ name = "Nation 60s"
 country_code = "GB"
 stream_url = "https://listen-nation.sharp-stream.com/nation60s.mp3"
 tags = ["oldies", "pop"]
-
-[[stations]]
-name = "60 North Radio"
-country_code = "GB"
-stream_url = "http://r5.zetcast.net/flac"
-tags = ["rock", "alternative", "indie"]
 
 [[stations]]
 name = "24-7 The '60s"
@@ -392,24 +284,10 @@ stream_url = "https://stream.deevaradio.net:10443/divaradiofunk"
 tags = ["funk", "disco", "soul", "r&b"]
 
 [[stations]]
-name = "Naim Jazz"
-country_code = "GB"
-stream_url = "http://mscp3.live-streams.nl:8340/jazz-flac.flac"
-logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
-tags = ["jazz"]
-
-[[stations]]
 name = "Svetur"
 country_code = "GB"
 stream_url = "http://svetur.intellmedia.lt:8282/tiesiogiai.mp3"
 tags = ["world", "folk"]
-
-[[stations]]
-name = "Kool FM"
-country_code = "GB"
-stream_url = "https://admin.stream.rinse.fm/proxy/kool/stream"
-logo_url = "https://pbs.twimg.com/profile_images/1638236080674578434/Hbww_nFm_400x400.jpg"
-tags = ["drum and bass", "jungle", "electronic", "dance"]
 
 [[stations]]
 name = "BritCom 1"
@@ -422,13 +300,6 @@ name = "CNN UK"
 country_code = "GB"
 stream_url = "https://tunein.cdnstream1.com/2868_96.mp3"
 logo_url = "https://edition.cnn.com/favicon.ico"
-tags = ["news", "talk"]
-
-[[stations]]
-name = "GB News"
-country_code = "GB"
-stream_url = "http://listen-gbnews.sharp-stream.com/gbnews.aac?ref=RF"
-logo_url = "https://www.google.com/favicon.ico"
 tags = ["news", "talk"]
 
 [[stations]]
@@ -453,45 +324,11 @@ logo_url = "http://www.rockantenne.de/logos/station-rock-antenne/favicon.ico"
 tags = ["metal", "rock"]
 
 [[stations]]
-name = "TranceBase.FM"
-country_code = "DE"
-stream_url = "http://listen.trancebase.fm/tunein-aac-hd-pls"
-logo_url = "https://www.trancebase.fm/media/icons/trb/apple-touch-icon.png"
-tags = ["trance", "electronic", "dance"]
-
-[[stations]]
-name = "Antenne Bayern"
-country_code = "DE"
-stream_url = "http://mp3channels.webradio.antenne.de/antenne"
-tags = ["pop", "rock"]
-
-[[stations]]
-name = "TechnoBase.FM"
-country_code = "DE"
-stream_url = "http://lw2.mp3.tb-group.fm/tb.mp3"
-logo_url = "https://technobase.fm/media/icons/tb/apple-touch-icon.png"
-tags = ["dance", "electronic", "house"]
-
-[[stations]]
 name = "0N - Classic Rock on Radio"
 country_code = "DE"
 stream_url = "https://0n-classicrock.radionetz.de/0n-classicrock.mp3"
 logo_url = "https://www.0nradio.com/logos/0n-classic-rock_600x600.jpg"
 tags = ["rock", "oldies"]
-
-[[stations]]
-name = "Radio Eins"
-country_code = "DE"
-stream_url = "http://radioeins.de/stream"
-logo_url = "http://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
-tags = ["pop", "rock", "alternative", "public radio", "talk"]
-
-[[stations]]
-name = "Inforadio"
-country_code = "DE"
-stream_url = "http://www.inforadio.de/live.m3u"
-logo_url = "http://www.inforadio.de/content/dam/rbb/rbb/logos/touch/inf-128.png"
-tags = ["news", "talk", "public radio"]
 
 [[stations]]
 name = "Deutschlandfunk"
@@ -528,12 +365,6 @@ logo_url = "https://static.wixstatic.com/media/a09246_33fe4aef6e5f4f17b605a8d864
 tags = ["reggae"]
 
 [[stations]]
-name = "Deutschrap"
-country_code = "DE"
-stream_url = "http://stream.laut.fm/deutschrap"
-tags = ["hip-hop"]
-
-[[stations]]
 name = "Hit Radio FFH"
 country_code = "DE"
 stream_url = "http://mp3.ffh.de/radioffh/hqlivestream.mp3"
@@ -545,25 +376,6 @@ name = "Total Instrumental"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/total-instrumental"
 tags = ["ambient", "electronic", "instrumental"]
-
-[[stations]]
-name = "Hit Radio FFH - 80er"
-country_code = "DE"
-stream_url = "http://mp3.ffh.de/ffhchannels/hq80er.mp3"
-tags = ["pop", "rock", "oldies"]
-
-[[stations]]
-name = "MDR Aktuell"
-country_code = "DE"
-stream_url = "http://avw.mdr.de/streams/284340-0_mp3_high.m3u"
-logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
-tags = ["news", "talk"]
-
-[[stations]]
-name = "Hit Radio FFH - Eurodance"
-country_code = "DE"
-stream_url = "http://streams.ffh.de/ffhchannels/mp3/hqeurodance.m3u"
-tags = ["dance", "electronic", "pop"]
 
 [[stations]]
 name = "1000 Oldies"
@@ -587,13 +399,6 @@ logo_url = "https://www.radioarabella.de/storage/thumbs/192x192/r:1658501906/788
 tags = ["pop", "rock", "oldies"]
 
 [[stations]]
-name = "I Love Radio - Hip Hop Turnup"
-country_code = "DE"
-stream_url = "http://stream02.iloveradio.de/iloveradio13.mp3?hadpreroll"
-logo_url = "https://www.iloveradio.de/favicon.ico"
-tags = ["hip-hop"]
-
-[[stations]]
 name = "0N - Indie on Radio"
 country_code = "DE"
 stream_url = "https://0n-indie.radionetz.de/0n-indie.mp3"
@@ -606,13 +411,6 @@ country_code = "DE"
 stream_url = "https://stream.0nlineradio.com/soft-rock?ref=radiobrowser"
 logo_url = "https://i.ibb.co/SJFG3bt/soft-rock.jpg"
 tags = ["rock", "pop", "oldies"]
-
-[[stations]]
-name = "MDR Klassik"
-country_code = "DE"
-stream_url = "http://avw.mdr.de/streams/284350-0_mp3_high.m3u"
-logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
-tags = ["classical"]
 
 [[stations]]
 name = "Technolovers Deep House"
@@ -677,13 +475,6 @@ logo_url = "https://schlager.radio/wp-content/uploads/2020/11/cropped-radio-palo
 tags = ["pop", "oldies"]
 
 [[stations]]
-name = "NDR 2"
-country_code = "DE"
-stream_url = "https://www.ndr.de/resources/metadaten/audio_ssl/m3u/ndr2.m3u"
-logo_url = "https://www.ndr.de//apple-touch-icon-57x57.png"
-tags = ["pop"]
-
-[[stations]]
 name = "Acid Jazz Radio"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/acidjazz"
@@ -695,12 +486,6 @@ country_code = "DE"
 stream_url = "https://stream.technolovers.fm/edm?ref=radiobrowser"
 logo_url = "https://i.ibb.co/TmRLJsp/EDM-TL.jpg"
 tags = ["electronic", "dance", "house", "trance"]
-
-[[stations]]
-name = "Antenne Bayern - Oldies but Goldies"
-country_code = "DE"
-stream_url = "http://mp3channels.webradio.antenne.de/oldies-but-goldies"
-tags = ["oldies", "pop"]
 
 [[stations]]
 name = "GAYFM"
@@ -716,44 +501,10 @@ stream_url = "http://stream.laut.fm/1000discohits"
 tags = ["oldies", "dance", "soul"]
 
 [[stations]]
-name = "NDR Info (Niedersachsen)"
-country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo.m3u"
-logo_url = "https://www.ndr.de/apple-touch-icon-120x120.png"
-tags = ["news", "talk", "culture"]
-
-[[stations]]
 name = "Electronic Music Club"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/emc"
 tags = ["electronic", "dance", "house"]
-
-[[stations]]
-name = "TechnoBase.FM"
-country_code = "DE"
-stream_url = "https://listener3.mp3.tb-group.fm/tb.mp3"
-logo_url = "https://cdn.onlineradiobox.com/img/l/0/32040.v12.png"
-tags = ["electronic", "trance", "dance"]
-
-[[stations]]
-name = "Berliner Rundfunk 91.4"
-country_code = "DE"
-stream_url = "http://stream.berliner-rundfunk.de/brf/mp3-128/internetradio/"
-logo_url = "https://upload.berliner-rundfunk.de/production/static/1693298496587/icons/icon_64.a80y02808w0.png"
-tags = ["pop", "culture"]
-
-[[stations]]
-name = "Deutschrap"
-country_code = "DE"
-stream_url = "http://stream.laut.fm/deutschrap"
-tags = ["hip-hop"]
-
-[[stations]]
-name = "SWR1 BW"
-country_code = "DE"
-stream_url = "https://liveradio.swr.de/sw282p3/swr1bw/play.mp3"
-logo_url = "https://www.radio.at/images/broadcasts/07/41/2273/2/c300.png"
-tags = ["pop", "culture"]
 
 [[stations]]
 name = "Fritz"
@@ -776,13 +527,6 @@ stream_url = "http://wdr-cosmo-live.icecast.wdr.de/wdr/cosmo/live/mp3/128/stream
 tags = ["world", "pop", "culture"]
 
 [[stations]]
-name = "Rock Antenne Heavy Metal"
-country_code = "DE"
-stream_url = "https://mp3channels.webradio.rockantenne.de/heavy-metal"
-logo_url = "https://cdn.onlineradiobox.com/img/l/1/34491.v5.png"
-tags = ["metal", "rock"]
-
-[[stations]]
 name = "1000 Goldschlager"
 country_code = "DE"
 stream_url = "https://1000goldschlager.stream.laut.fm/1000goldschlager"
@@ -790,24 +534,10 @@ logo_url = "https://1000goldschlager.de/apple-icon-120x120.png"
 tags = ["pop", "oldies"]
 
 [[stations]]
-name = "Antenne Bayern - 80er Kulthits"
-country_code = "DE"
-stream_url = "http://www.antenne.de/webradio/channels/80er-kulthits.m3u"
-logo_url = "http://www.antenne.de/logos/antenne-bayern/apple-touch-icon.png"
-tags = ["pop", "oldies"]
-
-[[stations]]
 name = "WDR 1Live Diggi"
 country_code = "DE"
 stream_url = "http://wdr-1live-diggi.icecast.wdr.de/wdr/1live/diggi/mp3/128/stream.mp3"
 logo_url = "https://www1.wdr.de/radio/1live-diggi/resources-v5.122.3/img/favicon/apple-touch-icon.png"
-tags = ["pop", "indie", "alternative"]
-
-[[stations]]
-name = "MDR Jump"
-country_code = "DE"
-stream_url = "http://avw.mdr.de/streams/284320-0_mp3_high.m3u"
-logo_url = "https://cdn.mdrjump.de/resources/jump/img/favicons/apple-icon-120x120.png"
 tags = ["pop", "indie", "alternative"]
 
 [[stations]]
@@ -823,12 +553,6 @@ country_code = "DE"
 stream_url = "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3?aggregator=web"
 logo_url = "https://www.deutschlandfunkkultur.de/static/img/deutschlandfunk_kultur/icons/apple-touch-icon-128x128.png"
 tags = ["culture", "news", "public radio"]
-
-[[stations]]
-name = "Rock Antenne Soft Rock"
-country_code = "DE"
-stream_url = "http://www.rockantenne.de/webradio/channels/soft-rock.m3u"
-tags = ["rock", "oldies"]
 
 [[stations]]
 name = "0N - 60s on Radio"
@@ -850,13 +574,6 @@ country_code = "DE"
 stream_url = "https://stream.technolovers.fm/electro-house?ref=radiobrowser"
 logo_url = "https://i.ibb.co/B4R6kNj/Electrohouse-tl.jpg"
 tags = ["electronic", "house", "dance"]
-
-[[stations]]
-name = "MDR Kultur"
-country_code = "DE"
-stream_url = "http://avw.mdr.de/streams/284310-0_mp3_high.m3u"
-logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
-tags = ["culture", "public radio"]
 
 [[stations]]
 name = "Italo Disco"
@@ -892,54 +609,6 @@ logo_url = "https://www.electroswing-radio.com/favicon.ico"
 tags = ["electronic", "dance", "house"]
 
 [[stations]]
-name = "HR1"
-country_code = "DE"
-stream_url = "http://metafiles.gl-systemhaus.de/hr/hr1_2.m3u"
-logo_url = "https://www.hr1.de/favicon.png?v=3.84.2"
-tags = ["pop"]
-
-[[stations]]
-name = "SWR1 BW"
-country_code = "DE"
-stream_url = "https://liveradio.swr.de/sw282p3/swr1bw/play.mp3"
-logo_url = "https://swr.de/favicon.ico"
-tags = ["pop", "talk"]
-
-[[stations]]
-name = "TechnoBase.FM"
-country_code = "DE"
-stream_url = "http://listen.technobase.fm/tunein-aac-hd-pls"
-logo_url = "https://n.image.weareone.fm/news/grafiken/_314354/Grafiken/WAO_-_Sendeplangrafik.png"
-tags = ["electronic", "dance", "trance", "house"]
-
-[[stations]]
-name = "Rock Antenne Alternative"
-country_code = "DE"
-stream_url = "http://www.rockantenne.de/webradio/channels/alternative.m3u"
-logo_url = "http://www.rockantenne.de/logos/rock-antenne/apple-touch-icon.png"
-tags = ["alternative", "rock", "indie"]
-
-[[stations]]
-name = "Oldie Antenne"
-country_code = "DE"
-stream_url = "https://s1-webradio.oldie-antenne.de/oldie-antenne?aw_0_1st.playerid=OldieAntenneWebPlayer"
-logo_url = "https://www.oldie-antenne.de/logos/oldie-antenne/apple-touch-icon.png"
-tags = ["oldies", "pop"]
-
-[[stations]]
-name = "ByteFM"
-country_code = "DE"
-stream_url = "https://bytefm.cast.addradio.de/bytefm/main/high/stream"
-logo_url = "https://www.byte.fm/static/favicon/favicon-96x96.png?v=2023.10.27.3186-f0a9d83"
-tags = ["indie", "rock", "pop", "world"]
-
-[[stations]]
-name = "Schlagerparadies"
-country_code = "DE"
-stream_url = "http://www.surfmusik.de/m3u/schlagerparadies,9490.m3u"
-tags = ["pop", "folk"]
-
-[[stations]]
 name = "NDR2"
 country_code = "DE"
 stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u"
@@ -959,58 +628,16 @@ logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:b3660
 tags = ["pop", "talk", "oldies"]
 
 [[stations]]
-name = "HR3"
-country_code = "DE"
-stream_url = "http://metafiles.gl-systemhaus.de/hr/hr3_2.m3u"
-logo_url = "https://www.hr3.de/favicon.png?v=3.85.2"
-tags = ["pop", "talk"]
-
-[[stations]]
-name = "HouseTime.FM"
-country_code = "DE"
-stream_url = "https://listen.housetime.fm/aac-hd.pls"
-logo_url = "https://housetime.fm/media/icons/ht/apple-touch-icon.png"
-tags = ["house", "electronic", "dance"]
-
-[[stations]]
-name = "Radioeins"
-country_code = "DE"
-stream_url = "http://www.radioeins.de/live.m3u"
-logo_url = "http://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
-tags = ["pop", "talk", "culture"]
-
-[[stations]]
 name = "Oldschool Hip-Hop"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/oldschool-hiphop"
 tags = ["hip-hop", "oldies"]
 
 [[stations]]
-name = "Harmony.FM"
-country_code = "DE"
-stream_url = "http://streams.harmonyfm.de/harmonyfm/mp3/hqlivestream.m3u"
-logo_url = "https://www.harmonyfm.de/android-icon.png"
-tags = ["pop", "oldies"]
-
-[[stations]]
-name = "NDR Kultur"
-country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrkultur.m3u"
-logo_url = "https://www.ndr.de//apple-touch-icon-57x57.png"
-tags = ["classical", "culture", "jazz"]
-
-[[stations]]
 name = "Antenne Bayern - Hitmix"
 country_code = "DE"
 stream_url = "http://mp3channels.webradio.antenne.de/hitmix"
 tags = ["pop"]
-
-[[stations]]
-name = "NDR 1 Welle Nord"
-country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr1wellenord_ki.m3u"
-logo_url = "http://www.ndr.de/favicon.ico"
-tags = ["pop", "talk", "oldies"]
 
 [[stations]]
 name = "Energy Bremen"
@@ -1031,12 +658,6 @@ stream_url = "http://club-high.rautemusik.fm/"
 tags = ["dance", "electronic", "house"]
 
 [[stations]]
-name = "Top20Radio"
-country_code = "DE"
-stream_url = "http://server8.blitz-stream.de:9100/"
-tags = ["pop", "rock", "oldies"]
-
-[[stations]]
 name = "JazzRadio 106.8 Berlin"
 country_code = "DE"
 stream_url = "https://streaming.radio.co/s774887f7b/listen"
@@ -1048,12 +669,6 @@ name = "Epic Classical"
 country_code = "DE"
 stream_url = "https://stream.epic-classical.com/classical-music-for-sleep"
 tags = ["classical", "ambient", "relaxation"]
-
-[[stations]]
-name = "Blues Rock Cafe"
-country_code = "DE"
-stream_url = "http://stream.laut.fm/bluesrockcafe.m3u"
-tags = ["blues", "rock"]
 
 [[stations]]
 name = "Bayern 1 Franken"
@@ -1068,13 +683,6 @@ country_code = "DE"
 stream_url = "http://dispatcher.rndfnk.com/rbb/rbb888/live/mp3/mid"
 logo_url = "https://www.rbb888.de/content/dam/rbb/rbb/logos/touch/ach-128.png"
 tags = ["pop", "oldies"]
-
-[[stations]]
-name = "Absolut Bella"
-country_code = "DE"
-stream_url = "https://absolut-bella.live-sm.absolutradio.de/absolut-bella/stream/mp3"
-logo_url = "https://absolutradio.de/apple-touch-icon.png"
-tags = ["oldies", "pop"]
 
 [[stations]]
 name = "Hip Hop Forever"
@@ -1130,33 +738,6 @@ stream_url = "http://stream.laut.fm/sound"
 tags = ["folk", "country", "oldies"]
 
 [[stations]]
-name = "WDR 2 Ostwestfalen-Lippe"
-country_code = "DE"
-stream_url = "http://wdr-wdr2-ostwestfalenlippe.icecast.wdr.de/wdr/wdr2/ostwestfalenlippe/mp3/128/stream.mp3"
-logo_url = "https://www1.wdr.de/resources-v5.158.1/img/favicon/apple-touch-icon.png"
-tags = ["pop", "news", "talk"]
-
-[[stations]]
-name = "WDR 3"
-country_code = "DE"
-stream_url = "http://wdr-wdr3-live.icecast.wdr.de/wdr/wdr3/live/mp3/256/stream.mp3"
-logo_url = "https://www1.wdr.de/resources-v5.139.1/img/favicon/apple-touch-icon.png"
-tags = ["classical", "jazz", "world"]
-
-[[stations]]
-name = "HardBase.FM"
-country_code = "DE"
-stream_url = "http://mp3.stream.tb-group.fm/hb.mp3?"
-logo_url = "https://hardbase.fm/media/icons/hb/favicon-32x32.png"
-tags = ["dance", "electronic", "house"]
-
-[[stations]]
-name = "Deep House Sounds"
-country_code = "DE"
-stream_url = "http://stream.laut.fm/deep-house-sounds"
-tags = ["house", "electronic", "ambient"]
-
-[[stations]]
 name = "Hitradio Germany"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/hitradio-germany"
@@ -1186,13 +767,6 @@ name = "Technolovers Eurodance"
 country_code = "DE"
 stream_url = "https://stream.technolovers.fm/eurodance?ref=radiobrowser"
 tags = ["dance", "electronic", "pop"]
-
-[[stations]]
-name = "hr4"
-country_code = "DE"
-stream_url = "https://dispatcher.rndfnk.com/hr/hr4/live/mp3/high"
-logo_url = "https://www.hr4.de/favicon.png?v=3.85.2"
-tags = ["pop", "talk", "news"]
 
 [[stations]]
 name = "Psyradio FM Chillout"
@@ -1247,18 +821,6 @@ logo_url = "https://dnbradio.com/apple-touch-icon.png"
 tags = ["electronic", "dance", "drum and bass"]
 
 [[stations]]
-name = "Classic Rock Radio"
-country_code = "DE"
-stream_url = "http://internetradio.salue.de:8000/classicrock.mp3"
-tags = ["rock", "oldies"]
-
-[[stations]]
-name = "Antenne Bayern - Coffee Music"
-country_code = "DE"
-stream_url = "https://mp3channels.webradio.de/coffee"
-tags = ["pop", "ambient"]
-
-[[stations]]
 name = "M1.FM - Schlagerparty"
 country_code = "DE"
 stream_url = "http://tuner.m1.fm/schlagerparty.mp3"
@@ -1284,13 +846,6 @@ stream_url = "https://stream.technolovers.fm/drummnbass?ref=radiobrowser"
 tags = ["electronic", "dance", "drum and bass"]
 
 [[stations]]
-name = "Rock Antenne Alternative"
-country_code = "DE"
-stream_url = "https://stream.rockantenne.de/alternative/stream/mp3"
-logo_url = "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png"
-tags = ["rock", "alternative"]
-
-[[stations]]
 name = "Baden.fm"
 country_code = "DE"
 stream_url = "http://badenfm.ip-streaming.net:8006/badenfm"
@@ -1303,13 +858,6 @@ country_code = "DE"
 stream_url = "http://www.antenne.de/webradio/channels/lovesongs.m3u"
 logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
 tags = ["pop", "oldies", "soul"]
-
-[[stations]]
-name = "NDR Blue"
-country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrblue.m3u"
-logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/NDR_Blue_Logo.svg/1200px-NDR_Blue_Logo.svg.png"
-tags = ["jazz", "rock", "pop", "soul"]
 
 [[stations]]
 name = "Epic Piano - Chillout Piano"
@@ -1336,27 +884,6 @@ country_code = "DE"
 stream_url = "http://stream.laut.fm/0-24_80er_pop_rock"
 logo_url = "https://101fm.de/wp-content/uploads/2020/02/cropped-512er-180x180.png"
 tags = ["pop", "rock", "oldies"]
-
-[[stations]]
-name = "Rock Antenne Blues Rock"
-country_code = "DE"
-stream_url = "https://stream.rockantenne.de/blues-rock/stream/mp3"
-logo_url = "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png"
-tags = ["rock", "blues"]
-
-[[stations]]
-name = "RBB Radio Eins"
-country_code = "DE"
-stream_url = "http://www.radioeins.de/livemp3"
-logo_url = "https://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
-tags = ["pop", "talk"]
-
-[[stations]]
-name = "Schwany 5 Oberkrain"
-country_code = "DE"
-stream_url = "https://schwany5oberkrain.hoamatwelle.de/"
-logo_url = "http://schwany.de/favicon.ico"
-tags = ["folk", "world"]
 
 [[stations]]
 name = "Technolovers Psytrance"
@@ -1434,12 +961,6 @@ logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-12
 tags = ["pop", "talk"]
 
 [[stations]]
-name = "egoFM"
-country_code = "DE"
-stream_url = "http://streams.egofm.de/egoFM-hq"
-tags = ["indie", "alternative", "rock"]
-
-[[stations]]
 name = "Technolovers Funky House"
 country_code = "DE"
 stream_url = "https://stream.technolovers.fm/funky-house?ref=radiobrowser"
@@ -1453,31 +974,11 @@ logo_url = "https://www.0nradio.com/logos/0n-country_600x600.jpg"
 tags = ["country", "pop"]
 
 [[stations]]
-name = "Alles Oberkrain"
-country_code = "DE"
-stream_url = "http://bayerwaldradio.deg.net:8000/allesoberkrain"
-tags = ["folk", "world"]
-
-[[stations]]
 name = "HR2 Kultur"
 country_code = "DE"
 stream_url = "https://dispatcher.rndfnk.com/hr/hr2/live/mp3/high"
 logo_url = "https://www.hr2.de/favicon.png?v=3.84.2"
 tags = ["culture", "public radio"]
-
-[[stations]]
-name = "Antenne Bayern - 90er"
-country_code = "DE"
-stream_url = "http://mp3channels.webradio.antenne.de/90er-hits"
-logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
-tags = ["pop", "oldies"]
-
-[[stations]]
-name = "Hit Radio FFH - Party"
-country_code = "DE"
-stream_url = "http://streams.ffh.de/ffhchannels/mp3/hqparty.m3u"
-logo_url = "https://webradio.ffh.de/android-icon.png"
-tags = ["pop", "dance"]
 
 [[stations]]
 name = "Deutsche Welle Radio"
@@ -1493,23 +994,10 @@ logo_url = "https://upload.dieneue1077.de/production/static/1693298631006/icons/
 tags = ["rock", "pop"]
 
 [[stations]]
-name = "Radio Seefunk"
-country_code = "DE"
-stream_url = "https://webradio.radio-seefunk.de/"
-tags = ["pop", "oldies"]
-
-[[stations]]
 name = "Technolovers Vocal Trance"
 country_code = "DE"
 stream_url = "https://stream.technolovers.fm/vocal-trance?ref=radiobrowser"
 tags = ["trance", "electronic", "dance"]
-
-[[stations]]
-name = "Rock Antenne - Melodic Rock"
-country_code = "DE"
-stream_url = "http://www.rockantenne.de/webradio/channels/melodic-rock.m3u"
-logo_url = "https://www.rockantenne.de/logos/rock-antenne/apple-touch-icon.png"
-tags = ["rock", "metal"]
 
 [[stations]]
 name = "0nlineradio Bach"
@@ -1530,31 +1018,6 @@ country_code = "DE"
 stream_url = "https://liveradio.swr.de/sw890cl/swr4bw/"
 logo_url = "https://www.swr.de/assets/swr/swr4/apple-touch-icon-180x180.png"
 tags = ["classical", "folk", "oldies"]
-
-[[stations]]
-name = "Hirschmilch Radio - Chillout"
-country_code = "DE"
-stream_url = "http://hirschmilch.de:7000/chillout.mp3"
-tags = ["ambient", "electronic"]
-
-[[stations]]
-name = "Inforadio vom rbb"
-country_code = "DE"
-stream_url = "http://opml.radiotime.com/Tune.ashx?id=s9176&partnerId=16"
-logo_url = "https://www.inforadio.de/content/dam/rbb/rbb/logos/touch/inf-128.png"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
-name = "Top20Club"
-country_code = "DE"
-stream_url = "http://server8.blitz-stream.de:9150/"
-tags = ["dance", "pop"]
-
-[[stations]]
-name = "SR3 Saarlandwelle"
-country_code = "DE"
-stream_url = "http://streaming01.sr-online.de/sr3_2.m3u"
-tags = ["pop", "oldies"]
 
 [[stations]]
 name = "BR-Klassik"
@@ -1597,13 +1060,6 @@ stream_url = "http://stream.laut.fm/best-of-techno"
 tags = ["electronic", "house", "dance"]
 
 [[stations]]
-name = "Rock Antenne Hair Metal"
-country_code = "DE"
-stream_url = "https://s9-webradio.rockantenne.de/hair-metal/stream"
-logo_url = "https://cdn.onlineradiobox.com/img/l/2/102912.v1.png"
-tags = ["rock", "metal"]
-
-[[stations]]
 name = "Dark Zero Radio"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/darkzeroradio"
@@ -1631,12 +1087,6 @@ logo_url = "https://www.1aradio.com/logos/1a-oldies_600x600.jpg"
 tags = ["oldies", "pop"]
 
 [[stations]]
-name = "Hit Radio FFH - 90er"
-country_code = "DE"
-stream_url = "http://mp3.ffh.de/ffhchannels/hqspezial.mp3"
-tags = ["pop", "oldies"]
-
-[[stations]]
 name = "Pure FM"
 country_code = "DE"
 stream_url = "http://purefm.radionetz.de/purefm-hh.mp3"
@@ -1662,45 +1112,11 @@ stream_url = "http://stream.laut.fm/synthpop"
 tags = ["electronic", "alternative", "pop"]
 
 [[stations]]
-name = "MDR Sputnik Club"
-country_code = "DE"
-stream_url = "http://avw.mdr.de/streams/284331-2_mp3_high.m3u"
-tags = ["electronic", "house", "dance"]
-
-[[stations]]
-name = "Kulturradio"
-country_code = "DE"
-stream_url = "http://kulturradio.de/live.m3u"
-logo_url = "http://www.kulturradio.de/content/dam/rbb/rbb/logos/touch/radio3-128.png"
-tags = ["classical", "culture", "public radio"]
-
-[[stations]]
 name = "0N - 2000s on Radio"
 country_code = "DE"
 stream_url = "https://0n-2000s.radionetz.de/0n-2000s.aac"
 logo_url = "https://www.0nradio.com/logos/0n-2000s_600x600.jpg"
 tags = ["pop", "rock", "dance", "oldies"]
-
-[[stations]]
-name = "I Love 2 Dance"
-country_code = "DE"
-stream_url = "http://stream02.iloveradio.de/iloveradio2.mp3"
-logo_url = "http://www.iloveradio.de/favicon.ico"
-tags = ["dance", "house", "electronic"]
-
-[[stations]]
-name = "SR1 Europawelle"
-country_code = "DE"
-stream_url = "http://streaming01.sr-online.de/sr1_2.m3u"
-logo_url = "https://www.sr.de/sr/static/images/favicon.ico"
-tags = ["pop", "rock", "public radio"]
-
-[[stations]]
-name = "SWR2"
-country_code = "DE"
-stream_url = "https://f111.rndfnk.com/ard/swr/swr2/live/mp3/256/stream.mp3?aggregator=web&sid=28ew6Usq6cch83eglcsXwLlNRS3&token=Ip5bwQ_T81Lq_mqKc3HUjnxrk94ek2bDcfNyNHuqRGk&tvf=XFsRgyq06xZmMTExLnJuZGZuay5jb20"
-logo_url = "https://www.swr.de/assets/swr/swrkultur/apple-touch-icon.png"
-tags = ["classical", "culture", "public radio"]
 
 [[stations]]
 name = "0N - Pop on Radio"
@@ -1734,20 +1150,6 @@ country_code = "DE"
 stream_url = "https://0n-oldies.radionetz.de/0n-oldies.mp3"
 logo_url = "https://www.0nradio.com/logos/0n-oldies_600x600.jpg"
 tags = ["oldies", "pop", "rock"]
-
-[[stations]]
-name = "I Love Radio - Bass"
-country_code = "DE"
-stream_url = "http://stream02.iloveradio.de/iloveradio4.mp3?hadpreroll"
-logo_url = "https://cdn-radiotime-logos.tunein.com/s167726q.png"
-tags = ["electronic", "dance", "hip-hop"]
-
-[[stations]]
-name = "NDR 1 Radio MV"
-country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr1radiomv.m3u"
-logo_url = "http://www.ndr.de/favicon.ico"
-tags = ["public radio", "pop", "oldies"]
 
 [[stations]]
 name = "Romantic Piano by Epic Piano"
@@ -1808,13 +1210,6 @@ stream_url = "https://stream.technolovers.fm/uplifting-trance?ref=radiobrowser"
 tags = ["trance", "electronic", "dance"]
 
 [[stations]]
-name = "Schwarzwaldradio"
-country_code = "DE"
-stream_url = "https://frontend.streamonkey.net/fho-schwarzwaldradiolive/mp3-stream.m3u"
-logo_url = "https://schwarzwaldradio.com/apple-touch-icon.png"
-tags = ["oldies", "rock", "pop"]
-
-[[stations]]
 name = "TranceBase FM"
 country_code = "DE"
 stream_url = "http://listen.trancebase.fm/tunein-aacplus-pls"
@@ -1841,13 +1236,6 @@ country_code = "DE"
 stream_url = "https://addrad.io/4454pjf"
 logo_url = "https://www.ostseewelle.de/assets/icons/apple-touch-icon.png"
 tags = ["pop", "rock", "oldies"]
-
-[[stations]]
-name = "Antenne Bayern - Relax"
-country_code = "DE"
-stream_url = "http://mp3channels.webradio.antenne.de/relax"
-logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
-tags = ["pop", "ambient", "electronic"]
 
 [[stations]]
 name = "WDR 4"
@@ -1877,25 +1265,6 @@ logo_url = "http://www.alpenwelle.de/favicon.ico"
 tags = ["pop", "talk", "world"]
 
 [[stations]]
-name = "RauteMusik TechHouse"
-country_code = "DE"
-stream_url = "http://techhouse-high.rautemusik.fm/"
-tags = ["house", "electronic", "dance"]
-
-[[stations]]
-name = "Planet Radio"
-country_code = "DE"
-stream_url = "http://streams.planetradio.de/planetradio/mp3/livestream.m3u"
-logo_url = "https://www.planetradio.de/android-icon.png"
-tags = ["pop", "rock"]
-
-[[stations]]
-name = "Dance Wave Radio"
-country_code = "DE"
-stream_url = "http://stream.laut.fm/dance-wave-radio"
-tags = ["dance", "electronic", "house", "trance"]
-
-[[stations]]
 name = "Thrashking Radio"
 country_code = "DE"
 stream_url = "http://thrashking.stream.laut.fm/thrashking"
@@ -1908,13 +1277,6 @@ country_code = "DE"
 stream_url = "http://skaworld.stream.laut.fm/skaworld?ref=radiode"
 logo_url = "http://lautfm-skaworld.radio.de/assets/fav/apple-touch-icon.png"
 tags = ["ska", "rock", "indie"]
-
-[[stations]]
-name = "94.3 RS2"
-country_code = "DE"
-stream_url = "http://stream.rs2.de/rs2/mp3-128/internetradio/"
-logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/943rs2_Claim_blau.png/320px-943rs2_Claim_blau.png"
-tags = ["pop"]
 
 [[stations]]
 name = "Epic Classical - Classical Pan Flute"
@@ -1938,24 +1300,10 @@ logo_url = "http://1000melodien.de/apple-icon-120x120.png"
 tags = ["ambient", "instrumental", "classical"]
 
 [[stations]]
-name = "ESC Radio"
-country_code = "DE"
-stream_url = "http://stream.escradio.com:8030/"
-logo_url = "https://www.escradio.com/wp-content/uploads/2019/05/fav.png"
-tags = ["pop", "rock"]
-
-[[stations]]
 name = "Dark Star FM"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/darkstarfm"
 tags = ["gothic", "rock", "electronic", "alternative"]
-
-[[stations]]
-name = "radioeins"
-country_code = "DE"
-stream_url = "https://www.radioeins.de/live_s.m3u"
-logo_url = "https://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
-tags = ["jazz", "rock", "pop", "electronic", "talk"]
 
 [[stations]]
 name = "N-Joy"
@@ -1983,38 +1331,10 @@ stream_url = "http://stream.laut.fm/relaxing-piano"
 tags = ["classical", "ambient"]
 
 [[stations]]
-name = "Bremen Zwei"
-country_code = "DE"
-stream_url = "https://icecast.radiobremen.de/rb/bremenzwei/live/mp3/128/stream.mp3"
-logo_url = "https://www.bremenzwei.de/static/img/favicons/apple-touch-icon-180.png?v=4"
-tags = ["public radio", "culture", "news"]
-
-[[stations]]
-name = "TranceBase.FM"
-country_code = "DE"
-stream_url = "http://listen.trancebase.fm/dsl.asx"
-logo_url = "http://trancebase.fm/media/icons/trb/apple-touch-icon.png"
-tags = ["trance", "electronic", "dance"]
-
-[[stations]]
 name = "WDR 4"
 country_code = "DE"
 stream_url = "http://wdr-wdr4-live.icecast.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
 tags = ["pop", "oldies"]
-
-[[stations]]
-name = "MDR Aktuell"
-country_code = "DE"
-stream_url = "http://avw.mdr.de/streams/284340-0_mp3_low.m3u"
-logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
-name = "I Love Radio - Popstars"
-country_code = "DE"
-stream_url = "http://stream04.iloveradio.de/iloveradio11.mp3?hadpreroll"
-logo_url = "https://www.iloveradio.de/favicon.ico"
-tags = ["pop", "dance"]
 
 [[stations]]
 name = "RauteMusik Happy Hardcore"
@@ -2044,12 +1364,6 @@ logo_url = "https://absolutradio.de/apple-touch-icon.png"
 tags = ["pop"]
 
 [[stations]]
-name = "EBM-Radio"
-country_code = "DE"
-stream_url = "http://www.ebm-radio.de/listen.pls"
-tags = ["electronic", "industrial", "alternative"]
-
-[[stations]]
 name = "Nostalgie - Discofever"
 country_code = "DE"
 stream_url = "http://nrj.de/nostalgiediscofever"
@@ -2069,24 +1383,11 @@ logo_url = "http://www.ndr.de/favicon.ico"
 tags = ["pop", "oldies"]
 
 [[stations]]
-name = "Antenne Bayern - Fresh 4 You"
-country_code = "DE"
-stream_url = "http://www.antenne.de/webradio/channels/fresh.m3u"
-tags = ["pop"]
-
-[[stations]]
 name = "Radio H\u00f6rspieltalk.de"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/hoerspieltalk"
 logo_url = "https://www.xn--hrspieltalk-rfb.de/images/style-2/apple-touch-icon.png"
 tags = ["talk", "culture"]
-
-[[stations]]
-name = "I Love Hardstyle"
-country_code = "DE"
-stream_url = "https://streams.ilovemusic.de/iloveradio21.mp3"
-logo_url = "https://www.ilovemusic.de/favicon.ico"
-tags = ["electronic", "dance", "trance"]
 
 [[stations]]
 name = "0 N - New Wave on Radio"
@@ -2140,13 +1441,6 @@ stream_url = "https://www.radiogong.de/app/live.m3u"
 tags = ["pop"]
 
 [[stations]]
-name = "Radio Eins"
-country_code = "DE"
-stream_url = "http://www.radioeins.de/livemp3_s"
-logo_url = "https://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
-tags = ["pop", "talk"]
-
-[[stations]]
 name = "Radio K\u00f6ln"
 country_code = "DE"
 stream_url = "http://www.vtuner.com/vtunerweb/mms/m3u7508.m3u"
@@ -2180,13 +1474,6 @@ country_code = "DE"
 stream_url = "https://0n-jazz.radionetz.de/0n-jazz.mp3"
 logo_url = "https://www.0nradio.com/logos/0n-jazz_600x600.jpg"
 tags = ["jazz"]
-
-[[stations]]
-name = "MDR Jump In The Mix"
-country_code = "DE"
-stream_url = "http://avw.mdr.de/streams/284321-2_mp3_high.m3u"
-logo_url = "https://cdn.mdrjump.de/resources/jump/img/favicons/apple-icon-120x120.png"
-tags = ["pop", "dance", "rock"]
 
 [[stations]]
 name = "Technolovers Future House"
@@ -2241,12 +1528,6 @@ country_code = "DE"
 stream_url = "http://stream.laut.fm/hoerspiel"
 logo_url = "https://www.hoerspielprojekt.de/favicon.ico"
 tags = ["culture", "talk"]
-
-[[stations]]
-name = "Hazzard of Darkness"
-country_code = "DE"
-stream_url = "http://hazzardstream.de:7777/listen1"
-tags = ["alternative", "metal", "electronic"]
 
 [[stations]]
 name = "Radio 80000"
@@ -2339,12 +1620,6 @@ stream_url = "https://stream.epic-lounge.com/piano-jazz-bar?ref=radiobrowser"
 tags = ["jazz", "classical", "ambient"]
 
 [[stations]]
-name = "SWR 2"
-country_code = "DE"
-stream_url = "https://liveradio.swr.de/sw331ch/swr2/play.aac"
-tags = ["public radio", "classical", "culture"]
-
-[[stations]]
 name = "NDR Info Schleswig-Holstein"
 country_code = "DE"
 stream_url = "https://www.ndr.de/resources/metadaten/audio_ssl/m3u/ndrinfo_sh.m3u"
@@ -2356,13 +1631,6 @@ name = "Absolut Oldie Classics"
 country_code = "DE"
 stream_url = "https://edge59.live-sm.absolutradio.de/absolut-oldieclassics/stream/mp3"
 tags = ["oldies"]
-
-[[stations]]
-name = "Radio Heimatmelodie"
-country_code = "DE"
-stream_url = "http://play.radio-heimatmelodie.de/;"
-logo_url = "http://www.radio-heimatmelodie.de/favicon.ico"
-tags = ["folk", "world"]
 
 [[stations]]
 name = "Saar Star Radio"
@@ -2385,23 +1653,10 @@ logo_url = "https://kontrafunk.radio/templates/yootheme/cache/af/logo_KF_vogel_m
 tags = ["talk", "news"]
 
 [[stations]]
-name = "Eurodance"
-country_code = "DE"
-stream_url = "https://eurodance.stream.laut.fm/eurodance"
-tags = ["dance", "electronic"]
-
-[[stations]]
 name = "Progressive Trance Mix"
 country_code = "DE"
 stream_url = "https://stream.laut.fm/progressive-trance-mix"
 tags = ["trance", "electronic"]
-
-[[stations]]
-name = "Radio HBR"
-country_code = "DE"
-stream_url = "http://stream1.radiohbr.de/stream.mp3"
-logo_url = "https://heukelbach.org/wp-content/uploads/sites/3/2016/07/favicon-mwh.gif"
-tags = ["talk", "culture"]
 
 [[stations]]
 name = "Deutschlandfunk"
@@ -2429,13 +1684,6 @@ name = "1000 Hiphop"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/1000hiphop"
 tags = ["hip-hop"]
-
-[[stations]]
-name = "Mother Earth Instrumental"
-country_code = "DE"
-stream_url = "https://motherearth.streamserver24.com/listen/motherearth_instrumental/motherearth.instrumental.aac"
-logo_url = "https://motherearthradio.de/images/mergoldcube512.png"
-tags = ["ambient", "classical"]
 
 [[stations]]
 name = "0N Heavy Metal on Radio"
@@ -2470,24 +1718,10 @@ stream_url = "https://stream.technolovers.fm/electro?ref=radiobrowser"
 tags = ["electronic", "dance", "house"]
 
 [[stations]]
-name = "MDR Aktuell"
-country_code = "DE"
-stream_url = "http://avw.mdr.de/streams/284340-0_aac_high.m3u"
-logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
-tags = ["news", "public radio"]
-
-[[stations]]
 name = "Filmradio"
 country_code = "DE"
 stream_url = "https://filmradio.stream.laut.fm/filmradio?t302=2018-03-10_04-44-05&uuid=59ca68e0-84a4-492d-9b0b-36c45690cd59"
 tags = ["classical", "ambient"]
-
-[[stations]]
-name = "HardBase.FM"
-country_code = "DE"
-stream_url = "http://listen.hardbase.fm/tunein-aac-hd-pls"
-logo_url = "https://www.hardbase.fm/media/icons/hb/apple-touch-icon.png"
-tags = ["electronic", "dance"]
 
 [[stations]]
 name = "Technolovers Hardstyle"
@@ -2513,12 +1747,6 @@ name = "laut.fm Psytrancelicious"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/psytrancelicious"
 tags = ["trance", "electronic"]
-
-[[stations]]
-name = "Radio Bollerwagen"
-country_code = "DE"
-stream_url = "http://player.ffn.de/radiobollerwagen.m3u"
-tags = ["pop", "dance"]
 
 [[stations]]
 name = "BR24live"
@@ -2547,12 +1775,6 @@ stream_url = "https://stream.epic-classical.com/classical-coffee-bar"
 tags = ["classical", "ambient", "chillout"]
 
 [[stations]]
-name = "Laut.FM Synthesizer Greatest"
-country_code = "DE"
-stream_url = "http://stream.laut.fm/synthesizergreatest.m3u"
-tags = ["electronic", "ambient"]
-
-[[stations]]
 name = "Deutschlandfunk Kultur"
 country_code = "DE"
 stream_url = "https://st02.sslstream.dlf.de/dlf/02/high/aac/stream.aac?aggregator=web"
@@ -2565,12 +1787,6 @@ country_code = "DE"
 stream_url = "https://chillharmonie.stream.laut.fm/chillharmonie"
 logo_url = "https://lh3.ggpht.com/a4M_Oyz2Jek1bkcRe8I7v3A8clEOoOI8Y-NiYuuICuw0wOHwaZgMUit4rRgC18mGZMo_=w300"
 tags = ["classical", "jazz", "ambient"]
-
-[[stations]]
-name = "Blackbeats.FM"
-country_code = "DE"
-stream_url = "http://stream3.blackbeats.fm/;"
-tags = ["hip-hop"]
 
 [[stations]]
 name = "Nightride FM"
@@ -2600,13 +1816,6 @@ stream_url = "https://stream.epic-lounge.com/nature-sounds?ref=radiobrowser"
 tags = ["ambient", "chillout"]
 
 [[stations]]
-name = "I Love Radio - Hits History"
-country_code = "DE"
-stream_url = "http://stream04.iloveradio.de/iloveradio12.mp3"
-logo_url = "https://www.iloveradio.de/favicon.ico"
-tags = ["oldies", "pop"]
-
-[[stations]]
 name = "101FM - Oldies"
 country_code = "DE"
 stream_url = "http://0-24oldiespoprock.stream.laut.fm/0-24_oldies_pop_rock?t302=2018-02-08_09-30-33&uuid=3ac88db9-1764-4e5a-a776-f42c2a4ffe7a"
@@ -2626,12 +1835,6 @@ country_code = "DE"
 stream_url = "http://www.antenne.de/webradio/channels/hits-fuer-kids.m3u"
 logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/vzvQkVkWCJ.png"
 tags = ["pop"]
-
-[[stations]]
-name = "Nectarine Demoscene Radio"
-country_code = "DE"
-stream_url = "http://nectarine.from-de.com/necta192"
-tags = ["electronic", "alternative"]
 
 [[stations]]
 name = "Technolovers - Techhouse"
@@ -2686,13 +1889,6 @@ logo_url = "https://lh3.ggpht.com/a4M_Oyz2Jek1bkcRe8I7v3A8clEOoOI8Y-NiYuuICuw0wO
 tags = ["culture"]
 
 [[stations]]
-name = "SR 2 KulturRadio"
-country_code = "DE"
-stream_url = "http://streaming01.sr-online.de/sr2_2.m3u"
-logo_url = "http://is3.mzstatic.com/image/thumb/Purple69/v4/e0/21/f5/e021f58d-21e7-877c-0ccc-1cb9bcdcc428/source/1200x630bb.jpg"
-tags = ["classical", "culture", "public radio"]
-
-[[stations]]
 name = "EBM"
 country_code = "DE"
 stream_url = "https://stream.laut.fm/ebm"
@@ -2725,12 +1921,6 @@ name = "Bluesclub"
 country_code = "DE"
 stream_url = "http://stream.laut.fm/bluesclub"
 tags = ["jazz", "soul", "rock"]
-
-[[stations]]
-name = "50s 60s Radio"
-country_code = "DE"
-stream_url = "http://stream.laut.fm/50s60s-radio"
-tags = ["oldies"]
 
 [[stations]]
 name = "Nightride FM"
@@ -2794,13 +1984,6 @@ logo_url = "https://www.liveradio.ie/files/images/101096/resized/140x134c/rte_ly
 tags = ["classical", "culture"]
 
 [[stations]]
-name = "France Info"
-country_code = "FR"
-stream_url = "http://direct.franceinfo.fr/live/franceinfo-midfi.mp3"
-logo_url = "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-5487caf3.png"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
 name = "RFI Afrique"
 country_code = "FR"
 stream_url = "http://live02.rfi.fr/rfiafrique-64.mp3"
@@ -2815,25 +1998,11 @@ logo_url = "https://i1.wp.com/www.mediasportif.fr/wp-content/uploads/2014/05/Rad
 tags = ["news", "talk", "sport"]
 
 [[stations]]
-name = "Jazz Radio Blues"
-country_code = "FR"
-stream_url = "http://jazzblues.ice.infomaniak.ch/jazzblues-high.mp3"
-logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
-tags = ["jazz", "soul", "blues"]
-
-[[stations]]
 name = "RFI Monde"
 country_code = "FR"
 stream_url = "http://live02.rfi.fr/rfimonde-64.mp3"
 logo_url = "http://www.rfi.fr/apple-touch-icon.png"
 tags = ["news", "world", "talk"]
-
-[[stations]]
-name = "Skyrock"
-country_code = "FR"
-stream_url = "http://icecast.skyrock.net/s/natio_mp3_128k"
-logo_url = "https://play-lh.googleusercontent.com/dPiQ01OUKZVfRZUbbb-EVK5g9miS_K-xrxHgmBbynGG-GQ53yt3GzFKr0zUTnb-xswQ=s200-rw"
-tags = ["hip-hop", "rap", "pop"]
 
 [[stations]]
 name = "Jazz Radio"
@@ -2864,20 +2033,6 @@ logo_url = "https://www.lagrosseradio.com/favicon.ico"
 tags = ["reggae", "world"]
 
 [[stations]]
-name = "Chante France"
-country_code = "FR"
-stream_url = "http://stream.chantefrance.com/Chante_France"
-logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
-tags = ["pop", "oldies"]
-
-[[stations]]
-name = "Sud Radio"
-country_code = "FR"
-stream_url = "https://ice.creacast.com/sudradio"
-logo_url = "https://www.sudradio.fr/wp-content/uploads/2019/06/cropped-favicon-180x180.png"
-tags = ["news", "talk"]
-
-[[stations]]
 name = "Latina Salsa"
 country_code = "FR"
 stream_url = "http://latinasalsa.ice.infomaniak.ch/latinasalsa.mp3"
@@ -2906,20 +2061,6 @@ logo_url = "https://bocir-prod-bucket.s3.amazonaws.com/radios/centpourcent/image
 tags = ["pop"]
 
 [[stations]]
-name = "Generations R&B"
-country_code = "FR"
-stream_url = "http://generationfm-slowjam.ice.infomaniak.ch/generationfm-slowjam-high.mp3"
-logo_url = "http://generations.fr/media/radio/thumb/90x90_rnb.png"
-tags = ["r&b", "soul", "hip-hop"]
-
-[[stations]]
-name = "RTL France"
-country_code = "FR"
-stream_url = "http://streaming.radio.rtl.fr/rtl-1-44-128"
-logo_url = "https://www.radio.de/images/broadcasts/88/5b/5168/c300.png"
-tags = ["news", "pop"]
-
-[[stations]]
 name = "Latina Reggaeton"
 country_code = "FR"
 stream_url = "http://latinareggaeton.ice.infomaniak.ch/latinareggaeton.mp3"
@@ -2934,13 +2075,6 @@ logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
 tags = ["jazz", "soul"]
 
 [[stations]]
-name = "RTL2"
-country_code = "FR"
-stream_url = "http://streamer-02.rtl.fr/rtl2-1-44-128"
-logo_url = "https://upload.wikimedia.org/wikipedia/fr/5/51/RTL2.png"
-tags = ["pop", "rock"]
-
-[[stations]]
 name = "RFM"
 country_code = "FR"
 stream_url = "http://stream.rfm.fr/rfm.mp3"
@@ -2948,25 +2082,11 @@ logo_url = "http://cdn-rfm.lanmedia.fr/apple-touch-icon-120x120.png"
 tags = ["pop"]
 
 [[stations]]
-name = "Generations Rap U.S"
-country_code = "FR"
-stream_url = "http://generationfm-underground.ice.infomaniak.ch/generationfm-underground-high.mp3"
-logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
-tags = ["hip-hop"]
-
-[[stations]]
 name = "Generations Rap FR Gold"
 country_code = "FR"
 stream_url = "http://gene-wr06.ice.infomaniak.ch/gene-wr06.mp3"
 logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
 tags = ["hip-hop"]
-
-[[stations]]
-name = "Jazz Radio Electro Swing"
-country_code = "FR"
-stream_url = "http://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3"
-logo_url = "http://www.jazzradio.fr/apple-touch-icon-120x120.png"
-tags = ["jazz", "electronic", "dance"]
 
 [[stations]]
 name = "RMC Info Talk Sport"
@@ -3018,13 +2138,6 @@ logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
 tags = ["jazz", "classical"]
 
 [[stations]]
-name = "Europe 2"
-country_code = "FR"
-stream_url = "http://europe2.lmn.fm/europe2.mp3"
-logo_url = "https://www.europe2.fr/wp-content/themes/melty/europeradio/assets/images/favicons/favicon128.png"
-tags = ["pop", "rock"]
-
-[[stations]]
 name = "BFM Radio"
 country_code = "FR"
 stream_url = "https://audio.bfmtv.com/bfmradio_128.mp3"
@@ -3039,39 +2152,11 @@ logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/urbanhit
 tags = ["hip-hop", "pop", "world"]
 
 [[stations]]
-name = "Morow Prog Rock Radio"
-country_code = "FR"
-stream_url = "http://stream.fr.morow.com:8080/morow_hi.aacp"
-logo_url = "https://www.morow.com/favicon.ico"
-tags = ["rock", "indie"]
-
-[[stations]]
 name = "Jazz Radio Latin Jazz"
 country_code = "FR"
 stream_url = "http://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3"
 logo_url = "http://www.jazzradio.fr/apple-touch-icon-120x120.png"
 tags = ["jazz", "world"]
-
-[[stations]]
-name = "Sud Radio"
-country_code = "FR"
-stream_url = "https://ice.creacast.com/sudradio_aac"
-logo_url = "https://www.sudradio.fr/wp-content/uploads/2019/06/cropped-favicon-180x180.png"
-tags = ["talk", "public radio"]
-
-[[stations]]
-name = "Chante France Emotion"
-country_code = "FR"
-stream_url = "http://stream.chantefrance.com/cf-emotion"
-logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
-tags = ["pop", "soul"]
-
-[[stations]]
-name = "Chante France 60's"
-country_code = "FR"
-stream_url = "http://stream.chantefrance.com/cf-60"
-logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
-tags = ["oldies", "pop"]
 
 [[stations]]
 name = "FIP Autour de l'\u00c9lectro"
@@ -3086,13 +2171,6 @@ country_code = "FR"
 stream_url = "https://icecast.skyrock.net/s/klassiks_aac_64k?tvr_name=radiofr&tvr_section1=64aac"
 logo_url = "https://skyrock.fm/favicon.ico"
 tags = ["hip-hop", "oldies"]
-
-[[stations]]
-name = "Generations Reggae"
-country_code = "FR"
-stream_url = "http://generations-caraibes.ice.infomaniak.ch/generations-caraibes-high.mp3"
-logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
-tags = ["reggae", "world"]
 
 [[stations]]
 name = "Algorythme Drum & Bass"
@@ -3114,13 +2192,6 @@ country_code = "FR"
 stream_url = "http://london-dedicated.myautodj.com:8862/stream"
 logo_url = "http://kingdubfamily.com/wp-content/uploads/2021/03/download-150x150.png"
 tags = ["reggae", "electronic"]
-
-[[stations]]
-name = "RFI Anglais - English"
-country_code = "FR"
-stream_url = "http://live02.rfi.fr/rfienanglais-64.mp3"
-logo_url = "http://en.rfi.fr/android-chrome-192x192.png"
-tags = ["news", "talk", "public radio", "world"]
 
 [[stations]]
 name = "123 All Classic Rock"
@@ -3179,13 +2250,6 @@ logo_url = "https://www.rfi.fr/favicon-194x194.png"
 tags = ["news", "public radio", "world"]
 
 [[stations]]
-name = "Radio Choco"
-country_code = "FR"
-stream_url = "https://radiochoco.com/sound"
-logo_url = "https://image.radioking.io/radios/669715/logo/e0191854-a603-41f5-9729-121a1f215f57.jpeg"
-tags = ["pop", "world", "culture"]
-
-[[stations]]
 name = "Latina Reggaeton"
 country_code = "FR"
 stream_url = "https://latinareggaeton.ice.infomaniak.ch/latinareggaeton.mp3"
@@ -3205,13 +2269,6 @@ country_code = "FR"
 stream_url = "http://nova-vnt.ice.infomaniak.ch/nova-vnt-128.mp3"
 logo_url = "https://www.nova.fr/wp-content/uploads/sites/2/2021/02/cropped-favicon.png?fit=180%2c180&#038;quality=75"
 tags = ["oldies", "soul", "funk"]
-
-[[stations]]
-name = "Generations"
-country_code = "FR"
-stream_url = "http://generationfm.ice.infomaniak.ch/generationfm-high.mp3"
-logo_url = "http://generations.fr/media/radio/thumb/90x90_generations.png"
-tags = ["hip-hop", "soul", "r&b"]
 
 [[stations]]
 name = "RFI Monde"
@@ -3235,13 +2292,6 @@ logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
 tags = ["jazz", "soul", "oldies"]
 
 [[stations]]
-name = "Radio Classique"
-country_code = "FR"
-stream_url = "https://str0.creacast.com/classique1"
-logo_url = "http://favicons.teamtailor-cdn.com/icon?size=80..120..200&url=https%3a%2f%2fwww.radioclassique.fr%2f"
-tags = ["classical", "public radio"]
-
-[[stations]]
 name = "BFM Business"
 country_code = "FR"
 stream_url = "http://audio.bfmtv.com/bfmbusiness_128.mp3?aw_0_1st.playerId=BFMBusiness_audio_web&aggregator=BFMBusiness_audio_web"
@@ -3249,32 +2299,11 @@ logo_url = "https://www.bfmtv.com/android-icon-192x192.png"
 tags = ["news", "talk", "business"]
 
 [[stations]]
-name = "Generations Funk"
-country_code = "FR"
-stream_url = "http://gene-wr05.ice.infomaniak.ch/gene-wr05.mp3"
-logo_url = "http://generations.fr/media/radio/thumb/90x90_funk.png"
-tags = ["funk", "soul", "r&b"]
-
-[[stations]]
 name = "FIP Autour du Groove"
 country_code = "FR"
 stream_url = "http://direct.fipradio.fr/live/fip-webradio3.mp3"
 logo_url = "http://www.fipradio.fr/dist/favicons/logo-120.png"
 tags = ["jazz", "funk", "soul"]
-
-[[stations]]
-name = "FUN Radio"
-country_code = "FR"
-stream_url = "http://icecast.funradio.fr/fun-1-44-128"
-logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Logo_Fun_Radio_%282021%29.svg/langfr-1280px-Logo_Fun_Radio_%282021%29.svg.png"
-tags = ["dance", "electronic", "pop"]
-
-[[stations]]
-name = "Generations Rap FR"
-country_code = "FR"
-stream_url = "http://generationfm-rap.ice.infomaniak.ch/generationfm-rap-high.mp3"
-logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
-tags = ["hip-hop", "rap"]
 
 [[stations]]
 name = "Jazz Radio Saxo Jazz"
@@ -3319,32 +2348,11 @@ logo_url = "http://cdn-rfm.lanmedia.fr/apple-touch-icon-120x120.png"
 tags = ["oldies", "pop"]
 
 [[stations]]
-name = "France Info"
-country_code = "FR"
-stream_url = "http://direct.franceinfo.fr/live/franceinfo-midfi.aac"
-logo_url = "https://m209.syncusercontent.com/mfs-60:e7d8bcadd5a2477fc9e51bcf050e882e=============================/p/FranceInfo.png?allowdd=0&datakey=oRfJWLO6jtwpRPP6jNCQN57oNuBOHsNUitHdz3RIW2vZImwxaSD/BMCrflKec/vHo3SxNLXFu1udMP1S8XHjPXw1q5kFoSg7egRcIOebiokWBPOr09HQdsFTOMnhM35aakAPiHis5fRC74CjVIh05epEX3IzZZSWFj/OfZQ7k+3d2U9vkgewVimqIaTJuVNyKAJ0k/5Ki65LjHOfI3kDK891oQKVSExxxD0cZm9SziqD/wNdZflXZZNwvVrl3ef3TfuK9GCprIHLC5Fpt3djEIs/jmoSapjQZl4l5sez++LaVNSaP4OZe+z4YK3Kiuef0mN5THxwh2JS2mpzYRGdoA&engine=ln-3.1.38&errurl=pl576c8tTkE53fesN6K59kLFTlfG9ukXOsWjYDyCBknLOMFJ7nSS6G45+Rqiajr6D+YVYQGYv6bQK/07r1fnLn0H8NQKBKKeYOKnZ2VVU6LxVkuqYFOENdT0QdS0UznLvBKHDQ3ljz4eOKolzdl3d4xl+5Z5sAi1GdSzv27mF7GuqFNtcKnt0q2ZogvLNx/bJSBNbFKwhvpXKr1jbqTVXVW1eRnN0wWW1a30NLuV+woXgYk057D1reVd4fGJcC6Wy0WXWvBfFEreFqNOVyBrxenbprKCzhzVTuSY8z/uj2x6cqFBbpfgTumCneiWx0ApNNPg6DiFxXZ0V8q3RRXG4Q==&header1=Q29udGVudC1UeXBlOiBpbWFnZS9wbmc&header2=Q29udGVudC1EaXNwb3NpdGlvbjogaW5saW5lOyBmaWxlbmFtZT0iRnJhbmNlSW5mby5wbmciO2ZpbGVuYW1lKj1VVEYtOCcnRnJhbmNlSW5mby5wbmc7&ipaddress=1414030563&linkcachekey=748911ee0&linkoid=1991610004&mode=101&sharelink_id=17949036050004&timestamp=1708187509312&uagent=3b50c75381f12107280e9099b5b7674cf455a2e5&signature=00134c6a20bb3132c47960c0e5b08e7df047a4aa&cachekey=60:e7d8bcadd5a2477fc9e51bcf050e882e============================="
-tags = ["news", "talk"]
-
-[[stations]]
 name = "Allzic Radio Dance Floor"
 country_code = "FR"
 stream_url = "http://allzic07.ice.infomaniak.ch/allzic07.mp3"
 logo_url = "https://www.allzicradio.com/apple-touch-icon-120x120.png"
 tags = ["dance", "electronic", "pop"]
-
-[[stations]]
-name = "Generations Soul"
-country_code = "FR"
-stream_url = "http://gene-wr07.ice.infomaniak.ch/gene-wr07.mp3"
-logo_url = "http://generations.fr/media/radio/thumb/90x90_soul.png"
-tags = ["soul", "r&b"]
-
-[[stations]]
-name = "Espace Dance 90"
-country_code = "FR"
-stream_url = "http://espace-disco.ice.infomaniak.ch/espace-disco-high.mp3"
-logo_url = "https://www.radioespace.com/apple-touch-icon-120x120.png"
-tags = ["dance", "electronic"]
 
 [[stations]]
 name = "Beur FM"
@@ -3431,13 +2439,6 @@ logo_url = "https://rmc.bfmtv.com/apple-icon-228x228.png"
 tags = ["news", "talk"]
 
 [[stations]]
-name = "ODS Radio"
-country_code = "FR"
-stream_url = "http://ods.ice.infomaniak.ch/ods-high.mp3"
-logo_url = "https://www.odsradio.com/apple-touch-icon-120x120.png"
-tags = ["pop"]
-
-[[stations]]
 name = "France Bleu Pays de Savoie"
 country_code = "FR"
 stream_url = "http://direct.francebleu.fr/live/fbpaysdesavoie-midfi.mp3"
@@ -3522,13 +2523,6 @@ logo_url = "http://www.jazzradio.fr/media/radio/thumb/90x90_stax-and-motown.png"
 tags = ["jazz", "soul", "r&b"]
 
 [[stations]]
-name = "Radio Maria France"
-country_code = "FR"
-stream_url = "http://dreamsiteradiocp4.com:8056/"
-logo_url = "https://radiomaria.fr/wp-content/themes/radiomaria/apple-touch-icon.png"
-tags = ["talk", "culture"]
-
-[[stations]]
 name = "RFI Musique"
 country_code = "FR"
 stream_url = "http://live02.rfi.fr/rfimusiquemonde-64k.mp3"
@@ -3541,20 +2535,6 @@ country_code = "FR"
 stream_url = "http://str0.creacast.com/magnum"
 logo_url = "https://www.magnumlaradio.com/wp-content/themes/magnumlaradio/assets/images/favicon.ico"
 tags = ["pop", "rock"]
-
-[[stations]]
-name = "Generations R&B Gold"
-country_code = "FR"
-stream_url = "http://generations-rnb-gold.ice.infomaniak.ch/generations-rnb-gold.mp3"
-logo_url = "http://generations.fr/media/radio/thumb/90x90_rnb-gold.png"
-tags = ["r&b", "soul"]
-
-[[stations]]
-name = "RTL France"
-country_code = "FR"
-stream_url = "https://live.m6radio.quortex.io/webpHJPXnXrN7B6J7Q8mcqmxP/grouprtl/national/long/audio-64000/index.m3u8"
-logo_url = "https://www.radio.fr/images/broadcasts/da/51/10220/c300.png"
-tags = ["news", "talk", "pop"]
 
 [[stations]]
 name = "Jazz Radio Gospel"
@@ -3611,14 +2591,6 @@ country_code = "FR"
 stream_url = "http://voltage80s.ice.infomaniak.ch/voltage80s-128.mp3"
 logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/voltage/images/favicon.ico"
 tags = ["oldies"]
-
-[[stations]]
-name = "FIP"
-country_code = "FR"
-stream_url = "http://direct.fipradio.fr/live/fip-webradio5.mp3"
-# The old fipradio.fr favicon URL 301-redirects to the FIP homepage (not an image) — dead.
-logo_url = "https://upload.wikimedia.org/wikipedia/fr/d/d5/FIP_logo_2005.svg"
-tags = ["indie", "alternative", "pop"]
 
 [[stations]]
 name = "Voltage 2000"
@@ -3768,13 +2740,6 @@ logo_url = "http://generations.fr/media/radio/thumb/90x90_rap_fr1.png"
 tags = ["hip-hop", "rap"]
 
 [[stations]]
-name = "Le Son Parisien"
-country_code = "FR"
-stream_url = "http://stream.lesonparisien.com/hi.mp3"
-logo_url = "http://www.lesonparisien.com/images/lsp/favicons/android-icon-144x144.png"
-tags = ["electronic", "indie", "pop"]
-
-[[stations]]
 name = "Allzic Radio Fitness"
 country_code = "FR"
 stream_url = "http://allzic13.ice.infomaniak.ch/allzic13.mp3"
@@ -3801,27 +2766,6 @@ country_code = "FR"
 stream_url = "http://direct.francebleu.fr/live/fbisere-midfi.mp3"
 logo_url = "https://www.francebleu.fr/images/favicon-112.png"
 tags = ["public radio", "talk", "world"]
-
-[[stations]]
-name = "Radio Paradise Main Mix"
-country_code = "US"
-stream_url = "http://stream-uk1.radioparadise.com/aac-320"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["alternative", "rock", "pop", "electronic", "ambient"]
-
-[[stations]]
-name = "Classic Vinyl"
-country_code = "US"
-stream_url = "https://icecast.walmradio.com:8443/classic"
-logo_url = "https://icecast.walmradio.com:8443/classic.jpg"
-tags = ["oldies", "jazz", "swing", "classical", "folk"]
-
-[[stations]]
-name = "Adroit Jazz Underground"
-country_code = "US"
-stream_url = "https://icecast.walmradio.com:8443/jazz"
-logo_url = "https://icecast.walmradio.com:8443/jazz.jpg"
-tags = ["jazz", "alternative", "electronic", "indie", "ambient"]
 
 [[stations]]
 name = "WALM Old Time Radio"
@@ -3873,13 +2817,6 @@ logo_url = "https://static-assets.npr.org/static/images/favicon/favicon-96x96.pn
 tags = ["news", "talk", "public radio", "culture", "world"]
 
 [[stations]]
-name = "Radio Paradise Rock Mix"
-country_code = "US"
-stream_url = "http://stream.radioparadise.com/rock-320"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["rock", "alternative", "indie", "pop", "electronic"]
-
-[[stations]]
 name = "181.FM - 80's Country"
 country_code = "US"
 stream_url = "http://listen.181fm.com/181-80scountry_128k.mp3"
@@ -3908,13 +2845,6 @@ logo_url = "https://static.foxnews.com/radio.foxnews.com/content/uploads/2017/10
 tags = ["news"]
 
 [[stations]]
-name = "Radio Paradise Mellow Mix"
-country_code = "US"
-stream_url = "http://stream.radioparadise.com/mellow-320"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["alternative", "ambient", "electronic"]
-
-[[stations]]
 name = "Frisky Deep"
 country_code = "US"
 stream_url = "http://deep.friskyradio.com/friskydeep_aachi"
@@ -3922,39 +2852,11 @@ logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
 tags = ["electronic", "dance", "house"]
 
 [[stations]]
-name = "SmoothJazz.com"
-country_code = "US"
-stream_url = "https://smoothjazz.cdnstream1.com/2585_128.mp3"
-logo_url = "https://www.smoothjazz.com/sites/default/files/theme/sj-circle-logo.png"
-tags = ["jazz"]
-
-[[stations]]
-name = "Radio Paradise Main Mix"
-country_code = "US"
-stream_url = "http://stream.radioparadise.com/aac-128"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["alternative", "ambient"]
-
-[[stations]]
-name = "100hitz - Top 40"
-country_code = "US"
-stream_url = "http://pureplay.cdnstream1.com/6025_128.mp3?DIST=TuneIn&TGT=TuneIn&maxServers=2&gdpr=0&us_privacy=1YNY&partnertok=eyJhbGciOiJIUzI1NiIsImtpZCI6InR1bmVpbiIsInR5cCI6IkpXVCJ9.eyJ0cnVzdGVkX3BhcnRuZXIiOnRydWUsImlhdCI6MTYzMzk1NTI4MSwiaXNzIjoidGlzcnYifQ.cUMfsrk262BNjQXnfXkKBefQOqoRn2nweLrx5obNPhM"
-logo_url = "https://100hitz.com/favicon.ico"
-tags = ["pop"]
-
-[[stations]]
 name = "MSNBC"
 country_code = "US"
 stream_url = "https://tunein.cdnstream1.com/3511_96.mp3"
 logo_url = "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/favicon-96x96.png"
 tags = ["news"]
-
-[[stations]]
-name = "Megarock Radio"
-country_code = "US"
-stream_url = "https://stream3.megarockradio.net:80/"
-logo_url = "https://megarockradio.net/favicon.ico"
-tags = ["rock", "metal"]
 
 [[stations]]
 name = "2000 FM - Country"
@@ -3985,13 +2887,6 @@ logo_url = "https://bluegrasscountry.org/favicon.ico"
 tags = ["country", "folk"]
 
 [[stations]]
-name = "Classical KDFC"
-country_code = "US"
-stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/KDFCFMAAC.aac"
-logo_url = "https://radiostationusa.fm/assets/image/radio/180/KDFCFM.png"
-tags = ["classical", "public radio"]
-
-[[stations]]
 name = "KPFA"
 country_code = "US"
 stream_url = "https://streams.kpfa.org:8443/kpfa"
@@ -4004,13 +2899,6 @@ country_code = "US"
 stream_url = "https://ais-sa5.cdnstream1.com/b42761_64mp3"
 logo_url = "https://radiostorm.com/wp-content/uploads/2018/01/cropped-imgpsh_fullsize2-180x180.png"
 tags = ["comedy"]
-
-[[stations]]
-name = "Radio Paradise Rock Mix"
-country_code = "US"
-stream_url = "https://stream.radioparadise.com/rock-flac"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["rock", "alternative", "indie"]
 
 [[stations]]
 name = "America's Country"
@@ -4055,13 +2943,6 @@ logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
 tags = ["pop", "oldies"]
 
 [[stations]]
-name = "Salsa One Radio"
-country_code = "US"
-stream_url = "http://server7.servistreaming.com:10006/stream"
-logo_url = "http://www.salsaoneradio.com/favicon.ico"
-tags = ["world", "folk"]
-
-[[stations]]
 name = "KEXP 90.3 Seattle"
 country_code = "US"
 stream_url = "http://live-mp3-128.kexp.org/kexp128.mp3"
@@ -4102,13 +2983,6 @@ country_code = "US"
 stream_url = "http://pureplay.cdnstream1.com/6027_128.mp3?DIST=TuneIn&TGT=TuneIn&maxServers=2&gdpr=0&us_privacy=1YNY&partnertok=eyJhbGciOiJIUzI1NiIsImtpZCI6InR1bmVpbiIsInR5cCI6IkpXVCJ9.eyJ0cnVzdGVkX3BhcnRuZXIiOnRydWUsImlhdCI6MTYzMzk1NjY1OSwiaXNzIjoidGlzcnYifQ.qFjTFowI3sAHS4IFwRsz-zxLYbgTlfZFse1AtCH642s"
 logo_url = "https://100hitz.com/favicon.ico"
 tags = ["pop"]
-
-[[stations]]
-name = "Radio Paradise Main Mix"
-country_code = "US"
-stream_url = "https://stream.radioparadise.com/flac"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["eclectic", "indie", "alternative"]
 
 [[stations]]
 name = "All Blues Radio"
@@ -4237,25 +3111,11 @@ logo_url = "https://somafm.com/img3/groovesalad-400.png"
 tags = ["electronic", "ambient", "house"]
 
 [[stations]]
-name = "Radio Paradise Main Mix"
-country_code = "US"
-stream_url = "http://stream-uk1.radioparadise.com/flacm"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["eclectic", "indie", "alternative"]
-
-[[stations]]
 name = "BeGood Radio 80s Metal"
 country_code = "US"
 stream_url = "https://bigrradio.cdnstream1.com/5212_128"
 logo_url = "http://begoodradio.com/images/logo.png"
 tags = ["metal", "rock"]
-
-[[stations]]
-name = "Organlive"
-country_code = "US"
-stream_url = "http://play.organlive.com:7000/192"
-logo_url = "http://www.organlive.com/eighthnotes.ico"
-tags = ["classical"]
 
 [[stations]]
 name = "181.FM Classical Jazz"
@@ -4270,13 +3130,6 @@ country_code = "US"
 stream_url = "http://pureplay.cdnstream1.com/6056_64.aac?DIST=TuneIn&TGT=TuneIn&maxServers=2&gdpr=0&us_privacy=1YNY&partnertok=eyJhbGciOiJIUzI1NiIsImtpZCI6InR1bmVpbiIsInR5cCI6IkpXVCJ9.eyJ0cnVzdGVkX3BhcnRuZXIiOnRydWUsImlhdCI6MTYzMzk1ODAzMywiaXNzIjoidGlzcnYifQ.iRK4czQtolWgtNsj8Uy5lioP0EoZu1wCuvj2VwsCs3o"
 logo_url = "https://100hitz.com/favicon.ico"
 tags = ["indie", "rock", "alternative"]
-
-[[stations]]
-name = "Radio Paradise Mellow Mix"
-country_code = "US"
-stream_url = "https://stream.radioparadise.com/mellow-64"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["alternative", "ambient", "eclectic"]
 
 [[stations]]
 name = "Guerrilla Radio"
@@ -4349,13 +3202,6 @@ logo_url = "http://www.yourclassical.org/apple-touch-icon.png"
 tags = ["classical", "public radio"]
 
 [[stations]]
-name = "Radio Paradise World/Etc Mix"
-country_code = "US"
-stream_url = "https://stream.radioparadise.com/world-etc-flac"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["world", "eclectic", "alternative"]
-
-[[stations]]
 name = "Big R Radio - 90s Alternative Rock"
 country_code = "US"
 stream_url = "http://bigrradio.cdnstream1.com/5187_128"
@@ -4382,20 +3228,6 @@ country_code = "US"
 stream_url = "https://hls.somafm.com/hls//gs-surround/program.m3u8"
 logo_url = "https://www.somafm.com/apple-touch-icon.png"
 tags = ["electronic", "house", "ambient"]
-
-[[stations]]
-name = "Radio Paradise Rock Mix"
-country_code = "US"
-stream_url = "http://stream.radioparadise.com/rock-flacm"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["rock", "alternative", "eclectic"]
-
-[[stations]]
-name = "Outlaw Country Radio"
-country_code = "US"
-stream_url = "https://fastcast4u.com/player/kievradio/?pl=winamp&c=0"
-logo_url = "https://fastcast4u.com/player/kievradio/_user/cover/k/kievradio/ch0_permanent.png"
-tags = ["country"]
 
 [[stations]]
 name = "CBS Sports Radio 105.3"
@@ -4461,25 +3293,11 @@ logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
 tags = ["alternative", "rock", "metal"]
 
 [[stations]]
-name = "Radio Paradise Rock Mix"
-country_code = "US"
-stream_url = "http://stream.radioparadise.com/rock-128"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["rock", "alternative", "indie"]
-
-[[stations]]
 name = "Indiana Public Radio WBST"
 country_code = "US"
 stream_url = "http://ipr.streamguys1.com/aac"
 logo_url = "https://cdn-profiles.tunein.com/s27613/images/logod.png?t=154765"
 tags = ["public radio", "news"]
-
-[[stations]]
-name = "Radio Paradise Mellow Mix"
-country_code = "US"
-stream_url = "http://stream.radioparadise.com/mellow-flacm"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["ambient", "rock", "alternative"]
 
 [[stations]]
 name = "CBN Classic Christian Radio"
@@ -4524,13 +3342,6 @@ logo_url = "https://img1.wsimg.com/isteam/ip/33ac2230-3451-4ad7-8894-0d3a839af97
 tags = ["folk"]
 
 [[stations]]
-name = "WQXR 105.9 FM"
-country_code = "US"
-stream_url = "https://stream.wqxr.org/wqxr-web?nyprBrowserId=32c67956bf1d5600"
-logo_url = "https://media.wnyc.org/i/500/500/c/80/1/wqxr_1_1.png"
-tags = ["classical", "culture"]
-
-[[stations]]
 name = "Movie Soundtracks Hits Radio"
 country_code = "US"
 stream_url = "https://strm112.1.fm/moviesoundtracks_mobile_mp3"
@@ -4538,25 +3349,11 @@ logo_url = "https://pbs.twimg.com/media/FmaeGQgXwAMl6jj?format=png"
 tags = ["culture"]
 
 [[stations]]
-name = "Classical KUSC"
-country_code = "US"
-stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/KUSCMP256.mp3"
-logo_url = "https://www.kusc.org/icons/kusc/apple-touch-icon-120x120.png"
-tags = ["classical"]
-
-[[stations]]
 name = "KXLU 88.9FM"
 country_code = "US"
 stream_url = "http://www.ednixon.com:8120/stream"
 logo_url = "https://kxlu.com/wp-content/uploads/2019/02/kxlusplatblack-125x125.png"
 tags = ["college radio", "indie", "alternative"]
-
-[[stations]]
-name = "Radio Paradise Mellow Mix"
-country_code = "US"
-stream_url = "http://stream.radioparadise.com/mellow-128"
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-tags = ["alternative", "ambient", "eclectic"]
 
 [[stations]]
 name = "Abiding Radio - Bluegrass Hymns"
@@ -4615,25 +3412,11 @@ logo_url = "https://cdn.onlineradiobox.com/img/l/0/114200.v4.png"
 tags = ["alternative", "indie"]
 
 [[stations]]
-name = "The Jazz Groove"
-country_code = "US"
-stream_url = "http://east-mp3-128.streamthejazzgroove.com/stream"
-logo_url = "https://i.imgur.com/KoS7yEr.png"
-tags = ["jazz"]
-
-[[stations]]
 name = "Classical King FM - Evergreen Channel"
 country_code = "US"
 stream_url = "https://classicalking.streamguys1.com/evergreen-aac-128k"
 logo_url = "https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1108/2019/05/15152826/cropped-favico-192x192.png"
 tags = ["classical"]
-
-[[stations]]
-name = "WBUR 90.9 FM Boston"
-country_code = "US"
-stream_url = "http://wbur-sc.streamguys.com/wbur.aac"
-logo_url = "http://d3kwtionx0p7im.cloudfront.net/images/icons/favicon.png"
-tags = ["news", "talk", "public radio"]
 
 [[stations]]
 name = "A Strangely Isolated Place"
@@ -4657,13 +3440,6 @@ logo_url = "https://radioart.com/templates/yootheme/vendor/yootheme/theme-joomla
 tags = ["blues", "folk"]
 
 [[stations]]
-name = "Music City Roadhouse"
-country_code = "US"
-stream_url = "http://streaming.live365.com/a73754"
-logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/ukyj9kjf3z3q.jpg"
-tags = ["country", "rock", "soul"]
-
-[[stations]]
 name = "KEXP 90.3 Seattle"
 country_code = "US"
 stream_url = "https://kexp.streamguys1.com/kexp160.aac"
@@ -4683,13 +3459,6 @@ country_code = "US"
 stream_url = "http://current.stream.publicradio.org/kcmp.mp3"
 logo_url = "http://www.thecurrent.org/apple-touch-icon.png"
 tags = ["indie", "alternative", "pop", "public radio"]
-
-[[stations]]
-name = "Big Blue Swing"
-country_code = "US"
-stream_url = "http://radio.bigblueswing.com:8002/;64bit.mp3"
-logo_url = "https://web.bigblueswing.com/misc/favicon.ico"
-tags = ["jazz", "soul", "oldies"]
 
 [[stations]]
 name = "Progrock.com"
@@ -4720,13 +3489,6 @@ logo_url = "https://www.folkalley.com/favicon.ico"
 tags = ["folk", "world", "indie"]
 
 [[stations]]
-name = "WCPE The Classical Station"
-country_code = "US"
-stream_url = "http://audio-ice1.ibiblio.org:8000/wcpe128.aac"
-logo_url = "https://theclassicalstation.org/wp-content/themes/nmc_classicalstation/favicon.png"
-tags = ["classical", "public radio"]
-
-[[stations]]
 name = "Big R Radio - Gospel Channel"
 country_code = "US"
 stream_url = "http://bigrradio.cdnstream1.com/5199_128"
@@ -4739,13 +3501,6 @@ country_code = "US"
 stream_url = "http://s1.nexuscast.com:8135/;"
 logo_url = "http://www.heartbeatofflagler.com/images/logo_002.jpg"
 tags = ["pop", "rock", "oldies"]
-
-[[stations]]
-name = "That 70's Channel"
-country_code = "US"
-stream_url = "http://los.cdnstream.com/1101_128"
-logo_url = "https://cdn-radiotime-logos.tunein.com/s123174q.png"
-tags = ["rock", "pop", "oldies"]
 
 [[stations]]
 name = "Big R Radio - Post Grunge Rock"
@@ -4781,20 +3536,6 @@ country_code = "SE"
 stream_url = "http://stream.dbmedia.se/gkhbg96"
 logo_url = "https://guldkanalen.se/wp-content/uploads/2015/10/cropped-favoicon-180x180.gif"
 tags = ["oldies", "pop"]
-
-[[stations]]
-name = "Antena 1"
-country_code = "PT"
-stream_url = "https://streaming-live.rtp.pt/liveradio/antena180a/playlist.m3u8"
-logo_url = "https://cdn-images.rtp.pt/play/images/apple-touch-icon.png-120x120.png"
-tags = ["pop", "talk", "sport"]
-
-[[stations]]
-name = "RDP Africa"
-country_code = "PT"
-stream_url = "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
-logo_url = "https://www.celsoazevedo.com/files/2022/11/rdp-africa.jpg"
-tags = ["world", "talk", "culture"]
 
 [[stations]]
 name = "Top 80"
@@ -4860,13 +3601,6 @@ logo_url = "http://webradiodirectory.com/wp-content/uploads/2021/01/cc9443f16e2a
 tags = ["pop", "oldies"]
 
 [[stations]]
-name = "RDP Internacional"
-country_code = "PT"
-stream_url = "https://streaming-live.rtp.pt/liveradio/rdpint80a/playlist.m3u8"
-logo_url = "https://www.celsoazevedo.com/files/2022/11/rdp-internacional.png"
-tags = ["talk", "world", "culture"]
-
-[[stations]]
 name = "GoloFM"
 country_code = "PT"
 stream_url = "https://sp0.redeaudio.com/8154/stream"
@@ -4895,53 +3629,11 @@ logo_url = "http://www.rum.pt/_nuxt/icons/icon_64.08fe96.png"
 tags = ["indie", "world", "culture"]
 
 [[stations]]
-name = "Antena 1"
-country_code = "PT"
-stream_url = "http://streaming-live.rtp.pt/liveradio/antena180a/playlist.m3u8"
-logo_url = "https://cdn-images.rtp.pt/play/images/apple-touch-icon.png-120x120.png"
-tags = ["pop", "talk", "news"]
-
-[[stations]]
-name = "Radio Zet"
-country_code = "PL"
-stream_url = "http://zet-net-01.cdn.eurozet.pl:8400/"
-logo_url = "https://gfx.radiozet.pl/extension/radiozet/design/standard/images/favicon/apple-touch-icon.png"
-tags = ["pop"]
-
-[[stations]]
-name = "Antyradio"
-country_code = "PL"
-stream_url = "https://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5"
-logo_url = "https://gfx.antyradio.pl/design/antyradio/src/images/favicon/favicon_180x180.png"
-tags = ["metal", "rock"]
-
-[[stations]]
 name = "Trojka"
 country_code = "PL"
 stream_url = "http://stream3.polskieradio.pl:8904/"
 logo_url = "http://moje.polskieradio.pl/favicon.ico"
 tags = ["pop", "public radio"]
-
-[[stations]]
-name = "TOK FM"
-country_code = "PL"
-stream_url = "https://radiostream.pl/tuba10-1.mp3#TOK_FM"
-logo_url = "https://static.im-g.pl/im/6/7455/m7455556.gif"
-tags = ["talk", "news"]
-
-[[stations]]
-name = "Radio 357"
-country_code = "PL"
-stream_url = "https://n-11-21.dcs.redcdn.pl/sc/o2/radio357/live/radio357_pr.livx?preroll=0"
-logo_url = "https://radio357.pl/wp-content/uploads/2022/04/c5399c0d-1b8e-43d5-b23b-e5cef1857856.png"
-tags = ["pop"]
-
-[[stations]]
-name = "Eska Rock"
-country_code = "PL"
-stream_url = "https://ic2.smcdn.pl/5380-1.mp3#ESKA_ROCK"
-logo_url = "https://static.mytuner.mobi/media/tvos_radios/2LqeyZhdFq.png"
-tags = ["rock"]
 
 [[stations]]
 name = "Radio Wnet"
@@ -4972,13 +3664,6 @@ logo_url = "https://www.rmf24.pl/i/2022/favicon/apple-icon-120x120.png"
 tags = ["news", "talk"]
 
 [[stations]]
-name = "Radio Plus"
-country_code = "PL"
-stream_url = "https://pl02.cdn.eurozet.pl/plu-waw.mp3?redirected=02"
-logo_url = "https://www.radioplus.pl/favicon.ico"
-tags = ["pop"]
-
-[[stations]]
 name = "Wnet.fm"
 country_code = "PL"
 stream_url = "https://media.wnet.fm/wnet.fm"
@@ -4986,25 +3671,11 @@ logo_url = "https://wnet.fm/favicon.ico"
 tags = ["pop", "rock"]
 
 [[stations]]
-name = "Chilli Zet"
-country_code = "PL"
-stream_url = "https://ch.cdn.eurozet.pl/chi-net.mp3"
-logo_url = "https://gfx.chillizet.pl/extension/chillizet/design/standard/images/favicon/apple-touch-icon.png"
-tags = ["pop", "dance"]
-
-[[stations]]
 name = "Radio Party"
 country_code = "PL"
 stream_url = "http://s7.radioparty.pl:8000/"
 logo_url = "http://radioparty.pl/favicon.ico"
 tags = ["electronic", "dance", "pop"]
-
-[[stations]]
-name = "Vox FM"
-country_code = "PL"
-stream_url = "https://ic2.smcdn.pl/3990-1.mp3"
-logo_url = "http://voxfm.pl/apple-touch-icon.png"
-tags = ["pop", "rock"]
 
 [[stations]]
 name = "Polskie Radio Katowice"
@@ -5026,27 +3697,6 @@ country_code = "PL"
 stream_url = "http://ic1.smcdn.pl/6120-1.mp3"
 logo_url = "http://eska.pl/favicon.ico"
 tags = ["pop", "dance"]
-
-[[stations]]
-name = "SmoothJazz.com.pl"
-country_code = "PL"
-stream_url = "https://bcast.vigormultimedia.com:48888/sjcompl320mp3"
-logo_url = "http://bcast.vigormultimedia.com:7000/sjcompl_192_192_nie_kasowac.png"
-tags = ["jazz"]
-
-[[stations]]
-name = "Polskie Radio 24"
-country_code = "PL"
-stream_url = "http://stream3.polskieradio.pl:8080/;.mp3"
-logo_url = "https://yt3.ggpht.com/a/AATXAJyFlzKJAEMeWhP6xmsC3EHQ9MkIldwATEmAQA=s900-c-k-c0xffffffff-no-rj-mo"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
-name = "RMF Classic"
-country_code = "PL"
-stream_url = "http://rmfstream1.interia.pl:8000/rmf_classic"
-logo_url = "https://radiointernetowe.online/wp-content/uploads/2021/06/rmf-classic.png"
-tags = ["classical"]
 
 [[stations]]
 name = "Radio Wroclaw"
@@ -5110,13 +3760,6 @@ country_code = "PL"
 stream_url = "http://stream3.polskieradio.pl:8900/;"
 logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240209_103039189.jpg?alt=media&token=6aa71f56-8a3e-42d2-a0d8-5e5293766afd"
 tags = ["public radio", "news", "talk"]
-
-[[stations]]
-name = "RMF Dance"
-country_code = "PL"
-stream_url = "http://rmfstream1.interia.pl:8000/rmf_dance"
-logo_url = "https://www.rmfon.pl/assets/images/favicon/apple-touch-icon.png"
-tags = ["dance", "electronic"]
 
 [[stations]]
 name = "Polskie Radio RDC"
@@ -5196,13 +3839,6 @@ logo_url = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmyradioonline.pl%
 tags = ["pop"]
 
 [[stations]]
-name = "Polskie Radio 24"
-country_code = "PL"
-stream_url = "https://stream15.polskieradio.pl/pr24/pr24.sdp/playlist.m3u8"
-logo_url = "https://yt3.ggpht.com/a/AATXAJyFlzKJAEMeWhP6xmsC3EHQ9MkIldwATEmAQA=s900-c-k-c0xffffffff-no-rj-mo"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
 name = "Antyradio Classic Rock"
 country_code = "PL"
 stream_url = "https://an01.cdn.eurozet.pl/ANTCLA.mp3?redirected=01"
@@ -5245,20 +3881,6 @@ logo_url = "https://gfx.chillizet.pl/extension/chillizet/design/standard/images/
 tags = ["electronic", "dance", "house"]
 
 [[stations]]
-name = "PR Tr\u00f3jka"
-country_code = "PL"
-stream_url = "https://stream13.polskieradio.pl/pr3/pr3.sdp/playlist.m3u8"
-logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250314_080616667.jpg?alt=media&token=4738543a-4391-4727-9d9d-89741871db70"
-tags = ["public radio", "alternative", "culture"]
-
-[[stations]]
-name = "Antyradio"
-country_code = "PL"
-stream_url = "https://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5"
-logo_url = "https://gfx.antyradio.pl/design/antyradio/src/images/favicon/favicon_180x180.png"
-tags = ["rock", "alternative", "indie"]
-
-[[stations]]
 name = "Radio SAR"
 country_code = "PL"
 stream_url = "https://stream.radiosar.pl/hdmain.mp3"
@@ -5287,13 +3909,6 @@ logo_url = "http://radiokampus.fm/logo192.png"
 tags = ["student radio", "alternative", "indie"]
 
 [[stations]]
-name = "VOX FM"
-country_code = "PL"
-stream_url = "https://pldm.one.pl/radio?url=https://www.eskago.pl/radio/vox-fm"
-logo_url = "https://www.voxfm.pl/apple-touch-icon.png"
-tags = ["pop", "rock"]
-
-[[stations]]
 name = "Trendy Radio"
 country_code = "PL"
 stream_url = "http://stream.trendyradio.pl:8000/h"
@@ -5308,25 +3923,11 @@ logo_url = "http://www.radio.opole.pl/assets/favicon/apple-touch-icon.png"
 tags = ["public radio", "variety"]
 
 [[stations]]
-name = "TOK FM"
-country_code = "PL"
-stream_url = "https://radiostream.pl/tuba10-1.mp3"
-logo_url = "https://media.user.com/uploads/lv0msl-tokfm/logo-tok-fm-192x192_12xTZoh.png"
-tags = ["talk", "news", "culture"]
-
-[[stations]]
 name = "Radio Mbox Disco Polo"
 country_code = "PL"
 stream_url = "http://s3.slotex.pl:7222/stream"
 logo_url = "https://radiombox.pl/MboxKwadr120x120.png"
 tags = ["dance", "disco", "pop"]
-
-[[stations]]
-name = "RNZ National"
-country_code = "NZ"
-stream_url = "http://radionz-ice.streamguys.com/national.mp3"
-logo_url = "https://www.rnz.co.nz/x/favicons/production/apple-touch-icon-14e8cc0d5e9a21845ce6a582e39617baeebe39d41412666ecebcdba7f3c1770a.png"
-tags = ["news", "talk", "public radio"]
 
 [[stations]]
 name = "Easy 80s"
@@ -5336,32 +3937,11 @@ logo_url = "https://cdn-profiles.tunein.com/s302357/images/logoq.png"
 tags = ["oldies", "pop"]
 
 [[stations]]
-name = "RNZ Pacific"
-country_code = "NZ"
-stream_url = "http://radionz-ice.streamguys.com/international.mp3"
-logo_url = "https://www.rnz.co.nz/x/favicons/production/apple-touch-icon-14e8cc0d5e9a21845ce6a582e39617baeebe39d41412666ecebcdba7f3c1770a.png"
-tags = ["news", "talk", "world", "public radio"]
-
-[[stations]]
 name = "P5 Nonstop Hits"
 country_code = "NO"
 stream_url = "https://p5n.p4groupaudio.com/P05AAH"
 logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/488dff43-6567-45ec-bd55-1813ccf861a4.png?w=600&ar=1x1"
 tags = ["pop", "rock"]
-
-[[stations]]
-name = "P12 Hitmix"
-country_code = "NO"
-stream_url = "https://nrj.p4groupaudio.com/NRJ_MM"
-logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/95c6448b-5cb4-4403-baca-686c22ba0c60.jpg?w=600&ar=1x1"
-tags = ["pop"]
-
-[[stations]]
-name = "P4 Norge"
-country_code = "NO"
-stream_url = "https://p4.p4groupaudio.com/P04_AH"
-logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/6e2f9c96-a018-424a-b3bf-7be5252d806c.png?w=600&ar=1x1"
-tags = ["pop", "news"]
 
 [[stations]]
 name = "Radio 24 il Sole 24 Ore"
@@ -5392,13 +3972,6 @@ logo_url = "http://www.virginradio.it/favicon_2.ico?v=1722509813651"
 tags = ["pop", "rock"]
 
 [[stations]]
-name = "Radio 80"
-country_code = "IT"
-stream_url = "http://str01.fluidstream.net:7020/;stream.mp3"
-logo_url = "https://upload.wikimedia.org/wikipedia/it/1/1b/Radio80.jpg"
-tags = ["oldies", "pop"]
-
-[[stations]]
 name = "R101 FM"
 country_code = "IT"
 stream_url = "http://icecast.unitedradio.it/r101"
@@ -5427,13 +4000,6 @@ logo_url = "https://kisskiss.it/wp-content/uploads/2021/03/cropped-favicon-kissk
 tags = ["pop"]
 
 [[stations]]
-name = "RDS Relax"
-country_code = "IT"
-stream_url = "http://icstream.rds.radio/rdsrelax"
-logo_url = "https://rdsrelax.it/images/logo.png"
-tags = ["ambient", "pop"]
-
-[[stations]]
 name = "RTL 102.5"
 country_code = "IT"
 stream_url = "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_audio.m3u8"
@@ -5448,53 +4014,11 @@ logo_url = "http://www.105.net/favicon_3.ico?v=1722509813759"
 tags = ["hip-hop"]
 
 [[stations]]
-name = "Radio Deejay"
-country_code = "IT"
-stream_url = "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8"
-logo_url = "https://www.deejay.it/favicon.ico"
-tags = ["pop", "talk"]
-
-[[stations]]
 name = "Radio Capital"
 country_code = "IT"
 stream_url = "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiocapital/radiocapital/master_ma.m3u8"
 logo_url = "https://www.capital.it/wp-content/themes/network-capital/favicon.ico"
 tags = ["rock", "alternative"]
-
-[[stations]]
-name = "Lolli Radio Italia"
-country_code = "IT"
-stream_url = "http://www.lolliradio.net/streaming/italia.asx"
-logo_url = "http://www.lolliradio.net/wp-content/uploads/2016/02/logo_italia-150x150.jpg"
-tags = ["pop"]
-
-[[stations]]
-name = "Rai Radio 1"
-country_code = "IT"
-stream_url = "http://icestreaming.rai.it/1.mp3"
-logo_url = "https://radio-streaming.it/assets/image/radio/180/rairadio1logo.png"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
-name = "Musica Jazz Radio"
-country_code = "IT"
-stream_url = "http://ice03.fluidstream.net/mjr.aac"
-logo_url = "https://musicajazz.it/wp-content/uploads/logo-120.png"
-tags = ["jazz"]
-
-[[stations]]
-name = "Lattemiele"
-country_code = "IT"
-stream_url = "https://sr15.inmystream.it:8000/stream"
-logo_url = "https://www.lattemiele.com/wp-content/uploads/2020/07/cropped-logo-autore-lm-32x32.png"
-tags = ["pop", "soul", "oldies"]
-
-[[stations]]
-name = "Radio Piterpan"
-country_code = "IT"
-stream_url = "http://wma01.fluidstream.net/piterpan"
-logo_url = "http://www.piterpan.it/favicon.ico"
-tags = ["electronic", "pop"]
 
 [[stations]]
 name = "Radio Rai 1"
@@ -5546,13 +4070,6 @@ logo_url = "https://romanticaradio.it/wp-content/uploads/2022/05/cropped-favicon
 tags = ["pop", "soul"]
 
 [[stations]]
-name = "Italia Dance Music"
-country_code = "IT"
-stream_url = "http://sr2.inmystream.info:8032/;"
-logo_url = "https://www.italiadancemusic.com/it/themes/corporate_lite/favicon.ico"
-tags = ["dance"]
-
-[[stations]]
 name = "70 80 Hits HQ"
 country_code = "IT"
 stream_url = "https://nr8.newradio.it:19574/stream"
@@ -5572,13 +4089,6 @@ country_code = "IT"
 stream_url = "https://gmusto3.radioca.st/stream"
 logo_url = "https://www.radioenergy.to/favicon.ico"
 tags = ["rock", "oldies", "soul", "funk", "disco"]
-
-[[stations]]
-name = "Love FM"
-country_code = "IT"
-stream_url = "http://wma07.fluidstream.net:7600/;stream.mp3"
-logo_url = "https://www.lovefm.it/themes/default/assets/img_c/favicon.ico"
-tags = ["pop", "soul"]
 
 [[stations]]
 name = "Radio Bianconera"
@@ -5616,13 +4126,6 @@ logo_url = "https://www.radiosubasio.it/wp-content/themes/radiosubasiov2/assets/
 tags = ["pop", "italian"]
 
 [[stations]]
-name = "Italo Sound Radio"
-country_code = "IT"
-stream_url = "http://stream.italosound.com:8000/italosound"
-logo_url = "https://italosound.com/logo-cover.png"
-tags = ["dance", "electronic", "house"]
-
-[[stations]]
 name = "Radio Play Capital"
 country_code = "IT"
 stream_url = "http://onair11.xdevel.com:8166/;stream.nsv"
@@ -5649,13 +4152,6 @@ country_code = "IT"
 stream_url = "http://wma01.fluidstream.net/marilu"
 logo_url = "https://www.marilu.it/wp-content/uploads/2023/03/cropped-radio-marilu-plettro-180x180.png"
 tags = ["pop", "oldies"]
-
-[[stations]]
-name = "Rai Radio 3"
-country_code = "IT"
-stream_url = "http://icestreaming.rai.it/3.mp3"
-logo_url = "https://www.raicom.rai.it/wp-content/uploads/2021/12/RADIO3-1024x1024.jpg"
-tags = ["classical", "culture", "public radio"]
 
 [[stations]]
 name = "Giornale Radio"
@@ -5700,13 +4196,6 @@ logo_url = "https://www.dumdumrepublic.com/images/favicon-96x96.png"
 tags = ["indie", "rock", "electronic"]
 
 [[stations]]
-name = "Radio Maria Italy"
-country_code = "IT"
-stream_url = "http://dreamsiteradiocp2.com:8016/stream"
-logo_url = "http://www.radiomaria.org/favicon.ico"
-tags = ["talk", "culture"]
-
-[[stations]]
 name = "Radio Ciao"
 country_code = "IT"
 stream_url = "http://onair11.xdevel.com:9988/;stream.mp3"
@@ -5740,20 +4229,6 @@ country_code = "IT"
 stream_url = "https://radiocavolo.org/stream"
 logo_url = "https://www.radiocavolo.org/wp-content/uploads/2020/10/cropped-radio-cavolo-logo-white-background-300x300-1-180x180.png"
 tags = ["electronic", "pop", "rock", "talk", "indie"]
-
-[[stations]]
-name = "Dance Wave!"
-country_code = "HU"
-stream_url = "https://dancewave.online/dance.mp3"
-logo_url = "https://dancewave.online/dw_logo.png"
-tags = ["dance", "electronic", "house", "trance"]
-
-[[stations]]
-name = "Dance Wave Retro!"
-country_code = "HU"
-stream_url = "https://retro.dancewave.online/retrodance.mp3"
-logo_url = "https://dancewave.online/dwr_logo.png"
-tags = ["dance", "oldies"]
 
 [[stations]]
 name = "Mercy R\u00e1di\u00f3 - Kabar\u00e9"
@@ -5868,13 +4343,6 @@ logo_url = "https://radio1.hu/template/radio1/assets/img/favicon/apple-touch-ico
 tags = ["dance", "pop"]
 
 [[stations]]
-name = "Oxygen Music"
-country_code = "HU"
-stream_url = "https://oxygenmusic.hu:8443/oxygenmusic_192"
-logo_url = "https://oxygenmusic.hu/logo192.png"
-tags = ["pop", "dance"]
-
-[[stations]]
 name = "FM 103.9 A Rock"
 country_code = "HU"
 stream_url = "https://stream.rockradio.hu/"
@@ -5901,13 +4369,6 @@ country_code = "HU"
 stream_url = "http://stream.tilos.hu:8000/tilos"
 logo_url = "http://tilos.hu/favicon.ico"
 tags = ["indie", "alternative"]
-
-[[stations]]
-name = "BDPST Rock"
-country_code = "HU"
-stream_url = "https://bdpstrock.hu/live_320.mp3"
-logo_url = "https://bdpstrock.hu/favicon.ico"
-tags = ["rock"]
 
 [[stations]]
 name = "Pet\u0151fi R\u00e1di\u00f3"
@@ -5959,13 +4420,6 @@ logo_url = "http://mercyradio.eu/wp-content/uploads/2014/02/fredy-mediapartner.p
 tags = ["pop"]
 
 [[stations]]
-name = "Dance Wave!"
-country_code = "HU"
-stream_url = "https://dancewave.online/dance.opus"
-logo_url = "https://dancewave.online/dw_logo.png"
-tags = ["dance", "house", "electronic"]
-
-[[stations]]
 name = "Dance 90s"
 country_code = "HU"
 stream_url = "https://mediagw.e-tiger.net/stream/zc06?ver=887687"
@@ -5985,13 +4439,6 @@ country_code = "HU"
 stream_url = "https://radio.musorok.org/listen/jazzygroove/jazzygroove.mp3"
 logo_url = "https://jazzy-backend-prod.melkweg.hu/jazzy-borito-fallback-groove.jpg"
 tags = ["jazz", "soul"]
-
-[[stations]]
-name = "Extra FM"
-country_code = "HR"
-stream_url = "http://streams.extrafm.hr:8110/;"
-logo_url = "https://extrafm.hr/apple-touch-icon.png"
-tags = ["folk", "pop"]
 
 [[stations]]
 name = "Radio Banovina"
@@ -6050,32 +4497,11 @@ logo_url = "https://i0.wp.com/bluesradio.gr/wp-content/uploads/2021/06/cropped-2
 tags = ["blues", "soul"]
 
 [[stations]]
-name = "Real FM 97.8"
-country_code = "GR"
-stream_url = "http://netradio.live24.gr/realfm"
-logo_url = "https://www.real.gr/wp-content/uploads/2025/02/realgr-icon-150x150.png"
-tags = ["news", "talk"]
-
-[[stations]]
 name = "Kiss 92.9"
 country_code = "GR"
 stream_url = "http://netradio.live24.gr/kissfmathens"
 logo_url = "https://www.kiss929.gr/sites/default/files/kiss.ico"
 tags = ["pop"]
-
-[[stations]]
-name = "Sport FM 94.6"
-country_code = "GR"
-stream_url = "http://netradio.live24.gr/sportfm7712"
-logo_url = "http://www.sport-fm.gr/favicon.ico"
-tags = ["sport", "talk"]
-
-[[stations]]
-name = "Zeppelin 106.7"
-country_code = "GR"
-stream_url = "https://radiostreaming.ert.gr/ert-zeppelin"
-logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
-tags = ["rock", "alternative", "indie"]
 
 [[stations]]
 name = "Parapol\u00edtika FM 90.1"
@@ -6092,13 +4518,6 @@ logo_url = "http://www.ellinikos932.fm/favicon.ico"
 tags = ["pop", "world"]
 
 [[stations]]
-name = "Psyndora Psytrance"
-country_code = "GR"
-stream_url = "http://cast.magicstreams.gr:9111/stream"
-logo_url = "https://www.psyndora.com/images/favicon-144x144.png"
-tags = ["trance", "electronic", "dance"]
-
-[[stations]]
 name = "Laikos FM"
 country_code = "GR"
 stream_url = "http://netradio.live24.gr/laikos876"
@@ -6111,27 +4530,6 @@ country_code = "GR"
 stream_url = "http://mediaserver.mad.tv/stream"
 logo_url = "https://mad.gr/wp-content/uploads/2020/06/cropped-mad-browser-icon-180x180.png"
 tags = ["pop", "dance"]
-
-[[stations]]
-name = "ERA Deftero Programma"
-country_code = "GR"
-stream_url = "http://radiostreaming.ert.gr/ert-deftero"
-logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
-tags = ["public radio", "talk"]
-
-[[stations]]
-name = "Stone Radio"
-country_code = "GR"
-stream_url = "http://eu4.fastcast4u.com:5248/;stream.mp3"
-logo_url = "http://cdn-radiotime-logos.tunein.com/s236876q.png"
-tags = ["rock", "metal", "alternative"]
-
-[[stations]]
-name = "ERA Proto Programma"
-country_code = "GR"
-stream_url = "http://radiostreaming.ert.gr/ert-proto"
-logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
-tags = ["public radio", "talk", "culture"]
 
 [[stations]]
 name = "Radio Art Chillout"
@@ -6183,13 +4581,6 @@ logo_url = "https://www.parapolitika.gr/favicon.ico"
 tags = ["news", "talk"]
 
 [[stations]]
-name = "ERA Trito Programma"
-country_code = "GR"
-stream_url = "http://radiostreaming.ert.gr/ert-trito"
-logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
-tags = ["public radio", "culture"]
-
-[[stations]]
 name = "Athina 984"
 country_code = "GR"
 stream_url = "http://athina984.live24.gr/athina984"
@@ -6225,20 +4616,6 @@ logo_url = "https://cdn-profiles.tunein.com/s154174/images/logoq.jpg"
 tags = ["classical", "ambient"]
 
 [[stations]]
-name = "SKAI 100.3"
-country_code = "GR"
-stream_url = "https://skai.live24.gr/skai1003"
-logo_url = "https://www.skairadio.gr/themes/s1003/assets/images/logo-1904-border.png"
-tags = ["news", "talk"]
-
-[[stations]]
-name = "Blues Radio Greece"
-country_code = "GR"
-stream_url = "http://cast3.radiohost.ovh:8352/"
-logo_url = "https://i0.wp.com/bluesradio.gr/wp-content/uploads/2021/06/cropped-24-7bug.png?fit=180%2c180&#038;ssl=1"
-tags = ["blues", "soul"]
-
-[[stations]]
 name = "Athens Voice 102.5"
 country_code = "GR"
 stream_url = "http://netradio.live24.gr/nitro4555"
@@ -6267,20 +4644,6 @@ logo_url = "https://www.vanillaradio.com/wp-content/uploads/2016/04/vanilla-logo
 tags = ["pop"]
 
 [[stations]]
-name = "ERT Kosmos"
-country_code = "GR"
-stream_url = "https://radiostreaming.ert.gr/ert-kosmos"
-logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
-tags = ["world", "public radio"]
-
-[[stations]]
-name = "ERT Deftero"
-country_code = "GR"
-stream_url = "https://radiostreaming.ert.gr/ert-deftero"
-logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
-tags = ["public radio", "talk", "culture"]
-
-[[stations]]
 name = "7000FM"
 country_code = "GR"
 stream_url = "https://stream.7000fm.gr/radio/8000/radio.mp3"
@@ -6300,13 +4663,6 @@ country_code = "GR"
 stream_url = "http://eco.onestreaming.com:8536/;"
 logo_url = "http://resources.live24.gr/resources/images/stations/d8b5ba1e-c19d-4ab0-b5a5-7bc8c1c7d64f.jpg"
 tags = ["pop", "alternative"]
-
-[[stations]]
-name = "Athens Rock 96.9"
-country_code = "GR"
-stream_url = "https://az10.yesstreaming.net/radio/8060/radio.mp3"
-logo_url = "http://resources.live24.gr/resources/images/stations/fee95347-f0eb-4299-9edd-9d9b42ee23f6.png"
-tags = ["rock", "alternative"]
 
 [[stations]]
 name = "Imagine 897"
@@ -6335,13 +4691,6 @@ country_code = "GR"
 stream_url = "https://rdst.win:59450/stream"
 logo_url = "http://resources.live24.gr/resources/images/stations/c689f912-ad9e-4513-9d2a-db9418d70018.png"
 tags = ["folk", "world", "traditional"]
-
-[[stations]]
-name = "ERT Kosmos Jazz"
-country_code = "GR"
-stream_url = "https://radiostreaming.ert.gr/ert-webjazz"
-logo_url = "https://www.ertecho.gr/wp-content/uploads/2022/06/cropped-ertecho-favicon-180x180.png"
-tags = ["jazz", "public radio"]
 
 [[stations]]
 name = "Sfera 94.4"
@@ -6414,27 +4763,6 @@ logo_url = "https://melody888.gr/images/fav1.png"
 tags = ["pop", "dance", "electronic"]
 
 [[stations]]
-name = "YleX"
-country_code = "FI"
-stream_url = "https://icecast.live.yle.fi/radio/YleX/icecast.audio"
-logo_url = "https://images.cdn.yle.fi/f_auto,w_48,h_48,dpr_4.0/v1496664710/yle-areena-app.png"
-tags = ["pop"]
-
-[[stations]]
-name = "Doubleclap Radio"
-country_code = "FI"
-stream_url = "https://s3.radio.co/scfd7273b2/listen"
-logo_url = "https://doubleclap.dance/wp-content/uploads/2020/05/logo.png"
-tags = ["dance", "electronic", "house", "trance"]
-
-[[stations]]
-name = "DR P1"
-country_code = "DK"
-stream_url = "http://live-icy.gss.dr.dk/A/A03H.mp3"
-logo_url = "http://www.dr.dk/favicon.ico"
-tags = ["talk", "classical", "public radio"]
-
-[[stations]]
 name = "Limfjord Plus Slager"
 country_code = "DK"
 stream_url = "http://media.limfjordnetradio.dk/plusslager128"
@@ -6449,25 +4777,11 @@ logo_url = "https://listenapi.s3.amazonaws.com/img/ConfigWebListenBarLogoImageUr
 tags = ["pop"]
 
 [[stations]]
-name = "Skala FM"
-country_code = "DK"
-stream_url = "http://webradio.skala.fm/kolding"
-logo_url = "https://skala.fm/wp-content/uploads/sites/2/2024/08/cropped-favicon_skala-180x180.png"
-tags = ["pop"]
-
-[[stations]]
 name = "Nova 100% Dansk"
 country_code = "DK"
 stream_url = "https://live-bauerdk.sharp-stream.com/DK_HQ_RP11.aac"
 logo_url = "https://listenapi.s3.amazonaws.com/img/ConfigWebListenBarLogoImageUrl/202.jpg?ver=1490698010"
 tags = ["pop"]
-
-[[stations]]
-name = "Radio Swiss Pop"
-country_code = "CH"
-stream_url = "http://stream.srg-ssr.ch/m/rsp/mp3_128"
-logo_url = "http://www.radioswisspop.ch/favicon.ico"
-tags = ["pop", "public radio"]
 
 [[stations]]
 name = "SRF 3"
@@ -6510,20 +4824,6 @@ country_code = "CH"
 stream_url = "https://premium.shoutcastsolutions.com/radio/8050/256.mp3"
 logo_url = "https://www.80sforever.radio/favicon.ico"
 tags = ["rock", "alternative", "pop", "indie"]
-
-[[stations]]
-name = "Radio Swiss Jazz"
-country_code = "CH"
-stream_url = "http://stream.srg-ssr.ch/m/rsj/aacp_96"
-logo_url = "http://www.radioswissjazz.ch/favicon.ico"
-tags = ["jazz", "public radio"]
-
-[[stations]]
-name = "Radio Swiss Classic"
-country_code = "CH"
-stream_url = "http://stream.srg-ssr.ch/m/rsc_it/mp3_128"
-logo_url = "https://www.radioswissclassic.ch/favicon.ico"
-tags = ["classical", "public radio"]
 
 [[stations]]
 name = "Couleur3"
@@ -6617,13 +4917,6 @@ logo_url = "https://calmradio.com/templates/calmradio/favicons/apple-touch-icon.
 tags = ["classical"]
 
 [[stations]]
-name = "Gritty Rock Radio"
-country_code = "CA"
-stream_url = "https://listen.radioking.com/radio/10713/stream/224413"
-logo_url = "https://www.grittyrockradio.com/apple-touch-icon.png"
-tags = ["rock", "blues"]
-
-[[stations]]
 name = "Calm Radio - Mozart"
 country_code = "CA"
 stream_url = "http://streams.calmradio.com:7328/stream"
@@ -6678,13 +4971,6 @@ country_code = "CA"
 stream_url = "http://70s-lynxradio.radioca.st/stream"
 logo_url = "http://cdn-profiles.tunein.com/s49608/images/logoq.jpg"
 tags = ["oldies", "rock", "pop"]
-
-[[stations]]
-name = "CHOI 98.1 \"Radio X\" Quebec City, QC"
-country_code = "CA"
-stream_url = "http://icecast-choi.rncm.ca/choi.mp3"
-logo_url = "https://radiox.com/apple-touch-icon.png"
-tags = ["indie", "alternative"]
 
 [[stations]]
 name = "Slowly Radio"
@@ -6771,13 +5057,6 @@ logo_url = "https://austrianrockradio.at/wp-content/uploads/2023/02/liferadio-15
 tags = ["rock"]
 
 [[stations]]
-name = "ORF Radio Wien"
-country_code = "AT"
-stream_url = "http://orf-live.ors-shoutcast.at/wie-q1a"
-logo_url = "https://orfodon.org/system/accounts/avatars/111/374/411/749/352/990/original/16c84635847ddad3.png"
-tags = ["public radio", "talk"]
-
-[[stations]]
 name = "KroneHit Digital"
 country_code = "AT"
 stream_url = "http://onair-ha1.krone.at/kronehit1058.mp3"
@@ -6790,13 +5069,6 @@ country_code = "AT"
 stream_url = "https://orf-live.ors-shoutcast.at/fm4-q1a"
 logo_url = "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/fm4/images/touch-icon-iphone-retina.png"
 tags = ["alternative", "electronic", "pop", "rock"]
-
-[[stations]]
-name = "KroneHit Radio"
-country_code = "AT"
-stream_url = "http://onair-ha1.krone.at/kronehit64.aac"
-logo_url = "http://www.kronehit.at/static/base/img/apple-touch-icon.f5c3420c154b.png"
-tags = ["pop", "dance"]
 
 [[stations]]
 name = "88.6 Hard Rock"
@@ -6862,32 +5134,11 @@ logo_url = "https://oe1.orf.at/static/img/logo_oe1.png"
 tags = ["classical", "culture", "public radio"]
 
 [[stations]]
-name = "Radio Vorarlberg"
-country_code = "AT"
-stream_url = "https://orf-live.ors-shoutcast.at/vbg-q1a"
-logo_url = "https://orfodon.org/system/accounts/avatars/111/374/623/444/743/699/original/3022673107e835ba.png"
-tags = ["public radio"]
-
-[[stations]]
-name = "JazzW3"
-country_code = "AT"
-stream_url = "http://jazz.w3.at:8000/w3jazz.mp3"
-logo_url = "http://jazz.w3.at/logo.png"
-tags = ["jazz"]
-
-[[stations]]
 name = "Eurodance X-Press"
 country_code = "AT"
 stream_url = "https://secureonair.krone.at/eurodance.aac"
 logo_url = "https://www.eurodance.at/images/logo.png"
 tags = ["dance", "electronic", "pop", "trance"]
-
-[[stations]]
-name = "ORF Tirol"
-country_code = "AT"
-stream_url = "http://orf-live.ors-shoutcast.at/tir-q2a"
-logo_url = "https://orfodon.org/system/accounts/avatars/111/374/561/229/082/482/original/57acca969ede8452.png"
-tags = ["pop", "folk", "public radio"]
 
 [[stations]]
 name = "Antenne K\u00e4rnten Partyhitmix"
@@ -6911,32 +5162,11 @@ logo_url = "https://progrockmachine.com/favicon.ico"
 tags = ["rock", "progressive"]
 
 [[stations]]
-name = "Fresh 92.7"
-country_code = "AU"
-stream_url = "https://live.fresh927.com.au/freshaac"
-logo_url = "https://fresh927.com.au/graphics/favicon.png"
-tags = ["pop", "community radio"]
-
-[[stations]]
-name = "SBS Chill"
-country_code = "AU"
-stream_url = "http://sbs-ice.streamguys1.com/sbschill"
-logo_url = "https://www.sbs.com.au/_next/static/img/language/app-icon_128x128-18ef105.png"
-tags = ["ambient", "chillout"]
-
-[[stations]]
 name = "Radio Italian Music"
 country_code = "AU"
 stream_url = "https://streaming.radiostreamlive.com/radioitalianmusic_devices"
 logo_url = "https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico"
 tags = ["pop", "world"]
-
-[[stations]]
-name = "Sky News Australia Radio"
-country_code = "AU"
-stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVA_SKYNEWSAAC.aac"
-logo_url = "https://raw.githubusercontent.com/AusIPTV/IPTVLogos/master/SKY_News_Australia_logo.png"
-tags = ["news", "talk"]
 
 [[stations]]
 name = "LiSTNR - 80s New Wave"
@@ -6951,13 +5181,6 @@ country_code = "AU"
 stream_url = "https://freefmrock.radioca.st/"
 logo_url = "https://1.bp.blogspot.com/-zqFqeHIezoQ/XWwTN0Jl0OI/AAAAAAAAAck/JiBc3HIncUIIrenqBm_BaIfLAGLxCQF4ACLcBGAs/s1600/free%2Bfm%2Brock.jpg"
 tags = ["rock", "alternative"]
-
-[[stations]]
-name = "Europa Plus"
-country_code = "RU"
-stream_url = "http://ep256.hostingradio.ru:8052/europaplus256.mp3"
-logo_url = "http://liveam.tv/img/2494.jpg"
-tags = ["dance", "house", "pop"]
 
 [[stations]]
 name = "DFM Russian Dance"
@@ -6993,20 +5216,6 @@ country_code = "RU"
 stream_url = "http://chanson.hostingradio.ru:8041/chanson-uncensored256.mp3"
 logo_url = "https://www.eff.org/files/Button_Russian_white.png"
 tags = ["world", "folk"]
-
-[[stations]]
-name = "Mixadance FM"
-country_code = "RU"
-stream_url = "https://stream.mixadance.fm/mixadance"
-logo_url = "http://www.mixadance.fm/apple-touch-icon.png"
-tags = ["dance", "electronic", "house"]
-
-[[stations]]
-name = "Kommersant FM"
-country_code = "RU"
-stream_url = "http://kommersant77.hostingradio.ru:8016/kommersant64.mp3"
-logo_url = "https://im.kommersant.ru/contentflex/images/favicons2020/apple-touch-icon-120.png"
-tags = ["news", "talk"]
 
 [[stations]]
 name = "Instrumental Jazz"
@@ -7100,13 +5309,6 @@ logo_url = "https://sun9-27.userapi.com/impf/c841322/v841322516/5f256/VE9h-yZqVm
 tags = ["oldies", "pop"]
 
 [[stations]]
-name = "Europa Plus"
-country_code = "RU"
-stream_url = "http://ep128.streamr.ru/"
-logo_url = "http://www.europaplus.ru/favicon.ico"
-tags = ["dance", "house", "pop"]
-
-[[stations]]
 name = "Humor FM 106.5"
 country_code = "RU"
 stream_url = "http://online-2.gkvr.ru:8000/yumorfm11_vld_64.aac"
@@ -7161,13 +5363,6 @@ country_code = "RU"
 stream_url = "https://jfm1.hostingradio.ru:14536/metal.mp3"
 logo_url = "https://www.rockfm.ru/favicons/apple-touch-icon.png"
 tags = ["metal", "rock"]
-
-[[stations]]
-name = "Uralsound FM"
-country_code = "RU"
-stream_url = "https://5.restream.one/1392_1"
-logo_url = "https://radiopotok.mobi/apple-touch-icon.png"
-tags = ["electronic", "house"]
 
 [[stations]]
 name = "\u0420\u0430\u0434\u0438\u043e Sputnik"
@@ -7338,13 +5533,6 @@ logo_url = "https://cdn-radiotime-logos.tunein.com/s24506g.png"
 tags = ["regional mexican", "folk", "country"]
 
 [[stations]]
-name = "Exa FM"
-country_code = "MX"
-stream_url = "http://18213.live.streamtheworld.com/XHEXA_SC"
-logo_url = "http://cdn-radiotime-logos.tunein.com/s87554q.png"
-tags = ["pop", "electronic", "top 40"]
-
-[[stations]]
 name = "La Mejor Ciudad de M\u00e9xico"
 country_code = "MX"
 stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/XERCFM_SC"
@@ -7385,13 +5573,6 @@ country_code = "MX"
 stream_url = "https://streaming.servicioswebmx.com/8130/stream;"
 logo_url = "https://www.lapoderosa.com.mx/imagenes/logo_app.png"
 tags = ["regional mexican", "folk"]
-
-[[stations]]
-name = "Oldies Internet Radio"
-country_code = "MX"
-stream_url = "https://panel.retrolandigital.com/listen/oldies_internet_radio/listen"
-logo_url = "https://static.mytuner.mobi/media/tvos_radios/dwdxek9by6tq.jpg"
-tags = ["oldies", "pop", "rock"]
 
 [[stations]]
 name = "F\u00f3rmula Mel\u00f3dica"
@@ -7653,39 +5834,11 @@ logo_url = "https://www.intenseradio.net/wp-content/uploads/fbrfg/apple-touch-ic
 tags = ["dance", "house", "trance", "electronic", "club"]
 
 [[stations]]
-name = "NPO Radio 1"
-country_code = "NL"
-stream_url = "http://icecast.omroep.nl/radio1-bb-mp3"
-logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/NPO_Radio_1_logo_2014.svg/640px-NPO_Radio_1_logo_2014.svg.png"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
-name = "NPO Radio 2"
-country_code = "NL"
-stream_url = "http://icecast.omroep.nl/radio2-bb-mp3"
-logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/NPO_Radio_2_logo.svg/640px-NPO_Radio_2_logo.svg.png"
-tags = ["talk", "oldies", "public radio"]
-
-[[stations]]
-name = "Arrow Classic Rock"
-country_code = "NL"
-stream_url = "http://stream.gal.io/arrow"
-logo_url = "https://www.arrow.nl/wp-content/themes/bones-master/library/images/apple-touch-icon.png"
-tags = ["rock", "oldies"]
-
-[[stations]]
 name = "Radio 10"
 country_code = "NL"
 stream_url = "http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3"
 logo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScXQ3C4MdB2iKNRXVmQSy-fl3MBqAi-SX2JU3p-ZeLSiLCVbDw&s"
 tags = ["oldies", "pop"]
-
-[[stations]]
-name = "NPO Radio 5"
-country_code = "NL"
-stream_url = "https://icecast.omroep.nl/radio5-bb-mp3"
-logo_url = "https://www.nporadio5.nl/apple-touch-icon.png"
-tags = ["oldies", "public radio"]
 
 [[stations]]
 name = "SLAM!"
@@ -7695,25 +5848,11 @@ logo_url = "https://www.slam.nl/favicon.ico"
 tags = ["dance", "house", "electronic", "pop"]
 
 [[stations]]
-name = "Qmusic"
-country_code = "NL"
-stream_url = "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live_96.mp3"
-logo_url = "https://qmusic.nl/favicon.ico"
-tags = ["pop", "top 40"]
-
-[[stations]]
 name = "Fantasy Italo Dance 90s Radio"
 country_code = "NL"
 stream_url = "https://mscp2.live-streams.nl:8152/italodance"
 logo_url = "https://jplayer-generator.live-streams.nl/upload/96142657.jpg"
 tags = ["dance", "electronic", "trance", "house"]
-
-[[stations]]
-name = "NPO 3FM Serious Radio"
-country_code = "NL"
-stream_url = "http://icecast.omroep.nl/3fm-bb-mp3"
-logo_url = "https://www.3fm.nl/apple-touch-icon.png"
-tags = ["pop", "rock", "indie"]
 
 [[stations]]
 name = "Hardcore Radio"
@@ -7737,13 +5876,6 @@ logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Concertzen
 tags = ["classical", "culture", "public radio"]
 
 [[stations]]
-name = "BNR Nieuwsradio"
-country_code = "NL"
-stream_url = "https://stream.bnr.nl/bnr_aac_96_20"
-logo_url = "https://www.bnr.nl/favicon.ico"
-tags = ["news", "business"]
-
-[[stations]]
 name = "Italo Power"
 country_code = "NL"
 stream_url = "http://stream.radioitalopower.com:10018/italopower"
@@ -7758,13 +5890,6 @@ logo_url = "https://www.funx.nl/apple-touch-icon.png"
 tags = ["world", "arabic"]
 
 [[stations]]
-name = "KINK"
-country_code = "NL"
-stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/KINK.mp3"
-logo_url = "https://kink.nl/static/apple-touch-icon.png"
-tags = ["alternative", "indie"]
-
-[[stations]]
 name = "NPO FunX Hip Hop"
 country_code = "NL"
 stream_url = "http://icecast.omroep.nl/funx-hiphopfb-bb-mp3"
@@ -7772,32 +5897,11 @@ logo_url = "https://www.funx.nl/apple-touch-icon.png"
 tags = ["hip-hop"]
 
 [[stations]]
-name = "Radio Rijnmond"
-country_code = "NL"
-stream_url = "http://d2e9xgjjdd9cr5.cloudfront.net/icecast/rijnmond/radio-mp3"
-logo_url = "https://s.regiogroei.cloud/img/favicons/rijnmond/apple-touch-icon.png?v=1689602147266"
-tags = ["talk", "culture"]
-
-[[stations]]
 name = "Sky Radio 101 FM"
 country_code = "NL"
 stream_url = "http://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3"
 logo_url = "http://www.skyradio.nl/favicon.ico"
 tags = ["pop"]
-
-[[stations]]
-name = "NPO Klassiek"
-country_code = "NL"
-stream_url = "https://icecast.omroep.nl/radio4-bb-mp3"
-logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/NPO_Klassiek_logo.svg/1200px-NPO_Klassiek_logo.svg.png"
-tags = ["classical"]
-
-[[stations]]
-name = "All Oldies Channel"
-country_code = "NL"
-stream_url = "http://radio.alloldieschannel.com:8000/stream"
-logo_url = "https://alloldieschannel.com/wp-content/uploads/2020/01/cropped-backgroundalloldieschannel-180x180.png"
-tags = ["oldies", "pop"]
 
 [[stations]]
 name = "Radio 538"
@@ -7814,25 +5918,11 @@ logo_url = "https://www.funx.nl/apple-touch-icon.png"
 tags = ["reggae"]
 
 [[stations]]
-name = "Slam! Mixmarathon"
-country_code = "NL"
-stream_url = "http://stream.radiocorp.nl/web13_mp3"
-logo_url = "https://www.slam.nl/favicon.ico"
-tags = ["dance", "electronic"]
-
-[[stations]]
 name = "Pinguin Radio"
 country_code = "NL"
 stream_url = "http://streams.pinguinradio.com/PinguinRadio320.mp3"
 logo_url = "https://pinguinradio.com/dist/images/content/p-radio.jpg"
 tags = ["indie", "alternative"]
-
-[[stations]]
-name = "NPO Radio 5"
-country_code = "NL"
-stream_url = "http://icecast.omroep.nl/radio5-bb-mp3"
-logo_url = "http://www.radio5.nl/apple-touch-icon.png"
-tags = ["oldies", "talk"]
 
 [[stations]]
 name = "Slow Radio Gold"
@@ -7849,13 +5939,6 @@ logo_url = "https://www.jazzdeville.com/favicon/jazzdeville/apple-touch-icon.png
 tags = ["jazz", "soul", "funk"]
 
 [[stations]]
-name = "JOE"
-country_code = "NL"
-stream_url = "https://stream.joe.nl/joe/aachigh"
-logo_url = "https://static.mytuner.mobi/media/tvos_radios/pkhqkus8dmde.jpg"
-tags = ["oldies", "pop"]
-
-[[stations]]
 name = "L1 Radio"
 country_code = "NL"
 stream_url = "http://d34pj260kw1xmk.cloudfront.net/icecast/l1/radio-bb-mp3"
@@ -7870,46 +5953,11 @@ logo_url = "https://www.538.nl/icons/apple-icon-120x120.png"
 tags = ["dance", "electronic", "house"]
 
 [[stations]]
-name = "Pure Lounge Radio"
-country_code = "NL"
-stream_url = "https://mscp4.live-streams.nl:8142/lounge.ogg"
-logo_url = "https://www.pureloungeradio.com/images/Pureloungeradio-achtergrond.jpg"
-tags = ["jazz", "soul", "funk", "ambient"]
-
-[[stations]]
-name = "Arrow Classic Rock"
-country_code = "NL"
-stream_url = "http://stream.gal.io/arrow"
-logo_url = "https://www.arrow.nl/wp-content/uploads/2020/08/logo.png"
-tags = ["rock", "oldies"]
-
-[[stations]]
-name = "Soul Radio"
-country_code = "NL"
-stream_url = "https://22323.live.streamtheworld.com/SOULRADIOAAC_SC"
-logo_url = "http://www.allradio.nl/uploaded/logo/soul-radio-groot.jpg"
-tags = ["soul", "r&b"]
-
-[[stations]]
-name = "NPO 3FM"
-country_code = "NL"
-stream_url = "http://icecast.omroep.nl/3fm-bb-aac"
-logo_url = "https://www.npo3fm.nl/apple-touch-icon.png"
-tags = ["pop", "indie", "alternative"]
-
-[[stations]]
 name = "JAMM FM"
 country_code = "NL"
 stream_url = "http://stream.jammfm.nl:8221/"
 logo_url = "https://cdn-radiotime-logos.tunein.com/s122234q.png"
 tags = ["soul", "r&b", "pop"]
-
-[[stations]]
-name = "BNR Nieuwsradio"
-country_code = "NL"
-stream_url = "https://stream.bnr.nl/bnr_mp3_128_20"
-logo_url = "https://static.bnr.nl/assets/bnr-next/logo.png"
-tags = ["news", "talk", "business"]
 
 [[stations]]
 name = "Jungletrain.net"
@@ -7947,13 +5995,6 @@ logo_url = "https://upload.wikimedia.org/wikipedia/commons/7/70/Qmusic_logo.svg"
 tags = ["pop", "oldies"]
 
 [[stations]]
-name = "Baars Classic Rock"
-country_code = "NL"
-stream_url = "http://server-66.stream-server.nl:8840/"
-logo_url = "http://www.baarsclassicrock.nl/favicon.ico"
-tags = ["rock", "metal"]
-
-[[stations]]
 name = "ISKC Blues Cafe"
 country_code = "NL"
 stream_url = "http://mediaserv68.live-streams.nl:8012/BluesCafe"
@@ -7966,13 +6007,6 @@ country_code = "NL"
 stream_url = "http://28973.live.streamtheworld.com/TLPSTR16_SC"
 logo_url = "https://www.538.nl/favicon.ico"
 tags = ["party", "pop", "dance"]
-
-[[stations]]
-name = "Dance Radio Amsterdam"
-country_code = "NL"
-stream_url = "http://stream.danceradio.nl:9920/"
-logo_url = "https://danceradio.nl/wp-content/uploads/2023/10/cropped-faviconpng-180x180.png"
-tags = ["dance", "house", "electronic", "soul", "funk"]
 
 [[stations]]
 name = "KINK 80s"
@@ -7996,25 +6030,11 @@ logo_url = "https://www.funx.nl/apple-touch-icon.png"
 tags = ["world", "latin", "hip-hop", "urban"]
 
 [[stations]]
-name = "NPO FunX NL"
-country_code = "NL"
-stream_url = "http://icecast.omroep.nl/funx-bb-mp3"
-logo_url = "https://www.funx.nl/apple-touch-icon.png"
-tags = ["hip-hop", "urban", "r&b"]
-
-[[stations]]
 name = "Feel Good Radio 107.6 FM"
 country_code = "NL"
 stream_url = "http://live.feelgoodradio.eu:8344/stream"
 logo_url = "https://feelgoodradio.nl/favicon.ico"
 tags = ["oldies", "pop", "soul"]
-
-[[stations]]
-name = "Q Music Nederland"
-country_code = "NL"
-stream_url = "https://stream.qmusic.nl/qmusic/mp3"
-logo_url = "https://qmusic.nl/favicon.ico"
-tags = ["pop", "rock"]
 
 [[stations]]
 name = "Celtcast"
@@ -8024,25 +6044,11 @@ logo_url = "https://celtcast.com/wp-content/uploads/2017/04/cropped-CeltCast-Com
 tags = ["folk", "world", "celtic"]
 
 [[stations]]
-name = "NPO Radio 2 Soul & Jazz"
-country_code = "NL"
-stream_url = "http://icecast.omroep.nl/radio6-bb-mp3"
-logo_url = "https://www.nporadio2.nl/soulenjazz/apple-touch-icon.png"
-tags = ["jazz", "soul", "r&b"]
-
-[[stations]]
 name = "KINK Classics"
 country_code = "NL"
 stream_url = "http://22613.live.streamtheworld.com/KINK_DNA_SC"
 logo_url = "https://kink.nl/static/apple-touch-icon.png"
 tags = ["alternative", "rock", "oldies"]
-
-[[stations]]
-name = "Joe 70s & 80s"
-country_code = "NL"
-stream_url = "https://stream.joe.nl/joe/aachigh"
-logo_url = "https://joe.nl/favicon.ico"
-tags = ["oldies", "pop", "rock"]
 
 [[stations]]
 name = "Radio Mirchi Hindi"
@@ -8101,13 +6107,6 @@ logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/02/tamil-fm-894.j
 tags = ["tamil", "pop", "world"]
 
 [[stations]]
-name = "Tamil Sun FM"
-country_code = "IN"
-stream_url = "https://usa2.fastcast4u.com/proxy/tamilsun?mp=/;"
-logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/12/tamil-sun-fm-1.jpg"
-tags = ["tamil", "world"]
-
-[[stations]]
 name = "Bombay Beats Radio"
 country_code = "IN"
 stream_url = "https://strmreg.1.fm/bombaybeats_mobile_mp3"
@@ -8141,13 +6140,6 @@ country_code = "IN"
 stream_url = "http://us9.streamingpulse.com:7058/stream"
 logo_url = "http://www.radioafsana.com/wp-content/uploads/2019/07/cropped-ra-header-1024x239.jpg"
 tags = ["hindi", "pop"]
-
-[[stations]]
-name = "AR Rahman Radio"
-country_code = "IN"
-stream_url = "https://psrlive2.listenon.in/arr?ah=0e81749e37789e5fb8c290926ce87e3f"
-logo_url = "https://southradios.com/assets/images/logo/logo90.webp"
-tags = ["tamil", "bollywood", "world"]
 
 [[stations]]
 name = "Fever 104 FM"
@@ -8220,13 +6212,6 @@ logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/08/radio-ashiqana
 tags = ["world", "pop", "culture"]
 
 [[stations]]
-name = "AIR Telugu"
-country_code = "IN"
-stream_url = "https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/playlist.m3u8"
-logo_url = "https://radiosindia.com/images/air.jpg"
-tags = ["public radio", "world", "pop"]
-
-[[stations]]
 name = "Radio Manpasand"
 country_code = "IN"
 stream_url = "https://c5.radioboss.fm:18125/stream"
@@ -8276,13 +6261,6 @@ logo_url = "http://www.dancemusic.ro/dancemusic-favicon.png"
 tags = ["house", "electronic", "dance"]
 
 [[stations]]
-name = "Europa FM"
-country_code = "RO"
-stream_url = "http://astreaming.europafm.ro:8000/europafm_aacp48k"
-logo_url = "http://www.europafm.ro/favicon.ico"
-tags = ["pop", "news", "talk"]
-
-[[stations]]
 name = "Play 90's"
 country_code = "RO"
 stream_url = "http://live.playradio.org:9090/90HD"
@@ -8295,20 +6273,6 @@ country_code = "RO"
 stream_url = "http://a.fmradiomanele.ro:8054/;"
 logo_url = "https://fmradiomanele.ro/favicon.ico"
 tags = ["folk", "world"]
-
-[[stations]]
-name = "Radio Guerrilla"
-country_code = "RO"
-stream_url = "http://live.guerrillaradio.ro:8010/guerrilla.aac"
-logo_url = "http://guerrillaradio.ro/images/logo.png"
-tags = ["rock", "indie", "alternative"]
-
-[[stations]]
-name = "Radio Zu"
-country_code = "RO"
-stream_url = "http://zuicast.digitalag.ro:9420/zu"
-logo_url = "https://radiozu.ro/favicon-96x96.png"
-tags = ["pop", "dance"]
 
 [[stations]]
 name = "Smart FM"
@@ -8337,13 +6301,6 @@ country_code = "RO"
 stream_url = "https://live.magicfm.ro/magic.party.mix"
 logo_url = "https://media.bauerradio.com/image/upload/c_crop,g_custom/v1606492636/brand_manager/stations/agepcxvlmp6fbmslx6tt.jpg"
 tags = ["dance", "pop", "oldies"]
-
-[[stations]]
-name = "Dark Edge Radio"
-country_code = "RO"
-stream_url = "http://stream.darkedge.ro:8000/"
-logo_url = "http://darkedge.ro/favicon-32x32.png"
-tags = ["alternative", "rock"]
 
 [[stations]]
 name = "Play Radio 91.6"
@@ -8430,20 +6387,6 @@ logo_url = "https://www.loveradio.com.ph/apple-touch-icon.png"
 tags = ["pop"]
 
 [[stations]]
-name = "90s Pinoy Alternative"
-country_code = "PH"
-stream_url = "https://cast3.my-control-panel.com/proxy/ronald/stream"
-logo_url = "https://img1.wsimg.com/isteam/ip/2bffade2-3155-4bd7-8193-8155e093f550/9PA%20Small%20Logo.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:95"
-tags = ["alternative", "indie"]
-
-[[stations]]
-name = "Love Radio Cebu"
-country_code = "PH"
-stream_url = "http://loveradiocebu.radioca.st:8033/stream"
-logo_url = "https://www.loveradio.com.ph/apple-touch-icon.png"
-tags = ["pop"]
-
-[[stations]]
 name = "MOR 101.9 FM"
 country_code = "PH"
 stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/MORFM_S01.mp3"
@@ -8456,13 +6399,6 @@ country_code = "PH"
 stream_url = "http://s7.viastreaming.net:8390/"
 logo_url = "https://boracaybeachradio.com/favicon.ico"
 tags = ["pop", "ambient"]
-
-[[stations]]
-name = "Easy Rock Cebu"
-country_code = "PH"
-stream_url = "http://easyrockcebu.radioca.st:8219/stream"
-logo_url = "https://www.easyrock.com.ph/apple-touch-icon.png"
-tags = ["rock"]
 
 [[stations]]
 name = "Atlantis Radio"
@@ -8505,13 +6441,6 @@ country_code = "TR"
 stream_url = "http://radyo.yayin.com.tr:4108/stream"
 logo_url = "https://radio5.com.tr/wp-content/plugins/under-construction-page/themes/images/favicon.png"
 tags = ["pop", "oldies"]
-
-[[stations]]
-name = "Alem FM"
-country_code = "TR"
-stream_url = "http://turkmedya.radyotvonline.com/turkmedya/alemfm.stream/playlist.m3u8"
-logo_url = "https://www.alemfm.com/assets/img/alemfm-apple-touch-icon.png"
-tags = ["pop"]
 
 [[stations]]
 name = "Dinamo.fm Sleep"
@@ -8577,25 +6506,11 @@ logo_url = "https://www.dinamo.fm/favicons/dinamo-disco-favicon.jpg"
 tags = ["electronic", "dance", "oldies"]
 
 [[stations]]
-name = "Baba Radyo"
-country_code = "TR"
-stream_url = "http://officialbabaradyo.radyotvonline.net/babaofficial"
-logo_url = "https://www.babaradyo.com/wp-content/uploads/2025/01/cropped-baba-radyo-23-180x180.png"
-tags = ["oldies", "pop"]
-
-[[stations]]
 name = "Vav Radyo"
 country_code = "TR"
 stream_url = "https://trkvz-radyolar.ercdn.net/radyovav/playlist.m3u8"
 logo_url = "https://i.tmgrup.com.tr/vavradyo/site/v2/c/i/apple-touch-icon-new-120x120.png"
 tags = ["pop"]
-
-[[stations]]
-name = "TRT Radyo Haber"
-country_code = "TR"
-stream_url = "https://radio-trtradyohaber.live.trt.com.tr/master.m3u8"
-logo_url = "https://cdn-i.pr.trt.com.tr/trtdinle//w410/h315/q70/12530424_0-0-2048-1536.jpeg"
-tags = ["news", "talk", "public radio"]
 
 [[stations]]
 name = "TRT Radyo Kurd\u00ee"
@@ -8864,13 +6779,6 @@ logo_url = "https://tokopemancar99.blogspot.com/2022/09/live-streaming-alternati
 tags = ["jazz", "pop", "alternative"]
 
 [[stations]]
-name = "RRI Pro 3"
-country_code = "ID"
-stream_url = "https://stream-node0.rri.co.id/streaming/14/9014/kbrn.mp3"
-logo_url = "https://www.rri.co.id/assets/v2/img/pro3.png"
-tags = ["news", "culture", "world"]
-
-[[stations]]
 name = "Paramuda Radio Bandung"
 country_code = "ID"
 stream_url = "https://i.klikhost.com/8332/;"
@@ -8934,13 +6842,6 @@ logo_url = "https://mixradio.co/icon?b8748d2f62517688"
 tags = ["reggae", "dance", "pop"]
 
 [[stations]]
-name = "LOS40 Colombia"
-country_code = "CO"
-stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_COLOMBIAAAC.aac"
-logo_url = "https://cdn-profiles.tunein.com/p1306541/images/logod.png"
-tags = ["pop", "dance", "latin"]
-
-[[stations]]
 name = "Radioacktiva Bogot\u00e1"
 country_code = "CO"
 stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ACTIVAAAC.aac"
@@ -8990,13 +6891,6 @@ logo_url = "https://static-media.streema.com/media/cache/ba/61/ba61da8fd3b645ffc
 tags = ["oldies", "pop"]
 
 [[stations]]
-name = "Radio Tiempo Barranquilla"
-country_code = "CO"
-stream_url = "https://master.letio.com/io/?gs=9100&type=master.m3u8"
-logo_url = "https://www.radiotiempo.co/icon?b8748d2f62517688"
-tags = ["news", "talk"]
-
-[[stations]]
 name = "Madrigal Stereo"
 country_code = "CO"
 stream_url = "https://streaming.radiosenlinea.com.ar:10983/stream"
@@ -9039,32 +6933,11 @@ logo_url = "http://img.sedoparking.com/templates/logos/sedo_logo.png"
 tags = ["electronic", "dance", "trance", "90s"]
 
 [[stations]]
-name = "Bel RTL"
-country_code = "BE"
-stream_url = "http://belrtl.ice.infomaniak.ch/belrtl-mp3-192.mp3"
-logo_url = "https://www.rtl.be/favicon.ico"
-tags = ["pop"]
-
-[[stations]]
 name = "Tomorrowland One World Radio"
 country_code = "BE"
 stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.aac"
 logo_url = "https://www.tomorrowland.com/home/apple-touch-icon.png"
 tags = ["electronic", "dance", "house"]
-
-[[stations]]
-name = "Instrumentals Forever"
-country_code = "BE"
-stream_url = "http://quincy.torontocast.com:1910/stream"
-logo_url = "https://instrumentalsforever.eu/favicon.ico"
-tags = ["jazz", "ambient", "oldies"]
-
-[[stations]]
-name = "The Funky Channel"
-country_code = "BE"
-stream_url = "http://cast3.my-control-panel.com:8170/stream"
-logo_url = "https://thefunkychannel.com/wp-content/uploads/2022/06/TFC-favicon-1.png"
-tags = ["funk", "soul", "r&b", "disco"]
 
 [[stations]]
 name = "MyNoise Pure Nature"
@@ -9093,13 +6966,6 @@ country_code = "BE"
 stream_url = "http://str.topradio.be/topradio.mp3"
 logo_url = "https://www.topradio.be/favicons/favicon-96x96.png"
 tags = ["pop"]
-
-[[stations]]
-name = "Joe 80s & 90s"
-country_code = "BE"
-stream_url = "https://icecast-qmusicbe-cdp.triple-it.nl/joe_80s_90s.mp3"
-logo_url = "https://static.mytuner.mobi/media/tvos_radios/x7fzbddfxjqy.jpg"
-tags = ["oldies", "pop"]
 
 [[stations]]
 name = "Qmusic Belgium"
@@ -9172,32 +7038,11 @@ logo_url = "https://www.digitalfm.cl/favicon.ico"
 tags = ["pop"]
 
 [[stations]]
-name = "Rock and Pop"
-country_code = "CL"
-stream_url = "http://24443.live.streamtheworld.com:3690/ROCK_AND_POP_SC"
-logo_url = "https://www.rockandpop.cl/favicon.ico"
-tags = ["rock", "pop"]
-
-[[stations]]
 name = "OK Radio"
 country_code = "RS"
 stream_url = "https://sslstream.okradio.net/;?type=http&nocache=8804"
 logo_url = "https://www.okradio.net/wp-content/uploads/2021/11/ok-logo-m.png"
 tags = ["pop", "rock"]
-
-[[stations]]
-name = "Naxi Radio"
-country_code = "RS"
-stream_url = "http://naxi128.streaming.rs:9150/"
-logo_url = "http://www.naxi.rs/images/naxi_favicon.ico"
-tags = ["world", "folk", "pop"]
-
-[[stations]]
-name = "Radio Nostalgija"
-country_code = "RS"
-stream_url = "http://nostalgie128.streaming.rs:9250/"
-logo_url = "http://www.nostalgija.rs/favicon.ico"
-tags = ["oldies", "pop"]
 
 [[stations]]
 name = "Radio Studio B"
@@ -9212,13 +7057,6 @@ country_code = "RS"
 stream_url = "https://radio3-64ssl.streaming.rs:9212/;*.mp3"
 logo_url = "https://www.radioinbeograd.rs/favicon.ico"
 tags = ["folk", "pop", "world"]
-
-[[stations]]
-name = "Pink Radio"
-country_code = "RS"
-stream_url = "http://edge1.pink.rs:1935/radiopinkfta/pink61.smil/playlist.m3u8"
-logo_url = "http://www.pinkradio.rs/favicon.ico"
-tags = ["folk", "pop"]
 
 [[stations]]
 name = "Antena Krusevac"
@@ -9361,13 +7199,6 @@ logo_url = "https://media.metacast.eu/pictures/10_2015/OdriLYWpbHJqKDAcGCMv-7384
 tags = ["pop", "dance"]
 
 [[stations]]
-name = "BG Radio"
-country_code = "BG"
-stream_url = "http://stream.radioreklama.bg/bgradio128"
-logo_url = "http://bgradio.net/theme_assets/bgradio/images/favicon.png"
-tags = ["pop"]
-
-[[stations]]
 name = "Radio 1 - Classic Hits"
 country_code = "BG"
 stream_url = "http://stream.radioreklama.bg/radio164"
@@ -9375,32 +7206,11 @@ logo_url = "http://www.radio1.bg/theme_assets/radio1/images/favicon.png"
 tags = ["pop", "oldies"]
 
 [[stations]]
-name = "BG Estrada"
-country_code = "BG"
-stream_url = "https://play.global.audio/bgestrada"
-logo_url = "https://www.radioplay.bg/assets/logos/bgestrada.png"
-tags = ["pop"]
-
-[[stations]]
 name = "Maya Varna"
 country_code = "BG"
 stream_url = "http://rnmediagroup.com:10000/;"
 logo_url = "http://radiomaia.com/wp-content/themes/radio/images/favicons/apple-touch-icon-120x120.png"
 tags = ["pop", "dance"]
-
-[[stations]]
-name = "Tangra Mega Rock"
-country_code = "BG"
-stream_url = "http://stream-bg-01.radiotangra.com:8000/Tangra-high"
-logo_url = "https://radiotangra.com/wp-content/uploads/2023/02/Vector-Smart-Object.svg"
-tags = ["rock", "metal"]
-
-[[stations]]
-name = "BadRock Hard & Heavy"
-country_code = "BG"
-stream_url = "https://play-radio0.jump.bg:7049/live"
-logo_url = "https://www.badrockradio.net/wp-content/uploads/2024/06/960x0-100x100.webp"
-tags = ["rock", "metal"]
 
 [[stations]]
 name = "Vanilla"
@@ -9417,25 +7227,11 @@ logo_url = "http://www.liveonlineradio.net/wp-content/uploads/2016/11/Magic-FM-B
 tags = ["pop"]
 
 [[stations]]
-name = "Katra FM"
-country_code = "BG"
-stream_url = "http://www.katrafm.com:8000/live"
-logo_url = "http://www.katrafm.com/favicon.ico"
-tags = ["pop"]
-
-[[stations]]
 name = "City HipHop R&B"
 country_code = "BG"
 stream_url = "https://play.global.audio/cityrabhi.aac"
 logo_url = "https://www.radioplay.bg/assets/logos/cityrab.png"
 tags = ["hip-hop", "r&b"]
-
-[[stations]]
-name = "Radio 1 Rock"
-country_code = "BG"
-stream_url = "http://play.global.audio/radio1rockhi.aac"
-logo_url = "https://www.radio1rock.bg/theme_assets/radio1rock/images/logo.png"
-tags = ["rock"]
 
 [[stations]]
 name = "Radio Jega"
@@ -9515,13 +7311,6 @@ logo_url = "https://radia.cz/media/images/0001/01/thumb_25_images_w200.png"
 tags = ["culture"]
 
 [[stations]]
-name = "Dance Radio"
-country_code = "CZ"
-stream_url = "http://ice.actve.net/dance-radio320.mp3"
-logo_url = "https://www.danceradio.cz/favicons/apple-touch-icon.png"
-tags = ["dance", "electronic"]
-
-[[stations]]
 name = "Metalom\u00e1nie"
 country_code = "CZ"
 stream_url = "http://ice.abradio.cz/metalomanie128.mp3"
@@ -9534,13 +7323,6 @@ country_code = "CZ"
 stream_url = "http://icecast5.play.cz/cro3-128.mp3"
 logo_url = "http://api.play.cz/static/radio_logo/t200/cro3.png"
 tags = ["classical", "public radio"]
-
-[[stations]]
-name = "Frekvence 1"
-country_code = "CZ"
-stream_url = "http://ice.actve.net/fm-frekvence1-aac"
-logo_url = "https://css.actve.net/frekvence1/img/favicons/mstile-150x150.png?v=jw63ApEelG"
-tags = ["pop"]
 
 [[stations]]
 name = "Radio Depeche Mode"
@@ -9627,13 +7409,6 @@ logo_url = "https://radia.cz/favicon.ico"
 tags = ["dance", "house", "trance"]
 
 [[stations]]
-name = "Color Music Radio"
-country_code = "CZ"
-stream_url = "http://sc.ipip.cz:8206/;stream"
-logo_url = "https://radiocolor.cz/image/color_logo500x500.jpg"
-tags = ["hip-hop", "r&b", "soul"]
-
-[[stations]]
 name = "R\u00e1dio Bonton"
 country_code = "CZ"
 stream_url = "http://ice.actve.net/fm-bonton-128"
@@ -9683,13 +7458,6 @@ logo_url = "https://static.wikia.nocookie.net/tvpedia-peru/images/2/2a/Radio_Pan
 tags = ["rock", "oldies", "alternative"]
 
 [[stations]]
-name = "La Noventera"
-country_code = "PE"
-stream_url = "https://host.gometri.com/proxy/lanoventera/stream/"
-logo_url = "https://static-media.streema.com/media/cache/8b/d3/8bd399b199aaed5951244fd124dab993.jpg"
-tags = ["rock", "pop", "oldies"]
-
-[[stations]]
 name = "Radio Panamericana"
 country_code = "PE"
 stream_url = "https://mdstrm.com/audio/6598b62dded1380470f4e539/icecast.audio"
@@ -9716,13 +7484,6 @@ country_code = "TW"
 stream_url = "https://flv.ccdntech.com/live/_definst_/mp4:vod117_Live/live1/playlist.m3u8"
 logo_url = "https://www.csbc.com.tw/wp-content/uploads/2019/12/cropped-6044e1b77e91b4fe89b435-2-180x180.png"
 tags = ["public radio"]
-
-[[stations]]
-name = "Bosveld Stereo"
-country_code = "ZA"
-stream_url = "http://capeant.antfarm.co.za:8000/Bosveld"
-logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/RRjd3up6aH.png"
-tags = ["pop", "rock"]
 
 [[stations]]
 name = "Lekker FM"
@@ -9758,13 +7519,6 @@ country_code = "JP"
 stream_url = "https://listen.moe/stream"
 logo_url = "https://listen.moe/favicon.ico"
 tags = ["pop", "electronic"]
-
-[[stations]]
-name = "Gensokyo Radio"
-country_code = "JP"
-stream_url = "https://stream.gensokyoradio.net/3"
-logo_url = "https://gensokyoradio.net/favicon.ico"
-tags = ["electronic", "ambient"]
 
 [[stations]]
 name = "Shonan Beach FM 78.9"
@@ -9900,13 +7654,6 @@ logo_url = "https://www.kan.org.il/favicon/apple-touch-icon.png"
 tags = ["news", "talk", "public radio"]
 
 [[stations]]
-name = "Del Sol FM"
-country_code = "UY"
-stream_url = "http://radio.dl.uy:9950/radio"
-logo_url = "https://cdn-profiles.tunein.com/s13953/images/bannerx.jpg?t=636203379790000000"
-tags = ["pop", "rock", "alternative"]
-
-[[stations]]
 name = "CX12 Radio Oriental"
 country_code = "UY"
 stream_url = "http://radiolatina.live:7906/1"
@@ -9942,13 +7689,6 @@ logo_url = "https://radioelite997.com/favicon.ico"
 tags = ["pop", "news"]
 
 [[stations]]
-name = "Radio HCJB German"
-country_code = "EC"
-stream_url = "http://segenswelle.de:8000/hcjb"
-logo_url = "https://andenstimme.org/wp-content/uploads/cropped-favicon-1-180x180.gif"
-tags = ["culture", "world"]
-
-[[stations]]
 name = "Radio 11Q 104.9 FM"
 country_code = "EC"
 stream_url = "https://streamingecuador.net:8012/radio11q"
@@ -9977,20 +7717,6 @@ logo_url = "https://rtvbn.com/storage/settings/res_1720552469_favicon.png"
 tags = ["folk", "world"]
 
 [[stations]]
-name = "BH Radio 1"
-country_code = "BA"
-stream_url = "https://webtvstream.bhtelecom.ba/bh_radio1.m3u8"
-logo_url = "https://bhrt.ba/favicon.ico"
-tags = ["pop", "news", "talk"]
-
-[[stations]]
-name = "Val 202"
-country_code = "SI"
-stream_url = "http://mp3.rtvslo.si/val202"
-logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/raval202/icons/apple-touch-icon.png"
-tags = ["pop", "public radio"]
-
-[[stations]]
 name = "Radio 1"
 country_code = "SI"
 stream_url = "http://live.radio.si/Radio1"
@@ -10010,27 +7736,6 @@ country_code = "SI"
 stream_url = "http://stream02.exit.si:8000/80?"
 logo_url = "https://www.radiocapris.si/data/images/favicon/favicon-32x32.png"
 tags = ["pop", "oldies"]
-
-[[stations]]
-name = "Radio Prvi"
-country_code = "SI"
-stream_url = "http://mp3.rtvslo.si/ra1"
-logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/raprvi/icons/apple-touch-icon.png"
-tags = ["news", "public radio"]
-
-[[stations]]
-name = "Hitradio Center"
-country_code = "SI"
-stream_url = "http://stream3.radiocenter.si:8000/center"
-logo_url = "http://radiocenter.si/images/icons/icon_192x192.png"
-tags = ["pop", "public radio"]
-
-[[stations]]
-name = "Radio Si"
-country_code = "SI"
-stream_url = "http://mp3.rtvslo.si/rsi"
-logo_url = "http://img.rtvslo.si/_static/novi/bootstrap/public/themes/rasi/icons/apple-touch-icon.png"
-tags = ["pop", "world", "public radio"]
 
 [[stations]]
 name = "Radio Krka"
@@ -10054,34 +7759,6 @@ logo_url = "https://enter.radio/images/icons/icon_192x192.png"
 tags = ["house", "electronic", "dance"]
 
 [[stations]]
-name = "Radio Capodistria"
-country_code = "SI"
-stream_url = "http://mp3.rtvslo.si/capo"
-logo_url = "http://cdn-radiotime-logos.tunein.com/s16010q.png"
-tags = ["pop", "public radio", "world"]
-
-[[stations]]
-name = "Radio Koper"
-country_code = "SI"
-stream_url = "http://mp3.rtvslo.si/rakp"
-logo_url = "http://img.rtvslo.si/_static/r180/rakp/icons/favicon-194x194.png"
-tags = ["pop", "public radio"]
-
-[[stations]]
-name = "Radio Maribor"
-country_code = "SI"
-stream_url = "https://mp3.rtvslo.si/rmb"
-logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/ramb/icons/favicon-32x32.png"
-tags = ["pop", "public radio"]
-
-[[stations]]
-name = "Ars"
-country_code = "SI"
-stream_url = "http://mp3.rtvslo.si/ars"
-logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/raars/icons/apple-touch-icon.png"
-tags = ["classical", "culture", "public radio"]
-
-[[stations]]
 name = "Radio Capris SLO"
 country_code = "SI"
 stream_url = "http://stream02.exit.si:8000/SLO?"
@@ -10089,25 +7766,11 @@ logo_url = "https://www.radiocapris.si/data/images/favicon/favicon-32x32.png"
 tags = ["pop", "talk"]
 
 [[stations]]
-name = "Radio BOB"
-country_code = "SI"
-stream_url = "http://live6.infonetmedia.si/Europa05"
-logo_url = "https://media.radiobob.si/ico/32.png"
-tags = ["rock"]
-
-[[stations]]
 name = "Radio Nula Beatz"
 country_code = "SI"
 stream_url = "https://strm.radionula.com/lounge"
 logo_url = "https://cdn-radiotime-logos.tunein.com/s111827g.png"
 tags = ["electronic", "house", "ambient"]
-
-[[stations]]
-name = "VAL 202"
-country_code = "SI"
-stream_url = "http://mp3.rtvslo.si:8000/val202"
-logo_url = "https://img.rtvslo.si/_static/novi/bootstrap/public/themes/raval202/icons/apple-touch-icon.png"
-tags = ["pop", "talk"]
 
 [[stations]]
 name = "Quran Kareem"
@@ -10173,25 +7836,11 @@ logo_url = "http://retrofm.lv/view/site/favicons/apple-touch-icon.png"
 tags = ["pop", "oldies"]
 
 [[stations]]
-name = "Latvijas Radio 2"
-country_code = "LV"
-stream_url = "http://lr2mp1.latvijasradio.lv:8002/;"
-logo_url = "http://lr2.lsm.lv/favicon/lr2-favicon-180x180.png"
-tags = ["pop", "public radio"]
-
-[[stations]]
 name = "European Hit Radio - SuperHits"
 country_code = "LV"
 stream_url = "http://stream.europeanhitradio.com:8000/Stream_21.aac"
 logo_url = "http://www.ehrhiti.lv/favicons/apple-touch-icon-120x120.png"
 tags = ["pop", "dance"]
-
-[[stations]]
-name = "Latvijas Radio 1"
-country_code = "LV"
-stream_url = "http://lr1mp1.latvijasradio.lv:8012/;"
-logo_url = "http://lr1.lsm.lv/favicon/lr1-favicon-180x180.png"
-tags = ["news", "talk", "public radio"]
 
 [[stations]]
 name = "\u0410\u0432\u0442\u043e\u0440\u0430\u0434\u0438\u043e \u041b\u0430\u0442\u0432\u0438\u044f"
@@ -10220,13 +7869,6 @@ country_code = "EE"
 stream_url = "https://shoutcast.finestfm.fi/stream/1/:80/;stream"
 logo_url = "https://finestfm.fi/upload/623c699818c312.68089185.ico"
 tags = ["pop"]
-
-[[stations]]
-name = "Retro FM Estonia"
-country_code = "EE"
-stream_url = "https://edge02.cdn.bitflip.ee:8888/RETRO?_i=258f436b"
-logo_url = "https://sky.ee/favicon.ico"
-tags = ["oldies"]
 
 [[stations]]
 name = "Sky Plus DnB"
@@ -10278,13 +7920,6 @@ logo_url = "http://www.ziniuradijas.lt/favicon/mstile-70x70.png"
 tags = ["news", "talk"]
 
 [[stations]]
-name = "Laluna"
-country_code = "LT"
-stream_url = "http://radio.m-1.fm/laluna/mp3"
-logo_url = "http://laluna.lt/favicon.ico"
-tags = ["pop"]
-
-[[stations]]
 name = "Relax FM Lietuva"
 country_code = "LT"
 stream_url = "https://stream1.relaxfm.lt/relaxfm128.mp3"
@@ -10318,13 +7953,6 @@ country_code = "BY"
 stream_url = "http://live.humorfm.by:8000/veseloeradio"
 logo_url = "http://humorfm.by/apple-touch-icon.png"
 tags = ["comedy", "pop"]
-
-[[stations]]
-name = "\u0420\u0430\u0434\u0438\u0443\u0441FM"
-country_code = "BY"
-stream_url = "https://stream2.datacenter.by/radiusfm_main"
-logo_url = "https://radiusfm.by/favicon.ico"
-tags = ["pop"]
 
 [[stations]]
 name = "\u0420\u0430\u0434\u044b\u0451 Relax"
@@ -10376,20 +8004,6 @@ logo_url = "https://firebasestorage.googleapis.com/v0/b/unistar-7e64d.appspot.co
 tags = ["dance", "pop"]
 
 [[stations]]
-name = "\u041f\u0435\u0440\u0448\u044b \u041d\u0430\u0446\u044b\u044f\u043d\u0430\u043b\u044c\u043d\u044b \u043a\u0430\u043d\u0430\u043b \u0411\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u0433\u0430 \u0440\u0430\u0434\u044b\u0451"
-country_code = "BY"
-stream_url = "https://stream2.datacenter.by/1kanal"
-logo_url = "https://static.tildacdn.com/tild3461-6633-4430-a264-373430336431/belorusskoe-radio-kv.jpg"
-tags = ["news", "public radio"]
-
-[[stations]]
-name = "\u0420\u0430\u0434\u0438\u043e \u041a\u0430\u043d\u0430\u043b \u041a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u041c\u0438\u043d\u0441\u043a 102.9 FM"
-country_code = "BY"
-stream_url = "https://stream2.datacenter.by/kultura"
-logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250120_144809784.jpg?alt=media&token=ff0e59d6-9c27-4e09-a0aa-d8fe39ffde65"
-tags = ["culture", "news", "talk"]
-
-[[stations]]
 name = "\u041b\u0435\u0433\u0435\u043d\u0434\u044b \u0424\u041c \u041c\u0438\u043d\u0441\u043a 94.1 FM"
 country_code = "BY"
 stream_url = "http://live.legendy.by:8000/legendyfm"
@@ -10397,39 +8011,11 @@ logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspo
 tags = ["oldies", "pop"]
 
 [[stations]]
-name = "RTHK Radio 1"
-country_code = "HK"
-stream_url = "https://rthkaudio1-lh.akamaihd.net/i/radio1_1@355864/index_56_a-p.m3u8"
-logo_url = "https://cdn.webrad.io/images/logos/radios-hk/rthk-1.png"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
-name = "RTHK Radio 5"
-country_code = "HK"
-stream_url = "https://rthkaudio5-lh.akamaihd.net/i/radio5_1@355868/index_56_a-p.m3u8"
-logo_url = "https://static.wikia.nocookie.net/hkradio/images/f/f8/RTHKRadio5_logo.gif/revision/latest?cb=20131022130417&path-prefix=zh"
-tags = ["news", "talk", "public radio", "culture"]
-
-[[stations]]
-name = "RTHK Radio 4"
-country_code = "HK"
-stream_url = "https://rthkaudio4-lh.akamaihd.net/i/radio4_1@355867/master.m3u8"
-logo_url = "https://www.rthk.hk/img/apple-icon-114x114.png"
-tags = ["music", "world", "public radio"]
-
-[[stations]]
 name = "RequestRadio \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e0a\u0e35\u0e27\u0e34\u0e15"
 country_code = "TH"
 stream_url = "https://cast.requestradio.in.th:830/stream/"
 logo_url = "https://www.requestradio.in.th/favicon.ico"
 tags = ["country", "pop"]
-
-[[stations]]
-name = "Cool Fahrenheit"
-country_code = "TH"
-stream_url = "https://coolism-web.cdn.byteark.com/;stream/1"
-logo_url = "http://www.coolism.net/favicon.ico"
-tags = ["pop", "electronic"]
 
 [[stations]]
 name = "\u0e44\u0e17\u0e22\u0e25\u0e32\u0e19\u0e19\u0e32\u0e40\u0e23\u0e14\u0e34\u0e42\u0e2d FM 106.5"
@@ -10460,13 +8046,6 @@ logo_url = "https://www.requestradio.in.th/danceremix/wp-content/uploads/2016/07
 tags = ["dance", "electronic"]
 
 [[stations]]
-name = "BKK.FM"
-country_code = "TH"
-stream_url = "https://rsas.bkk.fm/radio"
-logo_url = "https://bkk.fm/images/favicons/favicon-32x32.png"
-tags = ["alternative", "rock", "electronic"]
-
-[[stations]]
 name = "106 Family News Radio"
 country_code = "TH"
 stream_url = "https://radio11.plathong.net/7138/;stream.mp3"
@@ -10479,13 +8058,6 @@ country_code = "TH"
 stream_url = "http://fm94.tv5.co.th:8000/fm94ch3"
 logo_url = "https://static-media.streema.com/media/cache/83/2c/832c5cf81ed3452bcbd15ebcc2564e5c.jpg"
 tags = ["pop"]
-
-[[stations]]
-name = "Hiru FM"
-country_code = "LK"
-stream_url = "https://radio.lotustechnologieslk.net:2020/stream/hirufmgarden/stream/1/"
-logo_url = "https://image.winudf.com/v2/image1/Y29tLmhpcnVmbS5yZWRyb3NlbWVkaWFfaWNvbl8xNjA0ODM4Njk0XzAyMg/icon.webp?w=280&fakeurl=1&type=.png"
-tags = ["talk", "news", "pop"]
 
 [[stations]]
 name = "Lakviru Radio"
@@ -10563,13 +8135,6 @@ country_code = "MD"
 stream_url = "https://audio.jurnalfm.md/hq"
 logo_url = "https://jurnalfm.md/wp-content/uploads/2020/08/JFM-LOGO.png"
 tags = ["pop", "news", "talk"]
-
-[[stations]]
-name = "Jawhara FM"
-country_code = "TN"
-stream_url = "http://streaming2.toutech.net:8000/jawharafm"
-logo_url = "https://www.jawharafm.net/ar/static/fr/image/gif/favicon.gif"
-tags = ["world", "pop"]
 
 [[stations]]
 name = "Diwan FM"
@@ -10915,13 +8480,6 @@ logo_url = "http://www.24sports.com.cy/listen_live/sporfm_logo.svg"
 tags = ["sport", "talk"]
 
 [[stations]]
-name = "Rock FM Cyprus"
-country_code = "CY"
-stream_url = "http://live3.istoikona.net:8278/;"
-logo_url = "http://img1.wsimg.com/isteam/ip/23e625b3-9829-4f54-a786-73978949b161/rock%20fm%20logo%20clean%20b.png/:/rs=w:114,h:114,m"
-tags = ["rock"]
-
-[[stations]]
 name = "Radio Svetigora"
 country_code = "ME"
 stream_url = "http://svetigoralive.com:8879/;"
@@ -10969,13 +8527,6 @@ country_code = "EG"
 stream_url = "http://nrjstreaming.ahmed-melege.com/nrjegypt"
 logo_url = "https://nrj.com/img/NRJ_EGYPT_140.jpg"
 tags = ["pop", "dance"]
-
-[[stations]]
-name = "Alpha Boys School Radio"
-country_code = "JM"
-stream_url = "http://alphaboys-live.streamguys1.com/alphaboys.mp3"
-logo_url = "https://static.wixstatic.com/media/a09246_33fe4aef6e5f4f17b605a8d8645ff015%7emv2.png/v1/fill/w_32%2ch_32%2clg_1%2cusm_0.66_1.00_0.01/a09246_33fe4aef6e5f4f17b605a8d8645ff015%7emv2.png"
-tags = ["jazz", "reggae", "ska"]
 
 [[stations]]
 name = "Ghetto Vibes Radio"
@@ -11076,13 +8627,6 @@ logo_url = "https://sf.ex-cdn.com/vovgiaothong.vn/v0.1.1/templates/themes/images
 tags = ["news", "talk", "traffic"]
 
 [[stations]]
-name = "Anti Radio"
-country_code = "AZ"
-stream_url = "https://stream.antiradio.net/radio/8000/mp3"
-logo_url = "https://antiradio.net/wp-content/uploads/2024/04/cropped-favicon-180x180.png"
-tags = ["indie", "pop", "rock", "alternative", "electronic"]
-
-[[stations]]
 name = "Xezer FM"
 country_code = "AZ"
 stream_url = "https://s40.myradiostream.com/:22546/listen.mp3?"
@@ -11118,25 +8662,11 @@ logo_url = "https://www.ipower.com/images/icons/apple-touch-icons/apple-touch-ic
 tags = ["world", "reggae", "dance"]
 
 [[stations]]
-name = "Generation Dance Radio"
-country_code = "LU"
-stream_url = "http://generationdance.lu/radio/8030/hd"
-logo_url = "https://generation.dance/logo_500x500.png"
-tags = ["dance", "house", "electronic", "trance", "edm"]
-
-[[stations]]
 name = "RTL Radio Letzebuerg"
 country_code = "LU"
 stream_url = "http://sc-rtllive.newmedia.lu/"
 logo_url = "http://www.rtl.lu/assets/images/favicon-rtllu/apple-touch-icon.png?v=202304271020"
 tags = ["pop", "talk", "news"]
-
-[[stations]]
-name = "Dakar Musique"
-country_code = "SN"
-stream_url = "http://listen.senemultimedia.net:8090/stream"
-logo_url = "https://dakarmusique.com/wp-content/uploads/2022/11/cropped-486-486-max-180x180.png"
-tags = ["world", "pop", "culture"]
 
 [[stations]]
 name = "Radio Oxy Jeunes 103.4 Pikine"
@@ -11165,20 +8695,6 @@ country_code = "IR"
 stream_url = "http://ic2326.c1261.fast-serv.com/rm128"
 logo_url = "http://www.radiomojdeh.com/favicon.ico"
 tags = ["world", "talk", "christian"]
-
-[[stations]]
-name = "Sham FM"
-country_code = "SY"
-stream_url = "https://radioshamfm.grtvstream.com:8400/;"
-logo_url = "https://sham.fm/favicon.ico"
-tags = ["pop", "talk"]
-
-[[stations]]
-name = "Asima Online Radio"
-country_code = "SY"
-stream_url = "https://asima.out.airtime.pro/asima_a"
-logo_url = "https://www.asima-online.net/wp-content/uploads/2020/06/cropped-logo-asima-180x180.png"
-tags = ["world"]
 
 [[stations]]
 name = "Syria TV"
@@ -11279,13 +8795,6 @@ logo_url = "https://cdn-radiotime-logos.tunein.com/s6417q.png"
 tags = ["pop", "top 40"]
 
 [[stations]]
-name = "Al Jazeera Arabic"
-country_code = "QA"
-stream_url = "http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/index.m3u8"
-logo_url = "https://www.aljazeera.net/favicon.ico"
-tags = ["news", "talk", "public radio"]
-
-[[stations]]
 name = "Suno Malayalam FM"
 country_code = "QA"
 stream_url = "https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917.mp3"
@@ -11319,13 +8828,6 @@ country_code = "BD"
 stream_url = "https://listen.radioking.com/radio/1743/stream/125"
 logo_url = "https://liveonlineradio.net/img/favicon_96.png"
 tags = ["pop", "rock", "oldies"]
-
-[[stations]]
-name = "Radio Okapi"
-country_code = "CD"
-stream_url = "http://rs1.radiostreamer.com:8000/;"
-logo_url = "https://www.radiookapi.net/sites/default/files/avatar-ro_normal.gif_0.png"
-tags = ["news", "talk", "world"]
 
 [[stations]]
 name = "Radio Maria DRC"
@@ -11466,13 +8968,6 @@ country_code = "AS"
 stream_url = "https://livecast1.soundofhope.org:2087/soh-live"
 logo_url = "https://www.soundofhope.org/img/logo.svg"
 tags = ["talk", "public radio", "culture"]
-
-[[stations]]
-name = "Radio Vaticana English"
-country_code = "VA"
-stream_url = "https://radio.vaticannews.va/stream-en"
-logo_url = "https://media.vaticannews.va/media/content/dam-archive/vaticannews/multimedia/2021/02/09/2021.02.09-Logo-Radio-Vaticana.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1000.563.jpeg"
-tags = ["news", "talk", "culture", "public radio"]
 
 [[stations]]
 name = "Radio Fr\u00e9quence 3 Bamako"
@@ -11699,13 +9194,6 @@ logo_url = "https://play-lh.googleusercontent.com/KTV7O5tAOis_nt9Mxy8wgxZeZJlLzy
 tags = ["world", "pop", "culture"]
 
 [[stations]]
-name = "Bassdrive"
-country_code = "US"
-stream_url = "https://ice.bassdrive.net/stream"
-logo_url = "https://play-lh.googleusercontent.com/o2PMYKKExWLkdxlQPE6tB43QPRK1Fd5fO-l-P7MaeG2AQq9p_MVYawjwXESMBF36Wg42DNrvr0Zg6vwf5398PQ"
-tags = ["drum and bass", "electronic"]
-
-[[stations]]
 name = "54house.fm"
 country_code = "DE"
 stream_url = "https://54house.fm:9013/stream"
@@ -11825,15 +9313,6 @@ logo_url = "https://sohoradio.com/wp-content/themes/sohoradio-jan-2023/build/ima
 tags = ["jazz", "soul", "house", "eclectic"]
 
 [[stations]]
-# Registry's logo_url is a Facebook CDN link (unstable/expiring) — curated here with a
-# proper hosted logo instead.
-name = "Worldwide FM"
-country_code = "GB"
-stream_url = "https://worldwide-fm.radiocult.fm/stream"
-logo_url = "https://cdn.cosmicjs.com/4687bec0-79dd-11f0-a283-b3e51e2ec7be-image.png"
-tags = ["eclectic", "world", "jazz", "electronic"]
-
-[[stations]]
 # Independent community radio station broadcasting from Bethlehem, Palestine. Registry's
 # logo_url points at a third-party site's favicon — curated here with the station's own logo
 # instead.
@@ -11858,15 +9337,6 @@ country_code = "BR"
 stream_url = "https://radioims.out.airtime.pro:8000/radioims_a"
 logo_url = "https://radiobatuta.ims.com.br/images/image-seo.jpg"
 tags = ["mpb", "brazilian"]
-
-[[stations]]
-# Independent cultural station from São Paulo, Brazil. Not in the bundled registry snapshot
-# (only found via the live Radio Browser API), so added here directly.
-name = "Veneno"
-country_code = "BR"
-stream_url = "https://radio.veneno.live/stream/main"
-logo_url = "https://veneno.live/wp-content/uploads/2018/08/cropped-favicon-192x192.png"
-tags = ["eclectic", "house", "electronic"]
 
 [[stations]]
 # Registry's logo_url for Dogglounge was empty — curated here with the station's own square

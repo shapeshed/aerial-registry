@@ -1,0 +1,14 @@
+# FI Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "495de093-2d90-4a51-ae8c-743086872fcd"
+source_hash = "manual"
+tags = ["dance", "electronic", "house", "trance"]
+logo_url = "https://doubleclap.dance/wp-content/uploads/2020/05/logo.png"
+

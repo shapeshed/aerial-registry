@@ -1,0 +1,28 @@
+# IN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c908b0c4-d1e2-4bd2-b721-49f80e2c4af2"
+source_hash = "manual"
+tags = ["tamil", "world"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/12/tamil-sun-fm-1.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e2030453-296b-423e-ac06-cd109254fa38"
+source_hash = "manual"
+tags = ["tamil", "bollywood", "world"]
+logo_url = "https://southradios.com/assets/images/logo/logo90.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8ae09aeb-bcf9-49b2-b126-0db6be46de5f"
+source_hash = "manual"
+tags = ["public radio", "world", "pop"]
+logo_url = "https://radiosindia.com/images/air.jpg"
+

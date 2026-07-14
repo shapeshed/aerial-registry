@@ -1,0 +1,28 @@
+# CZ Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cd563cdc-5c77-11e9-a622-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://www.danceradio.cz/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "927edba2-7db7-40f2-96bd-8a9316de90f4"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://css.actve.net/frekvence1/img/favicons/mstile-150x150.png?v=jw63ApEelG"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c34f97eb-de1b-4164-9344-b9f0a4f9ac91"
+source_hash = "manual"
+tags = ["hip-hop", "r&b", "soul"]
+logo_url = "https://radiocolor.cz/image/color_logo500x500.jpg"
+

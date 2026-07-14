@@ -1,0 +1,35 @@
+# RO Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cae1ff66-8f22-42a1-b86e-586525d2cb15"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "http://www.europafm.ro/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "331f8e7c-a7ca-4c19-b1f2-1998cca09d4c"
+source_hash = "manual"
+tags = ["rock", "indie", "alternative"]
+logo_url = "http://guerrillaradio.ro/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7912ccbd-e75d-425c-85b9-0b2ac2a4b213"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://radiozu.ro/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4ce98b69-f4c7-4f54-931d-0874ef0f4f68"
+source_hash = "manual"
+tags = ["alternative", "rock"]
+logo_url = "http://darkedge.ro/favicon-32x32.png"
+

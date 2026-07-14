@@ -1,0 +1,21 @@
+# CO Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0d66c7b1-5693-40e6-9041-ff33704de02e"
+source_hash = "manual"
+tags = ["pop", "dance", "latin"]
+logo_url = "https://cdn-profiles.tunein.com/p1306541/images/logod.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a8b5ccce-411b-4f30-8190-3e766dae49d7"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://www.radiotiempo.co/icon?b8748d2f62517688"
+

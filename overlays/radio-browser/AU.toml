@@ -1,0 +1,21 @@
+# AU Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b550ce43-6300-4982-94dd-25fded53c747"
+source_hash = "manual"
+tags = ["pop", "community radio"]
+logo_url = "https://fresh927.com.au/graphics/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "01cf3664-81d5-4511-a65c-c72d990e12d9"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://raw.githubusercontent.com/AusIPTV/IPTVLogos/master/SKY_News_Australia_logo.png"
+

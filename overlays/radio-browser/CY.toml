@@ -1,0 +1,14 @@
+# CY Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "83f965c4-a71d-439e-949b-45621908dd8b"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "http://img1.wsimg.com/isteam/ip/23e625b3-9829-4f54-a786-73978949b161/rock%20fm%20logo%20clean%20b.png/:/rs=w:114,h:114,m"
+

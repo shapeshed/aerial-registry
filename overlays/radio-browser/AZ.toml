@@ -1,0 +1,14 @@
+# AZ Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fb2ed5f3-d3ac-4ec2-9461-5e86cd2c84b5"
+source_hash = "manual"
+tags = ["indie", "pop", "rock", "alternative", "electronic"]
+logo_url = "https://antiradio.net/wp-content/uploads/2024/04/cropped-favicon-180x180.png"
+

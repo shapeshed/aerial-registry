@@ -1,0 +1,14 @@
+# CL Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960c11f3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "pop"]
+logo_url = "https://www.rockandpop.cl/favicon.ico"
+

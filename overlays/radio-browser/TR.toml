@@ -1,0 +1,28 @@
+# TR Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3fa95d90-9b20-4c4c-91c9-1c556f55a084"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.alemfm.com/assets/img/alemfm-apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5af02e0b-d62e-4349-b315-107f51d6f1c8"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.babaradyo.com/wp-content/uploads/2025/01/cropped-baba-radyo-23-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9ed85a92-9fb4-4ae8-baca-59347adc782c"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://cdn-i.pr.trt.com.tr/trtdinle//w410/h315/q70/12530424_0-0-2048-1536.jpeg"
+

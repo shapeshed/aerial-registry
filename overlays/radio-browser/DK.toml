@@ -1,0 +1,21 @@
+# DK Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "28b58640-e317-4778-9bba-a1992f8f0bf7"
+source_hash = "manual"
+tags = ["talk", "classical", "public radio"]
+logo_url = "http://www.dr.dk/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "104098d5-7b92-457d-8851-6ef6000aeb7b"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://skala.fm/wp-content/uploads/sites/2/2024/08/cropped-favicon_skala-180x180.png"
+

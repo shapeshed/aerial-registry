@@ -1,0 +1,28 @@
+# HK Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0e495b97-0a3d-49cf-9476-8814450b4cd0"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://cdn.webrad.io/images/logos/radios-hk/rthk-1.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "140cbc06-7365-40c8-b81e-564f55e7f290"
+source_hash = "manual"
+tags = ["news", "talk", "public radio", "culture"]
+logo_url = "https://static.wikia.nocookie.net/hkradio/images/f/f8/RTHKRadio5_logo.gif/revision/latest?cb=20131022130417&path-prefix=zh"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ff98b8d3-f26a-4801-8c02-6759c15f0003"
+source_hash = "manual"
+tags = ["music", "world", "public radio"]
+logo_url = "https://www.rthk.hk/img/apple-icon-114x114.png"
+

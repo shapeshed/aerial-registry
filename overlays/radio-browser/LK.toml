@@ -1,0 +1,14 @@
+# LK Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b742fcc1-7118-4241-8650-8cf9f8ad8a59"
+source_hash = "manual"
+tags = ["talk", "news", "pop"]
+logo_url = "https://image.winudf.com/v2/image1/Y29tLmhpcnVmbS5yZWRyb3NlbWVkaWFfaWNvbl8xNjA0ODM4Njk0XzAyMg/icon.webp?w=280&fakeurl=1&type=.png"
+

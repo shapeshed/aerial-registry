@@ -1,0 +1,14 @@
+# ZA Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6f36e760-be10-4d43-9e99-1915cc543bad"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/RRjd3up6aH.png"
+

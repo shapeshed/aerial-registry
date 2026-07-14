@@ -1,0 +1,49 @@
+# BG Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "eae5ec5b-bf87-48fb-b21c-dcf0658efa38"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://bgradio.net/theme_assets/bgradio/images/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8a6a10ac-1a60-4c18-a91b-0573d086d798"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.radioplay.bg/assets/logos/bgestrada.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8677e3a3-291f-4608-9c50-5a9f50e91b0e"
+source_hash = "manual"
+tags = ["rock", "metal"]
+logo_url = "https://radiotangra.com/wp-content/uploads/2023/02/Vector-Smart-Object.svg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "51408d80-4b67-40e0-9617-671759799c2b"
+source_hash = "manual"
+tags = ["rock", "metal"]
+logo_url = "https://www.badrockradio.net/wp-content/uploads/2024/06/960x0-100x100.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "df9d72d6-cef9-4d06-bbf1-cc35b57ed400"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.katrafm.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96093243-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://www.radio1rock.bg/theme_assets/radio1rock/images/logo.png"
+

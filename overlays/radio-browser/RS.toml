@@ -1,0 +1,28 @@
+# RS Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "695183bd-3a60-11e8-b74d-52543be04c81"
+source_hash = "manual"
+tags = ["world", "folk", "pop"]
+logo_url = "http://www.naxi.rs/images/naxi_favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b597fce8-11cd-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "http://www.nostalgija.rs/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a0caac96-28a9-4507-bc06-eb021b5a2582"
+source_hash = "manual"
+tags = ["folk", "pop"]
+logo_url = "http://www.pinkradio.rs/favicon.ico"
+

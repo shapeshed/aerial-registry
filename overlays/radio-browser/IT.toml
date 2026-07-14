@@ -1,0 +1,84 @@
+# IT Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e8eff2b7-6c93-4647-9567-986d647094ba"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/it/1/1b/Radio80.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "42932f35-f4f2-11e8-a471-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "pop"]
+logo_url = "https://rdsrelax.it/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "46904395-5af6-444d-bbf9-786000f39bac"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://www.deejay.it/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9624172b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.lolliradio.net/wp-content/uploads/2016/02/logo_italia-150x150.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "03bf6559-d0bb-43f1-9ad0-cf7b0a6ee035"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://musicajazz.it/wp-content/uploads/logo-120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "911edc58-4289-499b-895f-5e33c921421e"
+source_hash = "manual"
+tags = ["pop", "soul", "oldies"]
+logo_url = "https://www.lattemiele.com/wp-content/uploads/2020/07/cropped-logo-autore-lm-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cfccfb63-9002-4171-a521-4fb5bc673df1"
+source_hash = "manual"
+tags = ["electronic", "pop"]
+logo_url = "http://www.piterpan.it/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962c7032-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance"]
+logo_url = "https://www.italiadancemusic.com/it/themes/corporate_lite/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "99697308-29c5-4929-9054-2b9ed0726827"
+source_hash = "manual"
+tags = ["pop", "soul"]
+logo_url = "https://www.lovefm.it/themes/default/assets/img_c/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e5d0c4bd-16fe-4fd4-96f8-4c7b78ac1c2c"
+source_hash = "manual"
+tags = ["dance", "electronic", "house"]
+logo_url = "https://italosound.com/logo-cover.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e76db104-6f04-4b90-92a1-cbdfe3e35180"
+source_hash = "manual"
+tags = ["talk", "culture"]
+logo_url = "http://www.radiomaria.org/favicon.ico"
+

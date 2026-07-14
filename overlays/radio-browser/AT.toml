@@ -1,0 +1,35 @@
+# AT Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "154fc4d3-4584-4b59-b2ed-e8656e0420e8"
+source_hash = "manual"
+tags = ["public radio", "talk"]
+logo_url = "https://orfodon.org/system/accounts/avatars/111/374/411/749/352/990/original/16c84635847ddad3.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9647da10-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "http://www.kronehit.at/static/base/img/apple-touch-icon.f5c3420c154b.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "93452add-93d6-419f-81cf-9060b0aa0a4f"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "http://jazz.w3.at/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bd78b9ee-a104-4501-99f7-a3f95ef43b11"
+source_hash = "manual"
+tags = ["pop", "folk", "public radio"]
+logo_url = "https://orfodon.org/system/accounts/avatars/111/374/561/229/082/482/original/57acca969ede8452.png"
+

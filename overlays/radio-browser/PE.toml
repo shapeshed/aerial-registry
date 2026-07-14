@@ -1,0 +1,14 @@
+# PE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dce2b2aa-263e-466f-9d83-d25d4516151e"
+source_hash = "manual"
+tags = ["rock", "pop", "oldies"]
+logo_url = "https://static-media.streema.com/media/cache/8b/d3/8bd399b199aaed5951244fd124dab993.jpg"
+

@@ -1,0 +1,203 @@
+# FR Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "31074f8a-e6f4-11e9-a96c-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-5487caf3.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d84f33bc-61d5-4b9f-9f5e-3a2b0d13fcd2"
+source_hash = "manual"
+tags = ["jazz", "soul", "blues"]
+logo_url = "https://www.jazzradio.fr/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5fab9ea3-fdf8-4803-9026-dc190e736d26"
+source_hash = "manual"
+tags = ["hip-hop", "rap", "pop"]
+logo_url = "https://play-lh.googleusercontent.com/dPiQ01OUKZVfRZUbbb-EVK5g9miS_K-xrxHgmBbynGG-GQ53yt3GzFKr0zUTnb-xswQ=s200-rw"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0b75d36d-decf-4fbb-8ee9-a7324de6b532"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0673eb03-ec0d-4a36-9238-202b38c95b49"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://www.sudradio.fr/wp-content/uploads/2019/06/cropped-favicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9617a7f3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["r&b", "soul", "hip-hop"]
+logo_url = "http://generations.fr/media/radio/thumb/90x90_rnb.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c257d985-4a5a-4f5d-b861-6a1397d8a9c1"
+source_hash = "manual"
+tags = ["news", "pop", "talk"]
+logo_url = "https://www.radio.de/images/broadcasts/88/5b/5168/c300.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0ee0fb71-e19d-475b-9135-b914d0d6e4cf"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://upload.wikimedia.org/wikipedia/fr/5/51/RTL2.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961773f4-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop"]
+logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0b3ff698-3282-483c-96bc-1ba9ff08ea25"
+source_hash = "manual"
+tags = ["jazz", "electronic", "dance"]
+logo_url = "http://www.jazzradio.fr/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "958681a9-4e22-400a-8cd1-3ed44ad2ec97"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://www.europe2.fr/wp-content/themes/melty/europeradio/assets/images/favicons/favicon128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960f0cfc-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "indie"]
+logo_url = "https://www.morow.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a61be78b-d52e-4dd4-befb-b77d4d2de2ca"
+source_hash = "manual"
+tags = ["pop", "soul"]
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ab6601ea-3d4d-4fc2-9b41-77f1953f0d88"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9617b159-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["reggae", "world"]
+logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96210edc-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio", "world"]
+logo_url = "http://en.rfi.fr/android-chrome-192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5c781485-ee91-47bc-aa2d-bbe66024ff52"
+source_hash = "manual"
+tags = ["pop", "world", "culture"]
+logo_url = "https://image.radioking.io/radios/669715/logo/e0191854-a603-41f5-9729-121a1f215f57.jpeg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9617a69e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop", "soul", "r&b"]
+logo_url = "http://generations.fr/media/radio/thumb/90x90_generations.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8890f793-36f4-4218-8f53-3d34a75db66a"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "http://favicons.teamtailor-cdn.com/icon?size=80..120..200&url=https%3a%2f%2fwww.radioclassique.fr%2f"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9617af1b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["funk", "soul", "r&b"]
+logo_url = "http://generations.fr/media/radio/thumb/90x90_funk.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "38cb1dcb-5753-11e8-b0ce-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Logo_Fun_Radio_%282021%29.svg/langfr-1280px-Logo_Fun_Radio_%282021%29.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9617a748-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop", "rap"]
+logo_url = "https://generations.fr/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9617b099-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["soul", "r&b"]
+logo_url = "http://generations.fr/media/radio/thumb/90x90_soul.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9616bbb9-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://www.radioespace.com/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96174b37-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.odsradio.com/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0ad35804-770d-11e9-8b97-52543be04c81"
+source_hash = "manual"
+tags = ["talk", "culture"]
+logo_url = "https://radiomaria.fr/wp-content/themes/radiomaria/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9617aa13-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["r&b", "soul"]
+logo_url = "http://generations.fr/media/radio/thumb/90x90_rnb-gold.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ba70d677-39ac-457e-8bcb-153565490a63"
+source_hash = "manual"
+tags = ["electronic", "indie", "pop"]
+logo_url = "http://www.lesonparisien.com/images/lsp/favicons/android-icon-144x144.png"
+
