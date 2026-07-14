@@ -40,14 +40,17 @@ fn preferred_stream(streams: &[FluxStream]) -> Option<&FluxStream> {
         .or_else(|| streams.first())
 }
 
-/// Prefixed so the brand is clear wherever the name is shown, without every
-/// downstream consumer (mood lists, search) needing its own override — unless
-/// the channel's own display name already has it (e.g. "FluxLounge").
+/// Prefixed to match Radio Browser's own long-standing "FluxFM - <channel>"
+/// naming convention for these same stations (confirmed against ~150
+/// community-submitted duplicates) — not just branding, but so dedup's
+/// trusted-vs-untrusted name match actually merges them instead of leaving
+/// two differently-named copies of every channel in the registry. The
+/// top-level "FluxFM" channel keeps its bare name (no "FluxFM - FluxFM").
 fn prefixed_name(display_name: String) -> String {
-    if display_name.starts_with("Flux") {
+    if display_name == "FluxFM" {
         display_name
     } else {
-        format!("FluxFM {display_name}")
+        format!("FluxFM - {display_name}")
     }
 }
 
@@ -140,13 +143,27 @@ mod tests {
 
     #[test]
     fn prefixes_display_name_with_brand() {
-        assert_eq!(prefixed_name("80s".to_string()), "FluxFM 80s");
+        assert_eq!(prefixed_name("80s".to_string()), "FluxFM - 80s");
     }
 
     #[test]
-    fn does_not_double_prefix_a_name_that_already_has_it() {
-        assert_eq!(prefixed_name("FluxLounge".to_string()), "FluxLounge");
-        assert_eq!(prefixed_name("FluxFM Finest".to_string()), "FluxFM Finest");
+    fn prefixes_even_a_name_that_already_says_flux() {
+        // Radio Browser's own convention prefixes every sub-channel, including
+        // already-Flux-branded ones — matching that (not skipping it) is what
+        // lets dedup merge the ~150 community duplicates under these names.
+        assert_eq!(
+            prefixed_name("FluxLounge".to_string()),
+            "FluxFM - FluxLounge"
+        );
+        assert_eq!(
+            prefixed_name("FluxFM Finest".to_string()),
+            "FluxFM - FluxFM Finest"
+        );
+    }
+
+    #[test]
+    fn top_level_channel_keeps_its_bare_name() {
+        assert_eq!(prefixed_name("FluxFM".to_string()), "FluxFM");
     }
 
     #[test]
