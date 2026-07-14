@@ -25,6 +25,31 @@ const STREAM_SLUGS: &[(i64, &str)] = &[
     (945, "kfat-320"),     // KFAT
 ];
 
+struct ExtraChannel {
+    provider_id: &'static str,
+    name: &'static str,
+    stream_slug: &'static str,
+    description: &'static str,
+}
+
+/// Channels Radio Paradise runs but doesn't list in the CMS metadata API at
+/// all (no `chan_id`, no entry in `data` — confirmed by filtering the API by
+/// name and getting zero results) even though the stream itself is live.
+/// Listed by hand instead of silently missing.
+const EXTRA_CHANNELS: &[ExtraChannel] = &[ExtraChannel {
+    provider_id: "2050",
+    name: "Radio Paradise 2050",
+    stream_slug: "radio2050-320",
+    description: "Radio 2050 is a flow of music and conversation — exploring \
+        ideas, new perspectives and boots-on-the-ground efforts for a better \
+        future in the year 2050 and beyond.",
+}];
+
+/// No banner in the API for `EXTRA_CHANNELS` entries — the site's own icon is
+/// the best available fallback (also what the Radio Browser community uses
+/// for these channels).
+const FALLBACK_LOGO: &str = "https://radioparadise.com/apple-touch-icon.png";
+
 #[derive(Deserialize)]
 struct ChannelsResponse {
     data: Vec<ChannelEntry>,
@@ -113,6 +138,23 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         });
     }
 
+    for extra in EXTRA_CHANNELS {
+        let stream_url = format!("https://stream.radioparadise.com/{}", extra.stream_slug);
+        debug!(provider = "radio-paradise", name = extra.name, %stream_url, "Discovered station");
+        stations.push(Station {
+            name: extra.name.to_string(),
+            stream_url,
+            logo_url: Some(FALLBACK_LOGO.to_string()),
+            country: Some("United States".into()),
+            country_code: Some("US".into()),
+            tags: vec![],
+            description: Some(extra.description.to_string()),
+            provider: "radio-paradise".into(),
+            provider_id: Some(extra.provider_id.to_string()),
+            trusted: true,
+        });
+    }
+
     tracing::info!(
         provider = "radio-paradise",
         count = stations.len(),
@@ -124,6 +166,15 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn extra_channels_have_a_stable_provider_id_and_stream_slug() {
+        let radio2050 = EXTRA_CHANNELS
+            .iter()
+            .find(|c| c.provider_id == "2050")
+            .unwrap();
+        assert_eq!(radio2050.stream_slug, "radio2050-320");
+    }
 
     #[test]
     fn known_channel_maps_to_its_stream_slug() {
