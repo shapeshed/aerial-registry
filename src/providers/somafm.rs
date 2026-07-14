@@ -39,6 +39,17 @@ fn preferred_playlist(playlists: &[SomaFmPlaylist]) -> Option<&SomaFmPlaylist> {
         .or_else(|| playlists.first())
 }
 
+/// Prefixed so the brand is clear wherever the name is shown, without every
+/// downstream consumer (mood lists, search) needing its own override — unless
+/// the channel's own title already has it (e.g. "SomaFM Live").
+fn prefixed_name(title: String) -> String {
+    if title.starts_with("SomaFM") {
+        title
+    } else {
+        format!("SomaFM {title}")
+    }
+}
+
 /// SomaFM's channel list only exposes `.pls` playlist wrappers, each listing
 /// several redundant `ice*.somafm.com` mirrors for one stream — not directly
 /// playable, so resolve to the first mirror at discovery time instead of
@@ -111,9 +122,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             .filter(|t| !t.is_empty())
             .collect();
 
-        debug!(provider = "somafm", name = %channel.title, %stream_url, "Discovered station");
+        let name = prefixed_name(channel.title);
+
+        debug!(provider = "somafm", %name, %stream_url, "Discovered station");
         stations.push(Station {
-            name: channel.title,
+            name,
             stream_url,
             logo_url: channel.largeimage.filter(|u| !u.is_empty()),
             country: Some("United States".into()),
@@ -205,5 +218,18 @@ mod tests {
             .filter(|t| !t.is_empty())
             .collect();
         assert_eq!(tags, vec!["ambient".to_string(), "electronic".to_string()]);
+    }
+
+    #[test]
+    fn prefixes_title_with_brand() {
+        assert_eq!(
+            prefixed_name("Beat Blender".to_string()),
+            "SomaFM Beat Blender"
+        );
+    }
+
+    #[test]
+    fn does_not_double_prefix_a_title_that_already_has_it() {
+        assert_eq!(prefixed_name("SomaFM Live".to_string()), "SomaFM Live");
     }
 }

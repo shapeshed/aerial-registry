@@ -94,9 +94,13 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             .and_then(|b| b.data)
             .map(|d| format!("{IMAGE_BASE}{}", d.attributes.url));
 
-        debug!(provider = "radio-paradise", name = %attrs.name, %stream_url, "Discovered station");
+        // Prefixed so the brand is clear wherever the name is shown, without every
+        // downstream consumer (mood lists, search) needing its own override.
+        let name = format!("Radio Paradise {}", attrs.name);
+
+        debug!(provider = "radio-paradise", %name, %stream_url, "Discovered station");
         stations.push(Station {
-            name: attrs.name,
+            name,
             stream_url,
             logo_url,
             country: Some("United States".into()),
