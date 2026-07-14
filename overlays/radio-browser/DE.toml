@@ -2182,3 +2182,47 @@ name = "54house.fm"
 tags = ["house", "club", "electronic"]
 logo_url = "https://www.54house.fm/typo3temp/assets/_processed_/3/8/csm_logo_54house_main-quad-white_04_3cca5ba26c.jpg"
 
+# --- Confirmed duplicates of the trusted fluxfm provider's "70s" and "80s"
+# channels, submitted under a German subtitle ("Der 70er/80er Channel") that
+# doesn't match dedup's exact-name check. Everything else that superficially
+# looks like a FluxFM duplicate here (FluxKompensator, Hard Rock, Klubradio,
+# etc.) is NOT: those channels aren't in fluxfm.rs's current channel list —
+# they're legacy/discontinued FluxFM channels with no trusted equivalent, so
+# left untouched rather than rejected.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96501ef4-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96501d41-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96501ba8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96417708-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964580c1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96419c48-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+reject = true
+

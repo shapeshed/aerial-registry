@@ -84,13 +84,6 @@ logo_url = "http://www.organlive.com/eighthnotes.ico"
 
 [[station]]
 provider = "radio-browser"
-provider_id = "25af5e12-a3b4-483d-bec8-2acab78aa683"
-source_hash = "manual"
-tags = ["world", "eclectic", "alternative"]
-logo_url = "https://radioparadise.com/apple-touch-icon.png"
-
-[[station]]
-provider = "radio-browser"
 provider_id = "0af543e7-f8a6-4f0e-afde-bd5fe4420520"
 source_hash = "manual"
 tags = ["country"]
@@ -927,4 +920,82 @@ provider_id = "1c41c07b-b995-11e8-aaf2-52543be04c81"
 source_hash = "manual"
 tags = ["deep house", "electronic"]
 logo_url = "https://dogglounge.com/wp-content/uploads/2017/03/cropped-best_deep_house_radio.jpg"
+
+# --- Confirmed duplicates of the trusted radio-paradise provider's Main Mix
+# and Global Mix, submitted under old/regional names ("Eclectic Mix" and
+# "World/Etc Mix" predate Radio Paradise's rename to Main Mix / Global Mix;
+# "(EU)" is a regional mirror) — names differ enough that dedup's exact-match
+# doesn't merge them automatically, so rejected by hand instead.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7abebb71-f89e-11e9-bbf2-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "48945998-f89f-11e9-bbf2-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "249d01b0-f5af-11e9-bbf2-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960c76b2-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9617a958-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c91fb21b-fc97-11e8-a1be-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e33244cc-4fa9-11e8-a4d1-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ffdb5ce6-88e4-11e8-aa66-52543be04c81"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "25af5e12-a3b4-483d-bec8-2acab78aa683"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "21a282be-44f4-4b8e-aae9-b4c2041af4a5"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "22f72eb5-cc37-4525-9f9d-15204c8165ef"
+source_hash = "manual"
+reject = true
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6263a7a9-804a-4ce3-9056-cfc98f2fa90f"
+source_hash = "manual"
+reject = true
 

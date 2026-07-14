@@ -11,6 +11,7 @@ pub mod curated;
 pub mod dr;
 pub mod err;
 pub mod ert;
+pub mod fluxfm;
 pub mod global;
 pub mod hrt;
 pub mod latvijas_radio;
@@ -22,6 +23,7 @@ pub mod orf;
 pub mod polskie_radio;
 pub mod radio_browser;
 pub mod radio_france;
+pub mod radio_paradise;
 pub mod rai;
 pub mod rik;
 pub mod rinse;
@@ -36,6 +38,7 @@ pub mod rtve;
 pub mod rtvslo;
 pub mod ruv;
 pub mod sbs;
+pub mod somafm;
 pub mod sr;
 pub mod srgssr;
 pub mod trm;
@@ -64,6 +67,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         dr,
         err,
         ert,
+        fluxfm,
         global,
         hrt,
         latvijas_radio,
@@ -75,6 +79,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         polskie_radio,
         radio_browser,
         radio_france,
+        radio_paradise,
         rai,
         rik,
         rinse,
@@ -89,6 +94,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rtvslo,
         ruv,
         sbs,
+        somafm,
         sr,
         srgssr,
         trm,
@@ -109,6 +115,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         dr::discover(client),
         err::discover(client),
         ert::discover(client),
+        fluxfm::discover(client),
         global::discover(client),
         hrt::discover(client),
         latvijas_radio::discover(client),
@@ -120,6 +127,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         polskie_radio::discover(client),
         radio_browser::discover(client),
         radio_france::discover(client),
+        radio_paradise::discover(client),
         rai::discover(client),
         rik::discover(client),
         rinse::discover(client),
@@ -134,6 +142,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rtvslo::discover(client),
         ruv::discover(client),
         sbs::discover(client),
+        somafm::discover(client),
         sr::discover(client),
         srgssr::discover(client),
         trm::discover(client),
@@ -156,6 +165,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         dr,
         err,
         ert,
+        fluxfm,
         global,
         hrt,
         latvijas_radio,
@@ -167,6 +177,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         polskie_radio,
         radio_browser,
         radio_france,
+        radio_paradise,
         rai,
         rik,
         rinse,
@@ -181,6 +192,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rtvslo,
         ruv,
         sbs,
+        somafm,
         sr,
         srgssr,
         trm,
