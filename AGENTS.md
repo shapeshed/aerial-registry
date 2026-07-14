@@ -96,13 +96,16 @@ Merges records that refer to the same station, in two passes:
    different mirror under its own URL — same station, but the URL never
    normalises to a match in pass 1. Once a record with `trusted = true`
    (the same flag broadcaster-direct providers set to skip liveness checks)
-   exists for an exact (name, country_code) pair, any non-trusted record
-   sharing that same pair is dropped as redundant
-   aggregator noise, regardless of its stream URL. A (name, country_code)
-   group with no trusted record is left untouched, since radio-browser is
-   sometimes the only source for a station — and a group with more than one
-   trusted record is also left untouched, since this pass only ever drops
-   non-trusted entries.
+   exists for an exact (name, country_code) pair, any `radio-browser` record
+   sharing that same pair is dropped as redundant aggregator noise,
+   regardless of its stream URL. Scoped to `radio-browser` specifically, not
+   "any untrusted provider": `curated` is also `trusted = false` (that flag
+   only means "skip liveness checks", not "not editorially chosen"), and its
+   deliberately hand-picked entries must never be dropped this way. A
+   (name, country_code) group with no trusted record is left untouched,
+   since radio-browser is sometimes the only source for a station — and a
+   group with more than one trusted record is also left untouched, since
+   this pass only ever drops radio-browser entries.
 
 Merge strategy (both passes):
 
