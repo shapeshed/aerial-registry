@@ -1,0 +1,14 @@
+# MK Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "24075e72-a24c-4baf-a9e2-eaf6c788a4e1"
+source_hash = "manual"
+tags = ["jazz", "soul", "funk", "blues", "electronic"]
+logo_url = "https://justmusicradio.mk/wp-content/uploads/2020/05/95997763_1489679141241833_2955882538482008064_n-1.png"
+

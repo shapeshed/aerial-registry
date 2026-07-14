@@ -1,0 +1,60 @@
+# IL Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e2d0c227-b2d9-4ec3-8a01-bfd6e731d0ed"
+source_hash = "manual"
+name = "Luchshee Radio"
+tags = ["pop"]
+logo_url = "https://radio1064.co.il/images/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "29cd4b62-14e2-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://static-media.streema.com/media/cache/34/ee/34ee4ed52c07ad09122cbe047a7c0bfd.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3b20727f-de34-40b3-84ba-f7ba1ed9821b"
+source_hash = "manual"
+name = "A-Shams Radio"
+tags = ["pop", "world"]
+logo_url = "https://s.ashams.com/static/css/images/logo-header.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1e95d61c-88ad-4d59-82b4-f512c2a45aa6"
+source_hash = "manual"
+name = "Pervoe Radio"
+tags = ["pop"]
+logo_url = "https://dyjvnjd6yl5jx.cloudfront.net/wp-content/uploads/2020/11/d0bbd0bed0b3d0be-d0bdd0bed0b2d18bd0b9-d0bcd0b0d0bbd18bd0b9.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "006ffcf8-e541-11e8-a9cc-52543be04c81"
+source_hash = "manual"
+tags = ["world", "culture"]
+logo_url = "https://jewishmusicstream.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "60f56ca4-3e39-45a6-ad94-cee362330fd5"
+source_hash = "manual"
+name = "Noshmim Mizrahit"
+tags = ["world", "culture"]
+logo_url = "https://www.mizrahit.fm/wp-content/uploads/2014/03/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d60e8a70-af9a-11e9-acb2-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://www.kan.org.il/favicon/apple-touch-icon.png"
+

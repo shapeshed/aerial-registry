@@ -1,0 +1,228 @@
+# IN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c908b0c4-d1e2-4bd2-b721-49f80e2c4af2"
+source_hash = "manual"
+tags = ["tamil", "world"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/12/tamil-sun-fm-1.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e2030453-296b-423e-ac06-cd109254fa38"
+source_hash = "manual"
+tags = ["tamil", "bollywood", "world"]
+logo_url = "https://southradios.com/assets/images/logo/logo90.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8ae09aeb-bcf9-49b2-b126-0db6be46de5f"
+source_hash = "manual"
+tags = ["public radio", "world", "pop"]
+logo_url = "https://radiosindia.com/images/air.jpg"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cdd3b5a0-47f6-46d5-8209-b78e8b10ff6e"
+source_hash = "manual"
+tags = ["pop", "bollywood", "hindi"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/05/radio-mirchi-hindi-fm.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dd10c8a8-c9b3-4e00-b0b5-7e7a9926e88f"
+source_hash = "manual"
+tags = ["bollywood", "hindi", "pop", "romantic", "world", "culture"]
+logo_url = "https://instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7dd71b85-139b-4362-81b1-4206133a517c"
+source_hash = "manual"
+tags = ["hindi", "oldies", "pop"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/07/hindi-gold-radio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "902ea231-d537-4dc8-8708-6819418086d0"
+source_hash = "manual"
+name = "Vividh Bharati"
+tags = ["hindi", "pop", "culture"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/02/vividh-bharati.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c1437982-06c6-4af7-90c0-24aa688bea13"
+source_hash = "manual"
+name = "Tamil 80s Radio"
+tags = ["tamil", "oldies", "world"]
+logo_url = "https://www.tamilradios.com/assets/img/radio-logos/tamil-80s-radio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "35753750-c632-4790-a42b-f591b254dd3f"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/06/aaj-tak-radio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fcc47b57-5b5a-4de5-8f65-cf2fda367514"
+source_hash = "manual"
+tags = ["tamil", "world"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/01/Sooriyan_FM_tamil.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e75a90d7-b812-49f2-a6be-a3585977ee12"
+source_hash = "manual"
+tags = ["tamil", "pop", "world"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/02/tamil-fm-894.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ac70ee9e-c501-4502-bc55-f63be5c6147d"
+source_hash = "manual"
+name = "Bombay Beats"
+tags = ["bollywood", "hindi", "pop", "world", "culture"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/05/1fm-bombay-beats-radio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "526d9fa0-cda6-4464-bd5f-eb0a0c56f9cb"
+source_hash = "manual"
+tags = ["hindi", "pop"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/09/tune-india-radio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8d1d51be-420f-49e5-8832-124afe4da4aa"
+source_hash = "manual"
+tags = ["tamil", "oldies", "world"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2024/01/a9-old-hits.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f2032117-cf31-45c7-8fba-b55a5b175ae8"
+source_hash = "manual"
+tags = ["tamil", "bollywood", "world"]
+logo_url = "https://southradios.com/assets/images/logo/logo90.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6d22e2a2-89c7-4e42-9bcf-7c82fcb4b095"
+source_hash = "manual"
+tags = ["hindi", "pop"]
+logo_url = "http://www.radioafsana.com/wp-content/uploads/2019/07/cropped-ra-header-1024x239.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f493846c-22b0-44fb-a932-ee4e990043ea"
+source_hash = "manual"
+tags = ["pop", "bollywood"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/08/fever-fm-107_3.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f93276cc-5c5d-4000-8587-2b7a3b89ec9c"
+source_hash = "manual"
+name = "Indian Link Radio"
+tags = ["world", "pop", "culture"]
+logo_url = "https://radiosindia.com/images/indianlinkradio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8eceafa2-9c04-417e-90e4-36eb6524f46c"
+source_hash = "manual"
+tags = ["world", "pop", "oldies"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/09/lyca-gold-radio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "84485b3d-695c-405d-8d55-b5c0f7f78f2f"
+source_hash = "manual"
+tags = ["public radio", "world", "pop"]
+logo_url = "https://prasarbharati.gov.in/wp-content/uploads/2020/04/cropped-pblogo-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "624a2c84-df0f-4c56-b34b-453cb2a74fad"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2024/02/radio-bangla-net.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "35b1a30b-0ac9-4fc2-8a3d-070b9a76238f"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+logo_url = "https://southradios.com/assets/images/logo/logo90.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4507925d-4c86-432d-bf24-9d041cc9185a"
+source_hash = "manual"
+tags = ["world", "folk", "culture"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/07/bhajan-radio-guyana.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5d3a0cc6-8537-43b4-8cca-e2f5e8c893f0"
+source_hash = "manual"
+name = "British Indian Tamil Radio"
+tags = ["world", "pop", "culture"]
+logo_url = "https://radiosindia.com/images/britishindian.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "30955af2-4f23-4bb2-aae4-c3f62f49facd"
+source_hash = "manual"
+name = "Friends Tamil FM"
+tags = ["world", "pop", "culture"]
+logo_url = "https://radiosindia.com/images/friendstamilfm.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1f4efed5-7654-49f2-bd7d-533668b288da"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/08/radio-manpasand-hindi.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bc3432d6-8f3a-4dda-b63e-5c6637121fd3"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+logo_url = "http://www.lmrradio.co.uk/wp-content/uploads/2020/12/cropped-lmrlogo-new2-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5cea306e-7cc0-4a14-9ac1-d2e47133fdf1"
+source_hash = "manual"
+tags = ["world", "pop", "oldies"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/12/mixiFy-evergreen-hits.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f0da3a61-7c38-42c1-bb8f-c5a5c215c497"
+source_hash = "manual"
+tags = ["reggae", "world", "culture"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/10/west-Indian-Vibes.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b020a395-04af-4f5b-ad7e-c31ff84eae77"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+logo_url = "https://onlineradiohub.com/wp-content/uploads/2023/08/sunrise-radio.jpg"
+

@@ -1,0 +1,21 @@
+# GT Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ff888eb5-429e-42c1-8c20-087fc33184c5"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://i0.wp.com/radioinfinita.com/wp-content/uploads/2023/10/infinita-logo-blanco.png?fit=192%2c58&#038;ssl=1"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9b64520a-ae4e-4f41-aaeb-9fc3f635bd4a"
+source_hash = "manual"
+tags = ["pop", "talk", "culture"]
+logo_url = "https://actitud.fm/apple-touch-icon.png"
+

@@ -1,0 +1,15 @@
+# BF Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9494e8b3-79b6-4a13-a51f-e36d75b120b6"
+source_hash = "manual"
+name = "Radio Biwi Inter"
+tags = ["world", "public radio"]
+logo_url = "https://www.radiobizi.com/templates/radiowave/includes/images/ios/icon@2x.png"
+

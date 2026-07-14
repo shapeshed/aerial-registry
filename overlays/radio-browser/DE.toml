@@ -1,0 +1,2184 @@
+# DE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ddff9a4e-4850-11ea-a860-52543be04c81"
+source_hash = "manual"
+tags = ["trance", "electronic", "dance"]
+logo_url = "https://www.trancebase.fm/media/icons/trb/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "db47125f-88e3-11e8-aa66-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a1d6b58e-eb8c-4932-a3f8-5da21211dd7d"
+source_hash = "manual"
+tags = ["dance", "electronic", "house", "trance"]
+logo_url = "https://technobase.fm/media/icons/tb/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960553a5-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock", "alternative", "public radio", "talk"]
+logo_url = "http://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960b77af-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "http://www.inforadio.de/content/dam/rbb/rbb/logos/touch/inf-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4a55035c-d166-40bb-9208-2e925bc6c18d"
+source_hash = "manual"
+tags = ["hip-hop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96274e7e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9608c0e3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960567ca-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5b48d259-27f5-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop"]
+logo_url = "https://www.iloveradio.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960536e6-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9e3b0f8e-95d3-11e9-a605-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.ndr.de//apple-touch-icon-57x57.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "45b835ad-1690-42d3-a8ed-bac3e6b13590"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9639c07d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "culture"]
+logo_url = "https://www.ndr.de/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "61046d79-1090-4e21-8739-229c07e366b8"
+source_hash = "manual"
+tags = ["pop", "culture"]
+logo_url = "https://upload.berliner-rundfunk.de/production/static/1693298496587/icons/icon_64.a80y02808w0.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "486d5290-cf76-43e1-9cb9-d50f96eea034"
+source_hash = "manual"
+tags = ["pop", "culture", "talk"]
+logo_url = "https://www.radio.at/images/broadcasts/07/41/2273/2/c300.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4b473070-a3c2-41bd-8d98-c2db5f5954bc"
+source_hash = "manual"
+tags = ["metal", "rock"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/1/34491.v5.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960ce338-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "http://www.antenne.de/logos/antenne-bayern/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961696dc-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "indie", "alternative"]
+logo_url = "https://cdn.mdrjump.de/resources/jump/img/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9612dd56-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9612d85e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["culture", "public radio"]
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "600c73d1-2ea5-45ee-b3c1-c108674343e6"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.hr1.de/favicon.png?v=3.84.2"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960d5540-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "rock", "indie"]
+logo_url = "http://www.rockantenne.de/logos/rock-antenne/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "816e8677-9cfb-4278-ab1f-88ca67293193"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.oldie-antenne.de/logos/oldie-antenne/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b5f5195a-e75f-44d9-98d5-613524a5a26e"
+source_hash = "manual"
+tags = ["indie", "rock", "pop", "world"]
+logo_url = "https://www.byte.fm/static/favicon/favicon-96x96.png?v=2023.10.27.3186-f0a9d83"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8abc1eff-b703-4594-906b-2c038c222616"
+source_hash = "manual"
+tags = ["pop", "folk"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c0646941-d526-44c2-ad99-dbb793678055"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://www.hr3.de/favicon.png?v=3.85.2"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960ed525-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["house", "electronic", "dance"]
+logo_url = "https://housetime.fm/media/icons/ht/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bd8e0225-045a-4ab4-aea6-e9adc91058f9"
+source_hash = "manual"
+tags = ["pop", "talk", "culture", "jazz", "rock", "electronic"]
+logo_url = "http://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96318345-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://www.harmonyfm.de/android-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "aa673098-04d9-468d-98e7-97b694964f64"
+source_hash = "manual"
+tags = ["classical", "culture", "jazz"]
+logo_url = "https://www.ndr.de//apple-touch-icon-57x57.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9612390e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "talk", "oldies"]
+logo_url = "http://www.ndr.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "75387000-9427-4df4-81f4-7e49ea4b5c13"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d1820c39-b733-40ed-b995-c1677ea5081e"
+source_hash = "manual"
+tags = ["blues", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "734cb40e-849c-4776-a570-ff4b80d6ebb2"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://absolutradio.de/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a8a6fce7-f593-4f9a-b75c-225315260826"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://www1.wdr.de/resources-v5.158.1/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d1efc670-6f2b-4d09-b069-030652502985"
+source_hash = "manual"
+tags = ["dance", "electronic", "house"]
+logo_url = "https://hardbase.fm/media/icons/hb/favicon-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1ecb70fa-43b0-4eca-9462-31e94f7ace1d"
+source_hash = "manual"
+tags = ["house", "electronic", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e9b0ba3e-bb7d-4a61-94f4-0e5f650402c5"
+source_hash = "manual"
+tags = ["pop", "talk", "news"]
+logo_url = "https://www.hr4.de/favicon.png?v=3.85.2"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0b312368-dc4f-11e8-a9cc-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4baa69c1-e1d8-48dc-8c41-0399eab1f52a"
+source_hash = "manual"
+tags = ["pop", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960e4255-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "rock", "pop", "soul"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/NDR_Blue_Logo.svg/1200px-NDR_Blue_Logo.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "92cc3af2-7f3f-4104-a368-15499aea12d2"
+source_hash = "manual"
+tags = ["rock", "blues"]
+logo_url = "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "036b5a3c-5418-4c26-ba35-25995cb872a8"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "52ad7c95-fcca-44d7-84e5-7c494502e8b0"
+source_hash = "manual"
+tags = ["folk", "world"]
+logo_url = "http://schwany.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5f20d10f-732b-11e8-83fa-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "alternative", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d4555d94-9315-4164-8171-24ea2752c410"
+source_hash = "manual"
+tags = ["folk", "world"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9646b771-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9620239f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://webradio.ffh.de/android-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960e7751-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "09431245-155d-11ea-a87e-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "metal"]
+logo_url = "https://www.rockantenne.de/logos/rock-antenne/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1c2eb3a7-ea78-4caf-9900-916422aec119"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "23a4e727-bfcc-42ae-901e-53b003ccf66f"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://www.inforadio.de/content/dam/rbb/rbb/logos/touch/inf-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "34c2e503-2542-4b87-bde5-f62f9fd00331"
+source_hash = "manual"
+tags = ["dance", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8070272f-99fd-4ba0-8540-defb2d087398"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2ed4195c-73a1-46ab-b6cb-e1afe68ea82a"
+source_hash = "manual"
+tags = ["rock", "metal"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/2/102912.v1.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96318d3c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9606baf5-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "house", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960c1c0e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "culture", "public radio"]
+logo_url = "http://www.kulturradio.de/content/dam/rbb/rbb/logos/touch/radio3-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960bb325-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "house", "electronic"]
+logo_url = "http://www.iloveradio.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8b2d3a89-9a48-11e8-a767-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock", "public radio"]
+logo_url = "https://www.sr.de/sr/static/images/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b815d3b4-d0e6-43d6-81e4-e205c328fe44"
+source_hash = "manual"
+tags = ["classical", "culture", "public radio"]
+logo_url = "https://www.swr.de/assets/swr/swrkultur/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "67ef89f3-27f0-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "hip-hop"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s167726q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960cb2ea-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "pop", "oldies"]
+logo_url = "http://www.ndr.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8a82e24a-a120-4337-8210-c4c3495711d6"
+source_hash = "manual"
+tags = ["oldies", "rock", "pop"]
+logo_url = "https://schwarzwaldradio.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "81494039-2d0f-4556-b37d-e91c1dfd2775"
+source_hash = "manual"
+tags = ["pop", "ambient", "electronic"]
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b103cc32-5b05-4927-9bb4-eb080661b603"
+source_hash = "manual"
+tags = ["house", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96474269-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://www.planetradio.de/android-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9fbd9687-3ed2-40b1-ab56-fdd078b1fbee"
+source_hash = "manual"
+tags = ["dance", "electronic", "house", "trance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "420cdacb-f875-4717-8e29-2f738be1375e"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/943rs2_Claim_blau.png/320px-943rs2_Claim_blau.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "03fe2524-a80e-4f8a-814e-cd5dfe7168c2"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://www.escradio.com/wp-content/uploads/2019/05/fav.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d6eb8a3e-27f3-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://www.iloveradio.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96185d96-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "industrial", "alternative"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961e2c2a-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "61fc1add-0637-491a-8dfc-2b1afd549a2a"
+source_hash = "manual"
+tags = ["electronic", "dance", "trance"]
+logo_url = "https://www.ilovemusic.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9639b393-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance", "rock"]
+logo_url = "https://cdn.mdrjump.de/resources/jump/img/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "148531bd-d12e-4c16-a2b4-579fea921edd"
+source_hash = "manual"
+tags = ["alternative", "metal", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9c0b3f8a-2dd9-48c1-8536-7c28863108c2"
+source_hash = "manual"
+tags = ["public radio", "classical", "culture"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6f1a7bae-28f5-4ce3-898c-60339d527b94"
+source_hash = "manual"
+tags = ["folk", "world"]
+logo_url = "http://www.radio-heimatmelodie.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8e73775d-d5f6-4a72-b343-3a697f789b19"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "58a44dad-7a56-444e-a10d-31f7e0f8b62b"
+source_hash = "manual"
+tags = ["talk", "culture"]
+logo_url = "https://heukelbach.org/wp-content/uploads/sites/3/2016/07/favicon-mwh.gif"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "29706917-cf4c-46d5-a262-b8a08fe13c37"
+source_hash = "manual"
+tags = ["ambient", "classical"]
+logo_url = "https://motherearthradio.de/images/mergoldcube512.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a3a695be-35ba-4a1a-b8e7-d90815f4b942"
+source_hash = "manual"
+tags = ["pop", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9630f997-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bdb68629-0537-4bdb-a950-577cf5cf5079"
+source_hash = "manual"
+tags = ["hip-hop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "46f179e9-27f4-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.iloveradio.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b7e65ebb-3673-48db-96d5-2d754e32a2d2"
+source_hash = "manual"
+tags = ["electronic", "alternative"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960cad57-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "culture", "public radio"]
+logo_url = "http://is3.mzstatic.com/image/thumb/Purple69/v4/e0/21/f5/e021f58d-21e7-877c-0ccc-1cb9bcdcc428/source/1200x630bb.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "035c4860-9392-4701-8c14-073093d846c4"
+source_hash = "manual"
+tags = ["oldies"]
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "78012206-1aa1-11e9-a80b-52543be04c81"
+source_hash = "manual"
+name = "Mango Radio"
+tags = ["pop", "rock", "indie"]
+logo_url = "https://mangoradio.de/wp-content/uploads/cropped-Logo-192x192.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960cca40-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["metal", "rock"]
+logo_url = "http://www.rockantenne.de/logos/station-rock-antenne/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d7f5a497-40ec-11e9-aa55-52543be04c81"
+source_hash = "manual"
+name = "0N - Classic Rock on Radio"
+tags = ["rock", "oldies"]
+logo_url = "https://www.0nradio.com/logos/0n-classic-rock_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1c3e8be2-5b14-4933-bad3-87cbc227cba4"
+source_hash = "manual"
+name = "Deutschlandfunk"
+tags = ["news", "culture", "public radio", "talk"]
+logo_url = "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6cddaca1-f2c1-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - 70s on Radio"
+tags = ["pop", "oldies"]
+logo_url = "https://www.0nradio.com/logos/0n-70s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dfe95eca-06e0-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "jazz"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960d1692-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["country"]
+logo_url = "http://www.country108.com/assets/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96056147-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://www.ffh.de/android-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96154a1e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "electronic", "instrumental"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9610ac7f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "1000 Oldies"
+tags = ["oldies", "pop", "rock"]
+logo_url = "http://1000oldies.de/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6217a525-f2c2-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - 90s on Radio"
+tags = ["pop", "rock", "dance", "oldies"]
+logo_url = "https://www.0nradio.com/logos/0n-90s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963beab0-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+logo_url = "https://www.radioarabella.de/storage/thumbs/192x192/r:1658501906/788381.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "51895bd4-f369-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - Indie on Radio"
+tags = ["indie", "alternative", "rock"]
+logo_url = "https://www.0nradio.com/logos/0n-indie_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "143caaf5-1354-442b-bc83-3bae08aa45c7"
+source_hash = "manual"
+tags = ["rock", "pop", "oldies"]
+logo_url = "https://i.ibb.co/SJFG3bt/soft-rock.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cc0fdbe3-a2fb-4f0a-b67d-b47acd6354c7"
+source_hash = "manual"
+tags = ["house", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "389011a1-3a96-11e9-9b4e-52543be04c81"
+source_hash = "manual"
+name = "0N - Smooth Jazz on Radio"
+tags = ["jazz", "ambient"]
+logo_url = "https://www.0nradio.com/logos/0n-smooth-jazz_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c7d36378-4637-11e9-aa55-52543be04c81"
+source_hash = "manual"
+name = "WDR 4"
+tags = ["pop", "oldies"]
+logo_url = "https://www1.wdr.de/resources/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "be9dcb42-f365-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - Chillout on Radio"
+tags = ["ambient", "electronic"]
+logo_url = "https://www.0nradio.com/logos/0n-chillout_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960b364a-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://upload.kissfm.de/production/static/1699276434696/icons/icon_64.be8y2280000.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9615de2d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96352604-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://schlager.radio/wp-content/uploads/2020/11/cropped-radio-paloma-fav-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96176f80-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5ea0c406-cc3e-4a36-9a32-37ed4d5a180e"
+source_hash = "manual"
+tags = ["electronic", "dance", "house", "trance"]
+logo_url = "https://i.ibb.co/TmRLJsp/EDM-TL.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960eb9c7-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "http://www.gayfm.de/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960a6167-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "dance", "soul"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9611cf11-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960c1970-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio Fritz"
+tags = ["pop", "rock", "alternative", "culture", "hip-hop", "talk"]
+logo_url = "http://www.fritz.de/content/dam/rbb/rbb/logos/touch/fritz-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1a4914a2-f35f-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0 N - 2000s on Radio"
+tags = ["pop", "rock", "dance", "oldies"]
+logo_url = "https://www.0nradio.com/logos/0n-2000s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9605ced9-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5f154f50-472f-11e9-aa55-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://1000goldschlager.de/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9606a015-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "indie", "alternative"]
+logo_url = "https://www1.wdr.de/radio/1live-diggi/resources-v5.122.3/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c528303b-3f8b-11e9-aa55-52543be04c81"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.klassik1.de/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "10f16cf6-bc45-4b67-8f17-9758f249a61a"
+source_hash = "manual"
+name = "Deutschlandfunk Kultur"
+tags = ["culture", "news", "public radio"]
+logo_url = "https://www.deutschlandfunkkultur.de/static/img/deutschlandfunk_kultur/icons/apple-touch-icon-128x128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f9533da3-f2c1-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - 60s on Radio"
+tags = ["oldies", "soul", "rock"]
+logo_url = "https://www.0nradio.com/logos/0n-60s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8b3e9c54-f365-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - Chillout on Radio"
+tags = ["ambient", "electronic"]
+logo_url = "https://www.0nradio.com/logos/0n-chillout_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "830a7eff-916d-456c-842a-d7786e475658"
+source_hash = "manual"
+tags = ["electronic", "house", "dance"]
+logo_url = "https://i.ibb.co/B4R6kNj/Electrohouse-tl.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4a9cd8e0-1b0d-4c87-91bf-d227e06b23eb"
+source_hash = "manual"
+tags = ["electronic", "dance", "oldies"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/1/44061.v2.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96054dc3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "44ee797f-b7c4-4f94-8853-ce9a9c8731ed"
+source_hash = "manual"
+name = "WDR 4"
+tags = ["oldies", "pop", "rock"]
+logo_url = "https://www1.wdr.de/radio/wdr4/wdrvier_logo104~_v-ARDAustauschformat.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0e8da368-6917-11e8-b15b-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://www.electroswing-radio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962abd5c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "metal", "gothic", "punk"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7a49c017-1391-4e18-a4d8-a9bab58516e6"
+source_hash = "manual"
+tags = ["pop", "talk", "oldies"]
+logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:b366004f6196d70c?w=512"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "460d2683-8054-4845-9690-05962167c9c7"
+source_hash = "manual"
+name = "Oldschool Hip-Hop"
+tags = ["hip-hop", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9615dcbc-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960591fc-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Energy Bremen"
+tags = ["pop", "dance", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "597d4cfc-93c4-11e9-a605-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance", "chart"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9610c78c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "house"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96074d8b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://jazzradio.net/wp-content/uploads/2023/06/jr-disc-10k-black.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1665ae4c-74dc-44f0-bd0a-7a0d0291aa8c"
+source_hash = "manual"
+name = "Epic Classical"
+tags = ["classical", "ambient", "relaxation"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3a0985e9-788d-11e8-83fa-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies", "public radio"]
+logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:b366004f6196d70c?w=512"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961eff93-c30c-4571-bed2-57d47f70ce75"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://www.rbb888.de/content/dam/rbb/rbb/logos/touch/ach-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "563b5435-61d9-11e9-a622-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9609b65b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["house", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961266af-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9aea4f9e-4170-4d8f-ad8c-67f2bfeaa9e0"
+source_hash = "manual"
+tags = ["electronic", "ambient"]
+logo_url = "https://nightride.fm/thumbnail.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0e1a47cb-f16d-4169-851a-5985c6133055"
+source_hash = "manual"
+name = "Deutschlandfunk Nova"
+tags = ["news", "talk", "culture", "public radio"]
+logo_url = "https://www.deutschlandfunknova.de/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f00f65b1-f36a-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0 N - Electro on Radio"
+tags = ["electronic", "dance", "techno"]
+logo_url = "https://www.0nradio.com/logos/0n-electro_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9606b0a2-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "alternative", "public radio"]
+logo_url = "https://yt3.ggpht.com/-MKgxIKQIAOY/AAAAAAAAAAI/AAAAAAAAAAA/Qmoj6SQ1QIE/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963b0409-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "country", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "27616eaf-3058-11e9-8f31-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "77bad355-947b-11e8-a767-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "206d7215-9d16-11e9-a787-52543be04c81"
+source_hash = "manual"
+name = "Radio Paloma Kultschlager"
+tags = ["pop", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fa571433-362e-4eeb-a4ac-5e5ef650fa98"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.ostseewelle.de/assets/icons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ee6043f7-124d-4f20-b020-c1a77ca8383e"
+source_hash = "manual"
+tags = ["dance", "electronic", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96180a5c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Psyradio FM Chillout"
+tags = ["ambient", "electronic"]
+logo_url = "https://lh6.ggpht.com/dU5W-XpgWgEgtIt3Ho990I9bre5IZTq7AK2ffSt_bXTDTNQ6eUkTG-WqERh6c_EHPb8=w300"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960dd421-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Hit Radio FFH Soundtrack"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9641191e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963f6d4b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["blues", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9067dc39-4bf4-4364-bd6b-8020cff3e15d"
+source_hash = "manual"
+name = "Nightride FM Chillsynth"
+tags = ["electronic", "ambient"]
+logo_url = "https://nightride.fm/thumbnail.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "aedd2edd-c8f1-4f75-9667-9d84cd6d690c"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+logo_url = "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/08/a3/107873/5/c175.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96477f0c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Laut.FM Jazz Rock Fusion"
+tags = ["jazz", "rock", "funk", "fusion"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "edaa4ad7-bdf3-11e8-aaf2-52543be04c81"
+source_hash = "manual"
+name = "DNB Radio Main Channel"
+tags = ["electronic", "dance", "drum and bass"]
+logo_url = "https://dnbradio.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9645e567-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ddf0a603-ed3a-4d52-8d1b-cc11357734f3"
+source_hash = "manual"
+tags = ["rock", "metal"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "01683d91-4e1e-4152-b1bc-30f2f1360b98"
+source_hash = "manual"
+name = "Deutschlandfunk"
+tags = ["news", "talk", "culture", "public radio"]
+logo_url = "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cbcff885-49bb-4db1-8b78-7060e70ff06d"
+source_hash = "manual"
+tags = ["electronic", "dance", "drum and bass"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "765440a4-c9a3-4aaf-a617-4de12f6ce6c2"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.baden.fm/storage/thumbs/192x192/r:1708081712/1833471.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5143bb9a-3c5e-4c53-a6ec-0108435caf5a"
+source_hash = "manual"
+name = "Epic Piano - Chillout Piano"
+tags = ["classical", "ambient", "jazz"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bc0fc480-9229-4d6a-85b8-b91f38191f43"
+source_hash = "manual"
+tags = ["ambient", "house", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d6d00207-f360-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0 N - Disco on Radio"
+tags = ["disco", "funk", "soul", "oldies"]
+logo_url = "https://www.0nradio.com/logos/0n-disco_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9620b9a8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+logo_url = "https://101fm.de/wp-content/uploads/2020/02/cropped-512er-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "27d331f9-6685-47d4-a9e8-7fd16d91b66d"
+source_hash = "manual"
+name = "Technolovers Psytrance"
+tags = ["electronic", "trance", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8b596ce2-3a96-11e9-9b4e-52543be04c81"
+source_hash = "manual"
+name = "0N Dance on Radio"
+tags = ["dance", "house", "electronic"]
+logo_url = "https://www.0nradio.com/logos/0n-dance_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2100610c-13c2-4536-879f-6a88ccb07dc8"
+source_hash = "manual"
+name = "Technolovers Techno"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://i.ibb.co/ScwBQ49/TECHNO-TL.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "01fa3ef0-acf6-4e63-8777-f5bb4957b5ec"
+source_hash = "manual"
+name = "Technolovers Minimal"
+tags = ["electronic", "house", "dance"]
+logo_url = "https://i.ibb.co/LncDTYz/MINIMAL-TL.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fa9cdf67-3a94-11e9-9b4e-52543be04c81"
+source_hash = "manual"
+name = "0N Movies on Radio"
+tags = ["classical", "culture"]
+logo_url = "https://www.0nradio.com/logos/0n-movies_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4cd97318-3a95-11e9-9b4e-52543be04c81"
+source_hash = "manual"
+name = "0N Smooth Jazz on Radio"
+tags = ["jazz", "soul"]
+logo_url = "https://www.0nradio.com/logos/0n-smooth-jazz_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b459c352-9639-11e8-a767-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "culture"]
+logo_url = "https://www.animeradio.de/img/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b1a47819-f2c1-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N 70s on Radio"
+tags = ["oldies", "pop", "rock"]
+logo_url = "https://www.0nradio.com/logos/0n-70s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963022af-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "WDR 1Live DJ Session"
+tags = ["electronic", "dance", "indie"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/WDR_1LIVE_Logo_2016.svg/189px-WDR_1LIVE_Logo_2016.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9605da2f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "57df1d35-5943-46e6-a76c-f9ef35ea73e7"
+source_hash = "manual"
+name = "Technolovers Funky House"
+tags = ["house", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5dd6437a-3a93-11e9-9b4e-52543be04c81"
+source_hash = "manual"
+name = "0N Country on Radio"
+tags = ["country", "pop"]
+logo_url = "https://www.0nradio.com/logos/0n-country_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "70614720-560e-4638-913d-0f682d3f9fa7"
+source_hash = "manual"
+name = "HR2 Kultur"
+tags = ["culture", "public radio"]
+logo_url = "https://www.hr2.de/favicon.png?v=3.84.2"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bc2bbd05-59b2-4bff-86ef-a15a34e7d89e"
+source_hash = "manual"
+tags = ["news", "public radio"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960563e3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "pop"]
+logo_url = "https://upload.dieneue1077.de/production/static/1693298631006/icons/icon_64.ax1w460g800.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "00c4c0c7-bf13-4a8b-b14f-05f9e5a4a116"
+source_hash = "manual"
+tags = ["trance", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5dc97c2f-566f-47df-8236-021db5906dde"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://i.ibb.co/n1CQpDf/BACH-NEW.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "54e4b1de-0156-4972-a14e-580111522b44"
+source_hash = "manual"
+name = "SWR4 BW"
+tags = ["classical", "folk", "oldies"]
+logo_url = "https://www.swr.de/assets/swr/swr4/apple-touch-icon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "29010f42-faef-4a9e-b15c-3ad1613b45cb"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:476e47d76c4bbf78?w=512"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9649888d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Deutschlandfunk Dokumente und Debatten"
+tags = ["talk", "news", "public radio"]
+logo_url = "https://www.deutschlandradio.de/static/img/deutschlandradio/icons/apple-touch-icon-128x128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7f06cacb-f36f-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "1A NDW"
+tags = ["alternative", "pop", "oldies"]
+logo_url = "https://www.1aradio.com/logos/1a-ndw_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963cf00c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2f7cead0-b1fa-4400-a6dd-8ccfc1be3e03"
+source_hash = "manual"
+tags = ["electronic", "house", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4a688cc7-b7ae-11e9-acb2-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "electronic", "rock"]
+logo_url = "https://dark-zero-radio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964a8dd1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://m1.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961595e3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "ambient", "soul"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "05a9eb02-33b0-11e9-8f31-52543be04c81"
+source_hash = "manual"
+name = "1A Oldies"
+tags = ["oldies", "pop"]
+logo_url = "https://www.1aradio.com/logos/1a-oldies_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "35f2addb-be76-4f1d-ab5e-11cfa908c7db"
+source_hash = "manual"
+name = "Pure FM"
+tags = ["electronic", "house", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c2f56cc5-f369-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "ON Gothic Radio"
+tags = ["alternative", "rock", "electronic"]
+logo_url = "https://www.0nradio.com/logos/0n-gothic_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "22423370-efbf-4bf2-a301-5bd918cd8ad5"
+source_hash = "manual"
+tags = ["electronic", "house", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964b33df-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "alternative", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f3def834-4d96-11e9-a4d7-52543be04c81"
+source_hash = "manual"
+name = "0N - 2000s on Radio"
+tags = ["pop", "rock", "dance", "oldies"]
+logo_url = "https://www.0nradio.com/logos/0n-2000s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "28444f06-3a91-11e9-9b4e-52543be04c81"
+source_hash = "manual"
+name = "0N - Pop on Radio"
+tags = ["pop", "rock", "dance", "hip-hop"]
+logo_url = "https://www.0nradio.com/logos/0n-pop_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96419ee9-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "soul"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f3842846-f2c0-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - 80s on Radio"
+tags = ["pop", "oldies"]
+logo_url = "https://www.0nradio.com/logos/0n-80s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0beeb085-5116-4f2a-a543-cdcb837f8116"
+source_hash = "manual"
+tags = ["electronic", "trance", "house", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dad8c8b3-f2c2-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - Oldies on Radio"
+tags = ["oldies", "pop", "rock"]
+logo_url = "https://www.0nradio.com/logos/0n-oldies_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b78fd386-08ec-4246-8372-d5f97c56a8ee"
+source_hash = "manual"
+tags = ["classical", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "41d830a3-c80c-4745-954d-f6b2fc3f6622"
+source_hash = "manual"
+tags = ["house", "electronic", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "21ab678c-ff19-4314-9969-165e15b4210d"
+source_hash = "manual"
+name = "Deutschlandfunk Nova"
+tags = ["news", "talk", "culture", "public radio"]
+logo_url = "https://www.deutschlandfunknova.de/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8ad6bcce-a133-40d6-9454-0e6e469e5d4f"
+source_hash = "manual"
+tags = ["rock", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "edccbfd1-9f20-4f96-adee-b00c6b65dd3c"
+source_hash = "manual"
+tags = ["electronic", "ambient", "alternative"]
+logo_url = "https://nightride.fm/thumbnail.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1e8ba89b-7dcd-4d62-a20d-073739df672d"
+source_hash = "manual"
+name = "Epic Lounge - Chillout"
+tags = ["ambient", "electronic", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "26b0e463-5912-4758-86f7-d93749ea93b1"
+source_hash = "manual"
+name = "YOU FM"
+tags = ["pop", "electronic"]
+logo_url = "https://www.you-fm.de/favicon.png?v=3.85.2"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0901602c-18c9-4790-9d0f-04e10d1fa7f8"
+source_hash = "manual"
+tags = ["trance", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "12b4b382-4850-11ea-a860-52543be04c81"
+source_hash = "manual"
+name = "TranceBase FM"
+tags = ["trance", "electronic", "dance"]
+logo_url = "https://www.trancebase.fm/media/icons/trb/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9606fd02-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "WDR 1Live - Hip-Hop"
+tags = ["hip-hop", "pop", "alternative"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/WDR_1LIVE_Logo_2016.svg/189px-WDR_1LIVE_Logo_2016.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0c2308a7-5f34-4f9f-a0b0-b9a5467b331a"
+source_hash = "manual"
+tags = ["electronic", "dance", "indie"]
+logo_url = "https://www.partyvibe.com/wp-content/uploads/2020/12/party-vibe-radio-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9188d3aa-9dbe-419d-9f0e-994914f67d90"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+logo_url = "https://www.ostseewelle.de/assets/icons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "054e1992-d7f4-4bb8-8a93-eb2becdaf787"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960aaa1b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://upload.kissfm.de/production/static/1675427733216/icons/icon_64.be8y2280000.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9606daed-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "talk", "world"]
+logo_url = "http://www.alpenwelle.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3738fc9e-2c16-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["metal", "rock"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s238458q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96159a34-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["ska", "rock", "indie"]
+logo_url = "http://lautfm-skaworld.radio.de/assets/fav/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e764ca37-9692-47d9-bd39-17842b9db3e6"
+source_hash = "manual"
+tags = ["classical", "ambient", "instrumental"]
+logo_url = "https://i.ibb.co/R2FqgKq/Pan-Flute.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "92aef6af-edb6-4fae-b212-c990deb76efc"
+source_hash = "manual"
+tags = ["house", "ambient", "electronic"]
+logo_url = "https://lounge-radio-ibiza.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960aa8ba-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "instrumental", "classical"]
+logo_url = "http://1000melodien.de/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9620a271-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["gothic", "rock", "electronic", "alternative"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f56cccd7-5656-49f0-9242-55c83e35b7b2"
+source_hash = "manual"
+name = "N-Joy"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2121eef0-8347-4e12-a0e5-cd6476f2d803"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "54e7f42e-7c5f-4124-aed8-ca9266022c20"
+source_hash = "manual"
+name = "SWR 3"
+tags = ["pop", "rock"]
+logo_url = "https://www.swr3.de/assets/swr3/icons/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5da4ae63-940f-4435-9bfc-37f3dc6bbed6"
+source_hash = "manual"
+tags = ["classical", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9612c8db-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "trance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96091e65-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio"]
+logo_url = "https://cdn.mdr.de/resources/global/img/mdrde/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b4a4e953-3e58-4538-8b3d-20faf35ecb1a"
+source_hash = "manual"
+tags = ["culture", "public radio"]
+logo_url = "http://www.rbb-online.de/content/dam/rbb/rbb/logos/touch/rbb-n-128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0c93b8e2-bde5-49cd-9c64-5d006be06aa9"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://absolutradio.de/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "34b8e787-5d35-4fe0-b366-aa6c05c39861"
+source_hash = "manual"
+tags = ["dance", "oldies", "soul"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "91e5f068-8011-4103-a28a-f1028c7e0aed"
+source_hash = "manual"
+name = "Double Bass FM"
+tags = ["electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "eab25818-3d83-11e8-b74d-52543be04c81"
+source_hash = "manual"
+tags = ["talk", "culture"]
+logo_url = "https://www.xn--hrspieltalk-rfb.de/images/style-2/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8f00a42a-c4e3-4138-8f21-551896a29065"
+source_hash = "manual"
+name = "0 N - New Wave on Radio"
+tags = ["alternative", "new wave", "oldies"]
+logo_url = "https://www.0nradio.com/logos/0n-newwave_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6816e8cd-8b06-4d68-b61f-4d9f54015f95"
+source_hash = "manual"
+tags = ["classical", "instrumental"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "612c3e91-9cf6-451d-a2da-2543646db344"
+source_hash = "manual"
+name = "Hirschmilch Chillout"
+tags = ["ambient", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1bf09691-f362-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - Rock on Radio"
+tags = ["rock", "alternative", "metal"]
+logo_url = "https://www.0nradio.com/logos/0n-rock_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9645c644-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "eed2069a-1355-4a48-b10d-b36b372d3041"
+source_hash = "manual"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9611ce5b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Logo_Radio_K%C3%B6ln.svg/800px-Logo_Radio_K%C3%B6ln.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d4aff3d1-61b9-453a-bb5b-24be59d5b343"
+source_hash = "manual"
+tags = ["dance", "pop"]
+logo_url = "https://www.ballermann-radio.de/wp-content/uploads/2024/02/stream-ballermann-radio-clubstyle-750x750.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9241b3f7-f2c2-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - 90s on Radio"
+tags = ["oldies", "pop", "rock", "dance"]
+logo_url = "https://www.0nradio.com/logos/0n-90s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d7339299-f364-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N - Jazz on Radio"
+tags = ["jazz"]
+logo_url = "https://www.0nradio.com/logos/0n-jazz_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d3a18908-6077-4f34-96a8-7d72938c1015"
+source_hash = "manual"
+tags = ["electronic", "house", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "447b5296-56b1-45a7-9eab-f078daf0fd25"
+source_hash = "manual"
+name = "Deutschlandfunk Kultur"
+tags = ["culture", "news", "public radio"]
+logo_url = "https://www.deutschlandfunkkultur.de/static/img/deutschlandfunk_kultur/icons/apple-touch-icon-128x128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2973ff08-fb80-4281-8b7a-33bd213b06d4"
+source_hash = "manual"
+name = "Juka Radio K-Pop"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "85954f7d-387f-4857-861f-4c6d464a16cb"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://www.ballermann-radio.de/wp-content/uploads/2024/02/stream-ballermann-radio-ab-18-750x750.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "226b2522-f2c2-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "0N 60s on Radio"
+tags = ["oldies", "soul", "rock"]
+logo_url = "https://www.0nradio.com/logos/0n-60s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0c7c0c0c-5981-440f-bc8a-98530962c191"
+source_hash = "manual"
+tags = ["classical", "ambient"]
+logo_url = "https://i.ibb.co/HKNTfSQ/VIVALDI-NEW.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ed4fb1c0-74a9-462c-85a7-5a6bc49f275f"
+source_hash = "manual"
+name = "0N Soft Rock on Radio"
+tags = ["rock", "pop"]
+logo_url = "https://www.0nradio.com/logos/0n-soft-rock_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c56630c6-3d7f-11e8-b74d-52543be04c81"
+source_hash = "manual"
+tags = ["culture", "talk"]
+logo_url = "https://www.hoerspielprojekt.de/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6b4c2748-07ee-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio"]
+logo_url = "https://www.radio80k.de/app/uploads/2022/10/cropped-favicon-8000-192x192.gif"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "eb1930be-f372-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "1A 70er"
+tags = ["oldies", "pop"]
+logo_url = "https://www.1aradio.com/logos/1a-70er_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9647d296-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5d7eaf84-c541-11e9-8502-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9605f833-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0fd40b7b-1ce5-4b4e-ae86-7a6d608f1b0e"
+source_hash = "manual"
+tags = ["pop", "rock", "alternative"]
+logo_url = "https://dasding.de/assets/dasding/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c6de7ff5-8c25-4e3a-987d-3e0c7ecb9db9"
+source_hash = "manual"
+tags = ["electronic", "dance", "trance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961b1adc-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["world"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0ea480ed-bd7a-469e-b050-00c258b65772"
+source_hash = "manual"
+name = "0N K-Pop on Radio"
+tags = ["pop", "world"]
+logo_url = "https://www.0nradio.com/logos/0n-k-pop_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96162fda-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "electronic", "metal"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "eb987d1a-ef9c-47dd-a70f-f35a34b11313"
+source_hash = "manual"
+tags = ["jazz", "classical", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c7bd5013-5344-4a90-91c8-a9e2238eeda3"
+source_hash = "manual"
+tags = ["oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "554c0dbb-c20a-4df0-847f-2e634ed4043f"
+source_hash = "manual"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "72e2c8e3-3d74-41e3-855c-d44812d5023e"
+source_hash = "manual"
+tags = ["rock", "metal", "alternative"]
+logo_url = "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "40532b34-f6a4-4009-b023-4110b8e7393f"
+source_hash = "manual"
+tags = ["talk", "news"]
+logo_url = "https://kontrafunk.radio/templates/yootheme/cache/af/logo_KF_vogel_mittig_subline-af5b9047.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9ef2da84-5133-4446-989c-0b02b0f565ab"
+source_hash = "manual"
+tags = ["trance", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3cd11a2a-4a42-44d7-b349-a652af7573dd"
+source_hash = "manual"
+name = "Deutschlandfunk"
+tags = ["news", "public radio", "culture"]
+logo_url = "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "50ab7eb7-40ed-11e9-aa55-52543be04c81"
+source_hash = "manual"
+name = "0N Relax on Radio"
+tags = ["pop", "oldies", "ambient"]
+logo_url = "https://www.0nradio.com/logos/0n-relax_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c66ba4a3-1f5c-11ea-a955-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "daa600d2-3d8d-4e7b-9974-90b5be49b40e"
+source_hash = "manual"
+name = "0N Heavy Metal on Radio"
+tags = ["metal", "rock"]
+logo_url = "https://www.0nradio.com/logos/0n-heavymetal_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8d5e1ce1-0625-469f-920e-8fee0f3da72e"
+source_hash = "manual"
+tags = ["pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "aa523091-b016-11e9-acb2-52543be04c81"
+source_hash = "manual"
+name = "Charivari München"
+tags = ["pop", "dance"]
+logo_url = "https://www.charivari.de/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961b54c2-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "jazz", "soul"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "31854302-9f36-4697-a4e8-ffd66d4e1487"
+source_hash = "manual"
+name = "Technolovers Electro"
+tags = ["electronic", "dance", "house"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4f043737-2416-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6a74e9a2-e5ac-40d5-9d2d-f956f15b7058"
+source_hash = "manual"
+tags = ["electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d4c545ef-a4e5-412a-b141-852c2fe50707"
+source_hash = "manual"
+name = "0N 50s on Radio"
+tags = ["oldies", "rock"]
+logo_url = "https://www.0nradio.com/logos/0n-50s_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b26c3de7-c2ca-4595-95b7-af9f42db3f75"
+source_hash = "manual"
+name = "Epic Classical"
+tags = ["classical", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9644ceb7-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["trance", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "65e1287a-6e7b-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["news", "public radio"]
+logo_url = "https://api.ardmediathek.de/image-service/images/urn:ard:image:c3ab9296f3b282bf?w=512"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3e72dce2-0a50-11ea-a87e-52543be04c81"
+source_hash = "manual"
+name = "0N Top 40 on Radio"
+tags = ["pop", "dance"]
+logo_url = "https://www.0nradio.com/logos/0n-top-40_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "11bb3621-4e62-4143-a275-2303e1ae5ce6"
+source_hash = "manual"
+name = "Technolovers Afro House"
+tags = ["house", "world", "soul"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d3639208-37c3-418e-b71b-ffbd0ec512c1"
+source_hash = "manual"
+tags = ["classical", "ambient", "chillout"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0b6cc5a0-f5a0-4a62-b128-e48153fd864c"
+source_hash = "manual"
+name = "Deutschlandfunk Kultur"
+tags = ["culture", "news", "public radio"]
+logo_url = "https://www.deutschlandfunkkultur.de/static/img/deutschlandfunk_kultur/icons/apple-touch-icon-128x128.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9609e140-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "jazz", "ambient"]
+logo_url = "https://lh3.ggpht.com/a4M_Oyz2Jek1bkcRe8I7v3A8clEOoOI8Y-NiYuuICuw0wOHwaZgMUit4rRgC18mGZMo_=w300"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6d6cce52-c2e6-4615-8251-27f5ce62e788"
+source_hash = "manual"
+name = "Nightride FM"
+tags = ["electronic", "ambient"]
+logo_url = "https://nightride.fm/thumbnail.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "05eb782e-e789-4573-9771-27bfa417655c"
+source_hash = "manual"
+name = "Psyradio.fm"
+tags = ["trance", "electronic", "ambient"]
+logo_url = "https://lh6.ggpht.com/dU5W-XpgWgEgtIt3Ho990I9bre5IZTq7AK2ffSt_bXTDTNQ6eUkTG-WqERh6c_EHPb8=w300"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "07e6c4b7-b1b5-430b-a7a8-166260a775ee"
+source_hash = "manual"
+tags = ["classical", "jazz"]
+logo_url = "https://i.ibb.co/y8Pcv7T/HA-NDEL-NEW.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "23cbcb6f-64cb-4589-a462-9aceaeab8e52"
+source_hash = "manual"
+tags = ["ambient", "chillout"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9620ba74-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+logo_url = "https://101fm.de/wp-content/uploads/2020/02/cropped-512er-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b7835e9e-f36c-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "1A - Schlager Gold"
+tags = ["oldies", "pop"]
+logo_url = "https://www.1aradio.com/logos/1a-schlager-gold_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9611d8eb-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/vzvQkVkWCJ.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "514118f5-7fc0-451f-9fac-dfb877376721"
+source_hash = "manual"
+tags = ["house", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9623284b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["house", "electronic", "hip-hop", "soul", "funk"]
+logo_url = "http://674.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e26602e7-e8e5-4910-8d05-3b760cd9b52c"
+source_hash = "manual"
+tags = ["classical", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "259e410c-b516-11e8-afe1-52543be04c81"
+source_hash = "manual"
+name = "Metal Only"
+tags = ["metal"]
+logo_url = "https://www.metal-only.de/fileadmin/tpl//fav.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "99a0a3ef-d6b6-42f8-bad8-63132543c363"
+source_hash = "manual"
+tags = ["rock", "oldies"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9614a654-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["culture"]
+logo_url = "https://lh3.ggpht.com/a4M_Oyz2Jek1bkcRe8I7v3A8clEOoOI8Y-NiYuuICuw0wOHwaZgMUit4rRgC18mGZMo_=w300"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "80bdfdeb-66bb-11e9-af37-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "alternative"]
+logo_url = "https://i0.wp.com/flatlinesradio.de/storage/2021/11/244611397_1194785584320990_6265045071816304131_n-1.jpg?fit=180%2c180&#038;ssl=1"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "98c90ccb-3a90-11e9-9b4e-52543be04c81"
+source_hash = "manual"
+name = "1A Chillout"
+tags = ["ambient", "electronic"]
+logo_url = "https://www.1aradio.com/logos/1a-chillout_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "19750975-44ce-11e9-aa55-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.antenneduesseldorf.de/assets/images/favicons/antenneduesseldorf/favicon_x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960e1567-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.radiobielefeld.de/icons/apple-icon-120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dae03777-5373-11e8-a4d1-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "soul", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "12e458f2-cf9b-426a-8d18-7cb07c75b07c"
+source_hash = "manual"
+tags = ["electronic", "ambient"]
+logo_url = "https://nightride.fm/thumbnail.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "51a320db-f7a1-40cb-833d-88daf3054c36"
+source_hash = "manual"
+tags = ["electronic", "hip-hop", "reggae"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c86eed65-a2e3-45fa-a67f-62d98bd91e3a"
+source_hash = "manual"
+name = "Radio Paloma"
+tags = ["pop", "oldies", "world"]
+logo_url = "https://schlager.radio/wp-content/uploads/2020/11/cropped-radio-paloma-fav-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9645e273-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "53ecf7f1-3c7f-413b-a15d-b6c6ad04a27b"
+source_hash = "manual"
+name = "54house.fm"
+tags = ["house", "club", "electronic"]
+logo_url = "https://www.54house.fm/typo3temp/assets/_processed_/3/8/csm_logo_54house_main-quad-white_04_3cca5ba26c.jpg"
+

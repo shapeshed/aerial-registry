@@ -1,0 +1,33 @@
+# NZ Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2ef52514-f78f-483e-94b6-7b7a11d8808a"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://www.rnz.co.nz/x/favicons/production/apple-touch-icon-14e8cc0d5e9a21845ce6a582e39617baeebe39d41412666ecebcdba7f3c1770a.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8a4a8c95-6a4f-11e9-af37-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "world", "public radio"]
+logo_url = "https://www.rnz.co.nz/x/favicons/production/apple-touch-icon-14e8cc0d5e9a21845ce6a582e39617baeebe39d41412666ecebcdba7f3c1770a.png"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4889d4ef-a405-11e8-abb8-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://cdn-profiles.tunein.com/s302357/images/logoq.png"
+

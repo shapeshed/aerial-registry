@@ -1,0 +1,54 @@
+# EG Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961a5858-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio 9090"
+tags = ["pop", "world"]
+logo_url = "http://www.9090.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3f5d8a52-dea9-4201-9575-a58adc8e9263"
+source_hash = "manual"
+name = "Mahmoud Khalil Al-Hussary"
+tags = ["world", "culture"]
+logo_url = "http://www.phantomsw.com/assets/img/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0b14ae20-92b3-4db7-834f-ee6ba39ad080"
+source_hash = "manual"
+name = "Mishary Al-Afasi"
+tags = ["world", "culture"]
+logo_url = "http://www.phantomsw.com/assets/img/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0155ec12-7308-468a-88dc-fcbd440e01da"
+source_hash = "manual"
+name = "Mustafa Ismail"
+tags = ["world", "culture"]
+logo_url = "http://www.phantomsw.com/assets/img/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5e1c31e7-7541-439a-9081-6f78508bb637"
+source_hash = "manual"
+name = "Yasser Al-Dosari"
+tags = ["world", "culture"]
+logo_url = "http://www.phantomsw.com/assets/img/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "de776c2f-ac0d-47da-a14d-e5d8bb2e54d5"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://nrj.com/img/NRJ_EGYPT_140.jpg"
+

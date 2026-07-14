@@ -1,0 +1,82 @@
+# SI Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "989a4888-4e80-4abb-bdcd-d5087cb2c830"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "http://radiocenter.si/images/icons/icon_192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fafeac6a-8cf1-4f9d-8d04-c102560d6e6e"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://media.radiobob.si/ico/32.png"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2fc307a0-1ac8-4f92-b988-7c9456fbb440"
+source_hash = "manual"
+tags = ["pop", "news", "public radio"]
+logo_url = "https://media.radio1.si/ico/32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961b7fdb-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "http://www.rockradio.si/images/icons/icon_192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "664a651a-b3ed-42c2-ae4d-111992f775f9"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://www.radiocapris.si/data/images/favicon/favicon-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fd7d0ef0-3227-4215-bfb8-a82ec4fa420a"
+source_hash = "manual"
+tags = ["pop", "rock", "world"]
+logo_url = "https://radiokrka.si/images/favicon.bmp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a3685970-960f-4454-9bb3-a047c23908ac"
+source_hash = "manual"
+tags = ["jazz", "soul", "funk", "electronic"]
+logo_url = "https://radionula.com/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a7b6e9b7-6d9d-476b-b07c-be676d6f6d87"
+source_hash = "manual"
+tags = ["house", "electronic", "dance"]
+logo_url = "https://enter.radio/images/icons/icon_192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "295da81e-0cd6-49f9-bc9f-8cccc2b78f58"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://www.radiocapris.si/data/images/favicon/favicon-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1d7bf408-11cd-4ae2-b3ea-7c435503045c"
+source_hash = "manual"
+tags = ["electronic", "house", "ambient"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s111827g.png"
+

@@ -1,0 +1,14 @@
+# PA Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960b3af3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "world", "talk"]
+logo_url = "https://amoriginal.net/wp-content/uploads/2024/03/cropped-logo_am_original_v2_512x512-180x180.png"
+

@@ -1,0 +1,50 @@
+# SA Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "adab5f75-f0d6-44e6-9b67-f9bfcc1112bd"
+source_hash = "manual"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://mbc.net/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "215d9397-56e4-4c14-a875-2dbd123ca970"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.mbc.net/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c7a5f6d9-e524-4bfe-9e19-70a74e7c63b4"
+source_hash = "manual"
+tags = ["pop", "ambient"]
+logo_url = "https://mbc.net/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "855b419e-f738-464d-afe2-259f5ad44ec6"
+source_hash = "manual"
+tags = ["news", "talk", "business", "world"]
+logo_url = "https://asharqbusiness.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "98df39c2-f5f9-4bc9-ae98-c554528c2cd9"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://mbc.net/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3da33a8b-06b7-4fd7-8001-121cee38e651"
+source_hash = "manual"
+name = "HOUB Radio"
+tags = ["pop", "world", "culture"]
+logo_url = "https://houb.com/img/logo/houb.png"
+

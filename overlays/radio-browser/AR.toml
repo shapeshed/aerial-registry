@@ -1,0 +1,96 @@
+# AR Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bcb3b03a-f0ec-4ceb-b22f-922138858800"
+source_hash = "manual"
+name = "Rock And Pop FM 95.9"
+tags = ["rock", "pop"]
+logo_url = "https://fmrockandpop.com/pwa/ios_192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f006d4dc-9771-4109-bf35-eb09291320da"
+source_hash = "manual"
+name = "Mitre AM 790"
+tags = ["news", "talk"]
+logo_url = "https://cloudfront-arc.cienradios.com/radiomitre/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3c6c111c-6bbc-44ae-8ad8-46b502b3002a"
+source_hash = "manual"
+name = "Radio Rivadavia AM 630"
+tags = ["news", "talk"]
+logo_url = "https://rivadavia.com.ar/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7b03996e-6ea0-4db5-8168-ddd1463faec2"
+source_hash = "manual"
+name = "La 100 99.9 FM"
+tags = ["pop", "rock"]
+logo_url = "http://cdn-profiles.tunein.com/s6984/images/logod.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a226ec5a-830a-11e9-aa30-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "culture"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/0/00/Nacional_AM_870_2016.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "934227d3-8f39-42c7-843b-8b923f2f9f9c"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Vale975.png/225px-Vale975.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4ff249e9-131b-4fae-88f0-d93c744240ee"
+source_hash = "manual"
+tags = ["pop", "dance", "electronic"]
+logo_url = "https://cdn-profiles.tunein.com/s25987/images/logog.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3ea493af-47f5-11e9-aa55-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "indie"]
+logo_url = "https://static.wixstatic.com/media/3e84df_ec590205fae242a7b22feb981c2e1114%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/3e84df_ec590205fae242a7b22feb981c2e1114%7Emv2.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4285a122-9c78-417e-879e-5440c0482c56"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://fmaspen.com/wp-content/themes/aspen/images/logoaspen.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6432472d-15a0-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://www.rosario3.com/__export/1559748440188/sites/rosario3/arte/v2/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "17520f6a-159f-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://www.rosario3.com/__export/1559748440188/sites/rosario3/arte/v2/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9257ed3b-c422-43cf-a8dd-8165861b3187"
+source_hash = "manual"
+name = "Radio Disney 94.3"
+tags = ["pop"]
+logo_url = "https://cdn-profiles.tunein.com/s13659/images/logog.png"
+

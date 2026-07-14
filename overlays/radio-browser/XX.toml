@@ -1,0 +1,23 @@
+# XX Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dd9a5d3d-5656-11e9-a4d7-52543be04c81"
+source_hash = "manual"
+name = "WDR 1LIVE"
+tags = ["alternative", "pop", "indie"]
+logo_url = "https://www1.wdr.de/radio/1live/resources-v5.122.3/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e9597d4c-11b9-11ea-a87e-52543be04c81"
+source_hash = "manual"
+name = "Polskie Radio Trójka"
+tags = ["public radio", "rock", "culture"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240110_205543842.jpg?alt=media&token=426bbc79-f02a-44a6-818b-f1a4fa75031b"
+

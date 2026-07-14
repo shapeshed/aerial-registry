@@ -1,0 +1,22 @@
+# PS Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bcfe2aae-33fa-494a-a571-c3bbc8715c7d"
+source_hash = "manual"
+name = "Radio Al-Nas"
+tags = ["news", "talk", "culture", "world"]
+logo_url = "https://nasradio.fm/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d62fa52b-7c1c-492c-9861-cd2c0ec02f00"
+source_hash = "manual"
+tags = ["independent", "community", "eclectic"]
+logo_url = "https://radioalhara.net/img/radio-alhara-logo.svg"
+

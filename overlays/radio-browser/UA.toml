@@ -1,0 +1,96 @@
+# UA Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1f900b9a-ea3b-4eac-9505-1df5bef175be"
+source_hash = "manual"
+name = "Люкс FM 103.1"
+tags = ["pop"]
+logo_url = "https://lux.fm/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "55275efc-1ee2-4a52-9aef-7fb632c7f3e8"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://maximum.fm/assets/images/favicons/favicon-96x96.png?v=53"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "07467c50-9885-11e9-a605-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://radiotrek.rv.ua/tpl/images/icons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96309e77-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "ambient", "house"]
+logo_url = "http://brokenbeats.net/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a29d6620-3592-4f79-8ba5-2a781e34edef"
+source_hash = "manual"
+name = "Хіт FM Українські хіти"
+tags = ["pop"]
+logo_url = "https://www.hitfm.ua/static/img/fav-icon/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c44104ea-4963-49f1-ad49-f74bc8080763"
+source_hash = "manual"
+name = "Мелодія FM"
+tags = ["pop"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/6/26.v35.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2b739ef4-593e-4190-be36-5c93f0d6ad7b"
+source_hash = "manual"
+tags = ["blues", "rock"]
+logo_url = "https://i.ibb.co/7pjwNCm/Blues-Rock.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960a0bed-9524-4ea1-b6e8-b6d2431d5c26"
+source_hash = "manual"
+tags = ["pop", "dance", "electronic"]
+logo_url = "https://nrj.ua/images/NRJ.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7333e47a-a190-11e9-a787-52543be04c81"
+source_hash = "manual"
+name = "Radio ROCKS Kyiv 103.6 FM HD"
+tags = ["rock", "metal"]
+logo_url = "https://upload.wikimedia.org/wikipedia/uk/b/be/Logo_radio_roks.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d504c559-f882-11e8-a237-52543be04c81"
+source_hash = "manual"
+tags = ["world", "folk"]
+logo_url = "http://radioskovoroda.com/favicon.png?v=7ab70b6"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "705a8179-a2e3-479d-91fb-26dbb95e4856"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250111_141908308.jpg?alt=media&token=5b476f2f-6a30-4b8b-8d70-96c135e82ca8"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "026cebc6-9629-4b21-b29d-1596945182b7"
+source_hash = "manual"
+name = "LoungeFm Chill Out"
+tags = ["ambient", "electronic", "lounge"]
+logo_url = "https://loungefm.com.ua/img/icon-144x144.png"
+

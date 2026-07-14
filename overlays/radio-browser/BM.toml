@@ -1,0 +1,23 @@
+# BM Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962f73b8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Power 95 FM Hamilton"
+tags = ["hip-hop", "pop", "local"]
+logo_url = "http://cdn-radiotime-logos.tunein.com/s13330q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962a13ac-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Ocean 89 FM Hamilton"
+tags = ["pop", "local"]
+logo_url = "https://abs.twimg.com/favicons/twitter.2.ico"
+

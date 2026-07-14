@@ -1,0 +1,26 @@
+# LU Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9300b8d7-0953-48d8-82a2-fa69c3b3030b"
+source_hash = "manual"
+tags = ["dance", "house", "electronic", "trance", "edm"]
+logo_url = "https://generation.dance/logo_500x500.png"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960ef824-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "talk", "news"]
+logo_url = "http://www.rtl.lu/assets/images/favicon-rtllu/apple-touch-icon.png?v=202304271020"
+

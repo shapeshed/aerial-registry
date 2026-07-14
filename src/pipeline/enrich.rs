@@ -1,5 +1,4 @@
 use std::sync::Arc;
-use std::time::Duration;
 
 use futures::future::join_all;
 use reqwest::Client;
@@ -7,16 +6,10 @@ use serde::Deserialize;
 use tokio::sync::Semaphore;
 use tracing::{debug, info, warn};
 
+use crate::radio_browser_client::{discover_servers, with_retry};
 use crate::station::Station;
 
 const MAX_CONCURRENT: usize = 20;
-const MAX_RETRIES: u32 = 3;
-const RETRY_BASE_MS: u64 = 500;
-
-#[derive(Deserialize)]
-struct RbServer {
-    name: String,
-}
 
 #[derive(Deserialize)]
 struct RbStation {
@@ -54,9 +47,17 @@ pub async fn enrich(client: &Client, mut stations: Vec<Station>) -> Vec<Station>
             let client = client.clone();
             let sem = semaphore.clone();
             let servers = servers.clone();
+            // The bulk radio-browser provider already carries its own
+            // authoritative tags straight from this same API — re-querying
+            // it by name here would be redundant load on an upstream that's
+            // already prone to 502s.
+            let skip = station.provider == "radio-browser";
             let name = search_name(&station.name);
             let country_code = station.country_code.clone();
             async move {
+                if skip {
+                    return None;
+                }
                 let _permit = sem.acquire().await.unwrap();
                 fetch_tags_with_retry(&client, &servers, &name, country_code.as_deref()).await
             }
@@ -83,23 +84,6 @@ pub async fn enrich(client: &Client, mut stations: Vec<Station>) -> Vec<Station>
     stations
 }
 
-async fn discover_servers(client: &Client) -> anyhow::Result<Vec<String>> {
-    let servers: Vec<RbServer> = client
-        .get("https://all.api.radio-browser.info/json/servers")
-        .send()
-        .await
-        .map_err(|e| anyhow::anyhow!("request failed: {e}"))?
-        .json()
-        .await
-        .map_err(|e| anyhow::anyhow!("parse failed: {e}"))?;
-
-    if servers.is_empty() {
-        anyhow::bail!("server list was empty");
-    }
-
-    Ok(servers.into_iter().map(|s| s.name).collect())
-}
-
 /// Retries across servers with exponential backoff: 500ms, 1s, 2s.
 async fn fetch_tags_with_retry(
     client: &Client,
@@ -107,29 +91,11 @@ async fn fetch_tags_with_retry(
     name: &str,
     country_code: Option<&str>,
 ) -> Option<Vec<String>> {
-    for attempt in 0..MAX_RETRIES {
-        // Rotate through available servers on each retry.
-        let server = &servers[attempt as usize % servers.len()];
-
-        match fetch_tags(client, server, name, country_code).await {
-            Ok(tags) => return tags,
-            Err(e) => {
-                let delay_ms = RETRY_BASE_MS * 2u64.pow(attempt);
-                warn!(
-                    %name,
-                    %server,
-                    attempt = attempt + 1,
-                    delay_ms,
-                    error = %e,
-                    "Radio Browser lookup failed, retrying"
-                );
-                tokio::time::sleep(Duration::from_millis(delay_ms)).await;
-            }
-        }
-    }
-
-    warn!(%name, "Radio Browser lookup exhausted retries — no tags");
-    None
+    with_retry(servers, name, |server| async move {
+        fetch_tags(client, &server, name, country_code).await
+    })
+    .await
+    .flatten()
 }
 
 async fn fetch_tags(

@@ -1,0 +1,37 @@
+# AL Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4a75dd5d-f636-11e8-a471-52543be04c81"
+source_hash = "manual"
+name = "Albania News 24"
+tags = ["news"]
+logo_url = "https://www.balkanweb.com/icon//apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c2a284d3-1c1f-4eb8-b49c-4f5dff952d5a"
+source_hash = "manual"
+name = "Radio Shqip Tirana"
+tags = ["pop", "world"]
+logo_url = "http://shqipfm.al/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1d12e920-2e7c-42f2-ac14-809d9192a99b"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.topalbaniaradio.com/v7/wp-content/themes/topalbaniaradio/images/site-icons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "09c75736-4d82-44dd-96cd-9f778fd6a0d6"
+source_hash = "manual"
+tags = ["rock", "indie", "alternative"]
+logo_url = "https://jempradio.com/wp-content/uploads/2022/01/cropped-favicon3-180x180.png"
+

@@ -1,0 +1,22 @@
+# CR Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e8f49fa4-5468-11ea-be63-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "pop", "rock"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s50287q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cdad4475-158f-4f4c-827a-6a4589e582db"
+source_hash = "manual"
+name = "Urbano 106"
+tags = ["urban", "hip-hop", "reggae", "r&b", "dance"]
+logo_url = "https://i0.wp.com/www.urbano106.com/wp-content/uploads/2018/10/LOGO-PARA-WEBS.png"
+

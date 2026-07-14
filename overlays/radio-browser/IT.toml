@@ -1,0 +1,389 @@
+# IT Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e8eff2b7-6c93-4647-9567-986d647094ba"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/it/1/1b/Radio80.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "42932f35-f4f2-11e8-a471-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "pop"]
+logo_url = "https://rdsrelax.it/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "46904395-5af6-444d-bbf9-786000f39bac"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://www.deejay.it/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9624172b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.lolliradio.net/wp-content/uploads/2016/02/logo_italia-150x150.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "03bf6559-d0bb-43f1-9ad0-cf7b0a6ee035"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://musicajazz.it/wp-content/uploads/logo-120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "911edc58-4289-499b-895f-5e33c921421e"
+source_hash = "manual"
+tags = ["pop", "soul", "oldies"]
+logo_url = "https://www.lattemiele.com/wp-content/uploads/2020/07/cropped-logo-autore-lm-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cfccfb63-9002-4171-a521-4fb5bc673df1"
+source_hash = "manual"
+tags = ["electronic", "pop"]
+logo_url = "http://www.piterpan.it/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962c7032-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance"]
+logo_url = "https://www.italiadancemusic.com/it/themes/corporate_lite/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "99697308-29c5-4929-9054-2b9ed0726827"
+source_hash = "manual"
+tags = ["pop", "soul"]
+logo_url = "https://www.lovefm.it/themes/default/assets/img_c/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e5d0c4bd-16fe-4fd4-96f8-4c7b78ac1c2c"
+source_hash = "manual"
+tags = ["dance", "electronic", "house"]
+logo_url = "https://italosound.com/logo-cover.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e76db104-6f04-4b90-92a1-cbdfe3e35180"
+source_hash = "manual"
+tags = ["talk", "culture"]
+logo_url = "http://www.radiomaria.org/favicon.ico"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "986c5985-41d7-11ea-a95e-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://www.radio24.ilsole24ore.com/whitelabel/group-2420101401040528/img/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9619ea14-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock", "dance"]
+logo_url = "https://upload.wikimedia.org/wikipedia/it/0/01/105.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "83dcfac4-b3c3-4731-afc1-a80dd271dffa"
+source_hash = "manual"
+tags = ["pop", "dance", "folk", "oldies"]
+logo_url = "https://armisa.it/assets/favicon/android-chrome-512x512.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9619eb8a-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "http://www.virginradio.it/favicon_2.ico?v=1722509813651"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960beb61-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.r101.it/favicon_7.ico?v=1722509814243"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962c02bc-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://radioibiza.it/wp-content/uploads/2021/07/cropped-favicon-ibiza-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961f33a8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://cdn-radiotime-logos.tunein.com/s63968q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628e770-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://kisskiss.it/wp-content/uploads/2021/03/cropped-favicon-kisskiss-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "675bd925-8b13-43fe-a1b9-43bb0f90fbbd"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://cloud.rtl.it/assets/www.rtl.it/3.0.64/img/logo/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96283d73-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio 105 Rap Italia"
+tags = ["hip-hop"]
+logo_url = "http://www.105.net/favicon_3.ico?v=1722509813759"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fbe60456-15e8-4db4-a1f1-4ce77b7aaecc"
+source_hash = "manual"
+tags = ["rock", "alternative"]
+logo_url = "https://www.capital.it/wp-content/themes/network-capital/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96185693-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio Rai 1"
+tags = ["news", "pop", "talk"]
+logo_url = "https://www.rai.it/cropgd/560x292/dl/img/2019/01/07/1280x720_1546854278675_conferenza%20radio1.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96286dce-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "soul", "lounge"]
+logo_url = "http://www.radiomontecarlo.net/favicon_1.ico?v=1722509813463"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "06d08b6f-e656-4ce9-ae3c-f352bd6bd924"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "http://players1.fluidstream.it/RadioNostalgiaPV/images/logo320.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96149c7f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.radiomontecarlo.net/favicon_1.ico?v=1722509813463"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628ca6e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://www.birikina.it/wp-content/uploads/2020/02/ico-fb-1.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "14274755-9b92-4dcb-8dee-d474bfc8a8fd"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://www.rtr99.it/onair/CanalePooh/OnAir.jpg?x=9f2sj07zxxhpl2i1aocli"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "af6b114a-5c13-426e-b667-f58a9bd79b92"
+source_hash = "manual"
+name = "Romantica Radio"
+tags = ["pop", "soul"]
+logo_url = "https://romanticaradio.it/wp-content/uploads/2022/05/cropped-favicon_romantica-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "44c862a3-27e7-4d88-be66-4c70a642bb38"
+source_hash = "manual"
+name = "70 80 Hits HQ"
+tags = ["pop", "oldies", "rock"]
+logo_url = "https://cdn-profiles.tunein.com/s267625/images/logog.jpg?t=159500"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ae5a083b-049b-46d9-ba8e-9c2f07dc70b3"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://radionorba.it/wp-content/uploads/2021/05/cropped-logo-radionorba-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0f5f71e2-ee63-4054-9d0d-18f2e106b37d"
+source_hash = "manual"
+name = "Radio Energy Classic Italy"
+tags = ["rock", "oldies", "soul", "funk", "disco"]
+logo_url = "https://www.radioenergy.to/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "69aff725-522c-11e9-a4d7-52543be04c81"
+source_hash = "manual"
+tags = ["sport", "talk"]
+logo_url = "http://players.fluidstream.it/RadioBiancoNera/icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "85a96041-5734-43de-a351-9edddc88afd0"
+source_hash = "manual"
+tags = ["disco", "funk", "soul", "r&b"]
+logo_url = "https://www.radio80.it/wp-content/uploads/2015/02/logo-radio80-1.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b25710a3-fb1b-4aa7-ba81-142ee6f5bea9"
+source_hash = "manual"
+tags = ["rock", "oldies"]
+logo_url = "https://cloud.radiofreccia.it/assets/www.radiofreccia.it/1.0.43/img/logo/android-icon-192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e8b3651f-ac91-11e8-aa67-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "http://radiodancefloor.it/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7086a4aa-cc04-11e9-8502-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "italian"]
+logo_url = "https://www.radiosubasio.it/wp-content/themes/radiosubasiov2/assets/images/logo-radio-subasio.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964501c9-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "http://www.playcapital.it/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96060498-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "culture"]
+logo_url = "https://www.radiosabbia.it/wp-content/uploads/2021/02/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "571ecf3e-f348-4bdb-b30d-31e2a20e8fe9"
+source_hash = "manual"
+tags = ["funk", "soul", "dance"]
+logo_url = "https://cdn.gelestatic.it/capital/sites/2/2016/11/webradio-funkytown2-320x320.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9624d45b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://www.marilu.it/wp-content/uploads/2023/03/cropped-radio-marilu-plettro-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d50de3ae-0aa8-46b6-9c1e-c4759d53ce22"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://giornaleradio.fm/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961bb8ba-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.radioholiday.it/wp-content/uploads/cropped-favicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "aa286661-9ec4-40b9-ab05-33ba928431d7"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.italyclassicalradio.it/player/template/img/logo.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628ec05-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://kisskiss.it/wp-content/uploads/2022/07/cropped-favicon-new-kisskiss-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ed5388e2-d071-4369-af0c-d09a2e26c952"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.unitedmusic.com/favicon_6.ico?v=1722509814047"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fed3b0da-e61a-4b6d-8ba5-4f7b99d407a6"
+source_hash = "manual"
+tags = ["indie", "rock", "electronic"]
+logo_url = "https://www.dumdumrepublic.com/images/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9629103e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://www.radiociao.com/wp-content/uploads/2021/09/cropped-favicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "30494962-3178-42e2-9b3e-60aa397f83d9"
+source_hash = "manual"
+tags = ["sport", "public radio"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/ramgajabuhqm.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f8a910c3-fd87-4376-af20-1af5bfec6ab4"
+source_hash = "manual"
+name = "m2o"
+tags = ["dance", "electronic", "pop"]
+logo_url = "https://www.radioindiretta.fm/img-radio/m2o-radio.jp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628aa3d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["sport", "talk"]
+logo_url = "https://www.tmwradio.com/template/tmwradio.com/default/favicon/favicon144.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "77ff2da8-6fd2-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "pop", "rock", "talk", "indie"]
+logo_url = "https://www.radiocavolo.org/wp-content/uploads/2020/10/cropped-radio-cavolo-logo-white-background-300x300-1-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a1c99f81-f8d1-4f6d-b9e3-714763a72b7d"
+source_hash = "manual"
+tags = ["independent", "eclectic"]
+logo_url = "https://www.radioraheem.it/wp-content/themes/gds-vue/meta/favicon.svg"
+

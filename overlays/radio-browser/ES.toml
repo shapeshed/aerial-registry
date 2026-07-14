@@ -1,0 +1,21 @@
+# ES Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "26edc6b6-d221-4814-a6a9-0dd5d5d365d2"
+source_hash = "manual"
+tags = ["house", "dance", "electronic"]
+logo_url = "https://www.pureibizaradio.com/wp-content/uploads/2026/04/cropped-WhatsApp-Image-2026-04-16-at-18.17.42-180x180.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "450a5177-1752-11ea-a620-52543be04c81"
+source_hash = "manual"
+tags = ["house", "ibiza", "electronic"]
+logo_url = "https://cafemamboibiza.com/images/FAVICON-M.png"
+

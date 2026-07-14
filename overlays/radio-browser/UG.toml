@@ -1,0 +1,36 @@
+# UG Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "86780c91-4067-4746-8ae2-96a8cb75f8c4"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.facebook.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b488abb8-5597-4831-9681-2614e1f2904c"
+source_hash = "manual"
+tags = ["pop", "afro-pop"]
+logo_url = "https://static.wixstatic.com/media/d258bf_9ee2ce20728d4cf48214cf55c12914de~mv2.png/v1/crop/x_0,y_168,w_600,h_278/fill/w_140,h_67,al_c,q_85,usm_0.66_1.00_0.01/reckless%20logo%20black%20clear.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e2d2f120-6771-4e92-8fff-7e5ba1052414"
+source_hash = "manual"
+name = "98.8 Buddu FM"
+tags = ["rock"]
+logo_url = "https://radiobuddufm.com/images/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1ff2e73e-a58a-48cb-b3bc-996962b3a07e"
+source_hash = "manual"
+tags = ["rock", "oldies"]
+logo_url = "https://ilikeitoldskool.co.uk/favicon.ico"
+

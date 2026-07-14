@@ -1,0 +1,43 @@
+# IE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "406dbb8a-a581-11e9-a787-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "indie", "alternative"]
+logo_url = "https://www.nova.ie/wp-content/uploads/2024/11/cropped-favicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8643cfcb-a7bb-4c46-8391-fffe266bce16"
+source_hash = "manual"
+name = "RTÉ 1"
+tags = ["news", "talk", "pop"]
+logo_url = "http://i.imgur.com/KDHt1eb.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7e75d295-da3d-41e9-9d69-757e7a281821"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://mmo.aiircdn.com/286/650a94ce36fd7.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ad48771d-17a7-11ea-a620-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://www.98fm.com/favicon.ico?v=11"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c96b0b99-6dc6-4b76-9971-b48a55c628ca"
+source_hash = "manual"
+tags = ["classical", "culture"]
+logo_url = "https://www.liveradio.ie/files/images/101096/resized/140x134c/rte_lyric_fm.png"
+

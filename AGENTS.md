@@ -45,6 +45,7 @@ What a provider agent may do:
 | `bauer`        | `docs/providers/bauer.md`        |
 | `curated`      | reads `stations.toml` at root    |
 | `global`       | `docs/providers/global.md`       |
+| `radio-browser`| `docs/providers/radio-browser.md`|
 | `radio-france` | `docs/providers/radio-france.md` |
 | `rtve`         | `docs/providers/rtve.md`         |
 | `wireless`     | `docs/providers/wireless.md`     |
@@ -54,6 +55,11 @@ implementing the provider in `src/providers/`, and registering it in the pipelin
 
 The `curated` provider is different — it reads `stations.toml` at the repo root.
 Independent stations that are not covered by a broadcaster provider go there.
+
+`radio-browser` is different again — it's the untrusted bulk long-tail
+provider, not a broadcaster feed. Known-bad entries from it are corrected or
+excluded via `overlays/radio-browser/<COUNTRY>.toml`, not by editing the
+provider or `stations.toml`.
 
 ## Station Discovery Workflow
 

@@ -1,0 +1,476 @@
+# GB Radio Browser corrections. See ../README.md for the entry format.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a6d18be5-282c-42ea-90f5-40320466399a"
+source_hash = "manual"
+reject = true
+# Duplicate of the trusted "BBC Radio London (International)" entry
+# (bbc/bbc_london_int) under a different name format ("96k nonuk" instead
+# of "International"), so exact-name dedup doesn't catch it.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "464d1d2c-870b-4a0c-82f9-38eec5e28295"
+source_hash = "manual"
+tags = ["jazz", "soul", "world", "electronic", "eclectic"]
+logo_url = "https://worldwidefm.net/wp-content/uploads/2023/03/WWFM-Logo-2023.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "73490696-3343-4fa2-8045-b8d11e3bb0fb"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.linnrecords.com/images/linn-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "686a0847-a519-460d-b351-831e1a80d516"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.linnrecords.com/images/linn-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6d55f9ad-5a50-4ac3-be1c-4abcbb68fd09"
+source_hash = "manual"
+tags = ["alternative", "indie", "indie rock"]
+logo_url = "https://cdn-profiles.tunein.com/s159857/images/logod.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a7d816c2-722f-4060-907d-b4c796482d87"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.jazzlondonradio.com/images/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2c788192-ca75-42c9-ace6-866087380796"
+source_hash = "manual"
+tags = ["alternative", "hip-hop", "electronic"]
+logo_url = "https://cdn-profiles.tunein.com/s155539/images/logod.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "62bfcbb9-0503-11e9-a1be-52543be04c81"
+source_hash = "manual"
+tags = ["trance", "dance", "electronic"]
+logo_url = "http://www.1mix.co.uk/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "22eb42bb-ced7-4556-b902-e789d4411ff3"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "http://cdn-profiles.tunein.com/s310252/images/logod.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fe6cd053-2fef-43e3-88af-8fac82591868"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b672eb95-f96e-4fcd-809e-0bb7d690c286"
+source_hash = "manual"
+tags = ["oldies", "rock", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "30153bd1-4c23-4439-a24c-da2820bce863"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a5be3d91-3546-11ea-8dd7-52543be04c81"
+source_hash = "manual"
+tags = ["trance", "electronic", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ddde79f4-389a-4055-b2e4-90c1dbb73084"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.naimaudio.com/build/assets/apple-touch-icon-2a4e35a0.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4b137d96-506f-4b0e-ad9f-744fd29a865d"
+source_hash = "manual"
+tags = ["soul", "funk", "jazz", "r&b", "oldies"]
+logo_url = "https://cdn2.editmysite.com/images/site/footer/og-image-placeholder-blank.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0e0f2961-5c53-4c52-af70-eebe1b2af496"
+source_hash = "manual"
+tags = ["rock", "alternative"]
+logo_url = "https://24-7nicheradio.com/wp-content/uploads/2017/04/psychedelic.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fe4c2870-703c-4802-b2f6-a95664be32ff"
+source_hash = "manual"
+tags = ["rock", "alternative", "indie"]
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961e6cac-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "experimental", "electronic"]
+logo_url = "https://www.nts.live/apple-touch-icon.png?v=47re43rrzb"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9634ab94-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "experimental", "electronic"]
+logo_url = "https://www.nts.live/apple-touch-icon.png?v=47re43rrzb"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9618c695-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Resonance FM"
+tags = ["arts", "experimental", "spoken word"]
+logo_url = "https://www.resonancefm.com/wp-content/uploads/2020/01/resonance-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b342f658-2726-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "house"]
+logo_url = "https://www2.techno.fm/images/technofm-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961bd688-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance"]
+logo_url = "http://www.differentdrumz.co.uk/wp-content/uploads/fbrfg/apple-touch-icon-114x114.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d69fbc2c-530a-4d40-ac9f-56532356b248"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+logo_url = "http://www.chilloutibizafm.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5b7d9b52-5fe5-11ea-be63-52543be04c81"
+source_hash = "manual"
+tags = ["metal", "rock"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "30820d12-0409-44b7-b5e8-edc594910d92"
+source_hash = "manual"
+name = "Radio Seva"
+tags = ["rock", "talk", "world"]
+logo_url = "https://seva.ru/radio/radio.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fde68ad6-a405-11e8-abb8-52543be04c81"
+source_hash = "manual"
+tags = ["oldies"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s264062d.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b445d099-6958-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "country"]
+logo_url = "https://truckers.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d177cdd0-175c-11ea-a620-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "trance"]
+logo_url = "http://www.1mix.co.uk/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "da0ae3e2-1770-11ea-a620-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://www.nonstopplay.com/wp-content/uploads/2022/12/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "47416a39-4289-47a9-8747-056843a60c0b"
+source_hash = "manual"
+tags = ["comedy", "culture"]
+logo_url = "https://pumpkinfm.com/wp-content/uploads/2019/02/BritComTwo300x300.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9f61ef81-bf7d-4bc4-8135-3fc8be52dafb"
+source_hash = "manual"
+name = "Soul Radio"
+tags = ["soul", "oldies", "r&b"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "64712b5f-a8c3-48cd-a8d2-2f19c94b3473"
+source_hash = "manual"
+tags = ["electronic", "dance", "ambient"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c9aabff3-95d1-4f9e-8b29-6682f7e031e2"
+source_hash = "manual"
+tags = ["new wave", "punk", "pop", "alternative"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8c78482a-17db-4057-a7c7-8fa14b3c3ce9"
+source_hash = "manual"
+tags = ["house", "electronic", "dance"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/aWa7xGKfBh.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dce75ec5-a0f8-4bba-bf4c-2827c871490c"
+source_hash = "manual"
+tags = ["culture", "talk"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "438ae94b-f110-11e9-a96c-52543be04c81"
+source_hash = "manual"
+tags = ["funk", "soul", "oldies", "disco"]
+logo_url = "http://thegrooveradio.co.uk/upload/5d67aa7d3a8281.16670430.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7ccca232-b731-4060-9baf-c3a1a5b992e7"
+source_hash = "manual"
+name = "Techno.FM"
+tags = ["electronic", "dance", "trance"]
+logo_url = "https://www2.techno.fm/images/technofm-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "695da448-1840-4e4f-adda-57d699900b58"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8c99195e-0c7e-4fe8-aa47-9a14f39178e7"
+source_hash = "manual"
+name = "Dance Attack FM"
+tags = ["dance", "electronic", "house", "trance"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/9/33659.v9.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1d18fe6a-2110-4903-9f11-cffaf95b3c06"
+source_hash = "manual"
+tags = ["talk", "culture"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "387221ff-0b8c-4639-ae3c-5d072efc65b3"
+source_hash = "manual"
+tags = ["public radio", "talk"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/7/70/BFBS_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "21dbb37d-60a6-4ec2-b5c8-28b46fc2bfea"
+source_hash = "manual"
+tags = ["electronic", "dance", "hardcore"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "172d8c95-fecd-40b7-af6f-9cdf4e8829e4"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://www.celsoazevedo.com/files/2025/magic.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96398b70-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fba2054a-0812-4a8f-b9bf-ab0546c5cccd"
+source_hash = "manual"
+tags = ["electronic", "dance", "drum & bass"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "822b1291-d6c9-4493-a008-6e87c2e943da"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "http://sonatica.fm/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "39e49a9c-c692-4642-8a84-1201680bb566"
+source_hash = "manual"
+tags = ["trance", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "37bf8039-77ed-4805-9030-c40d5cb2820a"
+source_hash = "manual"
+name = "BritCom 3 - British Comedy Radio"
+tags = ["comedy"]
+logo_url = "https://pumpkinfm.com/wp-content/uploads/2023/02/BritComThreeNew300x300-3.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ff871225-7731-45a1-aee0-9e8fa463dfc3"
+source_hash = "manual"
+tags = ["pop", "talk"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9626fd02-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "reggae", "dance"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "29dc48c6-adf5-49bf-a9d7-dfde3e9cfc6d"
+source_hash = "manual"
+tags = ["electronic", "dance", "drum & bass"]
+logo_url = "https://www.ukbassradio.com/wp-content/uploads/2021/03/cropped-thumbnail_ukbass-radio5.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dab217e9-2fb1-4dee-ae95-00fece1688ad"
+source_hash = "manual"
+name = "1Mix Radio - House"
+tags = ["house", "electronic"]
+logo_url = "https://www.1mix.co.uk/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7ae5f001-8112-4e6c-abf4-d069dc37e3a9"
+source_hash = "manual"
+tags = ["electronic", "dance"]
+logo_url = "https://boxuk.danceradiouk.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6925c7e9-116b-42ab-9126-4c13c1b65baf"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/c/cd/NOW_70s.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c58c0009-ad0d-4ed5-a208-a8e797885a75"
+source_hash = "manual"
+tags = ["house", "electronic"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "afd2672a-d921-11e8-a9cc-52543be04c81"
+source_hash = "manual"
+tags = ["jazz"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dd4e349c-77df-43da-a97d-34234ab08a2f"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5c850da2-076b-43b5-aa38-91e72fac39f6"
+source_hash = "manual"
+name = "Diva Radio"
+tags = ["funk", "disco", "soul", "r&b"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "227f56f5-c291-493d-9d28-ec19f61779bc"
+source_hash = "manual"
+tags = ["world", "folk"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8cf13f16-df99-4fd8-b152-ab8218563a36"
+source_hash = "manual"
+name = "BritCom 1"
+tags = ["comedy", "culture"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5ed77642-9f68-484a-8bbc-af00a4acc629"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://mmo.aiircdn.com/460/5fb3bb6151ee4.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6eef88eb-396c-4393-86aa-1ba04ff91918"
+source_hash = "manual"
+tags = ["techno", "hard techno", "electronic"]
+logo_url = "https://eilo.org/press/eilo_default.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b8148b29-09d0-4aa1-8bfe-43d236260170"
+source_hash = "manual"
+tags = ["drum and bass", "liquid", "electronic"]
+logo_url = "https://liquid-dnb.com/assets/images/whatsapp-image-2025-08-17-at-09.27.37-4eed50eb-1536x1024.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bb074b4a-c9cc-4811-8282-171ac9bc114f"
+source_hash = "manual"
+tags = ["brown noise", "ambient", "chillout"]
+logo_url = "https://placehold.co/512/964B00/964B00.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96447669-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pink noise", "ambient", "chillout"]
+logo_url = "https://placehold.co/512/FFC0CB/FFC0CB.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b830f77b-cb54-431d-9bdb-0af9bc6af301"
+source_hash = "manual"
+tags = ["jazz", "soul", "house", "eclectic"]
+logo_url = "https://sohoradio.com/wp-content/themes/sohoradio-jan-2023/build/images/favicons/sohoradio-192x192.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3892cc14-04c6-43ae-963b-f2b76ae89ba1"
+source_hash = "manual"
+tags = ["soul", "jazz-funk", "disco", "soulful house", "rnb"]
+logo_url = "https://solarradio.com/wp-content/uploads/2020/04/proposed-solar-logo-small.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d210ac34-0fee-4586-b9d6-24b84e2c0c4e"
+source_hash = "manual"
+tags = ["house", "deep house", "electronic"]
+logo_url = "https://d3ep.com/assets/images/og.png"
+

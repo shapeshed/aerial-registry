@@ -1,0 +1,14 @@
+# GH Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7babd377-ed7c-4a63-9778-47b0fd94983b"
+source_hash = "manual"
+tags = ["independent", "eclectic", "african"]
+logo_url = "https://d4mt18vwj73wk.cloudfront.net/stationImage/2024-05-06T09:43:04Z-1024x1024.jpeg"
+

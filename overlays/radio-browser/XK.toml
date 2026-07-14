@@ -1,0 +1,14 @@
+# XK Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "86d841af-e9d9-4917-9986-cae25a516087"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+logo_url = "https://www.radiokosovaelire.com/wp-content/uploads/RKL_UCK-e1469806643318.jpg"
+

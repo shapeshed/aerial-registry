@@ -1,0 +1,31 @@
+# TW Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96b88cb2-76a4-43fb-9257-e791103f5fa8"
+source_hash = "manual"
+name = "Taipei Radio"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://liveonlineradio.net/wp-content/uploads/2021/09/radio-taipei-93.1-fm-220x108.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2ab1eeac-c914-11e8-a54a-52543be04c81"
+source_hash = "manual"
+name = "1766 Online Radio"
+tags = ["pop", "indie"]
+logo_url = "https://www.1766.today/wp-content/uploads/2016/11/cropped-radio_icon_660px-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "44b20dae-1bbe-48d1-9f79-3c1f5396ef90"
+source_hash = "manual"
+name = "Cheng Sheng Broadcasting"
+tags = ["public radio"]
+logo_url = "https://www.csbc.com.tw/wp-content/uploads/2019/12/cropped-6044e1b77e91b4fe89b435-2-180x180.png"
+

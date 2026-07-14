@@ -1,0 +1,28 @@
+# DO Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2d74552d-1755-11ea-a620-52543be04c81"
+source_hash = "manual"
+tags = ["world", "latin"]
+logo_url = "http://radiobachata.net/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d46cbf35-8828-452f-9498-8c7838064644"
+source_hash = "manual"
+tags = ["world", "latin"]
+logo_url = "https://latina104.net/wp-content/uploads/2021/06/cropped-latina-104-500x500-1-180x180.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c29e907a-641c-4ad2-bb6a-aa50b2a1126a"
+source_hash = "manual"
+tags = ["world", "latin"]
+logo_url = "https://fieramix.com/assets/favicon.ico"
+

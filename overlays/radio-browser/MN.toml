@@ -1,0 +1,14 @@
+# MN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b1aae7b8-8916-4016-b57a-c2bb08704510"
+source_hash = "manual"
+tags = ["talk", "public radio"]
+logo_url = "https://www.facebook.com/favicon.ico"
+

@@ -1,0 +1,14 @@
+# BD Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4d01c3fb-75d8-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+logo_url = "https://liveonlineradio.net/img/favicon_96.png"
+
