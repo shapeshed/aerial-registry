@@ -1,0 +1,43 @@
+# PK Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cc059379-dd72-451e-82af-434cb3859c7b"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://hpanel.hostinger.com/favicons/hostinger.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a754b1cb-4a13-47ab-9215-10473d5a13c8"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyfsXeLHe8pcIRbGUSr7KczIjjpiMiGNh101nywFkEQkHmz1yKAftWRL06&s=10"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ea24a46f-5bb4-4d28-9a72-c2145981a741"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://radio.gov.pk/site_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1c4c4c77-a792-4075-846d-dff13cfc0980"
+source_hash = "manual"
+name = "City FM 89 Islamabad"
+tags = ["pop", "talk"]
+logo_url = "https://cityfm89.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d5144a6e-50c3-4dfb-a555-a82ff7756e19"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://fm91.com.pk/wp-content/uploads/2021/10/site-logo-2.png"
+

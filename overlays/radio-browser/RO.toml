@@ -1,0 +1,155 @@
+# RO Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cae1ff66-8f22-42a1-b86e-586525d2cb15"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "http://www.europafm.ro/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "331f8e7c-a7ca-4c19-b1f2-1998cca09d4c"
+source_hash = "manual"
+tags = ["rock", "indie", "alternative"]
+logo_url = "http://guerrillaradio.ro/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7912ccbd-e75d-425c-85b9-0b2ac2a4b213"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://radiozu.ro/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4ce98b69-f4c7-4f54-931d-0874ef0f4f68"
+source_hash = "manual"
+tags = ["alternative", "rock"]
+logo_url = "http://darkedge.ro/favicon-32x32.png"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f65094f5-2cae-4d4e-ab4a-12f2e7d274bb"
+source_hash = "manual"
+name = "Deep House Radio Bucharest"
+tags = ["house", "electronic", "dance"]
+logo_url = "http://www.dancemusic.ro/dancemusic-favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b162d016-5628-42cf-8fb1-22866ba5f065"
+source_hash = "manual"
+tags = ["dance", "electronic", "pop"]
+logo_url = "https://is3-ssl.mzstatic.com/image/thumb/Music/v4/b7/89/4a/b7894a1a-07c8-d9ae-fc50-5fcc33c59173/source/280x280.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9641c132-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "world"]
+logo_url = "https://fmradiomanele.ro/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "91f5bcf5-896b-46ca-afae-7c767b7ce0e2"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.smartradio.ro/wp-content/themes/smart-radio/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fbf65b83-6883-4b09-8f8b-5205cdbd509d"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://radiorfm.ro/wp-content/uploads/2023/05/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2eb897a7-b86b-4bb2-b245-94a43829b7e5"
+source_hash = "manual"
+tags = ["rock", "metal", "alternative"]
+logo_url = "https://media.bauerradio.com/image/upload/c_crop,g_custom/v1606737505/brand_manager/stations/qyxv7nnrvwnnokjxrxgi.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0ae51e4d-6c87-467f-b630-85548b428310"
+source_hash = "manual"
+tags = ["dance", "pop", "oldies"]
+logo_url = "https://media.bauerradio.com/image/upload/c_crop,g_custom/v1606492636/brand_manager/stations/agepcxvlmp6fbmslx6tt.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "52fec34e-b4fa-4a5a-96cf-e17ffa9bd76d"
+source_hash = "manual"
+tags = ["pop", "dance", "talk"]
+logo_url = "https://www.playradio.ro/wp-content/uploads/2023/02/Logo-PNG.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3c98d6c2-f370-4171-920a-883d938cb3f3"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.radiooldies.ro/wp-content/uploads/2018/02/radiooldies-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e76147c6-7657-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://www.rockfm.ro/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960e6f4f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio DEEA"
+tags = ["electronic", "dance"]
+logo_url = "https://i0.wp.com/radiodeea.ro/wp-content/uploads/2017/07/cropped-fav2.jpg?fit=180%2c180&#038;ssl=1"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c4eb7648-e867-4545-bdda-71b1368db779"
+source_hash = "manual"
+name = "Atmospheric DNB Source"
+tags = ["electronic", "dance"]
+logo_url = "https://brokenbeats.net/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "00d1815f-8752-472b-8e1f-805431e96952"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://w7.pngwing.com/pngs/843/39/png-transparent-cluj-napoca-radio-impuls-paprika-radio-fm-broadcasting-radio-electronics-text-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "140c9452-873f-4449-8d30-69ccd5a06943"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://radiokokoms.ro/images/radiokoko-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "063759b2-3420-4a70-8b6b-a0462147128a"
+source_hash = "manual"
+tags = ["world", "folk"]
+logo_url = "https://myradioonline.ro/public/uploads/radio_img/radio-manele/play_250_250.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2201580c-c680-11e8-a498-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "world"]
+logo_url = "https://www.radiooltenia.ro/wp-content/themes/radiooltenia/images/favicons/favicon-96x96.png"
+

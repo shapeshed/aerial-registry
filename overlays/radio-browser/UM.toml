@@ -1,0 +1,22 @@
+# UM Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "10674899-aa35-4855-86ee-464e6b279ff4"
+source_hash = "manual"
+name = "Dance 90s"
+tags = ["dance", "oldies"]
+logo_url = "https://coolfm.hu/radio/wp-content/uploads/2022/01/cropped-egyszer%C5%B1-k%C3%A9p-192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a0742466-5326-4b22-99f7-b1cef79f542b"
+source_hash = "manual"
+tags = ["rock", "alternative", "indie"]
+logo_url = "https://i0.wp.com/www.suburbspod.com/wp-content/uploads/2022/01/rts-radio-web_thumb.jpg"
+

@@ -1,0 +1,14 @@
+# VE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "29f27302-3772-4b97-be1e-4405d22a6f7e"
+source_hash = "manual"
+tags = ["pop", "world", "latin"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/5/60575.v24.png"
+

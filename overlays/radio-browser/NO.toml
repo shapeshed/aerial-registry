@@ -1,0 +1,33 @@
+# NO Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ce27f2dc-7da9-4048-b0d0-013a115552f2"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/95c6448b-5cb4-4403-baca-686c22ba0c60.jpg?w=600&ar=1x1"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5f7bd883-abc7-11e9-88f4-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "news"]
+logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/6e2f9c96-a018-424a-b3bf-7be5252d806c.png?w=600&ar=1x1"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f8c657d3-5221-4e32-96d6-15db1cd1a662"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://ddjh0q34m0xak.cloudfront.net/mmo/ncl/488dff43-6567-45ec-bd55-1813ccf861a4.png?w=600&ar=1x1"
+

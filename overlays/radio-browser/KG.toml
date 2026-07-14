@@ -1,0 +1,15 @@
+# KG Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4fea1367-c881-4e25-b50b-64591ba7b1b8"
+source_hash = "manual"
+name = "ColdStar Online Radio"
+tags = ["house", "trance", "electronic", "dance", "ambient"]
+logo_url = "https://coldstar.online/static/assets/android-chrome-512x512.png"
+

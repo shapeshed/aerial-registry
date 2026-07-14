@@ -1,0 +1,40 @@
+# EC Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96398cf8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["culture", "world"]
+logo_url = "https://andenstimme.org/wp-content/uploads/cropped-favicon-1-180x180.gif"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6f5a7529-5d9b-11e9-a622-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "news", "world"]
+logo_url = "https://olimpicafmradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cc80f07f-5caa-11e9-a622-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "news"]
+logo_url = "https://radioelite997.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "47cea623-5cb5-11e9-a622-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+logo_url = "https://radio11q.com/wp-content/uploads/2017/10/apple-touch-icon.png"
+

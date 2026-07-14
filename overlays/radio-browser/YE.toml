@@ -1,0 +1,22 @@
+# YE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fa664dd8-f941-4e55-b6d2-9e196ef959c1"
+source_hash = "manual"
+name = "Quran Radio - Abdulbasit Abdulsamad"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://radio.mp3islam.com/api/station/3/art/302654b6976c9b1da4415ee4-1678140427.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c12d8e4d-8b61-41a3-9699-5fdba4554aad"
+source_hash = "manual"
+tags = ["world", "pop"]
+logo_url = "https://www.facebook.com/favicon.ico"
+

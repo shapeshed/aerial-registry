@@ -1,0 +1,14 @@
+# CM Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964b07c5-d89d-4b37-b5f1-dfddbac876c5"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://radioenlignefrance.com/storage/radios/6885/8855/conversions/DkvJakmCUOOuVMaiESwrtRtXbTOkl6-metaQ1JUVi1SYWRpby5qcGc=--lg.webp"
+

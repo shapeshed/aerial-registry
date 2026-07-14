@@ -1,0 +1,42 @@
+# MA Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96414555-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "world", "culture"]
+logo_url = "http://www.radioaswat.ma/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f437a938-2f30-4109-8f52-cbb599e11b03"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.radiomars.ma/ar/wp-content/uploads/2023/10/RADIOMARS_LOGO.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4c6f8571-6e70-42d5-a4a6-669003ad1cee"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.medi1.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "66c753bc-f48c-4ad9-bdea-b272c7125fa8"
+source_hash = "manual"
+tags = ["pop", "hip-hop", "rock"]
+logo_url = "https://skyrock.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9d874da9-550c-4176-a595-8ee83e0c72bc"
+source_hash = "manual"
+tags = ["world", "folk", "pop"]
+logo_url = "https://static.yabiladi.com/images_new/logo_2_yab.png?4"
+

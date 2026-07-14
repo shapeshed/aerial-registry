@@ -1,0 +1,21 @@
+# UZ Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962c9786-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "http://tabassum.uz/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "13d416ec-2884-427d-a0dc-056f7927ce02"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "http://muz.uz/favicon.ico"
+

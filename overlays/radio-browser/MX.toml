@@ -1,0 +1,183 @@
+# MX Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "66c65fce-94da-47d6-a4ad-6c0259c0f9bf"
+source_hash = "manual"
+tags = ["pop", "electronic", "top 40"]
+logo_url = "http://cdn-radiotime-logos.tunein.com/s87554q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "09669200-2711-4c54-87e7-205ec84f929c"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/dwdxek9by6tq.jpg"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "86fb3b9a-2b61-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "latin pop", "top 40"]
+logo_url = "https://los40es00.epimg.net/estaticos/recursosgraficos/v1/img/app/los40_192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "46b51010-c2c5-45b6-a71c-84d168a705a3"
+source_hash = "manual"
+name = "La Ranchera de Monterrey"
+tags = ["regional mexican", "folk", "country"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s24506g.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f8fb7eac-cc70-4e71-b56d-47ff892f9e85"
+source_hash = "manual"
+name = "La Mejor Ciudad de México"
+tags = ["regional mexican", "pop", "talk"]
+logo_url = "https://www.lamejor.com.mx/u/plantillas/p/la-mejor-fm/imgs/favicons//apple-touch-icon.png?v2"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3e50c7de-ce7c-45e3-9e6f-288d3fca0699"
+source_hash = "manual"
+name = "Radio Fórmula"
+tags = ["talk", "news", "sport"]
+logo_url = "https://www.radioformula.com.mx/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8d0a43a8-e8cc-48d0-b1a7-4810993a92bf"
+source_hash = "manual"
+name = "MVS Noticias"
+tags = ["news", "talk", "pop"]
+logo_url = "https://www.mvsnoticias.com/u/plantillas/p/mvs-noticias/imgs/favicons//apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96337005-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "La Mejor Tijuana"
+tags = ["regional mexican", "folk", "pop"]
+logo_url = "http://www.lamejor.com.mx/u/plantillas/p/la-mejor-fm/imgs/favicons//apple-touch-icon.png?v2"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1d43954f-476e-48a4-b341-ece0f709d91a"
+source_hash = "manual"
+name = "W Deportes"
+tags = ["sport", "talk", "news"]
+logo_url = "https://www.wdeportes.com/pf/resources/wdeportes/favicon.ico?d=71"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1e94098a-962e-44e0-8a7d-428032b38c5f"
+source_hash = "manual"
+tags = ["regional mexican", "folk"]
+logo_url = "https://www.lapoderosa.com.mx/imagenes/logo_app.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "78538523-2d96-4ab3-8202-8ed1a73bf84f"
+source_hash = "manual"
+name = "Fórmula Melódica"
+tags = ["pop", "oldies", "soul"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s1626d.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b7360bff-4ce0-4d37-b173-72369a707d45"
+source_hash = "manual"
+name = "La Mejor Monterrey"
+tags = ["regional mexican", "folk", "pop"]
+logo_url = "https://www.lamejor.com.mx/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a9e7148e-167b-11ea-a620-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "metal", "alternative"]
+logo_url = "https://u.jimcdn.com/cms/o/s924f1217ff669ab4/img/favicon.png?t=1504408222"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960613a3-312a-4e63-bcf2-f4a31d2bf00c"
+source_hash = "manual"
+name = "Horizonte 107.9 FM"
+tags = ["jazz", "news", "culture"]
+logo_url = "https://www.imer.mx/horizonte/wp-content/uploads/sites/15/favicon_horizonte2022_32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8247894d-8dd6-49fd-a5f6-407b0a9446a8"
+source_hash = "manual"
+name = "Tu Estación"
+tags = ["pop", "talk", "world"]
+logo_url = "https://i.ibb.co/dLccPSf/tuestacion.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7b132f6c-9097-4f85-9682-1de87d38d946"
+source_hash = "manual"
+name = "Radio Metrópoli 1150 AM"
+tags = ["news", "talk"]
+logo_url = "https://www.notisistema.com/markup/images/metropoli_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "77f3af0c-eb5b-4644-9188-c67cf1881838"
+source_hash = "manual"
+name = "El Patrón"
+tags = ["regional mexican", "world", "folk"]
+logo_url = "https://upload.wikimedia.org/wikipedia/en/2/2e/XHBD_ElPatron104.9_logo.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8e108edc-22e3-11e8-91bf-52543be04c81"
+source_hash = "manual"
+name = "XHUIA-FM Ibero 90.9"
+tags = ["news", "talk", "culture"]
+logo_url = "https://ibero909.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9fe0f8a6-1aaf-4e6f-84b4-97f99488e0d5"
+source_hash = "manual"
+name = "ABC Deportes"
+tags = ["sport", "talk", "news"]
+logo_url = "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo400/13254543/13254543-1616171725832-bc089ec259eb3.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1101a723-5f31-4634-beff-4e846d6893bf"
+source_hash = "manual"
+name = "Radio Fórmula 103.3"
+tags = ["news", "talk", "sport"]
+logo_url = "https://i.iheart.com/v3/re/new_assets/5ea0948ae7d1b1b0a6421948"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "64453a7b-5f9d-4b4f-8d19-8e819d73fce4"
+source_hash = "manual"
+name = "Radio Ranchito"
+tags = ["regional mexican", "folk", "world"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s169172d.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "89929579-3d7c-46bb-9a47-032bed16d7ae"
+source_hash = "manual"
+name = "La Grande de Tabasco"
+tags = ["regional mexican", "world", "folk"]
+logo_url = "https://i.ibb.co/fXph74M/XHVX.jpg"
+

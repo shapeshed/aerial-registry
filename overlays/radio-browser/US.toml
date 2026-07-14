@@ -1,0 +1,930 @@
+# US Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "82b3d31f-0b79-445b-ad19-36395e8ed052"
+source_hash = "manual"
+tags = ["alternative", "rock", "pop", "electronic", "ambient", "eclectic", "indie"]
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6ce8da92-859f-4f96-a5e4-503c1ddfbfbf"
+source_hash = "manual"
+tags = ["oldies", "jazz", "swing", "classical", "folk"]
+logo_url = "https://icecast.walmradio.com:8443/classic.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2ce23ee2-95c5-407d-9df8-54c3cdde2825"
+source_hash = "manual"
+tags = ["jazz", "alternative", "electronic", "indie", "ambient"]
+logo_url = "https://icecast.walmradio.com:8443/jazz.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9e54d6fc-16a6-4308-9c15-c60aeb1e2de8"
+source_hash = "manual"
+tags = ["rock", "alternative", "indie", "pop", "electronic", "eclectic"]
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "02f3876d-ee77-449b-bae4-6cbb335d414b"
+source_hash = "manual"
+tags = ["alternative", "ambient", "electronic", "eclectic", "rock"]
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cedbc15b-ed67-4924-b408-a3c8321a351e"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.smoothjazz.com/sites/default/files/theme/sj-circle-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b913fc56-6e77-4fb3-b3ef-72342317a5bf"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://100hitz.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6dd81d97-87ff-4dd3-8307-96d61dd0395c"
+source_hash = "manual"
+tags = ["rock", "metal"]
+logo_url = "https://megarockradio.net/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d152dc4b-1a4d-412b-8ae3-dc1da174bfde"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "https://radiostationusa.fm/assets/image/radio/180/KDFCFM.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "887ed8ec-aab7-4c7b-9f39-5a280b2899a9"
+source_hash = "manual"
+tags = ["world", "folk"]
+logo_url = "http://www.salsaoneradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "720ec5da-4629-4688-8797-ab7fe86611cd"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "http://www.organlive.com/eighthnotes.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "25af5e12-a3b4-483d-bec8-2acab78aa683"
+source_hash = "manual"
+tags = ["world", "eclectic", "alternative"]
+logo_url = "https://radioparadise.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0af543e7-f8a6-4f0e-afde-bd5fe4420520"
+source_hash = "manual"
+tags = ["country"]
+logo_url = "https://fastcast4u.com/player/kievradio/_user/cover/k/kievradio/ch0_permanent.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "13cb5d8f-87d0-41f0-9797-53f2dd5a9107"
+source_hash = "manual"
+tags = ["classical", "culture"]
+logo_url = "https://media.wnyc.org/i/500/500/c/80/1/wqxr_1_1.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "21290f3a-26db-4bc6-a5e2-6266893ebb11"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.kusc.org/icons/kusc/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962ac1f6-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://i.imgur.com/KoS7yEr.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96147d8c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "http://d3kwtionx0p7im.cloudfront.net/images/icons/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "390d0a80-9838-40a0-b385-4458728d175c"
+source_hash = "manual"
+tags = ["country", "rock", "soul"]
+logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/ukyj9kjf3z3q.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b7a7ddb5-bfef-11e9-8502-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "soul", "oldies"]
+logo_url = "https://web.bigblueswing.com/misc/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1e78709e-7e60-468e-8b14-4a49d8dc3e81"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "https://theclassicalstation.org/wp-content/themes/nmc_classicalstation/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e1ad0462-4f25-421a-9d18-73519fec3da5"
+source_hash = "manual"
+tags = ["rock", "pop", "oldies"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s123174q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "af55bae9-259a-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["drum and bass", "electronic"]
+logo_url = "https://play-lh.googleusercontent.com/o2PMYKKExWLkdxlQPE6tB43QPRK1Fd5fO-l-P7MaeG2AQq9p_MVYawjwXESMBF36Wg42DNrvr0Zg6vwf5398PQ"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "33178054-56cd-449c-8cf7-412cc7be936a"
+source_hash = "manual"
+name = "CNN UK"
+tags = ["news", "talk"]
+logo_url = "https://edition.cnn.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "313046e3-b203-4b9d-bc3e-393da7d97126"
+source_hash = "manual"
+name = "WALM Old Time Radio"
+tags = ["oldies", "talk", "comedy", "culture", "folk"]
+logo_url = "https://icecast.walmradio.com:8443/otr.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960ac54b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Your Classical Relax"
+tags = ["classical", "ambient", "folk", "jazz", "world"]
+logo_url = "http://www.yourclassical.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9627ddc0-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "181.FM Old School Hip Hop/R&B"
+tags = ["hip-hop", "r&b", "oldies", "soul", "dance"]
+logo_url = "http://www.181.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961787d1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "house", "trance", "alternative"]
+logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96274cbb-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Big R Radio 80s Metal"
+tags = ["metal", "rock", "punk", "alternative", "indie"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9609ed67-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "electronic", "classical", "world", "folk"]
+logo_url = "http://www.echoesofbluemars.org/images/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7ba4c184-fc2b-11e9-bbf2-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio", "culture", "world"]
+logo_url = "https://static-assets.npr.org/static/images/favicon/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96389fbf-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["country", "oldies"]
+logo_url = "http://www.181.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "03eccedf-bf40-4413-8d52-817c298331e2"
+source_hash = "manual"
+name = "Z 92 Miami"
+tags = ["pop", "tropical", "world", "spanish"]
+logo_url = "https://cdn-profiles.tunein.com/s27943/images/logod.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5565dd27-8a3a-453e-9b6d-41d3a31057c1"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://pwa.tunegenie.com/kyyaam/icon-192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "510aeeac-e7a0-41c2-aea2-e572e811ffe7"
+source_hash = "manual"
+tags = ["news"]
+logo_url = "https://static.foxnews.com/radio.foxnews.com/content/uploads/2017/10/default_logo-150x150.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9612308f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0b2c57db-885d-46d8-bbee-0651449759f1"
+source_hash = "manual"
+tags = ["news"]
+logo_url = "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628a3bb-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["country"]
+logo_url = "http://2000fm.net/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5facce98-2f87-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["country"]
+logo_url = "https://www.todayshotcountry.com/wp-content/uploads/2016/10/cropped-siteicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8383c13f-1dd5-4f33-a2dc-33e911b17048"
+source_hash = "manual"
+name = "100hitz The Mix"
+tags = ["pop", "oldies"]
+logo_url = "https://100hitz.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "655def6d-734f-4ef7-972a-6abc56763162"
+source_hash = "manual"
+tags = ["country", "folk"]
+logo_url = "https://bluegrasscountry.org/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "662f715d-0b0c-4986-84e2-0cfb465caaf2"
+source_hash = "manual"
+tags = ["talk", "public radio", "culture"]
+logo_url = "https://kpfa.org/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c2958dcc-75ad-4ece-8781-6a465f4fb09f"
+source_hash = "manual"
+tags = ["comedy"]
+logo_url = "https://radiostorm.com/wp-content/uploads/2018/01/cropped-imgpsh_fullsize2-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3b92f8c7-deac-4a81-8a9c-3b0f995d73e4"
+source_hash = "manual"
+tags = ["country"]
+logo_url = "https://marinifamily.files.wordpress.com/2015/08/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96185a6d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "ambient", "house"]
+logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "738363a2-edee-4ac6-b110-2ef70c4d06b9"
+source_hash = "manual"
+tags = ["alternative", "rock"]
+logo_url = "http://www.gotradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96145775-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "WDCB 90.9 Jazz & Blues"
+tags = ["jazz", "soul", "public radio"]
+logo_url = "http://wdcb.org/img/favicons/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96147f07-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Christian Power Praise"
+tags = ["rock", "culture"]
+logo_url = "https://www.christianpowerpraise.net/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96288fcc-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6a7508a9-27ab-11e8-91bf-52543be04c81"
+source_hash = "manual"
+name = "KEXP 90.3 Seattle"
+tags = ["alternative", "indie", "rock", "public radio"]
+logo_url = "http://www.kexp.org/static/assets/img/favicon-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "af37f773-0138-495d-b1a6-6e114ff2ceb7"
+source_hash = "manual"
+tags = ["culture", "comedy"]
+logo_url = "http://scifi-otr.weebly.com/uploads/1/4/2/0/14202201/3040862_orig.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96289ad5-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961e486e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "house", "electronic"]
+logo_url = "http://www.181.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ab963dea-5579-4378-9975-751f7a7a3eaf"
+source_hash = "manual"
+tags = ["r&b", "soul", "urban"]
+logo_url = "https://krnb.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "31830efa-2398-4289-b337-28d67cdc0b06"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://100hitz.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a21b8ca9-7410-4d7e-abad-cb8cf4c4e5bb"
+source_hash = "manual"
+tags = ["blues", "soul"]
+logo_url = "https://cdn.website-editor.net/189da74ea8ed49719227b9e0808c29e5/site_favicon_16_1656198201979.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dee09ddb-8e41-11e8-aa66-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "ambient", "folk"]
+logo_url = "https://www.abidingradio.org/wp-content/uploads/2022/05/cropped-new_icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7094b698-b1ac-4f08-a6cd-ac35f906765d"
+source_hash = "manual"
+tags = ["news", "world"]
+logo_url = "https://raw.githubusercontent.com/AusIPTV/IPTVLogos/master/CNN_International_Logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961837b1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies"]
+logo_url = "http://www.181.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "14543b1e-44bf-4151-ae89-ec23b6eb711f"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://static-assets.npr.org/static/images/favicon/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961f7778-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960b32a0-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop", "r&b", "soul"]
+logo_url = "http://cdn-profiles.tunein.com/s135290/images/logoq.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96282c1a-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["country", "oldies"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96288f00-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a4192629-2918-4416-b614-9e4d49a1f9be"
+source_hash = "manual"
+tags = ["electronic", "house", "dance"]
+logo_url = "https://s3.amazonaws.com/media.friskyradio.com/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dc5b2464-f1c5-402f-af4a-e39a6d063d00"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://assets.jazzgroove.org/logo-circle-white1-no-org.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960cfee5-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "alternative"]
+logo_url = "https://www.christianrock.net/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7015a1a3-82d8-11e9-aa30-52543be04c81"
+source_hash = "manual"
+tags = ["oldies"]
+logo_url = "https://trueoldieschannel.com/wp-content/uploads/2019/02/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7c5041a5-5572-4973-8625-b8c3cc179a94"
+source_hash = "manual"
+name = "HD Radio - Classic Rock (USA)"
+tags = ["rock"]
+logo_url = "https://www.hd-radio.net/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964e946c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "metal"]
+logo_url = "http://www.purerock.us/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7895ba8d-a1c9-4bb5-9b61-9e2893338c78"
+source_hash = "manual"
+tags = ["oldies", "dance"]
+logo_url = "https://discostudio54.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b96225b2-8536-4b9b-8add-03582fd2e6a2"
+source_hash = "manual"
+name = "WALM 2 HD"
+tags = ["classical", "talk", "christian", "public radio"]
+logo_url = "https://icecast.walmradio.com:8443/walm.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "608bc971-3ec5-4c05-8143-de96c3bdb030"
+source_hash = "manual"
+name = "Soma FM Groove Salad"
+tags = ["electronic", "ambient", "house"]
+logo_url = "https://somafm.com/img3/groovesalad-400.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9189bb75-e1f7-475c-b837-564a172cb178"
+source_hash = "manual"
+name = "BeGood Radio 80s Metal"
+tags = ["metal", "rock"]
+logo_url = "http://begoodradio.com/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9638b7c4-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "181.FM Classical Jazz"
+tags = ["jazz", "classical"]
+logo_url = "http://www.181.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d0cad744-b631-49db-94e8-f8469f798cb1"
+source_hash = "manual"
+name = "100hitz Indie Rock"
+tags = ["indie", "rock", "alternative"]
+logo_url = "https://100hitz.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96407fcb-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "indie", "rock", "punk"]
+logo_url = "http://www.guerrillaradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628a2d4-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "2000 FM Top 40"
+tags = ["pop"]
+logo_url = "http://2000fm.net/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "da3527f7-b71e-49e0-a9d5-57102350ffc5"
+source_hash = "manual"
+tags = ["talk", "news"]
+logo_url = "https://www.bloombergradio.com/content/plugins/bloomberg-favicon/dist/img/amber-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961e62e2-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "KNOW 91.1 Minnesota Public Radio"
+tags = ["news", "public radio", "talk"]
+logo_url = "http://www.mprnews.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628984d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Big R Radio Country Mix"
+tags = ["country"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960c36e6-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+logo_url = "http://www.echoesofbluemars.org/images/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0653bfab-cb60-44e9-9511-d89b993c48f9"
+source_hash = "manual"
+tags = ["oldies", "soul", "rock"]
+logo_url = "https://static.wixstatic.com/media/00a61a_a29da417d9ce44d18dc83e35a30c2f43.png/v1/crop/x_24,y_30,w_555,h_544/fill/w_136,h_133,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/00a61a_a29da417d9ce44d18dc83e35a30c2f43.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "70e8dcc9-5f8e-4225-8d8e-e7487a3791f5"
+source_hash = "manual"
+tags = ["news", "public radio", "talk"]
+logo_url = "https://wosu.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960a3d21-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.yourclassical.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d4dec-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "http://www.yourclassical.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962892f6-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "rock", "indie"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962634a8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "WFYI 90.1 Indianapolis"
+tags = ["public radio", "news", "talk"]
+logo_url = "http://www.wfyi.org/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dcf4d7aa-f7d5-11e8-a471-52543be04c81"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "http://sundaybaroque.org/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "38f80a1f-cb96-4ad2-9d6b-a3e66b671882"
+source_hash = "manual"
+name = "Soma FM Groove Salad"
+tags = ["electronic", "house", "ambient"]
+logo_url = "https://www.somafm.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1a03b739-4c4d-45cf-a65a-617240d6f25d"
+source_hash = "manual"
+tags = ["sport", "talk"]
+logo_url = "https://www.cbssportsradio1053.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ee79421b-497f-430f-9f94-5d8dd0f944fa"
+source_hash = "manual"
+tags = ["world", "talk", "culture"]
+logo_url = "https://static.wixstatic.com/media/6ddfc3_fba02465eaf5460d8452b49c8a599888%7emv2.png/v1/fill/w_180%2ch_180%2clg_1%2cusm_0.66_1.00_0.01/6ddfc3_fba02465eaf5460d8452b49c8a599888%7emv2.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961dab15-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "WHYY 90.9 Philadelphia"
+tags = ["public radio", "news", "talk"]
+logo_url = "https://whyy.org/wp-content/themes/whyy/images/icons/favicon-rebrand.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "631d4862-14c9-4888-b247-d89f05cfa5bf"
+source_hash = "manual"
+tags = ["world", "pop"]
+logo_url = "https://www.lamusica.com/icons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96186f9e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "news", "talk"]
+logo_url = "https://www.wbez.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "afebc420-e448-4299-ad01-52f630f0e14f"
+source_hash = "manual"
+tags = ["public radio", "news", "culture"]
+logo_url = "https://www.kpbs.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961871fe-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "rock", "metal"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "faec63bd-b626-4a31-8dff-7ef63e4a0f3c"
+source_hash = "manual"
+tags = ["public radio", "news"]
+logo_url = "https://cdn-profiles.tunein.com/s27613/images/logod.png?t=154765"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "415fb78a-a24b-11e9-a787-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies", "culture"]
+logo_url = "https://www1.cbn.com//sites/all/themes/cbn_default/images/favicons/mstile-144x144.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6c6d573c-c3af-11e9-8502-52543be04c81"
+source_hash = "manual"
+name = "KLKK-FM 103.7"
+tags = ["rock", "oldies"]
+logo_url = "https://1037thefoxrocks.com/wp-content/uploads/sites/15/2020/09/cropped-favicon-fox-1-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3487079b-91b1-4fb8-b315-c4150e705b7a"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://npr.brightspotcdn.com/dims4/default/76ee71f/2147483647/strip/true/crop/200x100+0+0/resize/400x200!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fa7%2F2f%2Fbfa4b00449099118e45fefe81fe8%2Fwbgo-logo-200x100.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8e99e319-021a-45ee-b238-876f1ecc60b8"
+source_hash = "manual"
+tags = ["ambient"]
+logo_url = "https://d3rt1990lpmkn.cloudfront.net/640/0634887695e4eae902001f7a0043fabf315ca85137b2bc48b0f7bc471027db292203d32bf423475d5d684fa192549c8167a024502282748d7082779ba7e53d4d6ea32ef5b8b2ab1dccd5c8d6b75db291"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0f49923b-f244-43f7-b451-6be86a1621d5"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://www.allclassical.org/wp-content/themes/acp-theme/img/acp_logo_600x600.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "442fad00-5089-4616-a981-5ab4d8ee4539"
+source_hash = "manual"
+tags = ["folk"]
+logo_url = "https://img1.wsimg.com/isteam/ip/33ac2230-3451-4ad7-8894-0d3a839af97f/favicon/ed9ab985-710c-4588-afef-f6388e1a738a.png/:/rs=w:64,h:64,m"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961e5d5c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "KXLU 88.9FM"
+tags = ["college radio", "indie", "alternative"]
+logo_url = "https://kxlu.com/wp-content/uploads/2019/02/kxlusplatblack-125x125.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d3490-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "country"]
+logo_url = "https://www.abidingradio.org/wp-content/uploads/2022/05/cropped-new_icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "318e5292-4dbf-4045-9d90-a86f2cfe9ff1"
+source_hash = "manual"
+tags = ["rock", "oldies"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/6/10096.v3.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3afa9b63-d668-43ea-ac6f-295c341baa29"
+source_hash = "manual"
+tags = ["hip-hop", "r&b"]
+logo_url = "https://superradio.cc/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96478eb8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "https://www.yourclassical.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "34135e58-c4b4-4aaa-89b3-c42254ba7307"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+logo_url = "https://cdn-profiles.tunein.com/s297004/images/logog.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b0df6be4-710b-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "soul"]
+logo_url = "https://www.swingstreetradio.org/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2748845d-79fa-414e-a78f-a8fc2093ae20"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://wtop.com/wp-content/themes/wtop-new/assets/img/favicons/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3904e33b-d230-43da-8114-e1ea97485ace"
+source_hash = "manual"
+tags = ["alternative", "indie"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/0/114200.v4.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a2bdf19f-b5b8-4ab6-b12b-591d415897d6"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1108/2019/05/15152826/cropped-favico-192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9f2e560d-6c79-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+name = "A Strangely Isolated Place"
+tags = ["electronic", "ambient", "alternative"]
+logo_url = "https://9128.live/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628942d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "rock"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "676c4b02-c87c-4332-86f8-161370736772"
+source_hash = "manual"
+tags = ["blues", "folk"]
+logo_url = "https://radioart.com/templates/yootheme/vendor/yootheme/theme-joomla/assets/images/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "445cbb3a-1c4e-49aa-a268-f5b6acfa8f2e"
+source_hash = "manual"
+name = "KEXP 90.3 Seattle"
+tags = ["alternative", "indie", "eclectic"]
+logo_url = "http://www.kexp.org/static/assets/img/favicon-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2820df91-ff1e-4973-8adf-1afe0336ccd5"
+source_hash = "manual"
+name = "Music of China"
+tags = ["world"]
+logo_url = "https://wongsong.cn/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961079a5-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "alternative", "pop", "public radio"]
+logo_url = "http://www.thecurrent.org/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "133ba5ee-7c51-4cc2-9622-bfc5e580c377"
+source_hash = "manual"
+name = "Progrock.com"
+tags = ["rock", "alternative", "indie"]
+logo_url = "https://progrock.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "70fb580c-5639-11e9-a4d7-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "blues", "country", "oldies"]
+logo_url = "http://oceanbeachradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "89f33981-9670-4e75-8248-9ea133c558cc"
+source_hash = "manual"
+tags = ["jazz", "soul", "ambient", "pop"]
+logo_url = "https://radioart.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "80f853f5-61f3-46e7-95fe-2d57da3fd1f3"
+source_hash = "manual"
+tags = ["folk", "world", "indie"]
+logo_url = "https://www.folkalley.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96289bae-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["soul", "gospel", "oldies"]
+logo_url = "http://www.bigrradio.com/image/favicon/favicon-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9626fe81-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "alternative", "metal"]
+logo_url = "http://www.bigrradio.com/image/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b294bf46-7c1d-45ba-b852-71c5b26298ac"
+source_hash = "manual"
+name = "ShoutDRIVE"
+tags = ["house", "dance", "electronic"]
+logo_url = "https://shoutdrive-com.cdn.shoutdrive.com/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1c41c07b-b995-11e8-aaf2-52543be04c81"
+source_hash = "manual"
+tags = ["deep house", "electronic"]
+logo_url = "https://dogglounge.com/wp-content/uploads/2017/03/cropped-best_deep_house_radio.jpg"
+

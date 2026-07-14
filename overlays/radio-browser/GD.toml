@@ -1,0 +1,14 @@
+# GD Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a347aba6-4247-4b97-bc4f-ba90c3d1c380"
+source_hash = "manual"
+tags = ["reggae", "soca"]
+logo_url = "https://www.starfmgrenada.com/apple-icon-120x120.png"
+

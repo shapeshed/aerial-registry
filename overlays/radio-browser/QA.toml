@@ -1,0 +1,26 @@
+# QA Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a93d497f-74d9-43b9-bb61-fe376ebe240e"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://www.aljazeera.net/favicon.ico"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "00727ea0-0fa1-4c87-b4da-170d319bd2ab"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://suno.qa/favicon.ico"
+

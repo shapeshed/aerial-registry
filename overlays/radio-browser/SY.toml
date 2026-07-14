@@ -1,0 +1,33 @@
+# SY Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "64c6879d-3645-11ea-8dd7-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://sham.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "07f54ac3-ef7d-4d27-9466-1a5fafcc5130"
+source_hash = "manual"
+tags = ["world"]
+logo_url = "https://www.asima-online.net/wp-content/uploads/2020/06/cropped-logo-asima-180x180.png"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "707a7780-9e40-4025-bb70-d19567af3f03"
+source_hash = "manual"
+tags = ["news", "world"]
+logo_url = "https://www.syria.tv/themes/custom/syriatv/assets/images/logo.svg"
+

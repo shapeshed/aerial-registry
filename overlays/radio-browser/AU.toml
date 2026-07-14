@@ -1,0 +1,54 @@
+# AU Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b550ce43-6300-4982-94dd-25fded53c747"
+source_hash = "manual"
+tags = ["pop", "community radio"]
+logo_url = "https://fresh927.com.au/graphics/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "01cf3664-81d5-4511-a65c-c72d990e12d9"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://raw.githubusercontent.com/AusIPTV/IPTVLogos/master/SKY_News_Australia_logo.png"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3af3be8d-da3e-4051-a604-d5958f410732"
+source_hash = "manual"
+tags = ["rock", "progressive"]
+logo_url = "https://progrockmachine.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628e108-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e96086c0-ae22-4e98-8f54-38c8680cdd40"
+source_hash = "manual"
+tags = ["pop", "alternative", "oldies"]
+logo_url = "https://play.listnr.com/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2f1079f1-0986-4e33-99a7-009f723726b7"
+source_hash = "manual"
+tags = ["rock", "alternative"]
+logo_url = "https://1.bp.blogspot.com/-zqFqeHIezoQ/XWwTN0Jl0OI/AAAAAAAAAck/JiBc3HIncUIIrenqBm_BaIfLAGLxCQF4ACLcBGAs/s1600/free%2Bfm%2Brock.jpg"
+

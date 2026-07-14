@@ -1,0 +1,71 @@
+# BY Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962b35ca-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["comedy", "pop"]
+logo_url = "http://humorfm.by/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6ad3f6e9-eac9-11e9-a96c-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "pop"]
+logo_url = "http://radiorelax.by//apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3bb5369c-dd9f-4894-a58e-52f483636676"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/unistar-7e64d.appspot.com/o/mobile-app-assets%2Fplaceholders%2Flogo_top.jpg?alt=media&token=15d2ad9b-4515-433f-9cf3-77a649c29ced"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "825a4c88-6802-4664-93f6-951e9a569ca3"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/unistar-7e64d.appspot.com/o/mobile-app-assets%2Fplaceholders%2Flogo_best.jpg?alt=media&token=6f8efc1a-84f5-450f-b0fb-22b13032660e"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e785d4f6-4c5d-4789-b3ee-932860569abd"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250120_155040731.jpg?alt=media&token=1375f7a9-e767-4e88-aed9-0c833ceedba3"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962df7f6-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://euroradio.fm/themes/custom/euroradio/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3ffbafe2-30e2-4f74-879e-0ebf57b83cb0"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/unistar-7e64d.appspot.com/o/mobile-app-assets%2Fplaceholders%2Flogo_rock.jpg?alt=media&token=42f2ff36-5b5b-4f66-b6b2-bc7a5a6f1297"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c8888c3d-b6a8-421b-80c9-8d958efb405a"
+source_hash = "manual"
+tags = ["dance", "pop"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/unistar-7e64d.appspot.com/o/mobile-app-assets%2Fplaceholders%2Flogo_tempo.jpg?alt=media&token=9d65e0b3-94f9-44da-8a35-fc4fc046da76"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f5bb3f02-df43-4067-b644-32feb40efb0a"
+source_hash = "manual"
+name = "Легенды ФМ Минск 94.1 FM"
+tags = ["oldies", "pop"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250120_155441613.jpg?alt=media&token=240e8f46-b33d-4f60-bee3-04303ea83caf"
+

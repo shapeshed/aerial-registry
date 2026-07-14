@@ -1,0 +1,15 @@
+# ML Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "64fa4823-9847-4fc2-be16-dcf2c36a5f27"
+source_hash = "manual"
+name = "Radio Fréquence 3 Bamako"
+tags = ["pop", "world", "talk"]
+logo_url = "http://africaliveradios.com/img/radio_icon/9f373cf641d9a0919e3c9e5a8e4b6b32.png"
+

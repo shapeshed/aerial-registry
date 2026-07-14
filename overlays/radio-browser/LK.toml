@@ -1,0 +1,47 @@
+# LK Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b742fcc1-7118-4241-8650-8cf9f8ad8a59"
+source_hash = "manual"
+tags = ["talk", "news", "pop"]
+logo_url = "https://image.winudf.com/v2/image1/Y29tLmhpcnVmbS5yZWRyb3NlbWVkaWFfaWNvbl8xNjA0ODM4Njk0XzAyMg/icon.webp?w=280&fakeurl=1&type=.png"
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bf12d434-4024-409d-a223-6f6d3088534f"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.shraddha.lk/wp-content/uploads/2023/10/shradaha-live-logo-1-150x150.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a8721ffc-305e-4578-9b63-8bbca9d65283"
+source_hash = "manual"
+tags = ["oldies", "pop", "world"]
+logo_url = "https://www.goldfm.lk/images/lllistenlivelogo.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9c28c3be-22c7-484b-9c5f-253fbd47fe3c"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://www.vfm.lk/assets/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "81efb1d0-b644-4398-a26f-edd0c5dda269"
+source_hash = "manual"
+tags = ["pop", "world", "culture"]
+logo_url = "https://assets.ibcstack.com/web/bravo/rl/img/ico/apple-touch-icon-120x120.png"
+

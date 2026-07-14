@@ -1,0 +1,22 @@
+# HN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962ad25a-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://radioxy.hn/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "72bce72a-7ba2-49e5-8fbc-59aa1cdcbc08"
+source_hash = "manual"
+name = "Radio Globo 88.5"
+tags = ["news", "talk"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240417_102647045.jpg?alt=media&token=e9afe8f7-5120-4cbb-832a-a1a2654eef3b"
+

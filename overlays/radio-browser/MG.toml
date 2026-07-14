@@ -1,0 +1,29 @@
+# MG Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1b34da1a-246d-4fcb-9d33-1af386e1c064"
+source_hash = "manual"
+name = "Radio des Jeunes"
+tags = ["pop", "world"]
+logo_url = "https://becakgalon.com/img/begal-fiveicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2fcb9b03-c68f-11e8-a498-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "world"]
+logo_url = "http://www.rna-madagascar.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d46b8808-4eae-11e8-a4d1-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "http://www.radioparadisagasy.com/img/favicon-96x96.png"
+

@@ -1,0 +1,14 @@
+# ET Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "974d15ea-33a8-4190-8436-1b9a184f82e3"
+source_hash = "manual"
+tags = ["oldies", "world"]
+logo_url = "https://www.ethioldies.com/static/uploads/browser_icon/192.1732350958.png"
+

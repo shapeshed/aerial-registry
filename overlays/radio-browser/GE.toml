@@ -1,0 +1,22 @@
+# GE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0d742e8f-5ff8-11e9-a622-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "news", "pop"]
+logo_url = "https://cdn.onlineradiobox.com/img/logo/6/43916.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "01ff6b67-75cc-4d62-b54c-28f7cf7d4a11"
+source_hash = "manual"
+name = "Radio Imedi"
+tags = ["pop", "news"]
+logo_url = "https://www.imedi.ge/m/i/favicons/apple-touch-icon.png"
+

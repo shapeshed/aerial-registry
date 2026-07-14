@@ -1,0 +1,21 @@
+# MD Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d86169ad-3b18-4c84-a330-9dd5b0a0e2a5"
+source_hash = "manual"
+tags = ["pop", "talk", "public radio"]
+logo_url = "https://www.radionoroc.md/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3d8b1284-142e-4b13-a141-24c458c96a2a"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://jurnalfm.md/wp-content/uploads/2020/08/JFM-LOGO.png"
+

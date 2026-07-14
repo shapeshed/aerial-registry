@@ -1,0 +1,14 @@
+# NA Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1befb879-5c9c-454d-ac99-95710bd739ca"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://hitradio.com.na/favicon.ico"
+

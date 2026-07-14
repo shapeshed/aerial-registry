@@ -1,0 +1,15 @@
+# BW Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9627628e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Gabz FM 96.2"
+tags = ["pop", "world", "african"]
+logo_url = "https://static.wixstatic.com/media/d5db8a_7767e951c2304645bf95a86b554915c2%7emv2.png/v1/fill/w_180%2ch_180%2clg_1%2cusm_0.66_1.00_0.01/d5db8a_7767e951c2304645bf95a86b554915c2%7emv2.png"
+

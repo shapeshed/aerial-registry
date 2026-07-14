@@ -1,0 +1,29 @@
+# NP Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1dbce3bb-8002-42b3-923d-fa3f25cf2f1d"
+source_hash = "manual"
+tags = ["world", "public radio"]
+logo_url = "http://img.sedoparking.com/templates/logos/sedo_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "724e92cd-9d57-4fef-b7e6-adad9fcc270d"
+source_hash = "manual"
+name = "Radio Kantipur FM 96.1"
+tags = ["news", "talk", "public radio"]
+logo_url = "http://radio-jcss-cdn.ekantipur.com/images/kfm_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0b8d9d9a-16fa-4043-bba6-4a4dbbe149b8"
+source_hash = "manual"
+tags = ["world", "public radio"]
+logo_url = "https://www.nayafm.com.np/style/icon2.png"
+
