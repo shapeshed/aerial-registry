@@ -105,8 +105,7 @@ provider explicitly not treated as authoritative (see "Interactions" below).
 - **Overlay (`pipeline::overlay`).** Known-bad individual entries (a
   dead/superseded stream URL, a broken logo, a wrong name) are corrected or
   excluded by hand via `overlays/radio-browser/<COUNTRY>.toml` — see that
-  directory's README. The AI `enrich-overlay` job explicitly skips this
-  provider; see `docs/maintenance-plan.md` Step 5 for why.
+  directory's README.
 
 ## API Behaviour Notes
 

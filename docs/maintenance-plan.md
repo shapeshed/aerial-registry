@@ -105,33 +105,18 @@ When the guard intervened, the intervention table is also written to
 issue (or comments on the open one). Anomalies are the only thing that pages
 a human; a healthy run is quiet.
 
-## Step 4 — AI enrichment as a committed overlay (implemented)
+## Step 4 — Enrichment as a committed, hand-edited overlay (implemented)
 
-Model inference is decoupled from the nightly build:
-
-- Enrichment results live in a committed file (`enrichment.toml`, array of
+- Corrections live in a committed file (`enrichment.toml`, array of
   `[[station]]` tables keyed on `(provider, provider_id)`), holding overrides
-  for name, tags, and description, plus `reject = true` for records the model
-  identified as junk (never applied to trusted stations).
+  for name, tags, and description, plus `reject = true` to drop a record.
 - The nightly build applies the overlay deterministically
   (`src/pipeline/overlay.rs`, between enrich and liveness) — no model, no
-  network dependency, reproducible output. Hand edits to the file are legal
-  and survive until that station's source data changes.
-- `cargo run -- enrich-overlay` re-runs the model only for stations that are
-  new or whose `source_hash` (name, country and description as supplied by
-  the provider) changed, then rewrites the file sorted. The weekly
-  `enrich.yml` workflow runs it with Claude Haiku via the Anthropic
-  OpenAI-compatible endpoint and opens a PR with the delta; review is a quick
-  scan of a small diff. Low-confidence assessments record the hash but change
-  nothing, so they are not retried every week.
-- The model backend is any OpenAI-compatible endpoint via `AERIAL_AI_URL` /
-  `AERIAL_AI_MODEL` / `AERIAL_AI_API_KEY`: a local `llama-server` (see
-  `docs/local-ai-llamacpp.md`) for development and prompt tuning, or Claude
-  Haiku in CI.
-
-Model findings from the evaluation phase: Gemma is strongest on tags and
-descriptions, Llama best preserves public station titles. The response parser
-tolerates fenced/wrapped/prose-embedded JSON; remaining work is prompt tuning.
+  network dependency, reproducible output. Edit the file by hand; an entry
+  survives until that station's source data changes (`source_hash`).
+- An earlier AI-assisted version of this (a weekly job proposing overlay
+  entries via an LLM) was removed to simplify the pipeline. It may return
+  later as an addition on top of this same file format.
 
 ## Step 5 — Radio Browser bulk coverage + country overlays (implemented)
 
@@ -158,12 +143,7 @@ This interacts with the other steps rather than duplicating them:
   bad logos. `overlays/radio-browser/<COUNTRY>.toml` (see the directory's own
   README) holds corrections in the same `Entry` shape as `enrichment.toml`,
   merged into the same `overlay::apply()` pass, so a fix survives indefinitely
-  and a PR only ever touches one country's file. Unlike `enrichment.toml`,
-  these are never written by the AI `enrich-overlay` job (Step 4) — running
-  AI assessment over Radio Browser's long tail would be an large, ongoing
-  cost for a problem (wrong tags) that provider mostly doesn't have; the
-  problems it does have (bad URLs, names, logos) are exactly what a human,
-  country-scoped PR is good at catching.
+  and a PR only ever touches one country's file.
 - **Tag enrichment (Step 4's neighbour, `pipeline::enrich.rs`) skips it.**
   Radio Browser stations already carry their own tags from the bulk fetch,
   so re-querying the same API by name per station would be redundant load on
@@ -174,5 +154,5 @@ This interacts with the other steps rather than duplicating them:
 1. ~~Previous-registry guard~~ (done)
 2. ~~State store + three-strike hysteresis + geo-aware liveness policy~~ (done)
 3. ~~Nightly diff summary + anomaly-only issues~~ (done)
-4. ~~AI enrichment overlay + weekly delta job~~ (done)
+4. ~~Enrichment as a committed, hand-edited overlay~~ (done)
 5. ~~Radio Browser bulk provider + country-partitioned overlays~~ (done)

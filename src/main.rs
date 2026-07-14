@@ -16,10 +16,8 @@ async fn main() -> anyhow::Result<()> {
 
     let client = http::build_client()?;
 
-    match std::env::args().nth(1).as_deref() {
-        Some("prune-curated") => return curation::prune_curated(&client).await,
-        Some("enrich-overlay") => return pipeline::overlay::build(&client).await,
-        _ => {}
+    if let Some("prune-curated") = std::env::args().nth(1).as_deref() {
+        return curation::prune_curated(&client).await;
     }
 
     let all = providers::discover_all(&client).await;
