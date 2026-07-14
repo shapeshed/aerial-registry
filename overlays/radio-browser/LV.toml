@@ -1,0 +1,36 @@
+# LV Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962cea00-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Retro FM Rīga"
+tags = ["pop", "oldies"]
+logo_url = "http://retrofm.lv/view/site/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962cd0a0-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "http://www.ehrhiti.lv/favicons/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4746a29f-2beb-499a-af1d-ec5391d31632"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://avtoradio.lv/upload/design/64df68073caa85.35482071.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9a22e57f-7b7c-4e10-84db-e9b46479a8d6"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://topradio.lv/favicon.ico"
+

@@ -1,0 +1,14 @@
+# KN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a1f15641-5778-11ea-be63-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://vonradio.com/wp-content/uploads/2019/02/logo-von-fav.png"
+

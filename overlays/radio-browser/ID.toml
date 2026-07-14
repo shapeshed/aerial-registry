@@ -12,3 +12,89 @@ source_hash = "manual"
 tags = ["news", "culture", "world"]
 logo_url = "https://www.rri.co.id/assets/v2/img/pro3.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4dd1c605-504d-4240-9b5d-072eed0e9b5a"
+source_hash = "manual"
+name = "Wijaya FM 103.5"
+tags = ["pop", "world"]
+logo_url = "https://radiowijayafm.com/wp-content/uploads/2017/10/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "30ba9673-6034-40ff-966d-b8a8b3da2536"
+source_hash = "manual"
+tags = ["world", "folk"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/4kU6XKQHap.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "537e27f1-da35-4b91-b057-a8a1041a23c8"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.radiodahliafm.com/frontend/img/about/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fd6e2783-293c-476e-8201-ddeda1336ca3"
+source_hash = "manual"
+tags = ["world", "folk"]
+logo_url = "https://upload.wikimedia.org/wikipedia/id/d/d0/Campursari_FM_892.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ea277596-af89-467b-8b69-3e9e6840e2f0"
+source_hash = "manual"
+name = "Media FM 90.1 Surabaya"
+tags = ["pop", "world"]
+logo_url = "http://www.radiomediafm.com/upload/theme/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a66636e2-6edb-443b-b5a0-9b9b400e73b2"
+source_hash = "manual"
+tags = ["news", "world", "culture"]
+logo_url = "https://www.voinews.id/home/img/logo/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5e900633-27d6-4ee4-88e2-9064a6095a1f"
+source_hash = "manual"
+name = "Suara Giri FM"
+tags = ["pop", "world"]
+logo_url = "http://girifm.com/upload/theme/logo-suaragiri-fm-2.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bffe0959-edde-4adb-8b05-6a045317dca2"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.sonorabandung.com/icon-gila.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b2357cbe-d080-4099-8cae-770539945230"
+source_hash = "manual"
+name = "Elshinta FM Jakarta"
+tags = ["news", "talk"]
+logo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIzL7tIGB12Br_2r7vntuYq1pMrDXk5HIG2LOERpfrYB2UVFu3J3SBSa-&s=10"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a4e98f6e-e326-41eb-97a4-f5f477842fab"
+source_hash = "manual"
+tags = ["jazz", "pop", "alternative"]
+logo_url = "https://tokopemancar99.blogspot.com/2022/09/live-streaming-alternatif-radio.html"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f6e181d7-dab3-434c-a4ec-ba10196776d8"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.paramudaradio.com/images/LOGO-PARAMUDA.png"
+

@@ -26,3 +26,132 @@ source_hash = "manual"
 tags = ["classical", "public radio"]
 logo_url = "https://www.radioswissclassic.ch/favicon.ico"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "35e8de69-3013-44f1-aafa-4dedf08f948e"
+source_hash = "manual"
+tags = ["news", "talk", "public radio", "culture"]
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962a7d59-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Movie Soundtracks Hits Radio"
+tags = ["culture"]
+logo_url = "https://pbs.twimg.com/media/FmaeGQgXwAMl6jj?format=png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961f1da4-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Radio_SRF_3.svg/200px-Radio_SRF_3.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9608efd5-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio"]
+logo_url = "https://www.rts.ch/hbv7/static/images/favicon/rts/152x152.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960ed987-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "public radio"]
+logo_url = "http://www.srf.ch/var/storage/assets/webpack/favicons/srf-apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96069a5d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Energy Zürich"
+tags = ["pop", "mainstream"]
+logo_url = "https://energy.ch/ech-new/images/ech/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96147651-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "electronic", "hip-hop", "jazz"]
+logo_url = "http://www.gds.fm/_nuxt/icons/icon_64x64.96821f.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "32fed468-cfe3-11e9-a861-52543be04c81"
+source_hash = "manual"
+name = "80s Forever"
+tags = ["rock", "alternative", "pop", "indie"]
+logo_url = "https://www.80sforever.radio/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "78ffd9e4-5ff7-11e8-b15b-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "pop", "rock"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Couleur_3_logo.svg/1200px-Couleur_3_logo.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fb1add5d-4b7b-45cf-9be4-a1e8df712553"
+source_hash = "manual"
+tags = ["ambient", "world"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s266086d.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "532a0418-87c1-11e8-aa66-52543be04c81"
+source_hash = "manual"
+name = "Lausanne FM"
+tags = ["pop", "public radio"]
+logo_url = "https://www.lfm.ch/wp-content/uploads/2021/07/cropped-radio-lausanne-fm-sa-icone-du-site-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96055c03-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.rhonefm.ch/favicon/4/120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9606b4de-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "http://www.basilisk.ch/assets/favicons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961cfeff-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "1.FM All Times & Urban Gospel Radio"
+tags = ["gospel", "soul", "r&b"]
+logo_url = "http://liveradio.de/media/cache/station_detail/18f08aee-f06b-4965-b607-3f25a581619c.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9612f341-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "world", "culture"]
+logo_url = "https://radiotell.ch/wp-content/uploads/2021/01/cropped-apfel-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96210fa4-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock", "indie", "alternative"]
+logo_url = "http://ncradio.fm/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961ac56b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Jazz Radio Swiss"
+tags = ["jazz"]
+logo_url = "https://www.radioswissjazz.ch/social-media/rsj-web.png"
+

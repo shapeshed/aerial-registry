@@ -26,3 +26,199 @@ source_hash = "manual"
 tags = ["news", "talk", "public radio"]
 logo_url = "https://cdn-i.pr.trt.com.tr/trtdinle//w410/h315/q70/12530424_0-0-2048-1536.jpeg"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960969eb-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://i.karnavalcdn.com/media/site_media/icons/android-icon-192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f3dfbec0-8ddb-457c-94cd-368631337c0f"
+source_hash = "manual"
+name = "Damar Türk FM"
+tags = ["pop", "world"]
+logo_url = "https://www.damarturkfm.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0012c08a-31e7-48c6-87a9-7f64736e0a38"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://metrofm.com.tr/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8c0eaabf-29b1-4fae-86f1-e7cfa7ec4953"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://radio5.com.tr/wp-content/plugins/under-construction-page/themes/images/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "04407d31-2cc0-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+logo_url = "https://www.dinamo.fm/favicons/dinamo-sleep-favicon.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "706def0c-7017-4601-8305-db1cdb2e9420"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://superfm.com.tr/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0edc51ea-fc6b-4ab8-a687-8dde4730007b"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://palstation106.com/img/logo/pal-station.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fd92e72f-2cbe-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["house", "electronic", "dance", "ambient"]
+logo_url = "https://www.dinamo.fm/favicons/dinamo-deep-favicon.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "948408f4-0060-44fa-a26c-bf313f6c774d"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://cdn1.kralmuzik.com.tr/media/content/19-05/17/kralfm.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9626456e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["world"]
+logo_url = "http://dostfm.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2815bbc7-2cbf-11e8-91bf-52543be04c81"
+source_hash = "manual"
+name = "Dinamo.fm Caffè"
+tags = ["ambient", "electronic"]
+logo_url = "https://www.dinamo.fm/favicons/dinamo-caffe-favicon.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "14db05f4-b028-40dc-a13f-c53d068d929e"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://www.haberturkradyo.com.tr/wp-content/uploads/2017/07/cropped-RADYO_LOGO_Son-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8c76958a-2cbf-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "oldies"]
+logo_url = "https://www.dinamo.fm/favicons/dinamo-disco-favicon.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "62402197-6bcd-4bba-8577-ef025800b453"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://i.tmgrup.com.tr/vavradyo/site/v2/c/i/apple-touch-icon-new-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dd462b37-5792-402b-a1a2-4dd70c3971ee"
+source_hash = "manual"
+tags = ["world", "public radio"]
+logo_url = "https://trtkurdi.com.tr/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7f29690c-2cc0-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "house", "dance", "techno", "dub"]
+logo_url = "https://www.dinamo.fm/favicons/dinamo-locodyno-favicon.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f4121c74-9b1a-4051-8864-9db00eab2848"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.palfm.com.tr/img/logo/pal-fm.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3951ff60-8bd1-11e9-ad01-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "indie", "ambient", "public radio"]
+logo_url = "https://radioantalya.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0a2c3506-a136-40f2-b008-38daf2b12fd6"
+source_hash = "manual"
+tags = ["pop", "music"]
+logo_url = "https://trt-public-static.trt.com.tr/eradyo/public/dm_upload/modul2/dd24ba9f-7f22-4b79-a226-9704169bd953.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "57d6c252-a148-4e96-9602-39f3d6f22eb1"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://radyo44.com.tr/favicons/favicon-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4533a6a3-0b8e-476b-b0ec-b4a56162caa6"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "http://radyopiryolu.canliyayinda.com:8165/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "203048eb-cb0c-4f34-b5e8-088ebac3adb1"
+source_hash = "manual"
+tags = ["classical", "jazz", "culture", "oldies"]
+logo_url = "https://cdn-i.pr.trt.com.tr/trtdinle//w360/q70/12467462.jpeg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c1e2e152-71d0-458f-9c41-5fb54a33dbf8"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://static.wikia.nocookie.net/logopedia/images/2/27/TRT_Radyo_1_logo.svg/"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "474b5f9f-6202-4928-a3c0-0a9068ce040e"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://images.keepone.net/1376-2022-10-17.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e07ce960-0fca-49c5-9f9f-4aa24feb77a8"
+source_hash = "manual"
+tags = ["folk", "world"]
+logo_url = "https://yt3.ggpht.com/ytc/AKedOLSnbp3j7UCOUCra41mcQXEaeuobWPad1G7bwOsZDw=s900-c-k-c0x00ffffff-no-rj"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ce11fd33-2cbf-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "ambient", "dub"]
+logo_url = "https://www.dinamo.fm/favicons/dinamo-smog-favicon.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "45bb5fc8-84df-4561-b282-935bb5dd7c86"
+source_hash = "manual"
+tags = ["electronic", "ambient", "dance"]
+logo_url = "https://www.dinamo.fm/favicons/dinamo-fluent-favicon.jpg"
+

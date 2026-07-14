@@ -1,0 +1,35 @@
+# MY Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6ee52ee9-95c0-4e19-95fd-d9a9c345b7b3"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.988.com.my/wp-content/themes/988_web/assets/988-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0fd3faa9-6afe-46d4-b31a-5c53691cfbf9"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies", "world"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/XZGnRuLMS4.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ac70a7c7-8fc9-422f-aec6-32eedb8b54ba"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7fWHlrzQLf54yfgOeC8pdgj63XSwcXZCFQ&usqp=CAU"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "61c62eb4-0fb6-441b-bc1f-c53c03e0d392"
+source_hash = "manual"
+tags = ["pop", "world", "news"]
+logo_url = "https://play-lh.googleusercontent.com/uxM8yNfSSSXXmrI2Jft9Md3V-SrlyBl8XYk1YrnEXykn71l3AK8g8_kjQsFk1lLi-hM=w600-h300-pc0xffffff-pd"
+

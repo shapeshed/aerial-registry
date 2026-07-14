@@ -1,0 +1,14 @@
+# MW Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d5c8ae88-3b49-4fd9-8e68-4cfa9cc877d5"
+source_hash = "manual"
+tags = ["electronic", "dance"]
+logo_url = "https://amaryllishotels.com/assets/images/AMARYLLIS%20LOGO_favicon-01.png"
+

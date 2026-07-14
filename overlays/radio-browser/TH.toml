@@ -19,3 +19,65 @@ source_hash = "manual"
 tags = ["alternative", "rock", "electronic"]
 logo_url = "https://bkk.fm/images/favicons/favicon-32x32.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9a29a5f2-a60d-4eb0-8345-6454a10a53fb"
+source_hash = "manual"
+tags = ["country", "pop"]
+logo_url = "https://www.requestradio.in.th/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7316c4df-d61f-4ba1-9de4-f92e66b97f03"
+source_hash = "manual"
+name = "ไทยลานนาเรดิโอ FM 106.5"
+tags = ["country", "pop", "indie"]
+logo_url = "https://www.lannaradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0662ca31-689c-11ea-9d09-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://img.sedoparking.com/templates/logos/sedo_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7d791618-8666-4113-b788-878a0b15a06a"
+source_hash = "manual"
+tags = ["news"]
+logo_url = "https://images.topnews.co.th/2024/05/cropped-logo-only-o-180x180.png?x-image-process=style/webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c3b0c8ba-eb2a-48a9-a463-dcc2182042bd"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://www.requestradio.in.th/danceremix/wp-content/uploads/2016/07/cropped-icon-150x150.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "08675eea-4c22-486d-920d-1bb997ed819e"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://static.mytuner.mobi/media/tvos_radios/5vfxsvfwzgqm.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "76fe3193-856c-49ed-9b97-8478a042ca8a"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://static-media.streema.com/media/cache/83/2c/832c5cf81ed3452bcbd15ebcc2564e5c.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "86468748-3045-4b88-97ef-e6d266c901f5"
+source_hash = "manual"
+tags = ["chillout", "lounge"]
+logo_url = "https://radiosamui.online/assets/default_logo.png"
+

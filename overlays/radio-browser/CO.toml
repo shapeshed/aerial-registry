@@ -19,3 +19,163 @@ source_hash = "manual"
 tags = ["news", "talk"]
 logo_url = "https://www.radiotiempo.co/icon?b8748d2f62517688"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961f5a7a-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Blu Radio"
+tags = ["news", "talk", "sport"]
+logo_url = "http://www.bluradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961af0bd-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "W Radio Colombia"
+tags = ["news", "talk"]
+logo_url = "http://wradio.com.co/pf/resources/wradio-colombia/touch-icon-ipad.png?d=172"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96330fff-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Tropicana Bogotá"
+tags = ["salsa", "tropical", "world"]
+logo_url = "https://www.tropicanafm.com/wp-content/uploads/2021/02/cropped-favicon_tropicana-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9618c1b9-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Candela Estéreo Bogotá"
+tags = ["latin", "pop", "world"]
+logo_url = "https://uploads.candelaestereo.com/1/2019/06/cropped-logo-candela-llama-100x100.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cd4f771b-04b6-41ed-ba97-74d23d9f6e59"
+source_hash = "manual"
+name = "Olímpica Stereo Medellín"
+tags = ["salsa", "tropical", "world"]
+logo_url = "https://olimpicastereo.com.co/wp-content/uploads/2019/12/Logo_olimpica_stereologo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "afb55155-21fb-11e8-91bf-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies", "soul"]
+logo_url = "http://superclasica.com/wp/wp-content/uploads/2013/11/logo-peq-color-mini.bmp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "08bcc582-f87b-43fc-96cd-5be0233566d5"
+source_hash = "manual"
+name = "Bésame Medellín"
+tags = ["pop", "soul", "oldies"]
+logo_url = "https://www.besame.fm/wp-content/uploads/2020/11/cropped-favicon-besame-32x32.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0c6bfd10-3912-4ef0-babc-e2ca4dd16881"
+source_hash = "manual"
+name = "Mix Medellín"
+tags = ["reggae", "dance", "pop"]
+logo_url = "https://mixradio.co/icon?b8748d2f62517688"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bc36c5f0-7b45-479f-aa41-3caf3a912377"
+source_hash = "manual"
+name = "Radioacktiva Bogotá"
+tags = ["rock", "alternative", "indie"]
+logo_url = "https://www.radioacktiva.com/wp-content/uploads/2024/12/cropped-favicon-new1-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7d011785-7195-44df-855d-f1bba03a0188"
+source_hash = "manual"
+name = "Tropicana Cali"
+tags = ["salsa", "world", "tropical"]
+logo_url = "https://www.radio.es/images/broadcasts/10/15/27769/1/c300.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "60e35568-feb7-43b8-9d0e-b6c69d2445a2"
+source_hash = "manual"
+name = "El Sol Medellín"
+tags = ["salsa", "world", "tropical"]
+logo_url = "https://static.wordpress.rcnradio.com/elsol/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2793611b-6fbd-4c1b-aaec-fed7b85b6b6c"
+source_hash = "manual"
+tags = ["pop", "dance", "latin"]
+logo_url = "https://los40co00.epimg.net/iconos/v1.x/v1.0/promos/promo_og_los40.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "578b5aca-63a8-11e9-a622-52543be04c81"
+source_hash = "manual"
+name = "Radio Ipiales Caracol"
+tags = ["news", "talk", "sport", "culture"]
+logo_url = "http://www.radioipiales.co/wp-content/uploads/2018/02/cropped-logo-site-radio-ipiales-caracol-1-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9e6c1b64-5395-4e2c-b71d-59a324fd266d"
+source_hash = "manual"
+tags = ["salsa", "world"]
+logo_url = "https://colombiacrossover.com/wp-content/uploads/Logo-colombia-salsa-dura-png-1024x985.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a3b3b040-77cb-4f89-b800-ac6dc72d44a8"
+source_hash = "manual"
+name = "La Ochentera Medellín"
+tags = ["oldies", "pop"]
+logo_url = "https://static-media.streema.com/media/cache/ba/61/ba61da8fd3b645ffccacb57227d3796c.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "88d71c95-2aa4-4f62-907d-b7303b5181d9"
+source_hash = "manual"
+tags = ["world", "reggae", "dance"]
+logo_url = "https://madrigalfm.com/wp-content/uploads/elementor/thumbs/youtube-crossover-qjmsd48x8wrd3xveezze4h2jf5d9wu66ntirddnlxa.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b362c36f-d1fb-4f8d-8a3e-99e140285acf"
+source_hash = "manual"
+tags = ["rock", "alternative"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s86611d.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c6d59222-e9e0-4c0e-a1b0-1b6372e21131"
+source_hash = "manual"
+name = "Olímpica Stereo Bogotá"
+tags = ["pop", "dance"]
+logo_url = "https://olimpicastereo.com.co/icon?b8748d2f62517688"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8e411494-28ad-11ea-aa0c-52543be04c81"
+source_hash = "manual"
+name = "Mix Radio 103.9"
+tags = ["dance", "reggae", "pop"]
+logo_url = "http://mixradio.co/icon?b8748d2f62517688"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96273c7f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "RadioActiva 97.9 FM"
+tags = ["rock", "alternative"]
+logo_url = "https://www.radioacktiva.com/wp-content/uploads/2024/12/favicon-200x200-1-150x100.png"
+

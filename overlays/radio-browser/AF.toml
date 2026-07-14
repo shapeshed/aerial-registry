@@ -1,0 +1,22 @@
+# AF Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2dde8123-08df-4be6-8817-8b876efc2271"
+source_hash = "manual"
+name = "Radio Bandeirantes Goiânia"
+tags = ["public radio", "world"]
+logo_url = "https://radiobandeirantesgoiania.com.br/wp-content/uploads/2022/11/cropped-favcon-band-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fb6f79e4-d5ac-481b-90f5-b6f4828235de"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+logo_url = "https://s1.wp.com/i/favicon.ico"
+

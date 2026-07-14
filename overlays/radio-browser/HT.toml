@@ -1,0 +1,15 @@
+# HT Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3fb39881-cf61-11e8-a54a-52543be04c81"
+source_hash = "manual"
+name = "Konpa Mix Radio"
+tags = ["world", "reggae", "dance"]
+logo_url = "https://www.ipower.com/images/icons/apple-touch-icons/apple-touch-icon-ipower.png"
+

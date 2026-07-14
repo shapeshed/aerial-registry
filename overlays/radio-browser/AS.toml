@@ -1,0 +1,15 @@
+# AS Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ce6dc5a4-a2b5-433f-9912-a01d56f49de6"
+source_hash = "manual"
+name = "Sound of Hope"
+tags = ["talk", "public radio", "culture"]
+logo_url = "https://www.soundofhope.org/img/logo.svg"
+

@@ -12,3 +12,15 @@ source_hash = "manual"
 tags = ["world", "pop", "culture"]
 logo_url = "https://dakarmusique.com/wp-content/uploads/2022/11/cropped-486-486-max-180x180.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5df3c291-b0de-4ca4-86d1-9b86885f52af"
+source_hash = "manual"
+tags = ["pop", "talk", "public radio"]
+logo_url = "https://zeno.fm/_next/image/?url=https%3A%2F%2Fimages.zeno.fm%2F__jz1rteNr9MfI1GGFmwJpVEvCGsjW6xR9APAcOKB-Q%2Frs%3Afit%3A240%3A240%2Fg%3Ace%3A0%3A0%2FaHR0cHM6Ly9zdHJlYW0tdG9vbHMuemVub21lZGlhLmNvbS9jb250ZW50L3N0YXRpb25zL2FneHpmbnBsYm04dGMzUmhkSE55TWdzU0NrRjFkR2hEYkdsbGJuUVlnSUNBaTRueWxBc01DeElPVTNSaGRHbHZibEJ5YjJacGJHVVlnSURRaHVMUWtna01vZ0VFZW1WdWJ3L2ltYWdlLz91cGRhdGVkPTE2NjE2OTY3MDkwMDA.webp&w=1920&q=100"
+

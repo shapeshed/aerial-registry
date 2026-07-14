@@ -1,0 +1,22 @@
+# PR Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96267f26-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "WRTU 89.7 Radio Universidad de Puerto Rico"
+tags = ["public radio", "culture"]
+logo_url = "http://www.wrtu.pr/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d11f4ae1-8302-4883-b4b3-f02d308e3dda"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://hot102pr.com/favicon.ico"
+

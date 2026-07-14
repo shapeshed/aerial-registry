@@ -82,3 +82,312 @@ source_hash = "manual"
 tags = ["dance", "electronic"]
 logo_url = "https://www.rmfon.pl/assets/images/favicon/apple-touch-icon.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964aa3f1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "http://moje.polskieradio.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9610ee68-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://wnet.fm/wp-content/uploads/2019/03/cropped-favikon-145x145.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961b5bb7-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "http://radioszczecin.pl/assets/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960f4b0b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "public radio"]
+logo_url = "https://radiogdansk.pl/wp-content/uploads/2020/12/cropped-favicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7c207b66-3cac-43ce-b884-8876d196d0c9"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://www.rmf24.pl/i/2022/favicon/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "698edc0e-7027-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://wnet.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96102577-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio Party"
+tags = ["electronic", "dance", "pop"]
+logo_url = "http://radioparty.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961b32f7-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "talk", "news"]
+logo_url = "http://www.radio.katowice.pl/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "257d0088-3b8d-4b9c-9092-4507bef630fd"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://cdn-profiles.tunein.com/s87779/images/logod.png?t=637867737470000000"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "592947b7-c949-4e9f-8797-1e93b2158a19"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "http://eska.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960f2b60-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "http://www.prw.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6bf03632-07d9-4112-8119-03588ec8f556"
+source_hash = "manual"
+tags = ["rock", "alternative"]
+logo_url = "https://gfx-player.radiozet.pl/var/player/storage/images/player-antyradio/programy/antyradio-ekstra/936460-5-pol-PL/Antyradio-Ekstra_size-70x70.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "465760fe-5aa9-4117-8145-b3f128f1f034"
+source_hash = "manual"
+tags = ["oldies"]
+logo_url = "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/be/dd/13784/1/c300.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f837704e-40df-4302-b546-c8401348e51c"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://radiotvrepublika.pl/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ad320b38-45a1-44a2-bba4-7fb7fb8cb41c"
+source_hash = "manual"
+tags = ["oldies"]
+logo_url = "http://static.fm.tuba.pl/stations/_img/zlote-przeboje_512.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "518d37e6-78d0-4862-96ea-c68edc3eba31"
+source_hash = "manual"
+name = "Radio Parada 96.00"
+tags = ["pop", "dance"]
+logo_url = "https://static.wixstatic.com/media/351d06_e154aaf707444cd3b87c0d39494db49e~mv2_d_3486_2480_s_4_2.jpg/v1/fill/w_112,h_80,al_c,q_80,usm_0.66_1.00_0.01/351d06_e154aaf707444cd3b87c0d39494db49e~mv2_d_3486_2480_s_4_2.webp"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "64e5a5d1-8b04-419c-b350-28f056818282"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240110_150439740.jpg?alt=media&token=879bb2b7-8416-4957-b2dd-4bcdc67e6898"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "05094fb8-9fd1-491c-9f02-ca4d52a2f488"
+source_hash = "manual"
+tags = ["public radio", "news", "talk"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240209_103039189.jpg?alt=media&token=6aa71f56-8a3e-42d2-a0d8-5e5293766afd"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960f9400-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Polskie Radio RDC"
+tags = ["public radio", "pop"]
+logo_url = "http://www.rdc.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e8c27cc3-e6e8-40b4-aca1-5e293a548c63"
+source_hash = "manual"
+name = "Radio Disco Party"
+tags = ["dance", "pop"]
+logo_url = "https://discoparty.pl/wp-content/uploads/2023/01/logotyp.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3d5ae3c4-6d05-415b-a0eb-d21ca56be0ea"
+source_hash = "manual"
+name = "Eska Warszawa"
+tags = ["pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/2/2c/Eska_1049_2.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4dde2c57-d8f5-4e55-b685-51195ac3d0e5"
+source_hash = "manual"
+name = "Radioparty.pl"
+tags = ["dance", "electronic"]
+logo_url = "https://radioparty.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960fd7e9-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+logo_url = "http://www.rmfon.pl/assets/images/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "691b86e8-39cc-11e9-9b4e-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "news"]
+logo_url = "https://radiopoznan.fm/v3/img/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960daa01-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["trance", "electronic", "dance"]
+logo_url = "http://radioparty.pl//favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960b82ce-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.radiowarszawa.com.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c99f1070-f077-47fb-a9c8-fca5f8d14dec"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://gfx.radiozet.pl/extension/radiozet/design/standard/images/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964a72fd-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical"]
+logo_url = "http://moje.polskieradio.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2a3873b3-6e5c-4d5d-8846-3650ed8868ce"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmyradioonline.pl%2Fpublic%2Fuploads%2Fradio_img%2Fradio-plus%2Ffb_cover.jpg&imgrefurl=https%3A%2F%2Fmyradioonline.pl%2Fradio-plus&tbnid=t01lPa3fSdA3fM&vet=12ahUKEwjmuPu018zxAhUS_CoKHfw8Dj4QMygBegUIARCdAQ..i&docid=ewI89N863ZxEUM&w=720&h=374&q=radio%20plus%20krak%C3%B3w&client=opera&ved=2ahUKEwjmuPu018zxAhUS_CoKHfw8Dj4QMygBegUIARCdAQ"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8aafbf38-346c-479c-b80c-abd308613d16"
+source_hash = "manual"
+tags = ["rock", "alternative"]
+logo_url = "https://gfx-player.antyradio.pl/design/player_antyradio/images/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dc579323-34b1-4b37-ad43-4db9cb00e710"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/3/1893.v4.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96100732-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.radiorekord.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "388698fd-f555-49bc-9b8e-9297aa1c9b7e"
+source_hash = "manual"
+tags = ["public radio", "talk", "news"]
+logo_url = "https://radio.rzeszow.pl/wp-content/uploads/2022/12/cropped-favicon-1-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2feb2001-ac7b-45d6-8c71-c12079f72e0e"
+source_hash = "manual"
+name = "Discoparty.pl Club"
+tags = ["dance", "electronic", "house"]
+logo_url = "https://discoparty.pl/wp-content/uploads/2023/01/cropped-logotyp-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "927987be-e772-4c15-89d1-cf0617e10286"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://gfx.chillizet.pl/extension/chillizet/design/standard/images/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8bfd74c2-c254-4e9b-ba58-94248ddd767e"
+source_hash = "manual"
+name = "Radio SAR"
+tags = ["student radio", "rock", "jazz", "pop"]
+logo_url = "https://stream.radiosar.pl/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960faea3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "variety"]
+logo_url = "http://radioszczecin.pl/css/logo.svg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "39e9719f-f3b4-4a08-b2c8-29881e3b8314"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20241223_184842765.jpg?alt=media&token=a62dd69a-bc4c-4e96-bbb8-d551e4bdfef7"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4021b06a-5787-44ca-9621-4dc63bf371c7"
+source_hash = "manual"
+name = "Radio Kampus 97.1 FM"
+tags = ["student radio", "alternative", "indie"]
+logo_url = "http://radiokampus.fm/logo192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9611e22b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "http://www.trendyradio.pl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960feb0d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "variety"]
+logo_url = "http://www.radio.opole.pl/assets/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cdebc810-3394-497f-aedf-4567448c9572"
+source_hash = "manual"
+name = "Radio Mbox Disco Polo"
+tags = ["dance", "disco", "pop"]
+logo_url = "https://radiombox.pl/MboxKwadr120x120.png"
+

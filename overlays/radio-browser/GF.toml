@@ -1,0 +1,21 @@
+# GF Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2bd4cf82-d195-11e9-a861-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "world", "culture"]
+logo_url = "https://la1ere.francetvinfo.fr/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c800eacd-c6e4-46f6-860e-71e975200882"
+source_hash = "manual"
+tags = ["oldies", "world", "reggae"]
+logo_url = "http://www.nostalgiedom.fr/upload/favicon.ico"
+

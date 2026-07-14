@@ -1,0 +1,14 @@
+# VN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7ce50274-160a-43b6-a023-782897576f9e"
+source_hash = "manual"
+tags = ["news", "talk", "traffic"]
+logo_url = "https://sf.ex-cdn.com/vovgiaothong.vn/v0.1.1/templates/themes/images/logo.svg"
+

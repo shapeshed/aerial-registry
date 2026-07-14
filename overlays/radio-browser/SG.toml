@@ -1,0 +1,21 @@
+# SG Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bfa448fd-2b74-4a60-a78d-7fea62cc0577"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/b/b0/CNA938_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "82102b0e-68e9-411e-87b8-7cae36046096"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://www.melisten.sg/static/apple-icon-120x120.png"
+

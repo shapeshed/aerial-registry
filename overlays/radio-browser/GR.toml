@@ -54,3 +54,276 @@ source_hash = "manual"
 tags = ["rock", "alternative"]
 logo_url = "http://resources.live24.gr/resources/images/stations/fee95347-f0eb-4299-9edd-9d9b42ee23f6.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b9e1f76e-41fd-11e9-aa55-52543be04c81"
+source_hash = "manual"
+tags = ["blues", "soul"]
+logo_url = "https://i0.wp.com/bluesradio.gr/wp-content/uploads/2021/06/cropped-24-7bug.png?fit=180%2c180&#038;ssl=1"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961ddf4b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.kiss929.gr/sites/default/files/kiss.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962418d1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Parapolítika FM 90.1"
+tags = ["news", "talk"]
+logo_url = "http://www.parapolitikaradio.gr/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96463caa-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "http://www.ellinikos932.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0f239691-88f0-11e8-aa66-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.laikos.gr/templates/bt_medical/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964607f7-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://mad.gr/wp-content/uploads/2020/06/cropped-mad-browser-icon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "701d3a6d-06e0-4d1f-9521-7742e725ba94"
+source_hash = "manual"
+name = "Radio Art Chillout"
+tags = ["ambient", "electronic"]
+logo_url = "https://d1iyh67kzf6t3o.cloudfront.net/images/channels/25_Chillout.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5e715331-d8ae-11e8-a9cc-52543be04c81"
+source_hash = "manual"
+name = "Radio Art Meditation"
+tags = ["ambient"]
+logo_url = "https://cdn-profiles.tunein.com/s187596/images/logoq.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96c2b150-1cad-11e8-a334-52543be04c81"
+source_hash = "manual"
+name = "Radio Art Solo Piano"
+tags = ["classical", "ambient"]
+logo_url = "https://www.radioart.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b27543a7-e09d-42ce-a6f8-2c7da0c75f56"
+source_hash = "manual"
+name = "Radio Art Relaxing"
+tags = ["classical", "ambient"]
+logo_url = "https://www.radioart.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4ea2d213-d064-422c-bde9-e57550318023"
+source_hash = "manual"
+tags = ["pop", "oldies", "disco"]
+logo_url = "http://resources.live24.gr/resources/images/stations/cde82ef1-c5e0-4b19-919a-cc2c3c2fc491.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9f57367e-96b1-4e52-97a0-0bc37cf6957a"
+source_hash = "manual"
+tags = ["classical", "ambient"]
+logo_url = "https://d1iyh67kzf6t3o.cloudfront.net/images/channels/137_piano_for_s-600x400.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ca932026-594e-11e9-a622-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "http://athina984.gr/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f5cb7a92-8a10-445d-b3aa-514b246bbbbf"
+source_hash = "manual"
+tags = ["world", "jazz"]
+logo_url = "https://www.radioart.com/images/channels/Cuban_lounge.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1be3981d-f3da-4371-891f-07300815f19c"
+source_hash = "manual"
+tags = ["pop", "mainstream"]
+logo_url = "http://resources.live24.gr/resources/images/stations/c6d7573c-7187-4b33-8d98-cd336145612b.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "00e0bb66-829b-11e8-aa66-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://velvet968.gr/wp-content/uploads/2021/09/ms-icon-310x310-1-100x100.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3726ce71-ae38-11e8-aa67-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "ambient"]
+logo_url = "https://cdn-profiles.tunein.com/s154174/images/logoq.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9646068e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "http://www.athensvoice.gr/content/media/favicon/favicon-128.png?k=web-5859bc9555"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "446a3e3d-a2fb-453d-abbd-3369bde1c214"
+source_hash = "manual"
+name = "ERA Sport"
+tags = ["sport", "public radio"]
+logo_url = "https://www.ertecho.com/wp-content/uploads/2023/08/cropped-ertecho-favicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9da2dd6b-1db8-4b09-ad35-af75c41b13ba"
+source_hash = "manual"
+tags = ["pop", "mainstream"]
+logo_url = "https://2.bp.blogspot.com/-GZD49Iqiy2w/YGOkt5ixQvI/AAAAAAAABCs/mP-S_n-CUOwvlyw7Uzu9oAfpsrxgCDaQwCK4BGAYYCw/s1600/Skandalo%2BWeb%2BRadio2.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1b095119-ae01-401b-81af-7424ed770cda"
+source_hash = "manual"
+name = "Vanilla Radio - Fresh Flavours Stream"
+tags = ["pop"]
+logo_url = "https://www.vanillaradio.com/wp-content/uploads/2016/04/vanilla-logo-300x100.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4ed5e97c-7540-40d9-8ce1-7cea18080f08"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://7000fm.gr/images/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b5bf4f76-8daf-11e8-aa66-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance", "r&b"]
+logo_url = "http://plusradio.gr/images/folder/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a645428e-9fd0-4afa-bba4-6ff8b591648e"
+source_hash = "manual"
+name = "Archangelos 94.1"
+tags = ["pop", "alternative"]
+logo_url = "http://resources.live24.gr/resources/images/stations/d8b5ba1e-c19d-4ab0-b5a5-7bc8c1c7d64f.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "58d67b9f-5ddf-4931-b878-2118d20200bc"
+source_hash = "manual"
+tags = ["pop", "dance", "alternative"]
+logo_url = "https://www.metrosport.gr/metrosport/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a4056fd3-3d24-48c0-ab75-979ac2a30159"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://zuccaradio.com/wp-content/uploads/2019/11/ZUCCA_RADIO_LOGO-02a.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ee53da76-a422-4c66-97bf-cb2965e86967"
+source_hash = "manual"
+name = "Ipiros 94.5"
+tags = ["folk", "world", "traditional"]
+logo_url = "http://resources.live24.gr/resources/images/stations/c689f912-ad9e-4513-9d2a-db9418d70018.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "eb14002e-e11f-4f0d-a0a9-7c98890190b1"
+source_hash = "manual"
+tags = ["pop", "alternative"]
+logo_url = "http://resources.live24.gr/resources/images/stations/29aecd11-c6bd-4c2e-bf0e-054390151602.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fbc3e197-536e-4ceb-8518-3dbce47821b1"
+source_hash = "manual"
+tags = ["dance", "electronic", "hip-hop", "pop"]
+logo_url = "http://resources.live24.gr/resources/images/stations/bec6ab25-e799-4958-aae6-6c1fc0dfa0cb.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d4058-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "alternative"]
+logo_url = "http://www.rso.gr/templates/gk_hotel/images/touch-device.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cf68de27-dc9e-4e89-b1ca-56ca40e3bdc5"
+source_hash = "manual"
+tags = ["jazz", "guitar"]
+logo_url = "https://www.radioart.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e324061d-d8b4-11e8-a9cc-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "instrumental"]
+logo_url = "https://www.radioart.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3df1c47e-58c4-4f54-b7de-f0f5df5f52a9"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.radioart.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e49351ef-ae39-11e8-aa67-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "world", "soul"]
+logo_url = "https://cdn-profiles.tunein.com/s290986/images/logoq.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2082b774-1082-419d-ad13-a0ce9c10a759"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/5/15525.v6.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b7e57990-b3ad-44a9-9458-2f8f58dcbde2"
+source_hash = "manual"
+tags = ["rock", "alternative", "indie"]
+logo_url = "https://resources.live24.gr/resources/images/stations/fee95347-f0eb-4299-9edd-9d9b42ee23f6.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f2f0f4b9-00d5-460e-8024-9c7e1a3f4692"
+source_hash = "manual"
+tags = ["pop", "dance", "electronic"]
+logo_url = "https://melody888.gr/images/fav1.png"
+

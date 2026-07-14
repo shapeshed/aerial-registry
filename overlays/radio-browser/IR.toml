@@ -1,0 +1,28 @@
+# IR Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dcb4d366-5b06-4f4d-a5cb-0b81d1c09521"
+source_hash = "manual"
+tags = ["classical", "world"]
+logo_url = "https://lh5.googleusercontent.com/proxy/25PMsUBa3Z6So8cdvAyZT7_93NyV26cJNuTTDY4xk6aJU1lcKPByf2C7o2HbrGrv-QxPvbI3dio2D39zYlgi1v6nLg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "aa408a3b-3d07-415d-8af1-a60b64e07043"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.navahang.com/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9614d7a0-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["world", "talk", "christian"]
+logo_url = "http://www.radiomojdeh.com/favicon.ico"
+

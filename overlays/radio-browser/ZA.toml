@@ -12,3 +12,37 @@ source_hash = "manual"
 tags = ["pop", "rock"]
 logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/RRjd3up6aH.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "28b85cc9-696f-4175-966e-7459653c4811"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.lekkerfm.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2ad985ec-f235-4e36-b362-b3b993174b40"
+source_hash = "manual"
+name = "Ubuntu FM"
+tags = ["afropop", "jazz", "soul", "reggae", "hip-hop"]
+logo_url = "https://www.ubuntu.fm/sites/default/files//favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0c5a3d4f-ecd6-430e-bcf4-f51ff1b13d1c"
+source_hash = "manual"
+tags = ["talk"]
+logo_url = "https://www.primediaplus.com/images/logos/logo-702.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7881d719-bae9-407d-912c-f75174c43403"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://turntable.kagiso.io/core/images/ecr/apple-touch-icon.png"
+

@@ -1,0 +1,14 @@
+# DZ Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "defa0e5c-f689-4db1-97db-87ebb759f7d1"
+source_hash = "manual"
+tags = ["electronic", "ambient", "world"]
+logo_url = "https://www.radio.net/images/broadcasts/06/f5/126428/1/c300.png"
+

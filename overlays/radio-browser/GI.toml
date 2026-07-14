@@ -1,0 +1,14 @@
+# GI Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a0d83caf-a3c2-489c-af9d-f50c5b8e34c5"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://www.gbc.gi/favicons/mstile-70x70.png"
+

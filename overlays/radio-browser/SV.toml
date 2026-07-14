@@ -1,0 +1,59 @@
+# SV Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9a2b2498-c09b-4b8e-b058-6bc02f8251ee"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://laser.com.sv/wp-content/uploads/2020/09/cropped-favicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d982090b-b0e6-449b-9973-c8d427727591"
+source_hash = "manual"
+name = "Restauración 100.5 FM"
+tags = ["talk", "culture"]
+logo_url = "https://www.elim.org.sv/wp-content/uploads/2023/04/cropped-imagotipo-elim-blanco-1-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a0fa6a9b-cd73-41f7-ae5b-611d87b82d98"
+source_hash = "manual"
+tags = ["alternative", "indie"]
+logo_url = "https://latribu.fm/logo2.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9cf3ffe4-c14a-48ac-9894-35b843ad4f57"
+source_hash = "manual"
+tags = ["talk", "culture"]
+logo_url = "https://tabernaculo.net/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b67d0945-49f9-48be-b287-64510bff43c6"
+source_hash = "manual"
+name = "Radio Nacional de El Salvador 96.9"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/RNES_logo.svg/320px-RNES_logo.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ec7bc4ac-3a3a-4caf-ab46-c22865f534a9"
+source_hash = "manual"
+name = "Radio YSUCA 91.7 FM"
+tags = ["talk", "culture", "public radio"]
+logo_url = "https://ysuca.org.sv/wp-content/uploads/2024/08/favicon-base-blanca-circle.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cb7de307-7e53-40de-9ade-f264d4ffb518"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://www.laser.com.sv/wp-content/uploads/2020/09/cropped-favicon-180x180.png"
+

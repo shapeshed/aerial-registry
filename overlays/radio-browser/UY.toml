@@ -12,3 +12,31 @@ source_hash = "manual"
 tags = ["pop", "rock", "alternative"]
 logo_url = "https://cdn-profiles.tunein.com/s13953/images/bannerx.jpg?t=636203379790000000"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3e656ae3-b36e-4ba4-89bc-99f306df1de5"
+source_hash = "manual"
+name = "CX12 Radio Oriental"
+tags = ["talk", "news", "culture"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/4/4e/Orientalcx12.gif"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "74cb6221-f1ad-45a3-99d1-34ecf7ad5a9b"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://espectador.com/public/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9630d9f1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio Centenario"
+tags = ["pop", "oldies"]
+logo_url = "https://radio36.com.uy/wp-content/uploads/2024/08/cropped-android-chrome-192x192-1-1-180x180.png"
+

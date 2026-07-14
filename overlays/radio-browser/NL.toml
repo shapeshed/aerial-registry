@@ -110,3 +110,239 @@ source_hash = "manual"
 tags = ["oldies", "pop", "rock"]
 logo_url = "https://joe.nl/favicon.ico"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963c00ab-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Intense Radio - We love Dance"
+tags = ["dance", "house", "trance", "electronic", "club"]
+logo_url = "https://www.intenseradio.net/wp-content/uploads/fbrfg/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d227990c-2385-4419-8159-1c73a33a58dd"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScXQ3C4MdB2iKNRXVmQSy-fl3MBqAi-SX2JU3p-ZeLSiLCVbDw&s"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962e7e22-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "house", "electronic", "pop"]
+logo_url = "https://www.slam.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a1189085-eed0-414c-b8d8-6652189767dd"
+source_hash = "manual"
+tags = ["dance", "electronic", "trance", "house"]
+logo_url = "https://jplayer-generator.live-streams.nl/upload/96142657.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96244e9c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "hardcore"]
+logo_url = "https://www.hardcoreradio.nl/wp-content/themes/hardcore-radio/static/images/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962e8aac-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "alternative", "rock"]
+logo_url = "https://pinguinradio.com/dist/images/content/p-radio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9625d0fa-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "culture", "public radio"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Concertzender_Logo.svg/1200px-Concertzender_Logo.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "33e19c6b-d5b2-4b71-809d-a54128fea58e"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://www.italopower.com/assets/img/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961e4e29-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["world", "arabic"]
+logo_url = "https://www.funx.nl/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961e20e5-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop"]
+logo_url = "https://www.funx.nl/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9650457a-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.skyradio.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fd059cc5-b538-41c1-ae76-b8778a84c3db"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://www.538.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9609b4d8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["reggae"]
+logo_url = "https://www.funx.nl/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8567bace-666c-11e8-b15b-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "alternative"]
+logo_url = "https://pinguinradio.com/dist/images/content/p-radio.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f345ae46-3878-4a5d-b907-4df9c9666511"
+source_hash = "manual"
+tags = ["ambient", "soul", "oldies"]
+logo_url = "https://en.slowradio.com/img/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6c391a02-366f-46c1-885b-4a1c7ac1fa69"
+source_hash = "manual"
+name = "Jazz de Ville Groove"
+tags = ["jazz", "soul", "funk"]
+logo_url = "https://www.jazzdeville.com/favicon/jazzdeville/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c344992c-b881-11e9-acb2-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk", "public radio"]
+logo_url = "https://s.regiogroei.cloud/img/favicons/l1/apple-touch-icon.png?v=1709566299847"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9623a1a9-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "house"]
+logo_url = "https://www.538.nl/icons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96432cb3-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["soul", "r&b", "pop"]
+logo_url = "https://cdn-radiotime-logos.tunein.com/s122234q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0adb24fb-a2fe-4a9b-97a4-bc82dfb1820c"
+source_hash = "manual"
+name = "Jungletrain.net"
+tags = ["electronic", "dance", "trance"]
+logo_url = "https://jungletrain.net/jth-inc/images/jtlogo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bbae7603-b9c0-42fe-a1f5-da8f424baa8b"
+source_hash = "manual"
+name = "Perfect Moods"
+tags = ["jazz", "ambient", "soul"]
+logo_url = "https://perfectmoods.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c55d8846-85e5-496a-a2b7-80228a9ef6c8"
+source_hash = "manual"
+name = "Jazz de Ville Jazz"
+tags = ["jazz"]
+logo_url = "https://www.jazzdeville.com/favicon/jazzdeville/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960d7b8c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.skyradio.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "155b08b4-97da-11e9-a605-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/7/70/Qmusic_logo.svg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c0fa9f19-e5f9-4502-99b3-e33f577cea18"
+source_hash = "manual"
+tags = ["jazz", "soul"]
+logo_url = "https://i0.wp.com/iskcrocks.com/wp-content/uploads/2019/09/blues-cafe-740.jpg?w=720&ssl=1"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961a69c1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["party", "pop", "dance"]
+logo_url = "https://www.538.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3046ced9-d322-4098-a8cd-e3c38f60cccb"
+source_hash = "manual"
+name = "KINK 80s"
+tags = ["oldies", "alternative", "rock"]
+logo_url = "https://kink.nl/static/icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960df206-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Sky Radio Love Songs"
+tags = ["pop", "oldies", "soul"]
+logo_url = "http://www.skyradio.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9609d93f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["world", "latin", "hip-hop", "urban"]
+logo_url = "https://www.funx.nl/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962c1e66-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop", "soul"]
+logo_url = "https://feelgoodradio.nl/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a96e06f8-4d64-11ea-b877-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "world", "celtic"]
+logo_url = "https://celtcast.com/wp-content/uploads/2017/04/cropped-CeltCast-Community-Radio-Square-Black-with-White-512-270x270.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "222991f2-ed31-4f7b-ac7d-d65731fc54fe"
+source_hash = "manual"
+tags = ["alternative", "rock", "oldies"]
+logo_url = "https://kink.nl/static/apple-touch-icon.png"
+

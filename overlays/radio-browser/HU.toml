@@ -33,3 +33,216 @@ source_hash = "manual"
 tags = ["rock"]
 logo_url = "https://bdpstrock.hu/favicon.ico"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963787ad-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["comedy", "talk"]
+logo_url = "http://mercyradio.eu/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bc910109-8c16-45dd-a337-83b631b51888"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+logo_url = "https://oxygenmusic.hu/logo192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "98b22cd2-0ec8-4bb1-a5f6-f168de7548b5"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+logo_url = "https://retroradio.hu/wp-content/themes/retroradio/assets/dist/img/favicon/android-icon-192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "122f7792-6b84-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://infostart.hu/images/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9e077bed-f46f-4506-8237-c26be0538fdc"
+source_hash = "manual"
+name = "Klubrádió 95.3"
+tags = ["news", "talk"]
+logo_url = "https://www.klubradio.hu/static/frontend/imgs/KR-clean-logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960bec79-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "indie", "culture"]
+logo_url = "http://tilos.hu/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f80001ac-d2af-4678-98a6-9617da6e94bd"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.danubiusradio.hu/logo192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c240655a-c086-49d7-a0c6-a1baf886c99f"
+source_hash = "manual"
+tags = ["rock", "oldies"]
+logo_url = "https://oxygenmusic.hu/logo192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96386e28-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["world", "folk"]
+logo_url = "http://mercyradio.eu/wp-content/uploads/2014/02/fredy-mediapartner.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3f9ec178-8048-4c25-98e8-dc69766420fc"
+source_hash = "manual"
+name = "Zebrádió"
+tags = ["alternative", "indie"]
+logo_url = "https://zebradio.klubradio.hu/static/frontend/icon/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9628590f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.radio88.hu/wp-content/uploads/2020/04/cropped-r88logo-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "15ad7a63-dd62-479c-8608-c53922dbc8b5"
+source_hash = "manual"
+tags = ["hip-hop", "r&b"]
+logo_url = "https://basefm.hu/wp-content/themes/basefm/assets/dist/img/favicon/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ad1ccf58-9748-4f2f-946e-11026b171ab7"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://bestfmbudapest.hu/wp-content/themes/bestfm/assets/dist/img/favicon/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6001126f-dc0c-44ae-b4d6-d77808f63a87"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://jazzy.hu/apple-icon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "964a4b64-ea9c-486f-a1b5-84ad484d7996"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://danubiusradio.hu/logo192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d00a8843-b483-4de5-94bc-31bda20e732a"
+source_hash = "manual"
+name = "Rádió 1"
+tags = ["dance", "pop"]
+logo_url = "https://radio1.hu/template/radio1/assets/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cf6f73d9-5d72-4074-83e7-735afd5d48d7"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://rockradio.hu/wp-content/themes/rockradio/assets/dist/img/favicon/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "079b15e6-da25-4102-92f1-ca6e56b3d31f"
+source_hash = "manual"
+tags = ["dance", "pop"]
+logo_url = "https://oxygenmusic.hu/logo192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5717f17f-6008-4ecc-abbc-082857ffc7c1"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://img.sedoparking.com/templates/logos/sedo_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "19cf80e9-a1dd-442d-8bbd-c42a383646f0"
+source_hash = "manual"
+tags = ["indie", "alternative"]
+logo_url = "http://tilos.hu/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "79d8bcc0-e8c8-49a7-a160-2b41923b054a"
+source_hash = "manual"
+tags = ["alternative", "pop", "public radio"]
+logo_url = "https://i1.sndcdn.com/artworks-000103658408-5g7ohr-t500x500.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8bbc6e30-276c-483b-afba-352c55ecc633"
+source_hash = "manual"
+name = "Cool FM Filmzenék"
+tags = ["culture"]
+logo_url = "https://coolfm.hu/radio/wp-content/uploads/2022/01/K%C3%89SZ_Filmzen%C3%A9k_2-%C3%9AJ-R%C3%81DI%C3%93.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960c0cbf-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Best FM - Debrecen"
+tags = ["pop", "news"]
+logo_url = "https://myonlineradio.hu/public/uploads/radio_img/best-fm/play_250_250.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962802e7-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://www.radio88.hu/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7b2eec51-efa8-4cfa-9307-22d9cbb2c046"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://parkfm.hu/wp-content/themes/park-fm/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bafa3b8e-1393-11ea-a87e-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "pop"]
+logo_url = "http://www.balatonica.hu/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96386322-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://mercyradio.eu/wp-content/uploads/2014/02/fredy-mediapartner.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3af5df1b-a5c9-4931-a732-a235c7ba2014"
+source_hash = "manual"
+tags = ["folk"]
+logo_url = "https://lazaradio.com/wp-content/uploads/2024/09/laza_logo-2048x818.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9be83992-a630-43e6-8437-a49d90946352"
+source_hash = "manual"
+tags = ["jazz", "soul"]
+logo_url = "https://jazzy-backend-prod.melkweg.hu/jazzy-borito-fallback-groove.jpg"
+

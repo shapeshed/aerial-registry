@@ -12,3 +12,29 @@ source_hash = "manual"
 tags = ["indie", "pop", "rock", "alternative", "electronic"]
 logo_url = "https://antiradio.net/wp-content/uploads/2024/04/cropped-favicon-180x180.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "33e4041e-714d-402a-b7ee-cbdbadee670f"
+source_hash = "manual"
+tags = ["pop", "oldies", "rock"]
+logo_url = "http://xezerfm.az/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "29f72451-9c67-4c81-a413-1ae82ca36ef8"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://radio.ntv.az/images/logo.png?v=2"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "834ac917-6231-4807-a309-9e2f4de66d30"
+source_hash = "manual"
+tags = ["talk", "business", "pop", "alternative"]
+logo_url = "https://boss.com.az/wp-content/uploads/2018/04/BOSS-MAGAZINE-LOGO.png"
+

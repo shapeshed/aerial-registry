@@ -26,3 +26,43 @@ source_hash = "manual"
 tags = ["folk", "pop"]
 logo_url = "http://www.pinkradio.rs/favicon.ico"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c97e2821-9f9e-4ee3-b043-25823e459832"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://www.okradio.net/wp-content/uploads/2021/11/ok-logo-m.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96188acd-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz", "talk", "news"]
+logo_url = "https://studiob.rs/wp-content/uploads/2016/05/favicon-194x194-102x102.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1fd1da76-f0a8-4dfc-a208-baa9755cff86"
+source_hash = "manual"
+tags = ["folk", "pop", "world"]
+logo_url = "https://www.radioinbeograd.rs/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b087798d-8bce-4651-90a4-3d6ced1db095"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://www.antenaradio.rs/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "80c4904f-d482-4714-b61f-b724abe82f2e"
+source_hash = "manual"
+tags = ["pop", "rock", "oldies"]
+logo_url = "https://coolradio.rs/favicon.ico"
+

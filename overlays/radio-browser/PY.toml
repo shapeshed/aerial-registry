@@ -1,0 +1,29 @@
+# PY Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "542ed9ce-f3f1-4653-b1f0-f6cd7461bb75"
+source_hash = "manual"
+tags = ["pop", "world", "reggae", "dance"]
+logo_url = "https://www.tropicalia.com.py/dist/images/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "98073eff-a00a-42ce-b855-715770e5cd87"
+source_hash = "manual"
+name = "Rock and Pop Paraguay"
+tags = ["rock", "pop"]
+logo_url = "https://rockandpop.com.py/wp-content/uploads/2020/06/cropped-cropped-logorockas-180x180-1-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b50fbb6a-05ab-4eb5-b52f-eb65021e76bc"
+source_hash = "manual"
+tags = ["pop", "reggae", "dance"]
+logo_url = "https://i0.wp.com/www.ipparaguay.com.py/wp-content/uploads/2020/10/Radio-Vibras.jpg?resize=1024%2C1024&ssl=1"
+

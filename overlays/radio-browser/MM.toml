@@ -1,0 +1,15 @@
+# MM Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "84cb575d-42bb-42e0-bed7-b1190bb9a8b6"
+source_hash = "manual"
+name = "DWG Radio Burmese"
+tags = ["christian", "gospel", "world"]
+logo_url = "https://www.streamplus.de/img/favico.ico"
+

@@ -1,0 +1,44 @@
+# LB Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "368ef657-f8b5-47ce-b578-337e401cc744"
+source_hash = "manual"
+name = "Voice of Lebanon"
+tags = ["world", "talk", "pop"]
+logo_url = "https://www.vdl.me/wp-content/uploads/2020/12/images.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f761ebd5-eff4-4b0d-8195-c739911842d9"
+source_hash = "manual"
+tags = ["world", "pop"]
+logo_url = "https://i.ibb.co/HT3zGP3/cover.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d275b356-1068-4012-a46a-46e340e12ab9"
+source_hash = "manual"
+tags = ["pop", "world"]
+logo_url = "https://www.instagram.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7d1378e3-8e91-46f9-a98d-6f7426e60a3c"
+source_hash = "manual"
+tags = ["world", "talk"]
+logo_url = "http://www.sawtelmada.com/assets/themes/sawt%20al%20mada/images/logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "15abccc1-cf25-491f-a3fa-5124ecf1331c"
+source_hash = "manual"
+name = "Sawt El Ghad FM 96.7"
+tags = ["world", "pop"]
+logo_url = "https://static-media.streema.com/media/cache/5b/0b/5b0ba54725c027b287edc36674016065.jpg"
+

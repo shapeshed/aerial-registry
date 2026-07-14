@@ -1,0 +1,36 @@
+# SE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f4fcca1a-ba7e-11e9-acb2-52543be04c81"
+source_hash = "manual"
+name = "Pirate Rock"
+tags = ["rock", "alternative", "metal"]
+logo_url = "https://piraterock.se/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9624489a-9323-11e8-a767-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.radioplay.se/tesla/static/favicons/radioplay-se/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "168e0796-3b97-479c-949d-b1871ef07379"
+source_hash = "manual"
+tags = ["rock", "alternative", "metal", "indie"]
+logo_url = "https://cdn.khz.se/images/161x80/63808dd23f61e6193a9007a927189e13.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d9ecf-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://guldkanalen.se/wp-content/uploads/2015/10/cropped-favoicon-180x180.gif"
+

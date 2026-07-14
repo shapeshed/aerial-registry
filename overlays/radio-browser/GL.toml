@@ -1,0 +1,14 @@
+# GL Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "efd96088-62e3-4df5-a962-b9595ee7b6c9"
+source_hash = "manual"
+tags = ["indie", "alternative", "public radio"]
+logo_url = "https://nanoqmedia.gl/apple-touch-icon.png"
+

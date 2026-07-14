@@ -1,0 +1,14 @@
+# RW Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "78602731-7afd-4e17-b418-b38f2f222add"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "http://listen.rba.co.rw/radios/logos/radiomagic.PNG"
+

@@ -1,0 +1,14 @@
+# SR Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "521050ee-ed59-4b3b-bb6b-c5b86d703b62"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://www.radio10.sr/favicon.ico"
+

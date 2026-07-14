@@ -1,0 +1,23 @@
+# CN Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "94b627b7-7b61-4478-b797-bcb21973c4bf"
+source_hash = "manual"
+name = "AsiaFM"
+tags = ["oldies", "pop", "world"]
+logo_url = "http://pic.qtfm.cn/2022/0712/20220712122112.jpeg!200"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9b6699c4-576a-4ad7-a666-324cdefec14b"
+source_hash = "manual"
+name = "Raggakings"
+tags = ["reggae", "world"]
+logo_url = "https://raggakings.radio/wprk/wp-content/uploads/2020/12/cropped-RaggakingsLogo_ohneURL_512x512.jpg"
+

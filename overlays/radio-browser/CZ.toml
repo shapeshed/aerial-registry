@@ -26,3 +26,187 @@ source_hash = "manual"
 tags = ["hip-hop", "r&b", "soul"]
 logo_url = "https://radiocolor.cz/image/color_logo500x500.jpg"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9641d770-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://casrock.cz/wp-content/themes/frontheme/assets/img/favicon/apple-touch-icon-120x120.png?v002="
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960ec633-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["comedy"]
+logo_url = "https://radia.cz/static/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960c2ef6-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["public radio", "talk"]
+logo_url = "https://dvojka.rozhlas.cz/sites/default/files/favicon_dvojka.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c45e34f4-d927-11e9-a861-52543be04c81"
+source_hash = "manual"
+name = "Impuls Rádio"
+tags = ["pop"]
+logo_url = "https://1gr.cz/u/favicon/apple-touch-icon/impuls.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960c2ab1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://radia.cz/media/images/0001/01/thumb_492_images_w200.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961f6cc4-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Free Rádio 107.0 FM Brno"
+tags = ["pop", "dance", "house"]
+logo_url = "http://www.freeradio.cz/img/ico_vcelka_32_32_6.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8c5750b4-6870-11ea-9d09-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.fajnradio.cz/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "59425e67-86b7-11e9-aa30-52543be04c81"
+source_hash = "manual"
+tags = ["oldies"]
+logo_url = "http://www.oldiesradio.cz/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961cf04b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://radia.cz/media/images/0001/01/thumb_490_images_w200.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9646c6ce-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["culture"]
+logo_url = "https://radia.cz/media/images/0001/01/thumb_25_images_w200.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d4cf1-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["metal"]
+logo_url = "https://radia.cz/media/images/0001/01/thumb_65_images_w200.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960bf772-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["classical", "public radio"]
+logo_url = "http://api.play.cz/static/radio_logo/t200/cro3.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d4a91-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["alternative", "electronic"]
+logo_url = "https://radia.cz/media/images/0001/01/thumb_246_images_w200.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fb6df011-77a5-11e8-83fa-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://radia.cz/static/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961e622e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://krokodyl.cz/www/upload/favicons/144/20210218010709604.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d4eb8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Helax 93.7"
+tags = ["pop"]
+logo_url = "https://radia.cz/media/images/0001/01/thumb_442_images_w200.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "120f9ba0-c55a-498a-ae36-58b5c27ac2af"
+source_hash = "manual"
+tags = ["funk", "soul", "disco"]
+logo_url = "https://www.funkstar.eu/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960e4c91-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://radia.cz/media/images/0001/01/thumb_69_images_w200.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "960cd948-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "electronic", "house"]
+logo_url = "https://radia.cz/static/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7bd36bea-3d4f-43cc-8ff1-28ad8e4d24a6"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://casradio.cz/wp-content/themes/frontheme_woo/assets/img/logos/radio-cas5.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c7571cbe-b514-11e9-acb2-52543be04c81"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "http://www.rockzone.cz/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c6756b5f-3bd7-422d-87c7-4e4ae8fe829f"
+source_hash = "manual"
+tags = ["rock", "pop", "alternative"]
+logo_url = "https://www.expresfm.cz/app/mu-plugins/expresfm/assets/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d4f6c-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio Dechovka 1233"
+tags = ["folk"]
+logo_url = "http://api.play.cz/static/radio_logo/t200/radiodechovka.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c6c9277a-68ae-4230-9d06-aeab4847d649"
+source_hash = "manual"
+tags = ["dance", "house", "trance"]
+logo_url = "https://radia.cz/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0b03c88e-42c4-43fc-884b-f2db4421fc92"
+source_hash = "manual"
+tags = ["pop", "ambient"]
+logo_url = "https://www.radiobonton.cz/favicons/apple-touch-icon.png"
+

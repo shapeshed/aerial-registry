@@ -1,0 +1,14 @@
+# TD Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "41bcc450-6cce-4c33-bf61-da9fd7dd5b7b"
+source_hash = "manual"
+tags = ["world", "pop", "culture"]
+logo_url = "https://play-lh.googleusercontent.com/KTV7O5tAOis_nt9Mxy8wgxZeZJlLzy88yaNWMAub2XnSFUAU2bWgJaLm5w0N61PmVg=w480-h960"
+

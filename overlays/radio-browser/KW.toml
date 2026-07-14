@@ -1,0 +1,63 @@
+# KW Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5c04a6d1-2444-4ae1-8a2b-024cf9a0d033"
+source_hash = "manual"
+name = "Quran Radio - Mishary Alafasy"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://radio.mp3islam.com/api/station/5/art/91d5c1c715991eb0e3958d37-1678174382.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "77c8094d-6822-4221-be7b-1d54ab477d78"
+source_hash = "manual"
+name = "Quran Radio - Abdulrahman Alsudais"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://mp3islam.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "10f95a01-1066-471b-89c5-f9092e73a373"
+source_hash = "manual"
+name = "Quran Radio - Saud Al-Shuraim"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://mp3islam.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0a97035a-bd76-46da-acbb-894f0876da1f"
+source_hash = "manual"
+name = "Quran Radio - Muhammad Al-Minshawi"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://radio.mp3islam.com/static/uploads/minshawi/album_art.1743893697.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "dd1a2ef3-0136-4ed7-8215-3a7b3564d044"
+source_hash = "manual"
+name = "Quran Radio - Ali Alhuthaifi"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://radio.mp3islam.com/api/station/6/art/21ce1559853064845ac13af0-1678264357.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f25fc24b-c5b9-4800-8d51-3e26bb89a99d"
+source_hash = "manual"
+name = "Quran Radio - Yasser AlDosari"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://mp3islam.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e4df1ea1-b0c6-43b1-a0fb-fa685a42d72f"
+source_hash = "manual"
+name = "Quran Radio - Maher Al Mueaqly"
+tags = ["world", "culture", "public radio"]
+logo_url = "https://mp3islam.com/favicon.ico"
+

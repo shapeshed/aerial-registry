@@ -1,0 +1,14 @@
+# CU Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bd958dc1-2c06-41e1-b737-6dc864375a62"
+source_hash = "manual"
+tags = ["latin", "pop", "reggae"]
+logo_url = "https://play-lh.googleusercontent.com/VP7tk6nSYCYaGxxIIzoj7KICDvMhVnsNfTnSSOmGESvDjk6NfDlPJgcxI6jDH0CeoRM=w240-h480-rw"
+

@@ -1,0 +1,15 @@
+# BB Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "df366836-0e5e-4e59-ae98-64898b26b448"
+source_hash = "manual"
+name = "Relaxing Jazz"
+tags = ["jazz", "ambient"]
+logo_url = "https://relaxingjazz.com/wp-content/uploads/2023/12/RELAXING-JAZZ-LOGO-2-300x300.png"
+

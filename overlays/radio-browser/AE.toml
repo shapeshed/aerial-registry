@@ -1,0 +1,14 @@
+# AE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f845b385-3414-42fe-8e23-fe7cafe7a61b"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://big1062.com/wp-content/uploads/2020/11/BIG-02.png"
+

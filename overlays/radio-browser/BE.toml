@@ -33,3 +33,93 @@ source_hash = "manual"
 tags = ["oldies", "pop"]
 logo_url = "https://static.mytuner.mobi/media/tvos_radios/x7fzbddfxjqy.jpg"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963c6417-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["electronic", "dance", "trance", "90s"]
+logo_url = "http://img.sedoparking.com/templates/logos/sedo_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9e31c4e7-03b6-4a80-a4e2-5977b023d32c"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://www.tomorrowland.com/home/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4dad0ae3-720a-434e-b350-7186e4c5ea6f"
+source_hash = "manual"
+tags = ["ambient", "world"]
+logo_url = "https://mynoise.net/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fa4f0df3-5386-42ed-959d-e0ee2511fd36"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.topradio.be/favicons/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "451491bd-624e-41e8-ab4c-71816f10611e"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://nl.nostalgie.be/icons/icon-144x144.png?v=f2b073e495322d52deec159c8bdcaf20"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a2c199e5-cff2-11e8-a54a-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.topradio.be/favicons/favicon-96x96.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "00dc2e9a-578c-430b-bdc2-244b71444dfc"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://qmusic.be/assets/favicon/default-67977c4f518d45d3a639958e1c6c072532dd2e05cbef9e42cb9f8ecde1964c97.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "15768fa1-50b4-11ea-b877-52543be04c81"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+logo_url = "https://crooze.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "81cb1090-6eca-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.goldiesradio.be///templates/urbanlife/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "568c832b-671d-4397-b61b-b682b0d6baa7"
+source_hash = "manual"
+tags = ["ambient", "world"]
+logo_url = "https://mynoise.net/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "31de9e75-8054-11e9-aa30-52543be04c81"
+source_hash = "manual"
+name = "RCF Belgique"
+tags = ["talk", "culture"]
+logo_url = "https://rcf.be/wp-content/themes/neutro-rcf/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c4cc6406-13b3-48a5-bd85-96c8cd50218b"
+source_hash = "manual"
+tags = ["ambient", "electronic"]
+logo_url = "https://mynoise.net/apple-touch-icon.png"
+

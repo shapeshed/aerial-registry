@@ -1,0 +1,35 @@
+# KZ Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963fb135-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "trance", "house", "oldies"]
+logo_url = "https://pp.userapi.com/c837231/v837231617/5990/ChfZPOJgSmA.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2c21d6a9-8cf2-4d26-a4bb-712352e918db"
+source_hash = "manual"
+tags = ["dance", "electronic", "house", "trance"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/1/99521.v1.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "3aa2641c-45aa-4ee8-b1e2-1b397fac47e5"
+source_hash = "manual"
+tags = ["world", "folk", "culture"]
+logo_url = "https://qazradio.fm/images/qazradio.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "21745b17-764e-471a-ae34-5f92c88e7e34"
+source_hash = "manual"
+tags = ["world", "folk", "culture"]
+logo_url = "https://qazradio.fm/images/icon-114x114.png?9"
+

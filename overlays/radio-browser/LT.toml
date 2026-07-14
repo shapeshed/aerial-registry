@@ -12,3 +12,45 @@ source_hash = "manual"
 tags = ["pop"]
 logo_url = "http://laluna.lt/favicon.ico"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963d075d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Žinių Radijas"
+tags = ["news", "talk"]
+logo_url = "http://www.ziniuradijas.lt/favicon/mstile-70x70.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "311716b6-a375-4342-81da-3ae2c6fca8ad"
+source_hash = "manual"
+tags = ["pop", "ambient"]
+logo_url = "https://relaxfm.lt/wp-content/uploads/2018/12/cropped-r-relax-fm-copy-1-192x192.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ee662a9d-fa14-4d70-8d1d-b101ed6da89f"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://zipfm.lt/wp-content/uploads/2023/11/cropped-zipfm-icon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ef8bef74-7125-473a-85c2-36dbcf8334b7"
+source_hash = "manual"
+name = "Lietus"
+tags = ["pop"]
+logo_url = "http://www.radijas.fm/media/_catalog/www.radijas.fm-radijo-stotis-lietus.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7ac3bf7f-d2c4-4f5c-afe8-a222d773eaea"
+source_hash = "manual"
+tags = ["eclectic", "indie"]
+logo_url = "https://palanga.live/assets/favicons/apple-icon-120x120.png"
+

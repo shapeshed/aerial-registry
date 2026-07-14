@@ -19,3 +19,36 @@ source_hash = "manual"
 tags = ["pop"]
 logo_url = "https://skala.fm/wp-content/uploads/sites/2/2024/08/cropped-favicon_skala-180x180.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961bfe0e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "https://websitebuilder.one.com/favicon/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "963cba5e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://listenapi.s3.amazonaws.com/img/ConfigWebListenBarLogoImageUrl/212.jpg?ver=1490197142"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1eb0a70c-2cc1-11e9-a35e-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://listenapi.s3.amazonaws.com/img/ConfigWebListenBarLogoImageUrl/202.jpg?ver=1490698010"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2ee81587-dba9-4d68-82b3-a7b32aafc525"
+source_hash = "manual"
+tags = ["lounge", "chillout"]
+logo_url = "https://mytuner.global.ssl.fastly.net/media/tvos_radios/NwrxAhUnyj.jpeg"
+

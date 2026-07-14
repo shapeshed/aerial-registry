@@ -12,3 +12,57 @@ source_hash = "manual"
 tags = ["rock", "pop", "oldies"]
 logo_url = "https://static-media.streema.com/media/cache/8b/d3/8bd399b199aaed5951244fd124dab993.jpg"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0c773186-a382-4978-8e01-5650d325132d"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "https://graph.facebook.com/RadioOxigenoFM/picture?width=200&height=200"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "320f8ba3-2d7b-422c-af88-09b0b526eca5"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://mds.rpp-noticias.io/static/img/favicons/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "4ff4033a-7ce3-463e-89ea-d7e6fa78b7a2"
+source_hash = "manual"
+tags = ["pop", "soul", "oldies"]
+logo_url = "https://eaudioplayer.radio-grpp.io/static/dist/img/favicons/apple-touch-icon.png?v=2016063020297"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cfdebe47-26c0-442f-88d5-e6f63148c635"
+source_hash = "manual"
+tags = ["electronic", "hip-hop", "pop", "r&b"]
+logo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Logostudio92.png/225px-Logostudio92.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6126eeef-43c0-4f10-b9bc-9fd66f2f3cd9"
+source_hash = "manual"
+tags = ["world", "folk", "dance"]
+logo_url = "https://eaudioplayer.radio-grpp.io/static/dist/img/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "edcb99be-9c5b-42a2-a30a-d5962cbda26f"
+source_hash = "manual"
+tags = ["rock", "oldies", "alternative"]
+logo_url = "https://static.wikia.nocookie.net/tvpedia-peru/images/2/2a/Radio_Panamericana_Retro_Rock.jpg/revision/latest?cb=20240315103233&path-prefix=es"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ecff50d1-ed5d-4845-b1ff-3ec2e8c1ef43"
+source_hash = "manual"
+tags = ["world", "dance", "oldies"]
+logo_url = "https://static-media.streema.com/media/cache/88/74/8874c7e02e56f56b4d18607b234c95ba.jpg"
+

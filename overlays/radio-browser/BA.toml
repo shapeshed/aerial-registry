@@ -1,0 +1,22 @@
+# BA Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "713c836b-96a1-484c-a8b2-df3d588388c1"
+source_hash = "manual"
+name = "Narodni Radio Sarajevo"
+tags = ["folk", "world", "public radio"]
+logo_url = "https://narodni.ba/wp-content/uploads/2020/08/cropped-narodni-logo-512-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961d91a2-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "world"]
+logo_url = "https://rtvbn.com/storage/settings/res_1720552469_favicon.png"
+

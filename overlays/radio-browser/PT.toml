@@ -1,0 +1,107 @@
+# PT Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "46caa663-278f-44e5-b746-36369d7c2765"
+source_hash = "manual"
+name = "Back To The 80s Radio"
+tags = ["pop", "rock", "oldies"]
+logo_url = "http://www.heartbeatofflagler.com/images/logo_002.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "89bd8b04-11c9-42bf-a374-e5eb3b7b8f22"
+source_hash = "manual"
+name = "Top 80"
+tags = ["pop", "oldies"]
+logo_url = "https://www.top80.fm/wp-content/uploads/2023/03/cropped-ic_launcher_top80-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96190e3e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "world", "culture"]
+logo_url = "http://cdn-radiotime-logos.tunein.com/s113888q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9618739f-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "http://www.radionovaera.pt/resources/img/favicon/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f86c489e-7e21-11e9-aa30-52543be04c81"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://www.wix.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "2b501db4-e4b6-4106-9670-9875536f70f1"
+source_hash = "manual"
+tags = ["pop", "rock", "dance"]
+logo_url = "https://static2.mytuner.mobi/media/tvos_radios/drkZNBUn6W.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96190d7e-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop", "rock"]
+logo_url = "http://cdn-radiotime-logos.tunein.com/s81786q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9619866d-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.radionova.fm/wp-content/uploads/2023/05/cropped-favicon-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96105626-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "http://cdn-radiotime-logos.tunein.com/s25146q.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7bc1f66f-412d-484b-82eb-b7b1c4575faa"
+source_hash = "manual"
+tags = ["pop", "oldies"]
+logo_url = "http://webradiodirectory.com/wp-content/uploads/2021/01/cc9443f16e2af31ba205ac82214760c9.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7b56337d-048b-4545-ba70-704e37cdba7a"
+source_hash = "manual"
+tags = ["sport", "talk"]
+logo_url = "https://golo.fm/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "cc461784-3150-4a34-81c5-2116fe024740"
+source_hash = "manual"
+tags = ["news", "sport", "talk"]
+logo_url = "https://www.celsoazevedo.com/files/2024/tsf.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1ac20829-1ca7-4abe-bd7f-b8dcd835b29b"
+source_hash = "manual"
+tags = ["oldies", "pop", "rock"]
+logo_url = "http://webradiodirectory.com/wp-content/uploads/2021/01/fe90a6d0b5158acae63737fe4b9b204f.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9619379b-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["indie", "world", "culture"]
+logo_url = "http://www.rum.pt/_nuxt/icons/icon_64.08fe96.png"
+

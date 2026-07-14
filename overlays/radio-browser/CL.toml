@@ -12,3 +12,36 @@ source_hash = "manual"
 tags = ["rock", "pop"]
 logo_url = "https://www.rockandpop.cl/favicon.ico"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b669063c-05f3-4386-91f4-cb9ffc722be9"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.laretro.cl/icons/apple-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "962db1df-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://www.fmdelosrecuerdos.cl/wp-content/uploads/2023/02/cropped-fav-recuerdos-180x180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "84b43fb8-1be0-11e8-a334-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "http://provisioning.streamtheworld.com/pls/CORAZON.pls"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f9a7d819-98c5-47b4-ac58-b5d29922c759"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.digitalfm.cl/favicon.ico"
+

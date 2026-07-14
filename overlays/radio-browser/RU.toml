@@ -33,3 +33,366 @@ source_hash = "manual"
 tags = ["electronic", "house"]
 logo_url = "https://radiopotok.mobi/apple-touch-icon.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "563f5559-105c-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic", "house"]
+logo_url = "https://dfm.ru/uploads/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "0a364b59-56b6-11e9-aa33-52543be04c81"
+source_hash = "manual"
+name = "Dorognoe Radio"
+tags = ["pop", "rock"]
+logo_url = "https://dorognoe.ru/assets/default/i/fav_114x114.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "961799c0-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Spokoynoe Radio"
+tags = ["ambient", "jazz", "soul"]
+logo_url = "https://i.1.creatium.io/5f/9c/2c/4e16165627237138cbc3273f76782d56f9/196x196/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96266006-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio Kniga"
+tags = ["talk", "culture"]
+logo_url = "https://radiokniga.com/rk.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "30c38245-b3f4-4481-abe4-79b8f07a5a7c"
+source_hash = "manual"
+name = "Shanson"
+tags = ["world", "folk"]
+logo_url = "https://www.eff.org/files/Button_Russian_white.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "518d02e0-9301-4358-bf25-4ed57372fd2d"
+source_hash = "manual"
+tags = ["jazz"]
+logo_url = "https://radiojazzfm.ru/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "90031247-7578-4cee-9c15-0265df3ab21d"
+source_hash = "manual"
+name = "Vesti FM"
+tags = ["news"]
+logo_url = "https://cdn-st1.smotrim.ru/smotrimru/i/favicon/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "860f522f-1ef5-11e9-a80b-52543be04c81"
+source_hash = "manual"
+name = "Novoye Radio"
+tags = ["pop", "rock"]
+logo_url = "https://newradio.ru/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c4175f89-69da-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+name = "Business FM"
+tags = ["news", "talk", "business"]
+logo_url = "https://www.bfm.ru/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "96200832-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Eldo Radio"
+tags = ["pop"]
+logo_url = "http://eldoradio.ru//favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7aafcdc7-73b9-11e9-af37-52543be04c81"
+source_hash = "manual"
+name = "Iskatel"
+tags = ["pop", "rock"]
+logo_url = "https://upload.wikimedia.org/wikipedia/ru/2/28/Iskatel-logo-colors.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8108c4ad-71c3-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+name = "Nashe Radio Panki-Hoi!"
+tags = ["punk", "rock"]
+logo_url = "https://www.nashe.ru/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "499d20eb-afdb-4970-8072-dd85fc54e86d"
+source_hash = "manual"
+name = "Svoye FM Deep Radio"
+tags = ["electronic", "house", "dance"]
+logo_url = "https://deep.radio/static/img/deep_radio_logo.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "04b6c9f9-9bb2-11e8-a767-52543be04c81"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://radioultra.ru/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "191da48e-2977-11e8-91bf-52543be04c81"
+source_hash = "manual"
+name = "PromoDJ Too Deep"
+tags = ["house", "electronic", "dance"]
+logo_url = "https://cdn.promodj.com/legacy/i/favicon/favicon_180.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d1a7b1dd-60c7-4b3d-8dfe-c1b470cc485d"
+source_hash = "manual"
+tags = ["electronic", "house", "dance"]
+logo_url = "https://www.musicaldecadence.ru/conf/img/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "73f1944c-06d3-4acc-b378-28608056a82f"
+source_hash = "manual"
+name = "Russkiy Rock"
+tags = ["rock", "alternative"]
+logo_url = "https://topradio.mobi/screen/1630414047_russkii_rok_moskva_rossiya.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "88b3a415-2b06-4d21-8c80-dfdba0dd5029"
+source_hash = "manual"
+name = "Radio Nostalgia Russia"
+tags = ["oldies", "pop"]
+logo_url = "https://sun9-27.userapi.com/impf/c841322/v841322516/5f256/VE9h-yZqVmE.jpg?size=478x477&quality=96&sign=7e93962ff9959abc16c587e11ff34a34&type=album"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "d4a9dcf8-d71e-4aa3-918f-52aee858837c"
+source_hash = "manual"
+name = "Humor FM 106.5"
+tags = ["comedy", "pop"]
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20240625_153107034.jpg?alt=media&token=b465195e-999b-4e8d-b7ce-9bfac50a087d"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "531a592c-d56e-437f-90d6-d1afb8af0dc6"
+source_hash = "manual"
+name = "Nashe Radio Tyumen"
+tags = ["rock", "alternative", "pop"]
+logo_url = "https://www.nashe.ru/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "756183e3-cc68-4195-b2c7-531a6cbc2f5a"
+source_hash = "manual"
+name = "Kommersant FM 93.6"
+tags = ["news", "talk"]
+logo_url = "https://im.kommersant.ru/contentflex/images/favicons2020/apple-touch-icon-120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "af09ff77-4309-4808-8f78-171f939c2434"
+source_hash = "manual"
+name = "Ekho"
+tags = ["talk", "news"]
+logo_url = "https://echofm.online/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1a8df17d-5a57-11e9-a622-52543be04c81"
+source_hash = "manual"
+name = "Radio Shokolad"
+tags = ["pop"]
+logo_url = "https://chocoradio.ru/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "9636e8f8-0601-11e8-ae97-52543be04c81"
+source_hash = "manual"
+name = "Radio Jazz 89.1 Jazz Legends"
+tags = ["jazz"]
+logo_url = "https://radiojazzfm.ru/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ae048365-23cf-11e9-a80b-52543be04c81"
+source_hash = "manual"
+name = "Piter FM"
+tags = ["pop", "rock"]
+logo_url = "https://vote.mediastata.com/logos/16/pfm.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "f99e4bda-71b9-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+name = "Rock FM Heavy"
+tags = ["metal", "rock"]
+logo_url = "https://www.rockfm.ru/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "51d264ea-8745-4a18-8207-358619a8a3b8"
+source_hash = "manual"
+name = "Радио Sputnik"
+tags = ["news", "talk"]
+logo_url = "https://cdnn21.img.ria.ru/i/favicons/radiosputnik/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b78025cf-e68d-43f9-8e59-2a68ae84e7d7"
+source_hash = "manual"
+name = "Noise FM"
+tags = ["electronic", "dance", "trance"]
+logo_url = "https://noisefm.ru/thumbnail.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "62220177-9f8b-48d0-a9bc-df4c9a3927c9"
+source_hash = "manual"
+tags = ["oldies", "pop"]
+logo_url = "https://avatars.mds.yandex.net/i?id=022b2b00ee1704c27d3fd32929a9de3d_l-5518476-images-thumbs&n=13"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "bd9f56b0-1bb3-4f93-b681-a93ba7035f66"
+source_hash = "manual"
+tags = ["pop", "news", "talk"]
+logo_url = "https://i.ibb.co/ygdPW3d/image.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "7bc931dc-3fac-43d6-ba2d-1b5c6db73e56"
+source_hash = "manual"
+tags = ["talk", "culture"]
+logo_url = "https://www.soyuz.ru/public/images/front/favicon-touch.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "e7fa0b65-8f5e-41dc-ad7e-b0697166475d"
+source_hash = "manual"
+tags = ["news", "talk"]
+logo_url = "https://cdn-st1.smotrim.ru/smotrimru/i/favicon/apple-touch-icon-120x120.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ae109e79-71c3-11ea-b1cf-52543be04c81"
+source_hash = "manual"
+name = "Наше Радио"
+tags = ["rock"]
+logo_url = "https://www.nashe.ru/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "af8b7f22-d44f-411b-8966-a1eed269a8bf"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://cdn.onlineradiobox.com/img/l/8/73538.v14.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "59a283e1-4a13-11e9-a4d7-52543be04c81"
+source_hash = "manual"
+tags = ["hip-hop"]
+logo_url = "https://dfm.ru/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "64a64fad-f583-4c5e-a725-68f84d90716d"
+source_hash = "manual"
+tags = ["electronic", "dance", "pop"]
+logo_url = "http://www.mixadance.fm/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "81be2c33-7fca-4c2f-be9d-e976958258a2"
+source_hash = "manual"
+name = "Rock FM 70s"
+tags = ["rock", "oldies"]
+logo_url = "https://www.rockfm.ru/favicons/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "84bb80d4-2a06-4048-9a9d-7642ba40ce28"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://top-radio.ru/assets/image/radio/180/marusyafm.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "fb9fdebb-73c9-450c-bd6d-18157738bef8"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://castnow.bigtunesradio.com/account/upload/stations/704150499.jpg"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "b73821db-127a-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["dance", "electronic"]
+logo_url = "http://pifm.ru/img/ico/96%D1%8596.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "05d4781a-0f67-11e9-a80b-52543be04c81"
+source_hash = "manual"
+tags = ["folk", "soul"]
+logo_url = "http://kalina.fm/images/favicon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "471b7d53-32ce-11e9-8f31-52543be04c81"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.mosfm.com/img/favicon/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "1a2c1a8f-02e1-41a0-bcd8-93d2bedbd36c"
+source_hash = "manual"
+tags = ["electronic", "dance"]
+logo_url = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "519c63f4-b1dd-4c47-ac85-4202e1ee2eb8"
+source_hash = "manual"
+name = "Радио 7 на семи холмах"
+tags = ["pop"]
+logo_url = "https://top-radio.ru/assets/image/radio/100/radio7-na7holmah.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "6b229191-627b-481a-8b3b-a2bd33d0085f"
+source_hash = "manual"
+tags = ["folk", "soul"]
+logo_url = "https://radio-onliner.ru/assets/images/radio/radio-vysockij.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "c724c6db-91b1-408f-9479-581fdd3e5785"
+source_hash = "manual"
+name = "Radio Record HQ"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://radiorecord.ru/local/templates/record/assets/build/favicon-set/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "aa943731-21f6-4953-9539-ce7fdaaaebca"
+source_hash = "manual"
+name = "Rock FM 80s"
+tags = ["rock", "oldies"]
+logo_url = "https://www.rockfm.ru/favicons/apple-touch-icon.png"
+

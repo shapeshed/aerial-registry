@@ -12,3 +12,29 @@ source_hash = "manual"
 tags = ["oldies"]
 logo_url = "https://sky.ee/favicon.ico"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "208c966b-0df4-4939-943f-1ac7bfe9d2ee"
+source_hash = "manual"
+tags = ["rock"]
+logo_url = "https://sky.ee/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "5e498e8c-9025-4b6d-b49a-e0d5ed9285f2"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://finestfm.fi/upload/623c699818c312.68089185.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "05d3034c-7599-4fa4-a2c5-3b8cfb055849"
+source_hash = "manual"
+tags = ["electronic", "dance", "house"]
+logo_url = "https://sky.ee/favicon.ico"
+

@@ -1,0 +1,21 @@
+# KE Radio Browser corrections. See ../README.md for the entry format.
+
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "8e17bd51-765e-4103-916a-69a4ed56ac9a"
+source_hash = "manual"
+tags = ["pop", "dance"]
+logo_url = "https://nrg.radio/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ac15c045-6f16-4021-b35c-00b265b7201d"
+source_hash = "manual"
+tags = ["world", "pop"]
+logo_url = "https://cdn.radiosphere.io/images/f6b2a79d-b842-40f7-993a-d0ec902b156f_1720863384.webp.90?type=medium&blocking=false"
+

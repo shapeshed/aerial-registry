@@ -26,3 +26,58 @@ source_hash = "manual"
 tags = ["rock"]
 logo_url = "https://www.easyrock.com.ph/apple-touch-icon.png"
 
+
+# --- Migrated from stations.toml curated entries that covered a
+# radio-browser station under the same name/URL. Carries the curator's
+# tags/logo/name so they survive instead of being lost to dedup.
+
+[[station]]
+provider = "radio-browser"
+provider_id = "27993f09-c8ba-4369-9e42-2e4729e8cd45"
+source_hash = "manual"
+tags = ["news", "talk", "pop"]
+logo_url = "https://upload.wikimedia.org/wikipedia/en/c/cb/DYHP_612.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "604bb4af-ccf6-47bd-819e-7d1accd15e05"
+source_hash = "manual"
+tags = ["pop", "talk", "variety"]
+logo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyc_tSPPOg-OsGjJUOSlAcdaEcRFFL3_nKQ&s"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "247aa6ff-f402-4b81-8ebb-21fa00791ef5"
+source_hash = "manual"
+tags = ["pop"]
+logo_url = "https://www.loveradio.com.ph/apple-touch-icon.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "a90bf48e-c689-4394-a22b-a4980689cedf"
+source_hash = "manual"
+tags = ["pop", "talk"]
+logo_url = "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/MOR_101.9_Logo_2018.svg/440px-MOR_101.9_Logo_2018.svg.png"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "db32ac00-138e-44a1-9901-a37ad1ad763e"
+source_hash = "manual"
+tags = ["pop", "ambient"]
+logo_url = "https://boracaybeachradio.com/favicon.ico"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "ae0223ee-7513-4992-9de7-0ea996f92ade"
+source_hash = "manual"
+tags = ["pop", "soul"]
+logo_url = "https://2.bp.blogspot.com/_yY_Enb_xs0k/TIAkNrwhG_I/AAAAAAAAAK0/pCslE0HVOMk/s200/atlantis.JPG"
+
+[[station]]
+provider = "radio-browser"
+provider_id = "240ec503-0d46-4c5f-97c0-fb9f764b757f"
+source_hash = "manual"
+name = "Heart FM 92.7 CDO City"
+tags = ["pop"]
+logo_url = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTPgX_d8rpnBnNtLhS501py9XNDGlVHHSvqemOqT4lFuf33lL2jcJiAIbjFJ7qQBttnJ-FAnyR8vf5fqkANyZCwc7xjlIg5ZxEsRh7esPMmqk6Wj6qQjWKg7BnbFWN6hlCuifewvKrDBSt2pyozFtbkQibzi1dvL5sB2L4EN-caYgw2u3QCRvhb28h/s512/cagayan.png"
+
