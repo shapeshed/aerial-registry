@@ -2381,3 +2381,63 @@ stream_url = "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream"
 name = "Radio Maria Ivory Coast"
 reason = "Suspicious proxy URL structure suggests aggregator/restreaming rather than official station broadcast"
 
+[[rejected]]
+stream_url = "https://streaming.exclusive.radio/er/ericclapton/icecast.audio"
+name = "Eric Clapton "
+reason = "Artist-specific stream lacks station identity; appears to be a vanity/branded artist feed rather than a real radio station."
+
+[[rejected]]
+stream_url = "http://ilm.stream27.radiohost.de/ilm_iloveusonlyrapradio_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzg4NjY4MTQyJmQ9YjEzZDhjZDhhOTllNDNmYjM5ZmU"
+name = "i love radio - hip hop turnup"
+reason = "Part of spammy 'i love radio' aggregator network with generic branding and complex tracking URLs"
+
+[[rejected]]
+stream_url = "https://ilm.stream12.radiohost.de/ilm_iloveusonlyrapradio_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzg4Njg1MjYyJmQ9YzM4NDAxMmNlOTg0ZjdkZmFjMTQ"
+name = "i love radio - US Only Rap&HipHop Radio"
+reason = "Part of spammy 'i love radio' aggregator network; geographically misleading US-only branding for German stream"
+
+[[rejected]]
+stream_url = "http://ilm.stream12.radiohost.de/ilm_ilove2dance_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzg4NjgyMTkxJmQ9YWZhMWFmMmUxMGZkYzYxMjg4MGM"
+name = "i love radio - 2 dance"
+reason = "Part of spammy 'i love radio' aggregator network with generic branding"
+
+[[rejected]]
+stream_url = "http://f141.rndfnk.com/ard/rbb/radioeins/live/mp3/48/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3IvcgCFLZ1DjK8sIHfHGQIIfSBh&token=mtRrMQANHEobe4IDUhhoBqpGVntN5kw0QOVgkl9njnM&tvf=RmV-6A-i0hhmMTQxLnJuZGZuay5jb20"
+name = "radioeins-rbb-56 kbit/s"
+reason = "Duplicate of station 9 (RadioEins) with lower votes and overstuffed mixed tags"
+
+[[rejected]]
+stream_url = "https://ilm.stream12.radiohost.de/ilm_ilovehiphop_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzg4NjE2NTIxJmQ9ZDY5YThjYmJiNDYxNWQ4OGQwZjc"
+name = "I love Radio Hip Hop"
+reason = "Part of spammy 'i love radio' aggregator network with no meaningful tags or identity"
+
+[[rejected]]
+stream_url = "http://d131.rndfnk.com/ard/rbb/radioeins/live/mp3/48/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3Ix8Sfbzdf5iWMRcPjHSiKpPrcK&token=UqETnc_kdObQ7iGYBNw2ehwgaRD9sssWHplo0823y60&tvf=cpS7tSTM0hhkMTMxLnJuZGZuay5jb20"
+name = "radio eins | rbb | neuer Stream | niedrige Qualit\u00e4t"
+reason = "Duplicate of station 9 (RadioEins) with excessive quality descriptors in name"
+
+[[rejected]]
+stream_url = "http://ilm.stream35.radiohost.de/ilm_ilovetop100charts_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzg4NjM0NTMwJmQ9ZGEwOGYzZTkxYzY0MWMyMWNhZjI"
+name = "i love radio - top 100 charts"
+reason = "Part of spammy 'i love radio' aggregator network with generic chart playlist branding"
+
+[[rejected]]
+stream_url = "http://ilm.stream12.radiohost.de/ilm_ilovegreatesthits_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzg4NjQ3Mjg1JmQ9NzQ3ZWRmNWNhMWU5NDQ4NmRhNTM"
+name = "i love radio - greatest hits"
+reason = "Part of spammy 'i love radio' aggregator network with generic greatest hits branding"
+
+[[rejected]]
+stream_url = "http://mdr-284340-0.cast.mdr.de/mdr/284340/0/mp3/high/stream.mp3"
+name = "MDR Aktuell (AAC)"
+reason = "Duplicate of station 12 (MDR Aktuell) with identical content and lower vote count"
+
+[[rejected]]
+stream_url = "http://streamplus52.leonex.de:11216/;"
+name = "Das Radio der von Neil Young Get\u00f6teten"
+reason = "Spammy/junk name with offensive reference; lacks legitimate station identity."
+
+[[rejected]]
+stream_url = "https://1a-2000er.radionetz.de/1a-2000er.mp3"
+name = "- 1 A - 2000er von 1A Radio"
+reason = "Spammy formatting with leading dashes and unclear branding; appears to be pure aggregator entry."
+
