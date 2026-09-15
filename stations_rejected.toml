@@ -2381,3 +2381,8 @@ stream_url = "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream"
 name = "Radio Maria Ivory Coast"
 reason = "Suspicious proxy URL structure suggests aggregator/restreaming rather than official station broadcast"
 
+
+[[rejected]]
+stream_url = "http://stream.laut.fm/54-funk-soul-dance.pls"
+name = "54 Funk Soul Dance"
+reason = "Stream unreachable during liveness pruning."
