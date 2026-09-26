@@ -2381,3 +2381,8 @@ stream_url = "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream"
 name = "Radio Maria Ivory Coast"
 reason = "Suspicious proxy URL structure suggests aggregator/restreaming rather than official station broadcast"
 
+
+[[rejected]]
+stream_url = "https://antares.dribbcast.com:2199/tunein/s8220.pls"
+name = "24-7 The '60s"
+reason = "Stream unreachable during liveness pruning."
