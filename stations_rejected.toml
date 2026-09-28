@@ -2381,3 +2381,68 @@ stream_url = "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream"
 name = "Radio Maria Ivory Coast"
 reason = "Suspicious proxy URL structure suggests aggregator/restreaming rather than official station broadcast"
 
+[[rejected]]
+stream_url = "https://streaming.exclusive.radio/er/ericclapton/icecast.audio"
+name = "Eric Clapton "
+reason = "Spammy artist-focused station with misleading naming; appears to be aggregator content without genuine station identity."
+
+[[rejected]]
+stream_url = "http://ilm.stream35.radiohost.de/ilm_iloveusonlyrapradio_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkwNDA3NjcwJmQ9ODRjYTM3NmRjM2Q3MmRlNDQ4MzQ"
+name = "i love radio - hip hop turnup"
+reason = "Part of spammy 'i love radio' network with generic branding and high vote manipulation indicators."
+
+[[rejected]]
+stream_url = "https://ilm.stream35.radiohost.de/ilm_iloveusonlyrapradio_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzkwNDE3NjI1JmQ9MjQxYTcxMzRlODQ5Njk1ZTNhYTY"
+name = "i love radio - US Only Rap&HipHop Radio"
+reason = "Part of spammy 'i love radio' network; misleading US-only claim for generic stream."
+
+[[rejected]]
+stream_url = "http://d121.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3JrRhliRT1qc6qKtwH44uk6YwTA&token=xX4RleHh9LwxR48wgevULolceLh9gFzseJemB927Wa8&tvf=Ufi6ibbq2BhkMTIxLnJuZGZuay5jb20"
+name = "RadioEins [High Quality]"
+reason = "Duplicate of well-known rbb station; excessively long URL with tracking tokens obscures legitimate identity."
+
+[[rejected]]
+stream_url = "http://ilm.stream27.radiohost.de/ilm_ilove2dance_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkwNDIyMTI1JmQ9ZDE5OGFmMmQ2MDY0Y2Q2OTQ0OGI"
+name = "i love radio - 2 dance"
+reason = "Part of spammy 'i love radio' aggregator network with generic curated playlist identity."
+
+[[rejected]]
+stream_url = "http://d141.rndfnk.com/ard/rbb/radioeins/live/mp3/48/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3JqOb4ndswfgbCd3Dpt0PXuBZAc&token=2TNm2D081idorJtq9bAZsHr05tx1ohhPpvokFagCOEM&tvf=eq10fH_N2BhkMTQxLnJuZGZuay5jb20"
+name = "radioeins-rbb-56 kbit/s"
+reason = "Duplicate of rbb station; low bitrate variant with excessive tracking parameters."
+
+[[rejected]]
+stream_url = "https://ilm.stream12.radiohost.de/ilm_ilovehiphop_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzkwMzc4NTgyJmQ9N2M1NWIyNjExM2M4YzUyNzg0OWY"
+name = "I love Radio Hip Hop"
+reason = "Part of spammy 'i love radio' network with generic branding and minimal identity."
+
+[[rejected]]
+stream_url = "http://ilm.stream35.radiohost.de/ilm_ilovetop100charts_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkwMzY1MDIwJmQ9MDAwNDJjZDYzZjg4NGJhODQzZmI"
+name = "i love radio - top 100 charts"
+reason = "Spammy aggregator station name format; part of questionable 'i love radio' network."
+
+[[rejected]]
+stream_url = "http://f131.rndfnk.com/ard/rbb/radioeins/live/mp3/48/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3Js60Q3m1f2uDYW0v9krhKYg8hl&token=i07PCQZWSY5_auLND6s8V1uLI_OVk1mPOlhTOOfhPEM&tvf=L6HN-sv82BhmMTMxLnJuZGZuay5jb20"
+name = "radio eins | rbb | neuer Stream | niedrige Qualit\u00e4t"
+reason = "Duplicate rbb station; poor quality descriptor in name and excessive tracking parameters."
+
+[[rejected]]
+stream_url = "http://ilm.stream35.radiohost.de/ilm_ilovegreatesthits_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkwMzg4MTYyJmQ9NGI2NDc1ODFmZDUyNTNmZGE4YmY"
+name = "i love radio - greatest hits"
+reason = "Part of spammy 'i love radio' aggregator network with generic curated playlist branding."
+
+[[rejected]]
+stream_url = "https://0n-christmas.radionetz.de/0n-christmas.mp3"
+name = "- 0 N - Christmas on Radio"
+reason = "Spammy name format with leading symbols; seasonal/limited identity"
+
+[[rejected]]
+stream_url = "http://streamplus52.leonex.de:11216/;"
+name = "Das Radio der von Neil Young Get\u00f6teten"
+reason = "Spammy/nonsensical name (translates to offensive content); lacks legitimate station identity"
+
+[[rejected]]
+stream_url = "https://1a-2000er.radionetz.de/1a-2000er.mp3"
+name = "- 1 A - 2000er von 1A Radio"
+reason = "Spammy name format with leading symbols and redundant branding"
+
