@@ -23,33 +23,33 @@ tags = ["reggae"]
 [[stations]]
 name = "NDR Info Hamburg"
 country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo_hh.m3u"
+stream_url = "https://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo_hh.m3u"
 logo_url = "https://www.ndr.de/apple-touch-icon-120x120.png"
 tags = ["news", "talk", "culture"]
 
 [[stations]]
 name = "NDR Info Schleswig-Holstein"
 country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo_sh.m3u"
+stream_url = "https://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo_sh.m3u"
 logo_url = "http://www.ndr.de/favicon.ico"
 tags = ["news", "talk", "culture"]
 
 [[stations]]
 name = "54 Funk Soul Dance"
 country_code = "DE"
-stream_url = "http://stream.laut.fm/54-funk-soul-dance.pls"
+stream_url = "https://stream.laut.fm/54-funk-soul-dance.pls"
 tags = ["funk", "soul", "dance"]
 
 [[stations]]
 name = "NDR2"
 country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u"
+stream_url = "https://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u"
 tags = ["pop", "talk"]
 
 [[stations]]
 name = "Antenne Bayern - Love Songs"
 country_code = "DE"
-stream_url = "http://www.antenne.de/webradio/channels/lovesongs.m3u"
+stream_url = "https://www.antenne.de/webradio/channels/lovesongs.m3u"
 logo_url = "http://www.antenne.de/logos/station-antenne-bayern/apple-touch-icon.png"
 tags = ["pop", "oldies", "soul"]
 
@@ -62,33 +62,33 @@ tags = ["pop", "talk"]
 [[stations]]
 name = "NDR 90.3"
 country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr903.m3u"
+stream_url = "https://www.ndr.de/resources/metadaten/audio/m3u/ndr903.m3u"
 tags = ["public radio", "pop"]
 
 [[stations]]
 name = "I Love Radio - Dance 2"
 country_code = "DE"
-stream_url = "http://stream02.iloveradio.de/iloveradio2.mp3?hadpreroll"
+stream_url = "https://stream02.iloveradio.de/iloveradio2.mp3?hadpreroll"
 logo_url = "https://www.iloveradio.de/favicon.ico"
 tags = ["dance", "electronic", "house"]
 
 [[stations]]
 name = "NDR 2 Hamburg"
 country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/ndr2_hh.m3u"
+stream_url = "https://www.ndr.de/resources/metadaten/audio/m3u/ndr2_hh.m3u"
 logo_url = "http://www.ndr.de/favicon.ico"
 tags = ["pop", "oldies"]
 
 [[stations]]
 name = "N-JOY"
 country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/n-joy.m3u"
+stream_url = "https://www.ndr.de/resources/metadaten/audio/m3u/n-joy.m3u"
 tags = ["pop"]
 
 [[stations]]
 name = "RBB 88.8"
 country_code = "DE"
-stream_url = "http://www.rbb888.de/live.m3u"
+stream_url = "https://www.rbb888.de/live.m3u"
 logo_url = "https://www.rbb888.de/content/dam/rbb/rbb/logos/touch/ach-128.png"
 tags = ["pop", "oldies"]
 
@@ -102,20 +102,20 @@ tags = ["news", "public radio", "talk"]
 [[stations]]
 name = "HR 1"
 country_code = "DE"
-stream_url = "http://metafiles.gl-systemhaus.de/hr/hr1_2.m3u"
+stream_url = "https://metafiles.gl-systemhaus.de/hr/hr1_2.m3u"
 logo_url = "https://www.hr1.de/favicon.png?v=3.85.2"
 tags = ["pop"]
 
 [[stations]]
 name = "N-JOY"
 country_code = "DE"
-stream_url = "http://www.ndr.de/resources/metadaten/audio/m3u/n-joy.m3u"
+stream_url = "https://www.ndr.de/resources/metadaten/audio/m3u/n-joy.m3u"
 tags = ["pop", "alternative"]
 
 [[stations]]
 name = "KUSC 91.5 Los Angeles"
 country_code = "US"
-stream_url = "http://96.aac.pls.kusc.live/"
+stream_url = "https://96.aac.pls.kusc.live/"
 logo_url = "https://upload.wikimedia.org/wikipedia/commons/e/e2/KUSC_Logo.jpg"
 tags = ["classical", "public radio"]
 
@@ -143,4 +143,3 @@ country_code = "GB"
 stream_url = "https://uk1.internet-radio.com/proxy/whitenoise?mp=/stream"
 logo_url = "https://placehold.co/512/ffffff/ffffff.png"
 tags = ["white noise", "ambient", "chillout"]
-
