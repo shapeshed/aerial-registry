@@ -2381,3 +2381,73 @@ stream_url = "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream"
 name = "Radio Maria Ivory Coast"
 reason = "Suspicious proxy URL structure suggests aggregator/restreaming rather than official station broadcast"
 
+[[rejected]]
+stream_url = "https://streaming.exclusive.radio/er/ericclapton/icecast.audio"
+name = "Eric Clapton "
+reason = "Artist tribute stream with no station identity; appears to be a single-artist aggregator rather than a curated radio station."
+
+[[rejected]]
+stream_url = "https://live-kiss.sharp-stream.com/kiss100.mp3"
+name = "KISS UK"
+reason = "Duplicate of major branded station KISS FM (Global Radio) \u2014 exclude as established commercial broadcaster."
+
+[[rejected]]
+stream_url = "http://ilm.stream35.radiohost.de/ilm_iloveusonlyrapradio_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkwODQzMzExJmQ9MzkwY2M0NThmYTVmZTZmNjA3ODM"
+name = "i love radio - hip hop turnup"
+reason = "Part of 'i love radio' network of generic aggregator streams without distinct station identity."
+
+[[rejected]]
+stream_url = "https://ilm.stream12.radiohost.de/ilm_iloveusonlyrapradio_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzkwODQ5Nzk3JmQ9NDhkNDhmYmVlYTY0NjcyYzM3MTM"
+name = "i love radio - US Only Rap&HipHop Radio"
+reason = "Part of 'i love radio' generic aggregator network; 'US Only' claim questionable for internet stream."
+
+[[rejected]]
+stream_url = "http://stream.antenne.de/lovesongs"
+name = "Antenne Bayern - Lovesongs"
+reason = "Generic themed stream without meaningful identity; likely ephemeral specialty format."
+
+[[rejected]]
+stream_url = "http://ilm.stream12.radiohost.de/ilm_ilove2dance_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkwODU1MTM4JmQ9Yzg3NjJkNzgyMjhjOTE2ZGFiNTI"
+name = "i love radio - 2 dance"
+reason = "Part of 'i love radio' generic aggregator network without independent station identity."
+
+[[rejected]]
+stream_url = "http://f111.rndfnk.com/ard/rbb/radioeins/live/mp3/48/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3K4ezWNz61EKiw0pjjN5BYQItsy&token=hx_dYQ4o1wBeilu7gtF5xapGitFArMbwu57YlaxREIw&tvf=Bs7Em1Za2hhmMTExLnJuZGZuay5jb20"
+name = "radioeins-rbb-56 kbit/s"
+reason = "Duplicate of station #9 (same station, lower bitrate variant)."
+
+[[rejected]]
+stream_url = "https://ilm.stream12.radiohost.de/ilm_ilovehiphop_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzkwODE3NDY0JmQ9ZTQ1ZGExNmNjN2Q3MzllOTc5YjY"
+name = "I love Radio Hip Hop"
+reason = "Part of 'i love radio' generic aggregator network without distinct identity."
+
+[[rejected]]
+stream_url = "http://ilm.stream27.radiohost.de/ilm_ilovetop100charts_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkwODExMzU2JmQ9Y2I1ODRkNmExZWU3ZTMwZTg0N2U"
+name = "i love radio - top 100 charts"
+reason = "Part of 'i love radio' generic aggregator network; 'Top 100 Charts' is junk naming pattern."
+
+[[rejected]]
+stream_url = "http://f111.rndfnk.com/ard/rbb/radioeins/live/mp3/48/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3K6Pj4VRkwQ84CpjcTJstBDAlMk&token=mNMjsFhoclaWr1pmvYcaoTLvdBWsCM_4sUf4aRFBvRM&tvf=VIi_BSGL2hhmMTExLnJuZGZuay5jb20"
+name = "radio eins | rbb | neuer Stream | niedrige Qualit\u00e4t"
+reason = "Duplicate of station #9 (same station, different quality variant with German descriptor)."
+
+[[rejected]]
+stream_url = "http://ilm.stream27.radiohost.de/ilm_ilovegreatesthits_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkwODI2MDY4JmQ9NmI2ZjkxZjU4MDRhMGM4OWViMTY"
+name = "i love radio - greatest hits"
+reason = "Part of 'i love radio' generic aggregator network with generic compilation naming."
+
+[[rejected]]
+stream_url = "https://0n-christmas.radionetz.de/0n-christmas.mp3"
+name = "- 0 N - Christmas on Radio"
+reason = "Ephemeral seasonal stream with unclear station identity and misleading name formatting."
+
+[[rejected]]
+stream_url = "http://streamplus52.leonex.de:11216/;"
+name = "Das Radio der von Neil Young Get\u00f6teten"
+reason = "Spammy/junk name with inflammatory reference; not a legitimate station identity."
+
+[[rejected]]
+stream_url = "https://techhouse-high.rautemusik.fm/?ref=radiobrowser"
+name = "__TECHHOUSE__ by rautemusik (rm.fm)"
+reason = "Spammy name format with excessive formatting; generic aggregator channel lacking distinct identity."
+
