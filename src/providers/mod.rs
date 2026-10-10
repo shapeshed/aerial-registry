@@ -16,6 +16,7 @@ pub mod global;
 pub mod hrt;
 pub mod latvijas_radio;
 pub mod lrt;
+pub mod mrt;
 pub mod mtva;
 pub mod npo;
 pub mod nrk;
@@ -72,6 +73,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         hrt,
         latvijas_radio,
         lrt,
+        mrt,
         mtva,
         npo,
         nrk,
@@ -120,6 +122,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         hrt::discover(client),
         latvijas_radio::discover(client),
         lrt::discover(client),
+        mrt::discover(client),
         mtva::discover(client),
         npo::discover(client),
         nrk::discover(client),
@@ -170,6 +173,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         hrt,
         latvijas_radio,
         lrt,
+        mrt,
         mtva,
         npo,
         nrk,
