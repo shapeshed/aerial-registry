@@ -5,9 +5,9 @@ edit by hand. A checked country has at least one direct (trusted) provider;
 *(n curated)* marks countries served only by curated/aggregator stations —
 existing listener interest with no direct integration yet.
 
-**38** of 197 countries have a direct provider; **137** have at least one station.
+**45** of 197 countries have a direct provider; **137** have at least one station.
 
-## Europe (36/46)
+## Europe (42/46)
 
 - [x] **Albania** — rtsh (7) · 4 curated
 - [x] **Andorra** — rtva (2)
@@ -39,20 +39,20 @@ existing listener interest with no direct integration yet.
 - [ ] Monaco — *no national public radio — Radio Monaco is private; RMC is a French station*
 - [ ] Montenegro *(1 curated)* — *RTCG radio is only on the login-gated MNE Play OTT platform (Spectar) — stream URLs are account-bound and signed; the old ipradio.rs relays were decommissioned ~Jan 2026*
 - [x] **Netherlands** — npo (15) · 48 curated
-- [ ] North Macedonia *(1 curated)*
+- [x] **North Macedonia** — mrt (4)
 - [x] **Norway** — nrk (26) · 3 curated
 - [x] **Poland** — polskie-radio (9) · 57 curated
 - [x] **Portugal** — rtp (13) · 13 curated
-- [ ] Romania *(20 curated)*
-- [ ] Russia *(52 curated)*
+- [x] **Romania** — radio-romania (36)
+- [x] **Russia** — vgtrk (4)
 - [x] **San Marino** — rai (1)
-- [ ] Serbia *(8 curated)*
-- [ ] Slovakia *(9 curated)*
+- [x] **Serbia** — rts (4)
+- [x] **Slovakia** — stvr (11)
 - [x] **Slovenia** — rtvslo (9) · 11 curated
 - [x] **Spain** — rtve (43)
 - [x] **Sweden** — sr (52) · 4 curated
 - [x] **Switzerland** — srgssr (14) · 18 curated
-- [ ] Ukraine *(12 curated)*
+- [x] **Ukraine** — suspilne (8)
 - [x] **United Kingdom** — bauer (44), bbc (128), global (146), rinse (3), wireless (9) · 64 curated
 - [x] **Vatican City** — vatican-radio (30)
 
@@ -190,9 +190,9 @@ existing listener interest with no direct integration yet.
 - [ ] Trinidad and Tobago
 - [ ] United States *(136 curated)*
 
-## South America (0/12)
+## South America (1/12)
 
-- [ ] Argentina *(12 curated)*
+- [x] **Argentina** — radio-nacional (52)
 - [ ] Bolivia *(3 curated)*
 - [ ] Brazil *(22 curated)*
 - [ ] Chile *(5 curated)*
