@@ -96,14 +96,15 @@ all that is needed to start).
 - **Discovery URL:**
 - **Verified lead:**
 
-## Peru (PE) — `lead`
+## Peru (PE) — `provider`
 
 - **Broadcaster:** Radio Nacional del Perú (IRTP)
 - **Website:** <https://www.radionacional.gob.pe>
-- **Discovery URL:**
-- **Verified lead:** HLS on `cdnhd.iblups.com`, e.g.
-  `https://cdnhd.iblups.com/hls/0773874174fd4eba8bb9eff741d190dc.m3u8`
-  (per-stream hashed manifest — needs a channel list to enumerate reliably).
+- **Discovery URL:** none. IRTP's Drupal JSON:API returns 403, the site has no
+  WordPress REST API, and the player resolves the stream client-side, so the
+  single station is catalogued (`src/providers/irtp.rs`,
+  `docs/providers/irtp.md`). The stream is a hashed HLS manifest on IRTP's
+  `iblups` CDN, HTTP-only — fragile if IRTP reissues it.
 
 ## Suriname (SR) — `none`
 
