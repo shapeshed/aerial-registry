@@ -44,16 +44,18 @@ all that is needed to start).
 - **Discovery URL:**
 - **Verified lead:**
 
-## Brazil (BR) — `lead`
+## Brazil (BR) — `provider`
 
 - **Broadcaster:** Empresa Brasil de Comunicação (EBC) — Rádio Nacional
-  (Brasília, Rio, Amazônia, …), Rádio MEC / MEC FM
+  (Brasília, Rio, São Paulo, São Luís, Amazônia, Alto Solimões, …) and Rádio
+  MEC / MEC FM
 - **Website:** <https://radionacional.ebc.com.br>, <https://radiomec.ebc.com.br>
-- **Discovery URL:**
-- **Verified lead:** EBC streams unsigned HLS from per-network hosts, e.g.
-  `https://radiomec-stream.ebc.com.br/ebc/radiomec/playlist.m3u8` and
-  `https://radiomecfm-stream.ebc.com.br/ebc/radiomecfm/MEC_FM-mp4a_277200_eng=20000.m3u8`.
-  Both confirmed live (`200 application/x-mpegURL`).
+- **Discovery URL:** `https://{site}/++api++/@search?portal_type=Emissora&b_size=100&metadata_fields=stream_url`
+  on each EBC site. EBC's sites are Plone; every station is an `Emissora`
+  content object whose REST representation carries the HLS `stream_url` and an
+  image scale for artwork. The provider discovers the list from this API.
+  Implemented in `src/providers/ebc.rs`, documented in
+  `docs/providers/ebc.md`. 9 stations across the two network sites.
 
 ## Chile (CL) — `none`
 

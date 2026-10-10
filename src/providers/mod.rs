@@ -9,6 +9,7 @@ pub mod cbc;
 pub mod cesky_rozhlas;
 pub mod curated;
 pub mod dr;
+pub mod ebc;
 pub mod err;
 pub mod ert;
 pub mod fluxfm;
@@ -72,6 +73,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         cesky_rozhlas,
         curated,
         dr,
+        ebc,
         err,
         ert,
         fluxfm,
@@ -127,6 +129,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         cesky_rozhlas::discover(client),
         curated::discover(client),
         dr::discover(client),
+        ebc::discover(client),
         err::discover(client),
         ert::discover(client),
         fluxfm::discover(client),
@@ -184,6 +187,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         cesky_rozhlas,
         curated,
         dr,
+        ebc,
         err,
         ert,
         fluxfm,
