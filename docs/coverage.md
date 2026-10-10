@@ -5,7 +5,7 @@ edit by hand. A checked country has at least one direct (trusted) provider;
 *(n curated)* marks countries served only by curated/aggregator stations —
 existing listener interest with no direct integration yet.
 
-**45** of 197 countries have a direct provider; **137** have at least one station.
+**54** of 197 countries have a direct provider; **137** have at least one station.
 
 ## Europe (42/46)
 
@@ -190,20 +190,20 @@ existing listener interest with no direct integration yet.
 - [ ] Trinidad and Tobago
 - [ ] United States *(136 curated)*
 
-## South America (1/12)
+## South America (10/12)
 
 - [x] **Argentina** — radio-nacional (52)
-- [ ] Bolivia *(3 curated)*
-- [ ] Brazil *(22 curated)*
-- [ ] Chile *(5 curated)*
-- [ ] Colombia *(21 curated)*
-- [ ] Ecuador *(4 curated)*
-- [ ] Guyana
-- [ ] Paraguay *(3 curated)*
-- [ ] Peru *(8 curated)*
-- [ ] Suriname *(1 curated)*
-- [ ] Uruguay *(4 curated)*
-- [ ] Venezuela *(1 curated)*
+- [ ] Bolivia — *Radio Illimani - Red Patria Nueva's domain (redpatrianueva.bo) has lapsed and now redirects to an unrelated site; no official stream source remains*
+- [x] **Brazil** — ebc (9)
+- [ ] Chile — *Radio Nacional de Chile (radionacionaldechile.cl) publishes no station-list or direct stream URL — its live page embeds a tustreaming widget with no resolvable stream endpoint*
+- [x] **Colombia** — rtvc (3)
+- [x] **Ecuador** — publica-fm (1)
+- [x] **Guyana** — ncn (11)
+- [x] **Paraguay** — rnp (4)
+- [x] **Peru** — irtp (1)
+- [x] **Suriname** — srs (1)
+- [x] **Uruguay** — rnu (4)
+- [x] **Venezuela** — rnv (2)
 
 ## Oceania (1/14)
 
