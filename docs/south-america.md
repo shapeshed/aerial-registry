@@ -110,14 +110,16 @@ all that is needed to start).
 - **Discovery URL:**
 - **Verified lead:**
 
-## Uruguay (UY) — `lead`
+## Uruguay (UY) — `provider`
 
-- **Broadcaster:** Radiodifusión Nacional del Uruguay (RNU)
-- **Website:** <https://rnu.gub.uy>
-- **Discovery URL:**
-- **Verified lead:** Radio Browser lists `CX 30 Radio Nacional` on
-  `https://a1.asurahosting.com:8650/radio.mp3` and `https://stream.rcast.net/73479`
-  (both unverified — likely third-party relays, not broadcaster-direct).
+- **Broadcaster:** Radiodifusión Nacional del Uruguay (RNU) — Radio Uruguay,
+  Radio Clásica, Radio Cultura, Radio Babel
+- **Website:** <https://mediospublicos.uy/category/radio/>
+- **Discovery URL:** `https://mediospublicos.uy/wp-json/wp/v2/pages?search=iwstreaming&per_page=100&_fields=slug,title,content`
+  — RNU's WordPress REST API. Each station has a "… en Vivo" page embedding an
+  iwstreaming player widget whose id maps to `https://radios.iwstreaming.uy/<id>/stream`.
+  Implemented in `src/providers/rnu.rs`, documented in `docs/providers/rnu.md`.
+  4 stations.
 
 ## Venezuela (VE) — `lead`
 
