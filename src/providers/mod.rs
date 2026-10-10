@@ -24,6 +24,7 @@ pub mod polskie_radio;
 pub mod radio_browser;
 pub mod radio_france;
 pub mod radio_paradise;
+pub mod radio_romania;
 pub mod rai;
 pub mod rik;
 pub mod rinse;
@@ -80,6 +81,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         radio_browser,
         radio_france,
         radio_paradise,
+        radio_romania,
         rai,
         rik,
         rinse,
@@ -128,6 +130,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         radio_browser::discover(client),
         radio_france::discover(client),
         radio_paradise::discover(client),
+        radio_romania::discover(client),
         rai::discover(client),
         rik::discover(client),
         rinse::discover(client),
@@ -178,6 +181,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         radio_browser,
         radio_france,
         radio_paradise,
+        radio_romania,
         rai,
         rik,
         rinse,
