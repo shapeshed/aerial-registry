@@ -37,11 +37,35 @@ pub struct AppConfig {
     pub previous_registry_path: Option<String>,
     #[serde(default)]
     pub radio_france: RadioFranceConfig,
+    #[serde(default)]
+    pub censys: CensysConfig,
+    #[serde(default)]
+    pub shodan: ShodanConfig,
 }
 
 #[derive(Debug, Clone, Default, Deserialize)]
 pub struct RadioFranceConfig {
     /// API key from <https://developers.radiofrance.fr/>, sent as `x-token`.
+    #[serde(default)]
+    pub api_key: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, Deserialize)]
+pub struct CensysConfig {
+    /// Censys Platform personal access token (bearer), from
+    /// <https://search.censys.io> → API Access. Used for internet-wide host
+    /// discovery (e.g. finding Icecast servers not listed in any directory).
+    #[serde(default)]
+    pub pat: Option<String>,
+    /// Optional Censys organization id (`X-Organization-ID`).
+    #[serde(default)]
+    pub org_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, Deserialize)]
+pub struct ShodanConfig {
+    /// Shodan API key from <https://account.shodan.io>, used for internet-wide
+    /// host discovery. Override with `AERIAL__SHODAN__API_KEY`.
     #[serde(default)]
     pub api_key: Option<String>,
 }
@@ -96,6 +120,11 @@ mod tests {
         );
         env.insert("AERIAL__SKIP_LIVENESS".to_string(), "true".to_string());
         env.insert("AERIAL__PROVIDERS".to_string(), "bbc,global".to_string());
+        env.insert("AERIAL__CENSYS__PAT".to_string(), "pat123".to_string());
+        env.insert(
+            "AERIAL__SHODAN__API_KEY".to_string(),
+            "shodan123".to_string(),
+        );
 
         let config: AppConfig = config::Config::builder()
             .add_source(env_source().source(Some(env)))
@@ -107,6 +136,8 @@ mod tests {
         assert_eq!(config.radio_france.api_key.as_deref(), Some("secret"));
         assert_eq!(config.skip_liveness, Some(true));
         assert_eq!(config.providers.as_deref(), Some("bbc,global"));
+        assert_eq!(config.censys.pat.as_deref(), Some("pat123"));
+        assert_eq!(config.shodan.api_key.as_deref(), Some("shodan123"));
         assert_eq!(config.skip_enrich, None);
     }
 }

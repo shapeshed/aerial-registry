@@ -32,3 +32,16 @@
 # API key from https://developers.radiofrance.fr/ (sent as the x-token header).
 # Without it the radio-france provider returns no stations.
 api_key = ""
+
+[censys]
+# Censys Platform personal access token (https://search.censys.io -> API Access).
+# Used for internet-wide host discovery, e.g. finding Icecast servers that are
+# not listed in any public directory. Override with AERIAL__CENSYS__PAT.
+pat = ""
+# Optional organization id, sent as X-Organization-ID.
+# org_id = ""
+
+[shodan]
+# Shodan API key (https://account.shodan.io), used for internet-wide host
+# discovery. Override with AERIAL__SHODAN__API_KEY.
+api_key = ""

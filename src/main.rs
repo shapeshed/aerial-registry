@@ -4,6 +4,7 @@ mod http;
 mod pipeline;
 mod providers;
 mod radio_browser_client;
+mod scan;
 mod station;
 
 #[tokio::main]
@@ -23,6 +24,10 @@ async fn main() -> anyhow::Result<()> {
 
     if let Some("prune-curated") = std::env::args().nth(1).as_deref() {
         return curation::prune_curated(&client).await;
+    }
+
+    if let Some("icecast-scan") = std::env::args().nth(1).as_deref() {
+        return scan::run(&client, std::env::args().nth(2).as_deref()).await;
     }
 
     let all = providers::discover_all(&client).await;
