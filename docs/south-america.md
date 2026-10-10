@@ -64,16 +64,16 @@ all that is needed to start).
 - **Discovery URL:**
 - **Verified lead:**
 
-## Colombia (CO) — `lead`
+## Colombia (CO) — `provider`
 
-- **Broadcaster:** RTVC Sistema de Medios Públicos — Señal Radio Colombia,
-  Radiónica
-- **Website:** <https://www.rtvc.gov.co>
-- **Discovery URL:**
-- **Verified lead:** HLS from RTVC's own streaming host, e.g.
-  `https://streaming.rtvc.gov.co/Radio_Radionica/Radionica.stream/playlist.m3u8`
-  (confirmed live, `206 application/vnd.apple.mpegurl`); legacy Shoutcast at
-  `http://shoutcast.rtvc.gov.co:8010/;` also live (`200 audio/aacp`).
+- **Broadcaster:** RTVC Sistema de Medios Públicos — Radio Nacional de Colombia,
+  Radiónica, Exploremos
+- **Website:** <https://www.rtvc.gov.co>, <https://www.radionacional.co>
+- **Discovery URL:** `https://parrilla.rtvc.gov.co/jsonapi/node/channel?page%5Blimit%5D=50&include=field_logo_json`
+  — RTVC's Parrilla Drupal JSON:API. Each channel node carries
+  `field_streaming_hls`; radio streams are the ones under `Radio_`. Implemented
+  in `src/providers/rtvc.rs`, documented in `docs/providers/rtvc.md`.
+  3 radio stations (Radio Nacional de Colombia, Radiónica, Exploremos).
 
 ## Ecuador (EC) — `none`
 
