@@ -4,3 +4,8 @@ registry.json.gz
 state.db
 anomalies.md
 review-*.jsonl
+
+# Local secrets (e.g. RADIO_FRANCE_API_KEY for the radio-france provider)
+.env
+.env.*
+*.env
