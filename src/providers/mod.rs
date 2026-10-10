@@ -45,6 +45,7 @@ pub mod sbs;
 pub mod somafm;
 pub mod sr;
 pub mod srgssr;
+pub mod stvr;
 pub mod suspilne;
 pub mod trm;
 pub mod vatican_radio;
@@ -107,6 +108,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         somafm,
         sr,
         srgssr,
+        stvr,
         suspilne,
         trm,
         vatican_radio,
@@ -161,6 +163,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         somafm::discover(client),
         sr::discover(client),
         srgssr::discover(client),
+        stvr::discover(client),
         suspilne::discover(client),
         trm::discover(client),
         vatican_radio::discover(client),
@@ -217,6 +220,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         somafm,
         sr,
         srgssr,
+        stvr,
         suspilne,
         trm,
         vatican_radio,
