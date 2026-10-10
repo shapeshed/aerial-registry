@@ -1,53 +1,56 @@
-use std::collections::HashMap;
-
 use reqwest::Client;
 use serde::Deserialize;
 use tracing::{debug, error, warn};
 
 use crate::station::Station;
 
-const STATIONS_URL: &str = "https://bff-web-guacamole.musicradio.com/stations/";
+/// Global Player's data is served by its Next.js app. The public BFF the
+/// provider formerly used (`bff-web-guacamole.musicradio.com/stations/`) now
+/// returns 404 for every path.
+///
+/// The full station list — including every regional variant — is published in
+/// the radio sitemap, and each station's `/live/{brand}/{station}` page carries
+/// its playback URLs. The build id changes on every deploy, so it is read from
+/// the homepage first.
 const HOMEPAGE_URL: &str = "https://www.globalplayer.com/";
+const SITEMAP_URL: &str = "https://www.globalplayer.com/sitemaps/sitemap_radio.xml";
+const BASE: &str = "https://www.globalplayer.com";
 
 #[derive(Deserialize)]
+struct NextData<T> {
+    #[serde(rename = "pageProps", default)]
+    page_props: T,
+}
+
+#[derive(Deserialize, Default)]
+struct StationProps {
+    #[serde(default)]
+    station: StationInfo,
+    #[serde(default)]
+    playable: Playable,
+}
+
+#[derive(Deserialize, Default)]
 #[serde(rename_all = "camelCase")]
-struct GlobalStation {
+struct StationInfo {
     id: Option<String>,
-    slug: Option<String>,
     gduid: Option<String>,
     name: Option<String>,
-    stream_url: Option<String>,
-    stream: Option<GlobalStream>,
     tagline: Option<String>,
-    brand: Option<GlobalBrand>,
-}
-
-#[derive(Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct GlobalStream {
-    icecast_sd: Option<String>,
-}
-
-#[derive(Deserialize)]
-struct GlobalBrand {
-    slug: String,
-}
-
-#[derive(Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct NextDataPage {
-    page_props: Option<NextDataProps>,
-}
-
-#[derive(Deserialize)]
-struct NextDataProps {
-    station: Option<NextDataStation>,
-}
-
-#[derive(Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct NextDataStation {
     brand_logo: Option<String>,
+}
+
+#[derive(Deserialize, Default)]
+struct Playable {
+    #[serde(default)]
+    playback: Vec<Playback>,
+}
+
+#[derive(Deserialize, Default)]
+struct Playback {
+    url: Option<String>,
+    #[serde(default)]
+    flags: Vec<String>,
 }
 
 async fn fetch_build_id(client: &Client) -> Option<String> {
@@ -65,128 +68,90 @@ async fn fetch_build_id(client: &Client) -> Option<String> {
     Some(html[start..end].to_owned())
 }
 
-async fn fetch_brand_logo(
-    client: &Client,
-    build_id: &str,
-    brand_slug: &str,
-    station_slug: &str,
-) -> Option<String> {
-    let url = format!(
-        "https://www.globalplayer.com/_next/data/{build_id}/live/{brand_slug}/{station_slug}.json\
-         ?brand={brand_slug}&station={station_slug}"
-    );
-    let page: NextDataPage = client.get(&url).send().await.ok()?.json().await.ok()?;
-    page.page_props?
-        .station?
-        .brand_logo
-        .filter(|u| !u.is_empty())
-}
-
 pub async fn discover(client: &Client) -> Vec<Station> {
-    let build_id = match fetch_build_id(client).await {
-        Some(id) => id,
-        None => {
-            warn!(
-                provider = "global",
-                "Could not fetch build ID — logos will be absent"
-            );
-            String::new()
-        }
+    let Some(build_id) = fetch_build_id(client).await else {
+        error!(provider = "global", "Could not fetch build ID");
+        return vec![];
     };
 
-    let resp = match client.get(STATIONS_URL).send().await {
-        Ok(r) => r,
+    let sitemap = match client.get(SITEMAP_URL).send().await {
+        Ok(resp) => match resp.error_for_status() {
+            Ok(resp) => resp.text().await.unwrap_or_default(),
+            Err(e) => {
+                error!(provider = "global", "Sitemap request failed: {e}");
+                return vec![];
+            }
+        },
         Err(e) => {
-            error!(provider = "global", "Failed to fetch stations: {e}");
+            error!(provider = "global", "Sitemap request failed: {e}");
             return vec![];
         }
     };
 
-    let raw: Vec<GlobalStation> = match resp.json().await {
-        Ok(b) => b,
-        Err(e) => {
-            error!(provider = "global", "Failed to parse response: {e}");
-            return vec![];
-        }
-    };
-
-    // One (brand_slug, station_slug) pair per brand — all stations in a brand share the logo.
-    let mut brand_rep: HashMap<String, String> = HashMap::new();
-    for s in &raw {
-        if let (Some(brand), Some(slug)) = (s.brand.as_ref(), s.slug.as_deref()) {
-            brand_rep
-                .entry(brand.slug.clone())
-                .or_insert_with(|| slug.to_owned());
-        }
+    let paths = sitemap_paths(&sitemap);
+    if paths.is_empty() {
+        error!(
+            provider = "global",
+            "No stations found in the radio sitemap"
+        );
+        return vec![];
     }
+    debug!(provider = "global", count = paths.len(), "Sitemap stations");
 
-    let logo_map: HashMap<String, String> = if build_id.is_empty() {
-        HashMap::new()
-    } else {
-        let futures: Vec<_> = brand_rep
-            .iter()
-            .map(|(brand_slug, station_slug)| {
-                let client = client.clone();
-                let build_id = build_id.clone();
-                let brand_slug = brand_slug.clone();
-                let station_slug = station_slug.clone();
-                async move {
-                    let logo =
-                        fetch_brand_logo(&client, &build_id, &brand_slug, &station_slug).await;
-                    (brand_slug, logo)
+    // Each station's own page carries its name and playback URLs.
+    let fetches: Vec<_> = paths
+        .iter()
+        .map(|(brand, station)| {
+            let client = client.clone();
+            let build_id = build_id.clone();
+            let url =
+                format!("{BASE}/_next/data/{build_id}/live/{brand}/{station}.json");
+            async move {
+                match client.get(&url).send().await {
+                    Ok(resp) => match resp.json::<NextData<StationProps>>().await {
+                        Ok(data) => Some(data.page_props),
+                        Err(e) => {
+                            warn!(provider = "global", %brand, %station, "Could not parse station data: {e}");
+                            None
+                        }
+                    },
+                    Err(e) => {
+                        warn!(provider = "global", %brand, %station, "Station request failed: {e}");
+                        None
+                    }
                 }
-            })
-            .collect();
-
-        let results = futures::future::join_all(futures).await;
-        results
-            .into_iter()
-            .filter_map(|(slug, logo)| logo.map(|l| (slug, l)))
-            .collect()
-    };
-
-    debug!(
-        provider = "global",
-        brands = logo_map.len(),
-        "Fetched brand logos"
-    );
+            }
+        })
+        .collect();
 
     let mut stations = Vec::new();
-
-    for s in raw {
-        let name = match s.name.filter(|n| !n.is_empty()) {
-            Some(n) => n,
-            None => continue,
+    for props in futures::future::join_all(fetches)
+        .await
+        .into_iter()
+        .flatten()
+    {
+        let Some(name) = props.station.name.filter(|n| !n.is_empty()) else {
+            continue;
         };
-        let stream_url = match s.stream_url.filter(|u| !u.is_empty()).or_else(|| {
-            s.stream
-                .and_then(|st| st.icecast_sd)
-                .filter(|u| !u.is_empty())
-        }) {
-            Some(u) => u,
-            None => continue,
+        let Some(stream_url) = pick_stream(&props.playable) else {
+            warn!(provider = "global", %name, "Skipped — no public stream URL");
+            continue;
         };
-
-        let logo_url = s
-            .brand
-            .as_ref()
-            .and_then(|b| logo_map.get(&b.slug))
-            .cloned();
-
         debug!(provider = "global", %name, %stream_url, "Discovered station");
         stations.push(Station {
             name,
             stream_url,
-            logo_url,
+            logo_url: props.station.brand_logo,
             country: Some("United Kingdom".into()),
             country_code: Some("GB".into()),
             tags: vec![],
-            description: s.tagline.filter(|t| !t.is_empty()),
+            description: props.station.tagline.filter(|t| !t.is_empty()),
             provider: "global".into(),
-            provider_id: s
+            provider_id: props
+                .station
                 .gduid
                 .filter(|v| !v.is_empty())
-                .or_else(|| s.id.filter(|v| !v.is_empty())),
+                .or_else(|| props.station.id.filter(|v| !v.is_empty())),
             trusted: true,
         });
     }
@@ -197,4 +162,79 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         "Discovery complete"
     );
     stations
+}
+
+/// Extract `(brand, station)` pairs from the radio sitemap's
+/// `/live/{brand}/{station}/` URLs.
+fn sitemap_paths(xml: &str) -> Vec<(String, String)> {
+    let mut out = Vec::new();
+    for chunk in xml.split("<loc>").skip(1) {
+        let Some(end) = chunk.find("</loc>") else {
+            continue;
+        };
+        let url = chunk[..end].trim();
+        let Some(rest) = url.split("/live/").nth(1) else {
+            continue;
+        };
+        let parts: Vec<&str> = rest.trim_end_matches('/').split('/').collect();
+        if parts.len() == 2 && !parts[0].is_empty() && !parts[1].is_empty() {
+            out.push((parts[0].to_owned(), parts[1].to_owned()));
+        }
+    }
+    out
+}
+
+/// Pick a publicly playable URL: the subscriber (`-plus`) entries carry
+/// `auth.license`/`AdFree` flags and the HD entry carries `auth.HDAuth`; the
+/// ad-supported entry is the plain public stream.
+fn pick_stream(playable: &Playable) -> Option<String> {
+    playable
+        .playback
+        .iter()
+        .find(|p| {
+            p.url.as_deref().is_some_and(|u| u.starts_with("http"))
+                && !p
+                    .flags
+                    .iter()
+                    .any(|f| matches!(f.as_str(), "auth.license" | "auth.HDAuth" | "AdFree"))
+        })
+        .and_then(|p| p.url.clone())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{Playable, pick_stream, sitemap_paths};
+
+    #[test]
+    fn parses_regional_and_national_paths_from_sitemap() {
+        let xml = r#"<urlset>
+            <url><loc>https://www.globalplayer.com/live/capital/uk/</loc></url>
+            <url><loc>https://www.globalplayer.com/live/capital/teesside/</loc></url>
+            <url><loc>https://www.globalplayer.com/somewhere/else/</loc></url>
+        </urlset>"#;
+        let paths = sitemap_paths(xml);
+        assert_eq!(
+            paths,
+            vec![
+                ("capital".to_string(), "uk".to_string()),
+                ("capital".to_string(), "teesside".to_string())
+            ]
+        );
+    }
+
+    #[test]
+    fn picks_the_public_stream_not_the_subscriber_one() {
+        let playable: Playable = serde_json::from_str(
+            r#"{"playback":[
+                {"url":"https://hls.thisisdax.com/hls/CapitalXTRA-plus/master.m3u8","flags":["format.hls","auth.license","AdFree"]},
+                {"url":"https://media-ssl.musicradio.com/CapitalXTRANationalHD","flags":["hd","auth.HDAuth"]},
+                {"url":"https://media-ssl.musicradio.com/CapitalXTRANational","flags":["format.icecast","GlobalAdSupported"]}
+            ]}"#,
+        )
+        .unwrap();
+        assert_eq!(
+            pick_stream(&playable).as_deref(),
+            Some("https://media-ssl.musicradio.com/CapitalXTRANational")
+        );
+    }
 }
