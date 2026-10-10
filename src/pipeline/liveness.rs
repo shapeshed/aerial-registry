@@ -71,10 +71,10 @@ impl StreamFailure {
 pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<Station> {
     // Local builds behind a proxy (or quick iterations) can skip the probes
     // entirely; nothing is pruned and no failure state is recorded.
-    if std::env::var("AERIAL_SKIP_LIVENESS").is_ok_and(|v| !v.is_empty() && v != "0") {
+    if crate::config::get().skip_liveness.unwrap_or(false) {
         info!(
             total = stations.len(),
-            "Liveness checks skipped (AERIAL_SKIP_LIVENESS)"
+            "Liveness checks skipped (AERIAL__SKIP_LIVENESS)"
         );
         return stations;
     }
@@ -82,7 +82,7 @@ pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<
     let semaphore = Arc::new(Semaphore::new(MAX_CONCURRENT));
     let client = client.clone();
     let total = stations.len();
-    let store = state::open_from_env();
+    let store = state::open_from_config();
 
     let tasks: Vec<_> = stations
         .into_iter()

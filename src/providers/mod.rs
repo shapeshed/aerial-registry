@@ -69,12 +69,12 @@ use tracing::info;
 
 use crate::station::Station;
 
-/// The subset of providers to run, from `AERIAL_PROVIDERS`: a comma-separated
+/// The subset of providers to run, from `AERIAL__PROVIDERS`: a comma-separated
 /// list of provider slugs matching the `provider` field written to the registry
 /// (e.g. `global`, `bbc`, `radio-france`). Unset or empty runs every provider,
 /// which is the normal nightly behaviour.
 fn provider_filter() -> Option<HashSet<String>> {
-    let value = std::env::var("AERIAL_PROVIDERS").ok()?;
+    let value = crate::config::get().providers.clone()?;
     let wanted: HashSet<String> = value
         .split(',')
         .map(|s| s.trim().to_ascii_lowercase())

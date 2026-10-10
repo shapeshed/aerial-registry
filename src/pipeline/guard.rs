@@ -24,15 +24,15 @@ pub struct Intervention {
 /// last human-approved state. Unset (the common case for an ad hoc local
 /// run) means no previous state is available, so the guard and diff report
 /// are both skipped.
-pub fn load_from_env() -> Option<Vec<Station>> {
-    load_from_path(std::env::var("AERIAL_PREVIOUS_REGISTRY_PATH").ok())
+pub fn load_from_config() -> Option<Vec<Station>> {
+    load_from_path(crate::config::get().previous_registry_path.clone())
 }
 
 fn load_from_path(path: Option<String>) -> Option<Vec<Station>> {
     let path = match path {
         Some(v) if !v.is_empty() => v,
         _ => {
-            info!("No AERIAL_PREVIOUS_REGISTRY_PATH set; previous-registry guard disabled");
+            info!("No previous registry configured; previous-registry guard disabled");
             return None;
         }
     };

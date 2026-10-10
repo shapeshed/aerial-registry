@@ -1,0 +1,47 @@
+# Aerial registry configuration.
+#
+# Copy this file to `config/default.toml` and fill in the values you need.
+# `config/default.toml` is gitignored; this example is committed.
+#
+# Every value here can be overridden by an environment variable using the
+# `AERIAL__SECTION__KEY` convention, which is how CI supplies the secret, e.g.
+#
+#   AERIAL__RADIO_FRANCE__API_KEY=...
+#   AERIAL__SKIP_LIVENESS=true
+
+# Comma-separated provider slugs to run (e.g. "global,bbc,radio-france").
+# Unset or empty runs every provider, which is the normal nightly behaviour.
+# providers = ""
+
+# Skip the liveness probes entirely; nothing is pruned. Handy for fast local
+# builds, but dead streams are then left in the output.
+# skip_liveness = false
+
+# Skip Radio Browser tag enrichment (one lookup per station).
+# skip_enrich = false
+
+# Station state store (SQLite) used for liveness hysteresis. An empty string
+# disables it; unset uses the default path.
+# state_db = ""
+
+# Previously shipped registry (`registry.json` or `.gz`) to guard against and
+# diff against, e.g. the app's checked-in copy. Unset skips both.
+# previous_registry_path = ""
+
+[radio_france]
+# API key from https://developers.radiofrance.fr/ (sent as the x-token header).
+# Without it the radio-france provider returns no stations.
+api_key = ""
+
+[censys]
+# Censys Platform personal access token (https://search.censys.io -> API Access).
+# Used for internet-wide host discovery, e.g. finding Icecast servers that are
+# not listed in any public directory. Override with AERIAL__CENSYS__PAT.
+pat = ""
+# Optional organization id, sent as X-Organization-ID.
+# org_id = ""
+
+[shodan]
+# Shodan API key (https://account.shodan.io), used for internet-wide host
+# discovery. Override with AERIAL__SHODAN__API_KEY.
+api_key = ""

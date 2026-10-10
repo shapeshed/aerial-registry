@@ -21,10 +21,10 @@ struct RbStation {
 pub async fn enrich(client: &Client, mut stations: Vec<Station>) -> Vec<Station> {
     // Tag enrichment is one Radio Browser lookup per station; skip it for
     // faster local test builds. Tags fall back to whatever providers supply.
-    if std::env::var("AERIAL_SKIP_ENRICH").is_ok_and(|v| !v.is_empty() && v != "0") {
+    if crate::config::get().skip_enrich.unwrap_or(false) {
         info!(
             total = stations.len(),
-            "Radio Browser tag enrichment skipped (AERIAL_SKIP_ENRICH)"
+            "Radio Browser tag enrichment skipped (AERIAL__SKIP_ENRICH)"
         );
         return stations;
     }
