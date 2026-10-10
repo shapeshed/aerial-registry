@@ -94,12 +94,15 @@ all that is needed to start).
   stream. Implemented in `src/providers/ncn.rs`, documented in
   `docs/providers/ncn.md`. 11 stations.
 
-## Paraguay (PY) — `none`
+## Paraguay (PY) — `provider`
 
-- **Broadcaster:** Radio Nacional del Paraguay / Secretaría de Información
-- **Website:**
-- **Discovery URL:**
-- **Verified lead:**
+- **Broadcaster:** Radio Nacional del Paraguay (RNP)
+- **Website:** <http://webaudio.radionacional.gov.py/>
+- **Discovery URL:** `http://webaudio.radionacional.gov.py/` — the live-player
+  page embeds each station's config as a base64 `data-data` attribute; decoding
+  it yields the station title, stream and thumbnail. Implemented in
+  `src/providers/rnp.rs`, documented in `docs/providers/rnp.md`.
+  4 stations (920 AM, 95.1 FM, 700 AM, 105.9 FM).
 
 ## Peru (PE) — `provider`
 

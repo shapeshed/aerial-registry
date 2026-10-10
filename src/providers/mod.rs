@@ -34,6 +34,7 @@ pub mod radio_romania;
 pub mod rai;
 pub mod rik;
 pub mod rinse;
+pub mod rnp;
 pub mod rnu;
 pub mod rnv;
 pub mod rtbf;
@@ -105,6 +106,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rai,
         rik,
         rinse,
+        rnp,
         rnu,
         rnv,
         rtbf,
@@ -168,6 +170,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rai::discover(client),
         rik::discover(client),
         rinse::discover(client),
+        rnp::discover(client),
         rnu::discover(client),
         rnv::discover(client),
         rtbf::discover(client),
@@ -233,6 +236,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         rai,
         rik,
         rinse,
+        rnp,
         rnu,
         rnv,
         rtbf,
