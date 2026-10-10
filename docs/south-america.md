@@ -111,12 +111,14 @@ all that is needed to start).
   `docs/providers/irtp.md`). The stream is a hashed HLS manifest on IRTP's
   `iblups` CDN, HTTP-only — fragile if IRTP reissues it.
 
-## Suriname (SR) — `none`
+## Suriname (SR) — `provider`
 
-- **Broadcaster:** Suriname National Radio (SRS)
-- **Website:**
-- **Discovery URL:**
-- **Verified lead:**
+- **Broadcaster:** Stichting Radio-omroep Suriname (SRS)
+- **Website:** <https://radiosrs.sr> (Cloudflare-blocked from the build network)
+- **Discovery URL:** none. SRS's own site is bot-walled; its stream — which
+  identifies itself as SRS in its ICY headers — is served by its host, SuriLive
+  (`https://surilive.com:8060/;`), so the single service is catalogued
+  (`src/providers/srs.rs`, `docs/providers/srs.md`).
 
 ## Uruguay (UY) — `lead`
 
