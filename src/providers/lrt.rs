@@ -34,8 +34,10 @@ struct Channel {
     channel_name: String,
     #[serde(rename = "channelTitle")]
     channel_title: String,
-    #[serde(rename = "streamUrl")]
-    stream_url: String,
+    // LRT's web-only channels ("live8", "live9", …) carry a null `streamUrl`;
+    // only the broadcast channels have a resolver URL.
+    #[serde(rename = "streamUrl", default)]
+    stream_url: Option<String>,
 }
 
 #[derive(Deserialize)]
@@ -73,15 +75,19 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         .live_channels
         .into_iter()
         .filter(|c| {
-            RADIO_CHANNELS
-                .iter()
-                .any(|(name, _)| *name == c.channel_name)
+            c.stream_url.is_some()
+                && RADIO_CHANNELS
+                    .iter()
+                    .any(|(name, _)| *name == c.channel_name)
         })
         .collect();
     let resolutions = join_all(radio_channels.into_iter().map(|channel| {
         let client = client.clone();
         async move {
-            let audio = resolve_audio(&client, &channel.stream_url).await;
+            let audio = match channel.stream_url.as_deref() {
+                Some(url) => resolve_audio(&client, url).await,
+                None => None,
+            };
             (channel, audio)
         }
     }))
@@ -140,11 +146,18 @@ mod tests {
     use super::{Live, Resolver};
 
     #[test]
-    fn live_api_deserializes() {
-        let json = r#"{"dailyQuestion":null,"liveChannels":[{"channelName":"LR","channelTitle":"LRT Radijas","streamUrl":"https://www.lrt.lt/servisai/stream_url/live/get_live_url.php?channel=LR","other":1}]}"#;
+    fn live_api_deserializes_with_null_stream_urls() {
+        // LRT's web-only channels carry a null streamUrl; the radio channels
+        // have a resolver URL. Parsing must tolerate the null.
+        let json = r#"{"dailyQuestion":null,"liveChannels":[
+            {"channelName":"live8","channelTitle":"LRT.LT Live 8","streamUrl":null},
+            {"channelName":"LR","channelTitle":"LRT Radijas","streamUrl":"https://www.lrt.lt/servisai/stream_url/live/get_live_url.php?channel=LR"}
+        ]}"#;
         let live: Live = serde_json::from_str(json).unwrap();
-        assert_eq!(live.live_channels.len(), 1);
-        assert_eq!(live.live_channels[0].channel_name, "LR");
+        assert_eq!(live.live_channels.len(), 2);
+        assert!(live.live_channels[0].stream_url.is_none());
+        assert_eq!(live.live_channels[1].channel_name, "LR");
+        assert!(live.live_channels[1].stream_url.is_some());
     }
 
     #[test]
