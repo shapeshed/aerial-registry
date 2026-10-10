@@ -141,15 +141,50 @@ fn drop_aggregator_duplicates(mut stations: Vec<Station>) -> Vec<Station> {
         .collect()
 }
 
+/// Normalises a stream URL for duplicate detection: lowercases, drops the
+/// scheme and query string, and trims a trailing slash.
+///
+/// Global Radio (the `global` provider) serves one station from several CDN
+/// hosts — `media-ssl`, `media-ice`, `media-the`, `media-sov`, `ice-the`,
+/// `ice-sov` — all under `musicradio.com`, and aggregator entries sometimes
+/// append a codec suffix to the mount (`HeartGlasgowMP3` vs `HeartGlasgow`).
+/// Collapse those to a single `musicradio.com/<mount>` key so radio-browser
+/// duplicates dedup against the global provider's richer entry instead of
+/// shipping alongside it with no logo. Scoped to Global's own infrastructure,
+/// where the mount — not the CDN host — identifies the station.
 pub fn normalise_url(url: &str) -> String {
-    url.to_lowercase()
+    let lower = url.to_lowercase();
+    let path = lower
         .trim_start_matches("https://")
         .trim_start_matches("http://")
         .split('?')
         .next()
         .unwrap_or("")
-        .trim_end_matches('/')
-        .to_owned()
+        .trim_end_matches('/');
+
+    if let Some((host, mount)) = path.split_once('/') {
+        if host == "musicradio.com" || host.ends_with(".musicradio.com") {
+            return format!("musicradio.com/{}", strip_codec_suffix(mount));
+        }
+    }
+
+    path.to_owned()
+}
+
+/// Strips a trailing audio codec suffix (possibly repeated) from a Global mount
+/// name, e.g. `CapitalBirminghamMP3` -> `capitalbirmingham`. Leaves the mount
+/// untouched if stripping would empty it.
+fn strip_codec_suffix(mount: &str) -> &str {
+    let mut mount = mount;
+    loop {
+        match ["mp3", "aac", "hls"]
+            .iter()
+            .find_map(|suffix| mount.strip_suffix(suffix))
+        {
+            Some(next) if !next.is_empty() => mount = next,
+            _ => return mount,
+        }
+    }
 }
 
 #[cfg(test)]
@@ -225,6 +260,58 @@ mod tests {
             normalise_url("https://example.com/stream/"),
             "example.com/stream"
         );
+    }
+
+    #[test]
+    fn normalise_collapses_global_musicradio_hosts_and_codec_suffixes() {
+        let a = normalise_url(
+            "http://media-the.musicradio.com/HeartGlasgow?amsparams=playerid:UKRP;skey:1",
+        );
+        let b = normalise_url("https://media-ssl.musicradio.com/HeartGlasgow");
+        assert_eq!(a, b);
+        assert_eq!(a, "musicradio.com/heartglasgow");
+
+        // Aggregator mounts sometimes carry a codec suffix.
+        assert_eq!(
+            normalise_url("https://media-ssl.musicradio.com/CapitalBirminghamMP3"),
+            normalise_url("https://media-ssl.musicradio.com/CapitalBirmingham"),
+        );
+    }
+
+    #[test]
+    fn normalise_leaves_lookalike_musicradio_hosts_alone() {
+        // "faithmusicradio.com" merely ends with the same letters; it is not
+        // Global's infrastructure and must keep its host.
+        assert_eq!(
+            normalise_url("http://stream.faithmusicradio.com:8000/wgab"),
+            "stream.faithmusicradio.com:8000/wgab",
+        );
+        assert_ne!(
+            normalise_url("http://stream.faithmusicradio.com:8000/wgab"),
+            normalise_url("http://media-ssl.musicradio.com/wgab"),
+        );
+    }
+
+    #[test]
+    fn global_entry_absorbs_musicradio_host_variant_duplicate() {
+        // "Heart FM Glasgow" (radio-browser, no logo) is the same station as
+        // the global provider's "Heart West Scotland": same mount, different
+        // CDN host. The global entry must win so the logo is retained.
+        let out = dedup(vec![
+            station(
+                "radio-browser",
+                "Heart FM Glasgow",
+                "http://media-the.musicradio.com/HeartGlasgow?amsparams=playerid:UKRP",
+            ),
+            station(
+                "global",
+                "Heart West Scotland",
+                "https://media-ssl.musicradio.com/HeartGlasgow",
+            ),
+        ]);
+        assert_eq!(out.len(), 1);
+        assert_eq!(out[0].provider, "global");
+        assert_eq!(out[0].name, "Heart West Scotland");
     }
 
     #[test]
