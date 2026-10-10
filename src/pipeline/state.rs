@@ -37,14 +37,14 @@ impl StationKey {
     }
 }
 
-pub fn open_from_env() -> Option<StateStore> {
-    let path = match std::env::var("AERIAL_STATE_DB") {
-        Ok(v) if v.is_empty() => {
+pub fn open_from_config() -> Option<StateStore> {
+    let path = match crate::config::get().state_db.clone() {
+        Some(v) if v.is_empty() => {
             info!("Station state store disabled");
             return None;
         }
-        Ok(v) => v,
-        Err(_) => DEFAULT_PATH.to_string(),
+        Some(v) => v,
+        None => DEFAULT_PATH.to_string(),
     };
     match StateStore::open(&path) {
         Ok(store) => Some(store),

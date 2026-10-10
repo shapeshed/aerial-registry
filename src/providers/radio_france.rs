@@ -1,5 +1,4 @@
 use std::collections::HashMap;
-use std::env;
 
 use crate::http::Client;
 use futures::future::join_all;
@@ -10,7 +9,6 @@ use crate::station::Station;
 
 const GRAPHQL_URL: &str = "https://openapi.radiofrance.fr/v1/graphql";
 const BRAND_PAGE_BASE: &str = "https://www.radiofrance.fr";
-const API_KEY_ENV: &str = "RADIO_FRANCE_API_KEY";
 const QUERY: &str = "{ brands { id title baseline description liveStream playerUrl \
     webRadios { id title description liveStream playerUrl } \
     localRadios { id title description liveStream playerUrl } } }";
@@ -77,12 +75,13 @@ async fn fetch_brand_logo(client: &Client, brand_id: &str) -> Option<String> {
 }
 
 pub async fn discover(client: &Client) -> Vec<Station> {
-    let api_key = match env::var(API_KEY_ENV) {
-        Ok(k) if !k.is_empty() => k,
+    let api_key = match crate::config::get().radio_france.api_key.clone() {
+        Some(k) if !k.is_empty() => k,
         _ => {
             error!(
                 provider = "radio-france",
-                "{API_KEY_ENV} not set — skipping"
+                "No API key configured (set radio_france.api_key in config/default.toml \
+                 or AERIAL__RADIO_FRANCE__API_KEY) — skipping"
             );
             return vec![];
         }

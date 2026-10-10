@@ -4,3 +4,11 @@ registry.json.gz
 state.db
 anomalies.md
 review-*.jsonl
+
+# Local configuration and secrets (copy config/default.toml.example to
+# config/default.toml). Note `config/*.toml` keeps the committed .example.
+config/*.toml
+
+# Local secrets file.
+.env
+.env.*
