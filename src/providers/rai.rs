@@ -1,5 +1,5 @@
+use crate::http::Client;
 use futures::future::join_all;
-use reqwest::Client;
 use serde::Deserialize;
 use tracing::{debug, error, warn};
 
@@ -42,12 +42,8 @@ fn relinker_cont_id(url: &str) -> Option<&str> {
 /// fresh Akamai/MainStreaming token on every call, so this must run at discovery
 /// time rather than being resolved once and reused across builds.
 async fn resolve_stream(client: &Client, cont_id: &str) -> Option<String> {
-    let resp = client
-        .get(RELINKER_URL)
-        .query(&[("cont", cont_id), ("output", "45")])
-        .send()
-        .await
-        .ok()?;
+    let url = crate::http::url_with_query(RELINKER_URL, &[("cont", cont_id), ("output", "45")]);
+    let resp = client.get(&url).send().await.ok()?;
     if !resp.status().is_success() {
         return None;
     }

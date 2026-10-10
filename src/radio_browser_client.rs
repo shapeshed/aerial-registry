@@ -1,7 +1,7 @@
 use std::future::Future;
 use std::time::Duration;
 
-use reqwest::Client;
+use crate::http::Client;
 use serde::Deserialize;
 use tracing::warn;
 

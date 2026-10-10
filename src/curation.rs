@@ -46,7 +46,7 @@ struct RejectedStation {
     stream_url: String,
 }
 
-pub async fn prune_curated(client: &reqwest::Client) -> anyhow::Result<()> {
+pub async fn prune_curated(client: &crate::http::Client) -> anyhow::Result<()> {
     let source = fs::read_to_string(STATIONS_PATH)?;
     let (header, stations) = parse_station_blocks(&source)?;
     let existing_rejected = load_rejected_urls();

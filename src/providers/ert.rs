@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
+use crate::http::Client;
 use futures::future::join_all;
-use reqwest::Client;
 use serde::Deserialize;
 use tracing::{debug, error, warn};
 

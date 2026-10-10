@@ -68,7 +68,7 @@ impl StreamFailure {
     }
 }
 
-pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Station> {
+pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<Station> {
     // Local builds behind a proxy (or quick iterations) can skip the probes
     // entirely; nothing is pruned and no failure state is recorded.
     if std::env::var("AERIAL_SKIP_LIVENESS").is_ok_and(|v| !v.is_empty() && v != "0") {
@@ -252,7 +252,7 @@ pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Stat
 }
 
 pub async fn validate_imported_stream_url(
-    client: &reqwest::Client,
+    client: &crate::http::Client,
     url: &str,
 ) -> Result<String, StreamFailure> {
     if let Some(candidate) = https_candidate(url) {
@@ -317,7 +317,7 @@ fn gone_status(status: reqwest::StatusCode) -> bool {
     )
 }
 
-async fn probe_live_url(client: &reqwest::Client, url: &str, log_failures: bool) -> Probe {
+async fn probe_live_url(client: &crate::http::Client, url: &str, log_failures: bool) -> Probe {
     let timeout = std::time::Duration::from_secs(TIMEOUT_SECS);
 
     // Try HEAD first. Any non-success response (including connection errors,

@@ -1,4 +1,4 @@
-use reqwest::Client;
+use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error};
 
@@ -59,12 +59,8 @@ fn pick_logo(lead_image: Option<LeadImage>) -> Option<String> {
 
 pub async fn discover(client: &Client) -> Vec<Station> {
     let ids = CHANNEL_IDS.join(",");
-    let resp = match client
-        .get(CHANNELS_URL)
-        .query(&[("ids", &ids)])
-        .send()
-        .await
-    {
+    let url = crate::http::url_with_query(CHANNELS_URL, &[("ids", &ids)]);
+    let resp = match client.get(&url).send().await {
         Ok(r) => r,
         Err(e) => {
             error!(provider = "sbs", "Failed to fetch channels: {e}");

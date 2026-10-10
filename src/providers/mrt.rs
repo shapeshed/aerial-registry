@@ -1,5 +1,5 @@
+use crate::http::Client;
 use futures::future::join_all;
-use reqwest::Client;
 use tracing::{debug, error, warn};
 
 use crate::station::Station;

@@ -1,7 +1,10 @@
-use reqwest::Client;
+use std::sync::Arc;
+
 use serde::Deserialize;
+use tokio::sync::Semaphore;
 use tracing::{debug, error, warn};
 
+use crate::http::Client;
 use crate::station::Station;
 
 /// Global Player's data is served by its Next.js app. The public BFF the
@@ -15,6 +18,10 @@ use crate::station::Station;
 const HOMEPAGE_URL: &str = "https://www.globalplayer.com/";
 const SITEMAP_URL: &str = "https://www.globalplayer.com/sitemaps/sitemap_radio.xml";
 const BASE: &str = "https://www.globalplayer.com";
+
+/// The per-station endpoint intermittently returns 5xx under load, so requests
+/// are bounded (the retry/backoff itself lives in `crate::http`).
+const MAX_CONCURRENCY: usize = 16;
 
 #[derive(Deserialize)]
 struct NextData<T> {
@@ -98,28 +105,32 @@ pub async fn discover(client: &Client) -> Vec<Station> {
     }
     debug!(provider = "global", count = paths.len(), "Sitemap stations");
 
-    // Each station's own page carries its name and playback URLs.
+    // Each station's own page carries its name and playback URLs. The endpoint
+    // intermittently 5xxs under load, so requests are bounded and retried.
+    let semaphore = Arc::new(Semaphore::new(MAX_CONCURRENCY));
     let fetches: Vec<_> = paths
         .iter()
         .map(|(brand, station)| {
             let client = client.clone();
             let build_id = build_id.clone();
-            let url =
-                format!("{BASE}/_next/data/{build_id}/live/{brand}/{station}.json");
+            let semaphore = semaphore.clone();
+            let brand = brand.clone();
+            let station = station.clone();
             async move {
-                match client.get(&url).send().await {
-                    Ok(resp) => match resp.json::<NextData<StationProps>>().await {
-                        Ok(data) => Some(data.page_props),
-                        Err(e) => {
-                            warn!(provider = "global", %brand, %station, "Could not parse station data: {e}");
-                            None
-                        }
-                    },
-                    Err(e) => {
-                        warn!(provider = "global", %brand, %station, "Station request failed: {e}");
-                        None
-                    }
+                let _permit = semaphore.acquire().await.ok()?;
+                let url = format!("{BASE}/_next/data/{build_id}/live/{brand}/{station}.json");
+                let props = match client.get(&url).send().await {
+                    Ok(resp) if resp.status().is_success() => resp
+                        .json::<NextData<StationProps>>()
+                        .await
+                        .ok()
+                        .map(|data| data.page_props),
+                    _ => None,
+                };
+                if props.is_none() {
+                    warn!(provider = "global", %brand, %station, "No station data");
                 }
+                props
             }
         })
         .collect();
