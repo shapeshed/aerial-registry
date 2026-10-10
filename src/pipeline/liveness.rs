@@ -58,12 +58,13 @@ impl StreamFailure {
 
     /// These failures are properties of the URL itself, not of tonight's
     /// network conditions, so they are pruned without hysteresis.
+    /// `ConnectionError` is deliberately *not* here: from a single build
+    /// location it can be a transient blip or a geo-block that drops the
+    /// connection, so it goes through the three-strike hysteresis instead.
     fn is_deterministic(&self) -> bool {
         matches!(
             self,
-            StreamFailure::Gone(_)
-                | StreamFailure::ConnectionError
-                | StreamFailure::UnsupportedScheme
+            StreamFailure::Gone(_) | StreamFailure::UnsupportedScheme
         )
     }
 }
@@ -148,39 +149,58 @@ pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<
     let mut inconclusive_keys = Vec::new();
 
     for result in results {
-        match result.outcome {
-            Outcome::Trusted => live.push(result.station),
+        let LivenessResult { station, outcome } = result;
+
+        // Curated stations are hand-picked and reviewed, so the nightly build
+        // never auto-prunes them: a stream that fails from the build location
+        // is kept, and genuinely dead entries are handled deliberately via the
+        // separate `prune-curated` command.
+        if station.provider == "curated" {
+            if let Outcome::Failed(failure) = &outcome {
+                checked += 1;
+                debug!(
+                    url = %station.stream_url,
+                    reason = failure.status(),
+                    "Curated stream failed liveness; kept"
+                );
+                live.push(station);
+                continue;
+            }
+        }
+
+        match outcome {
+            Outcome::Trusted => live.push(station),
             Outcome::Live { upgraded: up } => {
                 checked += 1;
                 if up {
                     upgraded += 1;
                 }
-                live_keys.push(StationKey::of(&result.station));
-                live.push(result.station);
+                live_keys.push(StationKey::of(&station));
+                live.push(station);
             }
             Outcome::Failed(StreamFailure::Inconclusive(reason)) => {
                 checked += 1;
                 inconclusive += 1;
                 debug!(
-                    url = %result.station.stream_url,
+                    url = %station.stream_url,
                     %reason,
                     "Stream inconclusive from build location; kept"
                 );
-                inconclusive_keys.push(StationKey::of(&result.station));
-                live.push(result.station);
+                inconclusive_keys.push(StationKey::of(&station));
+                live.push(station);
             }
             Outcome::Failed(failure) if failure.is_deterministic() => {
                 checked += 1;
                 removed_deterministic += 1;
                 warn!(
-                    url = %result.station.stream_url,
+                    url = %station.stream_url,
                     reason = failure.status(),
                     "Removed station after deterministic liveness failure"
                 );
             }
             Outcome::Failed(failure) => {
                 checked += 1;
-                pending.push((result.station, failure));
+                pending.push((station, failure));
             }
         }
     }
@@ -411,7 +431,10 @@ mod tests {
     #[test]
     fn deterministic_failures_are_classified() {
         assert!(StreamFailure::Gone(404).is_deterministic());
-        assert!(StreamFailure::ConnectionError.is_deterministic());
+        assert!(StreamFailure::UnsupportedScheme.is_deterministic());
+        // A connection error can be transient or a geo-block, so it must go
+        // through hysteresis rather than being pruned on the first night.
+        assert!(!StreamFailure::ConnectionError.is_deterministic());
         assert!(StreamFailure::Inconclusive("timeout".into()).is_inconclusive());
         assert!(!StreamFailure::ConnectionError.is_inconclusive());
     }
