@@ -65,9 +65,9 @@ pub async fn prune_curated(client: &reqwest::Client) -> anyhow::Result<()> {
                     stream_url,
                     reason: None,
                 },
-                // Geo-suspect refusals from the build machine must not prune
+                // Inconclusive refusals from the build machine must not prune
                 // a curated station the listener may well be able to play.
-                Err(failure) if failure.is_geo_suspect() => PruneResult {
+                Err(failure) if failure.is_inconclusive() => PruneResult {
                     stream_url: station.stream_url.clone(),
                     station,
                     keep: true,

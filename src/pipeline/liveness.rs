@@ -22,41 +22,49 @@ enum Outcome {
 }
 
 pub enum StreamFailure {
-    Unreachable,
-    GeoBlocked(u16),
-    ProtocolRedirect,
+    Gone(u16),
+    ConnectionError,
+    Inconclusive(String),
     UnsupportedScheme,
 }
 
 impl StreamFailure {
     pub fn message(&self) -> &'static str {
         match self {
-            StreamFailure::Unreachable => "Stream unreachable during liveness pruning.",
-            StreamFailure::GeoBlocked(_) => "Stream refused from the build location.",
-            StreamFailure::ProtocolRedirect => "Stream redirects across protocol.",
+            StreamFailure::Gone(status) if *status == 410 => "Stream URL returned 410 Gone.",
+            StreamFailure::Gone(_) => "Stream URL returned 404 Not Found.",
+            StreamFailure::ConnectionError => "Stream unreachable during liveness pruning.",
+            StreamFailure::Inconclusive(_) => {
+                "Stream could not be confirmed from the build location."
+            }
             StreamFailure::UnsupportedScheme => "Stream URL is not HTTP(S).",
         }
     }
 
-    /// Geo-suspect statuses say nothing about the listener's location and
+    /// Inconclusive statuses say nothing reliable about listeners elsewhere and
     /// must never remove a station.
-    pub fn is_geo_suspect(&self) -> bool {
-        matches!(self, StreamFailure::GeoBlocked(_))
+    pub fn is_inconclusive(&self) -> bool {
+        matches!(self, StreamFailure::Inconclusive(_))
     }
 
     fn status(&self) -> &'static str {
         match self {
-            StreamFailure::Unreachable => "unreachable",
-            StreamFailure::GeoBlocked(_) => "geo_blocked",
-            StreamFailure::ProtocolRedirect => "protocol_redirect",
+            StreamFailure::Gone(_) => "gone",
+            StreamFailure::ConnectionError => "connection_error",
+            StreamFailure::Inconclusive(_) => "inconclusive",
             StreamFailure::UnsupportedScheme => "unsupported_scheme",
         }
     }
 
-    /// A scheme failure is a property of the URL itself, not of tonight's
-    /// network conditions, so it is pruned without hysteresis.
+    /// These failures are properties of the URL itself, not of tonight's
+    /// network conditions, so they are pruned without hysteresis.
     fn is_deterministic(&self) -> bool {
-        matches!(self, StreamFailure::UnsupportedScheme)
+        matches!(
+            self,
+            StreamFailure::Gone(_)
+                | StreamFailure::ConnectionError
+                | StreamFailure::UnsupportedScheme
+        )
     }
 }
 
@@ -134,10 +142,10 @@ pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Stat
     let mut pending: Vec<(Station, StreamFailure)> = Vec::new();
     let mut checked = 0usize;
     let mut upgraded = 0usize;
-    let mut geo_suspect = 0usize;
-    let mut removed_unsupported = 0usize;
+    let mut inconclusive = 0usize;
+    let mut removed_deterministic = 0usize;
     let mut live_keys = Vec::new();
-    let mut geo_keys = Vec::new();
+    let mut inconclusive_keys = Vec::new();
 
     for result in results {
         match result.outcome {
@@ -150,20 +158,25 @@ pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Stat
                 live_keys.push(StationKey::of(&result.station));
                 live.push(result.station);
             }
-            Outcome::Failed(StreamFailure::GeoBlocked(status)) => {
+            Outcome::Failed(StreamFailure::Inconclusive(reason)) => {
                 checked += 1;
-                geo_suspect += 1;
+                inconclusive += 1;
                 debug!(
                     url = %result.station.stream_url,
-                    status,
-                    "Stream geo-suspect from build location; kept"
+                    %reason,
+                    "Stream inconclusive from build location; kept"
                 );
-                geo_keys.push(StationKey::of(&result.station));
+                inconclusive_keys.push(StationKey::of(&result.station));
                 live.push(result.station);
             }
             Outcome::Failed(failure) if failure.is_deterministic() => {
                 checked += 1;
-                removed_unsupported += 1;
+                removed_deterministic += 1;
+                warn!(
+                    url = %result.station.stream_url,
+                    reason = failure.status(),
+                    "Removed station after deterministic liveness failure"
+                );
             }
             Outcome::Failed(failure) => {
                 checked += 1;
@@ -176,8 +189,8 @@ pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Stat
         if let Err(e) = store.record_live(&live_keys) {
             warn!(error = %e, "Could not record live state");
         }
-        if let Err(e) = store.record_geo_blocked(&geo_keys) {
-            warn!(error = %e, "Could not record geo-blocked state");
+        if let Err(e) = store.record_geo_blocked(&inconclusive_keys) {
+            warn!(error = %e, "Could not record inconclusive liveness state");
         }
     }
 
@@ -227,11 +240,11 @@ pub async fn check(client: &reqwest::Client, stations: Vec<Station>) -> Vec<Stat
         checked,
         skipped_trusted = total - checked,
         upgraded,
-        geo_suspect,
+        inconclusive,
         failing_kept,
-        removed = removed_transient + removed_unsupported,
+        removed = removed_transient + removed_deterministic,
         removed_transient,
-        removed_unsupported_scheme = removed_unsupported,
+        removed_deterministic,
         live = live.len(),
         "Liveness check complete"
     );
@@ -255,12 +268,13 @@ pub async fn validate_imported_stream_url(
                 if resolved.starts_with("http://") {
                     Ok(url.to_string())
                 } else {
-                    warn!(url, %resolved, "HTTP stream redirects across protocol");
-                    Err(StreamFailure::ProtocolRedirect)
+                    warn!(url, %resolved, "HTTP stream redirects across protocol; keeping original URL");
+                    Ok(url.to_string())
                 }
             }
-            Probe::Blocked(status) => Err(StreamFailure::GeoBlocked(status)),
-            Probe::Down => Err(StreamFailure::Unreachable),
+            Probe::Inconclusive(reason) => Err(StreamFailure::Inconclusive(reason)),
+            Probe::Gone(status) => Err(StreamFailure::Gone(status)),
+            Probe::ConnectionError => Err(StreamFailure::ConnectionError),
         }
     } else if url.starts_with("https://") {
         match probe_live_url(client, url, true).await {
@@ -268,12 +282,13 @@ pub async fn validate_imported_stream_url(
                 if resolved.starts_with("https://") {
                     Ok(url.to_string())
                 } else {
-                    warn!(url, %resolved, "HTTPS stream redirected to non-HTTPS URL");
-                    Err(StreamFailure::ProtocolRedirect)
+                    warn!(url, %resolved, "HTTPS stream redirected to non-HTTPS URL; keeping original URL");
+                    Ok(url.to_string())
                 }
             }
-            Probe::Blocked(status) => Err(StreamFailure::GeoBlocked(status)),
-            Probe::Down => Err(StreamFailure::Unreachable),
+            Probe::Inconclusive(reason) => Err(StreamFailure::Inconclusive(reason)),
+            Probe::Gone(status) => Err(StreamFailure::Gone(status)),
+            Probe::ConnectionError => Err(StreamFailure::ConnectionError),
         }
     } else {
         warn!(url, "Stream URL is not HTTP(S)");
@@ -288,15 +303,18 @@ fn https_candidate(url: &str) -> Option<String> {
 
 enum Probe {
     Live(String),
-    /// The server answered with a status that commonly means the request was
-    /// refused because of where it came from (403 Forbidden, 451 Unavailable
-    /// For Legal Reasons), not because the stream is dead.
-    Blocked(u16),
-    Down,
+    /// The server answered or timed out in a way that does not prove the stream
+    /// is dead for listeners elsewhere.
+    Inconclusive(String),
+    Gone(u16),
+    ConnectionError,
 }
 
-fn blocked_status(status: reqwest::StatusCode) -> bool {
-    matches!(status.as_u16(), 403 | 451)
+fn gone_status(status: reqwest::StatusCode) -> bool {
+    matches!(
+        status,
+        reqwest::StatusCode::NOT_FOUND | reqwest::StatusCode::GONE
+    )
 }
 
 async fn probe_live_url(client: &reqwest::Client, url: &str, log_failures: bool) -> Probe {
@@ -322,20 +340,20 @@ async fn probe_live_url(client: &reqwest::Client, url: &str, log_failures: bool)
             if s.is_success() || s.is_redirection() {
                 debug!(url, %s, "Stream live (GET)");
                 Probe::Live(resp.url().to_string())
-            } else if blocked_status(s) {
+            } else if gone_status(s) {
                 if log_failures {
-                    warn!(url, %s, "Stream refused; possibly geo-blocked");
+                    warn!(url, %s, "Stream gone");
                 } else {
-                    debug!(url, %s, "Stream refused; possibly geo-blocked");
+                    debug!(url, %s, "Stream gone");
                 }
-                Probe::Blocked(s.as_u16())
+                Probe::Gone(s.as_u16())
             } else {
                 if log_failures {
-                    warn!(url, %s, "Stream not live");
+                    warn!(url, %s, "Stream status inconclusive; kept");
                 } else {
-                    debug!(url, %s, "Stream not live");
+                    debug!(url, %s, "Stream status inconclusive; kept");
                 }
-                Probe::Down
+                Probe::Inconclusive(format!("http_status_{}", s.as_u16()))
             }
         }
         Ok(Err(e)) => {
@@ -344,22 +362,22 @@ async fn probe_live_url(client: &reqwest::Client, url: &str, log_failures: bool)
             } else {
                 debug!(url, error = %e, "Stream unreachable");
             }
-            Probe::Down
+            Probe::ConnectionError
         }
         Err(_) => {
             if log_failures {
-                warn!(url, "Stream timed out");
+                warn!(url, "Stream timed out; kept");
             } else {
-                debug!(url, "Stream timed out");
+                debug!(url, "Stream timed out; kept");
             }
-            Probe::Down
+            Probe::Inconclusive("timeout".to_string())
         }
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{StreamFailure, blocked_status, https_candidate};
+    use super::{StreamFailure, gone_status, https_candidate};
 
     #[test]
     fn leaves_https_urls_alone() {
@@ -380,21 +398,21 @@ mod tests {
     }
 
     #[test]
-    fn geo_suspect_statuses() {
-        assert!(blocked_status(reqwest::StatusCode::FORBIDDEN));
-        assert!(blocked_status(
+    fn only_gone_statuses_are_removed() {
+        assert!(gone_status(reqwest::StatusCode::NOT_FOUND));
+        assert!(gone_status(reqwest::StatusCode::GONE));
+        assert!(!gone_status(reqwest::StatusCode::FORBIDDEN));
+        assert!(!gone_status(
             reqwest::StatusCode::UNAVAILABLE_FOR_LEGAL_REASONS
         ));
-        assert!(!blocked_status(reqwest::StatusCode::NOT_FOUND));
-        assert!(!blocked_status(reqwest::StatusCode::INTERNAL_SERVER_ERROR));
+        assert!(!gone_status(reqwest::StatusCode::INTERNAL_SERVER_ERROR));
     }
 
     #[test]
-    fn only_scheme_failures_are_deterministic() {
-        assert!(StreamFailure::UnsupportedScheme.is_deterministic());
-        assert!(!StreamFailure::Unreachable.is_deterministic());
-        assert!(!StreamFailure::ProtocolRedirect.is_deterministic());
-        assert!(StreamFailure::GeoBlocked(403).is_geo_suspect());
-        assert!(!StreamFailure::Unreachable.is_geo_suspect());
+    fn deterministic_failures_are_classified() {
+        assert!(StreamFailure::Gone(404).is_deterministic());
+        assert!(StreamFailure::ConnectionError.is_deterministic());
+        assert!(StreamFailure::Inconclusive("timeout".into()).is_inconclusive());
+        assert!(!StreamFailure::ConnectionError.is_inconclusive());
     }
 }
