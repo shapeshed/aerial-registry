@@ -80,12 +80,15 @@ all that is needed to start).
 - **Discovery URL:**
 - **Verified lead:**
 
-## Guyana (GY) — `none`
+## Guyana (GY) — `provider`
 
-- **Broadcaster:** National Communications Network (NCN)
-- **Website:**
-- **Discovery URL:**
-- **Verified lead:**
+- **Broadcaster:** National Communications Network (NCN) — Voice of Guyana,
+  98.1 Hot FM, Vybz 100.1 FM, plus regional stations
+- **Website:** <https://ncnguyana.com>
+- **Discovery URL:** `https://ncnguyana.com/radio.php` — lists each station
+  with logo, name and a `listen.php?station=<CODE>` link whose page embeds the
+  stream. Implemented in `src/providers/ncn.rs`, documented in
+  `docs/providers/ncn.md`. 11 stations.
 
 ## Paraguay (PY) — `none`
 
