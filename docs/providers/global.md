@@ -1,69 +1,73 @@
 # Global Player Provider
 
-Global Radio exposes a public BFF (backend-for-frontend) API that lists all of
-its stations. No authentication is required. Global owns Heart, Capital, LBC,
-Classic FM, Radio X, Gold, and their regional variants.
+Global Radio owns Heart, Capital, LBC, Classic FM, Radio X, Smooth, Gold and
+their regional variants. Global Player is a Next.js app; this provider
+discovers the full live station list — national **and** regional — from the
+app's published sitemap and data endpoints. No authentication is required.
 
 ## Station Discovery
 
-### Stations endpoint
+The provider previously used a public BFF
+(`bff-web-guacamole.musicradio.com/stations/`), which now returns `404` for
+every path.
+
+### 1. Build id
+
+The build id changes on every deploy, so it is read from the homepage:
 
 ```
-GET https://bff-web-guacamole.musicradio.com/stations/
+GET https://www.globalplayer.com/        → "buildId":"<id>"
 ```
 
-Returns a JSON array of 149 stations (verified 2026-06-24). Each element
-represents one station. The fields relevant to the registry are:
+### 2. Station list — the radio sitemap
 
-| Field              | Notes                                                           |
-| ------------------ | --------------------------------------------------------------- |
-| `name`             | Human-readable station name, e.g. `Capital London`              |
-| `streamUrl`        | Primary stream URL                                              |
-| `stream.icecastSd` | Fallback stream URL if `streamUrl` is absent                    |
-| `tagline`          | Short station strapline, usable as a description                |
-| `brand.slug`       | Brand identifier e.g. `capital`, `heart`. Used for logo lookup. |
-
-The `stream` object also contains `icecastHd` and `hls` variants; prefer
-`streamUrl` or `stream.icecastSd` for the widest device compatibility.
-
-Skip any station with no `name` or no resolvable stream URL.
-
-### Logo URL
-
-The stations endpoint does not return a logo URL directly. The brand only
-provides a `slug`. Use the Radio Browser API to look up a favicon by searching
-for the brand slug:
+The radio sitemap enumerates every station page, including regional variants
+(`/live/capital/teesside/`, `/live/heart/kent/`, …):
 
 ```
-GET https://{server}/json/stations/search?name={brand.slug}&countrycode=GB&limit=5&hidebroken=true
+GET https://www.globalplayer.com/sitemaps/sitemap_radio.xml
+→ 144 × /live/{brand_slug}/{station_slug}/
 ```
 
-Take the first non-empty `favicon` from the results. See
-`docs/providers/radio-browser.md` for Radio Browser server discovery.
+### 3. Per-station data
 
-### Country
+Each station's page carries its name, logo and playback URLs:
 
-All Global stations are UK-based. Hardcode `United Kingdom` / `GB` for all
-records from this provider.
+```
+GET https://www.globalplayer.com/_next/data/{buildId}/live/{brand_slug}/{station_slug}.json
+→ pageProps.station  { name, brandLogo, tagline, gduid }
+→ pageProps.playable.playback[]
+```
+
+Playback entries have `url` and `flags`. Subscriber entries carry
+`auth.license` / `AdFree` (the `-plus` URLs) and the HD entry carries
+`auth.HDAuth`; the **ad-supported** entry (`GlobalAdSupported`, served from
+`media-ssl.musicradio.com`) is the plain public stream, which is the one
+selected.
+
+## Logos
+
+Taken directly from `pageProps.station.brandLogo` — no secondary lookup. In a
+live check, 142 of the 144 sitemap stations resolved with both a logo and a
+public stream; the other two (`capital/rugby`, `capital/warwick`) are stale
+sitemap entries that `308`-redirect to their canonical stations
+(`capital/coventry`, `capital/stratford`) and collapse under dedup.
 
 ## Data Points
 
-| Field          | Source                              | Notes                          |
-| -------------- | ----------------------------------- | ------------------------------ |
-| `name`         | `name`                              |                                |
-| `stream_url`   | `streamUrl` or `stream.icecastSd`   |                                |
-| `logo_url`     | Radio Browser favicon by brand slug | Secondary request required     |
-| `description`  | `tagline`                           | Optional                       |
-| `country`      | Hardcoded                           | Always `United Kingdom` / `GB` |
-| `country_code` | Hardcoded                           | Always `GB`                    |
-
-Tags are not available from this provider.
+| Field          | Source                          |
+| -------------- | ------------------------------- |
+| `name`         | `station.name`                  |
+| `stream_url`   | first public `playback[].url`   |
+| `logo_url`     | `station.brandLogo`             |
+| `description`  | `station.tagline`               |
+| `country`      | constant — United Kingdom       |
+| `country_code` | constant — `GB`                 |
+| `provider_id`  | `station.gduid`, else `station.id` |
 
 ## API Behaviour Notes
 
-- **No authentication required.** The BFF API is public.
-- **User-Agent header.** Include a descriptive `User-Agent` header on all
-  requests.
-- **Regional variants.** Many brands have multiple regional entries, e.g.
-  Capital Teesside, Capital London, Capital Manchester. These are distinct
-  stations with distinct stream URLs and should each produce a registry entry.
+- **No authentication required.** These are the endpoints the web app itself uses.
+- **Discovery is live.** New stations, logos and stream URLs are picked up
+  automatically; only the build id is fetched per run.
+- **Trusted.** Broadcaster-direct, so liveness probing is skipped.
