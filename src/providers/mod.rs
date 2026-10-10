@@ -24,6 +24,7 @@ pub mod npo;
 pub mod nrk;
 pub mod orf;
 pub mod polskie_radio;
+pub mod publica_fm;
 pub mod radio_browser;
 pub mod radio_france;
 pub mod radio_nacional;
@@ -90,6 +91,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         nrk,
         orf,
         polskie_radio,
+        publica_fm,
         radio_browser,
         radio_france,
         radio_nacional,
@@ -148,6 +150,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         nrk::discover(client),
         orf::discover(client),
         polskie_radio::discover(client),
+        publica_fm::discover(client),
         radio_browser::discover(client),
         radio_france::discover(client),
         radio_nacional::discover(client),
@@ -208,6 +211,7 @@ pub async fn discover_all(client: &reqwest::Client) -> Vec<Station> {
         nrk,
         orf,
         polskie_radio,
+        publica_fm,
         radio_browser,
         radio_france,
         radio_nacional,

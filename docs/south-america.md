@@ -75,12 +75,14 @@ all that is needed to start).
   in `src/providers/rtvc.rs`, documented in `docs/providers/rtvc.md`.
   3 radio stations (Radio Nacional de Colombia, Radiónica, Exploremos).
 
-## Ecuador (EC) — `none`
+## Ecuador (EC) — `provider`
 
-- **Broadcaster:** Radio Pública del Ecuador (RPE) — verify still active
-- **Website:**
-- **Discovery URL:**
-- **Verified lead:**
+- **Broadcaster:** Pública FM (COMEP / Medios Públicos), successor to Radio
+  Pública del Ecuador
+- **Website:** <https://www.publicafm.ec>
+- **Discovery URL:** `https://www.publicafm.ec/` — the site config carries
+  `"streamingUrl"` (`https://comep.radioca.st/stream`). Implemented in
+  `src/providers/publica_fm.rs`, documented in `docs/providers/publica-fm.md`.
 
 ## Guyana (GY) — `none`
 
