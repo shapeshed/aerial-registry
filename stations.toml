@@ -144,3 +144,71 @@ stream_url = "https://uk1.internet-radio.com/proxy/whitenoise?mp=/stream"
 logo_url = "https://placehold.co/512/ffffff/ffffff.png"
 tags = ["white noise", "ambient", "chillout"]
 
+[[stations]]
+name = "Veneno"
+country_code = "BR"
+stream_url = "https://radio.veneno.live/stream/main"
+logo_url = "https://veneno.live/wp-content/uploads/2018/08/cropped-favicon-192x192.png"
+tags = ["eclectic", "house", "electronic"]
+
+[[stations]]
+name = "Radio Gong 96.3 München"
+country_code = "DE"
+stream_url = "https://www.radiogong.de/app/live.m3u"
+tags = ["pop", "latin"]
+
+[[stations]]
+name = "Dance Attack FM"
+country_code = "GB"
+stream_url = "http://streaming04.liveboxstream.uk:8045/1"
+logo_url = "https://cdn.onlineradiobox.com/img/l/9/33659.v9.png"
+tags = ["dance", "electronic", "house", "trance"]
+
+[[stations]]
+name = "AR Rahman Lite Radio"
+country_code = "IN"
+stream_url = "https://psrlive2.listenon.in/arrlite?ah=0e81749e37789e5fb8c290926ce87e3f"
+logo_url = "https://southradios.com/assets/images/logo/logo90.webp"
+tags = ["world"]
+
+[[stations]]
+name = "Ilayaraja Super Beats Radio"
+country_code = "IN"
+stream_url = "https://psrlive2.listenon.in/irbeat?ah=0e81749e37789e5fb8c290926ce87e3f"
+logo_url = "https://southradios.com/assets/images/logo/logo90.webp"
+tags = ["world", "pop", "culture"]
+
+[[stations]]
+name = "Horizonte 107.9 FM"
+country_code = "MX"
+stream_url = "https://s2.mexside.net/8014/stream"
+logo_url = "https://www.imer.mx/horizonte/wp-content/uploads/sites/15/favicon_horizonte2022_32.png"
+tags = ["jazz", "news", "culture"]
+
+[[stations]]
+name = "Intense Radio"
+country_code = "NL"
+stream_url = "http://intenseradio.live-streams.nl:8000/main"
+logo_url = "https://www.intenseradio.net/wp-content/uploads/fbrfg/apple-touch-icon.png"
+tags = ["dance", "house", "trance", "electronic"]
+
+[[stations]]
+name = "Jawhara FM"
+country_code = "TN"
+stream_url = "http://streaming2.toutech.net:8000/jawharafm"
+logo_url = "https://www.jawharafm.net/ar/static/fr/image/gif/favicon.gif"
+tags = ["world", "pop"]
+
+[[stations]]
+name = "Lounge FM Chill Out"
+country_code = "UA"
+stream_url = "https://cast.mediaonline.net.ua/chillout320"
+logo_url = "https://loungefm.com.ua/img/logo.png"
+tags = ["ambient", "electronic", "lounge"]
+
+[[stations]]
+name = "Радіо Шлягер FM"
+country_code = "UA"
+stream_url = "https://cast.brg.ua/shanson_main_public_mp3_hq"
+logo_url = "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250111_141908308.jpg?alt=media&token=5b476f2f-6a30-4b8b-8d70-96c135e82ca8"
+tags = ["pop", "news"]
