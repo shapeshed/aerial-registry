@@ -88,6 +88,13 @@ Rules (enforced in `src/pipeline/liveness.rs`):
 - **Trusted providers never auto-prune.** Liveness skips them entirely.
   Opening a GitHub issue when a trusted station fails repeatedly lands with
   the diff report in step 3.
+- **Curated stations are likewise never auto-pruned by the nightly build.**
+  They are hand-picked and reviewed; genuinely dead curated entries are
+  handled deliberately via `prune-curated`, not by the nightly liveness pass.
+- **Connection failures go through hysteresis.** `ConnectionError` is not
+  deterministic: from a single build location it can be a transient failure or
+  a geo-block that drops the connection, so it counts toward the three-strike
+  streak rather than pruning on the first night.
 - **Renames are updates, not churn.** Same `(provider, provider_id)` with a
   changed name or stream URL keeps its row and its `first_seen`; surfacing
   the change lands with the diff report in step 3.
