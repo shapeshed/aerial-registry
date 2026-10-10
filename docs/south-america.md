@@ -131,12 +131,12 @@ all that is needed to start).
   Implemented in `src/providers/rnu.rs`, documented in `docs/providers/rnu.md`.
   4 stations.
 
-## Venezuela (VE) — `lead`
+## Venezuela (VE) — `provider`
 
-- **Broadcaster:** Radio Nacional de Venezuela (RNV)
-- **Website:**
-- **Discovery URL:**
-- **Verified lead:** Icecast/Shoutcast mounts on `guri.tepuyserver.net`, e.g.
-  `https://guri.tepuyserver.net/8048/stream` (Informativa) and
-  `https://guri.tepuyserver.net/8156/stream` (Juvenil), both live
-  (`200 audio/mpeg`). Enumerate the full mount set to cover the music services.
+- **Broadcaster:** Radio Nacional de Venezuela (RNV) — Informativa, Juvenil
+- **Website:** <https://rnv.gob.ve>
+- **Discovery URL:** none. RNV's WordPress site hard-codes the stream URLs into
+  page content (`guri.tepuyserver.net/8048` Informativa, `/8156` Juvenil) and
+  the host exposes no listing, so the two channels with a broadcaster-published
+  stream are catalogued (`src/providers/rnv.rs`, `docs/providers/rnv.md`).
+  RNV Musical and RNV Activa have no published stream URL.
