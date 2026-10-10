@@ -73,12 +73,14 @@ all that is needed to start).
   (confirmed live, `206 application/vnd.apple.mpegurl`); legacy Shoutcast at
   `http://shoutcast.rtvc.gov.co:8010/;` also live (`200 audio/aacp`).
 
-## Ecuador (EC) — `none`
+## Ecuador (EC) — `provider`
 
-- **Broadcaster:** Radio Pública del Ecuador (RPE) — verify still active
-- **Website:**
-- **Discovery URL:**
-- **Verified lead:**
+- **Broadcaster:** Pública FM (COMEP / Medios Públicos), successor to Radio
+  Pública del Ecuador
+- **Website:** <https://www.publicafm.ec>
+- **Discovery URL:** `https://www.publicafm.ec/` — the site config carries
+  `"streamingUrl"` (`https://comep.radioca.st/stream`). Implemented in
+  `src/providers/publica_fm.rs`, documented in `docs/providers/publica-fm.md`.
 
 ## Guyana (GY) — `none`
 
