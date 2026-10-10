@@ -116,6 +116,8 @@ NOTES = {
     "MC": "no national public radio — Radio Monaco is private; RMC is a French station",
     "MT": "PBS radio streams (TVMi) are session-signed per-IP JWTs with ~24h expiry — no static stream URL exists",
     "ME": "RTCG radio is only on the login-gated MNE Play OTT platform (Spectar) — stream URLs are account-bound and signed; the old ipradio.rs relays were decommissioned ~Jan 2026",
+    "BO": "Radio Illimani - Red Patria Nueva's domain (redpatrianueva.bo) has lapsed and now redirects to an unrelated site; no official stream source remains",
+    "CL": "Radio Nacional de Chile (radionacionaldechile.cl) publishes no station-list or direct stream URL — its live page embeds a tustreaming widget with no resolvable stream endpoint",
 }
 
 
