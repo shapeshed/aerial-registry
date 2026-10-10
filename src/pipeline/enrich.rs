@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
+use crate::http::Client;
 use futures::future::join_all;
-use reqwest::Client;
 use serde::Deserialize;
 use tokio::sync::Semaphore;
 use tracing::{debug, info, warn};
@@ -104,21 +104,21 @@ async fn fetch_tags(
     name: &str,
     country_code: Option<&str>,
 ) -> anyhow::Result<Option<Vec<String>>> {
-    let url = format!("https://{server}/json/stations/search");
-    let mut query = vec![
-        ("name", name.to_owned()),
-        ("limit", "5".into()),
-        ("hidebroken", "true".into()),
-        ("order", "votes".into()),
-        ("reverse", "true".into()),
+    let mut params: Vec<(&str, &str)> = vec![
+        ("name", name),
+        ("limit", "5"),
+        ("hidebroken", "true"),
+        ("order", "votes"),
+        ("reverse", "true"),
     ];
     if let Some(cc) = country_code {
-        query.push(("countrycode", cc.to_owned()));
+        params.push(("countrycode", cc));
     }
+    let url =
+        crate::http::url_with_query(&format!("https://{server}/json/stations/search"), &params);
 
     let results: Vec<RbStation> = client
         .get(&url)
-        .query(&query)
         .send()
         .await
         .map_err(|e| anyhow::anyhow!("request: {e}"))?

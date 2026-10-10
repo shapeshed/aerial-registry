@@ -1,4 +1,4 @@
-use reqwest::Client;
+use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error};
 

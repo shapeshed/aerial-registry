@@ -70,4 +70,8 @@ sitemap entries that `308`-redirect to their canonical stations
 - **No authentication required.** These are the endpoints the web app itself uses.
 - **Discovery is live.** New stations, logos and stream URLs are picked up
   automatically; only the build id is fetched per run.
+- **Fault-tolerant.** The per-station endpoint intermittently returns `5xx`
+  under load, so requests are bounded (16 concurrent) and retried with
+  exponential backoff. Only stations that still fail after retries (e.g. the
+  two stale sitemap slugs that `308`-redirect to HTML) are skipped.
 - **Trusted.** Broadcaster-direct, so liveness probing is skipped.

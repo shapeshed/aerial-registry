@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use reqwest::Client;
+use crate::http::Client;
 use serde::Deserialize;
 use tracing::{info, warn};
 
@@ -137,15 +137,19 @@ async fn fetch_page(
     offset: u32,
     limit: u32,
 ) -> anyhow::Result<Vec<RbStation>> {
-    let url = format!("https://{server}/json/stations/search");
+    let offset = offset.to_string();
+    let limit = limit.to_string();
+    let url = crate::http::url_with_query(
+        &format!("https://{server}/json/stations/search"),
+        &[
+            ("hidebroken", "true"),
+            ("order", "name"),
+            ("offset", &offset),
+            ("limit", &limit),
+        ],
+    );
     client
         .get(&url)
-        .query(&[
-            ("hidebroken", "true".to_string()),
-            ("order", "name".to_string()),
-            ("offset", offset.to_string()),
-            ("limit", limit.to_string()),
-        ])
         .send()
         .await
         .map_err(|e| anyhow::anyhow!("request: {e}"))?

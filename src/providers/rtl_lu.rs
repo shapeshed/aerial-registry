@@ -1,4 +1,4 @@
-use reqwest::Client;
+use crate::http::Client;
 use tracing::debug;
 
 use crate::station::Station;

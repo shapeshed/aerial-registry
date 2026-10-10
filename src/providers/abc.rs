@@ -1,5 +1,5 @@
+use crate::http::Client;
 use futures::future::join_all;
-use reqwest::Client;
 use serde_json::Value;
 use tracing::{debug, error, warn};
 
