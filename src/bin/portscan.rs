@@ -21,7 +21,7 @@
 //! ASNs/prefixes already known to host radio servers over blind address space,
 //! keep `--concurrency` modest, and expect abuse reports if you do not.
 
-use std::collections::BTreeSet;
+use std::collections::{BTreeSet, VecDeque};
 use std::fs::File;
 use std::io::{BufWriter, Write};
 use std::net::Ipv4Addr;
@@ -163,6 +163,7 @@ async fn main() -> anyhow::Result<()> {
     );
 
     let partial = cli.out.as_ref().map(|path| partial_path(path));
+    let progress = cli.out.as_ref().map(|path| progress_path(path));
     let mut sink = match &partial {
         Some(path) => Some(BufWriter::new(File::create(path)?)),
         None => None,
@@ -173,6 +174,8 @@ async fn main() -> anyhow::Result<()> {
         &cli.ports.0,
         cli.concurrency,
         timeout,
+        addresses * cli.ports.0.len() as u64,
+        progress.as_deref(),
         sink.as_mut(),
     )
     .await?;
@@ -191,6 +194,9 @@ async fn main() -> anyhow::Result<()> {
             let added = write_hosts(&path, &lines, cli.append)?;
             if let Some(partial) = &partial {
                 let _ = std::fs::remove_file(partial);
+            }
+            if let Some(progress) = &progress {
+                let _ = std::fs::remove_file(progress);
             }
             info!(path = %path, added, total = read_hosts(&path).len(), "Hosts written");
         }
@@ -211,6 +217,15 @@ fn partial_path(path: &Path) -> PathBuf {
     PathBuf::from(name)
 }
 
+/// Where `scanned=<n>/<total>` is written as the scan proceeds. Progress cannot
+/// be inferred from the output file — results arrive out of order and only for
+/// open ports — so it has to be reported by the scan itself.
+fn progress_path(path: &Path) -> PathBuf {
+    let mut name = path.as_os_str().to_owned();
+    name.push(".progress");
+    PathBuf::from(name)
+}
+
 /// Connect to every `(ip, port)` pair, returning the ones that accept.
 ///
 /// Results are written to `sink` as they arrive rather than only at the end: a
@@ -220,21 +235,26 @@ async fn scan(
     ports: &[u16],
     concurrency: usize,
     timeout: Duration,
+    total_probes: u64,
+    progress: Option<&Path>,
     mut sink: Option<&mut BufWriter<File>>,
 ) -> std::io::Result<Vec<(u32, u16)>> {
-    let progress = Arc::new(AtomicUsize::new(0));
+    let progress_counter = Arc::new(AtomicUsize::new(0));
     let ips = targets.iter().copied().flat_map(|(start, end)| start..=end);
     let pairs = ips.flat_map(|ip| ports.iter().copied().map(move |port| (ip, port)));
 
     let mut stream = Box::pin(
         stream::iter(pairs)
             .map(|(ip, port)| {
-                let progress = Arc::clone(&progress);
+                let counter = Arc::clone(&progress_counter);
                 async move {
                     let open = is_open(ip, port, timeout).await;
-                    let done = progress.fetch_add(1, Ordering::Relaxed) + 1;
+                    let done = counter.fetch_add(1, Ordering::Relaxed) + 1;
                     if done % 200_000 == 0 {
-                        info!(scanned = done, "Progress");
+                        info!(scanned = done, total = total_probes, "Progress");
+                        if let Some(path) = progress {
+                            let _ = std::fs::write(path, format!("{done}/{total_probes}\n"));
+                        }
                     }
                     open.then_some((ip, port))
                 }
@@ -265,21 +285,26 @@ async fn is_open(ip: u32, port: u16, timeout: Duration) -> bool {
 }
 
 /// Expand every target spec into inclusive `(start, end)` IPv4 ranges.
+///
+/// Order is preserved: this used to `pop()` from the end of a `Vec`, which
+/// reversed the list, so the scan walked its targets backwards and progress
+/// appeared to run from the end. That made partial runs cover the tail of the
+/// list and made every progress reading misleading.
 fn collect_targets(specs: &[String]) -> anyhow::Result<Vec<(u32, u32)>> {
-    let mut specs = specs.to_vec();
+    let mut pending: VecDeque<String> = specs.iter().cloned().collect();
+    let mut ranges = Vec::new();
 
     // Read any spec that names an existing file, so both `--targets list.txt`
     // and `--targets 10.0.0.0/8` work.
-    let mut ranges = Vec::new();
-    while let Some(spec) = specs.pop() {
-        let path = std::path::Path::new(&spec);
+    while let Some(spec) = pending.pop_front() {
+        let path = Path::new(&spec);
         if path.is_file() {
             let text = std::fs::read_to_string(path)
                 .map_err(|e| anyhow::anyhow!("cannot read targets {spec}: {e}"))?;
             for line in text.lines() {
                 let line = line.split('#').next().unwrap_or("").trim();
                 if !line.is_empty() {
-                    specs.push(line.to_string());
+                    pending.push_back(line.to_string());
                 }
             }
         } else {
@@ -406,5 +431,24 @@ mod tests {
         assert_eq!(cli.out, Some(PathBuf::from("hosts.txt")));
         assert!(cli.append);
         assert_eq!(cli.concurrency, 64);
+    }
+
+    /// The list must be walked in the order it was written. It used to be
+    /// reversed by a `pop()`, which made the scan run backwards and made
+    /// progress readings meaningless.
+    #[test]
+    fn target_file_order_is_preserved() {
+        let path = std::env::temp_dir().join("portscan-order-test.txt");
+        std::fs::write(&path, "10.0.0.0/24\n10.0.1.0/24\n10.0.2.0/24\n").unwrap();
+        let ranges = collect_targets(&[path.to_string_lossy().to_string()]).unwrap();
+        let _ = std::fs::remove_file(&path);
+        assert_eq!(
+            ranges,
+            vec![
+                (0x0a000000, 0x0a0000ff),
+                (0x0a000100, 0x0a0001ff),
+                (0x0a000200, 0x0a0002ff),
+            ]
+        );
     }
 }
