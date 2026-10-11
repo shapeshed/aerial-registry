@@ -126,28 +126,34 @@ trade of coverage against time.
 
 ### Most of those ports are pure noise
 
-Measured yield per port on the 20-minute test (44 Icecast servers found):
+Measured on the wide run's first 56,689 open ports (659 mounts found):
 
-| port | Icecast | open ports | yield |
-| --- | --- | --- | --- |
-| **:8010** | 17 | 85 | **20.0 %** |
-| **:8000** | 27 | 1,041 | 2.6 % |
-| :8008 | 1 | 52 | 1.9 % |
-| :8080 | 0 | 1,441 | 0 % |
-| :8443 | 0 | 1,093 | 0 % |
-| :8081 | 0 | 463 | 0 % |
-| :9000 | 0 | 428 | 0 % |
-| :8888 | 0 | 330 | 0 % |
-| :8001 | 0 | 185 | 0 % |
+| port | Icecast | open ports | yield | probes spent |
+| --- | --- | --- | --- | --- |
+| :8443 | 1 | 29,412 | 0.00 % | 264,708 |
+| :8080 | 9 | 10,349 | 0.09 % | 93,141 |
+| **:8000** | **533** | 6,073 | **8.8 %** | 54,657 |
+| :8081 | 0 | 3,966 | 0.00 % | 35,694 |
+| :9000 | 7 | 2,638 | 0.27 % | 23,742 |
+| :8888 | 0 | 2,085 | 0.00 % | 18,765 |
+| **:8001** | **30** | 1,287 | **2.3 %** | 11,583 |
+| **:8010** | **63** | 504 | **12.5 %** | 4,536 |
+| **:8008** | **16** | 375 | **4.3 %** | 3,375 |
+| total | 659 | 56,689 | 1.16 % | |
 
-**Every Icecast server found was on 8000, 8008 or 8010.** The other six ports
-produced nothing at all while dominating the open-port count — and `:8443`
-alone accounted for 55 % of all open ports in the wide run, because it is the
-default port for Plesk hosting panels rather than for radio.
+`:8443` alone accounts for **52 % of all open ports** and yields one server — it is
+Plesk's default, not a radio port.
 
-Narrowing `--ports` to `8000,8008,8010` therefore cuts probes by 3x *and*
-removes most of the enumeration work, at no observed cost in yield. Treat the
-wider set as a coverage experiment to re-run occasionally, not the default.
+**Use `8000,8001,8008,8010`.** That is 4 of 9 ports, so 56 % fewer probes, while
+keeping **642 of 659 servers (97.4 %)**. Dropping `8080`, `8081`, `8443`, `8888`
+and `9000` costs 17 servers (2.6 %) and saves 85 % of the enumeration work.
+
+> An earlier version of this table came from a 3,000-port sample and concluded
+> that `8001` was dead. The full data shows it yields 30 servers (2.3 %), so the
+> recommendation changed. Do not size a port decision on a small sample.
+
+Treat the wider set as a coverage experiment to re-run occasionally, not the
+default.
 
 Politeness: keep `--concurrency` modest (1024 is a reasonable ceiling), keep
 the timeout short, and scan from a host whose provider permits it.
