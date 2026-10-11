@@ -24,6 +24,17 @@ this is hard.
 
 **So: only ever scan address space we have a reason to believe hosts radio.**
 
+## The loop
+
+```text
+targets --hosts icecast-hosts.txt --max-addresses 2000000 --out prefixes.txt
+portscan --targets prefixes.txt --append --out icecast-hosts.txt
+aerial-registry icecast-scan file icecast-hosts.txt
+```
+
+Each round widens the seed file, which sharpens the next round's density
+ranking, which targets the next scan. The seed file is the only state.
+
 ## Phase 1 — Target generation
 
 Ranked by expected hit rate per probe.
@@ -32,19 +43,36 @@ Ranked by expected hit rate per probe.
 
 Icecast servers cluster in a small number of hosting providers. Rather than
 sampling the whole internet, find the providers that already host radio and
-scan those.
+scan those. `src/bin/targets.rs` implements this:
 
 1. Take every known netloc — Radio-Browser-derived enumeration, Xiph YP,
    Netlas, previous scans.
-2. Resolve each IP to its ASN. Use a local IP→ASN table (e.g. the
-   `iptoasn.com` `ip2asn-v4.tsv.gz` dump) rather than one API call per IP.
-3. Rank ASNs by how many known Icecast hosts they contain.
-4. Pull each ASN's announced prefixes (RIPE Stat `announced-prefixes`, or a
-   BGP dump).
-5. Scan the top N ASNs' prefixes on the Icecast ports.
+2. Resolve each IP to its ASN with a local `iptoasn.com` table (cached in
+   `~/.cache/aerial-registry/`), not one API call per IP.
+3. Fetch each candidate ASN's announced prefixes from RIPE Stat.
+4. **Rank by density — known hosts per announced address — not by host
+   count**, and select ASNs until an address budget is reached.
 
-A few hundred radio-heavy ASNs is a bounded, scannable candidate set — and a
-far better use of probes than an equal number of random `/8` blocks.
+Ranking by raw host count is a trap, because the biggest clouds dominate the
+count and are barely better than the open internet:
+
+| ASN | hosts | addresses | density |
+| --- | --- | --- | --- |
+| AS141107 Linkgo (ID) | 2 | 2,816 | **1 / 1,408** |
+| AS29889 FSNET-1 | 3 | 9,984 | 1 / 3,328 |
+| AS40021 Contabo | 10 | 145,408 | 1 / 14,541 |
+| AS25182 NPO (NL public broadcaster) | 3 | 65,536 | 1 / 21,845 |
+| AS14061 DigitalOcean | 30 | 3,141,888 | 1 / 104,730 |
+| AS16509 Amazon-02 | 2 | 219,091,200 | 1 / 109,545,600 |
+
+For reference the open internet averages roughly 1 Icecast host per 161,000
+addresses (26,684 hosts over ~4.3 B addresses). DigitalOcean is therefore only
+~1.5× better than scanning at random, and Amazon is ~680× *worse*. A budget
+spent on host count would have gone almost entirely to those two.
+
+Density is estimated from hosts we already know, so it is a floor on the true
+density, not the true density — the point of scanning is to find the hosts our
+sources do not list. Measure the result rather than trusting the estimate.
 
 ### 2. Reverse DNS (PTR) name filtering
 
