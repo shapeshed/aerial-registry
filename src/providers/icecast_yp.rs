@@ -1,4 +1,5 @@
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
+use std::net::IpAddr;
 use std::time::Duration;
 
 use futures::stream::{self, StreamExt};
@@ -112,13 +113,25 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         with_logo, "Favicon enrichment complete"
     );
 
+    enrich_countries(&mut stations).await;
+    let with_country = stations.iter().filter(|s| s.country_code.is_some()).count();
+    info!(
+        provider = "icecast-yp",
+        with_country, "Country enrichment complete"
+    );
+
     stations
 }
 
 /// Parse the flat `<entry>` list, keeping entries with a usable `listen_url`.
+///
+/// An Icecast station is often published as several mounts — one per
+/// bitrate/codec — with no canonical single URL, so the same station appears
+/// multiple times. Collapse those to one entry per station name, keeping the
+/// highest-bitrate mount.
 fn parse_feed(xml: &str) -> Vec<Station> {
-    let mut seen = HashSet::new();
-    let mut stations = Vec::new();
+    let mut seen_urls = HashSet::new();
+    let mut best: HashMap<String, (u32, Station)> = HashMap::new();
 
     for entry in xml.split("<entry>").skip(1) {
         let Some(stream_url) = tag(entry, "listen_url") else {
@@ -131,17 +144,20 @@ fn parse_feed(xml: &str) -> Vec<Station> {
         if is_junk_name(&name) {
             continue;
         }
-        let key = normalise_url(&stream_url);
-        if !seen.insert(key) {
+        if !seen_urls.insert(normalise_url(&stream_url)) {
             continue;
         }
 
+        let bitrate = tag(entry, "bitrate")
+            .and_then(|value| value.parse::<u32>().ok())
+            .unwrap_or(0);
         let tags = tag(entry, "genre")
             .map(|genre| parse_tags(&decode_entities(&genre)))
             .unwrap_or_default();
 
-        stations.push(Station {
-            name,
+        let station = Station {
+            streams: Vec::new(),
+            name: name.clone(),
             stream_url,
             logo_url: None,
             country: None,
@@ -151,10 +167,28 @@ fn parse_feed(xml: &str) -> Vec<Station> {
             provider: "icecast-yp".into(),
             provider_id: None,
             trusted: false,
-        });
+        };
+
+        let key = name_key(&name);
+        match best.get(&key) {
+            Some((existing, _)) if *existing >= bitrate => {}
+            _ => {
+                best.insert(key, (bitrate, station));
+            }
+        }
     }
 
+    let mut stations: Vec<Station> = best.into_values().map(|(_, station)| station).collect();
+    stations.sort_by(|a, b| a.name.cmp(&b.name));
     stations
+}
+
+/// Case- and punctuation-insensitive key for grouping a station's mounts.
+fn name_key(name: &str) -> String {
+    name.to_ascii_lowercase()
+        .chars()
+        .filter(char::is_ascii_alphanumeric)
+        .collect()
 }
 
 fn tag(entry: &str, name: &str) -> Option<String> {
@@ -279,6 +313,100 @@ async fn enrich_favicons(stations: &mut [Station]) {
     }
 }
 
+/// Infer each station's country from its stream host's IP address. Icecast
+/// stations carry no country of their own, and the stream host is usually the
+/// station's own server, so the IP's geolocated country is a reasonable proxy.
+async fn enrich_countries(stations: &mut [Station]) {
+    let Ok(http) = reqwest::Client::builder()
+        .timeout(Duration::from_secs(10))
+        .user_agent("aerial-registry/0.1 (+icecast-yp)")
+        .build()
+    else {
+        return;
+    };
+
+    let mut by_host: HashMap<String, Vec<usize>> = HashMap::new();
+    for (index, station) in stations.iter().enumerate() {
+        if let Some(host) = host_of(&station.stream_url) {
+            by_host.entry(host).or_default().push(index);
+        }
+    }
+
+    let hosts: Vec<String> = by_host.keys().cloned().collect();
+    let resolved: Vec<(String, Option<IpAddr>)> = stream::iter(hosts)
+        .map(|host| async move {
+            let ip = tokio::net::lookup_host((host.as_str(), 0))
+                .await
+                .ok()
+                .and_then(|mut addrs| addrs.next())
+                .map(|addr| addr.ip());
+            (host, ip)
+        })
+        .buffer_unordered(64)
+        .collect()
+        .await;
+
+    let mut ip_hosts: HashMap<IpAddr, Vec<String>> = HashMap::new();
+    for (host, ip) in resolved {
+        if let Some(ip) = ip {
+            ip_hosts.entry(ip).or_default().push(host);
+        }
+    }
+    let ips: Vec<IpAddr> = ip_hosts.keys().copied().collect();
+
+    // ip-api's free batch endpoint takes up to 100 IPs per request and is rate
+    // limited, so space the batches out.
+    let mut geo: HashMap<IpAddr, (String, String)> = HashMap::new();
+    for chunk in ips.chunks(100) {
+        let body: Vec<Value> = chunk
+            .iter()
+            .map(|ip| serde_json::json!({ "query": ip.to_string() }))
+            .collect();
+        let request = http
+            .post("http://ip-api.com/batch?fields=query,country,countryCode")
+            .json(&body);
+        if let Ok(response) = request.send().await
+            && let Ok(items) = response.json::<Vec<Value>>().await
+        {
+            for item in items {
+                let (Some(query), Some(country), Some(code)) = (
+                    item.get("query").and_then(Value::as_str),
+                    item.get("country").and_then(Value::as_str),
+                    item.get("countryCode").and_then(Value::as_str),
+                ) else {
+                    continue;
+                };
+                if let Ok(ip) = query.parse::<IpAddr>() {
+                    geo.insert(ip, (country.to_string(), code.to_string()));
+                }
+            }
+        }
+        tokio::time::sleep(Duration::from_secs(4)).await;
+    }
+
+    for (ip, hosts) in ip_hosts {
+        let Some((country, code)) = geo.get(&ip) else {
+            continue;
+        };
+        for host in hosts {
+            let Some(indices) = by_host.get(&host) else {
+                continue;
+            };
+            for &index in indices {
+                stations[index].country = Some(country.clone());
+                stations[index].country_code = Some(code.clone());
+            }
+        }
+    }
+}
+
+fn host_of(url: &str) -> Option<String> {
+    reqwest::Url::parse(url)
+        .ok()?
+        .host_str()
+        .map(|host| host.to_ascii_lowercase())
+}
+
 async fn favicon_for(http: &reqwest::Client, stream_url: &str) -> Option<String> {
     let parsed = reqwest::Url::parse(stream_url).ok()?;
     let host = parsed.host_str()?.to_string();
@@ -362,12 +490,31 @@ async fn fetch_site_icon(http: &reqwest::Client, site: &str) -> Option<String> {
     }
     let html = &body[..end];
 
-    if let Some(image) = find_meta_content(html, "og:image") {
-        return resolve(&url, &image);
+    for property in [
+        "og:image",
+        "og:image:url",
+        "og:image:secure_url",
+        "twitter:image",
+        "twitter:image:src",
+    ] {
+        if let Some(image) = find_meta_content(html, property)
+            && let Some(resolved) = resolve(&url, &image)
+        {
+            return Some(resolved);
+        }
     }
-    for rel in ["apple-touch-icon", "icon", "shortcut icon"] {
-        if let Some(href) = find_link_href(html, rel) {
-            return resolve(&url, &href);
+    for rel in [
+        "apple-touch-icon",
+        "apple-touch-icon-precomposed",
+        "icon",
+        "shortcut icon",
+        "image_src",
+        "mask-icon",
+    ] {
+        if let Some(href) = find_link_href(html, rel)
+            && let Some(resolved) = resolve(&url, &href)
+        {
+            return Some(resolved);
         }
     }
     None
@@ -485,6 +632,17 @@ mod tests {
         );
         assert_eq!(stations[0].provider, "icecast-yp");
         assert!(!stations[0].trusted);
+    }
+
+    #[test]
+    fn collapses_same_station_mounts_to_the_highest_bitrate() {
+        let xml = "<directory>\
+            <entry><server_name>Radio X</server_name><listen_url>http://a/low</listen_url><bitrate>64</bitrate><genre>pop</genre></entry>\
+            <entry><server_name>Radio X</server_name><listen_url>http://a/high</listen_url><bitrate>192</bitrate><genre>pop</genre></entry>\
+            </directory>";
+        let stations = parse_feed(xml);
+        assert_eq!(stations.len(), 1);
+        assert_eq!(stations[0].stream_url, "http://a/high");
     }
 
     #[test]
