@@ -50,6 +50,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let stream_url = channel.primary_live_url;
         debug!(provider = "mtva", name = %name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name,
             stream_url,
             logo_url: Some(format!("{LOGO_BASE}/{id}_v.png")),

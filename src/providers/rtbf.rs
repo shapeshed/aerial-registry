@@ -81,6 +81,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
         debug!(provider = "rtbf", name = %channel.label, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: channel.label,
             stream_url,
             logo_url,

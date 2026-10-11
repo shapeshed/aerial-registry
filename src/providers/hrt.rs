@@ -193,6 +193,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let stream_url = format!("{STREAM_BASE}/{mount}.mp3");
         debug!(provider = "hrt", name = display_name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: (*display_name).to_string(),
             stream_url,
             logo_url,

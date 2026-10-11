@@ -181,6 +181,7 @@ fn to_station(s: RbStation) -> Option<Station> {
         .then(|| favicon.to_string());
 
     Some(Station {
+        streams: Vec::new(),
         name: clean_name(&s.name),
         stream_url: stream_url.to_string(),
         logo_url,

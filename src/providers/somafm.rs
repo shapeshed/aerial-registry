@@ -126,6 +126,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
         debug!(provider = "somafm", %name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name,
             stream_url,
             logo_url: channel.largeimage.filter(|u| !u.is_empty()),

@@ -116,6 +116,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let (country, country_code) = country_for(&title);
         debug!(provider = "rai", name = %title, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: title,
             stream_url,
             logo_url,

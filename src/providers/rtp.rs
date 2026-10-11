@@ -77,6 +77,7 @@ async fn fetch_channel(client: &Client, id: u32) -> Option<Station> {
 
     debug!(provider = "rtp", %name, %stream_url, "Discovered station");
     Some(Station {
+        streams: Vec::new(),
         name,
         stream_url,
         logo_url: channel.channel_card_logo.filter(|s| !s.is_empty()),

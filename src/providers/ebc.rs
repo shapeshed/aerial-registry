@@ -115,6 +115,7 @@ fn station_from(item: Emissora) -> Option<Station> {
     let id = item.id.unwrap_or_else(|| stream_url.clone());
     let provider_id = id.trim_end_matches('/').rsplit('/').next().unwrap_or(&id);
     Some(Station {
+        streams: Vec::new(),
         name,
         stream_url,
         logo_url: logo_url(&id, item.image_scales.as_ref()),

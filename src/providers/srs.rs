@@ -23,6 +23,7 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
         "Discovered station"
     );
     let stations = vec![Station {
+        streams: Vec::new(),
         name: "Radio SRS".to_string(),
         stream_url: STREAM_URL.to_string(),
         logo_url: Some(LOGO.to_string()),

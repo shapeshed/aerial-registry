@@ -46,6 +46,7 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
             let stream_url = format!("{STREAM_BASE}/{mount}");
             debug!(provider = "vgtrk", name = display_name, %stream_url, "Discovered station");
             Station {
+                streams: Vec::new(),
                 name: (*display_name).to_string(),
                 stream_url,
                 logo_url: logo_url.map(str::to_string),

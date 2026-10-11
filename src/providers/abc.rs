@@ -95,6 +95,7 @@ async fn fetch_station(client: &Client, slug: &str, name: &str) -> Option<Statio
 
     debug!(provider = "abc", %name, %stream_url, "Discovered station");
     Some(Station {
+        streams: Vec::new(),
         name: name.to_string(),
         stream_url,
         logo_url,

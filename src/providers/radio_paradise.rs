@@ -125,6 +125,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
         debug!(provider = "radio-paradise", %name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name,
             stream_url,
             logo_url,
@@ -142,6 +143,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let stream_url = format!("https://stream.radioparadise.com/{}", extra.stream_slug);
         debug!(provider = "radio-paradise", name = extra.name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: extra.name.to_string(),
             stream_url,
             logo_url: Some(FALLBACK_LOGO.to_string()),

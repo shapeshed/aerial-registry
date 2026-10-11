@@ -102,6 +102,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 let station_name = format!("{name}{label_suffix}");
                 debug!(provider = "bbc", name = %station_name, %stream_url, "Discovered station");
                 stations.push(Station {
+                    streams: Vec::new(),
                     name: station_name,
                     stream_url,
                     logo_url: Some(logo_url),

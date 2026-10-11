@@ -136,6 +136,7 @@ fn radio_stations(document: &Document) -> Vec<Station> {
 
         debug!(provider = PROVIDER, name, stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: name.to_string(),
             stream_url: stream_url.to_string(),
             logo_url,

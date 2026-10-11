@@ -155,6 +155,7 @@ fn parse_status(body: &str) -> serde_json::Result<Vec<Station>> {
 
         let listeners = source.listeners.unwrap_or(0);
         let station = Station {
+            streams: Vec::new(),
             name: name.clone(),
             stream_url: format!("{STREAM_BASE}/{mount}"),
             logo_url: logo_for(mount),

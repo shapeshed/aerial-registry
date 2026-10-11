@@ -158,6 +158,7 @@ mod tests {
 
     fn station(provider: &str, name: &str, url: &str) -> Station {
         Station {
+            streams: Vec::new(),
             name: name.to_string(),
             stream_url: url.to_string(),
             logo_url: None,

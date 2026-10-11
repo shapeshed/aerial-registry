@@ -68,6 +68,7 @@ fn station_from_channel(channel: &Channel) -> Option<Station> {
 
     debug!(provider = "dr", name = %channel.title, %stream_url, "Discovered station");
     Some(Station {
+        streams: Vec::new(),
         name: channel.title.clone(),
         stream_url,
         logo_url,

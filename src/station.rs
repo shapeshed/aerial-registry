@@ -4,6 +4,11 @@ use serde::{Deserialize, Deserializer, Serialize};
 pub struct Station {
     pub name: String,
     pub stream_url: String,
+    /// Additional fixed-bitrate mounts of the same station (ICY/Icecast), so the
+    /// app can pick one to match available bandwidth. Empty for single-stream
+    /// and HLS (adaptive) stations.
+    #[serde(skip_serializing_if = "Vec::is_empty", default)]
+    pub streams: Vec<StreamVariant>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub logo_url: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -24,6 +29,16 @@ pub struct Station {
     /// Not written to the registry. Trusted provider stations skip liveness checks.
     #[serde(skip)]
     pub trusted: bool,
+}
+
+/// A single playable stream for a station. `bitrate` is kbps where known.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct StreamVariant {
+    pub url: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub bitrate: Option<u32>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub format: Option<String>,
 }
 
 /// Own output always writes `tags` as a JSON array, but a `Station` list
