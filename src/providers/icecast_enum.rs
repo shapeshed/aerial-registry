@@ -46,6 +46,7 @@ struct Mount {
     bitrate: Option<u32>,
     format: Option<String>,
     url: String,
+    listeners: u64,
 }
 
 #[derive(Deserialize)]
@@ -77,6 +78,8 @@ struct Source {
     bitrate: Option<u32>,
     #[serde(default)]
     server_type: Option<String>,
+    #[serde(default)]
+    listeners: Option<u64>,
 }
 
 pub async fn discover(client: &Client) -> Vec<Station> {
@@ -143,7 +146,13 @@ pub async fn discover(client: &Client) -> Vec<Station> {
     let mut groups: HashMap<(String, String), Group> = HashMap::new();
     for (host, mounts) in results {
         for mount in mounts {
-            if is_junk_name(&mount.name) {
+            // Drop only truly empty mounts: a placeholder/mount-path name with no
+            // genre, no bitrate and no listeners. Anything with a real signal —
+            // including anonymous streams that have listeners — is kept.
+            let name_is_placeholder = mount.name.starts_with('/') || is_junk_name(&mount.name);
+            let has_signal =
+                !mount.genre.trim().is_empty() || mount.bitrate.is_some() || mount.listeners > 0;
+            if name_is_placeholder && !has_signal {
                 continue;
             }
             let key = (host.clone(), name_key(&mount.name));
@@ -258,7 +267,8 @@ async fn icecast_mounts(http: &reqwest::Client, scheme: &str, host: &str) -> Vec
                 genre: source.genre.unwrap_or_default(),
                 bitrate: source.bitrate.filter(|b| *b > 0),
                 format: source.server_type.map(|t| codec_name(&t)),
-                url: listenurl,
+                url: public_url(scheme, host, &listenurl),
+                listeners: source.listeners.unwrap_or(0),
             })
         })
         .collect()
@@ -300,9 +310,43 @@ async fn shoutcast_mounts(http: &reqwest::Client, scheme: &str, host: &str) -> V
                 .and_then(|b| b.parse::<u32>().ok()),
             format: None,
             url: format!("{scheme}://{host}{path}"),
+            listeners: value
+                .get("currentlisteners")
+                .and_then(|v| v.as_u64())
+                .unwrap_or(0),
         });
     }
     mounts
+}
+
+/// Rebuild a stream URL when the server reports an internal `listenurl` host
+/// (localhost/private IP) — use the host we actually enumerated plus the path.
+fn public_url(scheme: &str, host: &str, listenurl: &str) -> String {
+    let Ok(parsed) = reqwest::Url::parse(listenurl) else {
+        return listenurl.to_string();
+    };
+    match parsed.host_str() {
+        Some(internal) if is_internal_host(internal) => {
+            format!("{scheme}://{host}{}", parsed.path())
+        }
+        _ => listenurl.to_string(),
+    }
+}
+
+fn is_internal_host(host: &str) -> bool {
+    let host = host.to_ascii_lowercase();
+    if host == "localhost" || host == "0.0.0.0" {
+        return true;
+    }
+    if host.starts_with("127.") || host.starts_with("10.") || host.starts_with("192.168.") {
+        return true;
+    }
+    if let Some(rest) = host.strip_prefix("172.")
+        && let Some(second) = rest.split('.').next().and_then(|o| o.parse::<u8>().ok())
+    {
+        return (16..=31).contains(&second);
+    }
+    false
 }
 
 fn netloc(url: &str) -> Option<String> {
@@ -378,5 +422,20 @@ mod tests {
         assert!(is_junk_name("No Name"));
         assert!(is_junk_name("  "));
         assert!(!is_junk_name("Rádio Difusora"));
+    }
+
+    #[test]
+    fn rebuilds_internal_listen_urls() {
+        assert_eq!(
+            public_url("http", "kcm.fm:8000", "http://127.0.0.1:8000/02"),
+            "http://kcm.fm:8000/02"
+        );
+        assert_eq!(
+            public_url("http", "host:8000", "http://public.host:8000/x"),
+            "http://public.host:8000/x"
+        );
+        assert!(is_internal_host("10.0.6.14"));
+        assert!(is_internal_host("172.20.0.1"));
+        assert!(!is_internal_host("kcm.fm"));
     }
 }
