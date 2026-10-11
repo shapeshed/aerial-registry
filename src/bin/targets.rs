@@ -227,12 +227,11 @@ async fn main() -> anyhow::Result<()> {
         );
     }
 
-    let mut prefixes: Vec<String> = selected
+    let collected: Vec<String> = selected
         .iter()
         .flat_map(|candidate| candidate.prefixes.iter().cloned())
         .collect();
-    prefixes.sort();
-    prefixes.dedup();
+    let prefixes = merge_prefixes(&collected);
 
     let addresses: u64 = prefixes.iter().filter_map(|p| prefix_addresses(p)).sum();
     info!(
@@ -447,6 +446,69 @@ async fn fetch_prefixes(
         .await
 }
 
+/// Collapse a prefix list into the minimal set of CIDR blocks: duplicates,
+/// contained prefixes and adjacent ranges are merged, so **no address is probed
+/// twice**. A union of per-ASN prefix lists routinely overlaps — the wide scan
+/// target had 263 overlapping prefixes, ~915,000 wasted probes.
+fn merge_prefixes(prefixes: &[String]) -> Vec<String> {
+    let mut ranges: Vec<(u32, u32)> = prefixes.iter().filter_map(|p| prefix_range(p)).collect();
+    ranges.sort_unstable();
+
+    let mut merged: Vec<(u32, u32)> = Vec::new();
+    for (start, end) in ranges {
+        match merged.last_mut() {
+            Some(last) if start <= last.1.saturating_add(1) => last.1 = last.1.max(end),
+            _ => merged.push((start, end)),
+        }
+    }
+    merged
+        .into_iter()
+        .flat_map(|(start, end)| range_to_cidrs(start, end))
+        .collect()
+}
+
+/// Parse `a.b.c.d/n` into its inclusive `(start, end)`.
+fn prefix_range(prefix: &str) -> Option<(u32, u32)> {
+    let (ip, bits) = prefix.split_once('/')?;
+    let ip = parse_ipv4(ip)?;
+    let bits: u32 = bits.trim().parse().ok()?;
+    if bits > 32 {
+        return None;
+    }
+    let mask = if bits == 0 {
+        0
+    } else {
+        u32::MAX << (32 - bits)
+    };
+    let start = ip & mask;
+    Some((start, start | !mask))
+}
+
+/// Split an inclusive range into the minimal set of CIDR blocks.
+fn range_to_cidrs(start: u32, end: u32) -> Vec<String> {
+    let mut out = Vec::new();
+    let mut current = start;
+    loop {
+        let align_bits = if current == 0 {
+            32
+        } else {
+            current.trailing_zeros()
+        };
+        let remaining = (end - current) as u64 + 1;
+        let fit_bits = 63 - remaining.leading_zeros();
+        let bits = align_bits.min(fit_bits);
+        out.push(format!("{}/{}", Ipv4Addr::from(current), 32 - bits));
+        if bits >= 32 {
+            break;
+        }
+        current += 1u32 << bits;
+        if current > end {
+            break;
+        }
+    }
+    out
+}
+
 /// Number of addresses in a `a.b.c.d/n` prefix.
 fn prefix_addresses(prefix: &str) -> Option<u64> {
     let bits: u32 = prefix.split_once('/')?.1.parse().ok()?;
@@ -522,5 +584,57 @@ mod tests {
         assert_eq!(prefix_addresses("10.0.0.0/24"), Some(256));
         assert_eq!(prefix_addresses("10.0.0.0/32"), Some(1));
         assert_eq!(prefix_addresses("not-a-prefix"), None);
+    }
+
+    #[test]
+    fn merges_duplicate_and_contained_prefixes() {
+        // A /24 inside a /16 must not be scanned twice.
+        let merged = merge_prefixes(&[
+            "10.0.0.0/16".to_string(),
+            "10.0.3.0/24".to_string(),
+            "10.0.0.0/16".to_string(),
+        ]);
+        assert_eq!(merged, vec!["10.0.0.0/16"]);
+        assert_eq!(prefix_addresses(&merged[0]), Some(65536));
+    }
+
+    #[test]
+    fn merges_adjacent_ranges_into_the_smallest_blocks() {
+        assert_eq!(
+            merge_prefixes(&["10.0.0.0/25".to_string(), "10.0.0.128/25".to_string()]),
+            vec!["10.0.0.0/24"]
+        );
+        // A partial overlap cannot be expressed as one block; it is summarised.
+        let merged = merge_prefixes(&["10.0.0.0/24".to_string(), "10.0.0.128/25".to_string()]);
+        assert_eq!(merged, vec!["10.0.0.0/24"]);
+    }
+
+    #[test]
+    fn summarises_an_unaligned_range() {
+        // 10.0.0.1 - 10.0.0.2 is not a single CIDR.
+        assert_eq!(
+            range_to_cidrs(
+                u32::from(Ipv4Addr::new(10, 0, 0, 1)),
+                u32::from(Ipv4Addr::new(10, 0, 0, 2))
+            ),
+            vec!["10.0.0.1/32", "10.0.0.2/32"]
+        );
+        assert_eq!(
+            range_to_cidrs(
+                u32::from(Ipv4Addr::new(10, 0, 0, 0)),
+                u32::from(Ipv4Addr::new(10, 0, 0, 3))
+            ),
+            vec!["10.0.0.0/30"]
+        );
+    }
+
+    #[test]
+    fn merge_preserves_the_full_address_span() {
+        let input = vec!["10.0.0.0/24".to_string(), "10.0.1.0/24".to_string()];
+        let merged = merge_prefixes(&input);
+        let before: u64 = input.iter().filter_map(|p| prefix_addresses(p)).sum();
+        let after: u64 = merged.iter().filter_map(|p| prefix_addresses(p)).sum();
+        assert_eq!(before, after);
+        assert_eq!(after, 512);
     }
 }
