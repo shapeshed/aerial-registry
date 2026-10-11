@@ -15,6 +15,7 @@ pub mod ert;
 pub mod fluxfm;
 pub mod global;
 pub mod hrt;
+pub mod icecast_enum;
 pub mod icecast_yp;
 pub mod irtp;
 pub mod latvijas_radio;
@@ -146,6 +147,9 @@ pub async fn discover_all(client: &crate::http::Client) -> Vec<Station> {
     }
     if selected("hrt") {
         futures.push(Box::pin(hrt::discover(client)));
+    }
+    if selected("icecast-enum") {
+        futures.push(Box::pin(icecast_enum::discover(client)));
     }
     if selected("icecast-yp") {
         futures.push(Box::pin(icecast_yp::discover(client)));
