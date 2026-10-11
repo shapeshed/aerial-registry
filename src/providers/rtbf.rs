@@ -2,7 +2,7 @@ use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error};
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const CHANNELS_URL: &str = "https://bff-service.rtbf.be/oaos/v1.6/channels?_sort%5Bid%5D=asc&types=radio%2Cwebradio&_limit=500&platform=WEB&excludeIds=132%2C140";
 const COUNTRY: &str = "Belgium";
@@ -70,10 +70,20 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
     let mut stations = Vec::new();
     for channel in body.data {
-        let Some(stream_url) = channel
-            .stream_url
-            .and_then(|s| s.aac.filter(|u| !u.is_empty()).or(s.mp3))
-        else {
+        let Some(streams) = channel.stream_url else {
+            continue;
+        };
+        let variants: Vec<StreamVariant> = [streams.aac, streams.mp3]
+            .into_iter()
+            .flatten()
+            .filter(|url| !url.is_empty())
+            .map(|url| StreamVariant {
+                url,
+                bitrate: None,
+                format: None,
+            })
+            .collect();
+        let Some(stream_url) = variants.first().map(|v| v.url.clone()) else {
             continue;
         };
         let logo_url = pick_logo(channel.logo_flat, channel.logo);
@@ -81,7 +91,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
         debug!(provider = "rtbf", name = %channel.label, %stream_url, "Discovered station");
         stations.push(Station {
-            streams: Vec::new(),
+            streams: if variants.len() > 1 {
+                variants
+            } else {
+                Vec::new()
+            },
             name: channel.label,
             stream_url,
             logo_url,

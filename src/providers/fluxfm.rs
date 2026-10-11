@@ -2,7 +2,7 @@ use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error};
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const CHANNELS_URL: &str = "https://fluxmusic.api.radiosphere.io/channels";
 
@@ -77,6 +77,15 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             continue;
         };
         let stream_url = stream.url.clone();
+        let variants: Vec<StreamVariant> = channel
+            .streams
+            .iter()
+            .map(|s| StreamVariant {
+                url: s.url.clone(),
+                bitrate: Some(s.bitrate),
+                format: Some(s.encoding.clone()),
+            })
+            .collect();
         let logo_url = channel
             .cover_images
             .as_ref()
@@ -86,7 +95,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
         debug!(provider = "fluxfm", %name, %stream_url, "Discovered station");
         stations.push(Station {
-            streams: Vec::new(),
+            streams: if variants.len() > 1 {
+                variants
+            } else {
+                Vec::new()
+            },
             name,
             stream_url,
             logo_url,

@@ -2,7 +2,7 @@ use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error, warn};
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const CHANNELS_URL: &str =
     "https://vsh-sdata.radioparadise.com/api/channels?populate=banner&pagination[pageSize]=50";
@@ -24,6 +24,33 @@ const STREAM_SLUGS: &[(i64, &str)] = &[
     (42, "serenity-flac"), // Serenity (FLAC only — no bitrate-suffixed variant)
     (945, "kfat-320"),     // KFAT
 ];
+
+/// The direct stream host also serves fixed-bitrate variants of each channel,
+/// e.g. `aac-320`/`aac-128`/`aac-64` (Main Mix also has `mp3-*`). FLAC-only
+/// channels have none.
+fn variants_for(slug: &str) -> Vec<StreamVariant> {
+    let Some(base) = slug.strip_suffix("-320") else {
+        return Vec::new();
+    };
+    let mut variants: Vec<StreamVariant> = [320u32, 128, 64]
+        .into_iter()
+        .map(|bitrate| StreamVariant {
+            url: format!("https://stream.radioparadise.com/{base}-{bitrate}"),
+            bitrate: Some(bitrate),
+            format: Some("aac".into()),
+        })
+        .collect();
+    if base == "aac" {
+        for bitrate in [320u32, 128] {
+            variants.push(StreamVariant {
+                url: format!("https://stream.radioparadise.com/mp3-{bitrate}"),
+                bitrate: Some(bitrate),
+                format: Some("mp3".into()),
+            });
+        }
+    }
+    variants
+}
 
 struct ExtraChannel {
     provider_id: &'static str,
@@ -125,7 +152,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
         debug!(provider = "radio-paradise", %name, %stream_url, "Discovered station");
         stations.push(Station {
-            streams: Vec::new(),
+            streams: variants_for(slug),
             name,
             stream_url,
             logo_url,
@@ -141,9 +168,10 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
     for extra in EXTRA_CHANNELS {
         let stream_url = format!("https://stream.radioparadise.com/{}", extra.stream_slug);
+        let variants = variants_for(extra.stream_slug);
         debug!(provider = "radio-paradise", name = extra.name, %stream_url, "Discovered station");
         stations.push(Station {
-            streams: Vec::new(),
+            streams: variants,
             name: extra.name.to_string(),
             stream_url,
             logo_url: Some(FALLBACK_LOGO.to_string()),

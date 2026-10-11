@@ -63,6 +63,11 @@ fn merge_into(existing: &mut Station, duplicate: Station) {
             existing.tags.push(tag.clone());
         }
     }
+    for variant in duplicate.streams {
+        if !existing.streams.iter().any(|v| v.url == variant.url) {
+            existing.streams.push(variant);
+        }
+    }
     if existing.logo_url.is_none() {
         existing.logo_url = duplicate.logo_url;
     }
@@ -226,6 +231,28 @@ mod tests {
             normalise_url("https://example.com/stream/"),
             "example.com/stream"
         );
+    }
+
+    #[test]
+    fn merge_unions_stream_variants() {
+        use crate::station::StreamVariant;
+        let mut a = station("icecast-yp", "Radio X", "http://host/stream");
+        a.streams = vec![StreamVariant {
+            url: "http://host/stream".into(),
+            bitrate: Some(128),
+            format: None,
+        }];
+        let mut b = station("radio-browser", "Radio X", "http://host/stream");
+        b.streams = vec![StreamVariant {
+            url: "http://host/64".into(),
+            bitrate: Some(64),
+            format: None,
+        }];
+        let out = dedup(vec![a, b]);
+        assert_eq!(out.len(), 1);
+        let urls: Vec<&str> = out[0].streams.iter().map(|v| v.url.as_str()).collect();
+        assert!(urls.contains(&"http://host/stream"));
+        assert!(urls.contains(&"http://host/64"));
     }
 
     #[test]

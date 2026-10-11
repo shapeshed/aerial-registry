@@ -1,7 +1,7 @@
 use crate::http::Client;
 use tracing::debug;
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const COUNTRY: &str = "Russia";
 const COUNTRY_CODE: &str = "RU";
@@ -44,9 +44,19 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
         .iter()
         .map(|(mount, display_name, logo_url)| {
             let stream_url = format!("{STREAM_BASE}/{mount}");
+            // The host also serves each service at 128 kbps mp3.
+            let base = mount.strip_suffix("_mp3_192kbps").unwrap_or(mount);
+            let variants: Vec<StreamVariant> = [192u32, 128]
+                .into_iter()
+                .map(|bitrate| StreamVariant {
+                    url: format!("{STREAM_BASE}/{base}_mp3_{bitrate}kbps"),
+                    bitrate: Some(bitrate),
+                    format: Some("mp3".into()),
+                })
+                .collect();
             debug!(provider = "vgtrk", name = display_name, %stream_url, "Discovered station");
             Station {
-                streams: Vec::new(),
+                streams: variants,
                 name: (*display_name).to_string(),
                 stream_url,
                 logo_url: logo_url.map(str::to_string),

@@ -7,7 +7,7 @@ use serde_json::Value;
 use tracing::{info, warn};
 
 use crate::http::Client;
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const YP_URL: &str = "https://dir.xiph.org/yp.xml";
 const FAVICON_CONCURRENCY: usize = 96;
@@ -126,12 +126,20 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 /// Parse the flat `<entry>` list, keeping entries with a usable `listen_url`.
 ///
 /// An Icecast station is often published as several mounts — one per
-/// bitrate/codec — with no canonical single URL, so the same station appears
-/// multiple times. Collapse those to one entry per station name, keeping the
-/// highest-bitrate mount.
+/// bitrate/codec — with no canonical single URL. Group those into one entry
+/// per station (host + name with the bitrate/codec suffix stripped), keeping
+/// the highest-bitrate mount as `stream_url` and the full set as `streams`.
 fn parse_feed(xml: &str) -> Vec<Station> {
+    struct Group {
+        name: String,
+        tags: Vec<String>,
+        primary_bitrate: u32,
+        primary_url: String,
+        variants: Vec<StreamVariant>,
+    }
+
     let mut seen_urls = HashSet::new();
-    let mut best: HashMap<String, (u32, Station)> = HashMap::new();
+    let mut groups: HashMap<(String, String), Group> = HashMap::new();
 
     for entry in xml.split("<entry>").skip(1) {
         let Some(stream_url) = tag(entry, "listen_url") else {
@@ -151,44 +159,93 @@ fn parse_feed(xml: &str) -> Vec<Station> {
         let bitrate = tag(entry, "bitrate")
             .and_then(|value| value.parse::<u32>().ok())
             .unwrap_or(0);
+        let format = tag(entry, "server_type").map(|value| codec_name(&value));
         let tags = tag(entry, "genre")
             .map(|genre| parse_tags(&decode_entities(&genre)))
             .unwrap_or_default();
+        let host = host_of(&stream_url).unwrap_or_default();
 
-        let station = Station {
-            streams: Vec::new(),
-            name: name.clone(),
-            stream_url,
+        let variant = StreamVariant {
+            url: stream_url.clone(),
+            bitrate: (bitrate > 0).then_some(bitrate),
+            format,
+        };
+
+        let group = groups
+            .entry((host, name_key(&name)))
+            .or_insert_with(|| Group {
+                name: name.clone(),
+                tags: Vec::new(),
+                primary_bitrate: 0,
+                primary_url: stream_url.clone(),
+                variants: Vec::new(),
+            });
+        for tag in tags {
+            if !group.tags.contains(&tag) {
+                group.tags.push(tag);
+            }
+        }
+        if !group.variants.iter().any(|v| v.url == stream_url) {
+            group.variants.push(variant);
+        }
+        if bitrate >= group.primary_bitrate {
+            group.primary_bitrate = bitrate;
+            group.primary_url = stream_url;
+        }
+    }
+
+    let mut stations: Vec<Station> = groups
+        .into_values()
+        .map(|group| Station {
+            name: group.name,
+            stream_url: group.primary_url,
+            streams: if group.variants.len() > 1 {
+                group.variants
+            } else {
+                Vec::new()
+            },
             logo_url: None,
             country: None,
             country_code: None,
-            tags,
+            tags: group.tags,
             description: None,
             provider: "icecast-yp".into(),
             provider_id: None,
             trusted: false,
-        };
-
-        let key = name_key(&name);
-        match best.get(&key) {
-            Some((existing, _)) if *existing >= bitrate => {}
-            _ => {
-                best.insert(key, (bitrate, station));
-            }
-        }
-    }
-
-    let mut stations: Vec<Station> = best.into_values().map(|(_, station)| station).collect();
+        })
+        .collect();
     stations.sort_by(|a, b| a.name.cmp(&b.name));
     stations
 }
 
-/// Case- and punctuation-insensitive key for grouping a station's mounts.
+/// Case- and punctuation-insensitive key for grouping a station's mounts,
+/// with any bitrate/codec suffix removed so `Radio X 128kbit` and
+/// `Radio X 64kbit` group together.
 fn name_key(name: &str) -> String {
     name.to_ascii_lowercase()
+        .split_whitespace()
+        .filter(|word| {
+            !word.contains("kbit")
+                && !word.contains("kbps")
+                && !matches!(*word, "mp3" | "aac" | "aacp" | "ogg" | "opus" | "hls")
+        })
+        .collect::<Vec<_>>()
+        .join("")
         .chars()
         .filter(char::is_ascii_alphanumeric)
         .collect()
+}
+
+/// Map an Icecast `server_type` MIME to a short codec name.
+fn codec_name(server_type: &str) -> String {
+    match server_type.to_ascii_lowercase().as_str() {
+        "audio/mpeg" => "mp3",
+        "audio/aac" | "audio/aacp" | "audio/x-aac" => "aac",
+        "audio/ogg" | "application/ogg" => "ogg",
+        "audio/opus" => "opus",
+        other => other,
+    }
+    .to_string()
 }
 
 fn tag(entry: &str, name: &str) -> Option<String> {

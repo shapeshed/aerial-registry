@@ -41,6 +41,33 @@ pub struct StreamVariant {
     pub format: Option<String>,
 }
 
+/// Best-effort bitrate (kbps) parsed from a stream URL, e.g. `…-128-mp3` or
+/// `…_320.aac`. Only accepts plausible audio values (16–512, multiple of 8),
+/// and returns the last match so a bitrate suffix wins over other numbers.
+pub fn bitrate_from_url(url: &str) -> Option<u32> {
+    let lower = url.to_ascii_lowercase();
+    let bytes = lower.as_bytes();
+    let mut best = None;
+    let mut i = 0;
+    while i < bytes.len() {
+        if bytes[i].is_ascii_digit() {
+            let start = i;
+            while i < bytes.len() && bytes[i].is_ascii_digit() {
+                i += 1;
+            }
+            if let Ok(value) = lower[start..i].parse::<u32>()
+                && (16..=512).contains(&value)
+                && value % 8 == 0
+            {
+                best = Some(value);
+            }
+        } else {
+            i += 1;
+        }
+    }
+    best
+}
+
 /// Own output always writes `tags` as a JSON array, but a `Station` list
 /// loaded from elsewhere (`pipeline::guard`'s "previous registry" file can
 /// be any registry.json a human points it at) may use a different shape —
