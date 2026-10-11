@@ -155,6 +155,35 @@ and `9000` costs 17 servers (2.6 %) and saves 85 % of the enumeration work.
 Treat the wider set as a coverage experiment to re-run occasionally, not the
 default.
 
+### Widening the port list buys almost nothing
+
+Tested directly: 40 `/24`s around hosts we had already found (10,240 addresses)
+scanned on **74 ports** instead of 9 — 757,760 probes, 16 m 53 s, 4,231 open
+ports, 127 responding hosts.
+
+At first glance this looks like a big win: **47 % of responders were on ports
+outside the 9-port set**, with excellent yields (`:8010` 45 %, `:8120` 41 %,
+`:8110` 33 %, `:8500` 33 %, `:8006` 21 %).
+
+It is not. The 127 "hosts" are only **63 distinct IPs**, and **22 of those 63
+listen on more than one port** — one serves seven ports:
+
+```
+109.123.242.184   8000, 8010, 8090, 8100, 8110, 8120, 8140
+109.123.246.88    8002, 8006, 8008, 8010, 8084, 8110, 8120
+```
+
+Only **5 IPs were not already known**, and only 5 appeared *solely* on a
+non-standard port. So the extra ports mostly **re-find servers we already have**
+— hosting platforms and multi-tenant servers expose the same Icecast on many
+ports — while costing ~8x the probes for ~8 % more servers.
+
+**Keep the narrow default.** A wider sweep is worth running occasionally over
+*fresh* address space, because this experiment is biased: it only sampled
+neighbourhoods of servers we found on standard ports, so it cannot rule out
+servers that listen *only* on a non-standard port. The five that did turn up
+suggest such servers exist, but at roughly one-eighth the efficiency.
+
 Politeness: keep `--concurrency` modest (1024 is a reasonable ceiling), keep
 the timeout short, and scan from a host whose provider permits it.
 
