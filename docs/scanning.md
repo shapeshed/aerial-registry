@@ -129,15 +129,34 @@ the timeout short, and scan from a host whose provider permits it.
 
 ### Throughput
 
-Measured on the pilot — 12,800 addresses × 9 ports = 115,200 probes at
-concurrency 512 and a 2 s timeout — **6 m 56 s, ~277 probes/s**, with 225 ports
-open (0.2 %).
+Two measurements, both with a 2 s timeout:
+
+| run | concurrency | probes | wall time | rate | open ports |
+| --- | --- | --- | --- | --- | --- |
+| pilot (2 densest ASNs) | 512 | 115,200 | 6 m 56 s | ~277/s | 225 (0.20 %) |
+| test (79 prefixes) | 1024 | 601,344 | 16 m 17 s | ~616/s | 5,118 (0.85 %) |
 
 The rate is dominated by the connect timeout, not by the open ports: most
 probes go to addresses that neither accept nor refuse, so each one waits the
 full timeout. Throughput therefore scales roughly with `concurrency / timeout`
 rather than with bandwidth, and `--concurrency` is the main lever. Raising it
 makes the scan look more like an attack, so trade carefully.
+
+### Yields, and why a small pilot misleads
+
+The open-port rate varies by more than 4× depending on which ASNs are sampled:
+the pilot's two small ISPs gave 0.20 %, while a slice spanning VPS providers
+gave 0.85 %. **Do not extrapolate from a pilot of two ASNs** — it measures the
+sampling, not the strategy.
+
+Of the open ports, only **0.9 %** are Icecast, so port-based discovery is very
+noisy: 5,118 open ports yielded 44 servers. That is acceptable because
+enumeration is cheap — 5,118 hosts in 80 s — and because the scanner stays
+protocol-agnostic rather than growing its own Icecast check.
+
+The encouraging part: **43 of those 44 (98 %) were not already in the seed
+file**, so the scan discovers rather than rediscovers. Expect that ratio to
+fall as the seed grows.
 
 ## Phase 3 — Enumerate
 
