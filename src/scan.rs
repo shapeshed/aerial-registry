@@ -66,6 +66,10 @@ struct Source {
     listenurl: Option<String>,
     #[serde(default)]
     genre: Option<String>,
+    #[serde(default)]
+    bitrate: Option<u32>,
+    #[serde(default)]
+    listeners: Option<u32>,
 }
 
 pub async fn run(
@@ -132,7 +136,13 @@ async fn scan_hosts(
         mounts += sources.len();
         for source in &sources {
             let name = source.server_name.as_deref().unwrap_or("");
-            lines.push(format!("{host}\t{name}"));
+            let bitrate = source.bitrate.unwrap_or(0);
+            let listeners = source.listeners.unwrap_or(0);
+            let genre = source.genre.as_deref().unwrap_or("");
+            let listenurl = source.listenurl.as_deref().unwrap_or("");
+            lines.push(format!(
+                "{host}\t{name}\t{bitrate}\t{listeners}\t{genre}\t{listenurl}"
+            ));
         }
         if sample.len() < 20 {
             for s in sources.iter().take(1) {
