@@ -124,6 +124,31 @@ ports Sonar's HTTP study covered, so Icecast listening on an unlisted port is
 invisible. Probe cost is linear in ports, so widening `--ports` is a direct
 trade of coverage against time.
 
+### Most of those ports are pure noise
+
+Measured yield per port on the 20-minute test (44 Icecast servers found):
+
+| port | Icecast | open ports | yield |
+| --- | --- | --- | --- |
+| **:8010** | 17 | 85 | **20.0 %** |
+| **:8000** | 27 | 1,041 | 2.6 % |
+| :8008 | 1 | 52 | 1.9 % |
+| :8080 | 0 | 1,441 | 0 % |
+| :8443 | 0 | 1,093 | 0 % |
+| :8081 | 0 | 463 | 0 % |
+| :9000 | 0 | 428 | 0 % |
+| :8888 | 0 | 330 | 0 % |
+| :8001 | 0 | 185 | 0 % |
+
+**Every Icecast server found was on 8000, 8008 or 8010.** The other six ports
+produced nothing at all while dominating the open-port count — and `:8443`
+alone accounted for 55 % of all open ports in the wide run, because it is the
+default port for Plesk hosting panels rather than for radio.
+
+Narrowing `--ports` to `8000,8008,8010` therefore cuts probes by 3x *and*
+removes most of the enumeration work, at no observed cost in yield. Treat the
+wider set as a coverage experiment to re-run occasionally, not the default.
+
 Politeness: keep `--concurrency` modest (1024 is a reasonable ceiling), keep
 the timeout short, and scan from a host whose provider permits it.
 
