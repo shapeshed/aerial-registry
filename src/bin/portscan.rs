@@ -22,8 +22,10 @@
 //! keep `--concurrency` modest, and expect abuse reports if you do not.
 
 use std::collections::BTreeSet;
+use std::fs::File;
+use std::io::{BufWriter, Write};
 use std::net::Ipv4Addr;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use std::str::FromStr;
 use std::sync::Arc;
 use std::sync::atomic::{AtomicUsize, Ordering};
@@ -160,7 +162,21 @@ async fn main() -> anyhow::Result<()> {
         "Scanning"
     );
 
-    let found = scan(&targets, &cli.ports.0, cli.concurrency, timeout).await;
+    let partial = cli.out.as_ref().map(|path| partial_path(path));
+    let mut sink = match &partial {
+        Some(path) => Some(BufWriter::new(File::create(path)?)),
+        None => None,
+    };
+
+    let found = scan(
+        &targets,
+        &cli.ports.0,
+        cli.concurrency,
+        timeout,
+        sink.as_mut(),
+    )
+    .await?;
+    drop(sink);
 
     let lines: Vec<String> = found
         .iter()
@@ -173,6 +189,9 @@ async fn main() -> anyhow::Result<()> {
         Some(path) => {
             let path = path.to_string_lossy();
             let added = write_hosts(&path, &lines, cli.append)?;
+            if let Some(partial) = &partial {
+                let _ = std::fs::remove_file(partial);
+            }
             info!(path = %path, added, total = read_hosts(&path).len(), "Hosts written");
         }
         None => {
@@ -184,33 +203,57 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
+/// The sidecar file results are streamed to, so an interrupted multi-hour scan
+/// is not lost. Removed once the sorted output has been written.
+fn partial_path(path: &Path) -> PathBuf {
+    let mut name = path.as_os_str().to_owned();
+    name.push(".partial");
+    PathBuf::from(name)
+}
+
 /// Connect to every `(ip, port)` pair, returning the ones that accept.
+///
+/// Results are written to `sink` as they arrive rather than only at the end: a
+/// scan is long enough that losing it to an interruption is the dominant risk.
 async fn scan(
     targets: &[(u32, u32)],
     ports: &[u16],
     concurrency: usize,
     timeout: Duration,
-) -> Vec<(u32, u16)> {
+    mut sink: Option<&mut BufWriter<File>>,
+) -> std::io::Result<Vec<(u32, u16)>> {
     let progress = Arc::new(AtomicUsize::new(0));
     let ips = targets.iter().copied().flat_map(|(start, end)| start..=end);
     let pairs = ips.flat_map(|ip| ports.iter().copied().map(move |port| (ip, port)));
 
-    stream::iter(pairs)
-        .map(|(ip, port)| {
-            let progress = Arc::clone(&progress);
-            async move {
-                let open = is_open(ip, port, timeout).await;
-                let done = progress.fetch_add(1, Ordering::Relaxed) + 1;
-                if done % 200_000 == 0 {
-                    info!(scanned = done, "Progress");
+    let mut stream = Box::pin(
+        stream::iter(pairs)
+            .map(|(ip, port)| {
+                let progress = Arc::clone(&progress);
+                async move {
+                    let open = is_open(ip, port, timeout).await;
+                    let done = progress.fetch_add(1, Ordering::Relaxed) + 1;
+                    if done % 200_000 == 0 {
+                        info!(scanned = done, "Progress");
+                    }
+                    open.then_some((ip, port))
                 }
-                open.then_some((ip, port))
-            }
-        })
-        .buffer_unordered(concurrency)
-        .filter_map(|found| async move { found })
-        .collect()
-        .await
+            })
+            .buffer_unordered(concurrency)
+            .filter_map(|found| async move { found }),
+    );
+
+    let mut open = Vec::new();
+    while let Some((ip, port)) = stream.next().await {
+        open.push((ip, port));
+        if let Some(sink) = sink.as_mut() {
+            writeln!(sink, "{}:{}", Ipv4Addr::from(ip), port)?;
+        }
+    }
+    if let Some(sink) = sink.as_mut() {
+        sink.flush()?;
+    }
+    Ok(open)
 }
 
 async fn is_open(ip: u32, port: u16, timeout: Duration) -> bool {
