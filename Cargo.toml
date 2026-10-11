@@ -2,6 +2,9 @@
 name = "aerial-registry"
 version = "0.1.0"
 edition = "2024"
+# `cargo run` with no `--bin` must keep building the registry, not the
+# standalone portscan/targets helpers.
+default-run = "aerial-registry"
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
