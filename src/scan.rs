@@ -12,6 +12,7 @@
 //! the layered config (`netlas.api_key` / `shodan.api_key` / `censys.pat`).
 
 use std::collections::HashSet;
+use std::path::Path;
 use std::time::Duration;
 
 use futures::stream::{self, StreamExt};
@@ -67,16 +68,21 @@ struct Source {
     genre: Option<String>,
 }
 
-pub async fn run(client: &Client, source: Option<&str>, arg: Option<&str>) -> anyhow::Result<()> {
+pub async fn run(
+    client: &Client,
+    source: Option<&str>,
+    arg: Option<&str>,
+    responders: Option<&Path>,
+) -> anyhow::Result<()> {
     match source.unwrap_or("yp") {
-        "netlas" => netlas(client).await,
+        "netlas" => netlas(client, responders).await,
         "file" | "hosts" => {
             let hosts = load_hosts(arg.unwrap_or(DEFAULT_HOSTS_PATH))?;
-            scan_hosts(&hosts, "Hosts").await
+            scan_hosts(&hosts, "Hosts", responders).await
         }
         "shodan" => shodan(client).await,
         "censys" => censys(client).await,
-        "yp" => yellow_pages().await,
+        "yp" => yellow_pages(responders).await,
         other => {
             error!(
                 source = other,
@@ -88,7 +94,16 @@ pub async fn run(client: &Client, source: Option<&str>, arg: Option<&str>) -> an
 }
 
 /// Enumerate every host in `hosts`, reporting how many expose Icecast mounts.
-async fn scan_hosts(hosts: &[String], label: &str) -> anyhow::Result<()> {
+///
+/// When `responders` is set, every mount of every responding host is written
+/// as `host<TAB>mount name`, one line per mount. That file is how the scan is
+/// measured — the alternative is re-implementing this enumeration elsewhere,
+/// which is both wasteful and a source of divergence.
+async fn scan_hosts(
+    hosts: &[String],
+    label: &str,
+    responders: Option<&Path>,
+) -> anyhow::Result<()> {
     let http = reqwest::Client::builder()
         .timeout(Duration::from_secs(8))
         .user_agent("aerial-registry/scan")
@@ -110,10 +125,15 @@ async fn scan_hosts(hosts: &[String], label: &str) -> anyhow::Result<()> {
     let mut responsive = 0usize;
     let mut mounts = 0usize;
     let mut sample: Vec<String> = Vec::new();
+    let mut lines: Vec<String> = Vec::new();
     for (host, sources) in results {
         let Some(sources) = sources else { continue };
         responsive += 1;
         mounts += sources.len();
+        for source in &sources {
+            let name = source.server_name.as_deref().unwrap_or("");
+            lines.push(format!("{host}\t{name}"));
+        }
         if sample.len() < 20 {
             for s in sources.iter().take(1) {
                 let name = s.server_name.as_deref().unwrap_or("(unnamed)");
@@ -121,8 +141,14 @@ async fn scan_hosts(hosts: &[String], label: &str) -> anyhow::Result<()> {
                 let url = s.listenurl.as_deref().unwrap_or("");
                 sample.push(format!("  {name:<32} {genre:<14} {url}"));
             }
-            let _ = host;
         }
+    }
+
+    if let Some(path) = responders {
+        lines.sort();
+        std::fs::write(path, lines.join("\n") + "\n")
+            .map_err(|e| anyhow::anyhow!("cannot write {}: {e}", path.display()))?;
+        info!(path = %path.display(), lines = lines.len(), "Responders written");
     }
 
     println!("{label}: {host_count} hosts, {responsive} responded, {mounts} mounts");
@@ -165,7 +191,7 @@ fn save_hosts(path: &str, hosts: &[String]) -> anyhow::Result<usize> {
 }
 
 /// Fetch the public Xiph Yellow Pages directory and enumerate every listed host.
-async fn yellow_pages() -> anyhow::Result<()> {
+async fn yellow_pages(responders: Option<&Path>) -> anyhow::Result<()> {
     let http = reqwest::Client::builder()
         .timeout(Duration::from_secs(8))
         .user_agent("aerial-registry/scan")
@@ -174,7 +200,7 @@ async fn yellow_pages() -> anyhow::Result<()> {
     let xml = http.get(YP_URL).send().await?.text().await?;
     let hosts = yp_hosts(&xml);
     info!(hosts = hosts.len(), "Yellow Pages hosts parsed");
-    scan_hosts(&hosts, "Yellow Pages").await
+    scan_hosts(&hosts, "Yellow Pages", responders).await
 }
 
 /// Extract the unique hostnames from the Yellow Pages XML. The feed is a flat
@@ -250,7 +276,7 @@ fn netlas_netloc(item: &NetlasItem) -> Option<String> {
 
 /// Search Netlas for Icecast hosts, save them to the reusable seed file, then
 /// enumerate them. `netlas.size` bounds the responses downloaded per query.
-async fn netlas(client: &Client) -> anyhow::Result<()> {
+async fn netlas(client: &Client, responders: Option<&Path>) -> anyhow::Result<()> {
     let config = crate::config::get();
     let Some(key) = config.netlas.api_key.as_deref().filter(|s| !s.is_empty()) else {
         error!("No Netlas key configured — set `netlas.api_key` or AERIAL__NETLAS__API_KEY");
@@ -297,7 +323,7 @@ async fn netlas(client: &Client) -> anyhow::Result<()> {
     hosts.dedup();
     let added = save_hosts(path, &hosts)?;
     info!(hosts = hosts.len(), added, path, "Netlas hosts saved");
-    scan_hosts(&hosts, "Netlas").await
+    scan_hosts(&hosts, "Netlas", responders).await
 }
 
 async fn shodan(client: &Client) -> anyhow::Result<()> {

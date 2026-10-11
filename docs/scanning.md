@@ -142,12 +142,18 @@ makes the scan look more like an attack, so trade carefully.
 ## Phase 3 — Enumerate
 
 ```
-aerial-registry icecast-scan file icecast-hosts.txt
+aerial-registry icecast-scan file icecast-hosts.txt --responders responders.tsv
 ```
 
 This asks each host for `/status-json.xsl` and reports how many responded and
 how many mounts they expose. It is the step that distinguishes a real Icecast
 server from anything else that happens to listen on port 8000.
+
+`--responders` writes every mount of every responding host as
+`host<TAB>mount name`, one line per mount. **Always measure with this file.**
+Re-implementing the enumeration in a script duplicates the logic, diverges from
+it over time, and is how a scan gets reported as yielding nothing when it
+actually yielded something.
 
 ## Phase 4 — Integration
 
