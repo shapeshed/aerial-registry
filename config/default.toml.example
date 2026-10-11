@@ -45,3 +45,13 @@ pat = ""
 # Shodan API key (https://account.shodan.io), used for internet-wide host
 # discovery. Override with AERIAL__SHODAN__API_KEY.
 api_key = ""
+
+[netlas]
+# Netlas API key (https://app.netlas.io/profile/), sent as a bearer token and
+# used for internet-wide host discovery. Override with AERIAL__NETLAS__API_KEY.
+api_key = ""
+# Responses downloaded per query. The free plan caps a single download at 200.
+# size = 200
+# Where discovered host:port entries accumulate, for reuse by
+# `aerial-registry icecast-scan file [path]`. Default: icecast-hosts.txt.
+# hosts_path = "icecast-hosts.txt"

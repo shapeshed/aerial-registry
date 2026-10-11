@@ -41,6 +41,8 @@ pub struct AppConfig {
     pub censys: CensysConfig,
     #[serde(default)]
     pub shodan: ShodanConfig,
+    #[serde(default)]
+    pub netlas: NetlasConfig,
 }
 
 #[derive(Debug, Clone, Default, Deserialize)]
@@ -68,6 +70,23 @@ pub struct ShodanConfig {
     /// host discovery. Override with `AERIAL__SHODAN__API_KEY`.
     #[serde(default)]
     pub api_key: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, Deserialize)]
+pub struct NetlasConfig {
+    /// Netlas API key from <https://app.netlas.io/profile/>, sent as a bearer
+    /// token. Used for internet-wide host discovery. Override with
+    /// `AERIAL__NETLAS__API_KEY`.
+    #[serde(default)]
+    pub api_key: Option<String>,
+    /// How many responses to download per query (the free plan caps a single
+    /// download at 200). Override with `AERIAL__NETLAS__SIZE`.
+    #[serde(default)]
+    pub size: Option<usize>,
+    /// Where discovered `host:port` entries are accumulated for reuse. Unset
+    /// uses `icecast-hosts.txt` in the working directory.
+    #[serde(default)]
+    pub hosts_path: Option<String>,
 }
 
 static CONFIG: OnceLock<AppConfig> = OnceLock::new();
@@ -125,6 +144,10 @@ mod tests {
             "AERIAL__SHODAN__API_KEY".to_string(),
             "shodan123".to_string(),
         );
+        env.insert(
+            "AERIAL__NETLAS__API_KEY".to_string(),
+            "netlas123".to_string(),
+        );
 
         let config: AppConfig = config::Config::builder()
             .add_source(env_source().source(Some(env)))
@@ -138,6 +161,7 @@ mod tests {
         assert_eq!(config.providers.as_deref(), Some("bbc,global"));
         assert_eq!(config.censys.pat.as_deref(), Some("pat123"));
         assert_eq!(config.shodan.api_key.as_deref(), Some("shodan123"));
+        assert_eq!(config.netlas.api_key.as_deref(), Some("netlas123"));
         assert_eq!(config.skip_enrich, None);
     }
 }

@@ -27,7 +27,12 @@ async fn main() -> anyhow::Result<()> {
     }
 
     if let Some("icecast-scan") = std::env::args().nth(1).as_deref() {
-        return scan::run(&client, std::env::args().nth(2).as_deref()).await;
+        return scan::run(
+            &client,
+            std::env::args().nth(2).as_deref(),
+            std::env::args().nth(3).as_deref(),
+        )
+        .await;
     }
 
     let all = providers::discover_all(&client).await;

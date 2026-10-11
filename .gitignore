@@ -9,6 +9,9 @@ review-*.jsonl
 # config/default.toml). Note `config/*.toml` keeps the committed .example.
 config/*.toml
 
+# Discovered Icecast host lists (reusable scan seeds).
+icecast-hosts.txt
+
 # Local secrets file.
 .env
 .env.*
