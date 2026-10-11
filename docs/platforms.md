@@ -39,6 +39,73 @@ proxy front-ends, so the "one query, hundreds of mounts" trick does not apply,
 and scanning their address space is pointless. Their value is purely the
 directory/API.
 
+## AzuraCast — the highest-value enrichment path
+
+AzuraCast is an open-source, self-hosted radio automation platform (liquidsoap
+backend, Icecast or Shoutcast frontend). It is widely deployed, and it exposes a
+**public JSON API with no authentication** when public pages are enabled:
+
+| endpoint | gives |
+| --- | --- |
+| `/api/status` | `{"online": true, "timestamp": …}` — an unambiguous detection probe |
+| `/api/stations` | the full station list with metadata |
+| `/api/nowplaying` | live state: listeners, live presenter, now playing |
+
+### Why it beats `/status-json.xsl`
+
+Measured on the servers the scanner discovered:
+
+| field | `/status-json.xsl` | AzuraCast API |
+| --- | --- | --- |
+| name | `server_name` | `name` + `shortcode`, `description`, `url` |
+| genre | `genre` — was `"various"` on *every* host found | — |
+| location | — | **`timezone`** |
+| public opt-in | — | **`is_public`** |
+| live presenter | — | **`live.is_live`, `live.streamer_name`** |
+| listeners | `listeners` | **`listeners.current`** |
+| HLS | — | **`hls_url`, `hls_enabled`, `hls_listeners`** |
+| multi-station | `mounts` | `stations[]`, `mounts[]` |
+| frontend/backend | `server_type` | `frontend` (icecast/shoutcast), `backend` (liquidsoap) |
+
+Two of those matter beyond enumeration:
+
+- **`live.is_live` and `streamer_name`** give the live-presenter-vs-automated
+  distinction directly — the thing that is awkward to infer otherwise, and
+  relevant to the app's mood/For-You features.
+- **`hls_url` / `hls_enabled`** tells us when a station has an HLS variant,
+  which feeds the stream-variant/quality feature.
+
+### Adoption is high
+
+Of the 47 mounts the scanner discovered in the 20-minute test, **22 (47 %) were
+AzuraCast** by URL shape (`/listen/<shortcode>/`), plus 7 Radiolize and 13 plain
+Icecast. So this is not a niche path — it is about half of what the scanner
+finds.
+
+### Approach
+
+1. **Enrich, don't replace.** For every host enumerated, also try the public
+   URL's `/api/status`. If it answers, fetch `/api/stations` (one extra request)
+   and merge name, description, timezone, listeners, HLS and live state into the
+   record.
+2. **Respect `is_public: false`.** Skip those stations — the operator has not
+   opted into public listing. This is a hard filter, not a preference.
+3. **Detect by `/api/status`**, which is specific to AzuraCast and cheap.
+4. **Enumerate fleets, not addresses.** Radiolize numbers its fleet
+   (`s56.`, `s64.`, `s65.`, `my5.radiolize.com`) and AzuraCast installs are
+   often at `azuracast.<domain>`. Certificate Transparency for those name
+   patterns gives hosts to probe directly — no scanning required.
+
+### Caveats
+
+- The API is only present when the admin enabled public pages; many instances
+  disable it, so absence proves nothing.
+- It lives on the **web front-end (80/443)**, often behind Cloudflare, while the
+  Icecast frontend is on 8000/8010. Probing the discovered IP will not reach it —
+  we need the hostname from `listenurl`.
+- That means the `--responders` output needs to carry `listenurl` (and ideally
+  bitrate) for this enrichment to be possible downstream.
+
 ## laut.fm — the biggest single win available
 
 `https://api.laut.fm/stations` returns **16,748 stations**, free, no auth, 38 MB
