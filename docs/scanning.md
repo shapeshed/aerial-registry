@@ -118,11 +118,26 @@ portscan --targets prefixes.txt --append --out icecast-hosts.txt
 portscan 203.0.113.0/24 --ports 8000-8010
 ```
 
-Default ports are the Icecast/Shoutcast set Sonar used:
-`8000,8001,8008,8010,8080,8081,8443,8888,9000`.
+Default ports are a curated Icecast/Shoutcast subset:
+`8000,8001,8008,8010,8080,8081,8443,8888,9000`. This is a **subset** of the 62
+ports Sonar's HTTP study covered, so Icecast listening on an unlisted port is
+invisible. Probe cost is linear in ports, so widening `--ports` is a direct
+trade of coverage against time.
 
 Politeness: keep `--concurrency` modest (1024 is a reasonable ceiling), keep
 the timeout short, and scan from a host whose provider permits it.
+
+### Throughput
+
+Measured on the pilot — 12,800 addresses × 9 ports = 115,200 probes at
+concurrency 512 and a 2 s timeout — **6 m 56 s, ~277 probes/s**, with 225 ports
+open (0.2 %).
+
+The rate is dominated by the connect timeout, not by the open ports: most
+probes go to addresses that neither accept nor refuse, so each one waits the
+full timeout. Throughput therefore scales roughly with `concurrency / timeout`
+rather than with bandwidth, and `--concurrency` is the main lever. Raising it
+makes the scan look more like an attack, so trade carefully.
 
 ## Phase 3 — Enumerate
 
