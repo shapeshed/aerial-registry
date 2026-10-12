@@ -205,6 +205,7 @@ mod tests {
 
     fn station(provider: &str, id: &str, name: &str) -> Station {
         Station {
+            streams: Vec::new(),
             name: name.to_string(),
             stream_url: format!("https://example.com/{id}"),
             logo_url: None,

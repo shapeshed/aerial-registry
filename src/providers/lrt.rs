@@ -105,6 +105,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             .map(|(_, url)| (*url).to_string());
         debug!(provider = "lrt", name = %channel.channel_title, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: channel.channel_title,
             stream_url,
             logo_url,

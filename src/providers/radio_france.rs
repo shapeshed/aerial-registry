@@ -169,6 +169,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 .or_else(|| Some(brand.id.clone()));
             debug!(provider = "radio-france", name = %brand.title, %stream_url, "Discovered station");
             stations.push(Station {
+                streams: Vec::new(),
                 name: brand.title.clone(),
                 stream_url,
                 logo_url: logo_url.clone(),
@@ -200,6 +201,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 .or(Some(radio.id));
             debug!(provider = "radio-france", %name, %stream_url, "Discovered web radio");
             stations.push(Station {
+                streams: Vec::new(),
                 name,
                 stream_url,
                 logo_url: logo_url.clone(),
@@ -231,6 +233,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 .or(Some(radio.id));
             debug!(provider = "radio-france", %name, %stream_url, "Discovered local radio");
             stations.push(Station {
+                streams: Vec::new(),
                 name,
                 stream_url,
                 logo_url: logo_url.clone(),

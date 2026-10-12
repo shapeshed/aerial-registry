@@ -54,6 +54,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let logo_url = extract(&html, "\"poster\":\"");
         debug!(provider = "mrt", name = display_name, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: display_name.to_string(),
             stream_url,
             logo_url,

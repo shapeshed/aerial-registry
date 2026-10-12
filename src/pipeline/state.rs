@@ -189,6 +189,7 @@ mod tests {
     #[test]
     fn key_falls_back_to_stream_url() {
         let station = Station {
+            streams: Vec::new(),
             name: "X".to_string(),
             stream_url: "https://example.com/x".to_string(),
             logo_url: None,

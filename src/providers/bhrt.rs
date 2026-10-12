@@ -25,6 +25,7 @@ const BH_RADIO_1_LOGO: &str = "https://upload.wikimedia.org/wikipedia/commons/th
 /// cleanly).
 pub async fn discover(_client: &Client) -> Vec<Station> {
     let station = Station {
+        streams: Vec::new(),
         name: "BH Radio 1".to_string(),
         stream_url: BH_RADIO_1_STREAM.to_string(),
         logo_url: Some(BH_RADIO_1_LOGO.to_string()),

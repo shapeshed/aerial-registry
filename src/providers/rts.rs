@@ -70,6 +70,7 @@ fn parse_channels(body: &str) -> Vec<Station> {
         let logo_url = field(block, "poster").or_else(|| field(block, "img"));
         debug!(provider = PROVIDER, name, %url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name,
             stream_url: url,
             logo_url,

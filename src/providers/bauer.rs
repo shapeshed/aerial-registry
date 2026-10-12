@@ -2,7 +2,7 @@ use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error};
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const COUNTRIES: &[(&str, &str, &str)] = &[
     (
@@ -30,6 +30,12 @@ struct BauerStation {
 #[serde(rename_all = "camelCase")]
 struct BauerStream {
     stream_url: Option<String>,
+    stream_type: Option<String>,
+    stream_bit_rate: Option<u32>,
+    #[serde(default)]
+    stream_premium: bool,
+    #[serde(default)]
+    stream_users_only: bool,
 }
 
 pub async fn discover(client: &Client) -> Vec<Station> {
@@ -65,18 +71,38 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 Some(n) => n,
                 None => continue,
             };
-            let stream_url = match s
-                .station_streams
-                .and_then(|streams| streams.into_iter().next())
-                .and_then(|s| s.stream_url)
-                .filter(|u| !u.is_empty())
-            {
-                Some(u) => u,
-                None => continue,
+            let streams = s.station_streams.unwrap_or_default();
+            let Some(stream_url) = streams
+                .iter()
+                .find_map(|st| st.stream_url.clone().filter(|u| !u.is_empty()))
+            else {
+                continue;
             };
+            // Public, non-HLS fixed-bitrate streams make good variants; the
+            // premium/HD and HLS entries are left out.
+            let variants: Vec<StreamVariant> = streams
+                .iter()
+                .filter(|st| !st.stream_premium && !st.stream_users_only)
+                .filter(|st| matches!(st.stream_type.as_deref(), Some("adts") | Some("mp3")))
+                .filter_map(|st| {
+                    st.stream_url
+                        .clone()
+                        .filter(|u| !u.is_empty())
+                        .map(|url| StreamVariant {
+                            url,
+                            bitrate: st.stream_bit_rate,
+                            format: st.stream_type.clone(),
+                        })
+                })
+                .collect();
 
             debug!(provider = "bauer", %name, %stream_url, "Discovered station");
             stations.push(Station {
+                streams: if variants.len() > 1 {
+                    variants
+                } else {
+                    Vec::new()
+                },
                 name,
                 stream_url,
                 logo_url: s.station_listen_bar_logo.filter(|u| !u.is_empty()),

@@ -80,6 +80,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let stream_url = format!("{STREAM_BASE}/{widget_id}/stream");
         debug!(provider = PROVIDER, name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: name.clone(),
             stream_url,
             logo_url: logo_for(&name),

@@ -56,6 +56,7 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
             let stream_url = format!("https://radio.vaticannews.va/stream-{code}");
             debug!(provider = "vatican-radio", name = display_name, %stream_url, "Discovered station");
             Station {
+            streams: Vec::new(),
                 name: (*display_name).to_string(),
                 stream_url,
                 logo_url: Some(LOGO.to_string()),

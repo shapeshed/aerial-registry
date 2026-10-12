@@ -4,7 +4,7 @@ use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error};
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const COUNTRY: &str = "Romania";
 const COUNTRY_CODE: &str = "RO";
@@ -22,6 +22,17 @@ const LOGO_BASE: &str = "https://www.romania-actualitati.ro/templates/default/im
 /// not map mechanically onto the file name, so the mapping is explicit. Mounts
 /// with no published mark (Antena Sibiului, Radio Sighet, the Junior channels)
 /// return `None` and fall back to enrichment.
+fn mount_format(mount: &str) -> Option<String> {
+    let mount = mount.to_ascii_lowercase();
+    if mount.contains("aac") {
+        Some("aac".into())
+    } else if mount.contains("mp3") {
+        Some("mp3".into())
+    } else {
+        None
+    }
+}
+
 fn logo_for(mount: &str) -> Option<String> {
     let file = match mount {
         "romania-actualitati" => "logo-actualitati.svg",
@@ -129,10 +140,10 @@ fn parse_status(body: &str) -> serde_json::Result<Vec<Station>> {
         None => Vec::new(),
     };
 
-    // SRR sometimes lists the same service on two mounts (e.g. an AAC and an
-    // MP3 feed of Radio Reșița). Keep the busiest mount per name so the app
-    // doesn't show duplicate stations.
-    let mut best: HashMap<String, (u64, Station)> = HashMap::new();
+    // SRR lists some services on two mounts (e.g. an AAC and an MP3 feed of
+    // Radio Reșița). Group them into one station: the busiest mount becomes the
+    // primary `stream_url`, the rest become variants.
+    let mut groups: HashMap<String, Vec<(u64, String, String)>> = HashMap::new();
     for source in sources {
         let Some(mount) = source
             .listenurl
@@ -154,28 +165,45 @@ fn parse_status(body: &str) -> serde_json::Result<Vec<Station>> {
         };
 
         let listeners = source.listeners.unwrap_or(0);
-        let station = Station {
-            name: name.clone(),
-            stream_url: format!("{STREAM_BASE}/{mount}"),
-            logo_url: logo_for(mount),
-            country: Some(COUNTRY.into()),
-            country_code: Some(COUNTRY_CODE.into()),
-            tags: vec![],
-            description: None,
-            provider: PROVIDER.into(),
-            provider_id: Some(mount.to_string()),
-            trusted: true,
-        };
-
-        match best.get(&name) {
-            Some((existing, _)) if *existing >= listeners => {}
-            _ => {
-                best.insert(name, (listeners, station));
-            }
-        }
+        let url = format!("{STREAM_BASE}/{mount}");
+        groups
+            .entry(name)
+            .or_default()
+            .push((listeners, mount.to_string(), url));
     }
 
-    let mut stations: Vec<Station> = best.into_values().map(|(_, s)| s).collect();
+    let mut stations: Vec<Station> = groups
+        .into_iter()
+        .filter_map(|(name, mut mounts)| {
+            mounts.sort_by(|a, b| b.0.cmp(&a.0));
+            let (_, primary_mount, primary_url) = mounts.first()?.clone();
+            let variants: Vec<StreamVariant> = mounts
+                .iter()
+                .map(|(_, mount, url)| StreamVariant {
+                    url: url.clone(),
+                    bitrate: None,
+                    format: mount_format(mount),
+                })
+                .collect();
+            Some(Station {
+                streams: if variants.len() > 1 {
+                    variants
+                } else {
+                    Vec::new()
+                },
+                name,
+                stream_url: primary_url,
+                logo_url: logo_for(&primary_mount),
+                country: Some(COUNTRY.into()),
+                country_code: Some(COUNTRY_CODE.into()),
+                tags: vec![],
+                description: None,
+                provider: PROVIDER.into(),
+                provider_id: Some(primary_mount),
+                trusted: true,
+            })
+        })
+        .collect();
     stations.sort_by(|a, b| a.name.cmp(&b.name));
     for station in &stations {
         debug!(provider = PROVIDER, name = %station.name, url = %station.stream_url, "Discovered station");

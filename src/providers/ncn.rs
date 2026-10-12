@@ -58,6 +58,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         };
         debug!(provider = PROVIDER, name = %listing.name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: listing.name.clone(),
             stream_url,
             logo_url: listing.logo.clone(),

@@ -99,7 +99,14 @@ pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<
                 }
 
                 let _permit = sem.acquire().await.unwrap();
-                match validate_imported_stream_url(&client, &station.stream_url).await {
+                let primary = validate_imported_stream_url(&client, &station.stream_url).await;
+                drop(_permit);
+                // Probe each fixed-bitrate variant too, dropping dead ones so the
+                // app never offers a bitrate that no longer works.
+                if !station.streams.is_empty() {
+                    station.streams = live_variants(&client, &sem, station.streams).await;
+                }
+                match primary {
                     Ok(live_url) => {
                         let upgraded = live_url != station.stream_url;
                         if upgraded {
@@ -249,6 +256,32 @@ pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<
         "Liveness check complete"
     );
     live
+}
+
+/// Probe each fixed-bitrate variant and keep the live ones. A variant that is
+/// deterministically gone is dropped; inconclusive or connection failures are
+/// kept, since a single build location says nothing reliable about them.
+async fn live_variants(
+    client: &crate::http::Client,
+    sem: &Semaphore,
+    variants: Vec<crate::station::StreamVariant>,
+) -> Vec<crate::station::StreamVariant> {
+    let mut kept = Vec::with_capacity(variants.len());
+    for variant in variants {
+        let _permit = sem.acquire().await.unwrap();
+        match validate_imported_stream_url(client, &variant.url).await {
+            Ok(url) => kept.push(crate::station::StreamVariant { url, ..variant }),
+            Err(failure) if failure.is_deterministic() => {
+                debug!(
+                    url = %variant.url,
+                    reason = failure.status(),
+                    "Dropped dead stream variant"
+                );
+            }
+            Err(_) => kept.push(variant),
+        }
+    }
+    kept
 }
 
 pub async fn validate_imported_stream_url(
