@@ -202,21 +202,41 @@ full timeout. Throughput therefore scales roughly with `concurrency / timeout`
 rather than with bandwidth, and `--concurrency` is the main lever. Raising it
 makes the scan look more like an attack, so trade carefully.
 
-### Yields, and why a small pilot misleads
+### Results, and why a small pilot misleads
+
+The first full run finished with **1,187 new stations** from 113,218 enumerated open
+ports; the second, covering the remaining 41 % of address space on the narrowed
+port set, added **1,285 more**. Final totals across both runs:
+
+| | |
+| --- | --- |
+| distinct responding hosts | 1,532 |
+| distinct stations | 2,516 |
+| **new stations** | **2,472** |
+| new hosts | 1,505 |
 
 The open-port rate varies by more than 4× depending on which ASNs are sampled:
 the pilot's two small ISPs gave 0.20 %, while a slice spanning VPS providers
 gave 0.85 %. **Do not extrapolate from a pilot of two ASNs** — it measures the
 sampling, not the strategy.
 
-Of the open ports, only **0.9 %** are Icecast, so port-based discovery is very
-noisy: 5,118 open ports yielded 44 servers. That is acceptable because
-enumeration is cheap — 5,118 hosts in 80 s — and because the scanner stays
-protocol-agnostic rather than growing its own Icecast check.
+The narrowing recommendation was validated more strongly than predicted:
 
-The encouraging part: **43 of those 44 (98 %) were not already in the seed
-file**, so the scan discovers rather than rediscovers. Expect that ratio to
-fall as the seed grows.
+| run | ports | Icecast hosts / open ports | rate |
+| --- | --- | --- | --- |
+| 1 | 9 | 285 / 113,218 | 0.25 % |
+| 2 | 4 | **756 / 20,428** | **3.70 %** |
+
+**14.8× more servers found per open port.** Run 1's enumeration budget was
+mostly spent on `:8443` and friends, which yield nothing; on the four
+productive ports nearly every open port is worth probing.
+
+Of the open ports, roughly **1 %** are Icecast on the nine-port set and
+**3.7 %** on the narrowed set, so port-based discovery is noisy — but that is
+acceptable because enumeration is cheap (5,118 hosts in 80 s), and because the
+scanner stays protocol-agnostic rather than growing its own Icecast check.
+
+Expect the newness ratio to fall as the seed grows.
 
 ## Phase 3 — Enumerate
 
