@@ -106,136 +106,27 @@ finds.
 - That means the `--responders` output needs to carry `listenurl` (and ideally
   bitrate) for this enrichment to be possible downstream.
 
-## RadioDNS — the UK broadcaster tier
+## RadioDNS — the broadcaster tier
 
-**Status: decision taken to use the SI.xml.** The mechanism and the licensing
-position are recorded here so the choice is deliberate rather than drifting.
+**See `docs/radiodns.md` for the full treatment.** RadioDNS maps a broadcast
+identity (FM frequency + RDS PI code, or DAB ensemble/service IDs) to a
+broadcaster's own metadata document, which carries station names, artwork and IP
+stream variants with bitrate, codec and a broadcaster-set preference.
 
-### The mechanism
+It is the only source found so far that covers the **high-quality broadcaster
+tier** properly, and it is per-country: the identity bootstrap comes from
+regulator data (Ofcom, the NRSC/FCC table) where it exists, a domain probe where
+broadcasters have predictable names, and a DNS sweep as a last resort.
 
-RadioDNS maps a *broadcast* identity to a broadcaster's own metadata server:
+Verified: **UK** (Global, Bauer, BBC — 362 stations), **Sweden** (Sveriges Radio,
+KHZ — 52), **Norway** (NRK + local radio — 129, logos only because the market is
+DAB-only), **USA** (EMF — 15, HLS). Iceland has no FM RadioDNS entries at all,
+proven by a full-band sweep.
 
-```
-FM:  <freq×100kHz>.<pi>.<gcc>.fm.radiodns.org   →  CNAME →  authoritative FQDN
-     10620.c460.ce1.fm.radiodns.org              →  rdns.musicradio.com
-SRV: _radioepg._tcp.<fqdn>                       →  host:port
-SI:  http://<host>:<port>/radiodns/spi/3.1/SI.xml
-```
-
-`gcc` is not a free dimension: it is the PI code's first nibble plus the
-country's ECC, so a country's FM space is `205 frequencies × PI values` — about
-839,680 names for the UK. **The space does not need sweeping**: `radiodns.uk`
-publishes a directory of all 511 UK services across 31 authorities, derived from
-Ofcom's technical parameters plus the SPI files.
-
-Verified authorities:
-
-| authority FQDN | broadcaster | services | SI server |
-| --- | --- | --- | --- |
-| `rdns.musicradio.com` | Global | 150 | `epg.musicradio.com` |
-| `planetradio.co.uk` | Bauer Radio | 142 | `listenapi.planetradio.co.uk` |
-| `radiodns.api.bbci.co.uk` | BBC | 70 | `radiospi.api.bbci.co.uk` |
-| `rdns.aiir.net` | Aiir (community hosting) | 116 | — |
-| `wireless.radiodns.metadata.radio` | News Broadcasting | 10 | — |
-
-### The yield
-
-Three SI fetches (1.04 MB total):
-
-| | |
-| --- | --- |
-| stations | **362** |
-| with a logo | **362 (100 %)** — up to 800 px, 2,512 `<multimedia>` entries |
-| with a genre | 216 (60 %) |
-| with a description | 362 (100 %) |
-| with **more than one stream** | **142 (39 %)** |
-
-Bearer entries map directly onto our variant model, and carry more than we do
-today — bitrate, codec and a broadcaster-set preference:
-
-```
-48kbps  cost=70  audio/aacp  https://media-ssl.musicradio.com/CapitalBirmingham
-128kbps cost=73  audio/mpeg  https://media-ssl.musicradio.com/CapitalBirminghamMP3
-```
-
-`cost` is the broadcaster's own quality preference, which is exactly the
-"relative stream rates" signal. Genre vocabulary is controlled (18 values from
-Global) rather than free-form. Each service also carries a stable
-`serviceIdentifier` (`capitalbirmingham`), which solves the cross-run identity
-problem for this tier.
-
-### Licensing, and the decision
-
-The **Radio Device Metadata Terms of Use v1.00** (`radiodns.org/terms/metadata/1.0/`)
-are written for device manufacturers. Notably it states that copyright and
-trademark in the metadata remain with the broadcaster, that no rights in logos
-are transferred, that metadata URIs **must not be exposed to the end user**, and
-that metadata must not be stored beyond the stipulated caching time or
-aggregated.
-
-**Decision: use the SI.xml anyway.** The DNS layer is public, the app is free
-and non-commercial, naming the station it plays is nominative rather than
-redistributive, and the alternative sources for this tier are worse. This is a
-recorded judgement call by the maintainer, not an oversight — the restriction is
-a contract with the broadcaster, so any objection would come from them rather
-than from RadioDNS.
-
-Two consequences to handle deliberately:
-
-1. **Attribute.** Where this data is used, credit RadioDNS and the broadcaster.
-2. **Do not sell.** Non-commercial use is part of the basis for the decision.
-
-### Discovering the authorities — use regulator data
-
-The FQDN for a station cannot be guessed: `rdns.musicradio.com`,
-`planetradio.co.uk` and `radiodns.api.bbci.co.uk` share no pattern. So each
-broadcaster has to be bootstrapped from **one real broadcast identity**, and the
-source of that identity is the whole game.
-
-**Decision: use regulator data where a table exists; sweep only as a fallback.**
-
-| country | identity source | status |
-| --- | --- | --- |
-| **UK** | Ofcom transmitter parameters spreadsheet | ✅ verified — 3 SIs → 362 stations |
-| **USA** | `picodes.nrscstandards.org` — 9,096 FM stations with call sign, PI code, frequency and facility ID, regenerated daily from the FCC LMS | ✅ verified → `radiodns.emfeng.com` |
-| Germany | ARD/VAUnet publish; BNetzA for frequencies | candidates, unverified |
-| France | Arcom frequency assignments | candidate, unverified |
-| Australia | ACMA Radiocommunications Licence Register | candidate, unverified |
-| Canada | CRTC / Radioplayer Canada | candidate, unverified |
-| Nordics | NRK/SR/DR publish their own EPG | candidate, unverified |
-
-The US table exists *because* of RadioDNS: the NRSC states that translator PI
-codes were assigned with an algorithm "to be usable by the RadioDNS service
-which requires every carrier frequency/PI code combination to be unique".
-
-**The fallback is a DNS sweep**, proven on the UK (5 authorities, 38 identities
-from 30,000 names). Its economics:
-
-| | |
-| --- | --- |
-| full FM space per country | 205 frequencies × 4,096 PI codes = 839,680 names |
-| rate via a public resolver | ~218 names/s |
-| full sweep | **~64 min per country** |
-| hit density (UK) | 0.127 %, implying ~1,070 UK identities — matching radiodns.uk's 1,275 transmitter sites |
-
-Two operational notes from doing this:
-
-- **Never query the authoritative nameserver directly.** `ns1.radiodns.org`
-  answers ~20 % with 39 % timeouts under load; the same query via a public
-  resolver answers 96/96 in 0.3 s. The throttling is self-inflicted.
-- **A sampled sweep proves nothing.** With ~3 transmitters in Iceland's
-  839,680-name space, a 40,000-name sample has 0.14 expected hits. Size the
-  sweep from the expected station count, or don't run it.
-- Narrowing by frequency is only sound if the frequency list is *complete* —
-  a national network is dozens of transmitters, not the one or two Wikipedia
-  lists.
-
-### Coverage
-
-UK-centric, because RadioDNS was driven by the BBC, Global and Bauer — and the
-UK is also the only country with a ready-made directory (`radiodns.uk`) and
-logo packs. RadioDNS covers 26 countries, but per-broadcaster discovery has to
-be done per country via `radiodns.org/coverage/`.
+Two caveats: **Radioplayer** (the independents tier, ~176 UK stations) is
+partner-gated and its registrations are dangling, and the broadcaster metadata
+terms of use are restrictive. The decision to use the SI anyway, and its basis,
+are recorded in `docs/radiodns.md`.
 
 ## laut.fm — the biggest single win available
 
