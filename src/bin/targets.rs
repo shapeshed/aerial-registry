@@ -36,6 +36,8 @@ const RIPE_PREFIXES_URL: &str = "https://stat.ripe.net/data/announced-prefixes/d
 const DEFAULT_HOSTS: &str = "icecast-hosts.txt";
 /// The `iptoasn` dump is regenerated daily; a week is plenty fresh.
 const TABLE_MAX_AGE: Duration = Duration::from_secs(7 * 24 * 60 * 60);
+/// DNS lookups in flight while resolving the seed.
+const RESOLVE_CONCURRENCY: usize = 64;
 
 /// Expand known radio hosts into the ASN prefixes worth scanning.
 #[derive(Parser, Debug)]
@@ -145,7 +147,7 @@ async fn main() -> anyhow::Result<()> {
         .timeout(Duration::from_secs(60))
         .build()?;
 
-    let ips = read_hosts(&cli.hosts)?;
+    let ips = read_hosts(&cli.hosts).await?;
     if ips.is_empty() {
         warn!("No usable hosts found — nothing to expand");
         return Ok(());
@@ -253,22 +255,53 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-/// Read every host file and return the unique IPv4 addresses in them.
-fn read_hosts(paths: &[String]) -> anyhow::Result<Vec<u32>> {
-    let mut ips: Vec<u32> = Vec::new();
+/// Read every host file and resolve the entries to unique IPv4 addresses.
+///
+/// Seeds are mostly **hostnames** (`station.example.com:8000`), not bare IPs.
+/// The previous version accepted only dotted quads and silently skipped
+/// everything else, which threw away almost the whole seed.
+async fn read_hosts(paths: &[String]) -> anyhow::Result<Vec<u32>> {
+    let mut specs: Vec<String> = Vec::new();
     for path in paths {
         let text = std::fs::read_to_string(path)
             .map_err(|e| anyhow::anyhow!("cannot read hosts {path}: {e}"))?;
         for line in text.lines() {
             let line = line.split('#').next().unwrap_or("").trim();
-            if let Some(ip) = parse_host(line) {
-                ips.push(ip);
+            if !line.is_empty() {
+                specs.push(line.to_string());
             }
         }
     }
+    specs.sort_unstable();
+    specs.dedup();
+    let total = specs.len();
+
+    let mut ips: Vec<u32> = stream::iter(specs)
+        .map(|spec| async move { resolve(&spec).await })
+        .buffer_unordered(RESOLVE_CONCURRENCY)
+        .filter_map(|ip| async move { ip })
+        .collect()
+        .await;
     ips.sort_unstable();
     ips.dedup();
+
+    info!(specs = total, resolved = ips.len(), "Hosts resolved to IPs");
     Ok(ips)
+}
+
+/// Parse `1.2.3.4` / `1.2.3.4:8000`, or resolve a hostname to its first IPv4.
+async fn resolve(spec: &str) -> Option<u32> {
+    if let Some(ip) = parse_host(spec) {
+        return Some(ip);
+    }
+    let host = spec.split(':').next()?.trim();
+    tokio::net::lookup_host((host, 0))
+        .await
+        .ok()?
+        .find_map(|addr| match addr {
+            std::net::SocketAddr::V4(v4) => Some(u32::from(*v4.ip())),
+            std::net::SocketAddr::V6(_) => None,
+        })
 }
 
 /// Accept `1.2.3.4` and `1.2.3.4:8000`; ignore anything that is not an IPv4.
