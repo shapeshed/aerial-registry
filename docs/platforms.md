@@ -106,6 +106,92 @@ finds.
 - That means the `--responders` output needs to carry `listenurl` (and ideally
   bitrate) for this enrichment to be possible downstream.
 
+## RadioDNS — the UK broadcaster tier
+
+**Status: decision taken to use the SI.xml.** The mechanism and the licensing
+position are recorded here so the choice is deliberate rather than drifting.
+
+### The mechanism
+
+RadioDNS maps a *broadcast* identity to a broadcaster's own metadata server:
+
+```
+FM:  <freq×100kHz>.<pi>.<gcc>.fm.radiodns.org   →  CNAME →  authoritative FQDN
+     10620.c460.ce1.fm.radiodns.org              →  rdns.musicradio.com
+SRV: _radioepg._tcp.<fqdn>                       →  host:port
+SI:  http://<host>:<port>/radiodns/spi/3.1/SI.xml
+```
+
+`gcc` is not a free dimension: it is the PI code's first nibble plus the
+country's ECC, so a country's FM space is `205 frequencies × PI values` — about
+839,680 names for the UK. **The space does not need sweeping**: `radiodns.uk`
+publishes a directory of all 511 UK services across 31 authorities, derived from
+Ofcom's technical parameters plus the SPI files.
+
+Verified authorities:
+
+| authority FQDN | broadcaster | services | SI server |
+| --- | --- | --- | --- |
+| `rdns.musicradio.com` | Global | 150 | `epg.musicradio.com` |
+| `planetradio.co.uk` | Bauer Radio | 142 | `listenapi.planetradio.co.uk` |
+| `radiodns.api.bbci.co.uk` | BBC | 70 | `radiospi.api.bbci.co.uk` |
+| `rdns.aiir.net` | Aiir (community hosting) | 116 | — |
+| `wireless.radiodns.metadata.radio` | News Broadcasting | 10 | — |
+
+### The yield
+
+Three SI fetches (1.04 MB total):
+
+| | |
+| --- | --- |
+| stations | **362** |
+| with a logo | **362 (100 %)** — up to 800 px, 2,512 `<multimedia>` entries |
+| with a genre | 216 (60 %) |
+| with a description | 362 (100 %) |
+| with **more than one stream** | **142 (39 %)** |
+
+Bearer entries map directly onto our variant model, and carry more than we do
+today — bitrate, codec and a broadcaster-set preference:
+
+```
+48kbps  cost=70  audio/aacp  https://media-ssl.musicradio.com/CapitalBirmingham
+128kbps cost=73  audio/mpeg  https://media-ssl.musicradio.com/CapitalBirminghamMP3
+```
+
+`cost` is the broadcaster's own quality preference, which is exactly the
+"relative stream rates" signal. Genre vocabulary is controlled (18 values from
+Global) rather than free-form. Each service also carries a stable
+`serviceIdentifier` (`capitalbirmingham`), which solves the cross-run identity
+problem for this tier.
+
+### Licensing, and the decision
+
+The **Radio Device Metadata Terms of Use v1.00** (`radiodns.org/terms/metadata/1.0/`)
+are written for device manufacturers. Notably it states that copyright and
+trademark in the metadata remain with the broadcaster, that no rights in logos
+are transferred, that metadata URIs **must not be exposed to the end user**, and
+that metadata must not be stored beyond the stipulated caching time or
+aggregated.
+
+**Decision: use the SI.xml anyway.** The DNS layer is public, the app is free
+and non-commercial, naming the station it plays is nominative rather than
+redistributive, and the alternative sources for this tier are worse. This is a
+recorded judgement call by the maintainer, not an oversight — the restriction is
+a contract with the broadcaster, so any objection would come from them rather
+than from RadioDNS.
+
+Two consequences to handle deliberately:
+
+1. **Attribute.** Where this data is used, credit RadioDNS and the broadcaster.
+2. **Do not sell.** Non-commercial use is part of the basis for the decision.
+
+### Coverage
+
+UK-centric, because RadioDNS was driven by the BBC, Global and Bauer — and the
+UK is also the only country with a ready-made directory (`radiodns.uk`) and
+logo packs. RadioDNS covers 26 countries, but per-broadcaster discovery has to
+be done per country via `radiodns.org/coverage/`.
+
 ## laut.fm — the biggest single win available
 
 `https://api.laut.fm/stations` returns **16,748 stations**, free, no auth, 38 MB
