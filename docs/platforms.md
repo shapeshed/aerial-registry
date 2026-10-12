@@ -185,6 +185,51 @@ Two consequences to handle deliberately:
 1. **Attribute.** Where this data is used, credit RadioDNS and the broadcaster.
 2. **Do not sell.** Non-commercial use is part of the basis for the decision.
 
+### Discovering the authorities — use regulator data
+
+The FQDN for a station cannot be guessed: `rdns.musicradio.com`,
+`planetradio.co.uk` and `radiodns.api.bbci.co.uk` share no pattern. So each
+broadcaster has to be bootstrapped from **one real broadcast identity**, and the
+source of that identity is the whole game.
+
+**Decision: use regulator data where a table exists; sweep only as a fallback.**
+
+| country | identity source | status |
+| --- | --- | --- |
+| **UK** | Ofcom transmitter parameters spreadsheet | ✅ verified — 3 SIs → 362 stations |
+| **USA** | `picodes.nrscstandards.org` — 9,096 FM stations with call sign, PI code, frequency and facility ID, regenerated daily from the FCC LMS | ✅ verified → `radiodns.emfeng.com` |
+| Germany | ARD/VAUnet publish; BNetzA for frequencies | candidates, unverified |
+| France | Arcom frequency assignments | candidate, unverified |
+| Australia | ACMA Radiocommunications Licence Register | candidate, unverified |
+| Canada | CRTC / Radioplayer Canada | candidate, unverified |
+| Nordics | NRK/SR/DR publish their own EPG | candidate, unverified |
+
+The US table exists *because* of RadioDNS: the NRSC states that translator PI
+codes were assigned with an algorithm "to be usable by the RadioDNS service
+which requires every carrier frequency/PI code combination to be unique".
+
+**The fallback is a DNS sweep**, proven on the UK (5 authorities, 38 identities
+from 30,000 names). Its economics:
+
+| | |
+| --- | --- |
+| full FM space per country | 205 frequencies × 4,096 PI codes = 839,680 names |
+| rate via a public resolver | ~218 names/s |
+| full sweep | **~64 min per country** |
+| hit density (UK) | 0.127 %, implying ~1,070 UK identities — matching radiodns.uk's 1,275 transmitter sites |
+
+Two operational notes from doing this:
+
+- **Never query the authoritative nameserver directly.** `ns1.radiodns.org`
+  answers ~20 % with 39 % timeouts under load; the same query via a public
+  resolver answers 96/96 in 0.3 s. The throttling is self-inflicted.
+- **A sampled sweep proves nothing.** With ~3 transmitters in Iceland's
+  839,680-name space, a 40,000-name sample has 0.14 expected hits. Size the
+  sweep from the expected station count, or don't run it.
+- Narrowing by frequency is only sound if the frequency list is *complete* —
+  a national network is dozens of transmitters, not the one or two Wikipedia
+  lists.
+
 ### Coverage
 
 UK-centric, because RadioDNS was driven by the BBC, Global and Bauer — and the
