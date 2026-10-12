@@ -15,6 +15,8 @@ pub mod ert;
 pub mod fluxfm;
 pub mod global;
 pub mod hrt;
+pub mod icecast_enum;
+pub mod icecast_yp;
 pub mod irtp;
 pub mod latvijas_radio;
 pub mod lrt;
@@ -69,12 +71,12 @@ use tracing::info;
 
 use crate::station::Station;
 
-/// The subset of providers to run, from `AERIAL_PROVIDERS`: a comma-separated
+/// The subset of providers to run, from `AERIAL__PROVIDERS`: a comma-separated
 /// list of provider slugs matching the `provider` field written to the registry
 /// (e.g. `global`, `bbc`, `radio-france`). Unset or empty runs every provider,
 /// which is the normal nightly behaviour.
 fn provider_filter() -> Option<HashSet<String>> {
-    let value = std::env::var("AERIAL_PROVIDERS").ok()?;
+    let value = crate::config::get().providers.clone()?;
     let wanted: HashSet<String> = value
         .split(',')
         .map(|s| s.trim().to_ascii_lowercase())
@@ -145,6 +147,12 @@ pub async fn discover_all(client: &crate::http::Client) -> Vec<Station> {
     }
     if selected("hrt") {
         futures.push(Box::pin(hrt::discover(client)));
+    }
+    if selected("icecast-enum") {
+        futures.push(Box::pin(icecast_enum::discover(client)));
+    }
+    if selected("icecast-yp") {
+        futures.push(Box::pin(icecast_yp::discover(client)));
     }
     if selected("irtp") {
         futures.push(Box::pin(irtp::discover(client)));

@@ -39,11 +39,12 @@ snapshot built from a local pipeline run and tested on a device before it
 ships — so there is nothing published for the guard to pull from either.
 Instead it reads a local file:
 
-- `AERIAL_PREVIOUS_REGISTRY_PATH` points at a `registry.json` or
-  `registry.json.gz` to compare against — typically a local copy of the
-  app's currently-shipped `app/src/main/registry/registry.json`, i.e. the
-  last human-approved state. The nightly workflow checks out `shapeshed/aerial`
-  read-only to get this file; a local run points it at your own checkout.
+- `previous_registry_path` (env `AERIAL__PREVIOUS_REGISTRY_PATH`) points at a
+  `registry.json` or `registry.json.gz` to compare against — typically a local
+  copy of the app's currently-shipped `app/src/main/registry/registry.json`,
+  i.e. the last human-approved state. The nightly workflow checks out
+  `shapeshed/aerial` read-only to get this file; a local run points it at your
+  own checkout.
 - Unset (the common case for an ad hoc local run) disables the guard.
 
 This is deliberately stateless on its own — the last-shipped registry is the
@@ -53,8 +54,9 @@ network fetch.
 ## Step 2 — station state store and prune hysteresis (implemented)
 
 `src/pipeline/state.rs` holds a small SQLite database (`state.db`, override
-with `AERIAL_STATE_DB`; empty string disables it and hysteresis with it),
-persisted between nightly runs at `s3://<bucket>/state/state.db`:
+with `state_db` / `AERIAL__STATE_DB`; an empty string disables it and
+hysteresis with it), persisted between nightly runs at
+`s3://<bucket>/state/state.db`:
 
 ```sql
 CREATE TABLE station_state (
@@ -88,6 +90,13 @@ Rules (enforced in `src/pipeline/liveness.rs`):
 - **Trusted providers never auto-prune.** Liveness skips them entirely.
   Opening a GitHub issue when a trusted station fails repeatedly lands with
   the diff report in step 3.
+- **Curated stations are likewise never auto-pruned by the nightly build.**
+  They are hand-picked and reviewed; genuinely dead curated entries are
+  handled deliberately via `prune-curated`, not by the nightly liveness pass.
+- **Connection failures go through hysteresis.** `ConnectionError` is not
+  deterministic: from a single build location it can be a transient failure or
+  a geo-block that drops the connection, so it counts toward the three-strike
+  streak rather than pruning on the first night.
 - **Renames are updates, not churn.** Same `(provider, provider_id)` with a
   changed name or stream URL keeps its row and its `first_seen`; surfacing
   the change lands with the diff report in step 3.

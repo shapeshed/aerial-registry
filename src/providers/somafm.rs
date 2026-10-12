@@ -2,7 +2,7 @@ use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error, warn};
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const CHANNELS_URL: &str = "https://somafm.com/channels.json";
 
@@ -26,17 +26,17 @@ struct SomaFmChannel {
 struct SomaFmPlaylist {
     url: String,
     format: String,
-    quality: String,
 }
 
-/// Highest-bitrate MP3 for broadest player compatibility; falls back to any
-/// MP3 entry, then to whatever the channel lists first.
-fn preferred_playlist(playlists: &[SomaFmPlaylist]) -> Option<&SomaFmPlaylist> {
-    playlists
+/// Primary stream for the station: highest-bitrate MP3 for broadest player
+/// compatibility, else the highest bitrate of any format, else the first.
+fn preferred_variant(variants: &[StreamVariant]) -> Option<String> {
+    variants
         .iter()
-        .find(|p| p.format == "mp3" && p.quality == "highest")
-        .or_else(|| playlists.iter().find(|p| p.format == "mp3"))
-        .or_else(|| playlists.first())
+        .filter(|v| v.format.as_deref() == Some("mp3"))
+        .max_by_key(|v| v.bitrate.unwrap_or(0))
+        .or_else(|| variants.iter().max_by_key(|v| v.bitrate.unwrap_or(0)))
+        .map(|v| v.url.clone())
 }
 
 /// Prefixed so the brand is clear wherever the name is shown, without every
@@ -94,19 +94,33 @@ pub async fn discover(client: &Client) -> Vec<Station> {
     let futures = body.channels.into_iter().map(|channel| {
         let client = client.clone();
         async move {
-            let playlist_url = preferred_playlist(&channel.playlists).map(|p| p.url.clone());
-            let stream_url = match playlist_url {
-                Some(url) => resolve_stream_url(&client, &url).await,
-                None => None,
-            };
-            (channel, stream_url)
+            let resolutions = channel.playlists.iter().map(|playlist| {
+                let client = client.clone();
+                let url = playlist.url.clone();
+                let format = playlist.format.clone();
+                async move {
+                    resolve_stream_url(&client, &url)
+                        .await
+                        .map(|stream| StreamVariant {
+                            bitrate: crate::station::bitrate_from_url(&stream),
+                            url: stream,
+                            format: Some(format),
+                        })
+                }
+            });
+            let variants: Vec<StreamVariant> = futures::future::join_all(resolutions)
+                .await
+                .into_iter()
+                .flatten()
+                .collect();
+            (channel, variants)
         }
     });
     let results = futures::future::join_all(futures).await;
 
     let mut stations = Vec::new();
-    for (channel, stream_url) in results {
-        let Some(stream_url) = stream_url else {
+    for (channel, variants) in results {
+        let Some(stream_url) = preferred_variant(&variants) else {
             warn!(
                 provider = "somafm",
                 channel = %channel.id,
@@ -126,6 +140,11 @@ pub async fn discover(client: &Client) -> Vec<Station> {
 
         debug!(provider = "somafm", %name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: if variants.len() > 1 {
+                variants
+            } else {
+                Vec::new()
+            },
             name,
             stream_url,
             logo_url: channel.largeimage.filter(|u| !u.is_empty()),
@@ -168,45 +187,45 @@ mod tests {
         );
     }
 
-    fn playlist(format: &str, quality: &str, url: &str) -> SomaFmPlaylist {
-        SomaFmPlaylist {
+    fn variant(format: &str, bitrate: u32, url: &str) -> StreamVariant {
+        StreamVariant {
             url: url.into(),
-            format: format.into(),
-            quality: quality.into(),
+            bitrate: Some(bitrate),
+            format: Some(format.into()),
         }
     }
 
     #[test]
-    fn prefers_highest_quality_mp3() {
-        let playlists = vec![
-            playlist("aac", "highest", "https://example.com/aac.pls"),
-            playlist("mp3", "low", "https://example.com/mp3-low.pls"),
-            playlist("mp3", "highest", "https://example.com/mp3-highest.pls"),
+    fn prefers_highest_bitrate_mp3() {
+        let variants = vec![
+            variant("aac", 128, "https://example.com/aac"),
+            variant("mp3", 64, "https://example.com/mp3-low"),
+            variant("mp3", 128, "https://example.com/mp3-high"),
         ];
         assert_eq!(
-            preferred_playlist(&playlists).unwrap().url,
-            "https://example.com/mp3-highest.pls"
+            preferred_variant(&variants).unwrap(),
+            "https://example.com/mp3-high"
         );
     }
 
     #[test]
-    fn falls_back_to_any_mp3_if_no_highest() {
-        let playlists = vec![
-            playlist("aac", "highest", "https://example.com/aac.pls"),
-            playlist("mp3", "low", "https://example.com/mp3-low.pls"),
+    fn falls_back_to_any_mp3_if_no_higher() {
+        let variants = vec![
+            variant("aac", 128, "https://example.com/aac"),
+            variant("mp3", 64, "https://example.com/mp3-low"),
         ];
         assert_eq!(
-            preferred_playlist(&playlists).unwrap().url,
-            "https://example.com/mp3-low.pls"
+            preferred_variant(&variants).unwrap(),
+            "https://example.com/mp3-low"
         );
     }
 
     #[test]
-    fn falls_back_to_first_entry_if_no_mp3() {
-        let playlists = vec![playlist("aac", "high", "https://example.com/aac.pls")];
+    fn falls_back_to_highest_of_any_format() {
+        let variants = vec![variant("aac", 128, "https://example.com/aac")];
         assert_eq!(
-            preferred_playlist(&playlists).unwrap().url,
-            "https://example.com/aac.pls"
+            preferred_variant(&variants).unwrap(),
+            "https://example.com/aac"
         );
     }
 

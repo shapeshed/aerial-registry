@@ -34,6 +34,7 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
         .stations
         .into_iter()
         .map(|s| Station {
+            streams: Vec::new(),
             name: s.name,
             stream_url: s.stream_url,
             logo_url: s.logo_url,

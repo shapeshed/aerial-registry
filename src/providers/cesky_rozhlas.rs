@@ -2,7 +2,7 @@ use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error, warn};
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const STATIONS_URL: &str = "https://api.mujrozhlas.cz/stations";
 const COUNTRY: &str = "Czech Republic";
@@ -75,8 +75,23 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             );
             continue;
         };
+        let variants: Vec<StreamVariant> = attrs
+            .audio_links
+            .iter()
+            .filter(|l| l.link_type == "directstream")
+            .map(|l| StreamVariant {
+                url: l.url.clone(),
+                bitrate: Some(l.bitrate),
+                format: None,
+            })
+            .collect();
         debug!(provider = "cesky-rozhlas", name = %attrs.title, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: if variants.len() > 1 {
+                variants
+            } else {
+                Vec::new()
+            },
             name: attrs.title,
             stream_url,
             logo_url: attrs.logo_icon,

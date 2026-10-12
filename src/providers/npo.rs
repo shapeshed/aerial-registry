@@ -2,7 +2,7 @@ use crate::http::Client;
 use serde::Deserialize;
 use tracing::{debug, error};
 
-use crate::station::Station;
+use crate::station::{Station, StreamVariant};
 
 const GRAPHQL_URL: &str = "https://api.nporadio.nl/graphql";
 const QUERY: &str = "query { core_channels { data { id name slug } } }";
@@ -99,9 +99,29 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             continue;
         };
         let stream_url = format!("{ICECAST_BASE}/{icecast}");
+        // The legacy Icecast host serves each channel in four fixed-bitrate
+        // mounts; keep them all so the app can pick to match bandwidth.
+        let base = icecast
+            .strip_suffix("-bb-mp3")
+            .or_else(|| icecast.strip_suffix("-sb-mp3"))
+            .unwrap_or(icecast);
+        let variants: Vec<StreamVariant> = [
+            ("-bb-mp3", 192u32, "mp3"),
+            ("-sb-mp3", 96, "mp3"),
+            ("-bb-aac", 64, "aac"),
+            ("-sb-aac", 32, "aac"),
+        ]
+        .into_iter()
+        .map(|(suffix, bitrate, format)| StreamVariant {
+            url: format!("{ICECAST_BASE}/{base}{suffix}"),
+            bitrate: Some(bitrate),
+            format: Some(format.into()),
+        })
+        .collect();
 
         debug!(provider = "npo", name = %channel.name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: variants,
             name: channel.name,
             stream_url,
             logo_url: None,

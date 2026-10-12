@@ -97,6 +97,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
             .unwrap_or(BNR_LOGO);
         debug!(provider = "bnr", name = %program.short_name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: program.short_name,
             stream_url,
             logo_url: Some(logo.to_string()),

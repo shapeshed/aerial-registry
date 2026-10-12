@@ -48,8 +48,8 @@ jobs:
 
       - name: Run pipeline
         env:
-          RADIO_FRANCE_API_KEY: ${{ secrets.RADIO_FRANCE_API_KEY }}
-          AERIAL_PREVIOUS_REGISTRY_PATH: aerial-app/app/src/main/registry/registry.json
+          AERIAL__RADIO_FRANCE__API_KEY: ${{ secrets.RADIO_FRANCE_API_KEY }}
+          AERIAL__PREVIOUS_REGISTRY_PATH: aerial-app/app/src/main/registry/registry.json
         run: cargo run --release
 
       - name: Upload station state

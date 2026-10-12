@@ -351,6 +351,7 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
         );
 
         stations.push(Station {
+            streams: Vec::new(),
             name: s.name.to_string(),
             stream_url: s.stream_url.to_string(),
             logo_url: Some(s.logo_url.to_string()),
@@ -378,6 +379,7 @@ pub async fn discover(_client: &Client) -> Vec<Station> {
         );
 
         stations.push(Station {
+            streams: Vec::new(),
             name,
             stream_url,
             logo_url: Some(regional_logo(s.channel).to_string()),

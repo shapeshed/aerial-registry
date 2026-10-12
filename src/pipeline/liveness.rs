@@ -58,12 +58,13 @@ impl StreamFailure {
 
     /// These failures are properties of the URL itself, not of tonight's
     /// network conditions, so they are pruned without hysteresis.
+    /// `ConnectionError` is deliberately *not* here: from a single build
+    /// location it can be a transient blip or a geo-block that drops the
+    /// connection, so it goes through the three-strike hysteresis instead.
     fn is_deterministic(&self) -> bool {
         matches!(
             self,
-            StreamFailure::Gone(_)
-                | StreamFailure::ConnectionError
-                | StreamFailure::UnsupportedScheme
+            StreamFailure::Gone(_) | StreamFailure::UnsupportedScheme
         )
     }
 }
@@ -71,10 +72,10 @@ impl StreamFailure {
 pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<Station> {
     // Local builds behind a proxy (or quick iterations) can skip the probes
     // entirely; nothing is pruned and no failure state is recorded.
-    if std::env::var("AERIAL_SKIP_LIVENESS").is_ok_and(|v| !v.is_empty() && v != "0") {
+    if crate::config::get().skip_liveness.unwrap_or(false) {
         info!(
             total = stations.len(),
-            "Liveness checks skipped (AERIAL_SKIP_LIVENESS)"
+            "Liveness checks skipped (AERIAL__SKIP_LIVENESS)"
         );
         return stations;
     }
@@ -82,7 +83,7 @@ pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<
     let semaphore = Arc::new(Semaphore::new(MAX_CONCURRENT));
     let client = client.clone();
     let total = stations.len();
-    let store = state::open_from_env();
+    let store = state::open_from_config();
 
     let tasks: Vec<_> = stations
         .into_iter()
@@ -99,7 +100,14 @@ pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<
                 }
 
                 let _permit = sem.acquire().await.unwrap();
-                match validate_imported_stream_url(&client, &station.stream_url).await {
+                let primary = validate_imported_stream_url(&client, &station.stream_url).await;
+                drop(_permit);
+                // Probe each fixed-bitrate variant too, dropping dead ones so the
+                // app never offers a bitrate that no longer works.
+                if !station.streams.is_empty() {
+                    station.streams = live_variants(&client, &sem, station.streams).await;
+                }
+                match primary {
                     Ok(live_url) => {
                         let upgraded = live_url != station.stream_url;
                         if upgraded {
@@ -148,39 +156,58 @@ pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<
     let mut inconclusive_keys = Vec::new();
 
     for result in results {
-        match result.outcome {
-            Outcome::Trusted => live.push(result.station),
+        let LivenessResult { station, outcome } = result;
+
+        // Curated stations are hand-picked and reviewed, so the nightly build
+        // never auto-prunes them: a stream that fails from the build location
+        // is kept, and genuinely dead entries are handled deliberately via the
+        // separate `prune-curated` command.
+        if station.provider == "curated" {
+            if let Outcome::Failed(failure) = &outcome {
+                checked += 1;
+                debug!(
+                    url = %station.stream_url,
+                    reason = failure.status(),
+                    "Curated stream failed liveness; kept"
+                );
+                live.push(station);
+                continue;
+            }
+        }
+
+        match outcome {
+            Outcome::Trusted => live.push(station),
             Outcome::Live { upgraded: up } => {
                 checked += 1;
                 if up {
                     upgraded += 1;
                 }
-                live_keys.push(StationKey::of(&result.station));
-                live.push(result.station);
+                live_keys.push(StationKey::of(&station));
+                live.push(station);
             }
             Outcome::Failed(StreamFailure::Inconclusive(reason)) => {
                 checked += 1;
                 inconclusive += 1;
                 debug!(
-                    url = %result.station.stream_url,
+                    url = %station.stream_url,
                     %reason,
                     "Stream inconclusive from build location; kept"
                 );
-                inconclusive_keys.push(StationKey::of(&result.station));
-                live.push(result.station);
+                inconclusive_keys.push(StationKey::of(&station));
+                live.push(station);
             }
             Outcome::Failed(failure) if failure.is_deterministic() => {
                 checked += 1;
                 removed_deterministic += 1;
                 warn!(
-                    url = %result.station.stream_url,
+                    url = %station.stream_url,
                     reason = failure.status(),
                     "Removed station after deterministic liveness failure"
                 );
             }
             Outcome::Failed(failure) => {
                 checked += 1;
-                pending.push((result.station, failure));
+                pending.push((station, failure));
             }
         }
     }
@@ -249,6 +276,32 @@ pub async fn check(client: &crate::http::Client, stations: Vec<Station>) -> Vec<
         "Liveness check complete"
     );
     live
+}
+
+/// Probe each fixed-bitrate variant and keep the live ones. A variant that is
+/// deterministically gone is dropped; inconclusive or connection failures are
+/// kept, since a single build location says nothing reliable about them.
+async fn live_variants(
+    client: &crate::http::Client,
+    sem: &Semaphore,
+    variants: Vec<crate::station::StreamVariant>,
+) -> Vec<crate::station::StreamVariant> {
+    let mut kept = Vec::with_capacity(variants.len());
+    for variant in variants {
+        let _permit = sem.acquire().await.unwrap();
+        match validate_imported_stream_url(client, &variant.url).await {
+            Ok(url) => kept.push(crate::station::StreamVariant { url, ..variant }),
+            Err(failure) if failure.is_deterministic() => {
+                debug!(
+                    url = %variant.url,
+                    reason = failure.status(),
+                    "Dropped dead stream variant"
+                );
+            }
+            Err(_) => kept.push(variant),
+        }
+    }
+    kept
 }
 
 pub async fn validate_imported_stream_url(
@@ -411,7 +464,10 @@ mod tests {
     #[test]
     fn deterministic_failures_are_classified() {
         assert!(StreamFailure::Gone(404).is_deterministic());
-        assert!(StreamFailure::ConnectionError.is_deterministic());
+        assert!(StreamFailure::UnsupportedScheme.is_deterministic());
+        // A connection error can be transient or a geo-block, so it must go
+        // through hysteresis rather than being pruned on the first night.
+        assert!(!StreamFailure::ConnectionError.is_deterministic());
         assert!(StreamFailure::Inconclusive("timeout".into()).is_inconclusive());
         assert!(!StreamFailure::ConnectionError.is_inconclusive());
     }

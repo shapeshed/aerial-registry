@@ -145,6 +145,7 @@ async fn fetch_channel(client: &Client, id: &str) -> Option<Station> {
 
     debug!(provider = "nrk", %name, %stream_url, "Discovered station");
     Some(Station {
+        streams: Vec::new(),
         name,
         stream_url,
         logo_url,

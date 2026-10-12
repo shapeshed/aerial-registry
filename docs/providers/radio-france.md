@@ -14,9 +14,11 @@ Pass the API key as an HTTP header on every request:
 x-token: <RADIO_FRANCE_API_KEY>
 ```
 
-The pipeline reads the key from the `RADIO_FRANCE_API_KEY` environment variable.
-If the variable is absent or empty the provider logs an error and returns an
-empty list — it does not abort the pipeline.
+The pipeline reads the key from `radio_france.api_key` in
+`config/default.toml` (see `config/default.toml.example`), or from the
+`AERIAL__RADIO_FRANCE__API_KEY` environment variable, which overrides the file.
+If it is absent or empty the provider logs an error and returns an empty list —
+it does not abort the pipeline.
 
 ## Station Discovery
 

@@ -91,6 +91,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
         let provider_id = slug_from_stream(&stream_url).unwrap_or_else(|| media.urn.clone());
         debug!(provider = "srgssr", name = %name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name,
             stream_url,
             logo_url: media.image_url,

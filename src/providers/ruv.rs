@@ -55,6 +55,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
     for (slug, display_name, logo_url, stream_url) in join_all(fetches).await {
         debug!(provider = "ruv", name = display_name, %stream_url, "Discovered station");
         stations.push(Station {
+            streams: Vec::new(),
             name: display_name.to_string(),
             stream_url,
             logo_url: Some(logo_url.to_string()),
