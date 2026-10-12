@@ -55,9 +55,12 @@ not guessed from the brand.
 _radioepg._tcp.<authoritative fqdn>   SRV   0 100 80 epg.musicradio.com.
 ```
 
-`_radiospi._tcp` is the newer application name; `_radioepg._tcp` is what the
-deployed broadcasters use. `radioepg`, `radiospi`, `radiotag`, `radiovis` are
-the four known applications.
+`_radioepg._tcp` and `_radiospi._tcp` are both in use — `_radioepg` is the
+older application served over **HTTP:80**, `_radiospi` is the newer one served
+over **HTTPS:443**. **Always query both**: several broadcasters (every
+Radioplayer instance tested) only answer under `_radiospi`, so checking just one
+makes a working service look absent. `radioepg`, `radiospi`, `radiotag`,
+`radiovis` are the four known applications.
 
 ### 4. Fetch the SI
 
@@ -165,9 +168,13 @@ DAB cannot be swept (16 × 65,536 × 65,536 ≈ 7×10¹⁰).
   network with dozens of transmitters; the two Wikipedia listed weren't enough.
 - **The zone is closed.** AXFR is REFUSED on `radiodns.org` and `fm.radiodns.org`,
   and it is not DNSSEC-signed, so no NSEC walking. There is no bulk enumeration.
-- **Some registrations are dangling.** `c752.radioplayer` (SE) and
-  `c826.radioplayer` (UK) are CNAMEs to names with **no TLD** — unresolvable, no
-  SRV, no SI. `radiodns.uk` reports *"No Service Information"* for them.
+- **Some registrations point at names without a TLD.** The CNAME targets for
+  Radioplayer's instances are `c826.radioplayer`, `c752.radioplayer`,
+  `c372.radioplayer` — no TLD. Appending `.org` gives a host that **does**
+  resolve, and every one of them has a `_radiospi._tcp` SRV on 443, so the
+  registration is fundamentally sound. **All three currently return
+  `502 Bad Gateway`** — an outage of Radioplayer's SPI service rather than a
+  misconfiguration. Retry later rather than treating them as dead.
 
 ## Licensing, and the decision
 
@@ -203,6 +210,9 @@ Two consequences to handle deliberately:
 | | `radiodns.nrk.no` (NRK) | `static.nrk.no` | 50 | 255 | **0** |
 | **USA** | `radiodns.emfeng.com` (EMF) | `radiodns.emfeng.com` | 15 | 96 | 1,240 (HLS) |
 | **Iceland** | — | — | **0 (proven by full FM sweep)** | | |
+| **Ireland** | `rteradio1.ierte.radio.ebu.io` and 3 more (RTÉ, via the EBU) | *no SRV under either app name* | | | |
+| | `c372.radioplayer.org` (Radioplayer IE) | `_radiospi._tcp` → self:443 | **502** | | |
+| | `rdns.aiir.net` (community) | | | | |
 
 Three market shapes, and they differ in what the SI is good for:
 
@@ -214,9 +224,16 @@ Three market shapes, and they differ in what the SI is good for:
 
 ## What RadioDNS does not cover
 
-- **Radioplayer** (the independents tier: *"176 UK Radio Stations"*). Its UK and
-  Swedish registrations are dangling, its `api.` hosts from CT do not resolve,
-  and it publishes no client or docs. Partner-gated. Ireland pending.
+- **Radioplayer** (the independents tier: *"176 UK Radio Stations"*). Its
+  registrations are sound — all three instances have `_radiospi` SRVs — but the
+  SPI endpoint is **returning 502 for every instance right now**, so the tier is
+  unreachable at present rather than closed. Worth retrying; if it recovers it
+  covers the UK, Irish and Swedish independents in one go.
+- **The EBU's member platform** (`*.ierte.radio.ebu.io`). RTÉ's four stations
+  resolve from Irish FM identities to per-station authorities under this domain,
+  but **neither application name has an SRV**, so their SI is not discoverable
+  through the documented lookup. The pattern is promising — an `ierte` /
+  `radio.ebu.io` subdomain per member — but the endpoint convention is unknown.
 - **DAB in closed markets** — unsweepable; needs ensemble/service IDs.
 - **HLS in DAB-style metadata-only markets** — no rates to index.
 - **Self-hosted Icecast/Shoutcast** — the scanner's tier, which RadioDNS does

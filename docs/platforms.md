@@ -124,7 +124,8 @@ DAB-only), **USA** (EMF — 15, HLS). Iceland has no FM RadioDNS entries at all,
 proven by a full-band sweep.
 
 Two caveats: **Radioplayer** (the independents tier, ~176 UK stations) is
-partner-gated and its registrations are dangling, and the broadcaster metadata
+correctly registered but its SPI endpoint is **returning 502 right now**, so that
+tier is temporarily unreachable rather than closed; and the broadcaster metadata
 terms of use are restrictive. The decision to use the SI anyway, and its basis,
 are recorded in `docs/radiodns.md`.
 
