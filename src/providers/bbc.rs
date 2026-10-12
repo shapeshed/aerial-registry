@@ -8,6 +8,12 @@ use crate::station::Station;
 const NETWORKS_URL: &str = "https://rms.api.bbc.co.uk/v2/networks?limit=100";
 const MANIFEST_UUID: &str = "3441A116-B12E-4D2F-ACA8-C1984642FA4B";
 
+// BBC Sounds serves network logos from a versioned asset path. A network's asset does not
+// exist at versions older than its launch, so a stale version 404s for newer stations
+// (e.g. bbc_radio_six_indie_forever has no asset before 3.12.0). Bump this when a network
+// logo comes back 404; all current networks resolve at this version.
+const LOGO_ASSET_VERSION: &str = "3.12.0";
+
 #[derive(Deserialize)]
 struct NetworksResponse {
     data: Vec<Network>,
@@ -66,7 +72,7 @@ pub async fn discover(client: &Client) -> Vec<Station> {
                 })
                 .unwrap_or_else(|| service_id_to_name(&service_id));
             let logo_url = format!(
-                "https://sounds.files.bbci.co.uk/3.9.4/networks/{logo_id}/colour_default.svg"
+                "https://sounds.files.bbci.co.uk/{LOGO_ASSET_VERSION}/networks/{logo_id}/colour_default.svg"
             );
             Some((service_id, name, logo_url))
         })
