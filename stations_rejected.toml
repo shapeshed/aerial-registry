@@ -2381,3 +2381,78 @@ stream_url = "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream"
 name = "Radio Maria Ivory Coast"
 reason = "Suspicious proxy URL structure suggests aggregator/restreaming rather than official station broadcast"
 
+[[rejected]]
+stream_url = "https://streaming.exclusive.radio/er/ericclapton/icecast.audio"
+name = "Eric Clapton "
+reason = "Artist-dedicated stream lacks station identity; appears to be personal artist stream rather than a curated radio station."
+
+[[rejected]]
+stream_url = "https://live-kiss.sharp-stream.com/kiss100.mp3"
+name = "KISS UK"
+reason = "Duplicate of well-known branded station (Global Radio/Bauer Media KISS FM)."
+
+[[rejected]]
+stream_url = "https://stream.aiir.com/ujzy590c3stvv"
+name = "Radio Essex"
+reason = "Duplicate of established UK licensed station; not an independent community or specialty station."
+
+[[rejected]]
+stream_url = "https://ilm.stream12.radiohost.de/ilm_iloveusonlyrapradio_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzkyNjI2NzA4JmQ9MDU3OTYxMDkyMWZkYzUzMWFkOGQ"
+name = "i love radio - US Only Rap&HipHop Radio"
+reason = "Geographically misleading: US-focused content listed under no specific country context, low votes."
+
+[[rejected]]
+stream_url = "http://d141.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3L2sxxUeDkhhuBs22zm6SlojKTh&token=_tdFSF7Z2THAFqx2FiD4nOKw_2ZnLNqbBtoIwIvwDyo&tvf=D7nHEtPl4BhkMTQxLnJuZGZuay5jb20"
+name = "RadioEins [High Quality]"
+reason = "Duplicate/variant of station #18 with excessive URL parameters; see cleaner entry below."
+
+[[rejected]]
+stream_url = "https://0n-christmas.radionetz.de/0n-christmas.mp3"
+name = "- 0 N - Christmas on Radio"
+reason = "Seasonal/specialty station with low sustainable audience; not a year-round service."
+
+[[rejected]]
+stream_url = "http://f121.rndfnk.com/ard/rbb/radioeins/live/mp3/48/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3L2V5lN1YDW4mbv4DVWkmodHeqz&token=ZBZ8es_qzZAPhZIa6MIRFwBY4fiP_0J8LXWoHps1G2E&tvf=ponUzBzb4BhmMTIxLnJuZGZuay5jb20"
+name = "radioeins-rbb-56 kbit/s"
+reason = "Duplicate of station #18 with excessive bitrate/quality variant naming; consolidate to primary entry."
+
+[[rejected]]
+stream_url = "https://ilm.stream12.radiohost.de/ilm_ilovehiphop_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzkyNjkyNDIyJmQ9NzcyNGNlODU0OGQ5ZGQ4MzI1MWM"
+name = "I love Radio Hip Hop"
+reason = "Duplicate/variant of station #3; similar channel within same network with lower votes."
+
+[[rejected]]
+stream_url = "http://ilm.stream27.radiohost.de/ilm_ilovetop100charts_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkyNjI3NjMwJmQ9ZGRlMDI5Y2ViNDA1ZmZhMTJjYTY"
+name = "i love radio - top 100 charts"
+reason = "Spammy chart aggregator concept; not a distinct programming identity."
+
+[[rejected]]
+stream_url = "http://ilm.stream27.radiohost.de/ilm_ilovegreatesthits_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkyNjY4MDE4JmQ9MGE0OTMzMWEzMDU5NmMwMDJhZjg"
+name = "i love radio - greatest hits"
+reason = "Spammy name with generic 'greatest hits' branding and no real station identity"
+
+[[rejected]]
+stream_url = "https://1a-christmas.radionetz.de/1a-christmas.mp3"
+name = "- 1 A - Christmas on Radio"
+reason = "Generic seasonal/holiday station with leading symbols and limited year-round relevance"
+
+[[rejected]]
+stream_url = "https://0nlineradio.radioho.st/lounge-ibiza-chillout-lounge?ref=rb26"
+name = "IBIZA CHILLOUT LOUNGE - Ambient, Deep House, Balearic, Smooth Jazz, Acoustic, Chill House, Lo-Fi, Chillwave, Dream Pop, Electro, Tropical House, Sunset Chill, Caf\u00e9 del Mar, Soft Electronica, Slow House, Ambient, Relax, Easy Listening, Beach Vibes, Summer"
+reason = "Spammy name with excessive keyword-stuffed description; generic internet aggregator with no real station identity"
+
+[[rejected]]
+stream_url = "http://streamplus52.leonex.de:11216/;"
+name = "Das Radio der von Neil Young Get\u00f6teten"
+reason = "Junk/spammy station name with no legitimate station identity"
+
+[[rejected]]
+stream_url = "https://1a-2000er.radionetz.de/1a-2000er.mp3"
+name = "- 1 A - 2000er von 1A Radio"
+reason = "Generic playlist aggregator with leading symbols and no distinct station identity"
+
+[[rejected]]
+stream_url = "https://0n-christmas.radionetz.de/0n-christmas.aac"
+name = "- 0 N - Christmas on Radio"
+reason = "Generic seasonal station with leading symbols and limited relevance outside holidays"
+
