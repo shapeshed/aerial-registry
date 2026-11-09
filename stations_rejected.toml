@@ -2381,3 +2381,53 @@ stream_url = "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream"
 name = "Radio Maria Ivory Coast"
 reason = "Suspicious proxy URL structure suggests aggregator/restreaming rather than official station broadcast"
 
+[[rejected]]
+stream_url = "https://streaming.exclusive.radio/er/ericclapton/icecast.audio"
+name = "Eric Clapton "
+reason = "Artist-dedicated stream lacks station identity; appears to be a curated playlist rather than a real station."
+
+[[rejected]]
+stream_url = "https://ilm.stream12.radiohost.de/ilm_iloveusonlyrapradio_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzkzOTI0ODU2JmQ9YjdjNTQxMzg0OWU0YTJlM2UwYmE"
+name = "i love radio - US Only Rap&HipHop Radio"
+reason = "Duplicate variant of I Love Radio hip-hop streams; lower votes and redundant."
+
+[[rejected]]
+stream_url = "https://0n-christmas.radionetz.de/0n-christmas.mp3"
+name = "- 0 N - Christmas on Radio"
+reason = "Seasonal/specialty station with junk-like name formatting and limited year-round relevance."
+
+[[rejected]]
+stream_url = "https://ilm.stream27.radiohost.de/ilm_ilovehiphop_mp3-192?upd-meta&upd-scheme=https&_art=dD0xNzkzOTkwMTU0JmQ9ZTk1M2E5NGUwODA2YmUyNTk1NTI"
+name = "I love Radio Hip Hop"
+reason = "Duplicate of station 3; lacks tags and lower vote count makes it redundant."
+
+[[rejected]]
+stream_url = "http://d111.rndfnk.com/ard/rbb/radioeins/live/mp3/48/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3LkOQ7LhZwiJrXGuLECwtDxM1rA&token=AjEYXHnDEopnvnGCZ93Q-ZQJE1AWXAHxI1v258k7Y6s&tvf=Swy-tzWg5RhkMTExLnJuZGZuay5jb20"
+name = "radio eins | rbb | neuer Stream | niedrige Qualit\u00e4t"
+reason = "Duplicate of station 11; technical variant with duplicate branding and stream info in tags."
+
+[[rejected]]
+stream_url = "http://ilm.stream18.radiohost.de/ilm_ilovetop100charts_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkzOTI2NDE4JmQ9MzY1ZDEzYTYwNWUyZTFkYTdiODg"
+name = "i love radio - top 100 charts"
+reason = "Spammy aggregator-style name ('top 100 charts'); lacks distinct station identity."
+
+[[rejected]]
+stream_url = "http://ilm.stream27.radiohost.de/ilm_ilovegreatesthits_mp3-192?upd-meta&upd-scheme=http&_art=dD0xNzkzOTY1ODk3JmQ9NzM2ZGU1ZTZjOTlhZGM3NTIwOWQ"
+name = "i love radio - greatest hits"
+reason = "Spammy aggregator-style name ('greatest hits'); lacks distinct station identity."
+
+[[rejected]]
+stream_url = "https://0nlineradio.radioho.st/lounge-ibiza-chillout-lounge?ref=rb26"
+name = "IBIZA CHILLOUT LOUNGE - Ambient, Deep House, Balearic, Smooth Jazz, Acoustic, Chill House, Lo-Fi, Chillwave, Dream Pop, Electro, Tropical House, Sunset Chill, Caf\u00e9 del Mar, Soft Electronica, Slow House, Ambient, Relax, Easy Listening, Beach Vibes, Summer"
+reason = "Spammy name with excessive keyword stuffing and no genuine station identity"
+
+[[rejected]]
+stream_url = "http://streamplus52.leonex.de:11216/;"
+name = "Das Radio der von Neil Young Get\u00f6teten"
+reason = "Offensive/inappropriate station name (references killings) unsuitable for curated consumer app"
+
+[[rejected]]
+stream_url = "https://0n-christmas.radionetz.de/0n-christmas.aac"
+name = "- 0 N - Christmas on Radio"
+reason = "Duplicate of station 2 with lower bitrate and votes; redundant for registry"
+
